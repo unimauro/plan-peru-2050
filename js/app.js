@@ -15,12 +15,15 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 
 async function boot() {
   try {
-    const [meta, det] = await Promise.all([
+    const [meta, det, rev] = await Promise.all([
       fetch("data/meta.json").then((r) => r.json()),
       fetch("data/comisiones.json").then((r) => (r.ok ? r.json() : [])).catch(() => []),
+      fetch("data/comisiones_revision.json").then((r) => (r.ok ? r.json() : [])).catch(() => []),
     ]);
     S.meta = meta;
     (Array.isArray(det) ? det : det.comisiones || []).forEach((d) => (S.detail[d.id] = d));
+    // Comisiones inferidas (a revisión) — no sobrescriben las validadas
+    (Array.isArray(rev) ? rev : rev.comisiones || []).forEach((d) => { if (!S.detail[d.id]) S.detail[d.id] = { ...d, revision: true }; });
     // Merge directory with detail
     S.list = meta.comisiones.map((c) => ({ ...c, ...(S.detail[c.id] || {}) }));
     $("#pill-updated").textContent = "Actualizado " + (meta.actualizado || "");
@@ -40,9 +43,12 @@ async function boot() {
 }
 
 function detailed() { return S.list.filter((c) => S.detail[c.id]); }
+function validated() { return detailed().filter((c) => !S.detail[c.id].revision); }
+function reviewed() { return detailed().filter((c) => S.detail[c.id].revision); }
 function allIndicators() {
+  // Solo indicadores de comisiones VALIDADAS (datos reales) para simulador/panorama.
   const out = [];
-  detailed().forEach((c) => (c.indicadores || []).forEach((i) => {
+  validated().forEach((c) => (c.indicadores || []).forEach((i) => {
     if (i.actual != null && i.meta != null && i.actual !== i.meta) out.push({ ...i, com: c.nombre, comId: c.id });
   }));
   return out;
@@ -53,9 +59,9 @@ function renderKPIs() {
   const ejes = new Set(detailed().map((c) => c.eje).filter(Boolean));
   const kpis = [
     { n: S.meta.totalComisiones, l: "Comisiones temáticas", a: false },
-    { n: detailed().length, l: "Con redacción y datos", a: true },
+    { n: validated().length, l: "Con datos validados", a: true },
+    { n: reviewed().length, l: "Línea base · a revisión", a: false },
     { n: inds.length, l: "Indicadores cuantificados", a: false },
-    { n: ejes.size || "—", l: "Ejes estratégicos", a: false },
   ];
   $("#kpis").innerHTML = "";
   kpis.forEach((k) => $("#kpis").append(el("div", "kpi" + (k.a ? " accent" : ""), `<div class="n">${num(k.n)}</div><div class="l">${k.l}</div>`)));
@@ -70,7 +76,8 @@ function renderChips() {
     return c;
   };
   box.append(mk("todas", "Todas"));
-  box.append(mk("redactadas", "✓ Con datos"));
+  box.append(mk("validadas", "✓ Con datos"));
+  box.append(mk("revision", "⚠ A revisión"));
   ejes.forEach((e) => box.append(mk(e, e)));
 }
 
@@ -80,7 +87,9 @@ function matchFilter(c) {
     if (!hay.includes(S.q.toLowerCase())) return false;
   }
   if (S.filterEje === "todas") return true;
-  if (S.filterEje === "redactadas") return !!S.detail[c.id];
+  const d = S.detail[c.id];
+  if (S.filterEje === "validadas") return !!d && !d.revision;
+  if (S.filterEje === "revision") return !!d && !!d.revision;
   return c.eje === S.filterEje;
 }
 
@@ -91,11 +100,15 @@ function renderGrid() {
   // detailed first
   items.sort((a, b) => (S.detail[b.id] ? 1 : 0) - (S.detail[a.id] ? 1 : 0));
   items.forEach((c) => {
-    const has = !!S.detail[c.id];
+    const d = S.detail[c.id];
+    const has = !!d, rev = !!(d && d.revision);
     const card = el("div", "card" + (has ? "" : " lock"));
     const nInd = (c.indicadores || []).length;
+    const badge = !has ? `<span class="badge pend">En redacción</span>`
+      : rev ? `<span class="badge rev" title="Línea base preliminar inferida, pendiente de validación">Datos · a revisión</span>`
+      : `<span class="badge ok">Con datos</span>`;
     card.innerHTML = `
-      <span class="badge ${has ? "ok" : "pend"}">${has ? "Con datos" : "En redacción"}</span>
+      ${badge}
       ${c.eje ? `<div class="eje">${esc(c.eje)}</div>` : `<div class="eje">Comisión temática</div>`}
       <h3>${esc(c.nombre)}</h3>
       <p>${esc(c.resumen || "Comisión del Plan Perú 2050. Redacción en proceso.")}</p>
@@ -125,6 +138,7 @@ function openDetail(id) {
     <button class="close" onclick="closeDetail()">×</button>
     ${c.eje ? `<div class="eje" style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600">${esc(c.eje)}</div>` : ""}
     <h2 class="serif">${esc(c.nombre)}</h2>
+    ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
     ${c.vision ? `<div class="block"><h4>Visión 2050</h4><p>${esc(c.vision)}</p></div>` : ""}
     ${(c.diagnostico || []).length ? `<div class="block"><h4>Diagnóstico — brecha 2026</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
@@ -206,7 +220,7 @@ const chartFont = () => { try { Chart.defaults.color = "#8a98b8"; Chart.defaults
 function renderOverview() {
   if (typeof Chart === "undefined") return;
   chartFont();
-  const det = detailed().map((c) => ({ c, av: comAvance(c) })).filter((x) => x.av != null).sort((a, b) => b.av - a.av);
+  const det = validated().map((c) => ({ c, av: comAvance(c) })).filter((x) => x.av != null).sort((a, b) => b.av - a.av);
   // Bar: avance por comisión
   const a = document.getElementById("chartAvance");
   if (a && det.length) {
