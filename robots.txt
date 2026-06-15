@@ -1,0 +1,14 @@
+# Plan Perú 2050 — Dashboard de Comisiones
+# Contenido público y rastreable por buscadores.
+User-agent: *
+Allow: /
+
+# Permitir explícitamente bots de IA / buscadores
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+Sitemap: https://unimauro.github.io/plan-peru-2050/sitemap.xml

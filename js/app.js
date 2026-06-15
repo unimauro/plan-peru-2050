@@ -32,6 +32,7 @@ async function boot() {
     renderMap();
     wireAI();
     wireSearch();
+    openFromHash();
   } catch (e) {
     $("#grid").innerHTML = '<div class="skeleton">No se pudieron cargar los datos.</div>';
     console.error(e);
@@ -137,9 +138,18 @@ function openDetail(id) {
   if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
   setTimeout(() => detailChart(c), 30);
 }
-function closeDetail() { $("#modal").classList.remove("open"); document.body.style.overflow = ""; }
+function closeDetail() {
+  $("#modal").classList.remove("open"); document.body.style.overflow = "";
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+}
 $("#modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeDetail(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDetail(); });
 window.closeDetail = closeDetail;
+function openFromHash() {
+  const id = decodeURIComponent((location.hash || "").replace(/^#/, ""));
+  if (id && S.detail[id]) setTimeout(() => openDetail(id), 200);
+}
+window.addEventListener("hashchange", openFromHash);
 
 /* ---------- Simulador ---------- */
 function buildSimulator() {
