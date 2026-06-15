@@ -141,12 +141,13 @@ function openDetail(id) {
     <h2 class="serif">${esc(c.nombre)}</h2>
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
+    ${!c.revision ? `<button class="dlbtn" style="margin-top:12px" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha completa (PDF)</button>` : ""}
     ${c.vision ? `<div class="block"><h4>Visión 2050</h4><p>${esc(c.vision)}</p></div>` : ""}
     ${(c.diagnostico || []).length ? `<div class="block"><h4>Diagnóstico — brecha 2026</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
     ${(c.indicadores || []).length ? `<div class="block"><h4>Indicadores: hoy → meta 2050</h4><div class="detchart"><canvas id="detCanvas"></canvas></div>${c.indicadores.map(indicatorRow).join("")}</div>` : ""}
     ${(c.pilares || []).length ? `<div class="block"><h4>Pilares de la estrategia</h4>${c.pilares.map((p) => `<div class="pilar"><b>${esc(p.nombre)}</b><span>${esc(p.descripcion)}</span></div>`).join("")}</div>` : ""}
     ${(c.metas || []).length ? `<div class="block"><h4>Metas 2050</h4><ul class="ul">${c.metas.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div>` : ""}
-    ${(c.cien_dias || []).length ? `<div class="block"><h4>Hoja de ruta · 100 primeros días</h4><ul class="ul ul100">${c.cien_dias.map((d) => `<li>${esc(d.accion || d)}${d.tipo ? ` <span class="tag100">${esc(d.tipo)}</span>` : ""}</li>`).join("")}</ul><button class="dlbtn ghost" onclick="dl100('${c.id}')">⬇ Descargar 100 días de esta comisión</button></div>` : ""}
+    ${(c.cien_dias || []).length ? `<div class="block"><h4>Hoja de ruta · 100 primeros días</h4><ul class="ul ul100">${c.cien_dias.map((d) => `<li>${esc(d.accion || d)}${d.tipo ? ` <span class="tag100">${esc(d.tipo)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
     ${(c.acciones || []).length ? `<div class="block"><h4>Acciones e iniciativas</h4><ul class="ul">${c.acciones.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>` : ""}
     ${c.recomendacion ? `<div class="block"><h4>Recomendación de política</h4><div class="reco">${esc(c.recomendacion)}</div></div>` : ""}`;
   $("#modal").classList.add("open");
@@ -312,25 +313,10 @@ function downloadText(name, text) {
   const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = name; a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
-window.dl100 = (id) => { const c = S.list.find((x) => x.id === id); if (c) downloadText(`100-dias-${id}.md`, `# Plan de 100 días — ${c.nombre}\nPlan Perú 2050 · CNPP-CIP\n\n` + md100(c)); };
-window.dl100All = () => downloadText("plan-100-dias-consolidado.md", `# Plan de los 100 primeros días — consolidado\nPlan Perú 2050 · Comisiones Temáticas (CNPP — CIP)\n\n` + with100().map(md100).join(""));
+window.openPdf = (path) => window.open(path, "_blank", "noopener");
+window.dl100All = () => window.openPdf("entregables/pdf/plan-100-dias.pdf");
 
-window.dlEjes = () => {
-  const ejes = [...new Set(detailed().map((c) => c.eje).filter(Boolean))];
-  let md = `# Síntesis por Ejes Estratégicos — Plan Perú 2050\nCNPP — Colegio de Ingenieros del Perú\n\n`;
-  ejes.forEach((e) => {
-    const grp = detailed().filter((c) => c.eje === e);
-    md += `## ${e}\n_${grp.length} comisiones_\n\n`;
-    grp.forEach((c) => {
-      const d = S.detail[c.id];
-      md += `### ${c.nombre} ${d.revision ? "(a revisión)" : "(con datos)"}\n`;
-      if (d.vision || d.resumen) md += `${d.vision || d.resumen}\n`;
-      (d.metas || []).slice(0, 2).forEach((m) => (md += `- Meta: ${m}\n`));
-      md += `\n`;
-    });
-  });
-  downloadText("sintesis-por-ejes.md", md);
-};
+window.dlEjes = () => window.openPdf("entregables/pdf/sintesis-por-ejes.pdf");
 
 /* ---------- Búsqueda ---------- */
 function wireSearch() {
