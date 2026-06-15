@@ -1,0 +1,7 @@
+# Fuentes originales (documentos de comisiones; contienen datos de contacto/PII)
+fuentes/
+# Workflow scripts
+.extract.mjs
+.DS_Store
+node_modules/
+*.log

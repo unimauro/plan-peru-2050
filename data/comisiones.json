@@ -1,0 +1,1197 @@
+[
+  {
+    "id": "espacio",
+    "nombre": "Aeroespacial (Aeronáutica y Espacio)",
+    "resumen": "La Comisión Temática Aeroespacial propone una estrategia de largo plazo bajo el modelo \"Ecosistema Aeronáutico-Aeroespacial\" (adaptación peruana basada en OACI, NASA, ESA y OCDE), organizada en tres pilares (aviación civil, infraestructura y tecnología espacial), para que el Perú sea un actor aeroespacial relevante en América Latina al 2050.",
+    "vision": "Bajo el escenario \"Despegue Sostenible\", el Perú alcanza hiperconectividad aérea nacional, opera una \"Aviación 4.0\" con sistemas inteligentes CNS/ATM y logra soberanía tecnológica espacial con constelación satelital propia y capacidad de lanzamiento desde su posición ecuatorial, posicionándose como uno de los pocos actores sudamericanos con capacidad espacial integral junto a Brasil.",
+    "diagnostico": [
+      "Aviación Civil: conectividad aérea nacional reducida, apenas 0.65 pasajeros per cápita/año, inferior a Chile (~1.21) y Colombia (~0.78).",
+      "Costos operacionales elevados, limitada conectividad amazónica y regional, y brechas logísticas y aeroportuarias persistentes.",
+      "Infraestructura: el Perú tiene más de 200 aeródromos y aeropuertos registrados, pero solo 12 aeropuertos (aprox. 6%) cumplen estándar OACI categoría I o superior, y de ellos solo 8 operan con frecuencia.",
+      "Gran parte del sistema CNS/ATM presenta obsolescencia tecnológica, limitando eficiencia operacional y seguridad.",
+      "Tecnología Aeroespacial: soberanía espacial incipiente; el Perú opera únicamente el satélite PerúSAT-1.",
+      "No se posee capacidad propia de lanzamiento ni ecosistema industrial espacial consolidado.",
+      "Inversión nacional en I+D aeroespacial de solo 0.08% del PBI, muy por debajo de Argentina (~0.167%), Brasil (~0.15%), Israel (~0.25%), Chile (~0.34%) y estándares OCDE."
+    ],
+    "pilares": [
+      {
+        "nombre": "Aviación Civil (Pilar 1)",
+        "descripcion": "Hiperconectividad aérea nacional mediante expansión de rutas, aeropuertos secundarios, subsidios focalizados y conectividad amazónica y regional; flotas híbridas y eléctricas, digitalización operacional y uso masivo de Combustibles Sostenibles de Aviación (SAF)."
+      },
+      {
+        "nombre": "Infraestructura aeronáutica y tecnológica (Pilar 2)",
+        "descripcion": "Consolidación de un modelo de 'Aviación 4.0' donde el 100% de la red aeroportuaria principal use sistemas inteligentes CNS/ATM (comunicaciones, navegación, vigilancia y gestión del tránsito aéreo), integrando IA, automatización y gestión predictiva del tráfico, equivalente a NextGen (EE.UU.) y SESAR (Europa)."
+      },
+      {
+        "nombre": "Tecnología y soberanía aeroespacial (Pilar 3)",
+        "descripcion": "Desarrollo de soberanía tecnológica espacial mediante una constelación nacional de más de 15 satélites (EOS y GEO), infraestructura propia de integración satelital y capacidad gradual de lanzamiento desde territorio nacional, aprovechando la ventaja geográfica ecuatorial."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Conectividad aérea (pasajeros per cápita/año)",
+        "actual": 0.65,
+        "meta": 1.8,
+        "anioMeta": 2050,
+        "unidad": "pax/hab/año",
+        "fuente": "Comisión Aeroespacial PP2050 (Matriz Resumen: 0.80 al 2030, 1.2 al 2040, 1.8 al 2050)"
+      },
+      {
+        "nombre": "Utilización de Combustibles Sostenibles de Aviación (SAF)",
+        "actual": null,
+        "meta": 70,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "Comisión Aeroespacial PP2050 (OE2)"
+      },
+      {
+        "nombre": "Red aeroportuaria principal con sistemas inteligentes CNS/ATM digitalizados",
+        "actual": 40,
+        "meta": 100,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "Comisión Aeroespacial PP2050 (Matriz: 40% al 2030, 75% al 2040, 100% al 2050)"
+      },
+      {
+        "nombre": "Accidentes por millón de vuelos (seguridad operacional)",
+        "actual": 1.5,
+        "meta": 0.5,
+        "anioMeta": 2050,
+        "unidad": "accidentes/millón de vuelos",
+        "fuente": "Comisión Aeroespacial PP2050 (Matriz: 1.5 al 2030, 0.8 al 2040, 0.5 al 2050)"
+      },
+      {
+        "nombre": "Aeropuertos secundarios construidos",
+        "actual": null,
+        "meta": 40,
+        "anioMeta": 2050,
+        "unidad": "aeropuertos",
+        "fuente": "Comisión Aeroespacial PP2050 (Matriz AE1.1: 10 al 2030, 25 al 2040, 40 al 2050)"
+      },
+      {
+        "nombre": "Satélites operativos (constelación nacional)",
+        "actual": 1,
+        "meta": 15,
+        "anioMeta": 2050,
+        "unidad": "satélites",
+        "fuente": "Comisión Aeroespacial PP2050 (actual: solo PerúSAT-1; Matriz: 4 al 2030, 10 al 2040, 15+ al 2050)"
+      },
+      {
+        "nombre": "Lanzamientos anuales desde territorio nacional",
+        "actual": null,
+        "meta": 6,
+        "anioMeta": 2050,
+        "unidad": "lanzamientos/año",
+        "fuente": "Comisión Aeroespacial PP2050 (Matriz: diseño de base al 2030, 2 al 2040, 6 al 2050)"
+      },
+      {
+        "nombre": "Startups espaciales",
+        "actual": null,
+        "meta": 150,
+        "anioMeta": 2050,
+        "unidad": "startups",
+        "fuente": "Comisión Aeroespacial PP2050 (Matriz: 15 al 2030, 60 al 2040, 150 al 2050)"
+      },
+      {
+        "nombre": "Inversión en I+D+i aeroespacial",
+        "actual": 0.08,
+        "meta": 0.15,
+        "anioMeta": 2050,
+        "unidad": "% PBI",
+        "fuente": "Comisión Aeroespacial PP2050 (actual 0.08% del PBI; meta OE6: 0.15% del PBI)"
+      }
+    ],
+    "metas": [
+      "1.8 pasajeros per cápita/año (quintuplicar la conectividad aérea nacional).",
+      "70% de uso de Combustibles Sostenibles de Aviación (SAF) y reducción sustancial de CO₂ por pasajero-km.",
+      "Menos de 0.5 accidentes por millón de vuelos y 100% del ATM digitalizado (seguridad operacional clase mundial).",
+      "Más de 15 satélites operativos (soberanía tecnológica espacial).",
+      "6 lanzamientos anuales desde territorio nacional (acceso al espacio ultraterrestre).",
+      "150 startups espaciales y 0.15% del PBI en I+D+i (ecosistema de innovación espacial).",
+      "Construcción de 40 aeropuertos secundarios.",
+      "100% de la red aeroportuaria principal con sistemas inteligentes CNS/ATM."
+    ],
+    "recomendacion": "Promulgar en los primeros 100 días de Gobierno la Ley de la Agencia Aeroespacial Nacional (solicitando facultades legislativas al Ejecutivo), como habilitador institucional de toda la estrategia espacial que fortalece la autoridad y gobernanza y abre acceso a cooperación internacional y financiamiento; habilitando además futuros programas presupuestales aeroespaciales específicos bajo el enfoque de Presupuesto por Resultados (PpR).",
+    "acciones": [
+      "Acción 1.1 (Regulación): Establecer en detalle el marco regulatorio OSP (Obligaciones de Servicio Público) a cargo de la DGAC, garantizando rutas sociales subsidiadas hacia zonas aisladas (modelos de Canadá, Singapur y Brasil).",
+      "Acción 2.1 (Modernización): Modernizar los sistemas CNS/ATM de comunicaciones, radioayudas a la navegación y vigilancia del espacio aéreo (referentes NextGen y SESAR, con ganancias de eficiencia superiores al 30%).",
+      "Acción 2.2 (Actualización): Actualizar los RAP para alinearlos estrictamente con OACI (SARPs) y elevar los estándares regulatorios nacionales.",
+      "Acción 3.1 (Desarrollo): Construcción de 40 aeropuertos secundarios para integrar territorios históricamente desconectados.",
+      "Acción 4.1 (Ley): Legislar en torno al espacio ultraterrestre y la Agencia Espacial del Perú, en materia de derecho aeroespacial y cooperación internacional (organizaciones como APSCO).",
+      "Acción 4.2 (Inversión/Proyecto): Crear un Fondo Nacional de Innovación Aeroespacial para financiar startups, I+D+i y transferencia tecnológica (referentes Corea del Sur, Israel y Brasil).",
+      "Acción 4.3 (Inversión/Proyecto): Construir una base de lanzamiento ecuatorial aprovechando la cercanía a la línea ecuatorial (paralelo 0°) que reduce el consumo energético y los costos orbitales.",
+      "Acción 4.4 (Inversión/Proyecto): Desplegar la Constelación PeruSat para monitoreo agrícola, gestión de desastres, vigilancia territorial, catastro rural y urbano y conectividad.",
+      "Hito 100 días: Ley de la Agencia Aeroespacial Nacional.",
+      "Hito 100 días: Formulación de perfiles de inversión pública para aeropuertos secundarios."
+    ],
+    "eje": "Soberanía y Defensa"
+  },
+  {
+    "id": "maritimo-fluvial-y-lacustre",
+    "nombre": "Marítimo, Fluvial y Lacustre",
+    "resumen": "La Comisión propone un Plan Marítimo, Fluvial y Lacustre al 2050 basado en el modelo de \"Economía Azul\", que busca recuperar la soberanía logística del Perú y posicionarlo como potencia marítima mediante cuatro pilares: Transporte Marítimo, Gobernanza, Tecnología Naval y Puertos y Logística.",
+    "vision": "Al 2050 el Perú se posiciona como una potencia marítima de la Economía Azul que regenera su capital natural mientras maximiza su eficiencia logística, ubicándose entre las 30 naciones marítimas más influyentes del mundo (Ranking de Menon Economics) y superando los 85 puntos en el Índice de Salud de los Océanos (Ocean Health Index).",
+    "eje": "Infraestructura y Conectividad",
+    "diagnostico": [
+      "Crisis de identidad marítima: el país está rezagado en los indicadores globales de competitividad pese a su ubicación estratégica.",
+      "Dependencia absoluta de flotas externas: más del 80% de la carga estratégica es transportada por buques extranjeros.",
+      "Falla normativa: el DL 1413 (liberalización del cabotaje) buscó reducir costos pero, al no acompañarse de incentivos a la flota nacional, debilitó al armador local sin reducir la factura logística final.",
+      "Gobernanza excesivamente militarizada: la gestión administrativa y comercial del mar requiere un enfoque civil-técnico.",
+      "Ausencia de incentivos como el Tonnage Tax o créditos tributarios, lo que lleva a las navieras a preferir banderas de conveniencia, dejando al Perú sin recaudación ni control sobre su logística soberana.",
+      "Estancamiento industrial de tres décadas en la construcción de buques mercantes de gran calado; la industria naval se ha reducido principalmente a unidades de seguridad.",
+      "Desconexión de la última milla en puertos: tráfico terrestre y sobrecostos en accesos portuarios generan pérdidas millonarias.",
+      "Costo logístico del Perú cercano al 26% del valor del producto, frente al 9% en países de la OCDE.",
+      "Infraestructura amazónica precaria y artesanal, lo que impide que los ríos sean las 'carreteras naturales' del desarrollo; en la selva los costos de transporte son hasta 3 veces superiores al promedio nacional.",
+      "Perú ubicado en el puesto 72 del Índice de Conectividad Marítima de la UNCTAD."
+    ],
+    "pilares": [
+      {
+        "nombre": "Transporte Marítimo",
+        "descripcion": "Recuperación de la soberanía logística mediante el fortalecimiento de la Marina Mercante Nacional y el cabotaje, con una marina mercante y flota fluvial moderna bajo reserva de carga estratégica y un Registro Especial/Segundo Registro de Buques."
+      },
+      {
+        "nombre": "Gobernanza Marítima",
+        "descripcion": "Establecimiento de una autoridad civil técnica autónoma (Autoridad del Mar) y marcos legales competitivos como el Segundo Registro de Buques y el Impuesto al Tonelaje (Tonnage Tax), separando funciones de seguridad/defensa de la administración comercial."
+      },
+      {
+        "nombre": "Tecnología Naval (Marítima)",
+        "descripcion": "Transformación del sector naval mediante innovación, construcción de naves eco-eficientes (híbridas y eléctricas) y transferencia de conocimiento (know-how) internacional con astilleros Tier 1, convirtiendo al Perú en Hub de Construcción Naval del Pacífico Sur."
+      },
+      {
+        "nombre": "Puertos y Logística",
+        "descripcion": "Desarrollo de infraestructura resiliente y digitalizada (Port Community System) bajo el modelo Ciudad-Puerto, que conecte el litoral con la Amazonía y los mercados globales mediante una red de terminales fluviales modernos."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Costo logístico nacional (% del valor del producto)",
+        "actual": 26,
+        "meta": 12,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (OE4; comparativo OCDE 9%)"
+      },
+      {
+        "nombre": "Tonelaje de registro nacional bajo bandera peruana",
+        "actual": null,
+        "meta": 2.5,
+        "unidad": "millones de DWT",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (OE1)"
+      },
+      {
+        "nombre": "Carga estratégica nacional transportada por buques extranjeros",
+        "actual": 80,
+        "meta": null,
+        "unidad": "% (más del 80%)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (situación actual Pilar 1)"
+      },
+      {
+        "nombre": "Tonelaje de exportación nacional transportado por naves del Segundo Registro Peruano",
+        "actual": null,
+        "meta": 25,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Valor Óptimo Pilar 1)"
+      },
+      {
+        "nombre": "Índice de Salud de los Océanos (Ocean Health Index)",
+        "actual": null,
+        "meta": 85,
+        "unidad": "puntos (superar 85)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Síntesis Situación Futura)"
+      },
+      {
+        "nombre": "Ranking de Naciones Marítimas más influyentes (Menon Economics)",
+        "actual": null,
+        "meta": 30,
+        "unidad": "puesto (dentro del Top 30)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Síntesis Situación Futura)"
+      },
+      {
+        "nombre": "Índice de Conectividad Marítima de la UNCTAD",
+        "actual": 72,
+        "meta": 40,
+        "unidad": "puesto (del 72 al Top 40)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Valor Óptimo Pilar 2)"
+      },
+      {
+        "nombre": "Inversión directa en el sector naviero",
+        "actual": null,
+        "meta": 2,
+        "unidad": "% del PBI sectorial",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Valor Óptimo Pilar 2)"
+      },
+      {
+        "nombre": "Industria naval peruana en exportación de unidades fluviales y marítimas de media tecnología",
+        "actual": null,
+        "meta": 5,
+        "unidad": "puesto (Top 5 de Latinoamérica)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Valor Óptimo Pilar 3)"
+      },
+      {
+        "nombre": "Buques mercantes de diseño nacional/híbrido construidos y operativos",
+        "actual": null,
+        "meta": 10,
+        "unidad": "buques (hacia 2040)",
+        "anioMeta": 2040,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (OE3)"
+      },
+      {
+        "nombre": "Componentes navales de fabricación o ensamblaje local",
+        "actual": null,
+        "meta": 30,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (OE3)"
+      },
+      {
+        "nombre": "Reducción de tiempos de permanencia en puerto (modelo Ciudad-Puerto)",
+        "actual": null,
+        "meta": 40,
+        "unidad": "% de reducción respecto a 2024",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Valor Óptimo Pilar 4)"
+      },
+      {
+        "nombre": "Implementación del modelo Ciudad-Puerto en nodos logísticos principales",
+        "actual": null,
+        "meta": 5,
+        "unidad": "nodos (Paita, Callao, Chancay, Pisco, Matarani)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Valor Óptimo Pilar 4)"
+      },
+      {
+        "nombre": "Puertos principales con zonas de actividades logísticas (ZAL) integradas a la ciudad",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (OE4)"
+      },
+      {
+        "nombre": "Operatividad plena de la Autoridad del Mar",
+        "actual": null,
+        "meta": 100,
+        "unidad": "% (en los primeros 3 años)",
+        "anioMeta": 2050,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (OE2)"
+      },
+      {
+        "nombre": "Empresas del sector bajo régimen de Tonnage Tax (meta intermedia 2040)",
+        "actual": null,
+        "meta": 50,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Matriz Resumen, Acción 2.2.2)"
+      },
+      {
+        "nombre": "Incremento del tonelaje de registro nacional (meta intermedia 2030)",
+        "actual": null,
+        "meta": 15,
+        "unidad": "% de incremento",
+        "anioMeta": 2030,
+        "fuente": "Comisión Marítimo, Fluvial y Lacustre - Plan Perú 2050 (Matriz Resumen, OE1.1 Meta 2030)"
+      }
+    ],
+    "metas": [
+      "Posicionar al Perú dentro de las 30 naciones marítimas más influyentes del mundo (Ranking de Menon Economics) y superar los 85 puntos en el Ocean Health Index al 2050.",
+      "Alcanzar un tonelaje de registro nacional de 2.5 millones de DWT bajo bandera peruana al 2050, asegurando movilizar de forma autónoma la carga de exportación estratégica.",
+      "Lograr que el 25% del tonelaje de exportación nacional sea transportado por naves del Segundo Registro Peruano, eliminando la dependencia total de fletes extranjeros.",
+      "Escalar del puesto 72 al Top 40 del Índice de Conectividad Marítima de la UNCTAD y atraer inversión directa naviera equivalente al 2% del PBI sectorial.",
+      "Instalación y operatividad plena de la Autoridad del Mar al 100% en los primeros 3 años, con marco legal que incluya el Tonnage Tax.",
+      "Construir y poner en operación al menos 10 buques mercantes de diseño nacional/híbrido hacia 2040, con 30% de componentes navales de fabricación o ensamblaje local; posicionar la industria naval en el Top 5 de Latinoamérica.",
+      "Reducir el costo logístico nacional del 26% al 12% del valor del producto (estándar OCDE), con 100% de puertos principales con ZAL integradas a la ciudad.",
+      "Implementar el modelo Ciudad-Puerto en los 5 nodos logísticos principales (Paita, Callao, Chancay, Pisco y Matarani), reduciendo en 40% los tiempos de permanencia en puerto respecto a 2024.",
+      "Consolidar al Perú como Hub de Construcción Naval del Pacífico Sur y red de terminales fluviales modernos en la Amazonía."
+    ],
+    "recomendacion": "Crear la Autoridad del Mar como ente civil técnico y autónomo (adscrito a la PCM o al sector económico) que centralice la gobernanza marítima nacional, separando las funciones de seguridad y defensa de la administración comercial, y dotarla de herramientas competitivas como el Registro Especial de Buques (REB) y el Impuesto al Tonelaje (Tonnage Tax).",
+    "acciones": [
+      "Diseño e implementación del Registro Especial de Buques (REB) / Segundo Registro competitivo para naves de gran calado bajo bandera peruana (Acción 1.1.1).",
+      "Evaluación e implementación del Impuesto al Tonelaje (Tonnage Tax), migrando de impuestos sobre utilidades a impuestos sobre capacidad de carga neta (Acción 2.2.1).",
+      "Redactar y aprobar la Ley de Creación de la Autoridad del Mar, ente rector civil adscrito a la PCM o al sector económico (Acción 2.2.2).",
+      "Suscripción de convenios de transferencia tecnológica (know-how) con astilleros 'Tier 1' mundiales para co-construcción de naves híbridas/eléctricas (Acción 3.3.1).",
+      "Implementación del Port Community System (PCS), plataforma electrónica neutral que sincroniza datos entre puertos y transporte terrestre (Acción 4.4.1).",
+      "Modernización de terminales portuarios amazónicos e infraestructura resiliente en Iquitos y Pucallpa, transformando embarcaderos precarios en puertos multimodales (Acción 4.4.2).",
+      "Programas de chatarreo para renovar unidades obsoletas de la flota fluvial/lacustre en la Amazonía y el Titicaca.",
+      "Hitos de los primeros 100 días: instalación de la Comisión Nacional de Economía Azul; formulación de expedientes técnicos para terminales de Iquitos y Pucallpa; presentación del Proyecto de Ley de Creación de la Autoridad del Mar al Congreso."
+    ]
+  },
+  {
+    "id": "capital-del-conocimiento",
+    "nombre": "Capital del Conocimiento",
+    "resumen": "La Comisión 9 propone una transición estructural del Perú: dejar de ser una economía extractiva de recursos naturales para convertirse en una Economía del Conocimiento, articulada sobre tres pilares (capital humano, estructural y relacional) y una apuesta por la especialización inteligente al 2050.",
+    "vision": "Al 2050, el Perú deja de ser un exportador de recursos primarios para convertirse en una economía intensiva en conocimiento, innovación y talento, con una institucionalidad moderna que sostenga políticas de largo plazo y consolide un ecosistema nacional competitivo, inclusivo y basado en el talento y la generación de valor agregado.",
+    "diagnostico": [
+      "Baja inversión en I+D: el Perú invierte apenas 0.13% del PBI en investigacion y desarrollo, frente al 2.5% promedio de la OCDE (Peru21, 2023; OCDE, 2023).",
+      "Comparacion internacional de I+D (% del PBI): Peru 0.13%, Chile 0.4%, Colombia 0.29%, Brasil 1.15%, promedio OCDE 2.5%, Corea del Sur 4.9%, Israel 5.6%.",
+      "Problema de composicion: el esfuerzo en I+D+i depende en gran medida del sector publico, con participacion limitada del sector privado.",
+      "Deficit de capital humano: brecha critica en competencias STEM/CTIM y pensamiento analitico, segun PISA y el Foro Economico Mundial.",
+      "Brecha de calidad educativa y desajuste de habilidades: resultados insuficientes en lectura, matematicas y ciencias; egresados sin las competencias que demandan los sectores productivos.",
+      "Persistencia de brechas urbano-rurales y socioeconomicas; limitaciones en formacion docente y recursos pedagogicos; deficit de talento en areas CTIM.",
+      "Fuga de talentos: perdida sostenida de capital humano altamente calificado (investigadores, cientificos, tecnicos) que migra al exterior.",
+      "Baja patentabilidad: produccion minima de propiedad intelectual que perpetua la dependencia tecnologica externa.",
+      "Brecha digital e infraestructura tecnologica: brechas de conectividad y calidad de acceso, especialmente en zonas rurales, amazonicas y altoandinas (OSIPTEL, 2023; BID, 2023; INEI, 2023).",
+      "Debil articulacion entre Estado, empresa y academia, y limitada insercion en redes internacionales de investigacion e innovacion."
+    ],
+    "pilares": [
+      {
+        "nombre": "Capital Humano (El \"Saber\")",
+        "descripcion": "Transformacion integral del sistema educativo (basico, tecnico, universitario y posgrado) con enfasis en alfabetizacion digital, IA, formacion CTIM, aprendizaje continuo y retencion de investigadores."
+      },
+      {
+        "nombre": "Capital Estructural (El \"Entorno\")",
+        "descripcion": "Infraestructura fisica, tecnologica y legal robusta: inversion en I+D+i, Red Dorsal de Fibra Optica 2.0, sistema de patentes fast-track, financiamiento y capital de riesgo, ciberseguridad y soberania digital, centros de datos y supercomputacion."
+      },
+      {
+        "nombre": "Capital Relacional (La \"Red\")",
+        "descripcion": "Consolidacion de la Triple Helice (Estado-Academia-Empresa), ecosistemas regionales de innovacion, cooperacion internacional, innovacion abierta y aprovechamiento de los TLC para transferencia tecnologica y exportacion de servicios de alto valor."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Inversion en I+D (% del PBI)",
+        "actual": 0.16,
+        "meta": 2,
+        "unidad": "% PBI",
+        "anioMeta": 2050,
+        "fuente": "Tabla 6.1 Indicadores estrategicos nacionales al 2050 (situacion referencial actual ~0.16%, meta 2%). Nota: el diagnostico 2.1 y el resumen ejecutivo citan 0.13% del PBI como brecha 2026 y meta 2.5%."
+      },
+      {
+        "nombre": "Investigadores por millon de habitantes",
+        "actual": 150,
+        "meta": 2000,
+        "unidad": "investigadores/millon hab.",
+        "anioMeta": 2050,
+        "fuente": "Tabla 6.1 Indicadores estrategicos nacionales al 2050 (~150 -> 2,000)."
+      },
+      {
+        "nombre": "Exportaciones de alta tecnologia (% de exportaciones totales)",
+        "actual": null,
+        "meta": 20,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Resumen ejecutivo, Meta Cuantitativa (lograr que el 20% de las exportaciones totales sean de alta tecnologia)."
+      },
+      {
+        "nombre": "Egresados de secundaria con certificacion tecnica o digital complementaria",
+        "actual": null,
+        "meta": 40,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "Metas orientativas Eje 1 (40% al 2040)."
+      },
+      {
+        "nombre": "Empresas medianas y grandes con unidades activas de I+D+i",
+        "actual": null,
+        "meta": 5,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "Metas orientativas Eje 2 (5% al 2040)."
+      },
+      {
+        "nombre": "Infraestructura tecnologica alimentada con energias renovables",
+        "actual": null,
+        "meta": 80,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "Metas orientativas Eje 2 (80% al 2040)."
+      },
+      {
+        "nombre": "Instituciones educativas publicas conectadas con banda ancha de calidad",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2030,
+        "fuente": "Metas orientativas Eje 2 (100% al 2030)."
+      },
+      {
+        "nombre": "Instituciones publicas criticas conectadas con banda ancha",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2030,
+        "fuente": "Metas orientativas Eje 2 (100% al 2030)."
+      },
+      {
+        "nombre": "Solicitudes de patentes de residentes",
+        "actual": null,
+        "meta": null,
+        "unidad": "veces (incremento)",
+        "anioMeta": 2050,
+        "fuente": "Tabla 6.1: situacion 'Baja' -> meta 'Incremento de 10 veces'. Eje 2 fija meta intermedia de duplicar solicitudes al 2030. Valores numericos absolutos no especificados."
+      },
+      {
+        "nombre": "Cobertura nacional de conectividad educativa",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Tabla 6.1: situacion 'Parcial' -> meta '100%'."
+      }
+    ],
+    "metas": [
+      "Alcanzar una inversion del 2.5% del PBI en I+D (resumen ejecutivo); la tabla 6.1 fija una meta referencial de 2% al 2050.",
+      "Lograr que el 20% de las exportaciones totales sean de alta tecnologia.",
+      "Alcanzar ~2,000 investigadores por millon de habitantes al 2050.",
+      "Eje 1 al 2050: Peru entre los paises lideres de America Latina en formacion CTIM, talento y retencion de investigadores.",
+      "Eje 2 al 2050: Peru exportador relevante de licencias, soluciones tecnologicas y propiedad intelectual; posicionado como hub digital y logistico del Pacifico Sur.",
+      "Eje 3 al 2050: Peru posicionado como referente regional en cooperacion cientifica y transferencia de conocimiento.",
+      "Cobertura nacional total de conectividad educativa e infraestructura digital critica.",
+      "Especializacion inteligente: Mineria 4.0 (de vender concentrados a exportar servicios de ingenieria y robotica - METS), Biotecnologia y biodiversidad, Agrotecnologia y alimentos funcionales, Economia creativa y servicios digitales, y Energias del futuro (hidrogeno verde)."
+    ],
+    "recomendacion": "Institucionalizar el Ministerio de Ciencia, Tecnologia e Innovacion (MINCTI) y establecer un marco legal que blinde el presupuesto de innovacion con compromisos presupuestales multianuales, asegurando que el conocimiento sea una politica de Estado de largo plazo y no de gobierno.",
+    "acciones": [
+      "Impulsar prioritariamente la formacion en CTIM e incorporar pensamiento computacional, alfabetizacion digital, robotica e IA desde la educacion basica.",
+      "Modernizar la educacion tecnica (tecnologias 4.0, microcredenciales, reskilling) y fortalecer universidades orientadas a investigacion y posgrado.",
+      "Implementar mecanismos de retorno y vinculacion del talento peruano en el exterior para revertir la fuga de talentos.",
+      "Incrementar progresivamente la inversion nacional en I+D+i y crear fondos competitivos, capital semilla y capital de riesgo para startups tecnologicas.",
+      "Simplificar y digitalizar el registro de patentes (fast-track), reducir costos/tiempos y crear incentivos tributarios a la innovacion patentable.",
+      "Expandir la conectividad de alta velocidad (Red Dorsal de Fibra Optica 2.0), centros de datos y supercomputacion; fortalecer ciberseguridad y soberania digital.",
+      "Consolidar la Triple Helice: crear oficinas de transferencia tecnologica, parques cientificos y tecnologicos regionales y clusters especializados.",
+      "Fortalecer la cooperacion internacional, redes cientificas, movilidad academica y diplomacia cientifica y tecnologica.",
+      "Impulsar la especializacion inteligente en biotecnologia, mineria 4.0, agrotecnologia, economia creativa/servicios digitales y energias del futuro.",
+      "Crear una instancia nacional de articulacion del capital del conocimiento y un sistema nacional de monitoreo con indicadores de largo plazo y financiamiento multianual."
+    ],
+    "eje": "Economía del Conocimiento"
+  },
+  {
+    "id": "peru-en-la-era-digital",
+    "nombre": "Perú en la Era Digital",
+    "resumen": "La comisión propone abordar a Perú en la era digital al 2050 mediante seis ejes estratégicos alineados a los cuatro Objetivos Nacionales del PEDN 2050, entendiendo la era digital como un fenómeno transversal de desarrollo y no como una agenda meramente tecnológica.",
+    "vision": "Un \"Perú digital inclusivo, productivo y confiable al 2050\": un país que aprovecha la era digital para cerrar brechas sociales y territoriales, elevar la productividad, fortalecer la democracia, mejorar los servicios públicos y desarrollar capacidades humanas para una sociedad basada en el conocimiento, donde personas, empresas, instituciones y territorios participen de forma segura, inclusiva y sostenible en la vida digital.",
+    "eje": "Infraestructura y Conectividad",
+    "diagnostico": [
+      "Conectividad domiciliaria no universal: solo 58.9% de hogares con Internet en el primer trimestre de 2025 (INEI), pese a que 95.6% cuenta con al menos una TIC.",
+      "Brecha territorial crítica: Lima Metropolitana 80.3%, resto urbano 60.7% y área rural solo 20.5% de hogares con Internet; persisten zonas rurales, amazónicas, altoandinas y periurbanas rezagadas.",
+      "Uso de Internet alto pero ciudadanía digital limitada: 77.7% de la población de 6 y más años usó Internet en el primer trimestre de 2024, pero persisten brechas en competencias, seguridad, pensamiento crítico y habilidades para IA.",
+      "Adopción digital desigual en mipymes y regiones; la digitalización aún no se traduce en productividad, formalización, innovación ni empleo decente.",
+      "Estado digital incipiente: la PNTD 2030 impulsa gobierno digital e interoperabilidad, pero falta consolidar servicios de extremo a extremo y gobernanza de datos.",
+      "Capacidades institucionales de confianza digital y ciberseguridad que deben madurar.",
+      "Adopción de IA, IoT, analítica avanzada y automatización creciente pero fragmentada, sin estrategia nacional integral.",
+      "Contexto global: ~2.2 mil millones de personas siguen fuera de Internet (ITU 2025), riesgo de profundizar desigualdades si no se actúa sobre conectividad significativa, talento y confianza."
+    ],
+    "pilares": [
+      {
+        "nombre": "Ciudadanía, capacidades y bienestar digital",
+        "descripcion": "Población con competencias digitales, alfabetización en IA, uso crítico de información y acceso inclusivo a educación, salud y servicios digitales (vinculado a ON1)."
+      },
+      {
+        "nombre": "Infraestructura, conectividad significativa y territorio inteligente",
+        "descripcion": "Conectividad de calidad en todo el territorio, con redes resilientes, nube, centros de datos, interoperabilidad y monitoreo territorial basado en datos (vinculado a ON2)."
+      },
+      {
+        "nombre": "Economía digital, productividad e innovación",
+        "descripcion": "Empresas, mipymes, startups y sectores productivos que usan plataformas, IA, automatización, datos y comercio digital para elevar productividad y competitividad (vinculado a ON3)."
+      },
+      {
+        "nombre": "Estado digital, servicios públicos e interoperabilidad",
+        "descripcion": "Estado interoperable, predictivo, empático y orientado al ciudadano, con servicios digitales de extremo a extremo y decisiones basadas en datos (vinculado a ON4)."
+      },
+      {
+        "nombre": "Gobernanza, confianza, ciberseguridad y derechos digitales",
+        "descripcion": "Marco institucional que protege datos, derechos digitales, seguridad, ética de IA y confianza pública en el entorno digital (vinculado a ON4 y transversal)."
+      },
+      {
+        "nombre": "Tecnologías emergentes, inteligencia artificial y sostenibilidad",
+        "descripcion": "Uso de IA, IoT, blockchain, analítica, automatización, gemelos digitales y tecnologías verdes para resolver problemas nacionales (vinculado a ON2 y ON3)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Hogares con acceso a Internet",
+        "actual": 58.9,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "INEI 2025 (primer trimestre); valor óptimo 2050 referencial (cobertura/conectividad significativa universal sin cifra)"
+      },
+      {
+        "nombre": "Hogares con acceso a Internet - Lima Metropolitana",
+        "actual": 80.3,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "INEI 2025 (primer trimestre)"
+      },
+      {
+        "nombre": "Hogares con acceso a Internet - resto urbano",
+        "actual": 60.7,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "INEI 2025 (primer trimestre)"
+      },
+      {
+        "nombre": "Hogares con acceso a Internet - área rural",
+        "actual": 20.5,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "INEI 2025 (primer trimestre)"
+      },
+      {
+        "nombre": "Hogares con al menos una TIC",
+        "actual": 95.6,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "INEI 2025 (primer trimestre)"
+      },
+      {
+        "nombre": "Población de 6 y más años que usó Internet",
+        "actual": 77.7,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "INEI 2024 (primer trimestre)"
+      },
+      {
+        "nombre": "Adultos con competencias digitales básicas o intermedias",
+        "actual": null,
+        "meta": 90,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Valor óptimo referencial; hitos intermedios: 60% al 2040 (matriz resumen)"
+      },
+      {
+        "nombre": "Mipymes formales con adopción digital productiva",
+        "actual": null,
+        "meta": 70,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Valor óptimo referencial; hitos intermedios: 40% al 2040 (matriz resumen)"
+      },
+      {
+        "nombre": "Servicios públicos priorizados disponibles de extremo a extremo",
+        "actual": null,
+        "meta": 90,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Valor óptimo referencial; hitos intermedios: 60% al 2040 (matriz resumen)"
+      },
+      {
+        "nombre": "Capitales distritales con servicios digitales esenciales",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Valor óptimo referencial (escenario al 2050)"
+      },
+      {
+        "nombre": "Instituciones educativas y centros de salud conectados",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Valor óptimo referencial (escenario al 2050)"
+      }
+    ],
+    "metas": [
+      "Al 2050, 90% de adultos con competencias digitales básicas o intermedias y alfabetización en IA incorporada en el sistema educativo (básica, técnica y superior).",
+      "Al 2050, conectividad significativa universal en instituciones públicas, hogares y territorios priorizados; 100% de capitales distritales con servicios digitales esenciales; instituciones educativas y centros de salud conectados al 100%.",
+      "Al 2050, 70% de mipymes formales con adopción digital productiva y uso de plataformas, datos o IA; ecosistemas regionales de innovación digital.",
+      "Al 2050, 90% de servicios públicos priorizados disponibles de extremo a extremo; identidad digital e interoperabilidad plenamente implementadas y reducción significativa de costos de transacción ciudadana.",
+      "Al 2050, sistema nacional de confianza digital maduro, con capacidades permanentes de ciberseguridad, prevención y respuesta, y regulación ética y transparente para IA y datos.",
+      "Al 2050, soluciones de IA y datos implementadas en salud, educación, ambiente, agricultura, justicia, logística y gestión de riesgos, con criterios de sostenibilidad digital en infraestructura y compras públicas.",
+      "Sistemas de monitoreo ambiental, climático y de riesgos funcionando en tiempo real."
+    ],
+    "recomendacion": "Usar como matriz principal la relación entre los cuatro Objetivos Nacionales del PEDN 2050 y los seis ejes propuestos de la era digital, evitando reducir el trabajo a transformación digital; e instalar en los primeros 100 días una Comisión Multisectorial \"Perú en la Era Digital al 2050\" (PCM, CEPLAN, MTC, MINEDU, MINSA, PRODUCE, MEF, RENIEC, academia, sector privado y sociedad civil) como espacio de gobernanza de alto nivel para articular PEDN, PNTD 2030 y eLAC2026.",
+    "acciones": [
+      "Educación digital e IA: actualizar el currículo escolar, técnico y universitario con competencias digitales, pensamiento computacional, alfabetización en IA, ética digital y seguridad en línea (AE1.1).",
+      "Inclusión digital social focalizada para adultos mayores, mujeres, personas con discapacidad, población rural, pueblos indígenas y jóvenes fuera del sistema educativo (AE1.2).",
+      "Salud y bienestar digital: telesalud, historia clínica digital interoperable y analítica para atención primaria (AE1.3).",
+      "Plan nacional de conectividad significativa para hogares, escuelas, centros de salud, comisarías, municipalidades y espacios públicos comunitarios (AE2.1).",
+      "Infraestructura digital territorial: fibra, 5G/6G, nube pública, centros de datos resilientes y nodos regionales de interoperabilidad (AE2.2).",
+      "Territorio inteligente y datos geoespaciales: sensores, imágenes satelitales, gemelos digitales y analítica para gestionar riesgos, agua, ambiente, ciudades y transporte (AE2.3).",
+      "Digitalización productiva de mipymes con paquetes de adopción (facturación, pagos, comercio electrónico, CRM, logística, analítica e IA) (AE3.1).",
+      "Ecosistemas regionales de innovación digital: hubs regionales, laboratorios de IA, centros de transferencia tecnológica y alianzas empresa-universidad-Estado (AE3.2).",
+      "Empleo y reconversión laboral digital: programas de reskilling y upskilling para trabajadores expuestos a automatización e IA generativa (AE3.3).",
+      "Servicios públicos digitales de extremo a extremo en identidad, salud, educación, justicia, seguridad, programas sociales, licencias y permisos (AE4.1).",
+      "Gobierno y arquitectura de datos públicos: catálogo nacional de datos, estándares de calidad e interoperabilidad, datos maestros, analítica pública y tableros de seguimiento del PEDN (AE4.2).",
+      "Identidad digital e interoperabilidad universal: identidad segura, firma digital, expediente digital e interoperabilidad entre niveles de gobierno (AE4.3).",
+      "Marco nacional de confianza digital al 2050: actualizar normas de ciberseguridad, protección de datos, identidad digital, derechos digitales, seguridad infantil y ética de IA (AE5.1).",
+      "Centro nacional de resiliencia y respuesta digital ante incidentes cibernéticos en Estado, infraestructura crítica y servicios esenciales (AE5.2).",
+      "Gobernanza ética de IA y algoritmos públicos: estándares de transparencia, explicabilidad, auditoría, gestión de sesgos y evaluación de impacto (AE5.3).",
+      "Misiones nacionales de IA para problemas públicos en salud, educación, agricultura, clima, justicia, seguridad ciudadana, logística e informalidad (AE6.1).",
+      "Sandbox regulatorio para tecnologías emergentes (IA, fintech, govtech, healthtech, edtech, blockchain, IoT, automatización) (AE6.2).",
+      "Sostenibilidad digital y compras públicas verdes: eficiencia energética, economía circular, huella de carbono digital y gestión de residuos electrónicos (AE6.3).",
+      "Hitos de 100 días: levantar el mapa nacional de brechas digitales críticas, seleccionar 10 servicios públicos digitales críticos, lanzar pilotos de alfabetización en IA y diseñar el Programa Nacional de IA para Problemas Públicos."
+    ]
+  },
+  {
+    "id": "ciencia-y-tecnologia",
+    "nombre": "Ciencia y Tecnología",
+    "resumen": "La Comisión propone el modelo \"Educación con Ciencia y Tecnología para la Producción y la Exportación\" para transitar de un Perú extractivista a una nación industrializada basada en la \"Minería del Conocimiento\", articulando academia, Estado y empresa privada en torno a cuatro pilares.",
+    "vision": "Al 2050 el Perú no solo extrae sus recursos, sino que los transforma y compite en los mercados globales con productos de alto valor agregado, emulando el milagro tecnológico de Japón, consolidando un capital humano de élite exportador de conocimiento y entrando al Top 20 de economías mundiales.",
+    "diagnostico": [
+      "Crisis estructural de desarrollo productivo: pese a contar con inmensos recursos, el Perú exporta el 65% de su cobre como mineral crudo, perdiendo la oportunidad de multiplicar su valor en mercados de Alemania, China y Japón.",
+      "Sistema educativo fracturado: la SUNEDU solo supervisa el producto final (la universidad) e ignora la 'materia prima' que ingresa desde la educación básica.",
+      "Muchos niños sufren problemas de nutrición prenatal que afectan su desarrollo cerebral, y hay alta deserción escolar por necesidad laboral.",
+      "Pandemónium en la generación de tesis: los estudiantes eligen temas libres sin relevancia para el país, desperdiciando conocimiento y presupuesto; los graduados terminan subempleados (ej. manejando taxis) por falta de demanda industrial.",
+      "No existen verdaderos puentes entre la academia y el mercado; el país carece de empresarios manufactureros e innovación.",
+      "La investigación no está institucionalizada y los pocos científicos peruanos migran al extranjero por falta de demanda e infraestructura.",
+      "Los proyectos nacionales se conciben de forma aislada, sin enfoque sistémico; falta legislar para obligar a dar valor agregado antes de exportar, como ya hicieron Indonesia, Rusia, Chile y Bolivia para proteger sus recursos (Níquel, Litio, Cobre)."
+    ],
+    "pilares": [
+      {
+        "nombre": "Cadena de valor educativo",
+        "descripcion": "Enfoque industrial aplicado a la educación que inicia en la etapa prenatal y se extiende hasta el posgrado, asegurando la formación del capital humano, con control de calidad (SUNEDU) en cada etapa del proceso y no solo al final."
+      },
+      {
+        "nombre": "Universidades del conocimiento",
+        "descripcion": "Transformación de las universidades en centros de investigación y generación de conocimiento orientados a la demanda nacional e industrial, abandonando la proliferación de tesis desconectadas de la realidad; universidades como 'fábricas' de conocimiento y de empresarios."
+      },
+      {
+        "nombre": "Parques científicos y tecnológicos",
+        "descripcion": "Creación de puentes entre la academia y el mercado mediante centros de innovación dentro de las universidades (modelo Stanford Research Park, 1951) para formar Empresas de Base Tecnológica (EBT)."
+      },
+      {
+        "nombre": "Parques industriales y exportación sistémica",
+        "descripcion": "Desarrollo de manufactura con valor agregado dirigida a mercados internacionales específicos (China, Japón, Alemania), aplicando planeamiento sistémico (Ingeniería de Sistemas) e integrando parque industrial con universidad, ferrocarril y puerto (ej. Chancay, polos mineros; modelo Mánchester 1896)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Inversión en I+D proveniente del sector privado",
+        "actual": null,
+        "meta": 80,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Pilar 3 / OE3 / Matriz Resumen (Estándar Japón)"
+      },
+      {
+        "nombre": "Exportación de cobre como mineral crudo",
+        "actual": 65,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Síntesis de la Situación Actual / OE4"
+      },
+      {
+        "nombre": "Reducción de la exportación de cobre bruto (meta intermedia 2030)",
+        "actual": null,
+        "meta": 30,
+        "unidad": "%",
+        "anioMeta": 2030,
+        "fuente": "Matriz Resumen, OE4.1 (reducción del 30%)"
+      },
+      {
+        "nombre": "Deserción estudiantil por necesidad laboral",
+        "actual": null,
+        "meta": 0,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "OE1 / Matriz Resumen (0% deserción mediante modalidades remotas)"
+      },
+      {
+        "nombre": "Centralización de tesis (pre y posgrado) hacia proyectos industriales (meta intermedia 2030)",
+        "actual": null,
+        "meta": 50,
+        "unidad": "%",
+        "anioMeta": 2030,
+        "fuente": "Matriz Resumen, Acción 2.1.1"
+      },
+      {
+        "nombre": "Tesis orientadas a resolver demandas reales de empresas y exportación (meta 2040)",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2040,
+        "fuente": "Matriz Resumen, Acción 2.1.1"
+      },
+      {
+        "nombre": "Primeros Parques Científicos y Tecnológicos operativos (meta intermedia 2030)",
+        "actual": null,
+        "meta": 5,
+        "unidad": "parques",
+        "anioMeta": 2030,
+        "fuente": "Matriz Resumen, OE3.1 (Modelo Stanford)"
+      }
+    ],
+    "metas": [
+      "Reducir la deserción técnica/estudiantil a 0% mediante validación universitaria y educación a distancia, consolidando un capital humano de élite exportador de conocimiento.",
+      "Centralizar el 100% de las tesis en centros de innovación para su comercialización directa a la industria al 2030, con un sistema académico peruano que lidere el registro de patentes y EBTs en Sudamérica.",
+      "Lograr que el 80% de la inversión en I+D provenga de empresas privadas (estándar Japón), con todas las universidades clave operando parques de investigación en sus campus.",
+      "Reducir drásticamente la exportación de cobre crudo del 65% actual, reemplazándola por componentes de valor agregado, exportando productos tecnológicos y materias primas 100% procesadas a los principales mercados del mundo y entrando al Top 20 de economías mundiales.",
+      "Eliminar totalmente el modelo primario exportador extractivista, con complejos operando bajo enfoque sistémico Puerto-Ferrocarril-Industria."
+    ],
+    "recomendacion": "Aprobar de manera urgente una Política Nacional de Ciencia y Tecnología (basada en el Modelo Japón 1987) mediante una ley general transversal que convierta a la Ciencia y Tecnología en la principal herramienta del Estado, fijando metas ambiciosas (Premios Nobel, patentes), pues es indispensable para orientar el resto del presupuesto nacional.",
+    "acciones": [
+      "Reestructuración del Sistema de Supervisión Educativa (SUNEDU Integral): ampliar las facultades de calidad educativa para auditar insumos y procesos desde inicial, primaria, secundaria e institutos superiores tecnológicos (control de calidad de toda la cadena, modelo Deming).",
+      "Programa de Protección Prenatal y Nutrición Temprana: garantizar alimentación y medicina desde la gestación a través de las alcaldías para asegurar el desarrollo cognitivo.",
+      "Implementación de educación a distancia y convalidación técnica para ingreso directo a universidades y cobertura digital en zonas mineras/industriales.",
+      "Creación del Centro de Coordinación de Tesis de Interés Nacional: norma que obligue a alinear proyectos de grado, maestrías y doctorados con las necesidades de los sectores productivos regionales (minería, agroindustria).",
+      "Ley de Fomento de Parques Tecnológicos Universitarios: marco normativo para ceder espacios en universidades públicas destinados a instalar empresas científicas y de innovación (EBT), modelo Stanford Research Park.",
+      "Legislación para el Valor Agregado Obligatorio: dispositivos legales que restrinjan o graven la exportación de materia prima bruta, obligando a instalar fundiciones y manufactura local (modelo Indonesia/Bolivia/Chile/Rusia).",
+      "Especialización multicultural hacia mercados de alto consumo: incorporación de idiomas estratégicos (chino, japonés, alemán) en zonas industriales exportadoras."
+    ],
+    "eje": "Economía del Conocimiento"
+  },
+  {
+    "id": "medio-ambiente",
+    "nombre": "Medio Ambiente",
+    "resumen": "La Comisión Temática Ambiental propone una estrategia de largo plazo basada en la \"Alfabetización Ambiental Operativa\", articulada en tres pilares (Economía Circular Transaccional, Tecnología/Innovación/Trazabilidad y Gobernanza/Sostenibilidad) para transformar el modelo ambiental peruano hacia 2050.",
+    "vision": "Hacia 2050, bajo un escenario de \"Innovación Sostenible\", el Perú consolida una economía verde que aprovecha su biodiversidad y recursos naturales, con una \"Alfabetización Ambiental Operativa\" que traduce el conocimiento científico y la conciencia crítica en acciones técnicas, prácticas productivas sostenibles y consumo responsable.",
+    "diagnostico": [
+      "Economía circular reducida: menos del 5% de los residuos solidos aprovechables son reincorporados formalmente a las cadenas productivas.",
+      "Se generan mas de 24,600 toneladas de residuos solidos al dia, de las cuales mas del 76% tiene alto potencial de valorizacion que se pierde en vertederos.",
+      "Carencia critica de plantas de compostaje y de transferencia tecnica a nivel municipal.",
+      "Deficit de infraestructura automatizada: PYMES y sectores extractivos tradicionales operan con sistemas de control analogicos o desarticulados, facilitando la informalidad comercial e impidiendo certificar el origen sostenible de los recursos.",
+      "La educacion ambiental y ecologica se limita a la teoria basica, sin enfoque de competencias operativas para el empleo verde.",
+      "Vacio legal historico en la tipificacion y sancion de infracciones ambientales modernas y cadenas de suministro informales."
+    ],
+    "pilares": [
+      {
+        "nombre": "Economía Circular Transaccional",
+        "descripcion": "Infraestructura descentralizada (Nodos Circulares de valorización intermedia y segregación avanzada), Bolsa de Valores de Residuos Sólidos como plataforma transaccional digital, incentivos tributarios por peso neto segregado e inclusión social de recicladores tradicionales."
+      },
+      {
+        "nombre": "Tecnología, Innovación y Trazabilidad",
+        "descripcion": "Integración de IA, sensores de monitoreo ambiental e IoT en tiempo real; trazabilidad con blockchain de cadenas de suministro (minería, agricultura, forestería) para certificar exportaciones libres de deforestación y baja huella de carbono; I+D+i aplicada que fusiona ciencia moderna con saberes tradicionales."
+      },
+      {
+        "nombre": "Gobernanza y Sostenibilidad",
+        "descripcion": "Institucionalidad climática con rendición de cuentas transparente, descarbonización hacia neutralidad de carbono (reducción de GEI) y ecoeficiencia (ecodiseño, gestión de huella hídrica industrial, infraestructura verde y edificación sostenible)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Tasa de valorización nacional de residuos reaprovechables (incremento al 2050)",
+        "actual": null,
+        "meta": 50,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "Pilar 1 Economía Circular Transaccional, Plan Perú 2050 Comisión Ambiental"
+      },
+      {
+        "nombre": "Residuos sólidos aprovechables reincorporados formalmente a cadenas productivas (situación actual)",
+        "actual": 5,
+        "meta": null,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "Síntesis de la Situación Actual, Pilar 1"
+      },
+      {
+        "nombre": "Residuos sólidos generados al día con alto potencial de valorización",
+        "actual": 76,
+        "meta": null,
+        "anioMeta": 2050,
+        "unidad": "% de 24,600 t/día",
+        "fuente": "Pilar 1 / AE1.1, Plan Perú 2050 Comisión Ambiental"
+      },
+      {
+        "nombre": "Inversión en I+D+i ambiental (% del PBI)",
+        "actual": 0.5,
+        "meta": 1.5,
+        "anioMeta": 2050,
+        "unidad": "% PBI",
+        "fuente": "OE-E1 y Matriz Resumen (0.5% 2030 → 1.0% 2040 → 1.5% 2050)"
+      },
+      {
+        "nombre": "Industrias medianas y grandes bajo estándares ISO 14001 y trazabilidad automatizada",
+        "actual": null,
+        "meta": 100,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "OE-A3 Seguridad Operacional y Ecoeficiencia de Clase Mundial"
+      },
+      {
+        "nombre": "Regiones con Red de Nodos Circulares operativos e interconectados digitalmente",
+        "actual": null,
+        "meta": 100,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "OE-A1 y Matriz Resumen (30% 2030 → 70% 2040 → 100% 2050)"
+      },
+      {
+        "nombre": "Currículos de educación técnica y universitaria con competencias técnicas ambientales obligatorias",
+        "actual": null,
+        "meta": 100,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "OE-E2 Desarrollo de Capacidades y Alfabetización Operativa"
+      },
+      {
+        "nombre": "Automatización de la fiscalización ambiental",
+        "actual": null,
+        "meta": 100,
+        "anioMeta": 2050,
+        "unidad": "%",
+        "fuente": "Matriz Resumen, AE3.3 (monitoreo tiempo real 2030 → fiscalización predictiva 2040 → automatización 100% 2050)"
+      }
+    ],
+    "metas": [
+      "Incremento del 50% en la tasa de valorización nacional de residuos reaprovechables al 2050.",
+      "Red de Nodos Circulares operativos en el 100% de las regiones del país, interconectados digitalmente (30% cobertura 2030, 70% 2040, 100% 2050).",
+      "100% de las industrias medianas y grandes operando bajo estándares internacionales ISO 14001 y sistemas de trazabilidad automatizada.",
+      "Incrementar la inversión en I+D+i ambiental al 1.5% del PBI (0.5% en 2030, 1.0% en 2040), con patentes locales en agrotecnología y remediación ambiental.",
+      "Inclusión obligatoria de competencias técnicas ambientales en el 100% de los currículos de educación técnica y universitaria.",
+      "Institucionalidad ambiental con rango constitucional autónomo y participación articulada del sector privado.",
+      "Automatización del 100% de la fiscalización ambiental, con trazabilidad total y cero papel.",
+      "Capturar el 76% de residuos con alto potencial de valorización que actualmente se desperdician en vertederos."
+    ],
+    "recomendacion": "Institucionalizar la \"Alfabetización Ambiental Operativa\" como modelo nacional, dotando a la institucionalidad ambiental de rango constitucional autónomo, y promulgar de inmediato la Ley de Actividades y Delitos Ambientales Complejos como base legal indispensable para exigir trazabilidad digital obligatoria y regular la Bolsa de Valores de Residuos Sólidos, todo articulado al Presupuesto por Resultados (PpR) y al PEDN 2050 coordinado por CEPLAN.",
+    "acciones": [
+      "AE1.1 – Construcción de la red nacional de Nodos Circulares (plantas de valorización intermedia descentralizadas) con modelos APP (50 plantas 2030, 150 plantas 2040, cobertura nacional 2050).",
+      "AE1.2 – Creación del marco regulatorio para la Bolsa de Valores de Residuos Sólidos, tomando como evidencia los modelos de Canadá y Australia.",
+      "AE3.1 – Actualización y endurecimiento de los Estándares de Calidad Ambiental (ECA) y Límites Máximos Permisibles (LMP) alineados a la OCDE.",
+      "AE3.3 – Modernización digital de la fiscalización ambiental (OEFA) mediante IA, sensores IoT, imágenes satelitales y blockchain.",
+      "AE4.1 – Promulgación de la Ley de Actividades y Delitos Ambientales Complejos.",
+      "AE4.2 – Establecimiento de una Base de Investigación de Alta Tecnología y Monitoreo Satelital aprovechando la ubicación ecuatorial del Perú para vigilar la Amazonía (deforestación, minería ilegal, estrés hídrico).",
+      "AE4.3 – Programa Nacional de Alfabetización Ambiental Operativa, articulado con MINEDU y MTPE para competencias laborales verdes.",
+      "AE5.1 – Activación del Fondo Nacional de Innovación Ambiental para financiar startups cleantech (fondeo mixto: multas ambientales, cooperación internacional y PpR).",
+      "Hitos de los primeros 100 días: anteproyecto de la Ley de Delitos Ambientales Complejos (Mesa Técnica Intersectorial MINAM, MINJUSDH, OEFA, Poder Judicial) y viabilización de los perfiles de inversión pública (CUI en Invierte.pe) para los primeros tres Nodos Circulares piloto."
+    ],
+    "eje": "Sostenibilidad y Ambiente"
+  },
+  {
+    "id": "salud",
+    "nombre": "Salud (Gemelos Digitales)",
+    "resumen": "Agenda Nacional para la adopción progresiva de gemelos digitales en el sector salud peruano, con una Fase I centrada en la gestión clínica cardiovascular (arritmias e insuficiencia cardíaca), escalando luego a otras áreas de salud y otros sectores del Estado.",
+    "vision": "Consolidar al Perú como referente regional en innovación en salud digital, contando en un horizonte de diez años con una Estrategia Nacional de Gemelos Digitales integrada a la modernización del Estado, reconocida internacionalmente como modelo de adopción responsable, inclusiva y basada en evidencia, que reduzca la mortalidad cardiovascular y promueva la equidad en salud.",
+    "diagnostico": [
+      "Las enfermedades cardiovasculares son la primera causa de mortalidad en el Perú y América Latina (aprox. 30% de todas las muertes en la región, según OPS).",
+      "Fibrilación auricular: prevalencia global ~1-2% en adultos (se duplica/triplica en mayores de 65); multiplica por cinco el riesgo de accidente cerebrovascular.",
+      "Insuficiencia cardíaca: afecta entre 1% y 2% de adultos en países de ingresos medios, superando el 10% en mayores de 70 años.",
+      "Rehospitalización a 30 días por descompensación de insuficiencia cardíaca en América Latina: entre 20% y 30%, reflejando un modelo de atención reactiva.",
+      "Diagnóstico tardío y fragmentado: arritmias intermitentes escapan al ECG de reposo; el monitoreo Holter (24-48h) es insuficiente en número y distribución geográfica.",
+      "Seguimiento ambulatorio deficiente: ausencia de monitoreo remoto para pacientes con IC dados de alta, generando hospitalizaciones recurrentes evitables.",
+      "Inequidad geográfica: concentración de cardiólogos, electrofisiólogos y equipos de diagnóstico avanzado en Lima Metropolitana.",
+      "Limitada capacidad predictiva: decisiones clínicas basadas en datos estáticos y evaluaciones periódicas, sin anticipación de crisis agudas.",
+      "Subutilización de datos clínicos: la HCE genera grandes volúmenes de datos que no se analizan ni usan en tiempo real.",
+      "Madurez variable de los sistemas de historia clínica electrónica en hospitales públicos."
+    ],
+    "pilares": [
+      {
+        "nombre": "Marco normativo y de gobernanza",
+        "descripcion": "Política Nacional de Gemelos Digitales en Salud por Decreto Supremo, articulada con la Ley 31814 (IA) y la Ley 29733 (datos personales); Comisión Multisectorial Permanente presidida por el MINSA; guía técnica de uso de datos clínicos; Comité Nacional de Ética para la IA en Salud."
+      },
+      {
+        "nombre": "Infraestructura de datos e interoperabilidad",
+        "descripcion": "Adopción del estándar HL7 FHIR para interoperabilidad clínica, integración con la HCE nacional, nube segura con cifrado, ciberseguridad y dispositivos de monitoreo remoto (wearables)."
+      },
+      {
+        "nombre": "Implementación clínica piloto",
+        "descripcion": "Fase I de gemelos digitales cardiovasculares en 3-5 hospitales de alta complejidad del sistema público, con énfasis en arritmias e insuficiencia cardíaca."
+      },
+      {
+        "nombre": "Capacidades nacionales y talento humano",
+        "descripcion": "Formación de cardiólogos, electrofisiólogos, enfermeras especializadas e ingenieros biomédicos; desarrollo de IA aplicada a salud mediante convenios con universidades (UPCH, UNMSM, PUCP, UNI)."
+      },
+      {
+        "nombre": "Generación de evidencia científica",
+        "descripcion": "Estudios sobre efectividad clínica e impacto en equidad, con diseño cuasi-experimental, publicables en revistas indexadas internacionales (Scopus/PubMed)."
+      },
+      {
+        "nombre": "Modelo de financiamiento mixto",
+        "descripcion": "Combinación de presupuesto público (PIP vía Invierte.pe), cooperación multilateral (BID, Banco Mundial, OPS/OMS), cooperación bilateral (GIZ, Cooperación Suiza) y alianzas público-privadas (SaaS, pago por uso)."
+      },
+      {
+        "nombre": "Escalamiento progresivo",
+        "descripcion": "Modelo por fases (NASSS): Fase I cardiovascular (años 1-3), Fase II expansión a oncología, neonatales y gestión hospitalaria (años 4-6), Fase III agenda nacional ampliada y otros sectores del Estado (años 7-10)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Reducción de tasa de rehospitalización a 30 días por insuficiencia cardíaca",
+        "actual": 28,
+        "meta": 20,
+        "unidad": "%",
+        "anioMeta": 2029,
+        "fuente": "Registros hospitalarios / HCE (línea base 28%-31%; meta Fase I: reducción >=20%)"
+      },
+      {
+        "nombre": "Tiempo promedio al diagnóstico de arritmia compleja",
+        "actual": null,
+        "meta": null,
+        "unidad": "meses",
+        "anioMeta": 2029,
+        "fuente": "Auditoría clínica (línea base 6 a 24 meses; meta Fase I: reducción >=30%)"
+      },
+      {
+        "nombre": "Mortalidad hospitalaria por insuficiencia cardíaca en centros piloto",
+        "actual": 11,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2029,
+        "fuente": "Registros de mortalidad MINSA (línea base 11%-13%; meta Fase I: reducción >=15%)"
+      },
+      {
+        "nombre": "Número de pacientes con gemelo digital activo",
+        "actual": 0,
+        "meta": 500,
+        "unidad": "pacientes",
+        "anioMeta": 2029,
+        "fuente": "Plataforma GD (meta Fase I: >=500)"
+      },
+      {
+        "nombre": "Tiempo de actividad de la plataforma (uptime)",
+        "actual": null,
+        "meta": 99,
+        "unidad": "%",
+        "anioMeta": 2029,
+        "fuente": "Monitoreo TI (línea base N/A; meta Fase I: >=99%)"
+      },
+      {
+        "nombre": "Interoperabilidad FHIR operativa en centros piloto",
+        "actual": 0,
+        "meta": 100,
+        "unidad": "% centros piloto",
+        "anioMeta": 2029,
+        "fuente": "Auditoría TI"
+      },
+      {
+        "nombre": "Profesionales de salud formados en gemelos digitales",
+        "actual": 0,
+        "meta": 200,
+        "unidad": "profesionales",
+        "anioMeta": 2029,
+        "fuente": "Registros de formación (meta Fase I: >=200)"
+      },
+      {
+        "nombre": "Publicaciones científicas indexadas con datos nacionales",
+        "actual": 0,
+        "meta": 3,
+        "unidad": "artículos",
+        "anioMeta": 2029,
+        "fuente": "Bases de datos Scopus/PubMed (meta Fase I: >=3)"
+      },
+      {
+        "nombre": "Porcentaje de beneficiarios en regiones fuera de Lima",
+        "actual": 65,
+        "meta": 40,
+        "unidad": "%",
+        "anioMeta": 2029,
+        "fuente": "Registros del programa (línea base 65%; meta Fase I: >=40%)"
+      },
+      {
+        "nombre": "Mercado global de gemelos digitales en salud",
+        "actual": 2.1,
+        "meta": 18.4,
+        "unidad": "USD MM (miles de millones)",
+        "anioMeta": 2030,
+        "fuente": "DelveInsight 2025 / Mordor Intelligence 2025 (USD 2,1 mil millones en 2024 a USD 18,4 mil millones en 2030)"
+      }
+    ],
+    "metas": [
+      "Aprobar un marco normativo y de gobernanza específico para gemelos digitales en salud, articulado con la Ley 31814 (IA) y la Ley 29733 (datos personales).",
+      "Reducir las hospitalizaciones evitables por descompensación cardíaca y la mortalidad por arritmias no diagnosticadas oportunamente.",
+      "Desarrollar capacidades nacionales en IA aplicada a salud y formar talento humano especializado.",
+      "Establecer infraestructura de datos e interoperabilidad con estándar HL7 FHIR integrada a la HCE nacional.",
+      "Generar evidencia científica nacional publicable internacionalmente sobre efectividad clínica e impacto en equidad.",
+      "Contar, en un horizonte de diez años, con una Estrategia Nacional de Gemelos Digitales integrada a la modernización del Estado y reconocida internacionalmente.",
+      "Posicionar al Perú como referente regional en innovación en salud digital, atrayendo financiamiento e inversión tecnológica."
+    ],
+    "recomendacion": "Aprobar mediante Decreto Supremo una Política Nacional de Gemelos Digitales en Salud (articulada con la Ley 31814 de IA y la Ley 29733 de Protección de Datos), creando una Comisión Multisectorial Permanente presidida por el MINSA y un Comité Nacional de Ética para la IA en Salud, con adopción del estándar HL7 FHIR y financiamiento mixto (público, cooperación multilateral y APP), iniciando con una Fase I piloto en salud cardiovascular.",
+    "acciones": [
+      "Constituir una Unidad de Coordinación del Proyecto (gerente, líder técnico en IA/GD, responsable regulatorio y coordinador de formación).",
+      "Diagnosticar la infraestructura tecnológica de los centros piloto (HCE, conectividad, almacenamiento y seguridad de datos).",
+      "Diseñar e implementar la arquitectura de interoperabilidad basada en HL7 FHIR.",
+      "Adquirir o desarrollar la plataforma de gemelos digitales cardiovasculares mediante licitación pública o convenio con empresa tecnológica calificada.",
+      "Implementar un programa intensivo de formación de talento humano clínico y biomédico.",
+      "Implementar clínicamente de forma progresiva, iniciando con insuficiencia cardíaca avanzada y arritmias complejas.",
+      "Generar y publicar evidencia en revistas científicas indexadas y preparar el informe para la Fase II.",
+      "Formular un Proyecto de Inversión Pública (PIP) bajo Invierte.pe e iniciar conversaciones con BID, Banco Mundial y OPS/OMS.",
+      "Realizar evaluaciones (interna trimestral, externa al año 2 y de impacto cuasi-experimental al cierre de la Fase I) y publicar un Informe de Progreso anual.",
+      "Incorporar auditorías de equidad algorítmica como requisito de operación del sistema."
+    ],
+    "eje": "Bienestar y Salud"
+  },
+  {
+    "id": "telecomunicaciones",
+    "nombre": "Telecomunicaciones",
+    "resumen": "La Comisión de Telecomunicaciones del Plan Perú 2050 (CIP) formula el Plan Prospectivo para la Industria de Telecomunicaciones del Perú (PPITP), cuyo escenario deseado \"Motor para el Desarrollo Nacional\" busca cerrar la brecha digital con infraestructura dual terrestre-satelital, masificar 5G/TIC/IA y renovar el marco legal y regulatorio para que el sector aporte cerca del 7% del PBI nacional al 2050.",
+    "vision": "Una industria de telecomunicaciones convertida en \"Motor para el Desarrollo Nacional\", con conectividad universal redundante (terrestre y satelital), tecnologías convergentes 5G/TIC/IA consolidadas y un marco legal-regulatorio modernizado, alcanzando un aporte cercano al 7% del PBI nacional hacia 2050.",
+    "diagnostico": [
+      "Brecha de conectividad: el acceso a internet no alcanza a 84,182 centros poblados, equivalentes a 4'836,907 habitantes.",
+      "Precio del internet fijo elevado: en promedio USD 25 mensuales, por encima de Brasil, Colombia, Argentina y Chile; afecta especialmente a adultos mayores y mujeres.",
+      "RDNFO (Red Dorsal Nacional de Fibra Óptica): 13,640 km de fibra desplegada, core de 100 Gbps, operando en 180 capitales de provincia (sin Loreto ni Ucayali), pero con explotación comercial estimada en solo 10% de su capacidad operativa.",
+      "27 mil km de fibra desplegada para 5,633 centros poblados con USD 1,500 millones de inversión pública, sin cubrir Loreto, Ucayali, Cajamarca, Piura, Tumbes, Amazonas y Madre de Dios.",
+      "Infraestructura de operadores concentrada en la Costa y principales ciudades; no alcanza a regiones altoandinas.",
+      "Inversores privados (no operadores) construyeron 1,500 km de fibra óptica subfluvial en ríos de Loreto.",
+      "Baja penetración de 5G: a mayo 2026, solo 15% del espectro atribuido a servicios móviles está asignado a 5G y menos del 8% opera efectivamente bajo New Radio (NR).",
+      "Más del 50% de los servicios móviles se prestan aún sobre tecnologías 2G y 3G.",
+      "A fines de 2025 el tráfico de datos móviles superó los 2 millones de terabytes; ingresos por datos móviles crecieron más del 6% y por internet fijo más del 10%.",
+      "Intervención aún reducida de Inteligencia Artificial, RV y RA en la industria.",
+      "Carencia de una Política Nacional de Telecomunicaciones y excesiva antigüedad de la ley vigente (Decreto Supremo N° 013-93-TCC), desactualizada frente a nuevas tecnologías y servicios (vacíos, por ejemplo, en TIC).",
+      "Marco regulatorio desactualizado que requiere modernización.",
+      "Reciente venta de Telefónica del Perú, operador dominante del mercado peruano.",
+      "Retos pendientes de ciberseguridad para industrias, infraestructuras críticas y gobernanza multinivel."
+    ],
+    "pilares": [
+      {
+        "nombre": "Infraestructura y Cierre de Brecha Digital",
+        "descripcion": "Infraestructura dual terrestre (FO-MO) y satelital que garantice conectividad redundante, continuidad y seguridad; inversión estimada de 5,500 millones de soles en 23 años para llevar internet a más del 85% de la población con redes terrestres y al 95% con satelitales, e instalar centros digitales de acceso público (Servicio Universal)."
+      },
+      {
+        "nombre": "Tecnologías Convergentes",
+        "descripcion": "Masificación de 5G, TIC e Inteligencia Artificial, junto con IoT, Blockchain, Big Data, Nube y seguridad inteligente de redes, impulsando ciudades y unidades agrarias inteligentes, control remoto de infraestructuras críticas y producción de contenidos digitales para incrementar el consumo de datos y el aporte al PBI."
+      },
+      {
+        "nombre": "Acondicionamiento Legal y Regulatorio",
+        "descripcion": "Nueva Ley de Telecomunicaciones y sistema regulatorio modernizado, en consenso con usuarios y empresas, que promueva la inversión pública-privada, la compartición de infraestructuras, el roaming nacional, la migración a 5G y la regulación ética de la IA y la protección de datos."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Aporte de las telecomunicaciones al PBI nacional",
+        "actual": null,
+        "meta": 7,
+        "unidad": "% PBI",
+        "anioMeta": 2050,
+        "fuente": "Objetivo general PPITP; síntesis de situación futura (aporte cercano al 7%)"
+      },
+      {
+        "nombre": "Centros poblados con acceso a internet fijo (nuevos)",
+        "actual": null,
+        "meta": 30000,
+        "unidad": "CCPP",
+        "anioMeta": 2050,
+        "fuente": "OE1 / Matriz Resumen (693 al 2030, 3,870 al 2040, 30,000 al 2050)"
+      },
+      {
+        "nombre": "Población con acceso a internet por redes terrestres (FO-MO)",
+        "actual": null,
+        "meta": 85,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Futura (Eje 1)"
+      },
+      {
+        "nombre": "Población con acceso a internet por redes satelitales",
+        "actual": null,
+        "meta": 95,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Futura (Eje 1)"
+      },
+      {
+        "nombre": "Centros poblados conectados con redes terrestres (FO-MO)",
+        "actual": null,
+        "meta": 90,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Futura (8 años restantes)"
+      },
+      {
+        "nombre": "Centros poblados conectados con redes satelitales",
+        "actual": null,
+        "meta": 100,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Futura (8 años restantes)"
+      },
+      {
+        "nombre": "Centros poblados sin acceso a internet",
+        "actual": 84182,
+        "meta": null,
+        "unidad": "CCPP",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Actual (brecha 2026)"
+      },
+      {
+        "nombre": "Habitantes sin acceso a internet",
+        "actual": 4836907,
+        "meta": null,
+        "unidad": "habitantes",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Actual (brecha 2026)"
+      },
+      {
+        "nombre": "Precio promedio del internet fijo mensual",
+        "actual": 25,
+        "meta": null,
+        "unidad": "USD/mes",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Actual"
+      },
+      {
+        "nombre": "Espectro móvil asignado a 5G",
+        "actual": 15,
+        "meta": null,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Actual (a mayo 2026)"
+      },
+      {
+        "nombre": "Migración de servicios de telecomunicaciones a 5G",
+        "actual": null,
+        "meta": 90,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Matriz Resumen (70% al 2040, 90% al 2050)"
+      },
+      {
+        "nombre": "Uso comercial de la capacidad operativa de la RDNFO/RDNFOA",
+        "actual": 10,
+        "meta": 70,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Situación Actual (10% explotación comercial); Matriz Resumen (RDNFOA al 70% de uso al 2050)"
+      },
+      {
+        "nombre": "Inversión pública-privada en el sector de telecomunicaciones",
+        "actual": null,
+        "meta": 5500,
+        "unidad": "millones de soles",
+        "anioMeta": 2050,
+        "fuente": "OE3 / inversión estimada del plan (5,500 millones de soles)"
+      },
+      {
+        "nombre": "Fibra óptica desplegada de la RDNFO",
+        "actual": 13640,
+        "meta": null,
+        "unidad": "km",
+        "anioMeta": 2050,
+        "fuente": "Síntesis Situación Actual"
+      },
+      {
+        "nombre": "Implementación de la REDNACE",
+        "actual": null,
+        "meta": 85,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Matriz Resumen (70% al 2040, 85% al 2050)"
+      },
+      {
+        "nombre": "Compartición de infraestructuras entre operadores",
+        "actual": null,
+        "meta": 80,
+        "unidad": "%",
+        "anioMeta": 2050,
+        "fuente": "Matriz Resumen (60% al 2040, superando 80% al 2050)"
+      }
+    ],
+    "metas": [
+      "Lograr el acceso a internet fijo para 30,000 nuevos centros poblados al 2050 (hitos intermedios: 693 CCPP al 2030 y 3,870 CCPP al 2040).",
+      "Alcanzar acceso a internet a más del 85% de la población por redes terrestres (FO-MO) y al 95% por redes satelitales; 90% de CCPP conectados con redes terrestres y 100% con satelitales en los últimos 8 años del plan.",
+      "Consolidar la migración a 5G en el 90% de los servicios de telecomunicaciones al 2050.",
+      "Instalar un sistema satelital peruano con tecnología 5G y baja latencia para dar dualidad y redundancia terrestre-satelital.",
+      "Aprobar y aplicar una nueva Ley de Telecomunicaciones y un Sistema Regulatorio modernizado que impulse compartición de infraestructuras, roaming nacional y regulación ética de la IA.",
+      "Lograr que la inversión en la industria supere los 5,500 millones de soles, con incrementos acumulados superiores a 4,500 millones de soles entre 2028 y 2040.",
+      "Que la industria de telecomunicaciones aporte cerca del 7% del PBI nacional.",
+      "Reformular la explotación de la RDNFO y Redes Regionales (RDNFOA) para superar el 50% de uso de su capacidad operativa (hasta 70% al 2050) e implementar la REDNACE al 85%."
+    ],
+    "recomendacion": "Aprobar una nueva Ley de Telecomunicaciones y modernizar el marco regulatorio (en reemplazo del Decreto Supremo N° 013-93-TCC), en consenso con usuarios y empresas, declarando de necesidad pública el cierre de la brecha digital y promoviendo la inversión pública-privada, la compartición de infraestructuras y el roaming nacional como condición habilitante del crecimiento del sector.",
+    "acciones": [
+      "AE1.1.1 a AE1.1.5: Implementar redes híbridas de fibra óptica (FO-MO) por regiones: Tumbes y Piura (350,000 personas); Loreto, Ucayali y Madre de Dios (465,000); Cajamarca (335,000); Huancavelica, Huánuco y Pasco (141 mil); Apurímac, Ayacucho y Junín (142 mil).",
+      "AE1.1.6: Implementar una red satelital de alcance nacional para dar acceso a internet a 22,238 centros poblados.",
+      "AE1.1.7: Modernizar la red de microondas entre Iquitos y Santa Rosa (Loreto) para dar acceso a 60 mil personas, reemplazándola por fibra óptica.",
+      "AE1.1.8: Reformular el modelo de explotación de la RDNFO y Redes Regionales integrándolas en la RDNFOA (Red Nacional de Fibra Óptica Ampliada), con tarifa única por Gigabyte y gestión integral de Pronatel, para superar el 50% de uso de su capacidad operativa.",
+      "AE2.2.1: Implementar el programa público-privado multisectorial 'Las TIC para el crecimiento de la industria de las telecomunicaciones'.",
+      "AE2.2.2: Diseñar estrategias e instrumentos regulatorios y premios por cumplimiento para acelerar la migración de 2G/3G/4G hacia 5G por los operadores.",
+      "AE3.3.1: Aprobar una nueva Ley de Telecomunicaciones que declare de necesidad pública el cierre de la brecha digital y reactive la inversión.",
+      "AE3.3.2: Modernizar el Marco Regulatorio (espectro, precios/tarifas, compartición de infraestructuras y roaming nacional).",
+      "Hitos de los primeros 100 días: anuncio del cronograma de tres proyectos en selva (Napo-Putumayo, Manseriche y Alto Amazonas-Datem del Marañón: 128 mil habitantes, 653 CCPP, 840 entidades públicas, 743 centros WiFi); anuncio del nuevo modelo de negocio RDNFOA; y anuncio de la implementación de la REDNACE.",
+      "Articulación con Programas Presupuestales PP 0047 (Acceso y uso de servicios públicos de telecomunicaciones), PP 0134 (Promoción de la inversión privada) y PP 0124 (Mejora de la provisión de servicios de telecomunicaciones)."
+    ],
+    "eje": "Infraestructura y Conectividad"
+  }
+]

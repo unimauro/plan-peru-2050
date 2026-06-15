@@ -1,0 +1,329 @@
+{
+  "titulo": "Plan Perú 2050",
+  "subtitulo": "Comisiones Temáticas Nacionales — CNPP / Colegio de Ingenieros del Perú",
+  "actualizado": "2026-06",
+  "totalComisiones": 64,
+  "redactadas": 8,
+  "comisiones": [
+    {
+      "id": "acuicultura-y-pesca",
+      "nombre": "Acuicultura y Pesca",
+      "estado": "pendiente"
+    },
+    {
+      "id": "aeronautica",
+      "nombre": "Aeronautica",
+      "estado": "pendiente"
+    },
+    {
+      "id": "agricultura",
+      "nombre": "Agricultura",
+      "estado": "pendiente"
+    },
+    {
+      "id": "agroindustria",
+      "nombre": "Agroindustria",
+      "estado": "pendiente"
+    },
+    {
+      "id": "aguas",
+      "nombre": "Aguas",
+      "estado": "pendiente"
+    },
+    {
+      "id": "banca",
+      "nombre": "Banca",
+      "estado": "pendiente"
+    },
+    {
+      "id": "biotecnologia",
+      "nombre": "Biotecnologia",
+      "estado": "pendiente"
+    },
+    {
+      "id": "capital-del-conocimiento",
+      "nombre": "Capital Del Conocimiento",
+      "estado": "redactada"
+    },
+    {
+      "id": "capital-social",
+      "nombre": "Capital Social",
+      "estado": "pendiente"
+    },
+    {
+      "id": "ciber-seguridad",
+      "nombre": "Ciber Seguridad",
+      "estado": "pendiente"
+    },
+    {
+      "id": "ciencia-y-tecnologia",
+      "nombre": "Ciencia y Tecnología",
+      "estado": "redactada"
+    },
+    {
+      "id": "ciudades-inteligentes",
+      "nombre": "Ciudades Inteligentes",
+      "estado": "pendiente"
+    },
+    {
+      "id": "cohesion-social",
+      "nombre": "Cohesión Social",
+      "estado": "pendiente"
+    },
+    {
+      "id": "competitividad",
+      "nombre": "Competitividad",
+      "estado": "pendiente"
+    },
+    {
+      "id": "comercio-exterior-e-insercion-en-el-merc",
+      "nombre": "Comercio Exterior E Inserción en El Mercado Externo",
+      "estado": "pendiente"
+    },
+    {
+      "id": "defensa",
+      "nombre": "Defensa",
+      "estado": "pendiente"
+    },
+    {
+      "id": "deporte",
+      "nombre": "Deporte",
+      "estado": "pendiente"
+    },
+    {
+      "id": "desarrollo-rural",
+      "nombre": "Desarrollo Rural",
+      "estado": "pendiente"
+    },
+    {
+      "id": "desarrollo-urbano",
+      "nombre": "Desarrollo Urbano",
+      "estado": "pendiente"
+    },
+    {
+      "id": "drogas",
+      "nombre": "Drogas",
+      "estado": "pendiente"
+    },
+    {
+      "id": "educacion-tres-niveles",
+      "nombre": "Educación (Tres Niveles)",
+      "estado": "pendiente"
+    },
+    {
+      "id": "emprendimiento",
+      "nombre": "Emprendimiento",
+      "estado": "pendiente"
+    },
+    {
+      "id": "energia",
+      "nombre": "Energía",
+      "estado": "pendiente"
+    },
+    {
+      "id": "energia-electrica",
+      "nombre": "Energía Eléctrica",
+      "estado": "pendiente"
+    },
+    {
+      "id": "energia-nuclear",
+      "nombre": "Energía Nuclear",
+      "estado": "pendiente"
+    },
+    {
+      "id": "espacio",
+      "nombre": "Espacio",
+      "estado": "redactada"
+    },
+    {
+      "id": "etica",
+      "nombre": "Ética",
+      "estado": "pendiente"
+    },
+    {
+      "id": "forestal",
+      "nombre": "Forestal",
+      "estado": "pendiente"
+    },
+    {
+      "id": "hidrocarburos",
+      "nombre": "Hidrocarburos",
+      "estado": "pendiente"
+    },
+    {
+      "id": "imagen-pais",
+      "nombre": "Imagen País",
+      "estado": "pendiente"
+    },
+    {
+      "id": "industria",
+      "nombre": "Industria",
+      "estado": "pendiente"
+    },
+    {
+      "id": "industria-papel-y-libro",
+      "nombre": "Industria Papel y Libro",
+      "estado": "pendiente"
+    },
+    {
+      "id": "industria-textil",
+      "nombre": "Industria Textil",
+      "estado": "pendiente"
+    },
+    {
+      "id": "infraestructura-y-construccion",
+      "nombre": "Infraestructura y Construcción",
+      "estado": "pendiente"
+    },
+    {
+      "id": "innovacion",
+      "nombre": "Innovación",
+      "estado": "pendiente"
+    },
+    {
+      "id": "inteligencia-artificial",
+      "nombre": "Inteligencia Artificial",
+      "estado": "pendiente"
+    },
+    {
+      "id": "institucionalidad",
+      "nombre": "Institucionalidad",
+      "estado": "pendiente"
+    },
+    {
+      "id": "inteligencia-de-negocios",
+      "nombre": "Inteligencia de Negocios",
+      "estado": "pendiente"
+    },
+    {
+      "id": "la-familia",
+      "nombre": "La Familia",
+      "estado": "pendiente"
+    },
+    {
+      "id": "macroeconomia",
+      "nombre": "Macroeconomía",
+      "estado": "pendiente"
+    },
+    {
+      "id": "maritimo-fluvial-y-lacustre",
+      "nombre": "Marítimo, Fluvial y Lacustre",
+      "estado": "redactada"
+    },
+    {
+      "id": "medio-ambiente",
+      "nombre": "Medio Ambiente",
+      "estado": "redactada"
+    },
+    {
+      "id": "metalurgia",
+      "nombre": "Metalurgia",
+      "estado": "pendiente"
+    },
+    {
+      "id": "mineria",
+      "nombre": "Minería",
+      "estado": "pendiente"
+    },
+    {
+      "id": "mipymes",
+      "nombre": "Mipymes",
+      "estado": "pendiente"
+    },
+    {
+      "id": "orden-publico-y-seguridad",
+      "nombre": "Orden Público y Seguridad",
+      "estado": "pendiente"
+    },
+    {
+      "id": "parlamento-academico",
+      "nombre": "Parlamento Académico",
+      "estado": "pendiente"
+    },
+    {
+      "id": "pecuaria",
+      "nombre": "Pecuaria",
+      "estado": "pendiente"
+    },
+    {
+      "id": "pensiones-de-jubilacion",
+      "nombre": "Pensiones de Jubilación",
+      "estado": "pendiente"
+    },
+    {
+      "id": "peru-en-la-era-digital",
+      "nombre": "Perú en La Era Digital",
+      "estado": "redactada"
+    },
+    {
+      "id": "prevision",
+      "nombre": "Previsión",
+      "estado": "pendiente"
+    },
+    {
+      "id": "promocion-de-la-inversion",
+      "nombre": "Promoción de La Inversión",
+      "estado": "pendiente"
+    },
+    {
+      "id": "proyecto-pais-joven",
+      "nombre": "Proyecto País Joven",
+      "estado": "pendiente"
+    },
+    {
+      "id": "quimica",
+      "nombre": "Química",
+      "estado": "pendiente"
+    },
+    {
+      "id": "reforma-del-estado",
+      "nombre": "Reforma Del Estado",
+      "estado": "pendiente"
+    },
+    {
+      "id": "reforma-judicial",
+      "nombre": "Reforma Judicial",
+      "estado": "pendiente"
+    },
+    {
+      "id": "salud",
+      "nombre": "Salud",
+      "estado": "redactada"
+    },
+    {
+      "id": "seguros",
+      "nombre": "Seguros",
+      "estado": "pendiente"
+    },
+    {
+      "id": "telecomunicaciones",
+      "nombre": "Telecomunicaciones",
+      "estado": "redactada"
+    },
+    {
+      "id": "transformacion-digital",
+      "nombre": "Transformación Digital",
+      "estado": "pendiente"
+    },
+    {
+      "id": "transportes",
+      "nombre": "Transportes",
+      "estado": "pendiente"
+    },
+    {
+      "id": "turismo",
+      "nombre": "Turismo",
+      "estado": "pendiente"
+    },
+    {
+      "id": "vacunas-y-laboratorios",
+      "nombre": "Vacunas y Laboratorios",
+      "estado": "pendiente"
+    },
+    {
+      "id": "vivienda",
+      "nombre": "Vivienda",
+      "estado": "pendiente"
+    }
+  ]
+}
