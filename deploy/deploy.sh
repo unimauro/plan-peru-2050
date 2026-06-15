@@ -5,13 +5,14 @@
 # ============================================================
 set -euo pipefail
 
-VPS_HOST="${VPS_HOST:-usuario@TU-VPS}"          # ej. carlos@123.45.67.89
+VPS_HOST="${VPS_HOST:-root@217.15.168.100}"     # VPS Hostinger (Caddy)
 VPS_PATH="${VPS_PATH:-/var/www/plan-peru-2050}" # carpeta servida por Caddy
+SSH_KEY="${SSH_KEY:-$HOME/.ssh/id_ed25519}"
 
 cd "$(dirname "$0")/.."
 
 echo "→ Subiendo sitio a $VPS_HOST:$VPS_PATH"
-rsync -az --delete \
+rsync -az --delete -e "ssh -i $SSH_KEY" \
   --exclude='.git' \
   --exclude='fuentes' \
   --exclude='scripts' \
