@@ -19,3 +19,18 @@ window.PP2050_IA = {
   model: "meta-llama/llama-3.3-70b-instruct:free",
   endpoint: "https://openrouter.ai/api/v1/chat/completions",
 };
+
+// ============================================================
+//  Dosificación de la entrega por hito (feature stage).
+//  Se controla por la variable de URL ?v=  (tiene prioridad).
+//   ?v=all   → muestra TODO (validadas + en revisión)
+//   ?v=validado → solo comisiones validadas, todas las secciones
+//   ?v=h1    → Hito 1: directorio + mapa + simulador + panorama
+//   ?v=h2    → Hito 2: lo de h1 + plan de 100 días
+//   ?v=h3    → Hito 3: todo
+//  "default" es lo que se ve cuando NO hay ?v= en la URL.
+//  Cámbialo a "h1"/"h2"/"h3"/"validado" para dosificar lo que ve el CIP.
+// ============================================================
+window.PP2050_STAGE = {
+  default: "all",
+};

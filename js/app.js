@@ -5,7 +5,29 @@
    ============================================================ */
 "use strict";
 
-const S = { meta: null, detail: {}, list: [], filterEje: "todas", q: "" };
+const S = { meta: null, detail: {}, list: [], filterEje: "todas", q: "", stage: "all", showRevision: true };
+
+// Dosificación por hito (feature stage)
+const STAGES = {
+  all: { secs: null, revision: true },
+  validado: { secs: null, revision: false },
+  h1: { secs: ["grid", "mapa", "sim", "panorama"], revision: true },
+  h2: { secs: ["grid", "mapa", "sim", "panorama", "cien"], revision: true },
+  h3: { secs: null, revision: true },
+};
+function applyStage() {
+  const cfg = window.PP2050_STAGE || {};
+  let v = new URLSearchParams(location.search).get("v");
+  if (!v || v === "null") v = cfg.default || "all";
+  const stage = STAGES[v] || STAGES.all;
+  S.stage = v in STAGES ? v : "all";
+  S.showRevision = stage.revision;
+  document.querySelectorAll("[data-sec]").forEach((el) => {
+    el.style.display = stage.secs && !stage.secs.includes(el.dataset.sec) ? "none" : "";
+  });
+  const pill = document.getElementById("pill-updated");
+  if (pill && S.stage !== "all") pill.textContent = "Vista: " + (S.stage === "validado" ? "solo validadas" : S.stage.toUpperCase());
+}
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
@@ -27,6 +49,7 @@ async function boot() {
     // Merge directory with detail
     S.list = meta.comisiones.map((c) => ({ ...c, ...(S.detail[c.id] || {}) }));
     $("#pill-updated").textContent = "Actualizado " + (meta.actualizado || "");
+    applyStage();
     renderKPIs();
     renderChips();
     renderGrid();
@@ -61,7 +84,7 @@ function renderKPIs() {
   const kpis = [
     { n: S.meta.totalComisiones, l: "Comisiones temáticas", a: false },
     { n: validated().length, l: "Validadas", a: true },
-    { n: reviewed().length, l: "En revisión", a: false },
+    ...(S.showRevision ? [{ n: reviewed().length, l: "En revisión", a: false }] : []),
     { n: inds.length, l: "Indicadores cuantificados", a: false },
   ];
   $("#kpis").innerHTML = "";
@@ -78,7 +101,7 @@ function renderChips() {
   };
   box.append(mk("todas", "Todas"));
   box.append(mk("validadas", "✓ Validado"));
-  box.append(mk("revision", "⚠ En revisión"));
+  if (S.showRevision) box.append(mk("revision", "⚠ En revisión"));
   ejes.forEach((e) => box.append(mk(e, e)));
 }
 
@@ -87,8 +110,9 @@ function matchFilter(c) {
     const hay = (c.nombre + " " + (c.resumen || "") + " " + (c.eje || "")).toLowerCase();
     if (!hay.includes(S.q.toLowerCase())) return false;
   }
-  if (S.filterEje === "todas") return true;
   const d = S.detail[c.id];
+  if (!S.showRevision && d && d.revision) return false;
+  if (S.filterEje === "todas") return true;
   if (S.filterEje === "validadas") return !!d && !d.revision;
   if (S.filterEje === "revision") return !!d && !!d.revision;
   return c.eje === S.filterEje;

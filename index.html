@@ -221,32 +221,41 @@
     <div class="kpis" id="kpis"></div>
   </section>
 
-  <div class="controls">
-    <div class="search">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="q" type="search" placeholder="Buscar comisión (ej. energía, salud, marítimo)…" />
+  <section data-sec="grid">
+    <div class="controls">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Buscar comisión (ej. energía, salud, marítimo)…" />
+      </div>
+      <div class="chips" id="chips"></div>
     </div>
-    <div class="chips" id="chips"></div>
-  </div>
+    <div class="grid" id="grid"><div class="skeleton">Cargando comisiones…</div></div>
+  </section>
 
-  <div class="grid" id="grid"><div class="skeleton">Cargando comisiones…</div></div>
+  <section data-sec="cien">
+    <div class="section-title"><h2 class="serif">Plan de los 100 primeros días</h2><span>Medidas inmediatas propuestas por las comisiones</span></div>
+    <div class="panel" id="cien" style="margin-bottom:40px"><div class="skeleton">Cargando…</div></div>
+  </section>
 
-  <div class="section-title"><h2 class="serif">Plan de los 100 primeros días</h2><span>Medidas inmediatas propuestas por las comisiones</span></div>
-  <div class="panel" id="cien" style="margin-bottom:40px"><div class="skeleton">Cargando…</div></div>
+  <section data-sec="panorama">
+    <div class="section-title"><h2 class="serif">Panorama nacional</h2><span>Comparativa entre comisiones validadas</span></div>
+    <div class="panorama">
+      <div class="panel"><h3>Brecha promedio hacia la meta 2050</h3><div class="sub">% de avance actual estimado por comisión (mayor = más cerca de su meta)</div><canvas id="chartAvance"></canvas></div>
+      <div class="panel"><h3>Comisiones por eje estratégico</h3><div class="sub">Distribución de las comisiones con contenido</div><canvas id="chartEjes"></canvas></div>
+    </div>
+    <button class="dlbtn ghost" style="margin-bottom:40px" onclick="dlEjes()">⬇ Descargar síntesis por ejes</button>
+  </section>
 
-  <div class="section-title"><h2 class="serif">Panorama nacional</h2><span>Comparativa entre comisiones validadas</span></div>
-  <div class="panorama">
-    <div class="panel"><h3>Brecha promedio hacia la meta 2050</h3><div class="sub">% de avance actual estimado por comisión (mayor = más cerca de su meta)</div><canvas id="chartAvance"></canvas></div>
-    <div class="panel"><h3>Comisiones por eje estratégico</h3><div class="sub">Distribución de las comisiones con contenido</div><canvas id="chartEjes"></canvas></div>
-  </div>
-  <button class="dlbtn ghost" style="margin-bottom:40px" onclick="dlEjes()">⬇ Descargar síntesis por ejes</button>
+  <section data-sec="mapa">
+    <div class="section-title"><h2 class="serif">Mapa estratégico</h2><span>Infraestructura asociada a las comisiones territoriales</span></div>
+    <div id="map"></div>
+    <div class="maplegend" id="maplegend"></div>
+  </section>
 
-  <div class="section-title"><h2 class="serif">Mapa estratégico</h2><span>Infraestructura asociada a las comisiones territoriales</span></div>
-  <div id="map"></div>
-  <div class="maplegend" id="maplegend"></div>
-
-  <div class="section-title"><h2 class="serif">Simulador de metas</h2><span>Proyecta el avance hacia las metas 2050</span></div>
-  <div class="sim" id="sim"><div class="skeleton">Selecciona indicadores cuantitativos…</div></div>
+  <section data-sec="sim">
+    <div class="section-title"><h2 class="serif">Simulador de metas</h2><span>Proyecta el avance hacia las metas 2050</span></div>
+    <div class="sim" id="sim"><div class="skeleton">Selecciona indicadores cuantitativos…</div></div>
+  </section>
 </main>
 
 <div class="modal" id="modal"><div class="sheet"><div class="sheet-in" id="sheet"></div></div></div>

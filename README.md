@@ -42,6 +42,22 @@ python3 -m http.server 8080
 1. Settings → Pages → *Deploy from a branch* → `main` / root.
 2. La URL pública quedará en `https://<usuario>.github.io/plan-peru-2050/`.
 
+## 🎚️ Dosificación por hito (feature stage)
+
+La visibilidad se controla con la variable de URL `?v=`:
+
+- `?v=all` — muestra todo (validadas + en revisión).
+- `?v=validado` — solo comisiones validadas.
+- `?v=h1` — Hito 1: directorio + mapa + simulador + panorama.
+- `?v=h2` — Hito 2: lo de h1 + plan de 100 días.
+- `?v=h3` — Hito 3: todo.
+
+Sin `?v=` se usa `window.PP2050_STAGE.default` (en `config.js`). Cámbialo para dosificar lo que ve el CIP.
+
+## ✏️ Editor de comisiones «en revisión»
+
+`editar.html` permite agregar/editar contenido e **indicadores** de las comisiones inferidas desde un formulario y **descargar** el `data/comisiones_revision.json` actualizado para commitearlo. (Página `noindex`.)
+
 ## 🤖 IA opcional
 
 Edita `config.js`: pon una API key de OpenRouter (demo) o la URL de un proxy (recomendado, para no exponer la key). Si lo dejas vacío, el asistente responde con búsqueda local sobre los datos.

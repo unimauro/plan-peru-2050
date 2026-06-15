@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Editor · Plan Perú 2050 (en revisión)</title>
+<style>
+  :root{--bg:#0a0e1a;--panel:#111726;--line:#1e2840;--txt:#e8edf7;--mut:#8a98b8;--acc:#d91023;--gold:#e0a52e;--ok:#2ed47a}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+  .wrap{max-width:920px;margin:0 auto;padding:24px 18px 80px}
+  h1{font-size:1.4rem;margin:0 0 4px}.sub{color:var(--mut);font-size:.9rem;margin-bottom:20px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+  label{display:block;font-size:.78rem;color:var(--mut);margin:10px 0 4px;font-weight:600}
+  input,select,textarea{width:100%;background:#0e1422;border:1px solid var(--line);border-radius:9px;color:var(--txt);padding:9px 11px;font:inherit}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc)}
+  textarea{min-height:64px;resize:vertical}
+  .row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 2fr auto;gap:6px;align-items:center;margin-bottom:6px}
+  .row input{padding:7px 9px;font-size:.85rem}
+  .btn{background:var(--acc);color:#fff;border:none;border-radius:9px;padding:10px 16px;font-weight:700;cursor:pointer;font:inherit}
+  .btn.g{background:transparent;color:var(--gold);border:1px solid rgba(224,165,46,.4)}
+  .btn.sm{padding:6px 10px;font-size:.8rem}
+  .btn.x{background:transparent;color:var(--mut);border:1px solid var(--line);padding:7px 10px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .bar{position:fixed;bottom:0;left:0;right:0;background:rgba(10,14,26,.95);border-top:1px solid var(--line);padding:12px 18px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .hint{font-size:.78rem;color:var(--mut)}
+  .tagrow th{font-size:.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:.04em;text-align:left;padding:0 4px 4px}
+  a{color:var(--gold)}
+  .ok{color:var(--ok)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Editor de comisiones <span style="color:var(--gold)">en revisión</span></h1>
+  <div class="sub">Agrega o edita indicadores y contenido de las comisiones inferidas. Al terminar, <b>descarga el JSON</b> y reemplaza <code>data/comisiones_revision.json</code> en el repo (commit + push). · <a href="index.html">← volver al dashboard</a></div>
+
+  <div class="card">
+    <label>Comisión</label>
+    <select id="pick"></select>
+    <div class="hint" id="pickhint" style="margin-top:6px"></div>
+  </div>
+
+  <div class="card" id="form" style="display:none">
+    <div class="grid2">
+      <div><label>Nombre</label><input id="f_nombre" /></div>
+      <div><label>Eje estratégico</label>
+        <select id="f_eje">
+          <option>Economía del Conocimiento</option><option>Competitividad</option>
+          <option>Infraestructura y Conectividad</option><option>Sostenibilidad y Ambiente</option>
+          <option>Bienestar y Salud</option><option>Soberanía y Defensa</option>
+        </select>
+      </div>
+    </div>
+    <label>Resumen</label><textarea id="f_resumen"></textarea>
+    <label>Visión 2050</label><textarea id="f_vision"></textarea>
+    <label>Diagnóstico — brecha 2026 (una línea por punto)</label><textarea id="f_diag"></textarea>
+
+    <label style="margin-top:16px">Indicadores (hoy → meta 2050)</label>
+    <table style="width:100%"><thead><tr class="tagrow"><th>Nombre</th><th>Hoy</th><th>Meta 2050</th><th>Unidad</th><th>Fuente</th><th></th></tr></thead></table>
+    <div id="inds"></div>
+    <button class="btn g sm" onclick="addInd()">+ indicador</button>
+
+    <label style="margin-top:16px">Metas 2050 (una por línea)</label><textarea id="f_metas"></textarea>
+    <label>Acciones (una por línea)</label><textarea id="f_acciones"></textarea>
+    <label>Recomendación</label><textarea id="f_reco"></textarea>
+    <div class="grid2">
+      <div><label>Nivel de confianza</label><select id="f_conf"><option>preliminar</option><option>medio</option></select></div>
+    </div>
+    <div style="margin-top:14px"><button class="btn" onclick="apply()">Guardar cambios de esta comisión</button> <span id="saved" class="ok" style="font-size:.85rem"></span></div>
+  </div>
+</div>
+
+<div class="bar">
+  <span class="hint" id="count"></span>
+  <button class="btn g" onclick="dl()">⬇ Descargar comisiones_revision.json</button>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+let META=null, DATA=[], VAL=new Set(), byId={};
+async function boot(){
+  META=await fetch("data/meta.json").then(r=>r.json());
+  DATA=await fetch("data/comisiones_revision.json").then(r=>r.ok?r.json():[]).catch(()=>[]);
+  (await fetch("data/comisiones.json").then(r=>r.json()).catch(()=>[])).forEach(c=>VAL.add(c.id));
+  DATA.forEach(c=>byId[c.id]=c);
+  const sel=$("#pick"); sel.innerHTML='<option value="">— elige una comisión —</option>';
+  META.comisiones.filter(c=>!VAL.has(c.id)&&c.id!=="aeronautica").forEach(c=>{
+    const has=byId[c.id]; const o=document.createElement("option");
+    o.value=c.id; o.textContent=(has?"✏️ ":"➕ ")+c.nombre+(has?" (en revisión)":" (nueva)");
+    sel.append(o);
+  });
+  sel.onchange=()=>load(sel.value);
+  updateCount();
+}
+function load(id){
+  if(!id){$("#form").style.display="none";return;}
+  const meta=META.comisiones.find(c=>c.id===id);
+  const c=byId[id]||{id,nombre:meta?meta.nombre:id,revision:true,indicadores:[],pilares:[]};
+  $("#form").style.display="";
+  $("#f_nombre").value=c.nombre||""; $("#f_eje").value=c.eje||"Competitividad";
+  $("#f_resumen").value=c.resumen||""; $("#f_vision").value=c.vision||"";
+  $("#f_diag").value=(c.diagnostico||[]).join("\n");
+  $("#f_metas").value=(c.metas||[]).join("\n"); $("#f_acciones").value=(c.acciones||[]).join("\n");
+  $("#f_reco").value=c.recomendacion||""; $("#f_conf").value=c.nivel_confianza||"preliminar";
+  $("#inds").innerHTML=""; (c.indicadores||[]).forEach(addInd); if(!(c.indicadores||[]).length) addInd();
+  $("#saved").textContent=""; $("#pickhint").textContent=byId[id]?"Editando comisión existente en revisión.":"Comisión nueva (se creará en revisión).";
+  $("#form").dataset.id=id;
+}
+function addInd(i){
+  i=i||{}; const d=document.createElement("div"); d.className="row";
+  d.innerHTML=`<input placeholder="nombre" value="${(i.nombre||'').replace(/"/g,'&quot;')}"/>
+    <input placeholder="hoy" value="${i.actual??''}"/><input placeholder="meta" value="${i.meta??''}"/>
+    <input placeholder="unidad" value="${(i.unidad||'').replace(/"/g,'&quot;')}"/>
+    <input placeholder="fuente" value="${(i.fuente||'').replace(/"/g,'&quot;')}"/>
+    <button class="btn x" onclick="this.parentNode.remove()">✕</button>`;
+  $("#inds").append(d);
+}
+function lines(v){return v.split("\n").map(x=>x.trim()).filter(Boolean);}
+function apply(){
+  const id=$("#form").dataset.id; if(!id)return;
+  const inds=[...$("#inds").children].map(r=>{
+    const inp=r.querySelectorAll("input");
+    const nombre=inp[0].value.trim(); if(!nombre)return null;
+    const num=v=>{v=v.trim();return v===""?null:(isNaN(+v)?v:+v);};
+    return {nombre,actual:num(inp[1].value),meta:num(inp[2].value),unidad:inp[3].value.trim(),fuente:inp[4].value.trim()};
+  }).filter(Boolean);
+  const c={id,nombre:$("#f_nombre").value.trim(),eje:$("#f_eje").value,resumen:$("#f_resumen").value.trim(),
+    vision:$("#f_vision").value.trim(),diagnostico:lines($("#f_diag").value),
+    pilares:(byId[id]&&byId[id].pilares)||[],indicadores:inds,metas:lines($("#f_metas").value),
+    acciones:lines($("#f_acciones").value),recomendacion:$("#f_reco").value.trim(),
+    revision:true,nivel_confianza:$("#f_conf").value};
+  byId[id]=c; if(!DATA.find(x=>x.id===id))DATA.push(c); else DATA=DATA.map(x=>x.id===id?c:x);
+  $("#saved").textContent="✓ guardado en memoria — recuerda descargar el JSON"; updateCount();
+}
+function updateCount(){$("#count").textContent=DATA.length+" comisiones en revisión en memoria";}
+function dl(){
+  const b=new Blob([JSON.stringify(DATA,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="comisiones_revision.json";a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+boot();
+</script>
+</body>
+</html>
