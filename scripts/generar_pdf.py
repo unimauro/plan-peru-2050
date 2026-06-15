@@ -239,8 +239,8 @@ def chart_ejes_dist(coms):
     nr = [sum(1 for c in coms if c.get("eje") == e and not c["_val"]) for e in labels]
     fig, ax = plt.subplots(figsize=(7.4, 3.2))
     y = range(len(labels))
-    ax.barh(list(y), nv, color="#1B8A4B", label="Con datos")
-    ax.barh(list(y), nr, left=nv, color="#B8840E", label="A revisión")
+    ax.barh(list(y), nv, color="#1B8A4B", label="Validado")
+    ax.barh(list(y), nr, left=nv, color="#B8840E", label="En revisión")
     ax.set_yticks(list(y)); ax.set_yticklabels([l[:26] for l in labels], fontsize=8); ax.invert_yaxis()
     for s in ("top","right"): ax.spines[s].set_visible(False)
     ax.grid(axis="x", color="#e6e9f0"); ax.legend(fontsize=8, frameon=False, loc="lower right")
@@ -261,7 +261,7 @@ def chart_ejes_avance(coms):
     ax.barh([r[0][:26] for r in rows], [round(r[1],1) for r in rows], color="#D91023")
     ax.set_xlim(0, 100); ax.invert_yaxis()
     for s in ("top","right"): ax.spines[s].set_visible(False)
-    ax.grid(axis="x", color="#e6e9f0"); ax.set_xlabel("% avance promedio (comisiones con datos)", fontsize=8.5)
+    ax.grid(axis="x", color="#e6e9f0"); ax.set_xlabel("% avance promedio (comisiones validadas)", fontsize=8.5)
     ax.tick_params(labelsize=8)
     fig.tight_layout(); p = os.path.join(IMG, "pdf_ejes_avance.png"); fig.savefig(p, dpi=150); plt.close(fig); return p
 
@@ -274,7 +274,7 @@ def build_sintesis():
                    "social, ambiental e institucional). Generado desde el dashboard del Plan Perú 2050.", S["resumen"])]
     d1 = chart_ejes_dist(coms)
     if d1:
-        s.append(Paragraph("Comisiones por eje (con datos vs. a revisión)", S["h4"]))
+        s.append(Paragraph("Comisiones por eje (validadas vs. en revisión)", S["h4"]))
         s.append(Image(d1, width=170*mm, height=170*mm*plt_ratio(d1)))
     d2 = chart_ejes_avance(coms)
     if d2:
@@ -285,10 +285,10 @@ def build_sintesis():
         if not grp: continue
         grp.sort(key=lambda c: (not c["_val"], c["nombre"]))
         nv = sum(1 for c in grp if c["_val"])
-        blk = [Paragraph(E(e), S["h4"]), Paragraph(f"{dim} · {len(grp)} comisiones ({nv} con datos, {len(grp)-nv} a revisión)", S["sub"])]
+        blk = [Paragraph(E(e), S["h4"]), Paragraph(f"{dim} · {len(grp)} comisiones ({nv} validadas, {len(grp)-nv} en revisión)", S["sub"])]
         s.append(KeepTogether(blk))
         for c in grp:
-            tag = '<font color="#1B8A4B">● con datos</font>' if c["_val"] else '<font color="#B8840E">○ a revisión</font>'
+            tag = '<font color="#1B8A4B">● validado</font>' if c["_val"] else '<font color="#B8840E">○ en revisión</font>'
             s.append(Paragraph(f"<b>{E(c['nombre'])}</b>  {tag}", S["body"]))
             vis = (c.get("vision") or c.get("resumen") or "")
             if vis: s.append(Paragraph(E(vis[:280] + ("…" if len(vis) > 280 else "")), S["bullet"]))

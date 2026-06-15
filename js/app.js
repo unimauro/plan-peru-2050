@@ -60,8 +60,8 @@ function renderKPIs() {
   const ejes = new Set(detailed().map((c) => c.eje).filter(Boolean));
   const kpis = [
     { n: S.meta.totalComisiones, l: "Comisiones temáticas", a: false },
-    { n: validated().length, l: "Con datos validados", a: true },
-    { n: reviewed().length, l: "Línea base · a revisión", a: false },
+    { n: validated().length, l: "Validadas", a: true },
+    { n: reviewed().length, l: "En revisión", a: false },
     { n: inds.length, l: "Indicadores cuantificados", a: false },
   ];
   $("#kpis").innerHTML = "";
@@ -77,8 +77,8 @@ function renderChips() {
     return c;
   };
   box.append(mk("todas", "Todas"));
-  box.append(mk("validadas", "✓ Con datos"));
-  box.append(mk("revision", "⚠ A revisión"));
+  box.append(mk("validadas", "✓ Validado"));
+  box.append(mk("revision", "⚠ En revisión"));
   ejes.forEach((e) => box.append(mk(e, e)));
 }
 
@@ -106,8 +106,8 @@ function renderGrid() {
     const card = el("div", "card" + (has ? "" : " lock"));
     const nInd = (c.indicadores || []).length;
     const badge = !has ? `<span class="badge pend">En redacción</span>`
-      : rev ? `<span class="badge rev" title="Línea base preliminar inferida, pendiente de validación">Datos · a revisión</span>`
-      : `<span class="badge ok">Con datos</span>`;
+      : rev ? `<span class="badge rev" title="Línea base preliminar inferida, pendiente de validación">En revisión</span>`
+      : `<span class="badge ok">Validado</span>`;
     card.innerHTML = `
       ${badge}
       ${c.eje ? `<div class="eje">${esc(c.eje)}</div>` : `<div class="eje">Comisión temática</div>`}

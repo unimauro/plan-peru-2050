@@ -57,7 +57,7 @@ d.text((68, 212), "2050", font=font(120), fill=GOLD)
 d.text((74, 350), "Dashboard de Comisiones Temáticas", font=font(40, False), fill=WHITE)
 d.text((74, 404), "Visión · Brechas · Metas 2050 · Indicadores · Simulaciones · Mapas", font=font(24, False), fill=MUT)
 # stat cards
-stats = [(str(meta["totalComisiones"]), "comisiones"), (str(len(coms)), "con datos"), (str(n_ind), "indicadores")]
+stats = [(str(meta["totalComisiones"]), "comisiones"), (str(len(coms)), "validadas"), (str(n_ind), "indicadores")]
 x = 74
 for val, lab in stats:
     d.rounded_rectangle([x, 466, x+220, 576], radius=16, fill=(17, 23, 38), outline=(30, 40, 64), width=2)

@@ -43,8 +43,8 @@ f(doc.add_paragraph().add_run(
     "estratégico (correspondientes a las dimensiones económica, social, ambiental e institucional del desarrollo). "
     "Generado automáticamente desde el dashboard del Plan Perú 2050."), 10.5, DARK, italic=True)
 f(doc.add_paragraph().add_run(
-    "Nota: las comisiones marcadas «a revisión» corresponden a una línea base preliminar inferida, pendiente de "
-    "validación; las marcadas «con datos» provienen de redacciones oficiales."), 9, GREY, italic=True)
+    "Nota: las comisiones marcadas «en revisión» corresponden a una línea base preliminar inferida, pendiente de "
+    "validación; las marcadas «validado» provienen de redacciones oficiales."), 9, GREY, italic=True)
 
 for eje, dim in EJES:
     grp = [c for c in coms if c.get("eje") == eje]
@@ -53,7 +53,7 @@ for eje, dim in EJES:
     doc.add_paragraph()
     hp=doc.add_paragraph(); f(hp.add_run(eje), 16, RED, bold=True)
     nv = sum(1 for c in grp if c["_val"])
-    f(doc.add_paragraph().add_run(f"{dim}  ·  {len(grp)} comisiones ({nv} con datos, {len(grp)-nv} a revisión)"), 9.5, GREY, italic=True)
+    f(doc.add_paragraph().add_run(f"{dim}  ·  {len(grp)} comisiones ({nv} validadas, {len(grp)-nv} en revisión)"), 9.5, GREY, italic=True)
     # Metas consolidadas (top) del eje
     metas = []
     for c in grp:
@@ -68,7 +68,7 @@ for eje, dim in EJES:
     for c in grp:
         pp=doc.add_paragraph()
         f(pp.add_run(c["nombre"]), 10.5, DARK, bold=True)
-        f(pp.add_run("  " + ("● con datos" if c["_val"] else "○ a revisión")), 8, (GREEN if c["_val"] else GOLD))
+        f(pp.add_run("  " + ("● validado" if c["_val"] else "○ en revisión")), 8, (GREEN if c["_val"] else GOLD))
         vis = (c.get("vision") or c.get("resumen") or "")
         if vis:
             vp=doc.add_paragraph(); f(vp.add_run(vis[:300] + ("…" if len(vis)>300 else "")), 9.5, DARK)
