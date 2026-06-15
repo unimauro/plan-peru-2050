@@ -219,6 +219,14 @@ def build(c):
             set_font(pp.add_run(p.get("nombre","") + ": "), 10.5, DARK, bold=True)
             set_font(pp.add_run(p.get("descripcion","")), 10.5, DARK)
 
+    if c.get("cien_dias"):
+        h(doc, "Hoja de ruta · 100 primeros días", 13)
+        for d in c["cien_dias"]:
+            p = doc.add_paragraph(style="List Bullet")
+            set_font(p.add_run(d.get("accion", "") if isinstance(d, dict) else str(d)), 10.5, DARK)
+            if isinstance(d, dict) and d.get("tipo"):
+                set_font(p.add_run("  [" + d["tipo"] + "]"), 8.5, GOLD, italic=True)
+
     if c.get("metas"):
         h(doc, "Metas 2050", 13); bullets(doc, c["metas"])
     if c.get("acciones"):

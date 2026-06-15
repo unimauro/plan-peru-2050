@@ -315,6 +315,23 @@ function downloadText(name, text) {
 window.dl100 = (id) => { const c = S.list.find((x) => x.id === id); if (c) downloadText(`100-dias-${id}.md`, `# Plan de 100 días — ${c.nombre}\nPlan Perú 2050 · CNPP-CIP\n\n` + md100(c)); };
 window.dl100All = () => downloadText("plan-100-dias-consolidado.md", `# Plan de los 100 primeros días — consolidado\nPlan Perú 2050 · Comisiones Temáticas (CNPP — CIP)\n\n` + with100().map(md100).join(""));
 
+window.dlEjes = () => {
+  const ejes = [...new Set(detailed().map((c) => c.eje).filter(Boolean))];
+  let md = `# Síntesis por Ejes Estratégicos — Plan Perú 2050\nCNPP — Colegio de Ingenieros del Perú\n\n`;
+  ejes.forEach((e) => {
+    const grp = detailed().filter((c) => c.eje === e);
+    md += `## ${e}\n_${grp.length} comisiones_\n\n`;
+    grp.forEach((c) => {
+      const d = S.detail[c.id];
+      md += `### ${c.nombre} ${d.revision ? "(a revisión)" : "(con datos)"}\n`;
+      if (d.vision || d.resumen) md += `${d.vision || d.resumen}\n`;
+      (d.metas || []).slice(0, 2).forEach((m) => (md += `- Meta: ${m}\n`));
+      md += `\n`;
+    });
+  });
+  downloadText("sintesis-por-ejes.md", md);
+};
+
 /* ---------- Búsqueda ---------- */
 function wireSearch() {
   let t;
