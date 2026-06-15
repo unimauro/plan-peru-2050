@@ -33,6 +33,7 @@ async function boot() {
     buildSimulator();
     renderOverview();
     renderMap();
+    render100();
     wireAI();
     wireSearch();
     openFromHash();
@@ -145,6 +146,7 @@ function openDetail(id) {
     ${(c.indicadores || []).length ? `<div class="block"><h4>Indicadores: hoy → meta 2050</h4><div class="detchart"><canvas id="detCanvas"></canvas></div>${c.indicadores.map(indicatorRow).join("")}</div>` : ""}
     ${(c.pilares || []).length ? `<div class="block"><h4>Pilares de la estrategia</h4>${c.pilares.map((p) => `<div class="pilar"><b>${esc(p.nombre)}</b><span>${esc(p.descripcion)}</span></div>`).join("")}</div>` : ""}
     ${(c.metas || []).length ? `<div class="block"><h4>Metas 2050</h4><ul class="ul">${c.metas.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div>` : ""}
+    ${(c.cien_dias || []).length ? `<div class="block"><h4>Hoja de ruta · 100 primeros días</h4><ul class="ul ul100">${c.cien_dias.map((d) => `<li>${esc(d.accion || d)}${d.tipo ? ` <span class="tag100">${esc(d.tipo)}</span>` : ""}</li>`).join("")}</ul><button class="dlbtn ghost" onclick="dl100('${c.id}')">⬇ Descargar 100 días de esta comisión</button></div>` : ""}
     ${(c.acciones || []).length ? `<div class="block"><h4>Acciones e iniciativas</h4><ul class="ul">${c.acciones.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>` : ""}
     ${c.recomendacion ? `<div class="block"><h4>Recomendación de política</h4><div class="reco">${esc(c.recomendacion)}</div></div>` : ""}`;
   $("#modal").classList.add("open");
@@ -288,6 +290,30 @@ function detailChart(c) {
       scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { font: { size: 10 } } } } },
   });
 }
+
+/* ---------- Plan 100 días ---------- */
+function with100() { return S.list.filter((c) => (S.detail[c.id]?.cien_dias || []).length); }
+function render100() {
+  const box = document.getElementById("cien"); if (!box) return;
+  const list = with100();
+  if (!list.length) { box.innerHTML = '<div class="skeleton">Sin medidas de 100 días cargadas.</div>'; return; }
+  const total = list.reduce((a, c) => a + S.detail[c.id].cien_dias.length, 0);
+  box.innerHTML = `
+    <div class="sub" style="font-size:.85rem;color:var(--mut);margin-bottom:12px">${total} medidas inmediatas en ${list.length} comisiones, extraídas de las redacciones. Útiles como insumo para los primeros 100 días del próximo gobierno.</div>
+    <div style="display:grid;gap:8px">${list.map((c) => `<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 0"><button onclick="openDetail('${c.id}')" style="background:none;border:none;color:var(--txt);font:inherit;text-align:left;cursor:pointer;flex:1">${esc(c.nombre)}</button><span style="color:var(--gold);font-size:.82rem;white-space:nowrap">${S.detail[c.id].cien_dias.length} medidas</span></div>`).join("")}</div>
+    <button class="dlbtn" style="margin-top:14px" onclick="dl100All()">⬇ Descargar plan consolidado de 100 días</button>`;
+}
+function md100(c) {
+  const d = S.detail[c.id]; if (!d?.cien_dias?.length) return "";
+  return `## ${c.nombre}\n` + d.cien_dias.map((x) => `- ${x.accion || x}${x.tipo ? ` _(${x.tipo})_` : ""}`).join("\n") + "\n\n";
+}
+function downloadText(name, text) {
+  const b = new Blob([text], { type: "text/markdown;charset=utf-8" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+window.dl100 = (id) => { const c = S.list.find((x) => x.id === id); if (c) downloadText(`100-dias-${id}.md`, `# Plan de 100 días — ${c.nombre}\nPlan Perú 2050 · CNPP-CIP\n\n` + md100(c)); };
+window.dl100All = () => downloadText("plan-100-dias-consolidado.md", `# Plan de los 100 primeros días — consolidado\nPlan Perú 2050 · Comisiones Temáticas (CNPP — CIP)\n\n` + with100().map(md100).join(""));
 
 /* ---------- Búsqueda ---------- */
 function wireSearch() {

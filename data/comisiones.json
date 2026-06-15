@@ -124,7 +124,17 @@
       "Hito 100 días: Ley de la Agencia Aeroespacial Nacional.",
       "Hito 100 días: Formulación de perfiles de inversión pública para aeropuertos secundarios."
     ],
-    "eje": "Soberanía y Defensa"
+    "eje": "Soberanía y Defensa",
+    "cien_dias": [
+      {
+        "accion": "Diseñar, redactar y promulgar la Ley de la Agencia Aeroespacial Nacional, solicitando facultades legislativas al Ejecutivo para acelerar su implementación",
+        "tipo": "ley/decreto"
+      },
+      {
+        "accion": "Formular los perfiles de inversión pública para los aeropuertos secundarios (estudios técnicos y de impacto ambiental, liberación de terrenos y estructuración financiera)",
+        "tipo": "inversión"
+      }
+    ]
   },
   {
     "id": "maritimo-fluvial-y-lacustre",
@@ -321,6 +331,20 @@
       "Modernización de terminales portuarios amazónicos e infraestructura resiliente en Iquitos y Pucallpa, transformando embarcaderos precarios en puertos multimodales (Acción 4.4.2).",
       "Programas de chatarreo para renovar unidades obsoletas de la flota fluvial/lacustre en la Amazonía y el Titicaca.",
       "Hitos de los primeros 100 días: instalación de la Comisión Nacional de Economía Azul; formulación de expedientes técnicos para terminales de Iquitos y Pucallpa; presentación del Proyecto de Ley de Creación de la Autoridad del Mar al Congreso."
+    ],
+    "cien_dias": [
+      {
+        "accion": "Instalar la Comisión Nacional de Economía Azul mediante Decreto Supremo que la formaliza como equipo de transición, y publicar la Línea Base del Perú frente a indicadores internacionales (Ocean Health Index)",
+        "tipo": "ley/decreto (Decreto Supremo) e institucional"
+      },
+      {
+        "accion": "Iniciar la licitación y formulación de los expedientes técnicos para la modernización portuaria fluvial de los terminales de Iquitos y Pucallpa, con infraestructura resiliente",
+        "tipo": "inversión"
+      },
+      {
+        "accion": "Presentar y remitir al Congreso de la República el Proyecto de Ley de Creación de la Autoridad del Mar como ente civil técnico y autónomo",
+        "tipo": "ley/decreto (proyecto de ley)"
+      }
     ]
   },
   {
@@ -623,6 +647,36 @@
       "Sandbox regulatorio para tecnologías emergentes (IA, fintech, govtech, healthtech, edtech, blockchain, IoT, automatización) (AE6.2).",
       "Sostenibilidad digital y compras públicas verdes: eficiencia energética, economía circular, huella de carbono digital y gestión de residuos electrónicos (AE6.3).",
       "Hitos de 100 días: levantar el mapa nacional de brechas digitales críticas, seleccionar 10 servicios públicos digitales críticos, lanzar pilotos de alfabetización en IA y diseñar el Programa Nacional de IA para Problemas Públicos."
+    ],
+    "cien_dias": [
+      {
+        "accion": "Crear e instalar la Comisión Multisectorial \"Perú en la Era Digital al 2050\", espacio de gobernanza de alto nivel con PCM, CEPLAN, MTC, MINEDU, MINSA, PRODUCE, MEF, RENIEC, academia, sector privado y sociedad civil",
+        "tipo": "institucional"
+      },
+      {
+        "accion": "Aprobar una hoja de ruta preliminar de Era Digital 2050 que defina visión, ejes, indicadores, responsabilidades, metas 2030-2040-2050 y cartera de iniciativas estratégicas",
+        "tipo": "programa"
+      },
+      {
+        "accion": "Levantar el mapa nacional de brechas digitales críticas, identificando brechas de conectividad, competencias, servicios públicos, datos, ciberseguridad y adopción digital productiva por región",
+        "tipo": "institucional"
+      },
+      {
+        "accion": "Seleccionar 10 servicios públicos digitales críticos de alto impacto ciudadano para convertirlos en servicios digitales de extremo a extremo",
+        "tipo": "programa"
+      },
+      {
+        "accion": "Lanzar pilotos de alfabetización en IA y ciudadanía digital en colegios, institutos, universidades, centros de empleo y comunidades vulnerables",
+        "tipo": "programa"
+      },
+      {
+        "accion": "Diseñar el Programa Nacional de IA para Problemas Públicos, seleccionando casos de uso en salud, educación, ambiente, seguridad, agricultura, justicia y trámites",
+        "tipo": "programa"
+      },
+      {
+        "accion": "Formular el marco inicial de gobernanza ética de IA y datos, estableciendo principios de transparencia, privacidad, seguridad, no discriminación, auditoría y rendición de cuentas",
+        "tipo": "regulación"
+      }
     ]
   },
   {
@@ -732,7 +786,21 @@
       "Legislación para el Valor Agregado Obligatorio: dispositivos legales que restrinjan o graven la exportación de materia prima bruta, obligando a instalar fundiciones y manufactura local (modelo Indonesia/Bolivia/Chile/Rusia).",
       "Especialización multicultural hacia mercados de alto consumo: incorporación de idiomas estratégicos (chino, japonés, alemán) en zonas industriales exportadoras."
     ],
-    "eje": "Economía del Conocimiento"
+    "eje": "Economía del Conocimiento",
+    "cien_dias": [
+      {
+        "accion": "Aprobar y promulgar de manera urgente la Política Nacional de Ciencia y Tecnología (ley general transversal basada en el Modelo Japón 1987) que convierta a la Ciencia y Tecnología en la principal herramienta del Estado, fijando metas ambiciosas (Premios Nobel, patentes)",
+        "tipo": "ley/regulación"
+      },
+      {
+        "accion": "Reestructurar normativamente la SUNEDU modificando la ley de educación para que la supervisión de la calidad audite toda la cadena de valor educativo ('como una faja industrial'), desde la cuna y no solo el pre y posgrado",
+        "tipo": "ley/regulación (orientación)"
+      },
+      {
+        "accion": "Presentar y enviar al Congreso el Proyecto de Ley de Restricción Gradual a la Exportación de Materia Prima Cruda, que obligue en plazos definidos a que los contratos mineros incorporen cuotas de industrialización y fundición local antes de exportar a mercados de Asia y Europa",
+        "tipo": "ley/regulación"
+      }
+    ]
   },
   {
     "id": "medio-ambiente",
@@ -849,7 +917,17 @@
       "AE5.1 – Activación del Fondo Nacional de Innovación Ambiental para financiar startups cleantech (fondeo mixto: multas ambientales, cooperación internacional y PpR).",
       "Hitos de los primeros 100 días: anteproyecto de la Ley de Delitos Ambientales Complejos (Mesa Técnica Intersectorial MINAM, MINJUSDH, OEFA, Poder Judicial) y viabilización de los perfiles de inversión pública (CUI en Invierte.pe) para los primeros tres Nodos Circulares piloto."
     ],
-    "eje": "Sostenibilidad y Ambiente"
+    "eje": "Sostenibilidad y Ambiente",
+    "cien_dias": [
+      {
+        "accion": "Constituir la Mesa Tecnica Intersectorial (MINAM, MINJUSDH, OEFA y representantes del Poder Judicial) y redactar el primer borrador del anteproyecto de la Ley de Actividades y Delitos Ambientales Complejos, incluyendo el estatuto legal de los operadores de Nodos Circulares y el marco de incentivos tributarios municipales basados en pesaje digital segregado",
+        "tipo": "ley/decreto"
+      },
+      {
+        "accion": "Formular y aprobar tecnicamente los terminos de referencia (TDR) para los estudios de preinversion del perfil de los primeros tres Nodos Circulares piloto en regiones estrategicas, vinculandolos formalmente al enfoque de Presupuesto por Resultados (PpR) y activando los Codigos Unicos de Inversion (CUI) en Invierte.pe",
+        "tipo": "inversión"
+      }
+    ]
   },
   {
     "id": "salud",
@@ -1192,6 +1270,20 @@
       "Hitos de los primeros 100 días: anuncio del cronograma de tres proyectos en selva (Napo-Putumayo, Manseriche y Alto Amazonas-Datem del Marañón: 128 mil habitantes, 653 CCPP, 840 entidades públicas, 743 centros WiFi); anuncio del nuevo modelo de negocio RDNFOA; y anuncio de la implementación de la REDNACE.",
       "Articulación con Programas Presupuestales PP 0047 (Acceso y uso de servicios públicos de telecomunicaciones), PP 0134 (Promoción de la inversión privada) y PP 0124 (Mejora de la provisión de servicios de telecomunicaciones)."
     ],
-    "eje": "Infraestructura y Conectividad"
+    "eje": "Infraestructura y Conectividad",
+    "cien_dias": [
+      {
+        "accion": "Anunciar el cronograma de ejecucion de tres proyectos de conectividad en zona de selva: Napo-Putumayo, Manseriche y Alto Amazonas-Datem del Maranon (128 mil habitantes, 653 CCPP, 840 entidades publicas y 743 centros digitales de acceso publico WiFi)",
+        "tipo": "programa/inversion"
+      },
+      {
+        "accion": "Anunciar la implementacion del nuevo modelo de negocio para la RDNFO y las Redes Regionales, integrandolas en la RDNFOA (Red Nacional de Fibra Optica Ampliada) con alquiler de capacidades de transporte a tarifa unica por Gigabyte",
+        "tipo": "institucional/regulacion"
+      },
+      {
+        "accion": "Anunciar la implementacion de la REDNACE, red privada del Estado que interconecta todas las entidades de la administracion publica mediante enlaces de banda ancha y tecnologias tipo VPN usando un porcentaje de la capacidad instalada de la RDNFO",
+        "tipo": "institucional/inversion"
+      }
+    ]
   }
 ]

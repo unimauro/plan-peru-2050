@@ -133,6 +133,11 @@
   .ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
   .ul li{position:relative;padding-left:20px;color:#cfd8ea;font-size:.92rem}
   .ul li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:2px;background:var(--acc)}
+  .ul100 li::before{background:var(--gold)}
+  .tag100{font-size:.66rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gold);border:1px solid rgba(224,165,46,.35);border-radius:99px;padding:1px 7px;margin-left:6px;white-space:nowrap}
+  .dlbtn{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:#0a0e1a;border:none;border-radius:10px;padding:9px 15px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit;margin-top:8px}
+  .dlbtn:hover{filter:brightness(1.08)}
+  .dlbtn.ghost{background:transparent;color:var(--gold);border:1px solid rgba(224,165,46,.4)}
   .pilar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:9px}
   .pilar b{display:block;margin-bottom:3px}
   .pilar span{font-size:.88rem;color:var(--mut)}
@@ -225,6 +230,9 @@
   </div>
 
   <div class="grid" id="grid"><div class="skeleton">Cargando comisiones…</div></div>
+
+  <div class="section-title"><h2 class="serif">Plan de los 100 primeros días</h2><span>Medidas inmediatas propuestas por las comisiones</span></div>
+  <div class="panel" id="cien" style="margin-bottom:40px"><div class="skeleton">Cargando…</div></div>
 
   <div class="section-title"><h2 class="serif">Panorama nacional</h2><span>Comparativa entre comisiones con datos</span></div>
   <div class="panorama">
