@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root{
     --bg:#0a0e1a; --panel:#111726; --panel2:#0e1422; --line:#1e2840;
@@ -128,6 +130,22 @@
   .ai-in input{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:10px;color:var(--txt);padding:10px;font-family:inherit}
   .ai-in button{background:var(--acc);border:none;color:#fff;border-radius:10px;padding:0 14px;cursor:pointer;font-weight:700}
 
+  /* Panorama */
+  .panorama{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:40px}
+  .panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:var(--r);padding:18px}
+  .panel h3{margin:0 0 4px;font-size:1rem}.panel .sub{font-size:.78rem;color:var(--mut);margin-bottom:12px}
+  .panel canvas{max-height:260px}
+  /* Map */
+  #map{height:460px;border-radius:var(--r);border:1px solid var(--line);margin-bottom:14px;background:#0e1422;z-index:1}
+  .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--txt);border:1px solid var(--line)}
+  .leaflet-popup-content{font-family:inherit}.leaflet-popup-content b{color:var(--gold)}
+  .leaflet-container{font-family:inherit}
+  .maplegend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;font-size:.82rem;color:var(--mut)}
+  .maplegend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  /* Detail chart */
+  .detchart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:10px}
+  .detchart canvas{max-height:260px}
+  @media(max-width:760px){.panorama{grid-template-columns:1fr}}
   footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0;color:var(--mut2);font-size:.82rem}
   .skeleton{color:var(--mut2);text-align:center;padding:60px 0}
   @media(max-width:640px){
@@ -165,6 +183,16 @@
   </div>
 
   <div class="grid" id="grid"><div class="skeleton">Cargando comisiones…</div></div>
+
+  <div class="section-title"><h2 class="serif">Panorama nacional</h2><span>Comparativa entre comisiones con datos</span></div>
+  <div class="panorama">
+    <div class="panel"><h3>Brecha promedio hacia la meta 2050</h3><div class="sub">% de avance actual estimado por comisión (mayor = más cerca de su meta)</div><canvas id="chartAvance"></canvas></div>
+    <div class="panel"><h3>Comisiones por eje estratégico</h3><div class="sub">Distribución de las comisiones con redacción</div><canvas id="chartEjes"></canvas></div>
+  </div>
+
+  <div class="section-title"><h2 class="serif">Mapa estratégico</h2><span>Infraestructura asociada a las comisiones territoriales</span></div>
+  <div id="map"></div>
+  <div class="maplegend" id="maplegend"></div>
 
   <div class="section-title"><h2 class="serif">Simulador de metas</h2><span>Proyecta el avance hacia las metas 2050</span></div>
   <div class="sim" id="sim"><div class="skeleton">Selecciona indicadores cuantitativos…</div></div>

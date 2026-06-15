@@ -28,6 +28,8 @@ async function boot() {
     renderChips();
     renderGrid();
     buildSimulator();
+    renderOverview();
+    renderMap();
     wireAI();
     wireSearch();
   } catch (e) {
@@ -125,13 +127,15 @@ function openDetail(id) {
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
     ${c.vision ? `<div class="block"><h4>Visión 2050</h4><p>${esc(c.vision)}</p></div>` : ""}
     ${(c.diagnostico || []).length ? `<div class="block"><h4>Diagnóstico — brecha 2026</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
-    ${(c.indicadores || []).length ? `<div class="block"><h4>Indicadores: hoy → meta 2050</h4>${c.indicadores.map(indicatorRow).join("")}</div>` : ""}
+    ${(c.indicadores || []).length ? `<div class="block"><h4>Indicadores: hoy → meta 2050</h4><div class="detchart"><canvas id="detCanvas"></canvas></div>${c.indicadores.map(indicatorRow).join("")}</div>` : ""}
     ${(c.pilares || []).length ? `<div class="block"><h4>Pilares de la estrategia</h4>${c.pilares.map((p) => `<div class="pilar"><b>${esc(p.nombre)}</b><span>${esc(p.descripcion)}</span></div>`).join("")}</div>` : ""}
     ${(c.metas || []).length ? `<div class="block"><h4>Metas 2050</h4><ul class="ul">${c.metas.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div>` : ""}
     ${(c.acciones || []).length ? `<div class="block"><h4>Acciones e iniciativas</h4><ul class="ul">${c.acciones.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>` : ""}
     ${c.recomendacion ? `<div class="block"><h4>Recomendación de política</h4><div class="reco">${esc(c.recomendacion)}</div></div>` : ""}`;
   $("#modal").classList.add("open");
   document.body.style.overflow = "hidden";
+  if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+  setTimeout(() => detailChart(c), 30);
 }
 function closeDetail() { $("#modal").classList.remove("open"); document.body.style.overflow = ""; }
 $("#modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeDetail(); });
@@ -170,6 +174,95 @@ function updateSim(inds) {
     if (sp) sp.textContent = `${adv.toFixed(0)}% de avance`;
   });
   const idx = $("#simIndex"); if (idx) idx.textContent = (sum / inds.length).toFixed(0) + "%";
+}
+
+/* ---------- Avance helpers ---------- */
+function indAvance(i) {
+  if (i.actual == null || i.meta == null) return null;
+  if (i.meta === i.actual) return 100;
+  if (i.meta >= i.actual) return clamp((i.actual / i.meta) * 100);
+  return clamp((i.meta / i.actual) * 100); // meta de reducción
+}
+function comAvance(c) {
+  const v = (c.indicadores || []).map(indAvance).filter((x) => x != null);
+  return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
+}
+const CHARTS = {};
+const EJE_COLORS = { "Economía del Conocimiento": "#e0a52e", "Sostenibilidad y Ambiente": "#16a34a", "Soberanía y Defensa": "#d91023", "Infraestructura y Conectividad": "#3b82f6", "Bienestar y Salud": "#a855f7", "Competitividad": "#2ed47a" };
+const ejeColor = (e) => EJE_COLORS[e] || "#8a98b8";
+const chartFont = () => { try { Chart.defaults.color = "#8a98b8"; Chart.defaults.font.family = "Inter, sans-serif"; } catch (e) {} };
+
+/* ---------- Panorama (Chart.js) ---------- */
+function renderOverview() {
+  if (typeof Chart === "undefined") return;
+  chartFont();
+  const det = detailed().map((c) => ({ c, av: comAvance(c) })).filter((x) => x.av != null).sort((a, b) => b.av - a.av);
+  // Bar: avance por comisión
+  const a = document.getElementById("chartAvance");
+  if (a && det.length) {
+    CHARTS.avance && CHARTS.avance.destroy();
+    CHARTS.avance = new Chart(a, {
+      type: "bar",
+      data: { labels: det.map((x) => x.c.nombre.length > 22 ? x.c.nombre.slice(0, 20) + "…" : x.c.nombre),
+        datasets: [{ data: det.map((x) => +x.av.toFixed(1)), backgroundColor: det.map((x) => ejeColor(x.c.eje)), borderRadius: 6 }] },
+      options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: (i) => ` ${i.raw}% de avance hacia 2050` } } },
+        scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false } } },
+        onClick: (e, els) => { if (els[0]) openDetail(det[els[0].index].c.id); } },
+    });
+  }
+  // Doughnut: comisiones por eje
+  const e = document.getElementById("chartEjes");
+  if (e) {
+    const byEje = {};
+    detailed().forEach((c) => { if (c.eje) byEje[c.eje] = (byEje[c.eje] || 0) + 1; });
+    const labels = Object.keys(byEje);
+    CHARTS.ejes && CHARTS.ejes.destroy();
+    CHARTS.ejes = new Chart(e, {
+      type: "doughnut",
+      data: { labels, datasets: [{ data: labels.map((l) => byEje[l]), backgroundColor: labels.map(ejeColor), borderColor: "#0a0e1a", borderWidth: 2 }] },
+      options: { cutout: "62%", plugins: { legend: { position: "bottom", labels: { boxWidth: 12, padding: 10, font: { size: 11 } } } } },
+    });
+  }
+}
+
+/* ---------- Mapa estratégico (Leaflet) ---------- */
+async function renderMap() {
+  const elMap = document.getElementById("map");
+  if (!elMap || typeof L === "undefined") return;
+  let data;
+  try { data = await fetch("data/puntos.json").then((r) => r.json()); } catch (e) { elMap.innerHTML = '<div class="skeleton">No se pudo cargar el mapa.</div>'; return; }
+  const map = L.map("map", { scrollWheelZoom: false, attributionControl: true }).setView([-9.2, -75], 5);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution: "© OpenStreetMap, © CARTO", maxZoom: 12, subdomains: "abcd",
+  }).addTo(map);
+  const tipos = data.tipos || {};
+  (data.puntos || []).forEach((p) => {
+    const color = (tipos[p.tipo] || {}).color || "#fff";
+    const m = L.circleMarker([p.lat, p.lng], { radius: 6, color, fillColor: color, fillOpacity: 0.85, weight: 1.5 }).addTo(map);
+    const com = S.list.find((c) => c.id === p.comision);
+    m.bindPopup(`<b>${esc(p.nombre)}</b><br>${esc((tipos[p.tipo] || {}).label || p.tipo)}${p.nota ? "<br><span style='color:#8a98b8'>" + esc(p.nota) + "</span>" : ""}${com && S.detail[com.id] ? `<br><a href="#" onclick="closeMapTo('${com.id}');return false" style="color:#e0a52e">Ver comisión →</a>` : ""}`);
+  });
+  // Legend
+  const leg = document.getElementById("maplegend");
+  if (leg) leg.innerHTML = Object.values(tipos).map((t) => `<span><i style="background:${t.color}"></i>${esc(t.label)}</span>`).join("") + `<span style="color:var(--mut2)">${esc(data.nota || "")}</span>`;
+}
+window.closeMapTo = (id) => openDetail(id);
+
+/* ---------- Detail chart ---------- */
+function detailChart(c) {
+  const cv = document.getElementById("detCanvas");
+  if (!cv || typeof Chart === "undefined") return;
+  const inds = (c.indicadores || []).map((i) => ({ i, av: indAvance(i) })).filter((x) => x.av != null);
+  if (!inds.length) { cv.parentElement.style.display = "none"; return; }
+  chartFont();
+  CHARTS.detail && CHARTS.detail.destroy();
+  CHARTS.detail = new Chart(cv, {
+    type: "bar",
+    data: { labels: inds.map((x) => x.i.nombre.length > 26 ? x.i.nombre.slice(0, 24) + "…" : x.i.nombre),
+      datasets: [{ label: "% avance", data: inds.map((x) => +x.av.toFixed(1)), backgroundColor: "#e0a52e", borderRadius: 5 }] },
+    options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: (t) => ` ${t.raw}% de avance` } } },
+      scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { font: { size: 10 } } } } },
+  });
 }
 
 /* ---------- Búsqueda ---------- */

@@ -1,0 +1,44 @@
+{
+  "nota": "Puntos referenciales de infraestructura estratégica asociada a las comisiones territoriales. Coordenadas aproximadas para visualización temática; no constituyen ubicación oficial.",
+  "tipos": {
+    "puerto": { "label": "Puerto / hidrovía", "color": "#3b82f6" },
+    "aeropuerto": { "label": "Aeropuerto", "color": "#e0a52e" },
+    "telecom": { "label": "Telecom / cable", "color": "#2ed47a" },
+    "espacio": { "label": "Infraestructura espacial", "color": "#a855f7" },
+    "ambiente": { "label": "Área natural clave", "color": "#16a34a" }
+  },
+  "puntos": [
+    { "nombre": "Puerto del Callao", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -12.05, "lng": -77.14, "nota": "Principal terminal portuario del país" },
+    { "nombre": "Puerto de Paita", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -5.09, "lng": -81.11, "nota": "Hub norte" },
+    { "nombre": "Puerto de Salaverry", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -8.22, "lng": -78.98 },
+    { "nombre": "Puerto de Chimbote", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -9.08, "lng": -78.59 },
+    { "nombre": "Puerto General San Martín (Pisco)", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -13.80, "lng": -76.27 },
+    { "nombre": "Puerto de Matarani", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -17.00, "lng": -72.10 },
+    { "nombre": "Puerto de Ilo", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -17.64, "lng": -71.34 },
+    { "nombre": "Puerto fluvial de Iquitos", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -3.74, "lng": -73.25, "nota": "Amazonía — hidrovía" },
+    { "nombre": "Puerto fluvial de Yurimaguas", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -5.90, "lng": -76.08 },
+    { "nombre": "Puerto lacustre de Puno (Titicaca)", "tipo": "puerto", "comision": "maritimo-fluvial-y-lacustre", "lat": -15.84, "lng": -70.02 },
+
+    { "nombre": "Aeropuerto Jorge Chávez", "tipo": "aeropuerto", "comision": "espacio", "lat": -12.02, "lng": -77.11, "nota": "Principal hub aéreo" },
+    { "nombre": "Aeropuerto del Cusco", "tipo": "aeropuerto", "comision": "espacio", "lat": -13.54, "lng": -71.94 },
+    { "nombre": "Aeropuerto de Arequipa", "tipo": "aeropuerto", "comision": "espacio", "lat": -16.34, "lng": -71.58 },
+    { "nombre": "Aeropuerto de Iquitos", "tipo": "aeropuerto", "comision": "espacio", "lat": -3.78, "lng": -73.31 },
+    { "nombre": "Aeropuerto de Trujillo", "tipo": "aeropuerto", "comision": "espacio", "lat": -8.08, "lng": -79.11 },
+    { "nombre": "Aeropuerto de Chiclayo", "tipo": "aeropuerto", "comision": "espacio", "lat": -6.79, "lng": -79.83 },
+    { "nombre": "Aeropuerto de Juliaca", "tipo": "aeropuerto", "comision": "espacio", "lat": -15.47, "lng": -70.16 },
+    { "nombre": "Aeropuerto de Tarapoto", "tipo": "aeropuerto", "comision": "espacio", "lat": -6.51, "lng": -76.37 },
+    { "nombre": "Aeropuerto de Pucallpa", "tipo": "aeropuerto", "comision": "espacio", "lat": -8.38, "lng": -74.57 },
+
+    { "nombre": "Centro de Operaciones de Imágenes Satelitales (Pucusana)", "tipo": "espacio", "comision": "espacio", "lat": -12.48, "lng": -76.80, "nota": "Operación PerúSAT-1 (referencial)" },
+    { "nombre": "Base ecuatorial potencial (norte)", "tipo": "espacio", "comision": "espacio", "lat": -3.50, "lng": -80.30, "nota": "Ventaja de lanzamiento por cercanía a la línea ecuatorial (propuesta)" },
+
+    { "nombre": "Estación de aterrizaje de cable submarino (Lurín)", "tipo": "telecom", "comision": "telecomunicaciones", "lat": -12.27, "lng": -76.87, "nota": "Conexión internacional (referencial)" },
+    { "nombre": "Estación de cable (Punta Salinas)", "tipo": "telecom", "comision": "telecomunicaciones", "lat": -11.27, "lng": -77.66, "nota": "Referencial" },
+    { "nombre": "Nodo Red Dorsal — Lima", "tipo": "telecom", "comision": "telecomunicaciones", "lat": -12.05, "lng": -77.04 },
+
+    { "nombre": "Reserva Nacional de Paracas", "tipo": "ambiente", "comision": "medio-ambiente", "lat": -13.84, "lng": -76.25 },
+    { "nombre": "Parque Nacional del Manu", "tipo": "ambiente", "comision": "medio-ambiente", "lat": -11.95, "lng": -71.70 },
+    { "nombre": "Reserva Nacional Pacaya-Samiria", "tipo": "ambiente", "comision": "medio-ambiente", "lat": -5.30, "lng": -74.60 },
+    { "nombre": "Parque Nacional Huascarán", "tipo": "ambiente", "comision": "medio-ambiente", "lat": -9.12, "lng": -77.60 }
+  ]
+}
