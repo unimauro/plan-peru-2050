@@ -5,3 +5,6 @@ fuentes/
 .DS_Store
 node_modules/
 *.log
+
+# imágenes intermedias de los docx
+entregables/_img/
