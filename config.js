@@ -15,7 +15,9 @@
 // ============================================================
 window.PP2050_IA = {
   apiKey: "",
-  proxy: "",
+  // En el VPS (Caddy) el proxy /api/ia inyecta la key del lado del servidor.
+  // Si la ruta no existe (ej. GitHub Pages), el asistente cae a búsqueda local.
+  proxy: "/api/ia",
   model: "meta-llama/llama-3.3-70b-instruct:free",
   endpoint: "https://openrouter.ai/api/v1/chat/completions",
 };

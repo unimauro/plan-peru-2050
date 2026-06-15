@@ -377,11 +377,16 @@ async function answer(q) {
         { role: "user", content: q },
       ] };
       const r = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+      if (!r.ok) throw new Error("proxy " + r.status);
       const j = await r.json();
-      wait.textContent = j.choices?.[0]?.message?.content || "No obtuve respuesta del modelo.";
-    } catch (e) { wait.textContent = "Error al consultar el modelo. Revisa config.js."; }
-    $("#aiLog").scrollTop = 1e9;
-    return;
+      const txt = j.choices?.[0]?.message?.content;
+      if (!txt) throw new Error("empty");
+      wait.textContent = txt;
+      $("#aiLog").scrollTop = 1e9;
+      return;
+    } catch (e) {
+      wait.remove(); // sin LLM disponible → cae a búsqueda local
+    }
   }
   // Fallback local: búsqueda por términos
   const terms = q.toLowerCase().split(/\s+/).filter((w) => w.length > 3);
