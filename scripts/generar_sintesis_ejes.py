@@ -57,10 +57,10 @@ for eje, dim in EJES:
     # Metas consolidadas (top) del eje
     metas = []
     for c in grp:
-        for m in (c.get("metas") or [])[:2]:
+        for m in (c.get("objetivos_estrategicos") or c.get("metas") or [])[:2]:
             metas.append(m)
     if metas:
-        f(doc.add_paragraph().add_run("Metas estratégicas del eje (selección):"), 10.5, GOLD, bold=True)
+        f(doc.add_paragraph().add_run("Objetivos estratégicos del eje (selección):"), 10.5, GOLD, bold=True)
         for m in metas[:10]:
             b=doc.add_paragraph(style="List Bullet"); f(b.add_run(m), 10, DARK)
     # Comisiones del eje

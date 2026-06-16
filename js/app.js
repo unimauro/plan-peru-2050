@@ -149,7 +149,7 @@ function renderGrid() {
       ${c.eje ? `<div class="eje">${esc(c.eje)}</div>` : `<div class="eje">Comisión temática</div>`}
       <h3>${esc(c.nombre)}</h3>
       <p>${esc(c.resumen || "Comisión del Plan Perú 2050. Redacción en proceso.")}</p>
-      ${has ? `<div class="mini"><span><b>${(c.pilares || []).length}</b> pilares</span><span><b>${nInd}</b> indicadores</span><span><b>${(c.metas || []).length}</b> metas</span></div>` : ""}`;
+      ${has ? `<div class="mini"><span><b>${((c.objetivos_estrategicos || c.metas) || []).length}</b> objetivos</span><span><b>${nInd}</b> indicadores</span><span><b>${(c.cien_dias || []).length}</b> hitos 100d</span></div>` : ""}`;
     if (has) card.onclick = () => openDetail(c.id);
     g.append(card);
   });
@@ -178,13 +178,15 @@ function openDetail(id) {
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
     ${!c.revision ? `<button class="dlbtn" style="margin-top:12px" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha completa (PDF)</button>` : ""}
-    ${c.vision ? `<div class="block"><h4>Visión 2050</h4><p>${esc(c.vision)}</p></div>` : ""}
-    ${(c.diagnostico || []).length ? `<div class="block"><h4>Diagnóstico — brecha 2026</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
-    ${(c.indicadores || []).length ? `<div class="block"><h4>Indicadores: hoy → meta 2050</h4><div class="detchart"><canvas id="detCanvas"></canvas></div>${c.indicadores.map(indicatorRow).join("")}</div>` : ""}
+    ${c.vision ? `<div class="block"><h4>I · Síntesis de la situación futura</h4><p>${esc(c.vision)}</p></div>` : ""}
+    ${(c.diagnostico || []).length ? `<div class="block"><h4>II · Síntesis de la situación actual</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
+    ${(c.objetivos_estrategicos || c.metas || []).length ? `<div class="block"><h4>III · Objetivos estratégicos</h4><ul class="ul">${(c.objetivos_estrategicos || c.metas).map((o) => `<li>${esc(o)}</li>`).join("")}</ul></div>` : ""}
+    ${(c.acciones || []).length ? `<div class="block"><h4>IV · Acciones estratégicas</h4><ul class="ul">${c.acciones.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>` : ""}
+    ${(c.indicadores || []).length ? `<div class="block"><h4>V · Matriz resumen — indicadores hoy → meta 2050</h4><div class="detchart"><canvas id="detCanvas"></canvas></div>${c.indicadores.map(indicatorRow).join("")}</div>` : ""}
+    ${(c.cien_dias || []).length ? `<div class="block"><h4>VI · Hitos de los primeros 100 días</h4><ul class="ul ul100">${c.cien_dias.map((d) => `<li>${esc(d.accion || d)}${d.tipo ? ` <span class="tag100">${esc(d.tipo)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
+    ${(c.articulacion_acuerdo_pedn || []).length ? `<div class="block"><h4>VII · Articulación con el Acuerdo Nacional y el PEDN al 2050</h4><ul class="ul">${c.articulacion_acuerdo_pedn.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+    ${(c.articulacion_programas || []).length ? `<div class="block"><h4>VIII · Articulación con los Programas Presupuestales</h4><ul class="ul">${c.articulacion_programas.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
     ${(c.pilares || []).length ? `<div class="block"><h4>Pilares de la estrategia</h4>${c.pilares.map((p) => `<div class="pilar"><b>${esc(p.nombre)}</b><span>${esc(p.descripcion)}</span></div>`).join("")}</div>` : ""}
-    ${(c.metas || []).length ? `<div class="block"><h4>Metas 2050</h4><ul class="ul">${c.metas.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div>` : ""}
-    ${(c.cien_dias || []).length ? `<div class="block"><h4>Hoja de ruta · 100 primeros días</h4><ul class="ul ul100">${c.cien_dias.map((d) => `<li>${esc(d.accion || d)}${d.tipo ? ` <span class="tag100">${esc(d.tipo)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
-    ${(c.acciones || []).length ? `<div class="block"><h4>Acciones e iniciativas</h4><ul class="ul">${c.acciones.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>` : ""}
     ${c.recomendacion ? `<div class="block"><h4>Recomendación de política</h4><div class="reco">${esc(c.recomendacion)}</div></div>` : ""}`;
   $("#modal").classList.add("open");
   document.body.style.overflow = "hidden";

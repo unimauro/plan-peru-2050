@@ -156,12 +156,13 @@ def build(c):
 
     # KPIs
     inds = c.get("indicadores", [])
+    obj = c.get("objetivos_estrategicos") or c.get("metas") or []
     quant = [i for i in inds if i.get("actual") is not None and i.get("meta") is not None]
     avgs = [avance(i) for i in quant]; idx = (sum(avgs) / len(avgs)) if avgs else None
     h(doc, "Síntesis cuantitativa", 13)
     kt = doc.add_table(rows=1, cols=4); kt.alignment = WD_TABLE_ALIGNMENT.CENTER
     kpis = [(str(len(inds)), "Indicadores"), (str(len(c.get('pilares',[]))), "Pilares"),
-            (str(len(c.get('metas',[]))), "Metas 2050"),
+            (str(len(obj)), "Objetivos"),
             (f"{idx:.0f}%" if idx is not None else "—", "Avance estimado")]
     for j, (n, l) in enumerate(kpis):
         cell = kt.rows[0].cells[j]; shade(cell, "F4F6FB")
@@ -169,18 +170,43 @@ def build(c):
         set_font(pp.add_run(n + "\n"), 18, RED, bold=True)
         set_font(pp.add_run(l), 8.5, GREY)
 
-    # Visión
+    # Índice (Contenido)
+    toc = [("I.", "Síntesis de la situación futura", bool(c.get("vision"))),
+           ("II.", "Síntesis de la situación actual", bool(c.get("diagnostico"))),
+           ("III.", "Objetivos estratégicos", bool(obj)),
+           ("IV.", "Acciones estratégicas", bool(c.get("acciones"))),
+           ("V.", "Matriz resumen (indicadores)", bool(inds)),
+           ("VI.", "Hitos de los primeros 100 días de Gobierno", bool(c.get("cien_dias"))),
+           ("VII.", "Articulación con el Acuerdo Nacional y el PEDN al 2050", bool(c.get("articulacion_acuerdo_pedn"))),
+           ("VIII.", "Articulación con los Programas Presupuestales", bool(c.get("articulacion_programas")))]
+    present = [(n, t) for n, t, ok in toc if ok]
+    if present:
+        h(doc, "Contenido", 13)
+        for n, t in present:
+            p = doc.add_paragraph()
+            set_font(p.add_run(n + "  "), 10, RED, bold=True)
+            set_font(p.add_run(t), 10, DARK)
+
+    # I. Síntesis de la situación futura
     if c.get("vision"):
-        h(doc, "Visión 2050", 13)
+        h(doc, "I · Síntesis de la situación futura", 13)
         set_font(doc.add_paragraph().add_run(c["vision"]), 10.5, DARK)
 
-    # Diagnóstico
+    # II. Síntesis de la situación actual
     if c.get("diagnostico"):
-        h(doc, "Diagnóstico — brecha 2026", 13); bullets(doc, c["diagnostico"])
+        h(doc, "II · Síntesis de la situación actual", 13); bullets(doc, c["diagnostico"])
 
-    # Tabla de indicadores
+    # III. Objetivos estratégicos
+    if obj:
+        h(doc, "III · Objetivos estratégicos", 13); bullets(doc, obj)
+
+    # IV. Acciones estratégicas
+    if c.get("acciones"):
+        h(doc, "IV · Acciones estratégicas", 13); bullets(doc, c["acciones"])
+
+    # V. Matriz resumen (indicadores)
     if inds:
-        h(doc, "Indicadores: hoy → meta 2050", 13)
+        h(doc, "V · Matriz resumen — indicadores: hoy → meta 2050", 13)
         tb = doc.add_table(rows=1, cols=6); tb.style = "Table Grid"; tb.alignment = WD_TABLE_ALIGNMENT.CENTER
         hdr = ["Indicador", "Hoy", "Meta 2050", "Unidad", "% avance", "Fuente"]
         for j, htxt in enumerate(hdr):
@@ -211,7 +237,24 @@ def build(c):
             cap = doc.add_paragraph(); set_font(cap.add_run(
                 "Puntos referenciales de infraestructura asociada a la comisión (ubicación aproximada)."), 8, GREY, italic=True)
 
-    # Pilares
+    # VI. Hitos 100 días
+    if c.get("cien_dias"):
+        h(doc, "VI · Hitos de los primeros 100 días de Gobierno", 13)
+        for d in c["cien_dias"]:
+            p = doc.add_paragraph(style="List Bullet")
+            set_font(p.add_run(d.get("accion", "") if isinstance(d, dict) else str(d)), 10.5, DARK)
+            if isinstance(d, dict) and d.get("tipo"):
+                set_font(p.add_run("  [" + d["tipo"] + "]"), 8.5, GOLD, italic=True)
+
+    # VII. Articulación Acuerdo Nacional / PEDN 2050
+    if c.get("articulacion_acuerdo_pedn"):
+        h(doc, "VII · Articulación con el Acuerdo Nacional y el PEDN al 2050", 13); bullets(doc, c["articulacion_acuerdo_pedn"])
+
+    # VIII. Articulación Programas Presupuestales
+    if c.get("articulacion_programas"):
+        h(doc, "VIII · Articulación con los Programas Presupuestales", 13); bullets(doc, c["articulacion_programas"])
+
+    # Pilares (complemento)
     if c.get("pilares"):
         h(doc, "Pilares de la estrategia", 13)
         for p in c["pilares"]:
@@ -219,18 +262,6 @@ def build(c):
             set_font(pp.add_run(p.get("nombre","") + ": "), 10.5, DARK, bold=True)
             set_font(pp.add_run(p.get("descripcion","")), 10.5, DARK)
 
-    if c.get("cien_dias"):
-        h(doc, "Hoja de ruta · 100 primeros días", 13)
-        for d in c["cien_dias"]:
-            p = doc.add_paragraph(style="List Bullet")
-            set_font(p.add_run(d.get("accion", "") if isinstance(d, dict) else str(d)), 10.5, DARK)
-            if isinstance(d, dict) and d.get("tipo"):
-                set_font(p.add_run("  [" + d["tipo"] + "]"), 8.5, GOLD, italic=True)
-
-    if c.get("metas"):
-        h(doc, "Metas 2050", 13); bullets(doc, c["metas"])
-    if c.get("acciones"):
-        h(doc, "Acciones e iniciativas", 13); bullets(doc, c["acciones"])
     if c.get("recomendacion"):
         h(doc, "Recomendación de política", 13)
         p = doc.add_paragraph(); set_font(p.add_run(c["recomendacion"]), 10.5, DARK)

@@ -128,10 +128,11 @@ def kpi_table(c):
     inds = c.get("indicadores", [])
     quant = [i for i in inds if i.get("actual") is not None and i.get("meta") is not None]
     avgs = [avance(i) for i in quant]; idx = sum(avgs)/len(avgs) if avgs else None
+    n_obj = len(c.get("objetivos_estrategicos") or c.get("metas") or [])
     data = [[Paragraph(f"{len(inds)}", S["kpin"]), Paragraph(f"{len(c.get('pilares',[]))}", S["kpin"]),
-             Paragraph(f"{len(c.get('metas',[]))}", S["kpin"]), Paragraph(f"{idx:.0f}%" if idx is not None else "—", S["kpin"])],
+             Paragraph(f"{n_obj}", S["kpin"]), Paragraph(f"{idx:.0f}%" if idx is not None else "—", S["kpin"])],
             [Paragraph("Indicadores", S["kpil"]), Paragraph("Pilares", S["kpil"]),
-             Paragraph("Metas 2050", S["kpil"]), Paragraph("Avance estim.", S["kpil"])]]
+             Paragraph("Objetivos", S["kpil"]), Paragraph("Avance estim.", S["kpil"])]]
     t = Table(data, colWidths=[42*mm]*4)
     t.setStyle(TableStyle([("BACKGROUND", (0,0), (-1,-1), LIGHT), ("BOX", (0,0), (-1,-1), .5, LINE),
         ("INNERGRID", (0,0), (-1,-1), .5, colors.white), ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
@@ -142,35 +143,61 @@ def bullets(items, story):
     for it in items:
         story.append(Paragraph("•&nbsp;&nbsp;" + E(it), S["bullet"]))
 
+def _indicadores_table(inds, s):
+    s.append(Paragraph("V · Matriz resumen — indicadores: hoy → meta 2050", S["h4"]))
+    rows = [[Paragraph(h, S["th"]) for h in ["Indicador", "Hoy", "Meta", "Unidad", "% av.", "Fuente"]]]
+    for i in inds:
+        av = avance(i)
+        rows.append([Paragraph(E(i["nombre"]), S["tdb"]), Paragraph(fnum(i.get("actual")), S["td"]),
+                     Paragraph(fnum(i.get("meta")), S["td"]), Paragraph(E(i.get("unidad","")), S["td"]),
+                     Paragraph(f"{av:.0f}%" if av is not None else "—", S["td"]), Paragraph(E((i.get("fuente","") or "")[:80]), S["td"])])
+    t = Table(rows, colWidths=[52*mm, 16*mm, 18*mm, 20*mm, 12*mm, 56*mm], repeatRows=1)
+    t.setStyle(TableStyle([("BACKGROUND", (0,0), (-1,0), RED), ("ROWBACKGROUNDS", (0,1), (-1,-1), [colors.white, LIGHT]),
+        ("GRID", (0,0), (-1,-1), .4, LINE), ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
+        ("TOPPADDING", (0,0), (-1,-1), 3), ("BOTTOMPADDING", (0,0), (-1,-1), 3),
+        ("LEFTPADDING", (0,0), (-1,-1), 4), ("RIGHTPADDING", (0,0), (-1,-1), 4)]))
+    s.append(t)
+
 def commission_story(c, revision=False):
     s = []
-    s.append(Paragraph("PLAN PERÚ 2050 · COMISIÓN TEMÁTICA", S["eyebrow"]))
+    s.append(Paragraph("PLAN PERÚ 2050 · INFORME EJECUTIVO", S["eyebrow"]))
     s.append(Paragraph(E(c["nombre"]), S["title"]))
     if c.get("eje"): s.append(Paragraph("Eje estratégico: " + E(c["eje"]), S["sub"]))
     if revision:
         s.append(Paragraph("⚠ Línea base <b>preliminar</b> — contenido inferido, pendiente de validación. No proviene de redacción oficial.", S["reco"]))
-    if c.get("resumen"): s.append(Paragraph(E(c["resumen"]), S["resumen"]))
-    s.append(HRFlowable(color=LINE, thickness=.6, spaceBefore=4, spaceAfter=6))
+    if c.get("resumen"): s.append(Paragraph("<b>Introducción.</b> " + E(c["resumen"]), S["resumen"]))
+
+    obj = c.get("objetivos_estrategicos") or c.get("metas")
+    toc = [("I.", "Síntesis de la situación futura", bool(c.get("vision"))),
+           ("II.", "Síntesis de la situación actual", bool(c.get("diagnostico"))),
+           ("III.", "Objetivos estratégicos", bool(obj)),
+           ("IV.", "Acciones estratégicas", bool(c.get("acciones"))),
+           ("V.", "Matriz resumen (indicadores)", bool(c.get("indicadores"))),
+           ("VI.", "Hitos de los primeros 100 días de Gobierno", bool(c.get("cien_dias"))),
+           ("VII.", "Articulación con el Acuerdo Nacional y el PEDN al 2050", bool(c.get("articulacion_acuerdo_pedn"))),
+           ("VIII.", "Articulación con los Programas Presupuestales", bool(c.get("articulacion_programas")))]
+    present = [(n, t) for n, t, ok in toc if ok]
+    if present:
+        s.append(Paragraph("Contenido", S["h4"]))
+        rows = [[Paragraph(f"<b>{n}</b>", S["td"]), Paragraph(t, S["td"])] for n, t in present]
+        tt = Table(rows, colWidths=[16*mm, 158*mm])
+        tt.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,-2),.3,LINE),("TOPPADDING",(0,0),(-1,-1),3),
+            ("BOTTOMPADDING",(0,0),(-1,-1),3),("VALIGN",(0,0),(-1,-1),"TOP")]))
+        s.append(tt)
+    s.append(HRFlowable(color=LINE, thickness=.6, spaceBefore=8, spaceAfter=6))
     s.append(kpi_table(c)); s.append(Spacer(1, 6))
+
     if c.get("vision"):
-        s.append(Paragraph("Visión 2050", S["h4"])); s.append(Paragraph(E(c["vision"]), S["body"]))
+        s.append(Paragraph("I · Síntesis de la situación futura", S["h4"])); s.append(Paragraph(E(c["vision"]), S["body"]))
     if c.get("diagnostico"):
-        s.append(Paragraph("Diagnóstico — brecha 2026", S["h4"])); bullets(c["diagnostico"], s)
+        s.append(Paragraph("II · Síntesis de la situación actual", S["h4"])); bullets(c["diagnostico"], s)
+    if obj:
+        s.append(Paragraph("III · Objetivos estratégicos", S["h4"])); bullets(obj, s)
+    if c.get("acciones"):
+        s.append(Paragraph("IV · Acciones estratégicas", S["h4"])); bullets(c["acciones"], s)
     inds = c.get("indicadores", [])
     if inds:
-        s.append(Paragraph("Indicadores: hoy → meta 2050", S["h4"]))
-        rows = [[Paragraph(h, S["th"]) for h in ["Indicador", "Hoy", "Meta 2050", "Unidad", "% av.", "Fuente"]]]
-        for i in inds:
-            av = avance(i)
-            rows.append([Paragraph(E(i["nombre"]), S["tdb"]), Paragraph(fnum(i.get("actual")), S["td"]),
-                         Paragraph(fnum(i.get("meta")), S["td"]), Paragraph(E(i.get("unidad","")), S["td"]),
-                         Paragraph(f"{av:.0f}%" if av is not None else "—", S["td"]), Paragraph(E((i.get("fuente","") or "")[:80]), S["td"])])
-        t = Table(rows, colWidths=[52*mm, 16*mm, 18*mm, 20*mm, 12*mm, 56*mm], repeatRows=1)
-        t.setStyle(TableStyle([("BACKGROUND", (0,0), (-1,0), RED), ("ROWBACKGROUNDS", (0,1), (-1,-1), [colors.white, LIGHT]),
-            ("GRID", (0,0), (-1,-1), .4, LINE), ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
-            ("TOPPADDING", (0,0), (-1,-1), 3), ("BOTTOMPADDING", (0,0), (-1,-1), 3),
-            ("LEFTPADDING", (0,0), (-1,-1), 4), ("RIGHTPADDING", (0,0), (-1,-1), 4)]))
-        s.append(t)
+        _indicadores_table(inds, s)
         img = chart_avance(c)
         if img:
             s.append(Spacer(1, 8)); s.append(Image(img, width=165*mm, height=165*mm*plt_ratio(img)))
@@ -181,20 +208,20 @@ def commission_story(c, revision=False):
             s.append(Paragraph("Mapa estratégico", S["h4"]))
             s.append(Image(mp, width=88*mm, height=88*mm*plt_ratio(mp)))
             s.append(Paragraph("Infraestructura asociada (ubicación referencial).", S["cap"]))
-    if c.get("pilares"):
-        s.append(Paragraph("Pilares de la estrategia", S["h4"]))
-        for p in c["pilares"]:
-            s.append(Paragraph("<b>" + E(p.get("nombre","")) + ":</b> " + E(p.get("descripcion","")), S["body"]))
     if c.get("cien_dias"):
-        s.append(Paragraph("Hoja de ruta · 100 primeros días", S["h4"]))
+        s.append(Paragraph("VI · Hitos de los primeros 100 días de Gobierno", S["h4"]))
         for d in c["cien_dias"]:
             txt = E(d.get("accion","") if isinstance(d, dict) else d)
             if isinstance(d, dict) and d.get("tipo"): txt += f' <font color="#B8840E">[{E(d["tipo"])}]</font>'
             s.append(Paragraph("•&nbsp;&nbsp;" + txt, S["bullet"]))
-    if c.get("metas"):
-        s.append(Paragraph("Metas 2050", S["h4"])); bullets(c["metas"], s)
-    if c.get("acciones"):
-        s.append(Paragraph("Acciones e iniciativas", S["h4"])); bullets(c["acciones"], s)
+    if c.get("articulacion_acuerdo_pedn"):
+        s.append(Paragraph("VII · Articulación con el Acuerdo Nacional y el PEDN al 2050", S["h4"])); bullets(c["articulacion_acuerdo_pedn"], s)
+    if c.get("articulacion_programas"):
+        s.append(Paragraph("VIII · Articulación con los Programas Presupuestales", S["h4"])); bullets(c["articulacion_programas"], s)
+    if c.get("pilares"):
+        s.append(Paragraph("Pilares de la estrategia", S["h4"]))
+        for p in c["pilares"]:
+            s.append(Paragraph("<b>" + E(p.get("nombre","")) + ":</b> " + E(p.get("descripcion","")), S["body"]))
     if c.get("recomendacion"):
         s.append(Paragraph("Recomendación de política", S["h4"])); s.append(Paragraph(E(c["recomendacion"]), S["reco"]))
     return s
