@@ -288,6 +288,37 @@ function renderOverview() {
       options: { cutout: "62%", plugins: { legend: { position: "bottom", labels: { boxWidth: 12, padding: 10, font: { size: 11 } } } } },
     });
   }
+  // Cobertura por eje (validadas vs en revisión, apilado)
+  const cv = document.getElementById("chartCobertura");
+  if (cv) {
+    const ejesAll = [...new Set(detailed().map((c) => c.eje).filter(Boolean))].sort();
+    CHARTS.cobertura && CHARTS.cobertura.destroy();
+    CHARTS.cobertura = new Chart(cv, {
+      type: "bar",
+      data: { labels: ejesAll.map((e) => (e.length > 20 ? e.slice(0, 18) + "…" : e)),
+        datasets: [
+          { label: "Validadas", data: ejesAll.map((e) => validated().filter((c) => c.eje === e).length), backgroundColor: "#2ed47a", borderRadius: 4 },
+          { label: "En revisión", data: ejesAll.map((e) => reviewed().filter((c) => c.eje === e).length), backgroundColor: "#e0a52e", borderRadius: 4 },
+        ] },
+      options: { indexAxis: "y", plugins: { legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } },
+        scales: { x: { stacked: true, grid: { color: "#1e2840" } }, y: { stacked: true, grid: { display: false } } } },
+    });
+  }
+  // Mayores brechas — indicadores con menor avance
+  const bv = document.getElementById("chartBrechas");
+  if (bv) {
+    const gaps = allIndicators().map((i) => ({ i, av: indAvance(i) })).filter((x) => x.av != null)
+      .sort((a, b) => a.av - b.av).slice(0, 12);
+    CHARTS.brechas && CHARTS.brechas.destroy();
+    CHARTS.brechas = new Chart(bv, {
+      type: "bar",
+      data: { labels: gaps.map((x) => (x.i.nombre.length > 30 ? x.i.nombre.slice(0, 28) + "…" : x.i.nombre)),
+        datasets: [{ data: gaps.map((x) => +x.av.toFixed(1)), backgroundColor: "#d91023", borderRadius: 4 }] },
+      options: { indexAxis: "y",
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: (t) => ` ${t.raw}% de avance · ${gaps[t.dataIndex].i.com}` } } },
+        scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { font: { size: 9 } } } } },
+    });
+  }
 }
 
 /* ---------- Mapa estratégico (Leaflet) ---------- */

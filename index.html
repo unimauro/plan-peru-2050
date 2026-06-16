@@ -206,6 +206,10 @@
   .detchart canvas{max-height:260px}
   @media(max-width:760px){.panorama{grid-template-columns:1fr}}
   footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0;color:var(--mut2);font-size:.82rem}
+  .foot-credit{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;color:var(--mut)}
+  .foot-credit b{color:var(--txt)}
+  .foot-author{color:var(--gold)}.foot-author b{color:var(--gold)}
+  .foot-note{margin-top:10px;font-size:.76rem;color:var(--mut2);max-width:780px}
   .skeleton{color:var(--mut2);text-align:center;padding:60px 0}
   @media(max-width:640px){
     .sheet-in{padding:20px 18px 50px}
@@ -260,6 +264,10 @@
       <div class="panel"><h3>Brecha promedio hacia la meta 2050</h3><div class="sub">% de avance actual estimado por comisión (mayor = más cerca de su meta)</div><canvas id="chartAvance"></canvas></div>
       <div class="panel"><h3>Comisiones por eje estratégico</h3><div class="sub">Distribución de las comisiones con contenido</div><canvas id="chartEjes"></canvas></div>
     </div>
+    <div class="panorama">
+      <div class="panel"><h3>Cobertura por eje</h3><div class="sub">Comisiones validadas vs. en revisión, por eje estratégico</div><canvas id="chartCobertura"></canvas></div>
+      <div class="panel"><h3>Mayores brechas</h3><div class="sub">Indicadores más lejos de su meta 2050 (menor avance)</div><canvas id="chartBrechas"></canvas></div>
+    </div>
     <button class="dlbtn ghost" style="margin-bottom:40px" onclick="dlEjes()">⬇ Descargar síntesis por ejes</button>
   </section>
 
@@ -287,9 +295,14 @@
 </div>
 
 <footer class="wrap">
-  Datos: redacciones de las Comisiones Temáticas del Plan Perú 2050 (CNPP — Colegio de Ingenieros del Perú).
-  Indicadores extraídos de los documentos fuente; cifras sujetas a validación oficial. ·
-  Herramienta de consulta sin fines de difusión de datos personales.
+  <div class="foot-credit">
+    <span><b>Plan Perú 2050</b> — Dashboard de Comisiones Temáticas · CNPP — Colegio de Ingenieros del Perú</span>
+    <span class="foot-author">Desarrollo, analítica de datos e IA: <b>Carlos Cárdenas Fernández</b></span>
+  </div>
+  <div class="foot-note">
+    Indicadores extraídos de las redacciones de las comisiones; cifras sujetas a validación oficial.
+    Las comisiones marcadas «en revisión» son una línea base preliminar. Herramienta de consulta sin difusión de datos personales.
+  </div>
 </footer>
 
 <script src="config.js"></script>
