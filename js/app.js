@@ -87,7 +87,7 @@ function renderVideo() {
   const box = document.getElementById("video"); if (!box) return;
   const id = ytId(S.meta && S.meta.video);
   if (!id) { box.innerHTML = ""; return; }
-  box.innerHTML = `<div class="videowrap"><div class="vt">▶ Presentación del Plan Perú 2050</div>
+  box.innerHTML = `<div class="videocard"><div class="vt">▶ Presentación</div>
     <div class="videobox"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="Presentación Plan Perú 2050" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
 }
 function renderKPIs() {
