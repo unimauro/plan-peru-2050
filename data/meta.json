@@ -2,7 +2,7 @@
   "titulo": "Plan Perú 2050",
   "subtitulo": "Comisiones Temáticas Nacionales — CNPP / Colegio de Ingenieros del Perú",
   "actualizado": "2026-06",
-  "totalComisiones": 64,
+  "totalComisiones": 65,
   "redactadas": 8,
   "comisiones": [
     {
@@ -324,6 +324,12 @@
       "id": "vivienda",
       "nombre": "Vivienda",
       "estado": "pendiente"
+    },
+    {
+      "id": "pesca",
+      "nombre": "Pesca",
+      "estado": "pendiente"
     }
-  ]
+  ],
+  "video": "https://www.youtube.com/watch?v=uus061kewq0"
 }

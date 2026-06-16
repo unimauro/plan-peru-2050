@@ -1285,5 +1285,1889 @@
         "tipo": "institucional/inversion"
       }
     ]
+  },
+  {
+    "id": "industria",
+    "nombre": "Industria (Desarrollo Humano)",
+    "resumen": "Propuesta de la Comisión Temática \"Industria (Desarrollo Humano)\" del Plan Perú 2050 (CNPP / Colegio de Ingenieros del Perú), liderada por Rafael Budge. Parte de un diagnóstico crudo: el Perú es un país primario-exportador (64% minería), con 70% de informalidad laboral (12.6 millones de trabajadores informales), un segmento socioeconómico E de 10 millones de personas (6 millones niños) atrapado en pobreza, y un IDH de 0.762 (puesto 87). La tesis central es que \"el crecimiento económico proyectado del Perú no alcanza ni alcanzará\" y que la única salida es industrializarse en el sector metalmecánico, con diseño y tecnología propios. El plan articula dos brazos: (1) un programa de Desarrollo Humano a 30 años para el segmento E (alimentación, agua/desagüe, educación escolar y técnica, salud) con una inversión que escala desde ~US$ 7,000 millones hasta ~US$ 16,700 millones anuales; y (2) una estrategia de industrialización (acero, metalmecánica, petroquímica, nuevas ciudades industriales en Pisco y Chimbote) financiada en parte por la creación de una OPPC (Organización de Países Productores de Cobre) que cobraría un arancel adicional de US$ 7,700/t, generando US$ 18,736 millones adicionales para el Perú. La meta es multiplicar por 10 las exportaciones metalmecánicas (de US$ 712 MM a US$ 20,000 MM en 2035) y elevar las exportaciones totales de US$ 74,600 MM a US$ 131,700 MM con industria.",
+    "vision": "Un Perú industrializado en el sector metalmecánico, con diseños y tecnología propios, que deja de entregar a manos extranjeras lo que puede fabricar en casa, incorpora al sistema económico a los 12.6 millones de informales y al segmento E de 10 millones de personas mediante el desarrollo humano (alimentación, agua, educación, salud), y toma un papel activo en la economía mundial a través de exportaciones de productos industriales de primer orden y la creación de la OPPC (Organización de Países Productores de Cobre). \"Los únicos que podemos cambiar el Perú somos nosotros\": orgullo y sentido de propiedad.",
+    "diagnostico": [
+      "Informalidad del 70% de la PEA: 12'600,000 trabajadores informales sin incorporar al sistema (PEA 17.5 millones, solo 4 millones asalariados). Fuente INEI.",
+      "IDH de 0.762, puesto 87 a nivel mundial, muy por debajo de Francia (0.91, puesto 28), Italia, España y Chile (0.86, puesto 44). PBI per cápita de US$ 8,300 vs US$ 40,000 de Francia.",
+      "Crecimiento del PBI per cápita del Perú (US$ 259/año promedio 2000-2023) por debajo del mundial (US$ 333/año). Fuente Banco Mundial.",
+      "Economía primario-exportadora y dependiente: 64% de exportaciones en minería, con concentración peligrosa en China (80% del cobre exportado va a China; exportaciones totales a China pasaron de US$ 5,400 MM en 2010 a US$ 25,200 MM en 2024).",
+      "Segmento E de 10'000,000 de personas atrapadas en pobreza (de las cuales 6'000,000 son niños), 30% de la población.",
+      "3'300,000 personas sin acceso a agua (10% de la población) y 6'400,000 sin desagüe (20% de la población).",
+      "700,000 niños mayores de 3 años con anemia.",
+      "De 520,000 nacimientos por año, 390,000 niños (75%) asisten a colegios públicos con carencias.",
+      "Fuga de talento: 3'500,000 peruanos en el extranjero (2'800,000 en edad productiva); 600,000 emigraron solo en 2024. Costo educativo perdido del 75%: US$ 35,500 millones; aporte económico no realizado: US$ 39,200 millones.",
+      "Riesgo de caída de la demanda de cobre: posibilidad de que disminuya en 25 años por reemplazos del cobre (hasta 75% más en 25 años) e interés en nuevos minerales y tierras raras (neodimio).",
+      "Bajo ratio de calidad académica universitaria: UCV 23/1 y San Marcos 15/1 vs Harvard 5/1.",
+      "Limitante de desarrollo industrial e intelectual derivado del modelo de inversiones extranjeras que genera dependencia (ejemplo: 2.5 t de concentrado de hierro pasan de US$ 280 a US$ 28,000 tras procesamiento que se hace fuera)."
+    ],
+    "pilares": [
+      {
+        "nombre": "Desarrollo Humano del Segmento E",
+        "descripcion": "Obligación moral de atender al segmento E (10 millones, 6 millones niños) eliminando carencias en cinco frentes: alimentación, agua y desagüe, educación escolar, educación técnica y salud, para prepararlos para el futuro e insertarlos en el sistema económico. Programa a 30 años con inversión escalonada que se reduce 50% entre los años 5-10 y 85% entre los años 10-20 conforme mejora la economía de los hogares."
+      },
+      {
+        "nombre": "Educación Escolar y Universitaria de Primer Nivel",
+        "descripcion": "Nuevos colegios (440-780/año), nuevos profesores escolares (8,857/año) y universitarios (1,333/año), formación de 20 mil profesores/año en el extranjero (universidades europeas) durante 2 años, sueldos decorosos (~US$ 2,500), libros, útiles, uniformes y laptops. Fomento de carreras metalmecánicas. Acercamiento de empresas privadas y profesionales a la academia, con honestidad, niveles de exigencia y fomento de investigación."
+      },
+      {
+        "nombre": "Educación Técnica Metalmecánica",
+        "descripcion": "Construcción de 28 escuelas técnicas metalmecánicas por año durante 3 años (84 escuelas), con 89 profesores y 588 alumnos por escuela, formando 49,590 alumnos técnicos/año en carreras que el país necesita: mecánica de mantenimiento industrial, maquinaria pesada, automotriz, de producción, electricidad, electrónica, metalurgia y soldadura. Formación de 4,984 profesores en el extranjero durante 2 años."
+      },
+      {
+        "nombre": "Salud Materno-Infantil (Postas)",
+        "descripcion": "Construcción de 431 postas médicas cada 5 años (1 posta atiende a 7,000 personas), cada una con 3 médicos, 3 enfermeros y 3 asistentes, servicios de neonatología, pediatría, ginecología, nutrición, atención de parto de emergencia, ecografía y ambulancia, más medicinas para madres e hijos y mantenimiento."
+      },
+      {
+        "nombre": "Industrialización Metalmecánica",
+        "descripcion": "Plan Nacional de Desarrollo con direccionamiento y créditos para impulsar nuevas industrias metalmecánicas y fortalecer las existentes, con productos de primer orden de diseño y tecnología propios: fabricaciones navales, ferroviarias y equipos militares. Industrias estratégicas de soporte: acero (acerías, aceros especiales, estructurales, forjas, planchas), metalmecánica especializada (engranajes, tratamientos térmicos) y petroquímica."
+      },
+      {
+        "nombre": "Nuevas Ciudades Industriales",
+        "descripcion": "Creación de nuevas ciudades industriales en Pisco y Chimbote, diseñadas por urbanistas con calidad de vida, con influencia geográfica en zonas del interior, horarios de 8h + 4h de sobretiempo y esquema salarial con horas extras sin IR ni AFP."
+      },
+      {
+        "nombre": "Soberanía sobre el Cobre (OPPC)",
+        "descripcion": "Creación de la OPPC (Organización de Países Productores de Cobre) integrada por Perú, Chile, R.D. Congo, Zambia, Indonesia, Kazajistán y México (626 millones de personas, 63% de la producción mundial = 14.4 millones t/año), inspirada en la CIPEC (1967-1982). Cobro de arancel directo adicional de US$ 7,700/t para capturar más valor (US$ 18,736 MM adicionales para Perú; US$ 110,800 MM adicionales globales)."
+      },
+      {
+        "nombre": "Formalización (Cadena de Formalidad)",
+        "descripcion": "Incorporar al sistema a los 12'600,000 trabajadores informales premiando en lugar de castigar: orientación, asesoría, trámites y tasas de interés favorables, generando una cadena de formalidad."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Trabajadores informales en el Perú",
+        "actual": 12600000,
+        "meta": null,
+        "unidad": "personas",
+        "fuente": "INEI",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Tasa de informalidad laboral",
+        "actual": 70,
+        "meta": null,
+        "unidad": "% de la PEA",
+        "fuente": "INEI",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "PBI",
+        "actual": 280000,
+        "meta": null,
+        "unidad": "MM US$",
+        "fuente": "INEI",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "PBI per cápita",
+        "actual": 8300,
+        "meta": null,
+        "unidad": "US$",
+        "fuente": "INEI",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Índice de Desarrollo Humano (IDH)",
+        "actual": 0.762,
+        "meta": null,
+        "unidad": "índice (0-1)",
+        "fuente": "PNUD",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Puesto IDH mundial",
+        "actual": 87,
+        "meta": null,
+        "unidad": "puesto",
+        "fuente": "PNUD",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Exportaciones totales",
+        "actual": 74600,
+        "meta": 131700,
+        "unidad": "MM US$",
+        "fuente": "Plan Perú 2050 - proyección con industria",
+        "anioMeta": 2035
+      },
+      {
+        "nombre": "Exportaciones metalmecánicas",
+        "actual": 712,
+        "meta": 20000,
+        "unidad": "MM US$",
+        "fuente": "Plan Perú 2050 - proyección con industria",
+        "anioMeta": 2035
+      },
+      {
+        "nombre": "Exportaciones de minería",
+        "actual": 47700,
+        "meta": 62700,
+        "unidad": "MM US$",
+        "fuente": "MINEM",
+        "anioMeta": 2035
+      },
+      {
+        "nombre": "Exportaciones de agricultura",
+        "actual": 12400,
+        "meta": 30000,
+        "unidad": "MM US$",
+        "fuente": "Plan Perú 2050 - proyección",
+        "anioMeta": 2035
+      },
+      {
+        "nombre": "Exportaciones de cobre",
+        "actual": 23360,
+        "meta": null,
+        "unidad": "MM US$",
+        "fuente": "MINEM",
+        "anioMeta": 2035
+      },
+      {
+        "nombre": "Personas sin acceso a agua",
+        "actual": 3300000,
+        "meta": null,
+        "unidad": "personas",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Personas sin acceso a desagüe",
+        "actual": 6400000,
+        "meta": null,
+        "unidad": "personas",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Niños mayores de 3 años con anemia",
+        "actual": 700000,
+        "meta": null,
+        "unidad": "niños",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Población del segmento E",
+        "actual": 10000000,
+        "meta": null,
+        "unidad": "personas",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Peruanos en el extranjero",
+        "actual": 3500000,
+        "meta": null,
+        "unidad": "personas",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Remesas de peruanos en el extranjero",
+        "actual": 4945,
+        "meta": null,
+        "unidad": "MM US$",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2024
+      },
+      {
+        "nombre": "Recaudación fiscal minera",
+        "actual": 5000,
+        "meta": null,
+        "unidad": "MM US$",
+        "fuente": "MINEM",
+        "anioMeta": 2024
+      },
+      {
+        "nombre": "Inversión anual en Desarrollo Humano (año 1)",
+        "actual": 7059023060,
+        "meta": null,
+        "unidad": "US$",
+        "fuente": "Plan Perú 2050 - cuadro inversiones a 30 años",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Ingresos adicionales del cobre con arancel OPPC (Perú)",
+        "actual": null,
+        "meta": 18736,
+        "unidad": "MM US$",
+        "fuente": "Plan Perú 2050 - propuesta OPPC",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Nivel de endeudamiento del Perú",
+        "actual": 33,
+        "meta": null,
+        "unidad": "% del PBI",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Alumnos de educación técnica",
+        "actual": 400000,
+        "meta": null,
+        "unidad": "alumnos",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Alumnos técnicos metalmecánicos requeridos por año",
+        "actual": null,
+        "meta": 49590,
+        "unidad": "alumnos/año",
+        "fuente": "Plan Perú 2050",
+        "anioMeta": 2050
+      }
+    ],
+    "metas": [
+      "Multiplicar por casi 30 las exportaciones metalmecánicas: de US$ 712 MM (2024) a US$ 20,000 MM en 2035 (escenario con industria).",
+      "Elevar las exportaciones totales de US$ 74,600 MM (2024) a US$ 131,700 MM en 2035 con industria (vs US$ 113,700 MM en proyección sin industria).",
+      "Atender al 100% del segmento E (10 millones de personas, 6 millones niños) en alimentación, agua, desagüe, educación y salud en un horizonte de 30 años.",
+      "Construir 84 escuelas técnicas metalmecánicas (28/año en 3 años) y formar 49,590 alumnos técnicos por año.",
+      "Construir 431 postas médicas cada 5 años (1 posta por cada 7,000 personas).",
+      "Cerrar la brecha de agua para 3'300,000 personas y de desagüe para 6'400,000 personas.",
+      "Formar profesores escolares y universitarios en universidades europeas (2 años) y sumar 152,850 profesores adicionales al año 15.",
+      "Crear la OPPC para capturar US$ 18,736 MM adicionales de cobre para el Perú vía arancel directo de US$ 7,700/t.",
+      "Fabricar 200 mil vehículos y 1 millón de llantas/aros, generando 100 mil empleos directos e indirectos e ingresando US$ 2,000 MM a la economía."
+    ],
+    "acciones": [
+      "Lanzar un Plan Nacional de Desarrollo con direccionamiento y créditos para impulsar y fortalecer industrias metalmecánicas con diseño y tecnología propios.",
+      "Crear la OPPC (Organización de Países Productores de Cobre) con Perú, Chile, R.D. Congo, Zambia, Indonesia, Kazajistán y México, cobrando arancel directo adicional de US$ 7,700/t.",
+      "Construir nuevas ciudades industriales en Pisco y Chimbote, diseñadas por urbanistas con calidad de vida e influencia en zonas del interior.",
+      "Desarrollar industrias estratégicas de soporte: acero (acerías, aceros especiales, estructurales, forjas, planchas), metalmecánica especializada y petroquímica.",
+      "Impulsar fabricaciones navales, ferroviarias y de equipos militares orientadas a la exportación.",
+      "Ejecutar el programa de alimentación para madres y niños del segmento E (US$ 5.40/día, 360 días) con inversión escalonada decreciente.",
+      "Instalar agua y desagüe (costo US$ 2,520 agua / US$ 1,000 desagüe por familia) con inversión anual de US$ 477'360,000.",
+      "Construir y equipar colegios públicos (440-780/año) con inversión anual de US$ 3,161'400,000; dotar libros, útiles, uniformes y laptops.",
+      "Contratar y formar profesores escolares (8,857/año) y universitarios (1,333/año), con 20 mil profesores/año formados en universidades europeas durante 2 años y sueldos de ~US$ 2,500.",
+      "Construir 28 escuelas técnicas metalmecánicas/año (US$ 16'400,000 c/u) durante 3 años y formar 4,984 profesores técnicos en el extranjero (2 años).",
+      "Construir 431 postas médicas cada 5 años (US$ 1'500,000 c/u) con personal, medicinas y mantenimiento.",
+      "Incorporar a los 12'600,000 informales con una cadena de formalidad: orientación, asesoría, trámites y tasas de interés (premiar, no castigar).",
+      "Financiar la industrialización con dinero del exterior, bancos extranjeros sin condicionamientos e inversionistas con traslado de tecnología, garantizando seguridad jurídica y tributaria.",
+      "Difundir la ley de aportes económicos a centros educativos y acercar empresas privadas y profesionales a la academia."
+    ],
+    "cien_dias": [],
+    "recomendacion": "Industrializar el Perú en el sector metalmecánico es la única salida que queda, porque el crecimiento económico proyectado no alcanza ni alcanzará y la demanda de cobre podría caer en 25 años. Para ello debe constituirse en el más corto plazo la OPPC (las condiciones se dan ahora) y asumirse la obligación moral de garantizar el desarrollo humano del segmento E con educación de primer nivel para su inserción en el sistema económico. \"No entreguemos a manos extranjeras lo que podemos fabricar en el Perú; los únicos que podemos cambiar el Perú somos nosotros\": se requiere organizarse y participar activamente, siendo la fuerza moral y profesional que apoye al gobierno de turno.",
+    "eje": "Competitividad"
+  },
+  {
+    "id": "comercio-exterior-e-insercion-en-el-merc",
+    "nombre": "Comercio Exterior e Inserción en el Mercado Externo",
+    "resumen": "Documento de la Comisión Temática de Comercio Exterior del Plan Perú 2040 (CNPP / Colegio de Ingenieros del Perú). Parte de un diagnóstico donde las exportaciones peruanas crecieron con fuerte dinamismo en la última década (17% anual promedio), pero siguen concentradas en metales y minerales con bajo valor agregado y dependientes de pocos socios comerciales (EEUU, Reino Unido, Suiza y China concentran ~50% de las exportaciones). La propuesta central es la diversificación de exportaciones y el desarrollo de oferta exportable con valor agregado, sustentada en competitividad y productividad. Plantea una visión del Perú como líder mundial en exportación de productos y servicios con valor agregado, una base de desarrollo orientada a reducir la pobreza generando empleo formal, y prioriza acciones estratégicas mediante la matriz IGO: asociatividad en agroexportación orgánica, transformación productiva con valor agregado y creación de una organización de desarrollo de software para TIC. Incluye objetivos estratégicos (bienestar ciudadano, reducción de la pobreza, intercambio comercial con variedad de productos, descentralización regional del sector exportador), mapa de procesos \"Perú, Hub del Comercio Internacional\", involucrados y análisis de riesgos.",
+    "vision": "En el año 2040, el Perú será una sociedad humanista, educada en la economía de la creatividad, aprovechando su biodiversidad convertida en su eje económico, innovando a través de la ciencia y la tecnología con productos y servicios de alta calidad. Será líder en la oferta exportable de productos con valor agregado, con población de alta calidad de vida en un ambiente sostenible, y con el Perú como marca de la biodiversidad en el mundo. Específicamente para Comercio Exterior: País reconocido mundialmente como líder en exportación de productos y servicios con valor agregado, competitivo de acuerdo a estándares internacionales.",
+    "diagnostico": [
+      "Pese a que las exportaciones se triplicaron en la última década (crecimiento promedio anual del 17%), su composición no ha cambiado: metales y minerales siguen siendo los principales productos de exportación, sin amplio efecto multiplicador en empleo, ingreso ni demanda doméstica de insumos y bienes de capital.",
+      "Concentración de las exportaciones en productos extractivos: entre 2000 y 2008 los sectores extractivos (minería) representaron el 64% del total de exportaciones, con valor agregado muy bajo.",
+      "Concentración en pocos socios comerciales: cuatro países (EEUU, Reino Unido, Suiza y China) conforman el mercado para aproximadamente el 50% de las exportaciones peruanas, generando dependencia de su situación económica.",
+      "Dependencia de la balanza comercial respecto a los términos de intercambio y a los precios internacionales, vulnerable a la caída de la demanda externa (caso China, cuyo crecimiento bajó de más de 10% a 7.5%).",
+      "Factores externos adversos: desaceleración de China, devaluación del dólar norteamericano y crisis de la zona Euro.",
+      "Necesidad urgente de mejorar estándares en calidad de las instituciones públicas y privadas, infraestructura y servicios de salud y educación primaria (según WEF), como freno a la competitividad.",
+      "Notable brecha de inversión en infraestructura de transporte (carreteras, ferrocarriles, puertos, aeropuertos), telecomunicaciones y electricidad.",
+      "Geografía accidentada que dificulta el transporte de mercadería de las regiones a puertos y aeropuertos; el mal estado o falta de carreteras incrementa costos y reduce competitividad, afectando especialmente a empresas fuera de Lima.",
+      "Bajo posicionamiento relativo en desarrollo humano: en el ranking de 182 países del IDH 2009 el Perú se ubicaba en el puesto 78 (IDH 0.806, categoría desarrollo humano alto) y en el puesto 8 entre los países de América del Sur más México, superando solo a Ecuador, Paraguay y Bolivia.",
+      "Bajo nivel de confianza en el poder judicial para asuntos del inversionista y el trabajador; soluciones a problemas en tiempos excesivos.",
+      "Falta de apoyo de técnicos a regiones y empresarios para planificar obras de mediano plazo (tres a cinco años).",
+      "Inversionista y profesional sin seguridad de planificar en qué región vivir.",
+      "Informalidad del empleo y necesidad de convertir puestos informales en formales."
+    ],
+    "pilares": [
+      {
+        "nombre": "Comercio exterior al servicio del desarrollo nacional y de la lucha contra la pobreza",
+        "descripcion": "El comercio exterior del Perú es un instrumento para el desarrollo nacional, a partir de las posibilidades y desafíos de la escena internacional. La prioridad es la lucha contra la pobreza."
+      },
+      {
+        "nombre": "Desarrollo de una cultura exportadora a nivel nacional",
+        "descripcion": "Cultura exportadora enfocada a satisfacer las necesidades del mercado global, logrando colocar productos y servicios con alto valor agregado, apoyados en los Tratados de Libre Comercio suscritos."
+      },
+      {
+        "nombre": "Promoción de las inversiones y el comercio",
+        "descripcion": "El Perú debe ser un país competitivo en la economía internacional, promoviendo las exportaciones, el comercio y la inversión."
+      },
+      {
+        "nombre": "Intensificación de las relaciones con países industrializados y del Asia Pacífico",
+        "descripcion": "El comercio exterior orientará sus relaciones con países industrializados y del Asia Pacífico en función del interés compartido y el beneficio mutuo: fuentes de cooperación, mercados para los productos y potenciales inversionistas en el país."
+      },
+      {
+        "nombre": "Instituciones transparentes y profesionales",
+        "descripcion": "Instituciones transparentes y profesionales que faciliten el comercio exterior, garantizando predicción en su desempeño y una atmósfera positiva para la inversión privada."
+      },
+      {
+        "nombre": "Mejora sustantiva de la calidad de la educación",
+        "descripcion": "Mejorar sustantivamente la calidad de la educación, orientándola hacia una sociedad del conocimiento, con las matemáticas como eje central y fomento del emprendedorismo."
+      },
+      {
+        "nombre": "Reglas de juego claras",
+        "descripcion": "Establecer reglas de juego claras que den estabilidad y predictibilidad al sector exportador y a la inversión."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Crecimiento promedio anual de las exportaciones (última década)",
+        "actual": 17,
+        "meta": null,
+        "unidad": "% anual",
+        "fuente": "Plan Perú 2040 - Comisión de Comercio Exterior, punto de partida"
+      },
+      {
+        "nombre": "Crecimiento acumulado de exportaciones peruanas 2000-2008",
+        "actual": 128,
+        "meta": null,
+        "unidad": "%",
+        "fuente": "Plan Perú 2040 - Diagnóstico",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Participación de sectores extractivos (minería) en el total de exportaciones",
+        "actual": 64,
+        "meta": null,
+        "unidad": "% del total de exportaciones",
+        "fuente": "Plan Perú 2040 - Diagnóstico (2000-2008)"
+      },
+      {
+        "nombre": "Concentración de exportaciones en cuatro socios comerciales (EEUU, Reino Unido, Suiza, China)",
+        "actual": 50,
+        "meta": null,
+        "unidad": "% de las exportaciones",
+        "fuente": "Plan Perú 2040 - Punto de partida"
+      },
+      {
+        "nombre": "Aporte de las exportaciones al PBI (ingreso fiscal acumulado)",
+        "actual": 25,
+        "meta": null,
+        "unidad": "% del PBI",
+        "fuente": "Plan Perú 2040 - Punto de partida"
+      },
+      {
+        "nombre": "Posición en el Índice de Competitividad Global (WEF)",
+        "actual": 78,
+        "meta": null,
+        "unidad": "puesto (de 133 países, 2009-2010)",
+        "fuente": "World Economic Forum, Global Competitiveness Report 2009-2010",
+        "anioMeta": 2010
+      },
+      {
+        "nombre": "Índice de Desarrollo Humano (IDH) del Perú",
+        "actual": 0.806,
+        "meta": null,
+        "unidad": "índice (0-1)",
+        "fuente": "PNUD, Informe de Desarrollo Humano 2009",
+        "anioMeta": 2009
+      },
+      {
+        "nombre": "Posición del Perú en el ranking mundial de IDH",
+        "actual": 78,
+        "meta": null,
+        "unidad": "puesto (de 182 países)",
+        "fuente": "PNUD, Informe de Desarrollo Humano 2009",
+        "anioMeta": 2009
+      },
+      {
+        "nombre": "Empleos directos generados por el comercio exterior",
+        "actual": 829809,
+        "meta": null,
+        "unidad": "empleos directos",
+        "fuente": "Ministerio de Trabajo y Promoción del Empleo y Ministerio de Industria, Comercio y Turismo (2010)",
+        "anioMeta": 2010
+      },
+      {
+        "nombre": "Empleos indirectos generados por el comercio exterior",
+        "actual": 693777,
+        "meta": null,
+        "unidad": "empleos indirectos",
+        "fuente": "Ministerio de Trabajo y Promoción del Empleo y Ministerio de Industria, Comercio y Turismo (2010)",
+        "anioMeta": 2010
+      },
+      {
+        "nombre": "Empleos inducidos generados por el comercio exterior",
+        "actual": 1742599,
+        "meta": null,
+        "unidad": "empleos inducidos",
+        "fuente": "Ministerio de Trabajo y Promoción del Empleo y Ministerio de Industria, Comercio y Turismo (2010)",
+        "anioMeta": 2010
+      },
+      {
+        "nombre": "Ingreso fiscal acumulado por exportaciones (última década)",
+        "actual": 44000,
+        "meta": null,
+        "unidad": "millones de soles",
+        "fuente": "Plan Perú 2040 - Punto de partida"
+      },
+      {
+        "nombre": "Ancho de banda mínimo (infraestructura de telecomunicaciones, base de desarrollo)",
+        "actual": null,
+        "meta": 35,
+        "unidad": "Mb (mínimo)",
+        "fuente": "Plan Perú 2040 - Mapa de procesos, bases de desarrollo"
+      },
+      {
+        "nombre": "Diversificación de mercado: colocación de exportación por país (política de Estado propuesta)",
+        "actual": null,
+        "meta": 5,
+        "unidad": "% de la exportación en un mismo país (tope)",
+        "fuente": "Plan Perú 2040 - Análisis FODA / Respuesta a riesgos (contingencia)"
+      }
+    ],
+    "metas": [
+      "Tener un mejor rendimiento mediante técnicas avanzadas de producción (I&D) en la agroexportación de productos orgánicos.",
+      "Estandarizar los procesos de producción para exportación con productos de calidad y estándar internacional.",
+      "Usar las TIC para el desarrollo de oportunidades en nuevos mercados, de forma interactiva, con bases de desarrollo informáticas y herramientas de desempeño empresarial.",
+      "Lograr un intercambio comercial en crecimiento.",
+      "Alcanzar bienestar ciudadano (aumento de puestos de trabajo formales con mejores ingresos que el promedio nacional; mejoras en ingreso percápita, clase media, consumo interno y salarios del sector exportador).",
+      "Lograr un intercambio comercial con variedad de productos hacia todos los países (diversificación de productos no tradicionales y mayor participación de mercados con TLC, con volumen representado por las Mypes).",
+      "Descentralización del sector exportador (aumento de la participación de las regiones en las exportaciones, generando nuevos focos de desarrollo al interior del país).",
+      "Reducción de la pobreza, medida por el Índice de Desarrollo Humano (IDH), obtenida en gran parte por el sector exportador.",
+      "Diversificar mercados, colocando un tope de 5% de la exportación por país para que un problema en ese país no impacte en los ingresos de la Nación.",
+      "Convertir puestos de trabajo informales actuales en puestos formales."
+    ],
+    "acciones": [
+      "Fomentar la asociatividad en la agroexportación de productos orgánicos (orientar a agrupaciones regionales de nichos productores hacia una oferta exportable sostenida).",
+      "Potenciar la transformación productiva con valor agregado (producción con actores asociados/entrelazados, ubicando nichos de mercado y atendiendo demandas de exportación con valor agregado).",
+      "Crear una organización de Desarrollo de Software para TIC (centros de conocimiento para futuras tecnologías; reclutamiento de profesionales de alto nivel).",
+      "Programas de Formación Emprendedora para la Innovación / Desarrollo de jóvenes emprendedores para la innovación y desarrollo.",
+      "Generar una nueva configuración de los Cluster Agroindustriales (definir estándares nacionales e internacionales para la formación de clusters).",
+      "Crear una oferta integrada en turismo con servicios médicos (posicionamiento competitivo de la medicina peruana, plantas medicinales aplicadas a industria farmacéutica).",
+      "Desarrollar una oferta para sectores de bajo poder adquisitivo de turismo virtual (software y herramientas que muestren el país en 3D, Google Earth Perú).",
+      "Rediseño de envases con enfoque de mercado (presentación de calidad con mensaje de marca Perú).",
+      "Utilización de la radio como medio de educación y facilitador del comercio en las zonas no costeras (radio de frecuencia media para capacitar e informar a pobladores).",
+      "Crear un Centro de Vigilancia Estratégica para los sectores exportadores actuales y potenciales.",
+      "Asegurar estabilidad jurídica y macroeconómica y preservar una política cambiaria flexible (propuesta del Acuerdo Nacional).",
+      "Establecer una política arancelaria que reduzca el nivel y la dispersión de aranceles, respetando acuerdos de integración y compromisos multilaterales.",
+      "Propiciar una política tributaria equitativa y neutral que asegure la devolución de impuestos al exportador.",
+      "Fortalecer la cadena logística de comercio exterior y consolidar la facilitación aduanera y comercial.",
+      "Mejorar la infraestructura vinculada al comercio exterior con participación del sector privado.",
+      "Establecer una política dinámica e integral de promoción comercial.",
+      "Combatir la subvaluación, el dumping, el contrabando y otras formas de competencia desleal.",
+      "Eliminar barreras para-arancelarias a las exportaciones.",
+      "Procurar nuevos y mejores acuerdos comerciales para incrementar y diversificar mercados para productos y servicios con valor agregado.",
+      "Promover una oferta exportable y competitiva con participación de la pequeña y mediana empresa, y organizar a pequeños productores en consorcios de exportación.",
+      "Armonizar las políticas públicas que afectan el comercio exterior y establecer un órgano coordinador del sector público y privado.",
+      "Diseñar un sistema integral de información comercial e impulsar la capacidad de gestión de las misiones diplomáticas comerciales."
+    ],
+    "recomendacion": "Priorizar y realizar de inmediato las tres acciones estratégicas con mayor importancia y gobernabilidad según la matriz IGO: (a) fomentar la asociatividad en la agroexportación de productos orgánicos, (b) potenciar la transformación productiva con valor agregado y (c) crear una organización de Desarrollo de Software para TIC, como factor clave de éxito para diversificar la oferta exportable, generar empleo formal y reducir la pobreza.",
+    "cien_dias": [],
+    "eje": "Competitividad"
+  },
+  {
+    "id": "acuicultura-y-pesca",
+    "nombre": "Acuicultura y Pesca",
+    "resumen": "Documento de la Comisión Temática \"Acuicultura y Pesca\" del Plan Perú 2040 (CNPP / CIP). Diagnostica una acuicultura peruana mal orientada, retraída e incipiente comparada con la región, concentrada en pocas especies (concha de abanico, langostino, trucha, tilapia y peces amazónicos), sin plan de largo plazo integrado, con escasa investigación, débil interés de banca y empresa privada, dependencia de insumos importados (semilla y alimento), e injerencia política. Frente a ello, propone una visión al 2040 de una sociedad basada en la economía de la creatividad que aprovecha su biodiversidad, con la acuicultura como proveedora de proteína y oferta exportable con valor agregado. Articula 8 objetivos estratégicos, una base de desarrollo, factores clave de éxito, riesgos, involucrados y proyectos priorizados, todo condicionado a una previa Reforma del Estado y a la creación de un Instituto Nacional de Acuicultura.",
+    "vision": "En el año 2040 el Perú será una sociedad con responsabilidad social educada en la economía de la creatividad, aprovechando su biodiversidad —convertida en su eje económico— e innovando a través de la ciencia, la tecnología e innovación con productos y servicios de alta calidad. Será líder en la oferta exportable de productos con valor agregado, con una población con alta calidad de vida, oportunidades para su desarrollo, en un ambiente sostenible y teniendo su biodiversidad como marca País. Para la acuicultura, la visión es promover la generación de recursos materiales, tecnológicos y financieros pertinentes, así como los servicios técnicos y condiciones institucionales adecuadas para facilitar la inversión privada en la producción acuícola y la comercialización de productos acuícolas en el mercado nacional e internacional.",
+    "diagnostico": [
+      "La acuicultura en el Perú se encuentra mal orientada, retraída y aletargada respecto del mundo actual; su desarrollo es incipiente comparado con otros países de la región y orientada al cultivo de pocas especies.",
+      "Distribución del área otorgada: 76.41% (15,843.53 ha) corresponde a la actividad acuícola marina y 23.59% (4,891.93 ha) a la actividad acuícola continental.",
+      "Cultivos más extendidos (concha de abanico y langostino) destinados principalmente a exportación; trucha en zonas altoandinas para mercado local y exportación; peces nativos (gamitana, paco, boquichico) para mercado local; tilapia en selva alta (San Martín) y costa norte.",
+      "Carece de un plan a largo plazo de desarrollo integrado para todas las regiones que identifique oportunidades de inversión y difunda información técnica.",
+      "Estudios e investigaciones sobre la acuicultura peruana y la evolución de sus mercados interno y externo son escasos, lo que limita ubicar especies con ventajas competitivas; por ello la empresa privada y la banca comercial muestran pobre interés en invertir o dar créditos.",
+      "Falta efectiva integración entre pequeñas y medianas empresas, lo que impide la estandarización de la producción y un mercadeo eficaz.",
+      "El Perú sigue siendo un país pesquero extractivo tradicional para consumo humano indirecto (harina de pescado); su crecimiento desmesurado pone en riesgo el ecosistema y deja pasivos ambientales muy negativos que pasan desapercibidos.",
+      "Recursos hídricos abundantes para uso acuícola en serio riesgo de extinción por pasivos ambientales de otras actividades (minería, pesca, actividad urbana caótica).",
+      "Gran porcentaje de la población en pobreza y pobreza extrema, con carencias proteicas gigantescas que una acuicultura desarrollada podría reducir drásticamente.",
+      "Dependencia de insumos importados: semilla de langostino a partir de nauplios importados de Ecuador y postlarvas; ovas embrionadas de trucha importadas de Norteamérica o Europa; alimento (piensos) es el insumo más costoso, concentrado en dos empresas nacionales líderes.",
+      "En granjas de pequeña escala y subsistencia (tilapia y peces amazónicos), el alimento es de calidad muy pobre y los productores desconocen el costo del alimento dentro del costo de producción.",
+      "Limitado número de especialistas de nivel superior en genética, nutrición y manejo de enfermedades, y de escuelas técnicas para formación práctica de acuicultores.",
+      "Dificultades de equipos, materiales, transporte, energía y comunicaciones para los cultivos de trucha, tilapia y peces amazónicos (a diferencia de la industria langostinera y de concha de abanico).",
+      "Riesgos identificados: falta de planificación de largo plazo; fenómenos naturales que alteren el régimen climático o causen desastres; epizootias no previsibles; alteración de precios de insumos; monopolio de insumos; injerencia política partidaria en cargos técnicos; disminución de la competencia y probidad del capital humano; y la corrupción."
+    ],
+    "pilares": [
+      {
+        "nombre": "Incremento de la producción y comercialización acuícola",
+        "descripcion": "Incrementar la calidad, productividad y el volumen de producción acuícola comercializado a nivel nacional e internacional, apoyando capacidades exportadoras (productos orgánicos), posicionamiento internacional con PROMPERU y MINCETUR, desarrollo del mercado interno, aseguramiento y control de calidad (SANIPES) y normas técnicas (Objetivo N°1)."
+      },
+      {
+        "nombre": "Inversión privada y ordenamiento de la actividad",
+        "descripcion": "Incrementar la inversión privada en acuicultura fomentando la viabilidad económica y competitividad de las granjas, la organización y gestión empresarial de pequeños y medianos acuicultores, el Catastro Acuícola Nacional y sistema de información geográfica, la infraestructura de comunicaciones y servicios, la simplificación de trámites (Ventanilla Única de Acuicultura), la estabilidad jurídica de áreas acuáticas y el ordenamiento territorial (Objetivo N°2)."
+      },
+      {
+        "nombre": "Producción nacional de insumos (semillas y alimento balanceado)",
+        "descripcion": "Promover la producción nacional de insumos mejorando los centros de producción acuícola estatales (vía gobiernos regionales, sector privado o APP) para abastecer semilla de calidad, y promoviendo alimento balanceado de buena calidad con normas técnicas y plantas piloto (Objetivo N°3)."
+      },
+      {
+        "nombre": "Formación, capacitación y asistencia técnica",
+        "descripcion": "Promover el desarrollo de servicios de formación, capacitación y asistencia técnica para la producción y comercialización acuícola, con programas de extensión en las Regiones, protocolos de buenas prácticas en granjas demostrativas y mejora de la formación universitaria y de postgrado (Objetivo N°4)."
+      },
+      {
+        "nombre": "Control y sanidad acuícola",
+        "descripcion": "Promover el desarrollo de servicios de control sanitario, estableciendo un sistema nacional de sanidad acuícola con centros de referencia equipados para prevenir y controlar enfermedades y responder a brotes de epizootias, y regular la prestación de servicios de sanidad acuícola (Objetivo N°5)."
+      },
+      {
+        "nombre": "Investigación, desarrollo y transferencia tecnológica",
+        "descripcion": "Promover la investigación y desarrollo, adaptación y transferencia tecnológica en materia acuícola, estableciendo prioridades de investigación por especies, desarrollando tecnologías para producción nacional de semilla de calidad y articulando institutos de investigación con empresas y gremios (Objetivo N°6)."
+      },
+      {
+        "nombre": "Capacidades institucionales y estadística",
+        "descripcion": "Contar con una estructura organizacional y capacidades humanas adecuadas para la elaboración, implementación y evaluación de políticas de promoción acuícola, fortaleciendo recursos humanos de ordenación y desarrollo, y el sistema de captación y difusión de información estadística representativa, veraz y oportuna (Objetivo N°7)."
+      },
+      {
+        "nombre": "Financiamiento de la acuicultura",
+        "descripcion": "Obtener y usar óptimamente recursos financieros para la promoción de la acuicultura, analizando, diseñando e implementando instrumentos para el incremento, distribución y óptimo uso de los recursos financieros para el desarrollo del sector (Objetivo N°8)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Participación del área acuícola marina en el área total otorgada",
+        "actual": 76.41,
+        "meta": null,
+        "unidad": "% del área otorgada",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040 (15,843.53 ha del área otorgada)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del área acuícola continental en el área total otorgada",
+        "actual": 23.59,
+        "meta": null,
+        "unidad": "% del área otorgada",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040 (4,891.93 ha del área otorgada)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Área otorgada para acuicultura marina",
+        "actual": 15843.53,
+        "meta": null,
+        "unidad": "hectáreas",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Área otorgada para acuicultura continental",
+        "actual": 4891.93,
+        "meta": null,
+        "unidad": "hectáreas",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Universidades que forman acuicultores",
+        "actual": 3,
+        "meta": null,
+        "unidad": "universidades",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040 (capital humano)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Universidades que forman ingenieros pesqueros y biólogos capacitados para la acuicultura",
+        "actual": 10,
+        "meta": null,
+        "unidad": "universidades",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040 (capital humano)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Centros de enseñanza media especializada que forman técnicos en acuicultura",
+        "actual": 2,
+        "meta": null,
+        "unidad": "centros",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040 (capital humano)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Empresas nacionales líderes productoras de alimento estandarizado para langostinos y truchas",
+        "actual": 2,
+        "meta": null,
+        "unidad": "empresas",
+        "fuente": "Diagnóstico Comisión Acuicultura - Plan Perú 2040 (insumo alimento/piensos)",
+        "anioMeta": 2040
+      }
+    ],
+    "metas": [
+      "Incrementar la calidad, productividad y el volumen de producción acuícola comercializado a nivel nacional e internacional.",
+      "Incrementar la inversión privada en acuicultura.",
+      "Promover la producción nacional de insumos (semillas y alimento balanceado) para la acuicultura, reduciendo la dependencia de la importación de nauplios, postlarvas y ovas embrionadas.",
+      "Crear el Instituto Nacional de Acuicultura.",
+      "Establecer un sistema nacional de sanidad acuícola con centros de referencia para prevenir y controlar enfermedades y responder a epizootias.",
+      "Contar con un Catastro Acuícola Nacional actualizado, descentralizado e interconectado con las regiones, con sistema de información geográfica.",
+      "Optimizar la Ventanilla Única de Acuicultura (VUA) mediante simplificación de trámites para el otorgamiento de derechos a mayor y menor escala.",
+      "Promover el ordenamiento territorial que favorezca la expansión de la acuicultura evitando conflictos por el uso de áreas acuáticas.",
+      "Obtener y usar óptimamente recursos financieros para la promoción de la acuicultura.",
+      "Buscar el equilibrio entre la pesca extractiva y la actividad acuícola, así como con otras actividades que usan los recursos hídricos.",
+      "Alcanzar la visión al 2040 de una acuicultura como eje económico basado en la biodiversidad, con oferta exportable de valor agregado."
+    ],
+    "acciones": [
+      "Apoyar el desarrollo de capacidades exportadoras de empresas productoras acuícolas orgánicas con información comercial y asesoría, y propiciar la asociatividad entre empresas para acceder al mercado de exportación.",
+      "Posicionar y fortalecer los productos acuícolas en mercados internacionales mediante promoción comercial de PROMPERU con apoyo del Ministerio de Comercio Exterior y Turismo.",
+      "Desarrollar el mercado interno para productos de la acuicultura, capacitando personal en manipulación de productos pesqueros y desarrollando infraestructura de mercadeo.",
+      "Fortalecer el aseguramiento y control de la calidad e inocuidad capacitando a SANIPES y a capacitadores, usando el manual de inocuidad y control de calidad.",
+      "Promover el diseño de normas técnicas para la acuicultura orientadas al posicionamiento en nuevos mercados.",
+      "Fomentar la viabilidad económica, competitividad, capacidad de gestión y formalidad de las granjas y de los productores de menor escala y subsistencia mediante capacitación y asistencia técnica.",
+      "Fomentar la organización y gestión empresarial de pequeños y medianos acuicultores para que se agrupen en gremios o asociaciones.",
+      "Implementar un sistema de información geográfica y el Catastro Acuícola Nacional, evaluando los cuerpos de agua más importantes e interconectándolo con las regiones mediante un software adecuado.",
+      "Mejorar la infraestructura de comunicaciones, vías de acceso, cadenas de frío, energía y servicios básicos en zonas de desarrollo acuícola, gestionando ante Gobiernos Regionales, APP y empresas.",
+      "Simplificar trámites para el otorgamiento de derechos (mayor y menor escala) optimizando la Ventanilla Única de Acuicultura (VUA) y fortalecer la estabilidad jurídica y derechos de uso de áreas acuáticas.",
+      "Promover el ordenamiento territorial que favorezca la expansión de la acuicultura evitando conflictos por uso de áreas acuáticas.",
+      "Mejorar los centros de producción acuícola estatales (vía gobiernos regionales, sector privado o APP) para abastecer semilla de buena calidad.",
+      "Promover la producción de alimento de buena calidad con normas técnicas de alimento balanceado (usando harina de pescado u otros sustitutos de bajo costo) e instalar plantas piloto.",
+      "Establecer programas de capacitación y extensión sistemática en las Regiones, e implementar protocolos de buenas prácticas acuícolas en granjas demostrativas.",
+      "Mejorar la formación de profesionales a nivel universitario y de postgrado en acuicultura.",
+      "Establecer un sistema nacional de sanidad acuícola con centros de referencia equipados y unidades de base para monitoreo, y regular la prestación de servicios de sanidad acuícola.",
+      "Establecer prioridades de investigación por especies (exóticas con tecnologías conocidas y nativas) articulando instituciones de investigación con empresas, gremios e inversionistas.",
+      "Desarrollar y adaptar tecnologías para la producción nacional de semilla de buena calidad (nauplios, postlarvas, ovas embrionadas).",
+      "Fortalecer capacidades organizacionales y de recursos humanos para la ordenación y desarrollo, y el sistema de captación y difusión de información estadística.",
+      "Analizar, diseñar e implementar instrumentos para el incremento, distribución y óptimo uso de recursos financieros para la acuicultura.",
+      "Crear el Instituto Nacional de Acuicultura.",
+      "Reducir sistemáticamente la corrupción y eliminar la injerencia política partidaria en la designación de cargos técnicos."
+    ],
+    "recomendacion": "Priorizar primero la Reforma del Estado —para tener un Estado fuerte, eficaz, eficiente y transparente— como condición trascendente para el desarrollo nacional; una vez iniciado ese proceso, promover decididamente la actividad acuícola creando el Instituto Nacional de Acuicultura y ejecutando el Plan Perú 2040 con voluntad política que trascienda los periodos de gobierno, capital humano probo, ciencia, tecnología e innovación, e inversión privada y del Estado, manteniendo el equilibrio entre la pesca extractiva y la acuicultura.",
+    "cien_dias": [],
+    "eje": "Sostenibilidad y Ambiente"
+  },
+  {
+    "id": "educacion-tres-niveles",
+    "nombre": "Educación (Tres Niveles)",
+    "resumen": "Documento de la Comisión Temática de Educación del Plan Perú 2040 (CNPP / Colegio de Ingenieros del Perú). Plantea una \"revolución educativa\" o \"nueva educación\" para emparejar la educación peruana con los tiempos y la \"Era del Conocimiento\", elevándola a la misma prioridad que la economía y las finanzas. Propone una educación basada en competencias y en el fortalecimiento de cinco facetas/herramientas humanas: equidad (social), emprendimiento (económico), solidaridad (ambiental), verdad (intelectual) y belleza (humano), correspondientes a los cuatro pilares de UNESCO (aprender a vivir juntos, a hacer, a conocer, a ser). El motor operativo es un \"Núcleo Innovador\" que despliega cuatro sistemas básicos: una Red de Centros de I+D (sistema rector), un sistema de gestión de procesos, un sistema de ejecución desconcentrada y un sistema de validación de resultados. Convoca a una \"Sociedad Educadora\" con responsabilidades compartidas del gobierno nacional/regional/local, MINEDU, empresa privada, organizaciones educativas, familia, docentes y educandos. Confluye con el Acuerdo Nacional (31 políticas de Estado), el Plan Perú 2021 del CEPLAN (6 ejes estratégicos) y el Proyecto Educativo Nacional al 2021 (6 objetivos). Aspira a que el Perú, al 2040, alcance un elevado IDH y se posicione entre las naciones del Primer Mundo, emulando a Finlandia, Noruega y Suiza.",
+    "vision": "Al 2040, el Perú tendrá un elevado Índice de Desarrollo Humano (IDH), posicionándose entre las naciones del Primer Mundo líderes en equidad y en conservación ambiental, tras seis periodos de gobierno que aplicaron democrática y participativamente políticas de Estado con visión de futuro, en el marco de la igualdad de oportunidades y la Economía Social de Mercado, sustentada en una sociedad del conocimiento generada por inversión sostenida en ciencia, tecnología e innovación. Al 2040 estará en ejecución un Sistema Educativo innovado, producto de investigación y desarrollo permanente y de alta calidad, con claras metas de futuro. En educación se aspira a \"ser de los primeros en un mundo más acorde con la alta condición humana\", emulando a Finlandia, Noruega y Suiza, lo que significaría \"la segunda independencia para el Perú\", guiada por el conocimiento científico y la tecnología.",
+    "diagnostico": [
+      "La calidad del sistema educativo peruano no está en concordancia con las necesidades del país e impone barreras al futuro académico, laboral y social de los niños, especialmente los más pobres.",
+      "Bajo financiamiento: el escaso porcentaje del PBI otorgado a la educación (debería ser 6%).",
+      "Bajos resultados de aprendizaje: en PISA 2009 Perú obtuvo la media más baja de América Latina (368), con lectura 370, matemáticas 365 y ciencias 369, por debajo de Chile, Uruguay, México, Brasil, Colombia, Argentina y Panamá.",
+      "Educación diseñada para mantener un statu quo sumamente discriminatorio; modelo desfasado en el tiempo que desperdicia recursos por falta de alternativa conceptual y metodológica y por rutina burocrática.",
+      "Bajo nivel de comprensión de lectura y de cálculo básico en los educandos.",
+      "Altas tasas de repetición y retiro escolar que varían poco; fracaso escolar en primaria y secundaria; poco conocimiento para la atención de la población menor de 4 años.",
+      "Desigualdad en el proceso educativo entre sector rural y urbano, mujer y hombre, pobre y rico, niños normales y con necesidades especiales.",
+      "Énfasis excesivo en la inteligencia cognoscitiva en desmedro de otras inteligencias (emocional, social, trascendencia).",
+      "Débil investigación: de 2,124 instituciones de mejor calidad en investigación en el mundo, Perú registra solo 1 (Brasil 27, Argentina 12, Chile 11).",
+      "Desconexión entre la formación educativa regular y el mercado laboral; educación técnica desvalorizada y desconectada de la realidad.",
+      "Grave desnivel de remuneraciones por nivel educativo (ENAHO 2002): tomando primaria incompleta como base 1.00, posgrado universitario 13.36 y universitaria completa 4.25.",
+      "Sobreoferta de formación docente con grave deterioro de la calificación y debilitamiento del rol de la profesión; baja autoestima docente, tendencia a trabajar menos horas lectivas y de forma rutinaria.",
+      "Gestión estatal que prioriza la mera administración de recursos antes que su uso con criterio estratégico de largo plazo; administración en compartimentos estanco de una realidad inter-influyente y compleja.",
+      "Faltan programas integrales de desarrollo del niño desde la primera infancia (DPI), nutrición y salud preventiva.",
+      "Infraestructura educativa precaria, especialmente en lugares alejados del país."
+    ],
+    "pilares": [
+      {
+        "nombre": "Educación para la equidad (aprender a vivir juntos)",
+        "descripcion": "Fortalecer la capacidad del cerebro para entender y comprometerse con la equidad como rasgo de humanidad, base de la institucionalidad social, la democracia, la gobernabilidad y la concertación social; forma el capital social e institucional de la comunidad (faceta social)."
+      },
+      {
+        "nombre": "Educación para el emprendimiento (aprender a hacer)",
+        "descripcion": "Fortalecer la capacidad para el emprendimiento (creatividad, innovación, eficiencia), haciendo de la creatividad un camino real hacia la generación de nueva riqueza y la superación de la pobreza; forma el capital físico y financiero productivo (faceta económica)."
+      },
+      {
+        "nombre": "Educación para la solidaridad (aprender a vivir con los otros)",
+        "descripcion": "Fortalecer la capacidad para la solidaridad (responsabilidad sobre lo biótico y no biótico), consolidando la conciencia y práctica de sostenibilidad y el cuidado y promoción del medio ambiente; forma el capital natural de la comunidad (faceta ambiental)."
+      },
+      {
+        "nombre": "Educación para la verdad (aprender a conocer)",
+        "descripcion": "Fortalecer la capacidad para procesar y comprometerse con la verdad, impulsando la vocación científica y la creación y uso de tecnologías que aproximen al país a la sociedad del conocimiento; forma el capital en conocimientos y saberes (faceta intelectual)."
+      },
+      {
+        "nombre": "Educación para la belleza (aprender a ser)",
+        "descripcion": "Fortalecer la capacidad para la belleza, haciendo posible la conciencia del desarrollo humano como deber y meta personal (más saludables, mejor alimentados, más instruidos y más felices en el trabajo), usando la belleza de lo bien hecho que accede a la libertad (Amartya Sen); forma el capital humano (faceta humana)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Porcentaje del PBI destinado a la Educación",
+        "actual": null,
+        "meta": 6,
+        "unidad": "% del PBI",
+        "fuente": "Propuesta del documento (debería ser 6%)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Resultado PISA - media",
+        "actual": 368,
+        "meta": null,
+        "unidad": "puntaje PISA",
+        "fuente": "OCDE, PISA 2009"
+      },
+      {
+        "nombre": "Resultado PISA - lectura",
+        "actual": 370,
+        "meta": null,
+        "unidad": "puntaje PISA",
+        "fuente": "OCDE, PISA 2009"
+      },
+      {
+        "nombre": "Resultado PISA - matemáticas",
+        "actual": 365,
+        "meta": null,
+        "unidad": "puntaje PISA",
+        "fuente": "OCDE, PISA 2009"
+      },
+      {
+        "nombre": "Resultado PISA - ciencias",
+        "actual": 369,
+        "meta": null,
+        "unidad": "puntaje PISA",
+        "fuente": "OCDE, PISA 2009"
+      },
+      {
+        "nombre": "Instituciones peruanas entre las 2,124 de mejor calidad en investigación en el mundo",
+        "actual": 1,
+        "meta": null,
+        "unidad": "instituciones (de 2,124 a nivel mundial)",
+        "fuente": "Documento (Brasil 27, Argentina 12, Chile 11)"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - posgrado universitario",
+        "actual": 13.36,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - universitaria completa",
+        "actual": 4.25,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - universitaria incompleta",
+        "actual": 2.12,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - superior no universitaria",
+        "actual": 1.82,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - secundaria completa",
+        "actual": 1.69,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - secundaria incompleta",
+        "actual": 1.3,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Ingreso mensual relativo - primaria completa",
+        "actual": 1.21,
+        "meta": null,
+        "unidad": "veces el ingreso de primaria incompleta (base 1.00)",
+        "fuente": "ENAHO 2002"
+      },
+      {
+        "nombre": "Políticas de Estado del Acuerdo Nacional con las que confluye la propuesta",
+        "actual": 31,
+        "meta": null,
+        "unidad": "políticas de Estado",
+        "fuente": "Acuerdo Nacional"
+      }
+    ],
+    "metas": [
+      "Que el PBI destinado a la Educación sea del 6%.",
+      "Primera meta: una educación para la democracia, gobernabilidad y concertación social, fortaleciendo la capacidad del cerebro para entender y comprometerse con la equidad (UNESCO: aprender a vivir juntos).",
+      "Segunda meta: una educación para la generación de nueva riqueza y apoderamiento de lo nuestro, fortaleciendo el emprendimiento, haciendo de la creatividad e innovación un camino hacia la superación de la pobreza (UNESCO: aprender a hacer).",
+      "Tercera meta: una educación para el cuidado y promoción del medio ambiente, fortaleciendo la solidaridad y consolidando la conciencia y práctica de sostenibilidad (UNESCO: aprender a vivir con los otros).",
+      "Cuarta meta: una educación para la toma de decisiones con mayores elementos de juicio, fortaleciendo la verdad y la vocación científica para aproximarse a la sociedad del conocimiento (UNESCO: aprender a conocer).",
+      "Quinta meta: una educación para la armonía y perfección de la condición humana, fortaleciendo la belleza y la conciencia del desarrollo humano como deber y meta personal (UNESCO: aprender a ser).",
+      "Que al 2040 el Perú sea país en dirección al primer mundo, con elevado IDH y entre las naciones líderes en equidad y conservación ambiental, emulando a Finlandia, Noruega y Suiza.",
+      "Elevar el presupuesto del sector educativo a un 6% del PBI y proveer infraestructura, plataformas digitales de acceso universal, currículos dinámicos y profesores calificados.",
+      "Que en todas las instituciones de educación básica todos los estudiantes aprendan de manera efectiva y alcancen las competencias requeridas, superando exclusiones y discriminaciones (a cargo del MINEDU)."
+    ],
+    "acciones": [
+      "Organizar un 'Núcleo Innovador' que diseñe y organice cuatro sistemas para apoyar y dar legitimidad al cambio educativo.",
+      "Sistema de Investigación y Desarrollo (I+D): crear un organismo/Red de Centros de I+D que dirija el nuevo proceso educativo con responsabilidad compartida entre gobierno, academia y sector privado.",
+      "Sistema de gestión de procesos educativos: organismo encargado de normar, supervisar y evaluar la metodología de campo y apoyar el nuevo aprendizaje a nivel local.",
+      "Sistema de ejecución desconcentrada: organismos locales a cargo de la tarea administrativa, logística, económica y de calidad docente, con responsabilidad compartida de los agentes locales.",
+      "Sistema de validación de resultados: organismo de validación permanente de resultados, supervisión de procesos, acreditación de competencia y certificación de idoneidad.",
+      "Construir alianzas estratégicas con cooperación técnica internacional, UNESCO, Banco Mundial, BID, entidades del capital social, corporaciones confesionales y la academia.",
+      "Diseñar las demandas de educación al 2040: durante la vida, vida familiar, personalidad básica, disfrute del trabajo, laboral especializada, futuros padres, tercera edad, Era del Conocimiento y desarrollo local.",
+      "Diseñar las responsabilidades de los directores (Estado, gobiernos regionales y locales, entidades empresariales) y de los actores (padres de familia, sociedad civil, confesiones religiosas, gobiernos locales, empresas) de los procesos educativos.",
+      "Diseñar los sectores temáticos de la educación: primeros 4 años, lectura y cálculo como herramientas, personalidad del niño, ciudadanía, aptitud productiva, gestión ambiental, CTI y desarrollo humano.",
+      "Diseñar la educación de connotación específica: áreas rurales, marginales, industriales y entidades privadas, laborales, asociativas, confesionales y militares.",
+      "Ejecutar los proyectos de I+D por meta estratégica (asuntos sociales, económicos, ambientales, intelectuales y humanos del desarrollo) y los proyectos de afianzamiento de finalidades puntuales (A a Z) del único sistema educativo.",
+      "Capacitar a los docentes en inteligencia emocional y moral; renovar la Carrera Pública Magisterial.",
+      "Involucrar a los colegios profesionales en su responsabilidad social en educación y fomentar la investigación científica del proceso enseñanza-aprendizaje en las universidades.",
+      "Implementar módulos de gestión de la innovación, elaborar manuales electrónicos, fomentar la mejora continua de las unidades educativas, la alfabetización digital y la inclusión de tecnologías milenarias en currículos de educación rural.",
+      "Proveer infraestructura civil adecuada a los lugares más alejados, plataformas digitales de acceso universal, currículos dinámicos y profesores calificados; establecer programas conjuntos escuela-familia.",
+      "Buscar en el maestro en ejercicio un 'aliado estratégico' para actividades piloto que impulsen el cambio educativo de abajo hacia arriba; lograr un pacto proactivo con la burocracia."
+    ],
+    "recomendacion": "Elevar la educación a la misma prioridad que la economía y las finanzas del Estado, asignándole el 6% del PBI, y poner en marcha una \"revolución educativa\" o \"nueva educación\" emparejada con los tiempos y la Era del Conocimiento, dirigida por un \"Núcleo Innovador\" con una Red de Centros de I+D, bajo el modelo de una \"Sociedad Educadora\" de responsabilidades compartidas, para fortalecer en los peruanos la equidad, el emprendimiento, la solidaridad, la verdad y la belleza, y así encaminar al país al primer mundo al 2040.",
+    "cien_dias": [],
+    "eje": "Economía del Conocimiento"
+  },
+  {
+    "id": "energia-nuclear",
+    "nombre": "Energía Nuclear",
+    "resumen": "Documento de la Comisión Temática \"Energía Nuclear\" del Plan Perú 2040 (CNPP / Colegio de Ingenieros del Perú). Parte del punto de partida sobre la energía nuclear como fuente limpia, estable y de suministro garantizado (centrales que operan 24/365, sin emisiones de gases de efecto invernadero), reconociendo a la vez sus riesgos (Hiroshima/Nagasaki, Three Mile Island, Chernóbil, Fukushima) y el problema de los residuos radiactivos. Propone que el Perú no quede al margen de la búsqueda de fuentes de energía limpias y de la tecnología nuclear aplicada a la solución de problemas nacionales. A partir de un diagnóstico FODA y un análisis por sectores, identifica cinco sectores prioritarios donde la energía y tecnología nuclear puede aportar: seguridad alimentaria, salud humana, medio ambiente, energía e industria, y seguridad radiológica. Plantea una visión de Perú como país líder regional en ciencia y tecnología nuclear, sustentada en capital humano meritocrático, alianzas con regiones, universidades y sector privado, y un fuerte componente regulatorio (Autoridad Reguladora). El informe usa la técnica del Marco Lógico y las cuatro perspectivas del Balanced Scorecard, y reconoce que su desarrollo es transversal a otras Comisiones (Energía, Medio Ambiente, Ciencia y Tecnología, Salud, Competitividad). El documento es mayormente cualitativo; aporta muy pocas cifras explícitas y no incluye un capítulo de \"primeros 100 días\".",
+    "vision": "Perú país líder en la Región en Ciencia y Tecnología Nuclear en forma competitiva, con desarrollo sostenible y calidad de vida de la población (Visión Energía Nuclear 2040). Visión del mapa estratégico: \"Coadyuvar al desarrollo sostenible del Perú, utilizando la ciencia y la tecnología nuclear en forma eficiente y competitiva, así como regulando su uso seguro\".",
+    "diagnostico": [
+      "Debilidades institucionales: inadecuada estrategia de promoción y comunicación; insuficiente integración con otras instituciones de investigación y productivas; limitado aprovechamiento de alianzas estratégicas; infraestructura no utilizada o subutilizada; limitada capacidad de transferencia tecnológica.",
+      "Carencia de una política adecuada de incorporación de personal con capacidad de respuesta técnica (las amenazas señalan falta de dispositivos legales para incorporar cuadros técnicos y profesionales).",
+      "Amenazas: sustitución de técnicas nucleares por alternativas; falta de financiamiento para la adquisición del combustible del reactor nuclear; disminución de los volúmenes de cooperación técnica internacional; recorte del presupuesto público para ciencia, tecnología e innovación.",
+      "Seguridad alimentaria: inadecuada sostenibilidad en la aplicación de técnicas nucleares en la actividad agropecuaria; restricción del acceso a mercados por residuos químicos en alimentos; prácticas deficientes de manejo de suelos; áreas con alta prevalencia de mosca de la fruta; degradación de suelos y baja productividad de cultivos tradicionales y plantas nativas.",
+      "Salud humana: déficit regional en cantidad y calidad de recursos humanos formados (físicos médicos, médicos nucleares, radioterapeutas, radiofarmacéuticos, etc.); falta de protocolos y manuales clínicos adoptados por el país; ausencia de sistemas de gestión de calidad en muchos centros regionales; acceso desigual a radionucleidos y radiofármacos en las regiones; bases de datos de infraestructura de medicina nuclear desactualizadas o inexistentes.",
+      "Medio ambiente: falta o insuficiencia de sistemas de alerta temprana y evaluación de impacto de contaminación por plaguicidas, COP, metales pesados; inadecuados sistemas de manejo y conocimiento de recursos hídricos; diagnóstico deficiente del impacto de la contaminación atmosférica sobre la salud.",
+      "Energía e industria (nucleoelectricidad): necesidad de mejorar la información pública objetiva sobre la energía nuclear; escasez de personal calificado para gestión de proyectos nucleoeléctricos; falta de análisis y escenarios de oferta/demanda energética de largo plazo; ausencia de políticas sobre el ciclo de combustible nuclear; insuficiente integración energética regional.",
+      "Reactores experimentales: necesidad de modernización para mejorar su seguridad y extender su vida útil; reposición del elemento combustible gastado; necesidad de formar y reemplazar personal altamente calificado.",
+      "Aplicaciones industriales: insuficiente uso de aplicaciones nucleares en la industria, afectando la competitividad; limitaciones en el comercio y transporte de material radiactivo entre países de la región; insuficiente desarrollo tecnológico propio para transferir a la industria.",
+      "Seguridad radiológica: carencia de normativa específica para prácticas de mayor riesgo (aceleradores lineales, radiología intervencionista); ausencia de un programa nacional de formación de trabajadores ocupacionalmente expuestos; deficiente control de materiales a reciclar; limitada cobertura de monitoreo individual interno y de entrenamiento de postgrado en protección radiológica."
+    ],
+    "pilares": [
+      {
+        "nombre": "Seguridad alimentaria (agricultura, alimentación, veterinaria)",
+        "descripcion": "Aplicación de técnicas nucleares e isotópicas para el mejoramiento genético de plantas y animales, manejo de suelos y uso eficiente de fertilización e irrigación, control y erradicación de plagas transfronterizas (mosca de la fruta), tratamientos de poscosecha como alternativa a los químicos y fortalecimiento de redes de servicios analíticos agropecuarios."
+      },
+      {
+        "nombre": "Salud humana (medicina nuclear, radioterapia, física médica, radiofarmacia, nutrición, biología molecular nuclear)",
+        "descripcion": "Diagnóstico precoz y terapia mediante técnicas radioisotópicas; radioterapia como tratamiento no quirúrgico con altos índices de curación en cáncer; fortalecimiento de la física médica y la protección radiológica del paciente; aplicaciones en nutrición y en diagnóstico de enfermedades infecciosas emergentes y reemergentes; cierre del déficit y desigualdad regional de recursos humanos y equipamiento."
+      },
+      {
+        "nombre": "Medio ambiente (atmósfera, recursos hídricos, medio terrestre, medio marino)",
+        "descripcion": "Uso de técnicas nucleares para detección y evaluación de contaminantes, planificación ambiental, gestión y racionalización del agua (superficial y subterránea, acuíferos costeros), control de la salinización e intrusión marina, y monitoreo de contaminación por plaguicidas y metales pesados."
+      },
+      {
+        "nombre": "Energía e industria (nucleoelectricidad, reactores experimentales, aplicaciones industriales)",
+        "descripcion": "Evaluación de la energía nucleoeléctrica como alternativa para diversificar la matriz energética y abastecer zonas desprovistas; operación, modernización y abastecimiento de combustible de los reactores experimentales como centros de I+D y producción de radioisótopos; difusión y ampliación de aplicaciones nucleares en la industria (ensayos no destructivos, irradiación, medidores nucleónicos, trazadores)."
+      },
+      {
+        "nombre": "Seguridad radiológica (infraestructura reguladora y protección radiológica)",
+        "descripcion": "Fortalecimiento de la Autoridad Reguladora con atribuciones de reglamentación, control y sanción; protección radiológica ocupacional, del paciente y del público; políticas y estrategias de gestión de desechos radiactivos; preparación y respuesta a emergencias radiológicas (fuentes huérfanas, accidentes, amenaza terrorista); educación y entrenamiento en seguridad."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Reactores nucleares experimentales con que cuenta el país",
+        "actual": 2,
+        "meta": null,
+        "unidad": "reactores",
+        "fuente": "Plan Perú 2040 - Comisión Energía Nuclear (sección Reactores experimentales)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Curaciones de cáncer atribuidas a radioterapia (frente a cirugía 49% y quimioterapia 11%)",
+        "actual": 40,
+        "meta": null,
+        "unidad": "% de las curaciones",
+        "fuente": "Plan Perú 2040 - Comisión Energía Nuclear (sección Radioterapia)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Pacientes oncológicos en los que la radioterapia se usa con fines curativos",
+        "actual": 60,
+        "meta": null,
+        "unidad": "% de pacientes",
+        "fuente": "Plan Perú 2040 - Comisión Energía Nuclear (sección Radioterapia)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación de la agricultura en la extracción total de agua",
+        "actual": 70,
+        "meta": null,
+        "unidad": "% (más de) de la extracción total",
+        "fuente": "Plan Perú 2040 - Comisión Energía Nuclear (sección Medio ambiente / recursos hídricos)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Pérdidas en producción de frutas y hortalizas por mosca de la fruta",
+        "actual": 40,
+        "meta": null,
+        "unidad": "% (hasta) de la producción",
+        "fuente": "Plan Perú 2040 - Comisión Energía Nuclear (Tabla I, necesidad A4)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Especies de frutas y hortalizas cuya exportación se ve limitada por la mosca de la fruta",
+        "actual": 100,
+        "meta": null,
+        "unidad": "especies (más de)",
+        "fuente": "Plan Perú 2040 - Comisión Energía Nuclear (Tabla I, necesidad A4)",
+        "anioMeta": 2040
+      }
+    ],
+    "metas": [
+      "Objetivos básicos: garantizar el uso seguro de las radiaciones ionizantes y la energía nuclear en el país; generar y transferir conocimientos y tecnologías en el área nuclear y afines (para mejorar la calidad de vida de la población peruana); promover el uso de las aplicaciones nucleares y afines en los sectores productivos y de servicios para ser competitivos en el frente interno y externo.",
+      "Objetivos específicos: contar con capital humano calificado, productivo, motivado e identificado con los objetivos nacionales; contar con una estructura organizacional flexible; promover el transporte seguro de materiales radiactivos; desarrollar una cultura de seguridad compartida.",
+      "Fortalecer el proceso de regulación y control para garantizar el uso seguro de la energía nuclear y consolidar la Autoridad Reguladora con responsabilidades, atribuciones y recursos.",
+      "Fortalecer los procesos de investigación, desarrollo e innovación, transferencia de tecnología y promoción, para resolver problemas de los sectores productivos y de servicios con estándares competitivos internacionales.",
+      "Mejorar la imagen del país y promover su posicionamiento como líder regional (América) en el desarrollo de la tecnología nuclear y afines.",
+      "Lograr posicionamiento como abastecedor de radioisótopos a países de la región (aprovechando la demanda creciente de radioisótopos a nivel internacional).",
+      "Modernizar los reactores experimentales para mejorar su seguridad, extender su vida útil y asegurar la reposición/adquisición del elemento combustible."
+    ],
+    "acciones": [
+      "Establecer puentes entre las organizaciones de investigación y desarrollo y los sectores productivos para mejorar la competitividad nacional, el crecimiento de las exportaciones y la lucha contra la pobreza.",
+      "Desarrollar un intenso trabajo de promoción y alianzas estratégicas con regiones, sectores productivos, universidades y centros de investigación, y con otros países de la región para proyectos conjuntos.",
+      "Implementar la designación de gestores en base a meritocracia (con liderazgo, experiencia, conocimientos y capacidad de gestión) y establecer una carrera pública meritocrática para el capital humano.",
+      "Priorizar los proyectos y subproyectos en función de su mayor rentabilidad económica y social, resolviendo problemas reales del país, usando la técnica del Marco Lógico.",
+      "Promover alianzas con el sector de Energía y Minas y con el sector Ambiente para aplicar tecnología nuclear en la solución de problemas ambientales y de agua/acuíferos.",
+      "Promover la implementación de una ciudadela (ciudadela) científica-tecnológica nacional y la mejora/creación de infraestructura disponible.",
+      "Promover el uso de técnicas nucleares en seguridad alimentaria: mejoramiento genético de plantas y animales, manejo de suelos, fertilización e irrigación eficiente, erradicación de la mosca de la fruta y tratamientos de poscosecha.",
+      "Fortalecer la formación, capacitación y entrenamiento del personal multidisciplinario en salud humana (medicina nuclear, radioterapia, física médica, radiofarmacia, nutrición) y cerrar la brecha regional de recursos humanos y equipamiento.",
+      "Establecer escenarios de oferta y demanda energética de largo plazo y políticas sobre el ciclo de combustible nuclear para evaluar la participación de la nucleoelectricidad en la diversificación de la matriz energética.",
+      "Fortalecer el marco regulatorio: consolidar la Autoridad Reguladora, desarrollar normativa para prácticas de mayor riesgo, un programa nacional de formación de trabajadores ocupacionalmente expuestos, gestión segura de desechos radiactivos y capacidades de respuesta a emergencias radiológicas.",
+      "Desarrollar una intensa campaña de difusión de las aplicaciones tecnológicas nucleares en las regiones (ambiente, hidrología, energía, alimentación y nutrición) y mejorar la entrega de información objetiva al público sobre la energía nuclear.",
+      "Realizar una reingeniería que permita implementar adecuadamente el proyecto de energía y tecnología nuclear propuesto."
+    ],
+    "recomendacion": "Orientar la tecnología nuclear a la solución de problemas nacionales, concentrando el esfuerzo en los cinco sectores prioritarios identificados (seguridad alimentaria, salud humana, medio ambiente, energía e industria, y seguridad radiológica), sustentándolo en capital humano meritocrático y en el trabajo articulado con los gobiernos regionales, universidades y el sector privado, para coadyuvar al desarrollo sostenible del país con un uso seguro y competitivo de la ciencia y tecnología nuclear con visión al 2040.",
+    "cien_dias": [],
+    "eje": "Economía del Conocimiento"
+  },
+  {
+    "id": "infraestructura-y-construccion",
+    "nombre": "Infraestructura y Construcción",
+    "resumen": "Documento de la Comisión Temática de Infraestructura del Plan Perú 2040 (CNPP / Colegio de Ingenieros del Perú), construido sobre el estudio \"La Brecha de Inversión en Infraestructura en el Perú (2008)\" del Instituto Peruano de Economía (IPE). Cuantifica una brecha total de infraestructura al 2008 de US$ 37,760 millones (~30% del PBI), desagregada por transportes (37%), electricidad y gas (31.9%), saneamiento (16.7%) y telecomunicaciones (14.4%). Documenta el rezago del Perú en redes viales (solo 14% asfaltadas), ferrocarriles (2,021 km, uno de los menores de la región), puertos (un único gran puerto, Callao) y aeropuertos, y fija objetivos cuantitativos al 2020, 2030 y 2040 para red vial, carreteras asfaltadas y red ferroviaria. La estrategia central es cerrar la brecha alcanzando niveles competitivos regionales (referencia Chile), apoyándose intensivamente en asociaciones público-privadas (modelo Irlanda, Reino Unido, Australia, China y Chile).",
+    "vision": "En el año 2040, lograr una infraestructura de tal calidad que sea motor para atraer otras inversiones al Perú y el mejor estímulo a su desarrollo, que integre eficazmente a la población, promueva su desarrollo económico de forma sostenible, eleve la calidad de vida de las personas y contribuya a que el Perú sea el país más competitivo de América Latina.",
+    "diagnostico": [
+      "Brecha total de infraestructura al 2008 estimada en US$ 37,760 millones, equivalente a aproximadamente 30% del PBI (frente a US$ 22,879 millones en 2005).",
+      "El sector transportes concentra el mayor componente de la brecha con 37% del total (US$ 13,961 millones), por atraso en entrega de proyectos de PROINVERSIÓN e insuficiente inversión pública.",
+      "Electricidad y gas natural representan 31.9% de la brecha por demanda de energía mayor a la esperada que presiona la oferta.",
+      "Saneamiento representa 16.7% de la brecha y telecomunicaciones 14.4% (la menor).",
+      "Red vial peruana de 79 mil km, rezagada frente a países menos extensos como Colombia, Venezuela y Chile; solo 14% de vías asfaltadas (~11 mil km), uno de los porcentajes más bajos de la región.",
+      "Composición de la red vial 2006: asfaltado 14%, afirmado 23%, sin afirmar 18%, trocha 45%.",
+      "Densidad vial baja (Perú supera solo a Bolivia) y red vial per cápita de 414 km asfaltados por millón de habitantes, de las más bajas de la región.",
+      "Solo 34% de la Red Vial Nacional asfaltada en buen estado al 2006; prácticamente 100% de la red en trocha en mal estado; solo 34% de la red recibe algún tipo de conservación y 12.5% mantenimiento permanente.",
+      "Calidad de infraestructura de carreteras del Perú en 1.9 sobre 7 (la más baja del grupo evaluado, WEF 2008-2009).",
+      "Puertos: el Perú cuenta con un único gran puerto (Callao), generando cuellos de botella; índice de calidad portuaria de 2.3 sobre 7, puesto 127 de la muestra, casi a la cola, frente a Chile (4.9, puesto 37) con varios puertos.",
+      "Callao movilizó 1.02 millón de TEU en 2007 (tercer lugar en Sudamérica tras Santos 2.5 y Buenos Aires 1.7).",
+      "Aeropuertos: infraestructura aeroportuaria del Perú en puesto 94 de 134 países (3.9 sobre 7), afectada por sucesivas postergaciones de concesiones; Chile lidera la región con 5.9 sobre 7.",
+      "Ferrocarriles: uno de los menores desarrollos de la región con 2,021 km (1,927 km al 2008), frente a Argentina (31,902), Brasil (29,295) y Chile (6,585); densidad ferroviaria de 1.57/1.6 km por mil km2, seis veces menor a la chilena; calidad ferroviaria de 1.72 sobre 7, puesto 90 de 100 países.",
+      "Debilidades institucionales: infraestructura insuficiente para el desarrollo, redes de telecomunicaciones que no conectan todo el país, débil sistema de planificación y débil capacidad de gestión regional.",
+      "Pérdida de US$ 718 millones invertidos en rehabilitación de 1,357 km de carreteras (1992-2005) por falta de política coherente de mantenimiento vial; pérdida evitable con US$ 98 millones de inversión en mantenimiento."
+    ],
+    "pilares": [
+      {
+        "nombre": "Sistema de planificación multimodal de la infraestructura de transporte",
+        "descripcion": "Diseñar e implementar un sistema de planificación multimodal de la infraestructura de transporte para optimizar los costos logísticos del país."
+      },
+      {
+        "nombre": "Ejecución de redes integradoras (viales, ferroviarias, hidrovías, puertos y aeropuertos)",
+        "descripcion": "Ejecutar las obras que permitan contar con redes viales, ferroviarias, hidrovías, puertos y aeropuertos que integren a las poblaciones y contribuyan a la competitividad."
+      },
+      {
+        "nombre": "Mantenimiento y modernización permanente",
+        "descripcion": "Contar con un sistema de mantenimiento y de modernización permanente de la infraestructura, superando la falta de política coherente de conservación vial."
+      },
+      {
+        "nombre": "Reforma normativa e institucionalidad",
+        "descripcion": "Reformar la normatividad para contar con la institucionalidad que requiere el desarrollo y la gestión de la infraestructura, definiendo la asignación de competencias."
+      },
+      {
+        "nombre": "Hub de puertos y aeropuertos del Pacífico Sur",
+        "descripcion": "Apoyar la creación de un hub de puertos y aeropuertos del Pacífico Sur: dos puertos hub en el Pacífico y un aeropuerto hub."
+      },
+      {
+        "nombre": "Zonas de actividades logísticas y ordenamiento territorial",
+        "descripcion": "Contribuir a la creación de cuatro zonas de actividad logística (Norte, Centro, Sur y Oriente) y crear las condiciones para generar un ordenamiento territorial."
+      },
+      {
+        "nombre": "Asociaciones público-privadas para financiamiento de infraestructura",
+        "descripcion": "Acelerar el proceso de participación de la inversión privada e incrementar el presupuesto de inversión pública, siguiendo la experiencia internacional de APP (Irlanda, Reino Unido, Australia, China y Chile)."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Brecha total de inversión en infraestructura",
+        "actual": 37760,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "IPE - La Brecha de Inversión en Infraestructura en el Perú (2008)",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Brecha de inversión en transportes",
+        "actual": 13961,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "IPE (2008)",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Brecha de inversión en saneamiento",
+        "actual": 6306,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "IPE (2008)",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Brecha de inversión en electricidad",
+        "actual": 8326,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "IPE (2008)",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Brecha de inversión en gas natural",
+        "actual": 3721,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "IPE (2008)",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Brecha de inversión en telecomunicaciones",
+        "actual": 5446,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "IPE (2008)",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Red vial total",
+        "actual": 78687,
+        "meta": 160000,
+        "unidad": "km",
+        "fuente": "Plan Perú 2040 - Objetivos Infraestructura al 2040 (base IPE/Instituto Cuánto 2008)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Carreteras asfaltadas",
+        "actual": 11016,
+        "meta": 70000,
+        "unidad": "km",
+        "fuente": "Plan Perú 2040 - Objetivos Infraestructura al 2040",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Densidad de carreteras asfaltadas",
+        "actual": 9,
+        "meta": 54,
+        "unidad": "km asfaltados por mil km2 de territorio",
+        "fuente": "Plan Perú 2040 - Objetivos Infraestructura al 2040",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Red ferroviaria",
+        "actual": 2021,
+        "meta": 8000,
+        "unidad": "km",
+        "fuente": "Plan Perú 2040 - Objetivos Infraestructura al 2040",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Densidad ferroviaria",
+        "actual": 1.6,
+        "meta": 5.9,
+        "unidad": "km de vía férrea por mil km2",
+        "fuente": "Plan Perú 2040 - Objetivos Infraestructura al 2040",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Porcentaje de vías asfaltadas respecto del total",
+        "actual": 14,
+        "meta": null,
+        "unidad": "porcentaje de la red vial",
+        "fuente": "CIA, MTC, Ministerio de Transportes de Brasil",
+        "anioMeta": 2008
+      },
+      {
+        "nombre": "Red vial per cápita (km asfaltados)",
+        "actual": 414,
+        "meta": null,
+        "unidad": "km asfaltados por millón de habitantes",
+        "fuente": "CIA, MTC (Perú 2006)",
+        "anioMeta": 2006
+      },
+      {
+        "nombre": "Índice de calidad de infraestructura de carreteras",
+        "actual": 1.9,
+        "meta": null,
+        "unidad": "puntaje sobre 7 (WEF)",
+        "fuente": "World Economic Forum, Executive Opinion Survey 2008-2009",
+        "anioMeta": 2009
+      },
+      {
+        "nombre": "Índice de calidad de infraestructura portuaria",
+        "actual": 2.3,
+        "meta": null,
+        "unidad": "puntaje sobre 7 (WEF)",
+        "fuente": "Global Competitiveness Report 2008-2009",
+        "anioMeta": 2009
+      },
+      {
+        "nombre": "Índice de calidad de infraestructura aeroportuaria",
+        "actual": 3.9,
+        "meta": null,
+        "unidad": "puntaje sobre 7 (WEF)",
+        "fuente": "Global Competitiveness Report 2008-2009",
+        "anioMeta": 2009
+      },
+      {
+        "nombre": "Índice de calidad de infraestructura ferroviaria",
+        "actual": 1.72,
+        "meta": null,
+        "unidad": "puntaje sobre 7 (WEF)",
+        "fuente": "Global Competitiveness Report 2008-2009",
+        "anioMeta": 2009
+      },
+      {
+        "nombre": "Tráfico de contenedores del puerto del Callao",
+        "actual": 1.02,
+        "meta": null,
+        "unidad": "millones de TEU",
+        "fuente": "CEPAL / Cargo System",
+        "anioMeta": 2007
+      },
+      {
+        "nombre": "Cobertura de mantenimiento permanente de la red vial",
+        "actual": 12.5,
+        "meta": null,
+        "unidad": "porcentaje de la red",
+        "fuente": "Instituto Cuánto (2008)",
+        "anioMeta": 2008
+      }
+    ],
+    "metas": [
+      "País con Sistema de Planificación de Infraestructura que optimiza los costos logísticos.",
+      "Infraestructura vial que integra al país y contribuye a la competitividad y al desarrollo descentralizado.",
+      "Institucionalidad implantada para el desarrollo y la gestión de la infraestructura.",
+      "Dos puertos hubs en el Pacífico y un aeropuerto hub.",
+      "Cuatro zonas de actividad logística: Norte, Centro, Sur y Oriente del país.",
+      "Red vial total: pasar de 78,687 km (2008) a 106,000 km (2020), 133,000 km (2030) y 160,000 km (2040), a un promedio de 2,754 km/año.",
+      "Carreteras asfaltadas: pasar de 11,016 km (2008) a 29,600 km (2020), 50,000 km (2030) y 70,000 km (2040), a un promedio de 2,000 km/año.",
+      "Red ferroviaria: pasar de 2,021 km (2008) a 4,000 km (2020), 6,000 km (2030) y 8,000 km (2040), a un promedio de 200 km/año.",
+      "Alcanzar la densidad de carreteras asfaltadas promedio de Brasil, Chile y Ecuador (23 km/km2): el Perú debería tener cerca de 29,600 km asfaltados.",
+      "Duplicar la red ferroviaria para alcanzar la densidad de Brasil, Ecuador, Bolivia y Colombia."
+    ],
+    "acciones": [
+      "Implementar el Sistema de Planificación de la Infraestructura.",
+      "Definir la asignación de las competencias sobre la infraestructura.",
+      "Incrementar el presupuesto de inversión pública en infraestructura.",
+      "Acelerar el proceso de participación de la inversión privada e institucionalizar la gestión de la infraestructura.",
+      "Mejorar el sistema de reclutamiento, selección y capacitación de personal para la gestión de infraestructura.",
+      "Perfeccionar el marco normativo para facilitar la gestión de la infraestructura.",
+      "Aprobar la legislación que promueva la creación de centros logísticos.",
+      "Construir aproximadamente 2,754 km de caminos por año para alcanzar la densidad actual de Chile.",
+      "Asfaltar alrededor de 2,000 km por año para equiparar la densidad de Brasil, Chile y Ecuador.",
+      "Construir 200 km de vía férrea por año para duplicar la red ferroviaria en 10 años.",
+      "Crear un hub de puertos y aeropuertos del Pacífico Sur y zonas de actividades logísticas."
+    ],
+    "recomendacion": "Cerrar la brecha de infraestructura (US$ 37,760 millones al 2008) elevándola a niveles competitivos en la región mediante un sistema de planificación multimodal, reforma normativa que dé institucionalidad y, sobre todo, el uso intensivo de asociaciones público-privadas para movilizar el financiamiento privado (siguiendo el éxito de Chile, Irlanda, Reino Unido, Australia y China), de modo que el Perú alcance al menos el nivel de infraestructura de Chile, lo que incrementaría el crecimiento del PBI peruano en 2.2% anual.",
+    "cien_dias": [],
+    "eje": "Infraestructura y Conectividad"
+  },
+  {
+    "id": "reforma-del-estado",
+    "nombre": "Reforma del Estado",
+    "resumen": "Propuesta de la Comisión Temática \"Reforma del Estado\" del Plan Perú 2040/2050 (CNPP / Colegio de Ingenieros del Perú). Parte de un diagnóstico de grave debilidad del aparato público en sus tres niveles de gobierno, baja recaudación tributaria (14% del PBI, casi la mitad de varios países latinoamericanos) sustentada en impuestos indirectos regresivos, ausencia de planificación de largo plazo, instituciones anacrónicas, desprestigio del Congreso y de los partidos políticos, y una administración de justicia errática y permeable a la corrupción. Define una visión de Estado promotor del desarrollo, seis objetivos estratégicos y un Proyecto de Reforma del Estado con 16 proyectos que cubren el Congreso, el sistema electoral, la estructura del Estado, el gobierno nacional, los gobiernos regionales y locales, el sistema de control, la administración de justicia, la cultura ciudadana y las organizaciones políticas.",
+    "vision": "Un Estado que promueva el desarrollo económico y social, la competitividad y la sostenibilidad del país, con gobernantes y funcionarios respetados por su capacidad y accionar transparente y eficiente, cuya gestión está orientada al servicio de la población, al logro del bienestar y al mejoramiento de la calidad de vida de las personas. Enmarcado en la Visión Plan 2040: en el año 2040 el Perú será una sociedad humanista, educada en la economía de la creatividad, aprovechando su biodiversidad como eje económico, innovando a través de la ciencia y la tecnología, líder en oferta exportable de productos con valor agregado, con alta calidad de vida y ambiente sostenible.",
+    "diagnostico": [
+      "Enorme y grave debilidad del aparato público; la planificación a largo plazo está ausente.",
+      "El gobierno nacional, los gobiernos regionales y los gobiernos locales muestran precarias capacidades para desempeñar eficientemente sus funciones.",
+      "La mayoría de instituciones del Estado son anacrónicas; solo hay pocas islas de modernidad y eficiencia perdidas en un mar de mediocridad.",
+      "La recaudación tributaria es del 14% del PBI, prácticamente la mitad de los niveles de varios países latinoamericanos (Brasil 36%, Argentina 29.7%, Uruguay 24%, Chile 21%).",
+      "El grueso de la recaudación proviene de impuestos indirectos (IGV/IVA), técnicamente regresivos, y no de impuestos directos como debiera ser.",
+      "Persisten la informalidad, la evasión y la elusión tributaria sin visos de resolución.",
+      "Distorsiones y vicios administrativos acumulados que exigen racionalización y reestructuración de la administración pública.",
+      "Procedimientos para formular el Presupuesto de la República que parecen diseñados para ofuscar y confundir a la ciudadanía; mecanismos de control y evaluación de su ejecución desactualizados.",
+      "El Poder Ejecutivo no está a la altura de los desafíos: lucha contra el narcotráfico, seguridad ciudadana, calidad de la salud y salubridad, educación y combate contra la desigualdad y la pobreza.",
+      "Desproporción entre las innumerables funciones del gobierno y sus precarias capacidades, lo que dificulta alcanzar el desarrollo sostenido.",
+      "El Congreso no muestra capacidad suficiente para conducir el desarrollo del país; se pierde en asuntos anecdóticos y banales; la ciudadanía no se siente representada.",
+      "Crónico y sostenido desprestigio del Congreso y de la clase política; los partidos políticos funcionan solo en periodos electorales, con total falta de seriedad y compromiso.",
+      "La administración de justicia es errática y fuente para que la corrupción permanezca, se torne imbatible y sirva como paradigma."
+    ],
+    "pilares": [
+      {
+        "nombre": "Una visión de país",
+        "descripcion": "Contar con una visión de país compartida como base de la gran transformación del Estado."
+      },
+      {
+        "nombre": "Gobierno democrático institucionalizado",
+        "descripcion": "Gobierno democrático institucionalizado en plena armonía con el Estado de derecho."
+      },
+      {
+        "nombre": "Crecimiento mínimo anual del 6% del PBI",
+        "descripcion": "Sostener un crecimiento mínimo anual del 6% del PBI como base del desarrollo."
+      },
+      {
+        "nombre": "Presión tributaria progresiva hasta el 30% del PBI",
+        "descripcion": "Lograr una presión tributaria progresiva hasta alcanzar el 30% del PBI."
+      },
+      {
+        "nombre": "Organizaciones políticas sólidas",
+        "descripcion": "Organizaciones políticas sólidas reconocidas por la sociedad."
+      },
+      {
+        "nombre": "Liderazgo transformador",
+        "descripcion": "Liderazgo transformador de actores políticos y de funcionarios de carrera."
+      },
+      {
+        "nombre": "Cultura de planeamiento",
+        "descripcion": "Instalar una cultura de planeamiento en el Estado."
+      },
+      {
+        "nombre": "Educación cívica de la población",
+        "descripcion": "Educación cívica de la población en principios y valores."
+      },
+      {
+        "nombre": "Administración de justicia ágil y eficaz",
+        "descripcion": "Contar con una administración de justicia ágil y eficaz."
+      },
+      {
+        "nombre": "Sistema de Control eficiente",
+        "descripcion": "Sistema de Control eficiente, sin injerencia de lo político partidario."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Presión tributaria (recaudación)",
+        "actual": 14,
+        "meta": 30,
+        "unidad": "% del PBI",
+        "fuente": "Diagnóstico Comisión Reforma del Estado; base de desarrollo (presión tributaria progresiva hasta 30% del PBI)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Crecimiento anual del PBI",
+        "actual": null,
+        "meta": 6,
+        "unidad": "% anual (mínimo)",
+        "fuente": "Base de desarrollo, Comisión Reforma del Estado",
+        "anioMeta": 2040
+      }
+    ],
+    "metas": [
+      "Estado promotor del desarrollo económico y social sostenible, con gestión orientada al servicio de la población.",
+      "Gestión con visión de futuro y de largo plazo.",
+      "Contar con funcionarios probos y competentes; poner en vigencia la carrera pública basada en meritocracia y evaluación por resultados.",
+      "Gobierno nacional eficiente y transparente, con institucionalidad consolidada, organización estructurada, planeamiento de largo plazo sectorial y territorial, presupuesto por resultados y reducción de la corrupción.",
+      "Congreso de la República respetado y reconocido por la calidad de sus integrantes, eficaz y fiscalizador.",
+      "Sistema de administración de justicia oportuno, eficaz y eficiente, predecible, con seguridad jurídica y equidad.",
+      "Gobiernos regionales y locales eficientes y transparentes, acreditados, con gestión orientada al servicio de la población.",
+      "País con bajo nivel de pobreza y reducido número de conflictos sociales.",
+      "Reducción drástica de la corrupción en todos los niveles y estamentos del sector público y privado.",
+      "Sistema de Control efectivo, profesionalizado y sin injerencia política partidaria.",
+      "Tres niveles de gobierno consolidados (nacional, regional y local) con competencias claramente delimitadas y articuladas.",
+      "Participación ciudadana efectiva en el quehacer público y educación cívica de la población en principios y valores."
+    ],
+    "acciones": [
+      "Reformar el Congreso de la República.",
+      "Modernizar el Sistema Electoral.",
+      "Rediseñar la estructura del Estado con enfoque sistémico y tres niveles de gobierno consolidados.",
+      "Reformar el gobierno nacional (Poder Ejecutivo).",
+      "Reformar los gobiernos regionales.",
+      "Reformar los gobiernos locales.",
+      "Reformar el Sistema de Control.",
+      "Reformar la Administración de Justicia.",
+      "Fortalecer la cultura ciudadana y la participación.",
+      "Fortalecer las organizaciones políticas.",
+      "Proyecto 1: Creación del ente encargado de la Reforma del Estado, organismo dependiente de la Presidencia de la República con autoridad para implementarla.",
+      "Proyecto 2: Modernización del Sistema Electoral, elevando el nivel de los candidatos, implantando voto facultativo y eliminando el voto preferencial.",
+      "Proyecto 3: Fortalecimiento de organizaciones políticas y sociales (número racional de partidos fortalecidos, con dirigentes probos y financiamiento transparente).",
+      "Proyecto 4: Fortalecimiento de la cultura y la participación ciudadana.",
+      "Proyecto 5: Erradicación sistemática de la corrupción mediante normas y órganos especializados para sanciones administrativas y penales.",
+      "Proyecto 6: Estructura de gobierno y asignación de competencias.",
+      "Proyecto 7: Reforma de la administración del capital humano en el sector público (carrera pública, meritocracia, escala remunerativa acorde a responsabilidades, evaluación por resultados).",
+      "Proyecto 8: Perfeccionar el Sistema de Planificación con cultura de planeamiento de largo plazo.",
+      "Proyecto 9: Reforma del Sistema de Administración de Justicia (un solo responsable del sistema; sistemas alternativos de justicia; reforma del sistema penitenciario).",
+      "Proyecto 10: Reforma del sistema para el orden interno y la seguridad ciudadana (modernizar la Policía Nacional, delimitar competencias con gobiernos locales, participación de la sociedad civil).",
+      "Proyecto 11: Fortalecimiento del Congreso de la República (implementar la bicameralidad; presupuesto y evaluación de conductas opinados por ente independiente; renovación parcial a la mitad del periodo presidencial).",
+      "Proyecto 12: Reforma del Sistema de Control (enfoque preventivo y evaluación por resultados; registro de precios referenciales; reestructurar la Contraloría; Tribunal Administrativo).",
+      "Proyecto 13: Reforma del Poder Ejecutivo (redefinir ministerios, organismos públicos autónomos y especializados y empresas públicas; función normativa a cargo del viceministro; simplificación de trámites).",
+      "Proyecto 14: Estructura organizacional de los gobiernos regionales.",
+      "Proyecto 15: Estructura organizacional de los gobiernos locales (mejorar recaudación de tributos y procesos de abastecimiento).",
+      "Proyecto 16: Modernizar los diversos sistemas administrativos y operativos (perfeccionar el sistema presupuestal, las adquisiciones y contrataciones; optimizar la recaudación de tributos: pocos impuestos, simples, con bajas tasas, neutrales y sin exoneraciones; recaudación progresiva de la renta; reducir impuestos indirectos; reorganizar y moralizar la Aduana)."
+    ],
+    "recomendacion": "Crear un ente rector de la Reforma del Estado: un organismo autónomo, técnico y con estabilidad en el tiempo que dependa de la Presidencia de la República y tenga autoridad para liderar e implementar la reforma, proponiendo las modificaciones que requieren el Poder Ejecutivo, el Congreso de la República, los gobiernos regionales y locales, el Sistema de Administración de Justicia, el Sistema de Control y el Sistema Electoral. El capital humano es el factor clave de éxito: con carácter urgente se debe priorizar su competencia y probidad mediante la carrera pública basada en meritocracia y evaluación por resultados.",
+    "cien_dias": [],
+    "eje": "Competitividad"
+  },
+  {
+    "id": "mineria",
+    "nombre": "Minería",
+    "resumen": "Documento de la Comisión Temática \"Minería\" del Plan Perú 2040 (CNPP / Colegio de Ingenieros del Perú). Parte de la proverbial riqueza minera del Perú y de su rol como sector que más aporta vía impuestos al crecimiento económico. Reconoce una \"atmósfera antiminera\" sin sustento, frente a una actividad formal normada por estrictos estándares internacionales. Propone una visión al 2040 de minería en armonía con la sociedad, orientada a la conservación del medio ambiente, la innovación tecnológica y el valor agregado, mediante el entendimiento Estado-Empresa-Comunidad, generación de clústeres y desarrollo de infraestructura. Incluye una cartera de proyectos por US$41,500 millones (70% cobre, 13% oro, según MEM) y 13 proyectos estratégicos con indicadores de proceso e impacto, pero sin metas cuantitativas con valores objetivo.",
+    "vision": "En el año 2040 la minería peruana logrará un gran posicionamiento en el mundo, en armonía con la sociedad, usando procesos orientados a la conservación (y recuperación) del medio ambiente, con productos resultantes de la aplicación de nuevos conocimientos, preparándose a las nuevas exigencias de la humanidad para convertir al Perú en un país creativo e innovador. El Perú será una sociedad con responsabilidad social, educada en la economía de la creatividad, que aprovecha su biodiversidad como eje económico y marca Perú, líder en oferta exportable de productos con valor agregado, con alta calidad de vida y ambiente sostenible.",
+    "diagnostico": [
+      "Mala distribución de la riqueza minera",
+      "Pocas o inexistentes consultas populares en nuevos proyectos",
+      "No existen convenios de proyectos a largo plazo",
+      "No hay leyes que regulen eficientemente el cuidado del medio ambiente",
+      "Conflictos sociales ante nuevos proyectos",
+      "El Estado no tiene capacidad negociadora demostrada",
+      "Existencia de una 'atmósfera antiminera' sin sustento real, sumamente negativa para el país",
+      "Deterioro del ambiente vinculado al círculo vicioso de la pobreza: presión de los pobres sobre los recursos naturales",
+      "Se ha dejado de realizar la evaluación de los recursos naturales, indispensable para su aprovechamiento sostenido",
+      "Riesgo de caída de los sitiales de privilegio (producción de plata, cobre, oro) si los conflictos sociales siguen incrementándose",
+      "Minería informal e ilegal que afecta la calidad ambiental",
+      "Crecimiento urbano acelerado y desorganizado por migración (cerca del 70% de la población vive en ciudades)"
+    ],
+    "pilares": [
+      {
+        "nombre": "Respeto de estándares internacionales",
+        "descripcion": "Respeto de los estándares internacionales de producción minera para salvaguardar la vida, la salud y el ambiente."
+      },
+      {
+        "nombre": "Cumplimiento de compromisos y roles",
+        "descripcion": "Cumplimiento efectivo de los compromisos y roles asumidos por los actores del sector."
+      },
+      {
+        "nombre": "Emprendimiento social",
+        "descripcion": "Promoción del emprendimiento social como base del desarrollo minero."
+      },
+      {
+        "nombre": "Cambio de mentalidad",
+        "descripcion": "Cambio de mentalidad respecto a la actividad minera y su relación con el entorno."
+      },
+      {
+        "nombre": "Entendimiento Estado-Empresa-Comunidad",
+        "descripcion": "Entendimiento y entendimiento tripartito entre Estado, empresa y comunidad para evitar conflictos."
+      },
+      {
+        "nombre": "Redistribución de la riqueza",
+        "descripcion": "Redistribución de la riqueza con empresas colaterales al sector (turismo, agroexportación, piscicultura, etc.)."
+      },
+      {
+        "nombre": "Respeto social con valores compartidos",
+        "descripcion": "Respeto social sustentado en valores compartidos entre los actores."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Recaudación tributaria (ampliación de base tributaria, según Acuerdo Nacional)",
+        "actual": null,
+        "meta": 18,
+        "unidad": "% del PBI",
+        "fuente": "Acuerdo Nacional, Tercer Objetivo (citado en el documento)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Cartera de proyectos mineros a ejecutar en los próximos 10 años",
+        "actual": 41500,
+        "meta": null,
+        "unidad": "millones de US$",
+        "fuente": "Ministerio de Energía y Minas (MEM), citado en el documento",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del Perú en la producción mundial de plata",
+        "actual": 16.48,
+        "meta": null,
+        "unidad": "% (primer lugar mundial)",
+        "fuente": "Diagnóstico del documento (Plan Perú 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del Perú en la producción mundial de zinc",
+        "actual": 12.15,
+        "meta": null,
+        "unidad": "% (tercer lugar mundial)",
+        "fuente": "Diagnóstico del documento (Plan Perú 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del Perú en la producción mundial de cobre",
+        "actual": 6.86,
+        "meta": null,
+        "unidad": "% (tercer lugar mundial)",
+        "fuente": "Diagnóstico del documento (Plan Perú 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del Perú en la producción mundial de plomo",
+        "actual": 9.52,
+        "meta": null,
+        "unidad": "% (cuarto lugar mundial)",
+        "fuente": "Diagnóstico del documento (Plan Perú 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del Perú en la producción mundial de oro",
+        "actual": 8.01,
+        "meta": null,
+        "unidad": "% (quinto lugar mundial)",
+        "fuente": "Diagnóstico del documento (Plan Perú 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Producción de oro proyectada en Minas Conga (primeros cinco años)",
+        "actual": null,
+        "meta": 700000,
+        "unidad": "oz/año (rango 650,000-750,000 oz/a)",
+        "fuente": "Documento, cartera de proyectos (Newmont Mining)",
+        "anioMeta": 2015
+      }
+    ],
+    "metas": [
+      "Implementar el cambio de imagen del Perú como país eco-biodiverso",
+      "Desarrollar políticas para el mantenimiento y exploración de mercados",
+      "Asegurar las condiciones logísticas de las compañías mineras",
+      "Lograr el desarrollo sostenible de las áreas de influencia de las compañías mineras",
+      "Establecer nuevas políticas del Estado y de empresas mineras",
+      "Desarrollar mano de obra técnica especializada para el sector minero",
+      "Desarrollar iniciativas de emprendimiento e innovación en sectores que apoyen al sostenimiento minero",
+      "Desarrollar políticas de manejo ambiental y social que permitan la armonía con el ecosistema",
+      "Reducción de conflictos sociales",
+      "Buena imagen como país e incremento de la inversión",
+      "Mejores condiciones laborales en el mediano plazo",
+      "Desarrollo nacional y crecimiento del PBI",
+      "Ampliar la base tributaria hasta una recaudación no menor al 18% del PBI"
+    ],
+    "acciones": [
+      "Proyecto 1: Cambio de currícula educativa, incorporando la importancia de los recursos y la biodiversidad desde la infancia",
+      "Proyecto 2: Creación de normativas eficientes sobre beneficios y sanciones por cuidado del medio ambiente",
+      "Proyecto 3: Desarrollo de oficinas de mercadeo en cada consulado y embajada peruana",
+      "Proyecto 4: Desarrollo de oficinas del Estado para el apoyo de ventas a la mediana y pequeña empresa minera",
+      "Proyecto 5: Desarrollo de infraestructura vial",
+      "Proyecto 6: Desarrollo de infraestructura pluvial (puertos y embarcaciones fluviales)",
+      "Proyecto 7: Desarrollo de infraestructura ferroviaria",
+      "Proyecto 8: Convenio con comunidades de influencia para la educación privilegiada de hijos con trabajo en la empresa",
+      "Proyecto 9: Desarrollo de políticas orientadas a la generación de clústeres mineros",
+      "Proyecto 10: Desarrollar proyectos orientados a capacitar y explotar recursos agrícolas, hídricos, ganaderos, etc.",
+      "Proyecto 11: Desarrollar y apoyar empresas con innovación en los procesos de extracción y procesamiento de minerales",
+      "Proyecto 12: Desarrollar nuevas empresas que elaboren prendas textiles con utilización de minerales (ej. cobre)",
+      "Proyecto 13: Desarrollar comunidades de trabajadores con facilidades de vivienda, salud y educación como centro inicial de mano de obra",
+      "Elaboración de planes integrales Estado-Empresa-Comunidad",
+      "Alianzas estratégicas: clústeres, empresas mineras y universidades",
+      "Implementación de infraestructura mínima para el desarrollo",
+      "Aprovechamiento de recursos comunitarios",
+      "Mejora continua: innovación, competitividad y capacitación",
+      "Eslabonamiento empresarial-clústeres",
+      "Desarrollo de oficinas de mercadeo en cada embajada y consulado peruano",
+      "Desarrollo de infraestructura portuaria"
+    ],
+    "recomendacion": "Es urgente generar una nueva política que permita concertar -de manera racional, informada y democrática- al Estado con las poblaciones (comunidades, cooperativas) y con quienes llevan a cabo actividades mineras, para evitar cualquier tipo de conflicto. Ello debe acompañarse de inversión en investigación e innovación de los procesos tecnológicos mineros (con presencia del entorno empresarial), de la generación de clústeres donde convivan extracción, investigación y comunidad para formar mano de obra de mayor calidad, y de la investigación de productos con mayor valor agregado que abran nuevos mercados y aumenten la oferta exportable.",
+    "eje": "Competitividad",
+    "cien_dias": []
+  },
+  {
+    "id": "mipymes",
+    "nombre": "MYPE / MIPYMES",
+    "resumen": "Documento de la Comisión Temática MYPE/MIPYMES del Plan Perú 2040/2050 (CNPP / Colegio de Ingenieros del Perú). Parte de un diagnóstico donde el Perú tiene en promedio cuatro millones de micro y pequeñas empresas que generan el 40% del PBI y dan trabajo a diez millones de peruanos, pero el 65% son informales. Plantea una visión de MYPE asociadas, dinámicas, innovadoras y competitivas que producen bienes y servicios basados en el conocimiento técnico-científico, transitando de un enfoque \"manufacturero\" a uno \"mentefacturero\". Define 8 objetivos estratégicos, una matriz FODA, 15 acciones estratégicas priorizadas mediante matriz IGO, un mapa de procesos (país/usuario/interno/cultural), proyectos por objetivo, involucrados y riesgos. El factor clave de éxito es la formalización, la asociatividad, la transferencia tecnológica y la articulación MYPE-universidades-Estado.",
+    "vision": "MYPE asociadas, dinámicas, innovadoras y competitivas que producen bienes y servicios con base en el conocimiento técnico y científico, comprometidas con el medio ambiente, que satisfacen las exigencias del mercado global basado en una economía de creatividad. En el año 2040 el Perú será una sociedad humanista, educada en la economía de la creatividad, aprovechando su biodiversidad como eje económico, innovando a través de la ciencia y la tecnología con productos y servicios de alta calidad, líder en oferta exportable con valor agregado.",
+    "diagnostico": [
+      "El 65% de las MYPE son informales; solo el 35% son formales.",
+      "La distribución regional es muy desigual: más de la mitad de las MYPE formales se concentran en Lima y Callao; regiones como Ayacucho, Tumbes, Moquegua, Amazonas, Pasco, Apurímac, Madre de Dios y Huancavelica tienen menos del 1% de las microempresas formales.",
+      "Acceso restringido a fuentes de financiamiento, dependencia bancaria y asunción de mayores costos financieros; insuficiente información y asesoramiento.",
+      "Las MYPE desarrollan actividades en sectores de baja productividad y generan empleo de poca calidad y alta vulnerabilidad, llevando a sus trabajadores a la PEA subempleada.",
+      "Acceso reducido a la tecnología; escasa especialización del trabajo; no suelen usar técnicas de gestión; gestión contable, económica y financiera deficiente.",
+      "Dependencia de mano de obra familiar, recursos financieros limitados y acceso limitado al sector financiero formal; no separan finanzas del hogar y del negocio.",
+      "Escasa capacidad de I+D (investigación y desarrollo) y escasa capacidad innovadora.",
+      "Escaso conocimiento técnico-científico y mínimo conocimiento de plan de negocios y de negocios internacionales.",
+      "Carencia de marcas corporativas y escaso acceso a la información (Internet).",
+      "Capacitación tecnológica insuficiente y escasa presencia de tecnología en los procesos.",
+      "Alta informalidad que resta potencialidad a los emprendimientos; riesgo de convertirse en \"bolsones de pobreza\" (Fernando Villarán).",
+      "Falta de incentivos que favorezcan al sector (reducción de impuestos, becas) y para la investigación y desarrollo en el gobierno y el sector privado.",
+      "No se cuenta con un censo actualizado de las MYPE."
+    ],
+    "pilares": [
+      {
+        "nombre": "Asociatividad y articulación",
+        "descripcion": "Interrelacionar a los micro, pequeños y medianos empresarios entre sí y con las grandes empresas; fomentar alianzas entre MYPE, universidades, institutos tecnológicos, institutos de investigación y gremios; promover el desarrollo de clústeres en diferentes regiones del país."
+      },
+      {
+        "nombre": "Desarrollo y transferencia tecnológica",
+        "descripcion": "Desarrollar tecnologías en las empresas para incursionar en mercados tecnológicos (servicios y bienes) y aplicar nuevas tecnologías; crear y difundir programas de transferencia tecnológica y software práctico especializado y accesible para las MYPE."
+      },
+      {
+        "nombre": "Educación emprendedora e innovadora",
+        "descripcion": "Fomentar la educación tecnológica, innovadora y emprendedora desde la etapa inicial de la formación estudiantil; incorporar talleres de creatividad, innovación y emprendimiento en la currícula de la educación básica."
+      },
+      {
+        "nombre": "Creación de empresas de base tecnológica",
+        "descripcion": "Facilitar y promover la creación de PYME con base tecnológica y spin-off; crear incubadoras de empresa en universidades e institutos tecnológicos estatales."
+      },
+      {
+        "nombre": "Profesionalización del empresariado",
+        "descripcion": "Incentivar la incorporación de profesionales y la profesionalización de los empresarios mediante sensibilización, capacitación y mostrar casos de éxito empresarial."
+      },
+      {
+        "nombre": "Centros especializados de apoyo",
+        "descripcion": "Crear centros especializados de apoyo para las MYPE (CITEs, centros de vigilancia estratégica) y programas de apoyo desde las universidades e institutos."
+      },
+      {
+        "nombre": "Formalización",
+        "descripcion": "Aumentar la formalización de las MYPE disminuyendo los obstáculos burocráticos, promoviendo el interés de formalizarse y proponiendo programas de certificación internacional."
+      },
+      {
+        "nombre": "Calidad de servicios y producción",
+        "descripcion": "Aumentar la calidad de servicios y producción en las MYPE para hacerlas más competitivas y exitosas en el mercado global."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Número de micro y pequeñas empresas en el Perú",
+        "actual": 4000000,
+        "meta": null,
+        "unidad": "empresas",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (punto de partida)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Aporte de las MYPE al PBI",
+        "actual": 40,
+        "meta": null,
+        "unidad": "% del PBI",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (punto de partida)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Empleo generado por las MYPE",
+        "actual": 10000000,
+        "meta": null,
+        "unidad": "peruanos con trabajo",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (punto de partida)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Informalidad de las MYPE",
+        "actual": 65,
+        "meta": null,
+        "unidad": "% de MYPE informales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (punto de partida)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales",
+        "actual": 35,
+        "meta": null,
+        "unidad": "% de MYPE",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (punto de partida)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales ubicadas en el sector terciario",
+        "actual": 82,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (diagnóstico nacional)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales en el sector comercio",
+        "actual": 49.6,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales en servicios",
+        "actual": 33.3,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales en manufactura",
+        "actual": 11,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales en actividad agropecuaria",
+        "actual": 2.9,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales en construcción",
+        "actual": 2.5,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE formales en pesca, minería e hidrocarburos",
+        "actual": 0.7,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "MYPE con certificación de buenas prácticas / normas ISO",
+        "actual": 0.5,
+        "meta": null,
+        "unidad": "% de MYPE formales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Cuota mínima de compras del Estado reservada a las MYPE",
+        "actual": 40,
+        "meta": null,
+        "unidad": "% de las compras estatales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (Ley MYPE)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Tasa única de impuesto a la renta para microempresas en el RER",
+        "actual": 1.5,
+        "meta": null,
+        "unidad": "% de ingresos netos mensuales",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (beneficios tributarios)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Plazo de depreciación acelerada para pequeñas empresas",
+        "actual": 3,
+        "meta": null,
+        "unidad": "años",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (beneficios tributarios pequeñas empresas)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Trabajadores a formalizar (meta del DS de competitividad MYPE, 1 oct 2008)",
+        "actual": null,
+        "meta": 3000000,
+        "unidad": "trabajadores formalizados",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (DS Ministerio de la Producción, 2008)",
+        "anioMeta": 2013
+      },
+      {
+        "nombre": "Tiempo para constituir una empresa",
+        "actual": 72,
+        "meta": null,
+        "unidad": "horas",
+        "fuente": "Plan Perú 2040 - Comisión MYPE (Ley MYPE)",
+        "anioMeta": 2040
+      }
+    ],
+    "metas": [
+      "Mayor número de MYPE competitivas y exitosas que contribuyan al desarrollo del país (asegurar buen desarrollo y crecimiento de las MYPE).",
+      "Mayor número de proyectos e investigaciones presentados y aprobados que hayan solucionado los problemas de las MYPE; reducción de los problemas sociales, ambientales y tecnológicos de las MYPE.",
+      "Mayor porcentaje de MYPE con base tecnológica (facilitar la creación de PYME con base tecnológica y spin-off).",
+      "Aumentar la formalización de las MYPE (Objetivo Estratégico 7).",
+      "Aumentar la calidad de servicios y producción en las MYPE (Objetivo Estratégico 8).",
+      "Lograr MYPE asociadas, productoras y exportadoras de servicios, generadoras de empleo de calidad y mejorar la calidad de vida de la población."
+    ],
+    "acciones": [
+      "Fomentar y proponer programas para facilitar la asociatividad de MYPE con empresas nacionales e internacionales.",
+      "Promover el desarrollo de diversos clústeres en diferentes regiones del país.",
+      "Crear y difundir programas de transferencia tecnológica.",
+      "Fomentar las competencias nacionales e internacionales de productos y servicios innovadores.",
+      "Proponer políticas más adecuadas para crear un entorno cultural emprendedor, innovador y tecnológico desde la etapa inicial de la formación estudiantil.",
+      "Proponer la incorporación de talleres de creatividad, innovación y emprendimiento en la currícula de la educación básica.",
+      "Promover programas para la creación de empresas de base tecnológica.",
+      "Sensibilización de empresarios para su profesionalización y capacitación.",
+      "Crear y facilitar el acceso a los Programas de Formación en Planes de negocio para emprendedores visionarios.",
+      "Fomentar las alianzas entre las MYPE, universidades, institutos tecnológicos, institutos de investigación y entidades de consulta (articulador).",
+      "Crear y difundir programas para el desarrollo de softwares prácticos, especializados y accesibles para las MYPE.",
+      "Crear centros de Vigilancia Estratégica para la atención de los gremios de MYPE formalizadas y organismos afines.",
+      "Promover el interés de formalizarse en las MYPE.",
+      "Disminuir los obstáculos burocráticos para facilitar la formalización de las MYPE.",
+      "Proponer programas adecuados a las certificadoras para la certificación internacional de las MYPE.",
+      "Crear incubadoras de empresa en universidades e institutos tecnológicos estatales.",
+      "Crear incentivos tributarios a la reinversión en tecnología y capacitación."
+    ],
+    "recomendacion": "Realizar de inmediato las acciones estratégicas priorizadas mediante la matriz IGO para dar soporte y sentar las bases del proyecto, centrándose en crear programas de formación en planes de negocio para emprendedores visionarios y fomentar las alianzas entre MYPE, universidades e institutos tecnológicos y de investigación, articulando la asociatividad, la transferencia tecnológica y la formalización con apoyo de municipalidades y gobiernos regionales.",
+    "eje": "Competitividad",
+    "cien_dias": [
+      {
+        "accion": "Sensibilizar a las MYPE en la importancia de tener un plan de negocios.",
+        "tipo": "Programa / sensibilización"
+      },
+      {
+        "accion": "Crear programas de formación en planes de negocio desde las municipalidades y gobiernos regionales.",
+        "tipo": "Programa / formación"
+      },
+      {
+        "accion": "Crear programas y convenios de interacción dinámica entre universidades (egresados experimentados, estudiantes y profesores) y gremios empresariales, impulsados por los gobiernos regionales.",
+        "tipo": "Programa / convenio"
+      },
+      {
+        "accion": "Crear incubadoras de empresa en las universidades e institutos tecnológicos estatales.",
+        "tipo": "Infraestructura / incubadora"
+      },
+      {
+        "accion": "Crear programas de profesionalización para empresarios.",
+        "tipo": "Programa / capacitación"
+      }
+    ]
+  },
+  {
+    "id": "pesca",
+    "nombre": "Pesca",
+    "resumen": "Propuesta de la Comisión Temática \"Pesca\" del Plan Perú 2040 (CNPP / Colegio de Ingenieros del Perú). El Perú es el principal productor y exportador mundial de harina de pescado (30% del total), pero el sector arrastra problemas estructurales: sobrepesca, otorgamiento irregular de permisos, desaparición de recursos como la sardina, alta informalidad de la pesca artesanal, bajo consumo humano directo y débil institucionalidad. El documento plantea una visión de explotación racional y sostenible de los recursos hidrobiológicos, priorizando el consumo humano directo, el valor agregado, la diversificación hacia la acuicultura marina y la refundación de la institucionalidad pesquera (Ministerio de Pesquería, IMARPE, ITP, SANIPES, Instituto Nacional de Acuicultura).",
+    "vision": "En el año 2040 el Perú será una sociedad humanista, educada en la economía de la creatividad, aprovechando su biodiversidad convertida en su eje económico, innovando a través de la ciencia y la tecnología con productos y servicios de alta calidad; líder en la oferta exportable de productos con valor agregado, con alta calidad de vida y un ambiente sostenible, con el Perú como marca de la biodiversidad en el mundo. Para el 2040 el sector pesquero contribuirá al desarrollo del país explotando racionalmente los recursos pesqueros renovables, preservando el medio ambiente y potenciando el desarrollo económico y social de las regiones. Lema: \"Pesca para todos y por siempre\", priorizando el Consumo Humano Directo (CHD).",
+    "diagnostico": [
+      "El Perú es el principal exportador mundial de harina y aceite de pescado, pero persiste pesca ilegal, sobrepesca y evasión de vedas y cuotas pesqueras.",
+      "El sistema de cuotas requiere perfeccionamiento porque permite la concentración de oligopolios.",
+      "Se otorgaron de forma irregular e indiscriminada permisos de pesca y de construcción de lanchas cada vez mayores, generando exceso de pesca.",
+      "Desaparición de recursos valiosos como la sardina (asolada hace 8 o 10 años) y casi desaparición de la anchoveta en las décadas de los 70 y 80.",
+      "Bajo consumo per cápita de pescado en el país y trabas de ciertos países (principalmente europeos) para la exportación peruana.",
+      "La normativa permite el uso del pescado entero para fabricar harina y aceite, contra el principio del uso prioritario para consumo humano directo.",
+      "No existe política de Estado coherente para administración y acuerdos internacionales de pesquerías transzonales, ni para desarrollar mercados de productos con valor agregado.",
+      "La pesquería peruana es mono propósito y depende del mar; no existe política para una flota multipropósito orientada a otros recursos pese a la extraordinaria biodiversidad marina y amazónica.",
+      "Los pescadores artesanales carecen de adecuada seguridad y beneficios sociales; alto grado de informalidad, acceso limitado al crédito, escasa tecnología, falta de medios de preservación a bordo, altos sobrecostos y dependencia de intermediarios.",
+      "No existe sistema de bolsa de productos ni reglamentos de Ordenamiento Pesquero para casi la totalidad de los recursos objetivo.",
+      "La pesca artesanal sufre una política paternalista y sobreprotectora que limita su conversión en empresas y compite en desigualdad con la pesca industrial.",
+      "El ecosistema marino de Humboldt es el de mayor potencial mundial en recursos pelágicos, pero sin garantías de estabilidad por la actividad pesquera del hombre y el cambio climático.",
+      "Gestión pesquera fragmentada y sectorial: desestructuración entre instancias estatales, duplicidad de esfuerzos, bases de datos no compatibles, escasa participación ciudadana y vulnerabilidad a grupos de presión.",
+      "IMARPE e ITP, entidades fundamentales, padecen escasos recursos presupuestales y el sometimiento a la Ley de Contrataciones del Estado y de Procedimiento Administrativo.",
+      "La capacidad de esfuerzo pesquero del pescador peruano supera los límites de sustentabilidad.",
+      "Algunos recursos se entregan a industriales a tasas de derechos de pesca muy bajas o gratis; el país no recibe participación adecuada en términos de recaudación.",
+      "Desconocimiento del sector compartido por la prensa y la sociedad, lo que permite manipular información.",
+      "El sector no cuenta con instalaciones adecuadas para desembarques, mantenimiento de embarcaciones y tratamiento de pescado bajo estrictas condiciones de higiene.",
+      "Degradación del entorno marino por contaminación (basuras, desmonte, desagües, residuos metálicos, desechos químicos y sustancias radioactivas) que pone en peligro la acuicultura marina."
+    ],
+    "pilares": [
+      {
+        "nombre": "Desarrollo sustentable de la extracción y valor agregado",
+        "descripcion": "Desarrollar en forma sustentable la extracción de los recursos hidrobiológicos y aumentar el valor de los productos de extracción, tomando decisiones basadas en evidencia científica, con una estrategia de extracción viable económica y biológicamente, mejorando y haciendo cumplir el marco normativo, y desarrollando una imagen nacional de proveedor confiable con buenas prácticas sanitarias, laborales y ambientales."
+      },
+      {
+        "nombre": "Desarrollo tecnológico, diversificación y consumo",
+        "descripcion": "Promover el desarrollo tecnológico y la diversificación de la actividad pesquera y fomentar el consumo de recursos hidrobiológicos, mediante investigación de alto nivel aplicada al caso nacional, capacidad de proceso y transporte de alimentos marinos, diversificación hacia la acuicultura marina y simplificación de trámites para nuevos centros productivos."
+      },
+      {
+        "nombre": "Exportaciones y acceso a nuevos mercados",
+        "descripcion": "Incrementar las exportaciones de los productos pesqueros y el acceso a nuevos mercados, negociando mejor acceso en tratados y acuerdos de comercio (tarifas y barreras), certificando plantas y procesos, reforzando políticas de autocontrol, calidad y sanidad, y promoviendo el desarrollo de las MyPes del sector."
+      },
+      {
+        "nombre": "Ambiente marino saludable y biodiversidad",
+        "descripcion": "Lograr un ambiente marino limpio y saludable con productos sanos y seguros, preservando el medio ambiente y la biodiversidad, mediante la conservación de la naturaleza en equilibrio con otras actividades (acuicultura, pesca deportiva, turismo, transporte), un marco de administración que equilibre intereses económicos y la regulación de actividades adyacentes a la pesca."
+      }
+    ],
+    "indicadores": [
+      {
+        "nombre": "Participación del Perú en la producción mundial de harina de pescado",
+        "actual": 30,
+        "meta": null,
+        "unidad": "% del total mundial",
+        "fuente": "IFFO (Organización Internacional de Productores de Harina y Aceite de Pescado)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Desembarque de productos pesqueros (2010)",
+        "actual": 4217300,
+        "meta": null,
+        "unidad": "toneladas",
+        "fuente": "Plan Perú 2040 - Comisión Pesca (datos 2010)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Variación del desembarque pesquero 2010 respecto a 2009",
+        "actual": -39.2,
+        "meta": null,
+        "unidad": "% variación interanual",
+        "fuente": "Plan Perú 2040 - Comisión Pesca",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Participación del desembarque destinado a consumo humano indirecto (harina de pescado) en 2010",
+        "actual": 79,
+        "meta": null,
+        "unidad": "% del desembarque",
+        "fuente": "Plan Perú 2040 - Comisión Pesca",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Exportaciones de la industria pesquera peruana (2010)",
+        "actual": 2540.3,
+        "meta": null,
+        "unidad": "millones de dólares",
+        "fuente": "Plan Perú 2040 - Comisión Pesca",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Crecimiento de las exportaciones pesqueras 2010 respecto al año anterior",
+        "actual": 15.3,
+        "meta": null,
+        "unidad": "% variación interanual",
+        "fuente": "Plan Perú 2040 - Comisión Pesca",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Aporte del sector pesquero a las exportaciones nacionales (tercer sector, 2010)",
+        "actual": 7.24,
+        "meta": null,
+        "unidad": "% del total exportado",
+        "fuente": "Plan Perú 2040 - Comisión Pesca",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Superficie de mar del Perú respecto a su superficie total",
+        "actual": 41,
+        "meta": null,
+        "unidad": "% (927 536 Km2 de 2 238 566 Km2)",
+        "fuente": "Plan Perú 2040 - Comisión Pesca",
+        "anioMeta": 2040
+      }
+    ],
+    "metas": [
+      "Desarrollar en forma sustentable los recursos de extracción.",
+      "Aumentar el valor de los productos de extracción.",
+      "Promover el desarrollo tecnológico y la diversificación de la actividad pesquera.",
+      "Fomentar el consumo de recursos hidrobiológicos.",
+      "Incrementar las exportaciones de los productos pesqueros y el acceso a nuevos mercados.",
+      "Lograr un ambiente marino saludable con productos sanos y seguros, preservando el medio ambiente y la biodiversidad.",
+      "Priorizar el uso de los recursos para el consumo humano directo (CHD) y la reducción de residuos para la industria harinera.",
+      "Lograr que las actuales medidas de conservación (vedas biológicas, cuotas, tallas mínimas, características de los artes de pesca) se conviertan en prácticas de manejo.",
+      "Reformar la estructura tributaria del sector y revisar las tasas por concepto de derechos de pesca.",
+      "Establecer la sustentabilidad y la seguridad alimentarias como base del ordenamiento pesquero.",
+      "Establecer medidas precautorias frente al cambio climático y el calentamiento global con un plan estratégico."
+    ],
+    "acciones": [
+      "Implementar una política que armonice los lineamientos de explotación artesanal e industrial, favoreciendo la explotación hasta el límite permisible por especie con criterios ecosistémicos.",
+      "Definir una política con participación formal de los representantes de los diferentes sectores de la actividad pesquera, con reordenamiento de las normas vigentes.",
+      "Convertir las medidas de conservación (vedas, cuotas, tallas mínimas, artes de pesca) en prácticas de manejo.",
+      "Reformar la estructura tributaria del sector y revisar las tasas por derechos de pesca.",
+      "Establecer medidas precautorias frente al cambio climático con un plan estratégico.",
+      "Refundación del Ministerio de Pesquería como órgano especializado autónomo (Proyecto Nº 1).",
+      "Fortalecimiento del Instituto del Mar - IMARPE, repotenciando infraestructura y recursos humanos (Proyecto Nº 2).",
+      "Perfeccionar el sistema de cuotas de pesca (Proyecto Nº 3).",
+      "Repotenciar el Instituto Tecnológico Pesquero - ITP (Proyecto Nº 4).",
+      "Promover la implementación de una flota nacional de pesca de altura y multipropósito (Proyecto Nº 5).",
+      "Fomentar el desarrollo de la investigación de alto nivel aplicada al caso nacional, a través de CONCYTEC, universidades y otras instituciones (Proyecto Nº 6).",
+      "Fomentar el consumo de productos hidrobiológicos a nivel nacional priorizando el CHD (Proyecto Nº 7).",
+      "Promover la diversificación de la actividad pesquera hacia la acuicultura marina (Proyecto Nº 8).",
+      "Creación del Instituto Nacional de Acuicultura (Proyecto Nº 9).",
+      "Reforzamiento y separación de SANIPES del ITP (Proyecto Nº 10).",
+      "Negociación de un mejor acceso en los tratados y acuerdos de comercio y búsqueda de nuevos mercados (Proyecto Nº 11).",
+      "Promover el desarrollo de las MYPES del sector pesca, formalizando a los pescadores artesanales con seguridad, beneficios, crédito y tecnología (Proyecto Nº 12).",
+      "Fortalecer la autoridad de seguimiento, control y vigilancia del sector, creando la policía marítima (Proyecto Nº 13).",
+      "Promover la construcción de instalaciones adecuadas para desembarques, mantenimiento de embarcaciones y tratamiento del pescado (Proyecto Nº 14).",
+      "Proponer mayores penas y sanciones más severas para las empresas que contaminen el mar peruano (Proyecto Nº 15).",
+      "Proponer la participación activa del profesional pesquero en la gestión del sector (Proyecto Nº 16)."
+    ],
+    "recomendacion": "Refundar y fortalecer la institucionalidad del sector pesquero (Ministerio de Pesquería autónomo, IMARPE, ITP, SANIPES e Instituto Nacional de Acuicultura) y reorientar la política pesquera hacia la explotación racional y sostenible de los recursos renovables, priorizando el consumo humano directo, el valor agregado y la diversificación hacia la acuicultura marina, con el capital humano como factor primordial y la sustentabilidad y seguridad alimentarias como base del ordenamiento pesquero.",
+    "eje": "Sostenibilidad y Ambiente",
+    "cien_dias": [
+      {
+        "accion": "Refundar el Ministerio de Pesquería.",
+        "tipo": "Reforma institucional"
+      },
+      {
+        "accion": "Creación del Instituto Nacional de Acuicultura.",
+        "tipo": "Reforma institucional"
+      },
+      {
+        "accion": "Fortalecimiento del IMARPE.",
+        "tipo": "Reforma institucional"
+      },
+      {
+        "accion": "Fortalecer la Autoridad de Seguimiento, Control y Vigilancia del sector.",
+        "tipo": "Control y vigilancia"
+      },
+      {
+        "accion": "Separación y reforzamiento del ITP - SANIPES.",
+        "tipo": "Reforma institucional"
+      },
+      {
+        "accion": "Declarar el quinquenio de la acuicultura en el Perú.",
+        "tipo": "Declaratoria / política"
+      },
+      {
+        "accion": "Integrar el Instituto Antártico al Instituto del Mar del Perú.",
+        "tipo": "Reforma institucional"
+      },
+      {
+        "accion": "Promover la implementación de la flota nacional de pesca de altura.",
+        "tipo": "Infraestructura productiva"
+      },
+      {
+        "accion": "Dinamizar las acciones del sector en la ejecución de programas sociales orientados a incrementar el consumo de pescado.",
+        "tipo": "Programa social"
+      },
+      {
+        "accion": "Proponer la participación activa del profesional pesquero en la gestión del sector pesquero.",
+        "tipo": "Gobernanza / participación"
+      }
+    ]
   }
 ]

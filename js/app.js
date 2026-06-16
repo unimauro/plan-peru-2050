@@ -50,6 +50,7 @@ async function boot() {
     S.list = meta.comisiones.map((c) => ({ ...c, ...(S.detail[c.id] || {}) }));
     $("#pill-updated").textContent = "Actualizado " + (meta.actualizado || "");
     applyStage();
+    renderVideo();
     renderKPIs();
     renderChips();
     renderGrid();
@@ -78,6 +79,17 @@ function allIndicators() {
   return out;
 }
 
+function ytId(url) {
+  const m = String(url || "").match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : null;
+}
+function renderVideo() {
+  const box = document.getElementById("video"); if (!box) return;
+  const id = ytId(S.meta && S.meta.video);
+  if (!id) { box.innerHTML = ""; return; }
+  box.innerHTML = `<div class="videowrap"><div class="vt">▶ Presentación del Plan Perú 2050</div>
+    <div class="videobox"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="Presentación Plan Perú 2050" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
+}
 function renderKPIs() {
   const inds = allIndicators();
   const ejes = new Set(detailed().map((c) => c.eje).filter(Boolean));
