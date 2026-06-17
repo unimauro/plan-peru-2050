@@ -42,6 +42,11 @@ function setView(view) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function wireTabs() { document.querySelectorAll("#tabs .tab").forEach((t) => { t.onclick = () => setView(t.dataset.view); }); }
+window.setView = setView;
+window.scrollToSec = (name) => {
+  const go = () => { const el = document.querySelector('section[data-sec="' + name + '"]'); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); };
+  if (S.view !== "explorar") { setView("explorar"); setTimeout(go, 90); } else go();
+};
 function wireToTop() {
   const btn = document.getElementById("totop"); if (!btn) return;
   btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -476,13 +481,22 @@ function wireSearch() {
 /* ---------- Consulta IA ---------- */
 function wireAI() {
   const panel = $("#aiPanel"), log = $("#aiLog");
-  $("#aiBtn").onclick = () => { panel.classList.toggle("open"); if (panel.classList.contains("open") && !log.children.length) addMsg("a", "Hola 👋 Pregúntame sobre las comisiones del Plan Perú 2050: visión, brechas, metas o indicadores."); };
-  $("#aiClose").onclick = () => panel.classList.remove("open");
+  const ask = (q) => { addMsg("u", q); answer(q); };
   const send = () => {
     const inp = $("#aiInput"), q = inp.value.trim(); if (!q) return;
-    addMsg("u", q); inp.value = "";
-    answer(q);
+    inp.value = ""; ask(q);
   };
+  $("#aiBtn").onclick = () => {
+    panel.classList.toggle("open");
+    if (panel.classList.contains("open") && !log.children.length) {
+      addMsg("a", "Hola 👋 Soy el asistente del Plan Perú 2050. Pregúntame algo, o prueba:");
+      const sugs = ["¿Qué propone la comisión de Salud?", "¿Cuál es la meta de Minería al 2050?", "Resume Educación en una frase", "¿Qué dice sobre energía nuclear?"];
+      const box = el("div", "ai-sugs");
+      sugs.forEach((s) => { const b = el("button", "ai-sug", esc(s)); b.onclick = () => ask(s); box.append(b); });
+      log.append(box); log.scrollTop = 1e9;
+    }
+  };
+  $("#aiClose").onclick = () => panel.classList.remove("open");
   $("#aiSend").onclick = send;
   $("#aiInput").addEventListener("keydown", (e) => { if (e.key === "Enter") send(); });
 }
@@ -490,15 +504,22 @@ function addMsg(role, html) { const m = el("div", "msg " + role, esc(html)); $("
 
 async function answer(q) {
   const cfg = window.PP2050_IA || {};
-  const ctx = detailed().map((c) => `### ${c.nombre} (${c.eje || ""})\nVisión: ${c.vision || ""}\nBrechas: ${(c.diagnostico || []).join("; ")}\nMetas: ${(c.metas || []).join("; ")}\nIndicadores: ${(c.indicadores || []).map((i) => `${i.nombre} ${i.actual}→${i.meta}${i.unidad || ""}`).join("; ")}\nRecomendación: ${c.recomendacion || ""}`).join("\n\n");
+  // Recuperación: solo las comisiones relevantes a la pregunta (prompt corto = respuesta rápida)
+  const terms = q.toLowerCase().split(/\s+/).filter((w) => w.length > 3);
+  const scored = detailed().map((c) => {
+    const hay = (c.nombre + " " + (c.resumen || "") + " " + (c.eje || "") + " " + (c.vision || "") + " " + (c.diagnostico || []).join(" ")).toLowerCase();
+    return { c, score: terms.reduce((a, w) => a + (hay.includes(w) ? 1 : 0), 0) };
+  }).sort((a, b) => b.score - a.score);
+  const picks = scored[0] && scored[0].score > 0 ? scored.filter((x) => x.score > 0).slice(0, 3) : scored.slice(0, 2);
+  const ctx = picks.map(({ c }) => `### ${c.nombre} (${c.eje || ""})\n${(c.resumen || c.vision || "").slice(0, 320)}\nObjetivos: ${(c.objetivos_estrategicos || c.metas || []).slice(0, 3).join("; ")}\nIndicadores: ${(c.indicadores || []).slice(0, 4).map((i) => `${i.nombre} ${i.actual ?? "s/d"}→${i.meta ?? "s/d"}${i.unidad || ""}`).join("; ")}`).join("\n\n");
   if (cfg.apiKey || cfg.proxy) {
-    const wait = addMsg("a", "Pensando…");
+    const wait = addMsg("a", "…");
     try {
       const url = cfg.proxy || cfg.endpoint;
       const headers = { "Content-Type": "application/json" };
       if (!cfg.proxy && cfg.apiKey) headers.Authorization = "Bearer " + cfg.apiKey;
-      const body = { model: cfg.model, messages: [
-        { role: "system", content: "Eres analista del Plan Perú 2050. Responde en español, conciso y fiel a estos datos de comisiones. Si no está en los datos, dilo.\n\n" + ctx },
+      const body = { model: cfg.model, max_tokens: 220, temperature: 0.6, messages: [
+        { role: "system", content: "Eres un asesor cercano del Plan Perú 2050. Responde MUY breve (1 a 3 frases), en español cálido y humano, como hablándole a una persona, sin tecnicismos. Usa solo estos datos; si algo no está, dilo en una frase corta. No inventes cifras.\n\nDATOS:\n" + ctx },
         { role: "user", content: q },
       ] };
       const r = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
@@ -513,17 +534,11 @@ async function answer(q) {
       wait.remove(); // sin LLM disponible → cae a búsqueda local
     }
   }
-  // Fallback local: búsqueda por términos
-  const terms = q.toLowerCase().split(/\s+/).filter((w) => w.length > 3);
-  const scored = detailed().map((c) => {
-    const hay = JSON.stringify(c).toLowerCase();
-    return { c, score: terms.reduce((a, w) => a + (hay.includes(w) ? 1 : 0), 0) };
-  }).filter((x) => x.score > 0).sort((a, b) => b.score - a.score).slice(0, 3);
-  if (!scored.length) { addMsg("a", "No encontré comisiones relacionadas. Prueba con: energía, salud, marítimo, conocimiento, digital, ambiente…"); return; }
-  scored.forEach(({ c }) => {
-    addMsg("a", `${c.nombre} — ${c.resumen || c.vision || ""} ${(c.metas || [])[0] ? "Meta: " + c.metas[0] : ""}`);
+  // Fallback local: usa las comisiones ya recuperadas (picks)
+  if (!picks.length || !picks.some((x) => x.score > 0)) { addMsg("a", "No encontré comisiones relacionadas. Prueba con: energía, salud, minería, conocimiento, digital, ambiente…"); return; }
+  picks.forEach(({ c }) => {
+    addMsg("a", `${c.nombre} — ${(c.resumen || c.vision || "").slice(0, 180)} ${((c.objetivos_estrategicos || c.metas) || [])[0] ? "Objetivo: " + (c.objetivos_estrategicos || c.metas)[0] : ""}`);
   });
-  addMsg("a", "💡 Para respuestas más ricas con IA, configura una API key en config.js.");
 }
 
 boot();
