@@ -16,7 +16,9 @@ Fuente/espejo: repo `unimauro/plan-peru-2050` + GitHub Pages.
 - 🟢 Mapa del Perú (Leaflet) con puntos estratégicos por comisión territorial (silueta real del geojson).
 - 🟢 Gráfico de avance por comisión en la ficha.
 - 🟢 Enlace directo por comisión (`#id`) + cerrar con ESC.
+- 🟢 **Pestaña dedicada de Simulación** (tabs Explorar/Simulación) con escenarios predefinidos (Hoy/25/50/75/100%), índice nacional y gráfico de avance por indicador. Deep-link `?tab=simular`.
 - ⚪ Comparador de comisiones lado a lado.
+- ⚪ Simulación con fórmula polinómica / proyección temporal 2026→2030→2040→2050.
 
 ## Fase 2 — Datos y cobertura (🟢 mayormente hecho)
 - 🟢 **65 comisiones con contenido**: 18 validadas (redacción oficial) + 46 «en revisión» (línea base inferida, etiquetada).
