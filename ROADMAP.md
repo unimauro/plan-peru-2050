@@ -1,36 +1,52 @@
 # Roadmap — Plan Perú 2050 Dashboard
 
-Estado: 🟢 hecho · 🟡 en curso · ⚪ pendiente
+Estado: 🟢 hecho · 🟡 en curso · ⚪ pendiente · 🔵 depende de terceros
+
+Producción: **https://planperu2050.pe** (oficial) y **https://plan2050.tunky.net** (respaldo) — VPS + Caddy/HTTPS.
+Fuente/espejo: repo `unimauro/plan-peru-2050` + GitHub Pages.
 
 ## Fase 0 — Base (🟢 hecho)
-- 🟢 Directorio de las 64 comisiones (sin PII) + buscador + filtros por eje.
-- 🟢 Fichas con visión, brecha 2026, pilares, indicadores hoy→meta 2050, metas, acciones, recomendación.
-- 🟢 Extracción estructurada de 8 comisiones (88 indicadores) con criterio anti-overclaiming.
-- 🟢 Simulador de metas + índice de avance nacional.
-- 🟢 Consulta IA (local / OpenRouter opcional).
-- 🟢 Deploy GitHub Pages.
+- 🟢 Directorio de las 65 comisiones (sin PII) + buscador + filtros por eje y por estado.
+- 🟢 Fichas por comisión + simulador de metas + índice de avance nacional.
+- 🟢 Extracción estructurada anti-overclaiming (cifras reales con fuente o `null`).
+- 🟢 Consulta IA (OpenRouter vía proxy en Caddy, key oculta) + fallback de búsqueda local.
 
-## Fase 1 — Visualización y territorio (🟡 en curso)
-- 🟡 **Panorama nacional**: comparativa entre comisiones (avance, # indicadores, brechas) + distribución por eje.
-- 🟡 **Mapa del Perú** (Leaflet): puntos estratégicos por comisión territorial (puertos, aeropuertos, hubs telecom, estaciones espaciales).
-- 🟡 **Gráfico por comisión** en la ficha (Chart.js: avance de cada indicador).
+## Fase 1 — Visualización y territorio (🟢 hecho)
+- 🟢 Panorama nacional con **4 gráficos**: avance por comisión, comisiones por eje, cobertura por eje, mayores brechas.
+- 🟢 Mapa del Perú (Leaflet) con puntos estratégicos por comisión territorial (silueta real del geojson).
+- 🟢 Gráfico de avance por comisión en la ficha.
+- 🟢 Enlace directo por comisión (`#id`) + cerrar con ESC.
 - ⚪ Comparador de comisiones lado a lado.
-- ⚪ Exportar ficha de comisión a PDF / compartir enlace directo (`#comision`).
 
-## Fase 2 — Datos y profundidad (⚪ pendiente)
-- ⚪ Incorporar las comisiones restantes a medida que lleguen sus redacciones (solo agregar al JSON).
-- ⚪ Choropleth departamental (indicadores con desagregación territorial).
-- ⚪ Línea de tiempo de hitos 2030 / 2040 / 2050 por indicador (las matrices traen valores intermedios).
-- ⚪ Fuentes citadas y enlaces a los documentos oficiales por comisión.
+## Fase 2 — Datos y cobertura (🟢 mayormente hecho)
+- 🟢 **65 comisiones con contenido**: 18 validadas (redacción oficial) + 46 «en revisión» (línea base inferida, etiquetada).
+- 🟢 Etiquetas/estado: Validado / En revisión / En redacción, con filtros y banner.
+- 🟢 **Editor `editar.html`** para agregar/editar indicadores «en revisión» y descargar el JSON.
+- 🟢 Dosificación por hito (`?v=all/validado/h1/h2/h3`).
+- 🔵 Validar las 46 «en revisión» con el equipo del CIP (proceso, no técnico).
+- 🔵 Incorporar más comisiones a medida que lleguen redacciones (pipeline listo).
+- ⚪ Línea de tiempo 2030 / 2040 / 2050 por indicador (las matrices traen valores intermedios).
+- ⚪ Choropleth departamental para indicadores con desagregación territorial.
 
-## Fase 3 — Auditoría de alineamiento (⚪ pendiente — encargo aparte)
-> Requiere los anexos/PDFs base (matrices de articulación) de Tellys/CIP.
-- ⚪ Motor de *matching semántico*: objetivos de políticas vs Plan Estratégico (PSEN/PCN/PDRC).
+## Fase 3 — Estructura oficial e Informe Ejecutivo (🟢 hecho)
+- 🟢 Ficha y descargables reordenados al **Informe Ejecutivo oficial (I–VIII)**.
+- 🟢 **PDFs y Word con índice (Contenido)** + estructura: Situación Futura/Actual · Objetivos · Acciones · Matriz Resumen · Hitos 100 días · **Articulación con Acuerdo Nacional/PEDN 2050** · **Articulación con Programas Presupuestales**.
+- 🟢 Entregables descargables: ficha por comisión, plan de 100 días, síntesis por ejes (PDF + Word).
+
+## Fase 4 — Difusión (🟢 hecho)
+- 🟢 Dominio propio `planperu2050.pe` con HTTPS · SEO (robots/sitemap/meta) · miniatura OG.
+- 🟢 Google Analytics (G-P4XP2W8XFE).
+- 🟢 Autoría al pie (Carlos Cárdenas Fernández).
+- ⚪ OG dinámica por comisión (imagen de compartir por ficha).
+- ⚪ Reponer video de presentación cuando llegue el nuevo (`data/meta.json` → `video`).
+
+## Fase 5 — Auditoría de alineamiento (⚪ pendiente — Actividad 4 del TDR)
+> La articulación POR COMISIÓN (VII y VIII) ya está. Falta la **matriz transversal** del encargo pagado.
+> 🔵 Requiere los anexos/PDFs base (matrices de articulación PSEN/PCN/PDRC) de Tellys/CIP.
+- ⚪ Motor de *matching semántico*: objetivos de comisiones vs Acuerdo Nacional / PEDN 2050 / Programas Presupuestales.
 - ⚪ Clasificación en 6 categorías: igual/similar · desagregado · agregado · causal con evidencia · causal sin evidencia · desarticulado.
-- ⚪ Matriz navegable + tabulación de porcentajes por tipo de articulación.
-- ⚪ Exportable a Word/Excel como anexo.
+- ⚪ Matriz navegable + tabulación de porcentajes + export Word/Excel.
 
-## Fase 4 — Difusión (⚪ pendiente)
-- ⚪ Dominio propio / SEO + OG por comisión.
-- ⚪ Proxy de IA en Vercel (key no expuesta) para la consulta inteligente.
-- ⚪ Versión imprimible / informe ejecutivo.
+## Operación
+- 🟢 Deploy: `git push` (versiona + Pages) + `bash deploy/deploy.sh` (VPS).
+- ⚪ (Opcional) rotar la OpenRouter key (se compartió por chat).
