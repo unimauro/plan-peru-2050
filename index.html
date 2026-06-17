@@ -182,6 +182,18 @@
   .sim-out{text-align:right}
   .sim-out .big{font-size:1.5rem;font-weight:800;font-family:Fraunces,serif}
   .gaugewrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  /* Tabs Explorar / Simulación */
+  .tabs{display:flex;gap:8px;padding:18px 0 4px;flex-wrap:wrap}
+  .tab{background:var(--panel);border:1px solid var(--line);color:var(--mut);border-radius:11px;padding:10px 18px;font:inherit;font-weight:600;font-size:.92rem;cursor:pointer;transition:.15s}
+  .tab:hover{color:var(--txt);border-color:var(--mut2)}
+  .tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+  /* Escenarios */
+  .scenarios{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 18px}
+  .scbtn{background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:9px 15px;font:inherit;font-size:.86rem;cursor:pointer;font-weight:600}
+  .scbtn:hover{border-color:var(--gold)}
+  .scbtn.on{background:rgba(224,165,46,.15);border-color:var(--gold);color:var(--gold)}
+  .sim-intro{color:var(--mut);max-width:680px;margin:2px 0 14px;font-size:.95rem}
+  #simChart{max-height:300px;margin-top:6px}
 
   /* AI */
   .ai{position:fixed;right:18px;bottom:18px;z-index:50}
@@ -239,7 +251,12 @@
 </header>
 
 <main class="wrap">
-  <section class="hero">
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-view="explorar">🧭 Explorar comisiones</button>
+    <button class="tab" data-view="simular">🎚️ Simulación de escenarios</button>
+  </div>
+
+  <section class="hero" data-view="explorar">
     <div class="hero-top">
       <div id="video"></div>
       <div class="hero-head">
@@ -250,7 +267,7 @@
     <div class="kpis" id="kpis"></div>
   </section>
 
-  <section data-sec="grid">
+  <section data-sec="grid" data-view="explorar">
     <div class="controls">
       <div class="search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -261,12 +278,12 @@
     <div class="grid" id="grid"><div class="skeleton">Cargando comisiones…</div></div>
   </section>
 
-  <section data-sec="cien">
+  <section data-sec="cien" data-view="explorar">
     <div class="section-title"><h2 class="serif">Plan de los 100 primeros días</h2><span>Medidas inmediatas propuestas por las comisiones</span></div>
     <div class="panel" id="cien" style="margin-bottom:40px"><div class="skeleton">Cargando…</div></div>
   </section>
 
-  <section data-sec="panorama">
+  <section data-sec="panorama" data-view="explorar">
     <div class="section-title"><h2 class="serif">Panorama nacional</h2><span>Comparativa entre comisiones validadas</span></div>
     <div class="panorama">
       <div class="panel"><h3>Brecha promedio hacia la meta 2050</h3><div class="sub">% de avance actual estimado por comisión (mayor = más cerca de su meta)</div><canvas id="chartAvance"></canvas></div>
@@ -279,15 +296,24 @@
     <button class="dlbtn ghost" style="margin-bottom:40px" onclick="dlEjes()">⬇ Descargar síntesis por ejes</button>
   </section>
 
-  <section data-sec="mapa">
+  <section data-sec="mapa" data-view="explorar">
     <div class="section-title"><h2 class="serif">Mapa estratégico</h2><span>Infraestructura asociada a las comisiones territoriales</span></div>
     <div id="map"></div>
     <div class="maplegend" id="maplegend"></div>
   </section>
 
-  <section data-sec="sim">
-    <div class="section-title"><h2 class="serif">Simulador de metas</h2><span>Proyecta el avance hacia las metas 2050</span></div>
-    <div class="sim" id="sim"><div class="skeleton">Selecciona indicadores cuantitativos…</div></div>
+  <section data-sec="sim" data-view="simular">
+    <div class="section-title"><h2 class="serif">Simulación de escenarios 2050</h2><span>Proyecta el avance de los indicadores clave</span></div>
+    <p class="sim-intro">Elige un escenario o ajusta cada indicador a mano. El <b>índice nacional</b> promedia el avance de los indicadores cuantitativos validados hacia su meta 2050.</p>
+    <div class="scenarios" id="scenarios">
+      <button class="scbtn" data-pct="0">↺ Hoy (línea base)</button>
+      <button class="scbtn" data-pct="25">Conservador · 25%</button>
+      <button class="scbtn" data-pct="50">Moderado · 50%</button>
+      <button class="scbtn" data-pct="75">Base · 75%</button>
+      <button class="scbtn" data-pct="100">Ambicioso · meta 2050</button>
+    </div>
+    <div class="sim" id="sim"><div class="skeleton">Cargando indicadores…</div></div>
+    <div class="panel" style="margin-top:18px"><h3>Avance por indicador en el escenario actual</h3><div class="sub" style="font-size:.8rem;color:var(--mut);margin-bottom:8px">% de avance de cada indicador hacia su meta 2050</div><canvas id="simChart"></canvas></div>
   </section>
 </main>
 

@@ -5,7 +5,7 @@
    ============================================================ */
 "use strict";
 
-const S = { meta: null, detail: {}, list: [], filterEje: "todas", q: "", stage: "all", showRevision: true };
+const S = { meta: null, detail: {}, list: [], filterEje: "todas", q: "", stage: "all", showRevision: true, view: "explorar", simInds: [], simChart: null };
 
 // Dosificación por hito (feature stage)
 const STAGES = {
@@ -15,19 +15,32 @@ const STAGES = {
   h2: { secs: ["grid", "mapa", "sim", "panorama", "cien"], revision: true },
   h3: { secs: null, revision: true },
 };
+function applyVisibility() {
+  const stage = STAGES[S.stage] || STAGES.all;
+  document.querySelectorAll("[data-sec],[data-view]").forEach((el) => {
+    const secOk = !el.dataset.sec || !stage.secs || stage.secs.includes(el.dataset.sec);
+    const viewOk = !el.dataset.view || el.dataset.view === S.view;
+    el.style.display = secOk && viewOk ? "" : "none";
+  });
+}
 function applyStage() {
   const cfg = window.PP2050_STAGE || {};
   let v = new URLSearchParams(location.search).get("v");
   if (!v || v === "null") v = cfg.default || "all";
-  const stage = STAGES[v] || STAGES.all;
   S.stage = v in STAGES ? v : "all";
-  S.showRevision = stage.revision;
-  document.querySelectorAll("[data-sec]").forEach((el) => {
-    el.style.display = stage.secs && !stage.secs.includes(el.dataset.sec) ? "none" : "";
-  });
+  S.showRevision = (STAGES[S.stage] || STAGES.all).revision;
+  applyVisibility();
   const pill = document.getElementById("pill-updated");
   if (pill && S.stage !== "all") pill.textContent = "Vista: " + (S.stage === "validado" ? "solo validadas" : S.stage.toUpperCase());
 }
+function setView(view) {
+  S.view = view;
+  document.querySelectorAll("#tabs .tab").forEach((t) => t.classList.toggle("on", t.dataset.view === view));
+  applyVisibility();
+  if (view === "simular" && S.simChart) setTimeout(() => { try { S.simChart.resize(); } catch (e) {} }, 40);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function wireTabs() { document.querySelectorAll("#tabs .tab").forEach((t) => { t.onclick = () => setView(t.dataset.view); }); }
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
@@ -60,7 +73,9 @@ async function boot() {
     render100();
     wireAI();
     wireSearch();
+    wireTabs();
     openFromHash();
+    if (new URLSearchParams(location.search).get("tab") === "simular") setView("simular");
   } catch (e) {
     $("#grid").innerHTML = '<div class="skeleton">No se pudieron cargar los datos.</div>';
     console.error(e);
@@ -206,12 +221,13 @@ function openFromHash() {
 }
 window.addEventListener("hashchange", openFromHash);
 
-/* ---------- Simulador ---------- */
+/* ---------- Simulador de escenarios ---------- */
 function buildSimulator() {
-  const inds = allIndicators().slice(0, 8);
+  const inds = allIndicators().slice(0, 10);
+  S.simInds = inds;
   const box = $("#sim");
   if (!inds.length) { box.innerHTML = '<div class="skeleton">Aún no hay indicadores cuantitativos cargados.</div>'; return; }
-  box.innerHTML = `<div class="gaugewrap" style="margin-bottom:8px"><div><div style="font-size:.8rem;color:var(--mut)">Índice de avance nacional simulado</div><div class="big serif" id="simIndex" style="font-size:2.2rem;color:var(--gold)">0%</div></div><div style="flex:1;min-width:200px;color:var(--mut);font-size:.85rem">Mueve los controles para proyectar cuánto avanzaría cada indicador hacia su meta 2050. El índice promedia el avance de los indicadores.</div></div>`;
+  box.innerHTML = `<div class="gaugewrap" style="margin-bottom:8px"><div><div style="font-size:.8rem;color:var(--mut)">Índice de avance nacional</div><div class="big serif" id="simIndex" style="font-size:2.4rem;color:var(--gold)">0%</div></div><div style="flex:1;min-width:200px;color:var(--mut);font-size:.85rem">Promedio del avance de ${inds.length} indicadores cuantitativos validados desde su línea base de hoy hacia su meta 2050.</div></div>`;
   inds.forEach((i, k) => {
     const lo = Math.min(i.actual, i.meta), hi = Math.max(i.actual, i.meta);
     const row = el("div", "sim-row");
@@ -221,25 +237,46 @@ function buildSimulator() {
       </div>
       <div class="sim-out"><div class="big" id="so${k}">${num(i.actual)}<span style="font-size:.9rem;color:var(--mut)">${esc(i.unidad || "")}</span></div><div class="sim-meta" id="sp${k}">0% de avance</div></div>`;
     box.append(row);
-    const range = $("input", row);
-    range.oninput = () => updateSim(inds);
+    $("input", row).oninput = () => { document.querySelectorAll("#scenarios .scbtn").forEach((b) => b.classList.remove("on")); updateSim(); };
   });
-  updateSim(inds);
+  document.querySelectorAll("#scenarios .scbtn").forEach((b) => { b.onclick = () => setScenario(+b.dataset.pct, b); });
+  const cv = document.getElementById("simChart");
+  if (cv && typeof Chart !== "undefined") {
+    chartFont();
+    S.simChart && S.simChart.destroy();
+    S.simChart = new Chart(cv, {
+      type: "bar",
+      data: { labels: inds.map((i) => (i.nombre.length > 26 ? i.nombre.slice(0, 24) + "…" : i.nombre)),
+        datasets: [{ label: "% avance", data: inds.map(() => 0), backgroundColor: "#e0a52e", borderRadius: 5 }] },
+      options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: (t) => ` ${t.raw}% de avance hacia la meta` } } },
+        scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { font: { size: 10 } } } } },
+    });
+  }
+  updateSim();
 }
-function updateSim(inds) {
-  let sum = 0;
+function updateSim() {
+  const inds = S.simInds; let sum = 0; const advs = [];
   inds.forEach((i, k) => {
-    const range = document.querySelector(`input[data-k="${k}"]`); if (!range) return;
+    const range = document.querySelector(`input[data-k="${k}"]`); if (!range) { advs.push(0); return; }
     const v = parseFloat(range.value);
-    const lo = Math.min(i.actual, i.meta), hi = Math.max(i.actual, i.meta);
-    const adv = hi === lo ? 100 : clamp(((v - i.actual) / (i.meta - i.actual)) * 100);
-    sum += adv;
+    const adv = i.meta === i.actual ? 100 : clamp(((v - i.actual) / (i.meta - i.actual)) * 100);
+    sum += adv; advs.push(+adv.toFixed(1));
     const so = $("#so" + k), sp = $("#sp" + k);
     if (so) so.innerHTML = `${num(v)}<span style="font-size:.9rem;color:var(--mut)">${esc(i.unidad || "")}</span>`;
     if (sp) sp.textContent = `${adv.toFixed(0)}% de avance`;
   });
-  const idx = $("#simIndex"); if (idx) idx.textContent = (sum / inds.length).toFixed(0) + "%";
+  const idx = $("#simIndex"); if (idx) idx.textContent = inds.length ? (sum / inds.length).toFixed(0) + "%" : "0%";
+  if (S.simChart) { S.simChart.data.datasets[0].data = advs; S.simChart.update("none"); }
 }
+function setScenario(pct, btn) {
+  S.simInds.forEach((i, k) => {
+    const range = document.querySelector(`input[data-k="${k}"]`); if (!range) return;
+    range.value = i.actual + (pct / 100) * (i.meta - i.actual);
+  });
+  document.querySelectorAll("#scenarios .scbtn").forEach((b) => b.classList.toggle("on", b === btn));
+  updateSim();
+}
+window.setScenario = setScenario;
 
 /* ---------- Avance helpers ---------- */
 function indAvance(i) {
