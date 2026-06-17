@@ -234,8 +234,12 @@ def plt_ratio(path):
 def build_commissions():
     for c in val:
         d = make_doc(os.path.join(PDF, f"{c['id']}.pdf"))
-        d.build(commission_story(c), onFirstPage=header_footer, onLaterPages=header_footer)
-        print("  ✓ pdf/", c["id"] + ".pdf")
+        d.build(commission_story(c, revision=False), onFirstPage=header_footer, onLaterPages=header_footer)
+    print(f"  ✓ {len(val)} PDFs validadas")
+    for c in rev:
+        d = make_doc(os.path.join(PDF, f"{c['id']}.pdf"))
+        d.build(commission_story(c, revision=True), onFirstPage=header_footer, onLaterPages=header_footer)
+    print(f"  ✓ {len(rev)} PDFs en revisión")
 
 # ---------- 2) Plan 100 días ----------
 def build_100():

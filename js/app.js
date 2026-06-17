@@ -177,7 +177,7 @@ function openDetail(id) {
     <h2 class="serif">${esc(c.nombre)}</h2>
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
-    ${!c.revision ? `<button class="dlbtn" style="margin-top:12px" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha completa (PDF)</button>` : ""}
+    <button class="dlbtn" style="margin-top:12px" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha (PDF)${c.revision ? " · preliminar" : ""}</button>
     ${c.vision ? `<div class="block"><h4>I · Síntesis de la situación futura</h4><p>${esc(c.vision)}</p></div>` : ""}
     ${(c.diagnostico || []).length ? `<div class="block"><h4>II · Síntesis de la situación actual</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
     ${(c.objetivos_estrategicos || c.metas || []).length ? `<div class="block"><h4>III · Objetivos estratégicos</h4><ul class="ul">${(c.objetivos_estrategicos || c.metas).map((o) => `<li>${esc(o)}</li>`).join("")}</ul></div>` : ""}
