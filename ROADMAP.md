@@ -17,8 +17,10 @@ Fuente/espejo: repo `unimauro/plan-peru-2050` + GitHub Pages.
 - 🟢 Gráfico de avance por comisión en la ficha.
 - 🟢 Enlace directo por comisión (`#id`) + cerrar con ESC.
 - 🟢 **Pestaña dedicada de Simulación** (tabs Explorar/Simulación) con escenarios predefinidos (Hoy/25/50/75/100%), índice nacional y gráfico de avance por indicador. Deep-link `?tab=simular`.
+- 🟢 **Navegación por pestañas** en header sticky (Explorar / Simulación / FAQ), mobile-friendly + botón volver arriba.
+- 🟢 **Simulación con fórmulas polinómicas** (ritmo lineal/cuadrático/curva-S/raíz) + **trayectoria temporal 2026→2050**.
+- 🟢 **FAQ** (acordeón).
 - ⚪ Comparador de comisiones lado a lado.
-- ⚪ Simulación con fórmula polinómica / proyección temporal 2026→2030→2040→2050.
 
 ## Fase 2 — Datos y cobertura (🟢 mayormente hecho)
 - 🟢 **65 comisiones con contenido**: 18 validadas (redacción oficial) + 46 «en revisión» (línea base inferida, etiquetada).
