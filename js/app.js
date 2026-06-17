@@ -5,7 +5,7 @@
    ============================================================ */
 "use strict";
 
-const S = { meta: null, detail: {}, list: [], filterEje: "todas", q: "", stage: "all", showRevision: true, view: "explorar", simInds: [], simChart: null };
+const S = { meta: null, detail: {}, list: [], filterEje: "todas", q: "", stage: "all", showRevision: true, view: "explorar", simInds: [], simChart: null, simProj: null, ritmo: "linear" };
 
 // Dosificación por hito (feature stage)
 const STAGES = {
@@ -17,7 +17,8 @@ const STAGES = {
 };
 function applyVisibility() {
   const stage = STAGES[S.stage] || STAGES.all;
-  document.querySelectorAll("[data-sec],[data-view]").forEach((el) => {
+  // Solo secciones dentro de <main> (NO las pestañas del header, que también usan data-view)
+  document.querySelectorAll("main [data-view], main [data-sec]").forEach((el) => {
     const secOk = !el.dataset.sec || !stage.secs || stage.secs.includes(el.dataset.sec);
     const viewOk = !el.dataset.view || el.dataset.view === S.view;
     el.style.display = secOk && viewOk ? "" : "none";
@@ -37,10 +38,15 @@ function setView(view) {
   S.view = view;
   document.querySelectorAll("#tabs .tab").forEach((t) => t.classList.toggle("on", t.dataset.view === view));
   applyVisibility();
-  if (view === "simular" && S.simChart) setTimeout(() => { try { S.simChart.resize(); } catch (e) {} }, 40);
+  if (view === "simular") setTimeout(() => { try { S.simChart && S.simChart.resize(); S.simProj && S.simProj.resize(); } catch (e) {} }, 50);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function wireTabs() { document.querySelectorAll("#tabs .tab").forEach((t) => { t.onclick = () => setView(t.dataset.view); }); }
+function wireToTop() {
+  const btn = document.getElementById("totop"); if (!btn) return;
+  btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  window.addEventListener("scroll", () => btn.classList.toggle("show", window.scrollY > 500), { passive: true });
+}
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
@@ -74,8 +80,10 @@ async function boot() {
     wireAI();
     wireSearch();
     wireTabs();
+    wireToTop();
     openFromHash();
-    if (new URLSearchParams(location.search).get("tab") === "simular") setView("simular");
+    const t0 = new URLSearchParams(location.search).get("tab");
+    if (t0 === "simular" || t0 === "faq") setView(t0);
   } catch (e) {
     $("#grid").innerHTML = '<div class="skeleton">No se pudieron cargar los datos.</div>';
     console.error(e);
@@ -252,6 +260,20 @@ function buildSimulator() {
         scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { font: { size: 10 } } } } },
     });
   }
+  // Gráfico de proyección temporal (polinómica)
+  const pj = document.getElementById("simProj");
+  if (pj && typeof Chart !== "undefined") {
+    chartFont();
+    S.simProj && S.simProj.destroy();
+    S.simProj = new Chart(pj, {
+      type: "line",
+      data: { labels: PROJ_YEARS.map(String),
+        datasets: [{ label: "Índice nacional", data: PROJ_YEARS.map(() => 0), borderColor: "#e0a52e", backgroundColor: "rgba(224,165,46,.15)", fill: true, tension: 0.35, pointRadius: 4, pointBackgroundColor: "#e0a52e" }] },
+      options: { plugins: { legend: { display: false }, tooltip: { callbacks: { label: (t) => ` Índice ${t.raw}% en ${t.label}` } } },
+        scales: { y: { min: 0, max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, x: { grid: { display: false } } } },
+    });
+  }
+  document.querySelectorAll("#ritmo .scbtn").forEach((b) => { b.onclick = () => setRitmo(b.dataset.shape, b); });
   updateSim();
 }
 function updateSim() {
@@ -265,8 +287,13 @@ function updateSim() {
     if (so) so.innerHTML = `${num(v)}<span style="font-size:.9rem;color:var(--mut)">${esc(i.unidad || "")}</span>`;
     if (sp) sp.textContent = `${adv.toFixed(0)}% de avance`;
   });
-  const idx = $("#simIndex"); if (idx) idx.textContent = inds.length ? (sum / inds.length).toFixed(0) + "%" : "0%";
+  const T = inds.length ? sum / inds.length : 0;
+  const idx = $("#simIndex"); if (idx) idx.textContent = T.toFixed(0) + "%";
   if (S.simChart) { S.simChart.data.datasets[0].data = advs; S.simChart.update("none"); }
+  if (S.simProj) {
+    S.simProj.data.datasets[0].data = PROJ_YEARS.map((y) => +(T * shapeFn((y - 2026) / 24)).toFixed(1));
+    S.simProj.update("none");
+  }
 }
 function setScenario(pct, btn) {
   S.simInds.forEach((i, k) => {
@@ -277,6 +304,22 @@ function setScenario(pct, btn) {
   updateSim();
 }
 window.setScenario = setScenario;
+
+/* Proyección temporal con fórmula polinómica (ritmo de avance) */
+const PROJ_YEARS = [2026, 2030, 2035, 2040, 2045, 2050];
+function shapeFn(x) {
+  switch (S.ritmo) {
+    case "accel": return x * x;               // cuadrática: arranque lento, cierre rápido
+    case "scurve": return x * x * (3 - 2 * x); // cúbica smoothstep (curva S)
+    case "early": return Math.sqrt(x);        // raíz: arranque rápido
+    default: return x;                         // lineal
+  }
+}
+function setRitmo(shape, btn) {
+  S.ritmo = shape;
+  document.querySelectorAll("#ritmo .scbtn").forEach((b) => b.classList.toggle("on", b === btn));
+  updateSim();
+}
 
 /* ---------- Avance helpers ---------- */
 function indAvance(i) {

@@ -182,11 +182,19 @@
   .sim-out{text-align:right}
   .sim-out .big{font-size:1.5rem;font-weight:800;font-family:Fraunces,serif}
   .gaugewrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-  /* Tabs Explorar / Simulación */
-  .tabs{display:flex;gap:8px;padding:18px 0 4px;flex-wrap:wrap}
-  .tab{background:var(--panel);border:1px solid var(--line);color:var(--mut);border-radius:11px;padding:10px 18px;font:inherit;font-weight:600;font-size:.92rem;cursor:pointer;transition:.15s}
+  /* Tabs en el header (sticky) */
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-left:6px}
+  .tab{background:transparent;border:1px solid var(--line);color:var(--mut);border-radius:99px;padding:7px 14px;font:inherit;font-weight:600;font-size:.88rem;cursor:pointer;transition:.15s}
   .tab:hover{color:var(--txt);border-color:var(--mut2)}
   .tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+  @media(max-width:760px){
+    .top-in{flex-wrap:wrap;gap:8px 6px;padding:10px 0}
+    .pill{display:none}
+    .top-spacer{display:none}
+    .brand span{display:none}
+    .tabs{order:3;width:100%;justify-content:center;margin:0}
+    .tab{padding:6px 12px;font-size:.82rem}
+  }
   /* Escenarios */
   .scenarios{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 18px}
   .scbtn{background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:9px 15px;font:inherit;font-size:.86rem;cursor:pointer;font-weight:600}
@@ -225,6 +233,18 @@
   .detchart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:10px}
   .detchart canvas{max-height:260px}
   @media(max-width:760px){.panorama{grid-template-columns:1fr}}
+  /* FAQ */
+  .faq{max-width:840px;margin-bottom:40px;display:grid;gap:8px}
+  .faq details{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px}
+  .faq summary{cursor:pointer;padding:14px 42px 14px 16px;font-weight:600;list-style:none;position:relative;color:var(--txt)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:16px;top:12px;color:var(--gold);font-size:1.25rem;transition:.2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{margin:0;padding:0 16px 15px;color:#cfd8ea;font-size:.92rem;line-height:1.55}
+  .faq details p b{color:var(--txt)}
+  /* Volver arriba */
+  .totop{position:fixed;left:18px;bottom:18px;z-index:49;background:var(--panel);border:1px solid var(--line);color:var(--txt);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+  .totop.show{display:flex}
   footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0;color:var(--mut2);font-size:.82rem}
   .foot-credit{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;color:var(--mut)}
   .foot-credit b{color:var(--txt)}
@@ -245,17 +265,17 @@
       <div class="flag"></div>
       <div><b>Plan Perú 2050</b><span>Comisiones Temáticas · CNPP — CIP</span></div>
     </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab on" data-view="explorar">🧭 <span>Explorar</span></button>
+      <button class="tab" data-view="simular">🎚️ <span>Simulación</span></button>
+      <button class="tab" data-view="faq">❔ <span>FAQ</span></button>
+    </nav>
     <div class="top-spacer"></div>
     <div class="pill" id="pill-updated">—</div>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="tabs" id="tabs">
-    <button class="tab on" data-view="explorar">🧭 Explorar comisiones</button>
-    <button class="tab" data-view="simular">🎚️ Simulación de escenarios</button>
-  </div>
-
   <section class="hero" data-view="explorar">
     <div class="hero-top">
       <div id="video"></div>
@@ -312,12 +332,38 @@
       <button class="scbtn" data-pct="75">Base · 75%</button>
       <button class="scbtn" data-pct="100">Ambicioso · meta 2050</button>
     </div>
+    <div class="scenarios" id="ritmo">
+      <span style="color:var(--mut);font-size:.82rem;align-self:center;margin-right:2px">Ritmo de avance (fórmula):</span>
+      <button class="scbtn on" data-shape="linear">Lineal</button>
+      <button class="scbtn" data-shape="accel">Acelerado (x²)</button>
+      <button class="scbtn" data-shape="scurve">Curva S (cúbica)</button>
+      <button class="scbtn" data-shape="early">Temprano (√x)</button>
+    </div>
     <div class="sim" id="sim"><div class="skeleton">Cargando indicadores…</div></div>
-    <div class="panel" style="margin-top:18px"><h3>Avance por indicador en el escenario actual</h3><div class="sub" style="font-size:.8rem;color:var(--mut);margin-bottom:8px">% de avance de cada indicador hacia su meta 2050</div><canvas id="simChart"></canvas></div>
+    <div class="panorama" style="margin-top:18px">
+      <div class="panel"><h3>Avance por indicador (escenario actual)</h3><div class="sub" style="font-size:.8rem;color:var(--mut);margin-bottom:8px">% de avance de cada indicador hacia su meta 2050</div><canvas id="simChart"></canvas></div>
+      <div class="panel"><h3>Trayectoria nacional 2026 → 2050</h3><div class="sub" style="font-size:.8rem;color:var(--mut);margin-bottom:8px">Proyección del índice según el ritmo elegido (fórmula polinómica)</div><canvas id="simProj"></canvas></div>
+    </div>
+  </section>
+
+  <section data-view="faq">
+    <div class="section-title"><h2 class="serif">Preguntas frecuentes</h2><span>Cómo leer y usar este dashboard</span></div>
+    <div class="faq" id="faq">
+      <details><summary>¿Qué es este dashboard?</summary><p>Una herramienta de consulta y proyección de las <b>Comisiones Temáticas del Plan Perú 2050</b> (CNPP — Colegio de Ingenieros del Perú): visión, brechas, objetivos, indicadores cuantitativos y articulación con el Acuerdo Nacional, el PEDN 2050 y los Programas Presupuestales.</p></details>
+      <details><summary>¿De dónde salen los datos?</summary><p>De las <b>redacciones de cada comisión</b> (Informe Ejecutivo). Los indicadores se extraen de esos documentos con criterio <b>anti-overclaiming</b>: solo se incluyen cifras explícitas; si un valor no consta, queda como «sin dato». Las cifras están sujetas a validación oficial.</p></details>
+      <details><summary>¿Qué significan «Validado» y «En revisión»?</summary><p><b>Validado</b>: proviene de una redacción oficial de la comisión. <b>En revisión</b>: es una <b>línea base preliminar</b> inferida del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. Cada ficha en revisión lo indica con un aviso.</p></details>
+      <details><summary>¿Cómo funciona la Simulación de escenarios?</summary><p>En la pestaña <b>Simulación</b> mueves cada indicador entre su valor de hoy y su meta 2050, o eliges un escenario (Conservador 25%, Moderado 50%, Base 75%, Ambicioso 100%). El <b>índice de avance nacional</b> promedia el avance de los indicadores validados.</p></details>
+      <details><summary>¿Qué es la «trayectoria» con fórmula polinómica?</summary><p>Además del avance final, se proyecta <b>cómo se llegaría año a año</b> (2026 → 2030 → 2040 → 2050) según un <b>ritmo</b>: lineal, acelerado (cuadrático), curva S (cúbica) o de arranque temprano. Modela que las reformas no avanzan de forma uniforme en el tiempo.</p></details>
+      <details><summary>¿Qué es la articulación con Acuerdo Nacional / PEDN / Programas Presupuestales?</summary><p>Es el alineamiento de cada comisión con las <b>Políticas de Estado del Acuerdo Nacional</b>, el <b>Plan Estratégico de Desarrollo Nacional (PEDN) al 2050</b> y los <b>Programas Presupuestales del MEF</b>. Aparece en las secciones VII y VIII de cada ficha e Informe Ejecutivo.</p></details>
+      <details><summary>¿Puedo descargar los documentos?</summary><p>Sí. Cada ficha tiene <b>⬇ Descargar ficha (PDF)</b> con el Informe Ejecutivo (índice I–VIII). También hay descargas del <b>Plan de 100 días</b> y de la <b>Síntesis por ejes</b>.</p></details>
+      <details><summary>¿Quién lo desarrolló y cómo se actualiza?</summary><p>Desarrollo, analítica de datos e IA: <b>Carlos Cárdenas Fernández</b>. Se actualiza a medida que las comisiones envían sus redacciones; el contenido se versiona y se vuelve a publicar.</p></details>
+    </div>
   </section>
 </main>
 
 <div class="modal" id="modal"><div class="sheet"><div class="sheet-in" id="sheet"></div></div></div>
+
+<button class="totop" id="totop" title="Volver arriba" aria-label="Volver arriba">↑</button>
 
 <div class="ai">
   <button class="ai-btn" id="aiBtn">💬 Consulta IA</button>
