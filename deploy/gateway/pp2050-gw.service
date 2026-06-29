@@ -1,0 +1,23 @@
+[Unit]
+Description=Plan Peru 2050 — secure AI gateway
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/pp2050-gw/gateway.py
+Restart=on-failure
+RestartSec=3
+# La key de OpenRouter vive SOLO aquí (no en el Caddyfile ni en el cliente).
+Environment=OPENROUTER_KEY=REEMPLAZAR_KEY
+Environment=PP2050_DATA=/var/www/plan-peru-2050/data
+Environment=PP2050_GW_PORT=3500
+Environment=PP2050_MODEL=meta-llama/llama-3.3-70b-instruct
+# Hardening básico
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/pp2050-gw
+
+[Install]
+WantedBy=multi-user.target

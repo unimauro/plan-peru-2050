@@ -511,27 +511,24 @@ async function answer(q) {
     return { c, score: terms.reduce((a, w) => a + (hay.includes(w) ? 1 : 0), 0) };
   }).sort((a, b) => b.score - a.score);
   const picks = scored[0] && scored[0].score > 0 ? scored.filter((x) => x.score > 0).slice(0, 3) : scored.slice(0, 2);
-  const ctx = picks.map(({ c }) => `### ${c.nombre} (${c.eje || ""})\n${(c.resumen || c.vision || "").slice(0, 320)}\nObjetivos: ${(c.objetivos_estrategicos || c.metas || []).slice(0, 3).join("; ")}\nIndicadores: ${(c.indicadores || []).slice(0, 4).map((i) => `${i.nombre} ${i.actual ?? "s/d"}→${i.meta ?? "s/d"}${i.unidad || ""}`).join("; ")}`).join("\n\n");
-  if (cfg.apiKey || cfg.proxy) {
+  if (cfg.proxy) {
     const wait = addMsg("a", "…");
     try {
-      const url = cfg.proxy || cfg.endpoint;
-      const headers = { "Content-Type": "application/json" };
-      if (!cfg.proxy && cfg.apiKey) headers.Authorization = "Bearer " + cfg.apiKey;
-      const body = { model: cfg.model, max_tokens: 220, temperature: 0.6, messages: [
-        { role: "system", content: "Eres un asesor cercano del Plan Perú 2050. Responde MUY breve (1 a 3 frases), en español cálido y humano, como hablándole a una persona, sin tecnicismos. Usa solo estos datos; si algo no está, dilo en una frase corta. No inventes cifras.\n\nDATOS:\n" + ctx },
-        { role: "user", content: q },
-      ] };
-      const r = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
-      if (!r.ok) throw new Error("proxy " + r.status);
+      // El cliente SOLO envía la pregunta. El gateway del servidor controla
+      // el system prompt, el modelo, el contexto y el rate-limit (seguro).
+      const r = await fetch(cfg.proxy, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ q: q }),
+      });
       const j = await r.json();
-      const txt = j.choices?.[0]?.message?.content;
+      const txt = j.answer || j.choices?.[0]?.message?.content;
       if (!txt) throw new Error("empty");
       wait.textContent = txt;
       $("#aiLog").scrollTop = 1e9;
       return;
     } catch (e) {
-      wait.remove(); // sin LLM disponible → cae a búsqueda local
+      wait.remove(); // gateway no disponible → cae a búsqueda local
     }
   }
   // Fallback local: usa las comisiones ya recuperadas (picks)
