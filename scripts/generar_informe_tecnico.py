@@ -83,7 +83,7 @@ def diag_arch():
     box(ax, 0.2, 0.5, 2.2, 1.0, "GitHub Pages\n(espejo)", "#5D6B88", fs=8.5)
     box(ax, 3.6, 1.6, 2.6, 1.4, "VPS (Caddy)\nplanperu2050.pe\nHTTPS automático", "#1B8A4B", fs=9)
     box(ax, 7.2, 2.7, 2.6, 0.9, "Sitio estático\n(HTML/JS/JSON/PDF)", "#B8840E", fs=8.5)
-    box(ax, 7.2, 1.5, 2.6, 0.9, "Proxy IA /api/ia\n(key oculta)", "#D91023", fs=8.5)
+    box(ax, 7.2, 1.5, 2.6, 0.9, "Gateway IA seguro\n(prompt+modelo fijos,\nrate-limit, key oculta)", "#D91023", fs=7.5)
     box(ax, 7.2, 0.3, 2.6, 0.9, "OpenRouter\n(LLM)", "#3b82f6", fs=8.5)
     arrow(ax, 2.4, 3.1, 3.6, 2.6); ax.text(2.5, 3.35, "deploy.sh (rsync)", fontsize=7, color="#5D6B88")
     arrow(ax, 2.4, 1.0, 2.4, 1.0)
@@ -211,12 +211,31 @@ def build():
         "Sección de preguntas frecuentes (FAQ) y dosificación de la vista por hitos.",
     ]: s.append(Paragraph("• " + b, S["bullet"]))
 
-    s.append(Paragraph("8. Principios de diseño", S["h"]))
+    s.append(Paragraph("8. Seguridad del asistente de IA", S["h"]))
+    s.append(Paragraph("El asistente conversacional fue sometido a un <b>análisis adversarial</b> (pruebas de abuso) y "
+        "posteriormente blindado. Diseño actual:", S["body"]))
+    for b in [
+        "<b>Gateway propio del lado del servidor:</b> el navegador solo envía la pregunta; el servidor controla el "
+        "prompt del sistema, el modelo y el contexto. El usuario no puede alterar el rol del asistente.",
+        "<b>Alcance restringido:</b> responde únicamente sobre el Plan Perú 2050; cualquier pregunta de otro tema "
+        "(o intento de cambiar sus reglas) recibe un mensaje fijo de rechazo.",
+        "<b>Modelo y respuesta acotados:</b> el modelo y el límite de tokens los fija el servidor (no el cliente), "
+        "evitando el uso de modelos costosos con la cuenta del proyecto.",
+        "<b>Límite de frecuencia (rate-limit) por IP:</b> impide el abuso por volumen de consultas.",
+        "<b>Llave de IA protegida:</b> la credencial del modelo reside solo en el servidor (variable de entorno del "
+        "servicio), nunca en el navegador ni en la configuración pública del proxy.",
+    ]: s.append(Paragraph("• " + b, S["bullet"]))
+    s.append(Paragraph("Resultado de la verificación posterior: los intentos de abuso (uso fuera de tema, modelos "
+        "arbitrarios, inyección de instrucciones y consultas masivas) quedan bloqueados, manteniéndose el servicio "
+        "funcional para consultas legítimas.", S["body"]))
+
+    s.append(Paragraph("9. Principios de diseño", S["h"]))
     for b in [
         "<b>Anti-overclaiming:</b> no se inventan cifras; las fuentes son trazables y el estado de validación es visible.",
         "<b>Reproducibilidad:</b> todo el proceso (extracción, documentos, despliegue) está automatizado y versionado.",
         "<b>Bajo costo y robustez:</b> sitio estático + un servidor; sin base de datos compleja ni dependencias frágiles.",
         "<b>Privacidad:</b> los datos personales de los integrantes de las comisiones no se publican.",
+        "<b>Seguridad por diseño:</b> los controles del asistente viven en el servidor, no en el cliente.",
     ]: s.append(Paragraph("• " + b, S["bullet"]))
 
     s.append(Spacer(1, 10))
