@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://unimauro.github.io/plan-peru-2050/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://planperu2050.pe/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://planperu2050.pe/c/espacio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/maritimo-fluvial-y-lacustre.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/capital-del-conocimiento.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/peru-en-la-era-digital.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/ciencia-y-tecnologia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/medio-ambiente.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/salud.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/telecomunicaciones.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/industria.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/comercio-exterior-e-insercion-en-el-merc.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/acuicultura-y-pesca.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/educacion-tres-niveles.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/energia-nuclear.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/infraestructura-y-construccion.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/reforma-del-estado.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/mineria.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/mipymes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/pesca.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://planperu2050.pe/c/orden-publico-y-seguridad.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

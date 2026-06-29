@@ -205,7 +205,10 @@ function openDetail(id) {
     <h2 class="serif">${esc(c.nombre)}</h2>
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
-    <button class="dlbtn" style="margin-top:12px" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha (PDF)${c.revision ? " · preliminar" : ""}</button>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+      <button class="dlbtn" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha (PDF)${c.revision ? " · preliminar" : ""}</button>
+      ${!c.revision ? `<button class="dlbtn ghost" onclick="shareCom('${c.id}','${esc(c.nombre).replace(/'/g, "")}')">🔗 Compartir</button>` : ""}
+    </div>
     ${c.vision ? `<div class="block"><h4>I · Síntesis de la situación futura</h4><p>${esc(c.vision)}</p></div>` : ""}
     ${(c.diagnostico || []).length ? `<div class="block"><h4>II · Síntesis de la situación actual</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
     ${(c.objetivos_estrategicos || c.metas || []).length ? `<div class="block"><h4>III · Objetivos estratégicos</h4><ul class="ul">${(c.objetivos_estrategicos || c.metas).map((o) => `<li>${esc(o)}</li>`).join("")}</ul></div>` : ""}
@@ -428,6 +431,21 @@ async function renderMap() {
   if (leg) leg.innerHTML = Object.values(tipos).map((t) => `<span><i style="background:${t.color}"></i>${esc(t.label)}</span>`).join("") + `<span style="color:var(--mut2)">${esc(data.nota || "")}</span>`;
 }
 window.closeMapTo = (id) => openDetail(id);
+window.shareCom = async (id, nombre) => {
+  const url = absUrl() + "c/" + id + ".html";
+  const data = { title: nombre + " · Plan Perú 2050", text: "Comisión " + nombre + " — Plan Perú 2050", url };
+  try {
+    if (navigator.share) { await navigator.share(data); return; }
+    await navigator.clipboard.writeText(url);
+    if (typeof toast === "function") toast("Enlace copiado"); else alert("Enlace copiado:\n" + url);
+  } catch (e) { /* cancelado */ }
+};
+function absUrl() {
+  const o = location.origin;
+  // En GitHub Pages el sitio cuelga de /plan-peru-2050/
+  const base = location.pathname.replace(/[^/]*$/, "");
+  return o + base;
+}
 
 /* ---------- Detail chart ---------- */
 function detailChart(c) {
