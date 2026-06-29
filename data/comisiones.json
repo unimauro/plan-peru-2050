@@ -682,125 +682,170 @@
   {
     "id": "ciencia-y-tecnologia",
     "nombre": "Ciencia y Tecnología",
-    "resumen": "La Comisión propone el modelo \"Educación con Ciencia y Tecnología para la Producción y la Exportación\" para transitar de un Perú extractivista a una nación industrializada basada en la \"Minería del Conocimiento\", articulando academia, Estado y empresa privada en torno a cuatro pilares.",
-    "vision": "Al 2050 el Perú no solo extrae sus recursos, sino que los transforma y compite en los mercados globales con productos de alto valor agregado, emulando el milagro tecnológico de Japón, consolidando un capital humano de élite exportador de conocimiento y entrando al Top 20 de economías mundiales.",
+    "eje": "Economía del Conocimiento",
+    "resumen": "La Comisión de Ciencia y Tecnología fundamenta su estrategia en el modelo conceptual de \"Educación con Ciencia y Tecnología para la Producción y la Exportación\", que busca la transición del Perú de ser \"un mendigo sentado en un banco de oro\" a una nación industrializada. A diferencia del modelo extractivista que exporta materia prima sin valor agregado, persigue el crecimiento económico mediante la \"Minería del Conocimiento y la Producción Industrial\", integrando academia, Estado y empresa privada. El plan se estructura en cuatro pilares: (1) Cadena de valor educativo, enfoque industrial aplicado a la educación desde la etapa prenatal hasta el posgrado; (2) Universidades del conocimiento, transformándolas en centros de investigación orientados a la demanda industrial; (3) Parques científicos y tecnológicos, puentes entre academia y mercado para formar Empresas de Base Tecnológica (EBT); y (4) Parques industriales y exportación sistémica, con manufactura de valor agregado dirigida a mercados como China, Japón, Alemania y Corea del Sur. El modelo emula el milagro tecnológico de Japón, que tras establecer una política de CTI estricta en 1987 logró 16 premios Nobel y se posicionó entre las mayores economías del mundo.",
+    "vision": "Bajo el escenario óptimo del modelo de Ciencia y Tecnología, el Perú al 2050 no solo extrae sus recursos, sino que los transforma y compite en los mercados globales con productos de alto valor agregado. Este escenario se define por lograr un valor óptimo basado en referentes internacionales, emulando el milagro tecnológico de Japón que, tras establecer una política de CTI estricta para el desarrollo en 1987, logró 16 premios Nobel y se posicionó entre las mayores economías del mundo. Según sus pilares: (1) Cadena de valor educativo: el Perú cuenta con un sistema educativo integrado y continuo; el control de calidad (SUNEDU) se aplica en cada etapa del proceso (desde prenatal, inicial y hasta posgrado), con cero deserciones laborales gracias a sistemas de educación virtual a distancia mediante la TDD. (2) Universidades del conocimiento: las universidades son fábricas de conocimiento y de empresarios; todas las tesis de pre y posgrado en CTI están centralizadas y responden a proyectos de interés empresarial nacional y a demandas de mercados internacionales. (3) Parques científicos y tecnológicos: siguiendo el modelo de Stanford debidamente actualizado, todas las universidades regionales clave cuentan con parques de investigación operando dentro de sus campus, y el 80% de la inversión en I+D proviene del sector privado. (4) Parques industriales y exportación sistémica: el Perú aplica el planeamiento sistémico (Ingeniería de Sistemas) a grandes obras como Chancay o polos mineros, donde el parque industrial se conecta con la universidad, el ferrocarril y el puerto, exportando productos tecnológicos y materias primas 100% procesadas a los principales mercados del mundo.",
     "diagnostico": [
-      "Crisis estructural de desarrollo productivo: pese a contar con inmensos recursos, el Perú exporta el 65% de su cobre como mineral crudo, perdiendo la oportunidad de multiplicar su valor en mercados de Alemania, China y Japón.",
-      "Sistema educativo fracturado: la SUNEDU solo supervisa el producto final (la universidad) e ignora la 'materia prima' que ingresa desde la educación básica.",
-      "Muchos niños sufren problemas de nutrición prenatal que afectan su desarrollo cerebral, y hay alta deserción escolar por necesidad laboral.",
-      "Pandemónium en la generación de tesis: los estudiantes eligen temas libres sin relevancia para el país, desperdiciando conocimiento y presupuesto; los graduados terminan subempleados (ej. manejando taxis) por falta de demanda industrial.",
-      "No existen verdaderos puentes entre la academia y el mercado; el país carece de empresarios manufactureros e innovación.",
-      "La investigación no está institucionalizada y los pocos científicos peruanos migran al extranjero por falta de demanda e infraestructura.",
-      "Los proyectos nacionales se conciben de forma aislada, sin enfoque sistémico; falta legislar para obligar a dar valor agregado antes de exportar, como ya hicieron Indonesia, Rusia, Chile y Bolivia para proteger sus recursos (Níquel, Litio, Cobre)."
+      "A pesar de poseer abundantes recursos naturales, el Perú vive una crisis estructural permanente de desarrollo industrial y, por lo tanto, económico y social.",
+      "En los últimos años, aproximadamente el 65% de sus exportaciones han sido minerales, principalmente cobre, exportado sin mayor valor agregado, perdiendo oportunidades de procesar y multiplicar su valor en mercados internacionales como China, Japón, Alemania y Corea del Sur, principales importadores de cobre del Perú.",
+      "Comparación internacional: la institución rectora en Perú es CONCYTEC (fundada en 1981), con gasto en I+D de 0.16% del PBI; Chile cuenta con MINCIENCIA/ANID (Ministerio creado en 2018) con 0.34%-0.40%; Brasil con MCTI (1985) con 1.15%-1.21%. El promedio de países OCDE (2020) es 2.73%.",
+      "La institución rectora de la CTI en el Perú es CONCYTEC, pero erróneamente se ha considerado que debe estar a cargo de los científicos; en varios países las instituciones rectoras del CTI incluyen a los Ingenieros, lo cual permitiría gestionar la innovación, las tecnologías y las relaciones con las empresas industriales.",
+      "Pilar 1 (Cadena de valor educativo): el sistema actual está fracturado. La calidad educativa es deficiente porque la SUNEDU solo supervisa el producto final (la universidad), ignorando la 'materia prima' que ingresa desde la educación básica. Muchos niños sufren problemas de nutrición prenatal que afectan su desarrollo cerebral, y hay alta deserción por necesidad laboral.",
+      "Pilar 2 (Universidades del Conocimiento): existe un pandemónium en la generación de tesis; los estudiantes eligen temas libres sin relevancia para el país. Se desperdicia conocimiento y el Estado no está vinculado con la academia (los Ministerios no tercerizan sus problemas técnicos con las universidades).",
+      "Pilar 3 (Parques Científicos y Tecnológicos): no existen verdaderos puentes entre la academia y el mercado. El país carece de empresarios manufactureros e innovación. La investigación no está institucionalizada y los pocos científicos peruanos migran al extranjero por falta de demanda e infraestructura. No se aprovecha el modelo de los 'Consejos Regionales de CTI' (como en la UNSA-Arequipa, 2008) para resolver demandas locales trayendo docentes e investigadores extranjeros para Programas de Maestría y Doctorado.",
+      "Pilar 4 (Parques industriales y exportación sistémica): los proyectos nacionales se conciben de forma aislada, sin enfoque sistémico. Es necesario legislar el dar valor agregado a los recursos naturales antes de la exportación, algo que países como Indonesia, Rusia, Chile y Bolivia ya han implementado para proteger sus recursos (Níquel, Litio, Cobre)."
+    ],
+    "objetivos_estrategicos": [
+      "OE1. Institucionalizar la cadena de valor educativo: establecer un control riguroso de la calidad en toda la trayectoria formativa (desde la gestación prenatal hasta el posgrado) y vincular los institutos técnicos con la universidad. Meta: reducir la deserción de alumnos de la universidad a 0%, mediante validación universitaria y educación a distancia que posibilita la TDD.",
+      "OE2. Transformar las Universidades en centros generadores de conocimiento, patentes y empresas tecnológicas, manteniendo la función de formación de Capital Humano. Descripción: coordinar los proyectos de investigación y de tesis sobre temas de CTI con las líneas de investigación, preferentemente con líneas de proyectos de interés industrial nacional y regional. Meta: centralizar el 100% de las tesis en CTI en los centros de innovación para su utilización y comercialización directa a la industria.",
+      "OE3. Constituir Parques Científicos y Tecnológicos (PCT) a nivel regional en paralelo con la creación de los Parques Industriales regionales que crearán la demanda de conocimiento para la supervivencia de los PCT. Descripción: replicar el modelo de Stanford debidamente actualizado y crear ecosistemas dentro de las universidades donde los investigadores se organicen en Empresas de Base Tecnológica (EBT). Meta: convertir a los científicos en empresarios y lograr que la inversión en I+D de empresas privadas alcance estándares asiáticos (80%).",
+      "OE4. Consolidar el planeamiento sistémico en parques industriales exportadores. Descripción: basados en el modelo de Mánchester actualizado tecnológicamente, integrar la manufactura con centros logísticos y universidades, exigiendo valor agregado a las materias primas para exportar a mercados clave. Meta: reducir drásticamente la exportación de cobre crudo, reemplazándolo progresivamente por componentes de valor agregado."
+    ],
+    "acciones": [
+      "Acción 1.1 (Regulación): Reestructuración del Sistema de Supervisión Educativa (SUNEDU Integral). Ampliación de las facultades de calidad educativa para que auditen los insumos y procesos desde educación inicial, primaria, secundaria e institutos superiores tecnológicos. Evidencia: en los procesos de manufactura (modelo japonés de Deming) el control de calidad se aplica a toda la cadena de producción, no solo al producto final.",
+      "Acción 1.2 (Inversión): Programa de Protección Prenatal y Nutrición Temprana. Garantizar alimentación, asistencia médica y medicinas desde la gestación, mejorando estos servicios particularmente en las Regiones amazónicas y alto andinas, dando prioridad al financiamiento con fondos del Canon minero y similares. Evidencia: el desarrollo de la capacidad cognitiva de los niños es la 'materia prima' esencial para la formación del capital humano; las deficiencias nutricionales en etapas tempranas generan daños irreversibles en el cerebro.",
+      "Acción 1.3 (Inversión): Cobertura de internet a nivel nacional (infraestructura).",
+      "Acción 1.4 (Inversión): Implementación de internet en el sistema educativo / centros educativos del país.",
+      "Acción 1.5 (Inversión): Implementación de educación a distancia y convalidación técnica.",
+      "Acción 2.1 (Regulación): Creación de Centros Universitarios de Coordinación de Temas de Tesis de Interés Regional, Nacional y de Demanda de Mercados Internacionales. Regular para obligar a alinear los proyectos de grado, maestrías y doctorados con las necesidades de los sectores productivos regionales (minería, agroindustria) e internacionales (productos de cobre, agroindustriales). Evidencia: evita la dispersión de esfuerzos e inversión, asegurando empleo directo al egresado.",
+      "Acción 2.2 (Regulación): Promover la carrera del investigador. Debe comprender no solo la docencia sino la formación de empresas de investigación que generen proyectos por demanda del mercado nacional e internacional, de cuyas utilidades la universidad se beneficie con un % y el grupo de investigadores con otro % (ejemplo: 30% y 70%).",
+      "Acción 2.3 (Orientación): Promover la ciencia y tecnología a todo nivel. En Japón cuentan con un himno a la innovación; se debe desarrollar concursos para las universidades orientados a la producción y exportación, con programación de cursos presenciales y semipresenciales.",
+      "Acción 3.1 (Regulación): Ley de Fomento de Parques Tecnológicos Universitarios. Los PCT son fábricas cuyo producto es el conocimiento y necesitan Docentes Investigadores a Tiempo Completo (TC) y Dedicación Exclusiva (DE) organizados en pequeñas Empresas de Investigación que buscan contratos en el mercado industrial; concluido el proyecto, la Universidad se beneficia con un porcentaje (ejemplo: 30%) y los miembros con la diferencia (ejemplo: 70%). Requiere modificar el Marco Normativo y la Ley Universitaria. Evidencia: el 'Stanford Research Park' actualizado demuestra que la cercanía física entre academia y empresas cataliza el desarrollo tecnológico.",
+      "Acción 4.1 (Regulación): Legislar para promover el valor agregado en negociación de mutuo beneficio con los principales receptores de materias primas (Japón, China, Alemania y Corea del Sur). Dispositivos legales que restrinjan o graven la exportación de materia prima bruta, promoviendo fundiciones y manufactura local. Evidencia: el éxito de Indonesia con el Níquel, y las políticas de Litio en Bolivia y Cobre en Chile y Rusia que prohibieron exportaciones crudas para forzar empleos calificados e industria local.",
+      "Acción 4.2 (Orientación): Especialización multicultural hacia mercados de alto consumo de nuestras materias primas (Japón, China, Alemania y Corea del Sur).",
+      "Acción 4.3 (Regulación): Revisar la legislación de los parques industriales, que actualmente tienen un énfasis en negocios inmobiliarios.",
+      "Acción 4.4 (Orientación): Promover la reactivación de los Consejos Regionales de Ciencia y Tecnología, creados por CONCYTEC en las 25 regiones del país en el año 2008.",
+      "Acción 4.5 (Orientación): Aplicar el Método Sistémico en los Proyectos de Parques Industriales orientados a la exportación. Todo Proyecto de Parque Industrial Regional debe estar ligado a Proyectos o existencia de Parques Científicos y Tecnológicos de la Región y del País."
+    ],
+    "indicadores": [
+      {
+        "nombre": "Gasto general en I+D (% del PBI) - Perú",
+        "actual": 0.16,
+        "meta": null,
+        "unidad": "% del PBI",
+        "fuente": "Informe Ejecutivo Comisión Ciencia y Tecnología - Plan Perú 2050 (comparación CONCYTEC/Chile/Brasil)",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Deserción de alumnos por necesidad laboral",
+        "actual": null,
+        "meta": 0,
+        "unidad": "% deserción",
+        "fuente": "Matriz Resumen - OE1 (Meta 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Centralización de tesis (pre y posgrado) hacia proyectos industriales",
+        "actual": null,
+        "meta": 50,
+        "unidad": "% de tesis",
+        "fuente": "Matriz Resumen - Acción 2.1 (Meta 2030)",
+        "anioMeta": 2030
+      },
+      {
+        "nombre": "Tesis orientadas a resolver demandas reales de empresas y exportación",
+        "actual": null,
+        "meta": 100,
+        "unidad": "% de tesis",
+        "fuente": "Matriz Resumen - Acción 2.1 (Meta 2040)",
+        "anioMeta": 2040
+      },
+      {
+        "nombre": "Universidades con líneas de investigación priorizadas según entorno productivo regional",
+        "actual": null,
+        "meta": 50,
+        "unidad": "% de universidades",
+        "fuente": "Matriz Resumen - OE2 (Meta 2030)",
+        "anioMeta": 2030
+      },
+      {
+        "nombre": "Parques Científicos y Tecnológicos operativos (Modelo Stanford)",
+        "actual": null,
+        "meta": 5,
+        "unidad": "parques",
+        "fuente": "Matriz Resumen - OE3 (Meta 2030)",
+        "anioMeta": 2030
+      },
+      {
+        "nombre": "Inversión en I+D proveniente de empresas privadas (Estándar Japón)",
+        "actual": null,
+        "meta": 80,
+        "unidad": "% de la inversión en I+D",
+        "fuente": "Matriz Resumen - OE3 (Meta 2050) / Valor óptimo Pilar 3",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Reducción de la exportación de cobre bruto",
+        "actual": null,
+        "meta": 30,
+        "unidad": "% de reducción",
+        "fuente": "Matriz Resumen - OE4 (Meta 2030)",
+        "anioMeta": 2030
+      },
+      {
+        "nombre": "Currículas de institutos técnicos convalidadas para ingreso directo a universidades",
+        "actual": null,
+        "meta": 100,
+        "unidad": "% de currículas",
+        "fuente": "Matriz Resumen - Acción 1.5 (Meta 2030)",
+        "anioMeta": 2030
+      }
+    ],
+    "cien_dias": [
+      {
+        "accion": "Aprobación de la nueva Ley de Ciencia y Tecnología (basada en el Modelo Japón debidamente actualizado): promulgar de manera urgente una ley general transversal que convierta a la Ciencia y Tecnología en la principal herramienta del Estado, fijando metas ambiciosas (ejemplo: premios Nobel, patentes). Ningún gobierno reciente ha puesto a la ciencia como eje central y esta directriz es indispensable para orientar el resto del presupuesto nacional.",
+        "tipo": "Regulación"
+      },
+      {
+        "accion": "Reestructuración Normativa de la SUNEDU (Cadena de Valor): modificar la ley de educación para que la supervisión de calidad no sea exclusiva del pre y posgrado, sino que se audite toda la cadena 'como una faja industrial', comenzando desde la cuna. Permite iniciar un cambio de paradigma inmediato: priorizar la contratación de docentes e investigadores extranjeros para enseñar a alumnos de posgrado en el Perú (modalidad introducida con éxito en la UNAS de Arequipa y UDEP de Piura en 2008 bajo patrocinio del CONCYTEC).",
+        "tipo": "Regulación"
+      },
+      {
+        "accion": "Presentación de Ley de Restricción Gradual a la Exportación de Materia Prima Cruda: envío al Congreso de la ley que obligue, en plazos definidos, a que los contratos mineros incorporen cuotas de industrialización y fundición local antes de su exportación a mercados de Asia y Europa. El Perú pierde aceleradamente su potencial exportando el 65% de su cobre crudo; esta ley otorga al Estado una poderosa herramienta de negociación (ofrecer infraestructura a cambio de fábricas locales y transferencia tecnológica).",
+        "tipo": "Regulación"
+      },
+      {
+        "accion": "Diagnóstico de deficiencia en la atención a madres gestantes y niños recién nacidos con énfasis en las zonas Amazónicas y Alto Andina.",
+        "tipo": "Regulación"
+      },
+      {
+        "accion": "Reorganización del CONCYTEC: hacia un Ministerio. CONCYTEC se fundó en 1981 (45 años de existencia al 2026) y actualmente depende de la PCM como ente rector de las políticas de CTI. Se propone su reorganización sobre la base del Informe de la Comisión CTI del Plan Perú 2050, convirtiéndolo en un Ministerio de CYT integrado por un Viceministerio de Ciencias (políticas de generación de conocimiento) y un Viceministerio de Tecnología e Innovación Tecnológica (monitoreo, gestión y atención a la demanda de conocimientos para el sector industrial). La clave del éxito radica en tres pilares: a) poder de decisión y presupuesto (porcentaje intangible del PBI para la innovación); b) articulación con el sector productivo; c) continuidad de políticas.",
+        "tipo": "Regulación"
+      }
+    ],
+    "articulacion_acuerdo_pedn": [
+      "El Plan de Ciencia, Tecnología e Innovación (CTI) impacta en los cuatro objetivos nacionales del PEDN al 2050.",
+      "ON 1 (Pleno desarrollo de las capacidades de las personas): aplicación de un control de calidad en toda la cadena educativa (desde la nutrición prenatal) y contratación de científicos extranjeros para formar especialistas a nivel PhD dentro del territorio nacional.",
+      "ON 2 (Gestión sostenible de los ecosistemas y medidas frente al cambio climático): orientación obligatoria de las tesis universitarias (centralizadas en Parques Científicos) para resolver las demandas técnicas de la industria minera, agrícola y pesquera, promoviendo tecnologías limpias.",
+      "ON 3 (Elevada competitividad y productividad con empleo digno): desarrollo de proyectos sistémicos donde los parques industriales, puertos, ferrocarriles y zonas agrícolas se integren, generando manufactura con valor agregado y demanda real de conocimiento.",
+      "ON 4 (Sociedad democrática, pacífica y Estado moderno): vinculación directa Estado-Universidad; los Ministerios lanzarán concursos anuales de innovación para que las universidades resuelvan sus problemas técnicos, y el personal del Estado será capacitado permanentemente por la academia."
+    ],
+    "articulacion_programas": [
+      "Pilar 1 (Cadena Educativa): Auditoría desde nivel inicial y atracción de talento docente extranjero → PP Logros de Aprendizaje / SUNEDU Integral.",
+      "Pilar 2 (Universidades): Articulación de tesis a la demanda nacional regional y concursos ministeriales → PP Fomento y Gestión de CTI / Consejos Regionales de CTI (Modelo UNSA).",
+      "Pilar 3 (Parques Científicos): Creación de Empresas de Base Tecnológica dentro de universidades → PP Innovación para la Competitividad / Reorganización total de CONCYTEC.",
+      "Pilar 4 (Exportación): Restricción de exportación de materia prima cruda y negociación de mercados → PP Desarrollo Productivo / Ministerios de Producción y Comercio Exterior.",
+      "Nota: la sección de Programas Presupuestales del informe está marcada como 'por completar'."
     ],
     "pilares": [
       {
         "nombre": "Cadena de valor educativo",
-        "descripcion": "Enfoque industrial aplicado a la educación que inicia en la etapa prenatal y se extiende hasta el posgrado, asegurando la formación del capital humano, con control de calidad (SUNEDU) en cada etapa del proceso y no solo al final."
+        "descripcion": "Un enfoque industrial aplicado a la educación, que se inicia en la etapa prenatal y se extiende hasta el posgrado, asegurando la calidad en la formación del capital humano en todas y cada una de las etapas de la Cadena de Valor Educativa."
       },
       {
         "nombre": "Universidades del conocimiento",
-        "descripcion": "Transformación de las universidades en centros de investigación y generación de conocimiento orientados a la demanda nacional e industrial, abandonando la proliferación de tesis desconectadas de la realidad; universidades como 'fábricas' de conocimiento y de empresarios."
+        "descripcion": "Transformación de las universidades en centros de investigación y generación de conocimiento, sin descuidar la formación de Capital Humano, orientados a la demanda industrial nacional e internacional, reorientando la actual proliferación de tesis sobre temas inconexos y dispersos."
       },
       {
         "nombre": "Parques científicos y tecnológicos",
-        "descripcion": "Creación de puentes entre la academia y el mercado mediante centros de innovación dentro de las universidades (modelo Stanford Research Park, 1951) para formar Empresas de Base Tecnológica (EBT)."
+        "descripcion": "Creación de puentes entre la academia y el mercado mediante centros de innovación dentro de las universidades para formar Empresas de Base Tecnológica (EBT)."
       },
       {
         "nombre": "Parques industriales y exportación sistémica",
-        "descripcion": "Desarrollo de manufactura con valor agregado dirigida a mercados internacionales específicos (China, Japón, Alemania), aplicando planeamiento sistémico (Ingeniería de Sistemas) e integrando parque industrial con universidad, ferrocarril y puerto (ej. Chancay, polos mineros; modelo Mánchester 1896)."
+        "descripcion": "Desarrollo de manufactura con valor agregado, dirigida a mercados nacionales e internacionales, en particular a China, Japón, Alemania y Corea del Sur (mayores importadores del cobre peruano), integrados sistémicamente con puertos y logística, como ya lo hace China."
       }
     ],
-    "indicadores": [
-      {
-        "nombre": "Inversión en I+D proveniente del sector privado",
-        "actual": null,
-        "meta": 80,
-        "unidad": "%",
-        "anioMeta": 2050,
-        "fuente": "Pilar 3 / OE3 / Matriz Resumen (Estándar Japón)"
-      },
-      {
-        "nombre": "Exportación de cobre como mineral crudo",
-        "actual": 65,
-        "meta": null,
-        "unidad": "%",
-        "anioMeta": 2050,
-        "fuente": "Síntesis de la Situación Actual / OE4"
-      },
-      {
-        "nombre": "Reducción de la exportación de cobre bruto (meta intermedia 2030)",
-        "actual": null,
-        "meta": 30,
-        "unidad": "%",
-        "anioMeta": 2030,
-        "fuente": "Matriz Resumen, OE4.1 (reducción del 30%)"
-      },
-      {
-        "nombre": "Deserción estudiantil por necesidad laboral",
-        "actual": null,
-        "meta": 0,
-        "unidad": "%",
-        "anioMeta": 2040,
-        "fuente": "OE1 / Matriz Resumen (0% deserción mediante modalidades remotas)"
-      },
-      {
-        "nombre": "Centralización de tesis (pre y posgrado) hacia proyectos industriales (meta intermedia 2030)",
-        "actual": null,
-        "meta": 50,
-        "unidad": "%",
-        "anioMeta": 2030,
-        "fuente": "Matriz Resumen, Acción 2.1.1"
-      },
-      {
-        "nombre": "Tesis orientadas a resolver demandas reales de empresas y exportación (meta 2040)",
-        "actual": null,
-        "meta": 100,
-        "unidad": "%",
-        "anioMeta": 2040,
-        "fuente": "Matriz Resumen, Acción 2.1.1"
-      },
-      {
-        "nombre": "Primeros Parques Científicos y Tecnológicos operativos (meta intermedia 2030)",
-        "actual": null,
-        "meta": 5,
-        "unidad": "parques",
-        "anioMeta": 2030,
-        "fuente": "Matriz Resumen, OE3.1 (Modelo Stanford)"
-      }
-    ],
-    "metas": [
-      "Reducir la deserción técnica/estudiantil a 0% mediante validación universitaria y educación a distancia, consolidando un capital humano de élite exportador de conocimiento.",
-      "Centralizar el 100% de las tesis en centros de innovación para su comercialización directa a la industria al 2030, con un sistema académico peruano que lidere el registro de patentes y EBTs en Sudamérica.",
-      "Lograr que el 80% de la inversión en I+D provenga de empresas privadas (estándar Japón), con todas las universidades clave operando parques de investigación en sus campus.",
-      "Reducir drásticamente la exportación de cobre crudo del 65% actual, reemplazándola por componentes de valor agregado, exportando productos tecnológicos y materias primas 100% procesadas a los principales mercados del mundo y entrando al Top 20 de economías mundiales.",
-      "Eliminar totalmente el modelo primario exportador extractivista, con complejos operando bajo enfoque sistémico Puerto-Ferrocarril-Industria."
-    ],
-    "recomendacion": "Aprobar de manera urgente una Política Nacional de Ciencia y Tecnología (basada en el Modelo Japón 1987) mediante una ley general transversal que convierta a la Ciencia y Tecnología en la principal herramienta del Estado, fijando metas ambiciosas (Premios Nobel, patentes), pues es indispensable para orientar el resto del presupuesto nacional.",
-    "acciones": [
-      "Reestructuración del Sistema de Supervisión Educativa (SUNEDU Integral): ampliar las facultades de calidad educativa para auditar insumos y procesos desde inicial, primaria, secundaria e institutos superiores tecnológicos (control de calidad de toda la cadena, modelo Deming).",
-      "Programa de Protección Prenatal y Nutrición Temprana: garantizar alimentación y medicina desde la gestación a través de las alcaldías para asegurar el desarrollo cognitivo.",
-      "Implementación de educación a distancia y convalidación técnica para ingreso directo a universidades y cobertura digital en zonas mineras/industriales.",
-      "Creación del Centro de Coordinación de Tesis de Interés Nacional: norma que obligue a alinear proyectos de grado, maestrías y doctorados con las necesidades de los sectores productivos regionales (minería, agroindustria).",
-      "Ley de Fomento de Parques Tecnológicos Universitarios: marco normativo para ceder espacios en universidades públicas destinados a instalar empresas científicas y de innovación (EBT), modelo Stanford Research Park.",
-      "Legislación para el Valor Agregado Obligatorio: dispositivos legales que restrinjan o graven la exportación de materia prima bruta, obligando a instalar fundiciones y manufactura local (modelo Indonesia/Bolivia/Chile/Rusia).",
-      "Especialización multicultural hacia mercados de alto consumo: incorporación de idiomas estratégicos (chino, japonés, alemán) en zonas industriales exportadoras."
-    ],
-    "eje": "Economía del Conocimiento",
-    "cien_dias": [
-      {
-        "accion": "Aprobar y promulgar de manera urgente la Política Nacional de Ciencia y Tecnología (ley general transversal basada en el Modelo Japón 1987) que convierta a la Ciencia y Tecnología en la principal herramienta del Estado, fijando metas ambiciosas (Premios Nobel, patentes)",
-        "tipo": "ley/regulación"
-      },
-      {
-        "accion": "Reestructurar normativamente la SUNEDU modificando la ley de educación para que la supervisión de la calidad audite toda la cadena de valor educativo ('como una faja industrial'), desde la cuna y no solo el pre y posgrado",
-        "tipo": "ley/regulación (orientación)"
-      },
-      {
-        "accion": "Presentar y enviar al Congreso el Proyecto de Ley de Restricción Gradual a la Exportación de Materia Prima Cruda, que obligue en plazos definidos a que los contratos mineros incorporen cuotas de industrialización y fundición local antes de exportar a mercados de Asia y Europa",
-        "tipo": "ley/regulación"
-      }
-    ]
+    "recomendacion": "El informe está bien estructurado en su narrativa pero presenta vacíos materiales que deben subsanarse antes de su uso oficial: varias acciones estratégicas (1.3, 1.4, 1.5, 2.2, 2.3, 4.2, 4.3, 4.4 y 4.5) carecen de descripción y/o evidencia de relación, y la sección de Programas Presupuestales está expresamente marcada como \"por completar\". La Matriz Resumen solo cuantifica una parte de las metas y deja sin priorizar varias acciones. Además, varios indicadores carecen de línea base explícita (solo el gasto en I+D del 0.16% del PBI está cuantificado como valor actual). Se recomienda: (1) completar las descripciones y evidencia técnica de las acciones vacías; (2) asignar línea base, fuente oficial y año a cada indicador de la matriz; (3) cerrar el mapeo de Programas Presupuestales con códigos y montos reales; y (4) matizar afirmaciones históricas verificables (la política de CTI de Japón y los 16 premios Nobel) con fuentes citables, dado el rigor anti-overclaiming requerido. La asignación al eje \"Economía del Conocimiento\" es directa por el énfasis en CTI, patentes, EBT e industrialización del conocimiento."
   },
   {
     "id": "medio-ambiente",
@@ -2871,5 +2916,133 @@
         "descripcion": "Incremento de exportaciones, negociación de mejor acceso en tratados y acuerdos de comercio, certificación de plantas y procesos, y políticas de autocontrol, calidad y sanidad."
       }
     ]
+  },
+  {
+    "id": "orden-publico-y-seguridad",
+    "nombre": "Orden Público y Seguridad",
+    "eje": "Soberanía y Defensa",
+    "resumen": "El Plan Nacional de Seguridad y Orden Interno del Perú al 2050 es un instrumento de planeamiento estratégico de largo plazo (horizonte 2026-2050), orientado a resultados y basado en prospectiva estratégica, enfoque de sistemas y gobernanza multinivel. Adopta el paradigma de la \"seguridad multifocal\" y propone construir un \"Estado Estratégico de Seguridad\" para recuperar el control territorial, desarticular economías criminales, fortalecer la gobernabilidad democrática, modernizar instituciones e implementar inteligencia predictiva nacional. El modelo de referencia es el \"Sistema Integral de Seguridad Multinivel\" con cinco componentes: prevención social, control territorial, inteligencia estratégica, sistema de justicia y gobernanza.",
+    "vision": "El escenario deseado al 2050 (\"Estado estratégico de seguridad\") proyecta un Perú con control efectivo del territorio nacional, inteligencia predictiva avanzada, instituciones modernas y transparentes, alta legitimidad democrática, reducción significativa de la criminalidad, interoperabilidad total del sistema de seguridad, prevención estratégica basada en datos y gobernanza multinivel eficiente. En este escenario el Estado peruano posee capacidad anticipatoria, resiliencia institucional y control estratégico de amenazas complejas, consolidando la seguridad como condición esencial para el desarrollo nacional sostenible al año 2050. El impacto esperado: en el largo plazo (al 2050), estabilidad del orden interno, alta confianza ciudadana en las instituciones y seguridad como condición estructural del desarrollo; en el mediano plazo (al 2040), consolidación del sistema integrado de seguridad y reducción sostenida de la criminalidad organizada.",
+    "diagnostico": [
+      "El problema público central es la alta inseguridad ciudadana y el progresivo debilitamiento del orden interno, que afecta la gobernabilidad democrática, la estabilidad institucional, el desarrollo económico y la calidad de vida de la población.",
+      "Expansión del crimen organizado hacia estructuras sofisticadas, con capacidad económica, tecnológica y logística para infiltrar instituciones, controlar territorios y articular economías ilegales de gran escala (narcotráfico, minería ilegal, trata de personas, tráfico ilícito de migrantes, extorsión, sicariato, contrabando, lavado de activos, corrupción, ciberdelincuencia).",
+      "Debilidad institucional: instituciones fragmentadas, baja capacidad operativa, escasa coordinación interinstitucional y ausencia de planeamiento estratégico.",
+      "Corrupción sistémica que debilita a la Policía, la Justicia, la gestión pública y el control territorial, facilitando la expansión del crimen organizado.",
+      "Pobreza y exclusión social que generan vulnerabilidad criminal, reclutamiento por mafias, violencia urbana y fragmentación social.",
+      "Deficiente administración de justicia: lentitud procesal, impunidad, sobrepoblación penitenciaria y baja capacidad fiscal.",
+      "Débil cultura de planeamiento: improvisación, reacción coyuntural, políticas discontinuas y escasa visión de largo plazo.",
+      "Baja inversión en seguridad, con infraestructura deficiente, falta de tecnología, baja capacidad de inteligencia e insuficiente modernización policial.",
+      "Urbanización desordenada que expande zonas vulnerables, debilita el control territorial e incrementa la criminalidad urbana.",
+      "Escasa participación ciudadana, débil cultura cívica y pérdida progresiva de confianza ciudadana en el Estado.",
+      "Incremento de delitos violentos: homicidios, sicariato, extorsión, secuestro, robos agravados, violencia sexual, violencia contra mujeres y menores, y crimen armado urbano.",
+      "Variables de resultado a evaluar: reducción de homicidios, control territorial, reducción de economías ilegales, confianza institucional y reducción de victimización.",
+      "Zonas críticas identificadas: narcotráfico en VRAEM, fronteras amazónicas y corredores fluviales; minería ilegal en Madre de Dios, Puno, La Libertad, Arequipa y Amazonas; extorsión en Lima, La Libertad, Trujillo, Chiclayo y Callao."
+    ],
+    "objetivos_estrategicos": [
+      "Reducir la violencia criminal en la población (homicidios, delitos violentos, extorsión, sicariato y violencia organizada).",
+      "Recuperar el control territorial del Estado, garantizando presencia efectiva y legítima en todo el territorio nacional, neutralizando el control criminal, fortaleciendo la soberanía interna, recuperando espacios públicos y controlando fronteras.",
+      "Desarticular las economías criminales vinculadas a narcotráfico, minería ilegal, trata de personas, lavado de activos y contrabando, reduciendo su capacidad financiera y operativa.",
+      "Fortalecer la confianza ciudadana mediante transparencia, resultados efectivos, reducción de corrupción, mejora de servicios públicos y participación ciudadana.",
+      "Implementar inteligencia predictiva nacional, transformando el sistema hacia un modelo preventivo y anticipatorio mediante analítica avanzada, integración de datos, inteligencia artificial, sistemas predictivos e interoperabilidad nacional."
+    ],
+    "acciones": [
+      "Producción - Patrullaje inteligente integrado: modernizar las operaciones policiales mediante georreferenciación del delito, inteligencia predictiva, vigilancia digital y patrullaje interoperable.",
+      "Producción - Centros de comando y control: coordinación en tiempo real entre instituciones mediante plataformas integradas de monitoreo y respuesta.",
+      "Inversión - Infraestructura policial: comisarías modernas, centros de inteligencia, infraestructura fronteriza y equipamiento táctico.",
+      "Inversión - Tecnología avanzada: inteligencia artificial, analítica de datos, drones, videovigilancia inteligente y sistemas biométricos.",
+      "Regulación - Reformas contra el crimen organizado: fortalecer la extinción de dominio, la inteligencia financiera, la cooperación internacional y el procesamiento especializado.",
+      "Regulación - Normativa de control territorial: fortalecer la intervención estatal en zonas vulnerables y estratégicas.",
+      "Distribución - Programas sociales focalizados: dirigidos a territorios con alta vulnerabilidad criminal y exclusión social.",
+      "Distribución - Incentivos territoriales: promover el desarrollo económico y la formalización en zonas críticas.",
+      "Orientación estratégica - Campañas de cultura de legalidad: promover el respeto a la ley, la convivencia democrática y la prevención social.",
+      "Orientación estratégica - Estrategias de legitimidad institucional: recuperar la confianza ciudadana mediante transparencia y resultados.",
+      "Ruta estratégica priorizada: (1) control territorial, (2) inteligencia, (3) crimen organizado, (4) seguridad urbana y (5) prevención social.",
+      "Responsables: seguridad operativa (Ministerio del Interior / PNP), inteligencia (Sistema de Inteligencia Nacional), justicia (Ministerio Público / Poder Judicial), prevención (gobiernos regionales y locales)."
+    ],
+    "indicadores": [
+      {
+        "nombre": "Tasa de homicidios (reducción respecto de línea base)",
+        "actual": null,
+        "meta": -80,
+        "unidad": "% de variación respecto a línea base",
+        "fuente": "Matriz de indicadores y metas (6.3) - Plan Nacional de Seguridad y Orden Interno del Perú al 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Porcentaje de territorio controlado por el Estado",
+        "actual": null,
+        "meta": 100,
+        "unidad": "% del territorio nacional",
+        "fuente": "Matriz de indicadores y metas (6.3) - Plan Nacional de Seguridad y Orden Interno del Perú al 2050",
+        "anioMeta": 2050
+      },
+      {
+        "nombre": "Percepción positiva de seguridad ciudadana (incremento respecto de línea base)",
+        "actual": null,
+        "meta": 70,
+        "unidad": "% de incremento respecto a línea base",
+        "fuente": "Matriz de indicadores y metas (6.3) - Plan Nacional de Seguridad y Orden Interno del Perú al 2050",
+        "anioMeta": 2050
+      }
+    ],
+    "cien_dias": [
+      {
+        "accion": "Reducción significativa de delitos en zonas críticas (impacto esperado de corto plazo al 2030).",
+        "tipo": "Resultado de corto plazo"
+      },
+      {
+        "accion": "Mayor presencia y control territorial del Estado (impacto esperado de corto plazo al 2030).",
+        "tipo": "Resultado de corto plazo"
+      },
+      {
+        "accion": "Conformación de la Comisión Nacional de Seguridad y Orden Interno 2050 como órgano técnico, estratégico y multisectorial para conducir la formulación, validación y seguimiento del plan.",
+        "tipo": "Arreglo institucional"
+      },
+      {
+        "accion": "Creación del Fondo Nacional Estratégico de Seguridad y Orden Interno (FONASEG) a través del Ministerio de Economía y Finanzas para financiar modernización policial, inteligencia estratégica, ciberseguridad e infraestructura crítica.",
+        "tipo": "Financiamiento"
+      }
+    ],
+    "articulacion_acuerdo_pedn": [
+      "Plan Estratégico de Desarrollo Nacional al 2050 (PEDN), impulsado por el CEPLAN como instrumento orientador del desarrollo integral del país; la seguridad se entiende como condición habilitante para el desarrollo económico, la competitividad, la inclusión social, la gobernabilidad democrática, la inversión sostenible y el bienestar ciudadano.",
+      "Constitución Política del Perú, en particular el artículo 44 (deber primordial del Estado de garantizar la plena vigencia de los derechos humanos, proteger a la población de amenazas contra su seguridad y promover el bienestar general).",
+      "Sistema Nacional de Planeamiento Estratégico (SINAPLAN): articulación de objetivos nacionales, planeamiento estratégico sectorial, seguimiento de indicadores y evaluación de desempeño.",
+      "Lineamientos y metodologías del Centro Nacional de Planeamiento Estratégico (CEPLAN) sobre prospectiva estratégica y construcción de escenarios futuros.",
+      "Política Nacional de Modernización de la Gestión Pública (transformación digital, gestión por resultados, interoperabilidad y gobierno digital).",
+      "Enfoques de la OCDE sobre Estado Estratégico (visión de largo plazo, capacidad anticipatoria, gestión basada en evidencia y gobernanza colaborativa) y los Objetivos de Desarrollo Sostenible de las Naciones Unidas.",
+      "Marco normativo relevante: Código Penal, Ley de la Policía Nacional del Perú y las Políticas Nacionales de Seguridad Ciudadana."
+    ],
+    "articulacion_programas": [
+      "Incorporación anual del plan en el Presupuesto General de la República mediante el Presupuesto Institucional de Apertura (PIA) y el Presupuesto Institucional Modificado (PIM), a través de programas presupuestales estratégicos, categorías presupuestarias de seguridad y proyectos de inversión pública.",
+      "Formulación, por el Ministerio del Interior, de programas presupuestales específicos vinculados a control territorial, inteligencia estratégica, seguridad urbana, crimen organizado y prevención social.",
+      "Articulación de los programas con el SINAPLAN, el Presupuesto por Resultados y el planeamiento multianual; sustentación ante el MEF con análisis costo-beneficio, estudios técnicos, impacto económico y social, y evaluación de riesgos.",
+      "Presupuesto público progresivo y creación del Fondo Nacional Estratégico de Seguridad y Orden Interno (FONASEG) para financiar modernización policial, inteligencia estratégica, ciberseguridad, infraestructura crítica, centros de comando y control, control fronterizo, sistemas de IA, seguridad penitenciaria, tecnología de vigilancia y lucha contra el crimen organizado.",
+      "Gobiernos regionales: incorporación del financiamiento de seguridad en el Presupuesto Participativo, los Planes de Desarrollo Regional Concertado y la Programación Multianual de Inversiones (observatorios regionales de criminalidad, videovigilancia, seguridad fronteriza, prevención juvenil, serenazgo e inteligencia territorial), con recursos ordinarios, canon y sobrecanon, regalías, recursos directamente recaudados y transferencias del Gobierno Nacional.",
+      "Municipalidades provinciales y distritales: financiamiento de serenazgo, videovigilancia, recuperación de espacios públicos, patrullaje integrado, alarmas comunitarias, iluminación pública, programas preventivos juveniles, seguridad vial y fiscalización urbana, vía presupuesto participativo, POI, programación multianual, IOARR y proyectos de inversión pública.",
+      "Complemento con Asociaciones Público-Privadas (APP) y cooperación internacional como mecanismos de financiamiento."
+    ],
+    "pilares": [
+      {
+        "nombre": "Prevención social",
+        "descripcion": "Intervención sobre las causas estructurales de la criminalidad (exclusión social, desigualdad, violencia familiar, deserción escolar, desempleo juvenil) para fortalecer cohesión social, recuperar espacios públicos y reducir la vulnerabilidad criminal."
+      },
+      {
+        "nombre": "Control territorial",
+        "descripcion": "Presencia efectiva, permanente y legítima del Estado en todo el territorio mediante seguridad pública, administración de justicia, fiscalización, inteligencia territorial, control fronterizo inteligente y centros de comando y control."
+      },
+      {
+        "nombre": "Inteligencia estratégica",
+        "descripcion": "Sistema nacional de inteligencia interoperable y preventivo que anticipa amenazas y desarrolla inteligencia predictiva mediante analítica de datos, inteligencia artificial, big data, georreferenciación criminal y ciberinteligencia."
+      },
+      {
+        "nombre": "Sistema de justicia",
+        "descripcion": "Fortalecimiento de un sistema de justicia eficiente, transparente y especializado contra el crimen organizado, con transformación digital procesal, lucha contra la corrupción, protección de víctimas y testigos, coordinación fiscal-policial y reforma penitenciaria."
+      },
+      {
+        "nombre": "Gobernanza",
+        "descripcion": "Componente articulador del Sistema Integral de Seguridad Multinivel: coordinación interinstitucional, participación ciudadana, gobernanza multinivel, transparencia, rendición de cuentas y continuidad estratégica más allá de los cambios gubernamentales."
+      }
+    ],
+    "recomendacion": "El documento NO sigue la estructura oficial CNPP de nueve secciones (carece de hitos explícitos a 100 días, de líneas base cuantitativas y de una matriz resumen formal de indicadores con fuente y año meta); las metas se expresan solo en porcentajes de variación con línea base marcada como \"X\". Se recomienda: (1) completar la línea base real de cada indicador (tasa de homicidios actual, % de territorio controlado, % de percepción positiva) con fuente oficial (INEI/ENAPRES, SINADEF, Mininter); (2) construir una sección formal de \"Hitos a 100 días\" con acciones concretas y verificables, ya que actualmente solo existen impactos esperados al 2030/2040/2050; y (3) explicitar la articulación con los objetivos nacionales numerados del PEDN 2050 y con códigos de programas presupuestales vigentes (p. ej. PP 0030 Seguridad Ciudadana), en lugar de referencias genéricas."
   }
 ]
