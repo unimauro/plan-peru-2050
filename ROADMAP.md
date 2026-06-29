@@ -43,8 +43,14 @@ Fuente/espejo: repo `unimauro/plan-peru-2050` + GitHub Pages.
 - 🟢 Autoría al pie (Carlos Cárdenas Fernández).
 - 🟢 **Bandera del Perú vertical** (corregido logo Austria→Perú).
 - 🟢 **Informe técnico del portal** (ingeniería/pipeline/arquitectura con diagramas) descargable.
-- ⚪ OG dinámica por comisión (imagen de compartir por ficha).
+- 🟢 **OG por comisión** — imagen 1200x630 + página-stub `/c/<id>.html` con meta propios + botón Compartir.
 - ⚪ Reponer video de presentación cuando llegue el nuevo (`data/meta.json` → `video`).
+
+## Seguridad (🟢 hecho)
+- 🟢 **Análisis adversarial del chatbot** + blindaje: gateway seguro server-side (`pp2050-gw`) que ignora el
+  system prompt y el modelo del cliente, fuerza modelo barato, rate-limit por IP, solo responde sobre el Plan
+  Perú 2050, y mantiene la OpenRouter key fuera del cliente y del Caddyfile. Reporte: `deploy/SEGURIDAD-chatbot.md`.
+- ⚪ Rotar la OpenRouter key (se compartió por chat) — `systemctl edit`/unit del gateway.
 
 ## Fase 5 — Auditoría de alineamiento (🟡 listo para empezar — Actividad 4 del TDR)
 > La articulación POR COMISIÓN (VII y VIII) ya está en las fichas. Falta la **matriz transversal** del encargo pagado.
