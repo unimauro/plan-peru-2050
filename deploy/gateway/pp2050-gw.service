@@ -11,8 +11,8 @@ RestartSec=3
 Environment=OPENROUTER_KEY=REEMPLAZAR_KEY
 Environment=PP2050_DATA=/var/www/plan-peru-2050/data
 Environment=PP2050_GW_PORT=3501
-# Modelo principal Gemini 2.5 Flash (barato) + fallback al llama (si Gemini falla).
-Environment=PP2050_MODELS=google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct
+# Modelo principal Gemini 2.5 Flash LITE (el Gemini más barato de OpenRouter) + fallbacks.
+Environment=PP2050_MODELS=google/gemini-2.5-flash-lite,google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct
 # Alternativa: Gemini NATIVO (aún más barato, como liti.app). Descomenta y pon la key de Google AI Studio:
 # Environment=GEMINI_API_KEY=AIza...
 # Environment=GEMINI_MODEL=gemini-flash-latest
