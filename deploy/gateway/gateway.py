@@ -20,7 +20,7 @@ KEY = os.environ.get("OPENROUTER_KEY", "")
 # Por defecto modelos :free de OpenRouter (Carlos no pagó OpenRouter → costo $0).
 MODELS = [m.strip() for m in os.environ.get(
     "PP2050_MODELS",
-    "meta-llama/llama-3.3-70b-instruct:free,deepseek/deepseek-chat-v3-0324:free,qwen/qwen3-next-80b-a3b-instruct:free"
+    "google/gemini-2.5-flash-lite,google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct"
 ).split(",") if m.strip()]
 PORT = int(os.environ.get("PP2050_GW_PORT", "3500"))
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
