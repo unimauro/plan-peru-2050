@@ -46,6 +46,23 @@ ssh root@VPS systemctl restart pp2050-gw
 # Caddy: el bloque /api/ia hace reverse_proxy 127.0.0.1:3501 (sin key, sin OpenRouter directo).
 ```
 
+## Modelo (30-jun-2026)
+
+- Principal: **`google/gemini-2.5-flash`** (Gemini Flash vía OpenRouter — barato y rápido) con **fallback**
+  a `meta-llama/llama-3.3-70b-instruct` si Gemini falla. Definidos en `Environment=PP2050_MODELS=` del unit.
+- Los slugs `google/gemini-2.0-flash-001`, `gemini-flash-1.5`, etc. ya **no existen** en OpenRouter
+  ("No endpoints found"); los `:free` están saturados (429). El que funciona hoy es `google/gemini-2.5-flash`.
+- Opción aún más barata (como liti.app/contodo): **Gemini NATIVO** (`generativelanguage.googleapis.com`,
+  header `X-goog-api-key`, modelo `gemini-flash-latest`, `thinkingBudget:0`). Soportado en el gateway:
+  define `GEMINI_API_KEY` (Google AI Studio) en el unit y el gateway lo usa antes que OpenRouter.
+
+### Re-test adversarial con Gemini 2.5 Flash (30-jun)
+8/8 ataques bloqueados (receta, código, inyección de rol/DAN, pedir system prompt, política partidaria,
+otro país, system prompt arbitrario del cliente, alucinación de cifras) — todos → mensaje de rechazo o
+sin inventar. Preguntas legítimas (educación, seguridad, salud, minería) responden correctamente y grounded.
+
 ## Pendiente recomendado
 - **Rotar la OpenRouter key** (se compartió por chat). Cambiar `Environment=OPENROUTER_KEY=` en el unit
   + `systemctl restart pp2050-gw`. (Ya no está en el Caddyfile ni en el cliente.)
+- (Opcional) migrar al gateway compartido **ai.tunky.net** (`project_ai_tunky_gateway`) para centralizar
+  métricas/observabilidad — hoy `pp2050-gw` es dedicado y hace la recuperación server-side.

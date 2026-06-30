@@ -16,9 +16,19 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 DATA_DIR = os.environ.get("PP2050_DATA", "/var/www/plan-peru-2050/data")
 KEY = os.environ.get("OPENROUTER_KEY", "")
-MODEL = os.environ.get("PP2050_MODEL", "meta-llama/llama-3.3-70b-instruct")
+# Lista de modelos con FALLBACK (si uno da 402/429/5xx o respuesta vacía, prueba el siguiente).
+# Por defecto modelos :free de OpenRouter (Carlos no pagó OpenRouter → costo $0).
+MODELS = [m.strip() for m in os.environ.get(
+    "PP2050_MODELS",
+    "meta-llama/llama-3.3-70b-instruct:free,deepseek/deepseek-chat-v3-0324:free,qwen/qwen3-next-80b-a3b-instruct:free"
+).split(",") if m.strip()]
 PORT = int(os.environ.get("PP2050_GW_PORT", "3500"))
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+
+# --- Gemini NATIVO (opcional, como liti.app/contodo): mucho más barato ---
+# Si se define GEMINI_API_KEY, el gateway usa Gemini directo (X-goog-api-key) en vez de OpenRouter.
+GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 
 MAX_Q = 400            # longitud máxima de la pregunta
 MAX_TOKENS = 220       # tope de respuesta
@@ -97,23 +107,62 @@ def rate_ok(ip):
     arr.append(now); _hits[ip] = arr
     return True
 
-def ask_llm(q):
-    picks = retrieve(q)
+def _gemini(system, user):
+    """Gemini nativo (Google AI) — barato, como liti.app/contodo."""
+    url = ("https://generativelanguage.googleapis.com/v1beta/models/"
+           + GEMINI_MODEL + ":generateContent")
     body = json.dumps({
-        "model": MODEL, "max_tokens": MAX_TOKENS, "temperature": 0.5,
-        "messages": [
-            {"role": "system", "content": SYSTEM + "\n\nDATOS:\n" + context(picks)},
-            {"role": "user", "content": q[:MAX_Q]},
-        ],
+        "system_instruction": {"parts": [{"text": system}]},
+        "contents": [{"role": "user", "parts": [{"text": user}]}],
+        "generationConfig": {"maxOutputTokens": MAX_TOKENS, "temperature": 0.5,
+                             "thinkingConfig": {"thinkingBudget": 0}},
     }).encode("utf-8")
-    req = urllib.request.Request(ENDPOINT, data=body, headers={
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + KEY,
-        "X-Title": "Plan Peru 2050",
-    })
+    req = urllib.request.Request(url, data=body, headers={
+        "Content-Type": "application/json", "X-goog-api-key": GEMINI_KEY})
     with urllib.request.urlopen(req, timeout=40) as r:
         j = json.loads(r.read().decode("utf-8"))
-    return (j.get("choices", [{}])[0].get("message", {}) or {}).get("content", "").strip()
+    cands = j.get("candidates", [])
+    if cands:
+        parts = (cands[0].get("content", {}) or {}).get("parts", [])
+        return "".join(p.get("text", "") for p in parts).strip()
+    return ""
+
+def _openrouter(system, user):
+    """OpenRouter con fallback de modelos (descarta vacíos / reintenta en error)."""
+    last = ""
+    for model in MODELS:
+        body = json.dumps({
+            "model": model, "max_tokens": MAX_TOKENS, "temperature": 0.5,
+            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+        }).encode("utf-8")
+        req = urllib.request.Request(ENDPOINT, data=body, headers={
+            "Content-Type": "application/json", "Authorization": "Bearer " + KEY,
+            "X-Title": "Plan Peru 2050"})
+        try:
+            with urllib.request.urlopen(req, timeout=40) as r:
+                j = json.loads(r.read().decode("utf-8"))
+            txt = (j.get("choices", [{}])[0].get("message", {}) or {}).get("content", "").strip()
+            if txt:
+                return txt
+            last = ""  # vacío → siguiente modelo
+        except urllib.error.HTTPError as e:
+            if e.code in (400, 402, 404, 408, 429) or e.code >= 500:
+                continue  # error recuperable → siguiente modelo
+            raise
+    return last
+
+def ask_llm(q):
+    picks = retrieve(q)
+    system = SYSTEM + "\n\nDATOS:\n" + context(picks)
+    user = q[:MAX_Q]
+    if GEMINI_KEY:
+        try:
+            ans = _gemini(system, user)
+            if ans:
+                return ans
+        except Exception:
+            pass  # si Gemini falla, cae a OpenRouter
+    return _openrouter(system, user)
 
 class H(BaseHTTPRequestHandler):
     def _send(self, code, obj):
@@ -161,5 +210,5 @@ class H(BaseHTTPRequestHandler):
             self._send(200, {"answer": "Hubo un problema al consultar. Intenta nuevamente."})
 
 if __name__ == "__main__":
-    print(f"PP2050 gateway en :{PORT} · comisiones cargadas: {len(COMS)} · modelo: {MODEL}")
+    print(f"PP2050 gateway en :{PORT} · comisiones: {len(COMS)} · modelos: {MODELS} · gemini: {bool(GEMINI_KEY)}")
     ThreadingHTTPServer(("127.0.0.1", PORT), H).serve_forever()
