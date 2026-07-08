@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # ============================================================
 #  Plan Perú 2050 — apply del deploy EN el VPS (idempotente).
-#  Lo dispara GitHub Actions vía SSH (forced-command en
-#  authorized_keys → este script). También corre a mano:
-#     sudo /opt/pp2050/repo/deploy/vps-apply.sh
+#  NO es el entrypoint: lo invoca el bootstrap verificado vps-boot.sh
+#  (que ya hizo fetch + verify-commit + reset). Correr a mano:
+#     sudo /opt/pp2050/bin/vps-boot.sh
 #
-#  Hace: pull del repo público → sitio estático → gateway.py →
-#  unit systemd (con backup+rollback si el servicio no levanta) →
-#  reload de Caddy → healthcheck /api/ia. NO toca otros sitios.
+#  Hace: sitio estático → gateway.py → unit systemd (con backup+rollback
+#  si el servicio no levanta) → reload de Caddy → healthcheck /api/ia.
+#  NO toca otros sitios del VPS.
 # ============================================================
 set -euo pipefail
 
@@ -18,10 +18,10 @@ UNIT="/etc/systemd/system/pp2050-gw.service"
 BK="/opt/pp2050/backup"
 mkdir -p "$BK"
 
-echo "→ [1/6] Actualizando repo ($REPO)"
-git -C "$REPO" fetch --quiet origin main
-git -C "$REPO" reset --hard --quiet origin/main
-echo "   commit: $(git -C "$REPO" rev-parse --short HEAD)"
+# Guard: destino de rsync --delete SIEMPRE dentro de /var/www (defensa en profundidad)
+case "$WWW" in /var/www/*) : ;; *) echo "✗ WWW fuera de /var/www: $WWW"; exit 1;; esac
+[ -d "$REPO/.git" ] || { echo "✗ REPO inválido: $REPO"; exit 1; }
+echo "→ [1/6] Deploy del commit $(git -C "$REPO" rev-parse --short HEAD)"
 
 echo "→ [2/6] Sitio estático → $WWW"
 rsync -a --delete \
@@ -45,8 +45,8 @@ fi
 
 echo "→ [5/6] Reiniciando pp2050-gw"
 systemctl restart pp2050-gw || true
-sleep 1
-if ! systemctl is-active --quiet pp2050-gw; then
+ok=0; for i in $(seq 1 15); do systemctl is-active --quiet pp2050-gw && { ok=1; break; }; sleep 1; done
+if [ "$ok" != "1" ]; then
   echo "   ✗ El servicio NO levantó — ROLLBACK"
   [ -f "$BK/gateway.py.bak" ] && cp "$BK/gateway.py.bak" "$GW_DIR/gateway.py"
   [ -f "$BK/pp2050-gw.service.bak" ] && cp "$BK/pp2050-gw.service.bak" "$UNIT"

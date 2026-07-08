@@ -33,6 +33,19 @@ ProtectSystem=strict
 ProtectHome=true
 RestrictAddressFamilies=AF_INET AF_INET6
 ReadOnlyPaths=/var/www/plan-peru-2050/data
+# Hardening adicional del kernel/syscalls
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictRealtime=true
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources
+CapabilityBoundingSet=
+UMask=0077
 # Límites de recursos (techo a los DoS por memoria/threads)
 MemoryMax=256M
 TasksMax=64
