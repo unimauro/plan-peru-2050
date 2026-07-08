@@ -1,12 +1,16 @@
 # ============================================================
 #  Plan Perú 2050 — bloque para tu Caddyfile
-#  Sirve el sitio estático + proxy de IA con la key OCULTA
-#  (Caddy inyecta la Authorization desde una variable de entorno;
-#   nunca queda en el cliente).
+#  Sirve el sitio estático + proxy de IA a través del GATEWAY seguro
+#  (pp2050-gw en 127.0.0.1:3501). Caddy NO conoce la key ni el modelo:
+#  el gateway fija system prompt, modelo, tope de tokens y rate-limit.
+#
+#  ⚠ NO uses reverse_proxy directo a openrouter.ai con la key en Caddy:
+#    eso deja /api/ia como proxy ABIERTO y anónimo pagado con tu key
+#    (cualquiera elige modelo caro/max_tokens → factura arbitraria).
 #
 #  1) Sube el sitio a /var/www/plan-peru-2050  (ver deploy.sh)
-#  2) Pega este bloque en /etc/caddy/Caddyfile (ajusta el dominio)
-#  3) Pon la key en el entorno de Caddy (ver DEPLOY-VPS.md)
+#  2) Arranca el gateway (ver deploy/gateway + DEPLOY-VPS.md)
+#  3) Pega este bloque en /etc/caddy/Caddyfile (ajusta el dominio)
 #  4) sudo systemctl reload caddy
 # ============================================================
 
@@ -14,14 +18,12 @@ planperu2050.TU-DOMINIO.pe {
     root * /var/www/plan-peru-2050
     encode zstd gzip
 
-    # --- Proxy de IA (OpenRouter) con key del lado del servidor ---
+    # --- Proxy de IA → gateway seguro (la key vive SOLO en el unit del gateway) ---
     @ia path /api/ia
     handle @ia {
-        rewrite * /api/v1/chat/completions
-        reverse_proxy https://openrouter.ai {
-            header_up Host openrouter.ai
-            header_up Authorization "Bearer {env.OPENROUTER_KEY}"
-            header_up X-Title "Plan Peru 2050"
+        # Reescribe cualquier XFF entrante por la IP real del peer (anti-spoof del rate-limit)
+        reverse_proxy 127.0.0.1:3501 {
+            header_up X-Forwarded-For {remote_host}
         }
     }
 

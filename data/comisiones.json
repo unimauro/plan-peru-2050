@@ -134,7 +134,8 @@
         "accion": "Formular los perfiles de inversión pública para los aeropuertos secundarios (estudios técnicos y de impacto ambiental, liberación de terrenos y estructuración financiera)",
         "tipo": "inversión"
       }
-    ]
+    ],
+    "eje_an": "I. Democracia y Estado de Derecho"
   },
   {
     "id": "maritimo-fluvial-y-lacustre",
@@ -345,7 +346,8 @@
         "accion": "Presentar y remitir al Congreso de la República el Proyecto de Ley de Creación de la Autoridad del Mar como ente civil técnico y autónomo",
         "tipo": "ley/decreto (proyecto de ley)"
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "capital-del-conocimiento",
@@ -483,7 +485,8 @@
       "Impulsar la especializacion inteligente en biotecnologia, mineria 4.0, agrotecnologia, economia creativa/servicios digitales y energias del futuro.",
       "Crear una instancia nacional de articulacion del capital del conocimiento y un sistema nacional de monitoreo con indicadores de largo plazo y financiamiento multianual."
     ],
-    "eje": "Economía del Conocimiento"
+    "eje": "Economía del Conocimiento",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "peru-en-la-era-digital",
@@ -677,7 +680,8 @@
         "accion": "Formular el marco inicial de gobernanza ética de IA y datos, estableciendo principios de transparencia, privacidad, seguridad, no discriminación, auditoría y rendición de cuentas",
         "tipo": "regulación"
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "ciencia-y-tecnologia",
@@ -845,7 +849,8 @@
         "descripcion": "Desarrollo de manufactura con valor agregado, dirigida a mercados nacionales e internacionales, en particular a China, Japón, Alemania y Corea del Sur (mayores importadores del cobre peruano), integrados sistémicamente con puertos y logística, como ya lo hace China."
       }
     ],
-    "recomendacion": "El informe está bien estructurado en su narrativa pero presenta vacíos materiales que deben subsanarse antes de su uso oficial: varias acciones estratégicas (1.3, 1.4, 1.5, 2.2, 2.3, 4.2, 4.3, 4.4 y 4.5) carecen de descripción y/o evidencia de relación, y la sección de Programas Presupuestales está expresamente marcada como \"por completar\". La Matriz Resumen solo cuantifica una parte de las metas y deja sin priorizar varias acciones. Además, varios indicadores carecen de línea base explícita (solo el gasto en I+D del 0.16% del PBI está cuantificado como valor actual). Se recomienda: (1) completar las descripciones y evidencia técnica de las acciones vacías; (2) asignar línea base, fuente oficial y año a cada indicador de la matriz; (3) cerrar el mapeo de Programas Presupuestales con códigos y montos reales; y (4) matizar afirmaciones históricas verificables (la política de CTI de Japón y los 16 premios Nobel) con fuentes citables, dado el rigor anti-overclaiming requerido. La asignación al eje \"Economía del Conocimiento\" es directa por el énfasis en CTI, patentes, EBT e industrialización del conocimiento."
+    "recomendacion": "El informe está bien estructurado en su narrativa pero presenta vacíos materiales que deben subsanarse antes de su uso oficial: varias acciones estratégicas (1.3, 1.4, 1.5, 2.2, 2.3, 4.2, 4.3, 4.4 y 4.5) carecen de descripción y/o evidencia de relación, y la sección de Programas Presupuestales está expresamente marcada como \"por completar\". La Matriz Resumen solo cuantifica una parte de las metas y deja sin priorizar varias acciones. Además, varios indicadores carecen de línea base explícita (solo el gasto en I+D del 0.16% del PBI está cuantificado como valor actual). Se recomienda: (1) completar las descripciones y evidencia técnica de las acciones vacías; (2) asignar línea base, fuente oficial y año a cada indicador de la matriz; (3) cerrar el mapeo de Programas Presupuestales con códigos y montos reales; y (4) matizar afirmaciones históricas verificables (la política de CTI de Japón y los 16 premios Nobel) con fuentes citables, dado el rigor anti-overclaiming requerido. La asignación al eje \"Economía del Conocimiento\" es directa por el énfasis en CTI, patentes, EBT e industrialización del conocimiento.",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "medio-ambiente",
@@ -972,7 +977,8 @@
         "accion": "Formular y aprobar tecnicamente los terminos de referencia (TDR) para los estudios de preinversion del perfil de los primeros tres Nodos Circulares piloto en regiones estrategicas, vinculandolos formalmente al enfoque de Presupuesto por Resultados (PpR) y activando los Codigos Unicos de Inversion (CUI) en Invierte.pe",
         "tipo": "inversión"
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "salud",
@@ -1125,7 +1131,8 @@
       "Realizar evaluaciones (interna trimestral, externa al año 2 y de impacto cuasi-experimental al cierre de la Fase I) y publicar un Informe de Progreso anual.",
       "Incorporar auditorías de equidad algorítmica como requisito de operación del sistema."
     ],
-    "eje": "Bienestar y Salud"
+    "eje": "Bienestar y Salud",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "telecomunicaciones",
@@ -1329,7 +1336,8 @@
         "accion": "Anunciar la implementacion de la REDNACE, red privada del Estado que interconecta todas las entidades de la administracion publica mediante enlaces de banda ancha y tecnologias tipo VPN usando un porcentaje de la capacidad instalada de la RDNFO",
         "tipo": "institucional/inversion"
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "industria",
@@ -1592,7 +1600,8 @@
         "descripcion": "Creación de la Organización de Países Productores de Cobre para implementar un arancel global que financie el desarrollo social del país."
       }
     ],
-    "recomendacion": "Priorizar en los primeros 100 días la convocatoria diplomática para constituir la OPPC y el lanzamiento simultáneo del Programa Alimentario e Infraestructura Escolar, aprovechando la ventana temporal del boom de demanda de cobre (20-25 años) y el bajo endeudamiento nacional (33%) para apalancar el financiamiento del desarrollo humano e industrial sin afectar la economía mundial."
+    "recomendacion": "Priorizar en los primeros 100 días la convocatoria diplomática para constituir la OPPC y el lanzamiento simultáneo del Programa Alimentario e Infraestructura Escolar, aprovechando la ventana temporal del boom de demanda de cobre (20-25 años) y el bajo endeudamiento nacional (33%) para apalancar el financiamiento del desarrollo humano e industrial sin afectar la economía mundial.",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "comercio-exterior-e-insercion-en-el-merc",
@@ -1723,7 +1732,8 @@
         "nombre": "Bases de desarrollo",
         "descripcion": "Infraestructura (telecomunicaciones con ancho de banda mínimo 35 Mb, energía, transporte), ambiente institucional y regulatorio (transparencia jurídica, desburocratización, sistema tributario competitivo), educación orientada al mercado mundial y sociedad del conocimiento, disponibilidad de recursos (financiamiento nacional e internacional, atracción de inversiones y capital humano) y liderazgo regional."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "acuicultura-y-pesca",
@@ -1842,7 +1852,8 @@
         "nombre": "Sostenibilidad ambiental",
         "descripcion": "Aplicación de medidas de producción sostenibles, buenas prácticas, bioseguridad, trazabilidad, principio precautorio y enfoque ecosistémico (EEA)."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "educacion-tres-niveles",
@@ -1979,7 +1990,8 @@
         "nombre": "Belleza (aprender a ser)",
         "descripcion": "Educación para la armonía y perfección de la condición humana, orientada a la trascendencia y al desarrollo humano como deber y meta personal."
       }
-    ]
+    ],
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "energia-nuclear",
@@ -2055,7 +2067,8 @@
         "nombre": "Seguridad radiológica",
         "descripcion": "Infraestructura reguladora, protección radiológica ocupacional, del paciente y del público, preparación y respuesta a emergencias radiológicas, educación y entrenamiento."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "infraestructura-y-construccion",
@@ -2238,7 +2251,8 @@
         "nombre": "Integración territorial y hubs",
         "descripcion": "Creación de un hub de puertos y aeropuertos del Pacífico Sur, cuatro zonas de actividad logística (Norte, Centro, Sur y Oriente) y condiciones para el ordenamiento territorial."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "reforma-del-estado",
@@ -2360,7 +2374,8 @@
         "descripcion": "Sistema de Control eficiente, sin injerencia de lo político partidario."
       }
     ],
-    "recomendacion": "Crear, como medida prioritaria, un ente rector de la Reforma del Estado dependiente de la Presidencia de la República, con autoridad y estabilidad para proponer e implementar las reformas del Poder Ejecutivo, el Congreso, los gobiernos regionales y locales, y los sistemas de Administración de Justicia, Control y Electoral, priorizando el capital humano competente y probo bajo meritocracia, la carrera pública con evaluación por resultados, la presión tributaria progresiva hasta el 30% del PBI y la erradicación sistemática de la corrupción."
+    "recomendacion": "Crear, como medida prioritaria, un ente rector de la Reforma del Estado dependiente de la Presidencia de la República, con autoridad y estabilidad para proponer e implementar las reformas del Poder Ejecutivo, el Congreso, los gobiernos regionales y locales, y los sistemas de Administración de Justicia, Control y Electoral, priorizando el capital humano competente y probo bajo meritocracia, la carrera pública con evaluación por resultados, la presión tributaria progresiva hasta el 30% del PBI y la erradicación sistemática de la corrupción.",
+    "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
   },
   {
     "id": "mineria",
@@ -2514,7 +2529,8 @@
         "nombre": "Manejo ambiental y social",
         "descripcion": "Normativa eficiente de beneficios y sanciones por cuidado del ambiente y procesos orientados a la conservación y recuperación del medio ambiente en armonía con el ecosistema."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "mipymes",
@@ -2744,7 +2760,8 @@
         "nombre": "Formalización y calidad",
         "descripcion": "Reducir la informalidad y obstáculos burocráticos, e impulsar la certificación internacional y la calidad de servicios y producción."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "pesca",
@@ -2915,7 +2932,8 @@
         "nombre": "Acceso a mercados",
         "descripcion": "Incremento de exportaciones, negociación de mejor acceso en tratados y acuerdos de comercio, certificación de plantas y procesos, y políticas de autocontrol, calidad y sanidad."
       }
-    ]
+    ],
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "orden-publico-y-seguridad",
@@ -3043,6 +3061,7 @@
         "descripcion": "Componente articulador del Sistema Integral de Seguridad Multinivel: coordinación interinstitucional, participación ciudadana, gobernanza multinivel, transparencia, rendición de cuentas y continuidad estratégica más allá de los cambios gubernamentales."
       }
     ],
-    "recomendacion": "El documento NO sigue la estructura oficial CNPP de nueve secciones (carece de hitos explícitos a 100 días, de líneas base cuantitativas y de una matriz resumen formal de indicadores con fuente y año meta); las metas se expresan solo en porcentajes de variación con línea base marcada como \"X\". Se recomienda: (1) completar la línea base real de cada indicador (tasa de homicidios actual, % de territorio controlado, % de percepción positiva) con fuente oficial (INEI/ENAPRES, SINADEF, Mininter); (2) construir una sección formal de \"Hitos a 100 días\" con acciones concretas y verificables, ya que actualmente solo existen impactos esperados al 2030/2040/2050; y (3) explicitar la articulación con los objetivos nacionales numerados del PEDN 2050 y con códigos de programas presupuestales vigentes (p. ej. PP 0030 Seguridad Ciudadana), en lugar de referencias genéricas."
+    "recomendacion": "El documento NO sigue la estructura oficial CNPP de nueve secciones (carece de hitos explícitos a 100 días, de líneas base cuantitativas y de una matriz resumen formal de indicadores con fuente y año meta); las metas se expresan solo en porcentajes de variación con línea base marcada como \"X\". Se recomienda: (1) completar la línea base real de cada indicador (tasa de homicidios actual, % de territorio controlado, % de percepción positiva) con fuente oficial (INEI/ENAPRES, SINADEF, Mininter); (2) construir una sección formal de \"Hitos a 100 días\" con acciones concretas y verificables, ya que actualmente solo existen impactos esperados al 2030/2040/2050; y (3) explicitar la articulación con los objetivos nacionales numerados del PEDN 2050 y con códigos de programas presupuestales vigentes (p. ej. PP 0030 Seguridad Ciudadana), en lugar de referencias genéricas.",
+    "eje_an": "I. Democracia y Estado de Derecho"
   }
 ]

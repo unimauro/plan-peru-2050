@@ -4,24 +4,39 @@ After=network.target
 
 [Service]
 Type=simple
+# Usuario efímero sin privilegios (no root): si algo falla, no golpea como root.
+DynamicUser=true
 ExecStart=/usr/bin/python3 /opt/pp2050-gw/gateway.py
 Restart=on-failure
 RestartSec=3
-# La key de OpenRouter vive SOLO aquí (no en el Caddyfile ni en el cliente).
-Environment=OPENROUTER_KEY=REEMPLAZAR_KEY
+# Las llaves (OPENROUTER_KEY / GEMINI_API_KEY) viven en un archivo aparte con permisos 600,
+# NO en este unit (que suele ser world-readable via `systemctl show`).
+#   sudo install -m600 /dev/stdin /etc/pp2050-gw.env <<'EOF'
+#   OPENROUTER_KEY=sk-or-v1-...
+#   # GEMINI_API_KEY=AIza...
+#   EOF
+EnvironmentFile=/etc/pp2050-gw.env
 Environment=PP2050_DATA=/var/www/plan-peru-2050/data
 Environment=PP2050_GW_PORT=3501
 # Modelo principal Gemini 2.5 Flash LITE (el Gemini más barato de OpenRouter) + fallbacks.
 Environment=PP2050_MODELS=google/gemini-2.5-flash-lite,google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct
-# Alternativa: Gemini NATIVO (aún más barato, como liti.app). Descomenta y pon la key de Google AI Studio:
-# Environment=GEMINI_API_KEY=AIza...
-# Environment=GEMINI_MODEL=gemini-flash-latest
-# Hardening básico
+# Alternativa: Gemini NATIVO (aún más barato, como liti.app). Ponlo en /etc/pp2050-gw.env:
+#   GEMINI_API_KEY=AIza...  /  Environment=GEMINI_MODEL=gemini-flash-latest
+# Tope GLOBAL de consultas/día (freno de costo) y orígenes CORS permitidos:
+Environment=PP2050_DAILY_MAX=1500
+Environment=PP2050_ALLOWED_ORIGINS=https://planperu2050.pe,https://www.planperu2050.pe,https://plan2050.tunky.net
+# Hardening
 NoNewPrivileges=true
 PrivateTmp=true
+PrivateDevices=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/opt/pp2050-gw
+RestrictAddressFamilies=AF_INET AF_INET6
+ReadOnlyPaths=/var/www/plan-peru-2050/data
+# Límites de recursos (techo a los DoS por memoria/threads)
+MemoryMax=256M
+TasksMax=64
+LimitNOFILE=256
 
 [Install]
 WantedBy=multi-user.target

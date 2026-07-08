@@ -8,327 +8,392 @@
     {
       "id": "acuicultura-y-pesca",
       "nombre": "Acuicultura y Pesca",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "aeronautica",
       "nombre": "Aeronautica",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "agricultura",
       "nombre": "Agricultura",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "agroindustria",
       "nombre": "Agroindustria",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "aguas",
       "nombre": "Aguas",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "banca",
       "nombre": "Banca",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "biotecnologia",
       "nombre": "Biotecnologia",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "capital-del-conocimiento",
       "nombre": "Capital Del Conocimiento",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "capital-social",
       "nombre": "Capital Social",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "ciber-seguridad",
       "nombre": "Ciber Seguridad",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "ciencia-y-tecnologia",
       "nombre": "Ciencia y Tecnología",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "ciudades-inteligentes",
       "nombre": "Ciudades Inteligentes",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "cohesion-social",
       "nombre": "Cohesión Social",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "competitividad",
       "nombre": "Competitividad",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "comercio-exterior-e-insercion-en-el-merc",
       "nombre": "Comercio Exterior E Inserción en El Mercado Externo",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "defensa",
       "nombre": "Defensa",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "deporte",
       "nombre": "Deporte",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "desarrollo-rural",
       "nombre": "Desarrollo Rural",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "desarrollo-urbano",
       "nombre": "Desarrollo Urbano",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "drogas",
       "nombre": "Drogas",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "educacion-tres-niveles",
       "nombre": "Educación (Tres Niveles)",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "emprendimiento",
       "nombre": "Emprendimiento",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "energia",
       "nombre": "Energía",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "energia-electrica",
       "nombre": "Energía Eléctrica",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "energia-nuclear",
       "nombre": "Energía Nuclear",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "espacio",
       "nombre": "Espacio",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "etica",
       "nombre": "Ética",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
     },
     {
       "id": "forestal",
       "nombre": "Forestal",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "hidrocarburos",
       "nombre": "Hidrocarburos",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "imagen-pais",
       "nombre": "Imagen País",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "industria",
       "nombre": "Industria",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "industria-papel-y-libro",
       "nombre": "Industria Papel y Libro",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "industria-textil",
       "nombre": "Industria Textil",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "infraestructura-y-construccion",
       "nombre": "Infraestructura y Construcción",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "innovacion",
       "nombre": "Innovación",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "inteligencia-artificial",
       "nombre": "Inteligencia Artificial",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "institucionalidad",
       "nombre": "Institucionalidad",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
     },
     {
       "id": "inteligencia-de-negocios",
       "nombre": "Inteligencia de Negocios",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "la-familia",
       "nombre": "La Familia",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "macroeconomia",
       "nombre": "Macroeconomía",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "maritimo-fluvial-y-lacustre",
       "nombre": "Marítimo, Fluvial y Lacustre",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "medio-ambiente",
       "nombre": "Medio Ambiente",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "metalurgia",
       "nombre": "Metalurgia",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "mineria",
       "nombre": "Minería",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "mipymes",
       "nombre": "Mipymes",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "orden-publico-y-seguridad",
       "nombre": "Orden Público y Seguridad",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "parlamento-academico",
       "nombre": "Parlamento Académico",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "pecuaria",
       "nombre": "Pecuaria",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "pensiones-de-jubilacion",
       "nombre": "Pensiones de Jubilación",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "peru-en-la-era-digital",
       "nombre": "Perú en La Era Digital",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "prevision",
       "nombre": "Previsión",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "promocion-de-la-inversion",
       "nombre": "Promoción de La Inversión",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "proyecto-pais-joven",
       "nombre": "Proyecto País Joven",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "quimica",
       "nombre": "Química",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "reforma-del-estado",
       "nombre": "Reforma Del Estado",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
     },
     {
       "id": "reforma-judicial",
       "nombre": "Reforma Judicial",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "I. Democracia y Estado de Derecho"
     },
     {
       "id": "salud",
       "nombre": "Salud",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "seguros",
       "nombre": "Seguros",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "telecomunicaciones",
       "nombre": "Telecomunicaciones",
-      "estado": "redactada"
+      "estado": "redactada",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "transformacion-digital",
       "nombre": "Transformación Digital",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
     },
     {
       "id": "transportes",
       "nombre": "Transportes",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "turismo",
       "nombre": "Turismo",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     },
     {
       "id": "vacunas-y-laboratorios",
       "nombre": "Vacunas y Laboratorios",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "vivienda",
       "nombre": "Vivienda",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "II. Equidad y Justicia Social"
     },
     {
       "id": "pesca",
       "nombre": "Pesca",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "eje_an": "III. Competitividad del País"
     }
   ],
   "video": ""

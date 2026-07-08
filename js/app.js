@@ -57,7 +57,7 @@ const $ = (s, r = document) => r.querySelector(s);
 const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
 const num = (n) => (n == null ? "—" : new Intl.NumberFormat("es-PE", { maximumFractionDigits: 2 }).format(n));
 const clamp = (n, a = 0, b = 100) => Math.max(a, Math.min(b, n));
-const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 async function boot() {
   try {
@@ -132,7 +132,8 @@ function renderKPIs() {
 }
 
 function renderChips() {
-  const ejes = [...new Set(detailed().map((c) => c.eje).filter(Boolean))].sort();
+  // Categorías = 4 ejes/objetivos del Acuerdo Nacional (metodología oficial PP2050).
+  const ejes = [...new Set(S.list.map((c) => c.eje_an).filter(Boolean))].sort();
   const box = $("#chips"); box.innerHTML = "";
   const mk = (id, label) => {
     const c = el("button", "chip" + (S.filterEje === id ? " on" : ""), esc(label));
@@ -147,7 +148,7 @@ function renderChips() {
 
 function matchFilter(c) {
   if (S.q) {
-    const hay = (c.nombre + " " + (c.resumen || "") + " " + (c.eje || "")).toLowerCase();
+    const hay = (c.nombre + " " + (c.resumen || "") + " " + (c.eje || "") + " " + (c.eje_an || "")).toLowerCase();
     if (!hay.includes(S.q.toLowerCase())) return false;
   }
   const d = S.detail[c.id];
@@ -155,7 +156,7 @@ function matchFilter(c) {
   if (S.filterEje === "todas") return true;
   if (S.filterEje === "validadas") return !!d && !d.revision;
   if (S.filterEje === "revision") return !!d && !!d.revision;
-  return c.eje === S.filterEje;
+  return c.eje_an === S.filterEje;
 }
 
 function renderGrid() {
@@ -174,7 +175,8 @@ function renderGrid() {
       : `<span class="badge ok">Validado</span>`;
     card.innerHTML = `
       ${badge}
-      ${c.eje ? `<div class="eje">${esc(c.eje)}</div>` : `<div class="eje">Comisión temática</div>`}
+      ${c.eje_an ? `<div class="eje" style="color:${ejeColor(c.eje_an)}">${esc(c.eje_an)}</div>` : `<div class="eje">Comisión temática</div>`}
+      ${c.eje ? `<div class="eje-sub" style="color:var(--mut2);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em">${esc(c.eje)}</div>` : ""}
       <h3>${esc(c.nombre)}</h3>
       <p>${esc(c.resumen || "Comisión del Plan Perú 2050. Redacción en proceso.")}</p>
       ${has ? `<div class="mini"><span><b>${((c.objetivos_estrategicos || c.metas) || []).length}</b> objetivos</span><span><b>${nInd}</b> indicadores</span><span><b>${(c.cien_dias || []).length}</b> hitos 100d</span></div>` : ""}`;
@@ -201,7 +203,8 @@ function openDetail(id) {
   const s = $("#sheet");
   s.innerHTML = `
     <button class="close" onclick="closeDetail()">×</button>
-    ${c.eje ? `<div class="eje" style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600">${esc(c.eje)}</div>` : ""}
+    ${c.eje_an ? `<div class="eje" style="color:${ejeColor(c.eje_an)};font-size:.74rem;letter-spacing:.04em;font-weight:700">${esc(c.eje_an)}</div>` : ""}
+    ${c.eje ? `<div class="eje" style="color:var(--mut2);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600">${esc(c.eje)}</div>` : ""}
     <h2 class="serif">${esc(c.nombre)}</h2>
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
@@ -341,7 +344,9 @@ function comAvance(c) {
   return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
 }
 const CHARTS = {};
-const EJE_COLORS = { "Economía del Conocimiento": "#e0a52e", "Sostenibilidad y Ambiente": "#16a34a", "Soberanía y Defensa": "#d91023", "Infraestructura y Conectividad": "#3b82f6", "Bienestar y Salud": "#a855f7", "Competitividad": "#2ed47a" };
+const EJE_COLORS = { "Economía del Conocimiento": "#e0a52e", "Sostenibilidad y Ambiente": "#16a34a", "Soberanía y Defensa": "#d91023", "Infraestructura y Conectividad": "#3b82f6", "Bienestar y Salud": "#a855f7", "Competitividad": "#2ed47a",
+  // 4 ejes del Acuerdo Nacional
+  "I. Democracia y Estado de Derecho": "#d91023", "II. Equidad y Justicia Social": "#a855f7", "III. Competitividad del País": "#2ed47a", "IV. Estado Eficiente, Transparente y Descentralizado": "#3b82f6" };
 const ejeColor = (e) => EJE_COLORS[e] || "#8a98b8";
 const chartFont = () => { try { Chart.defaults.color = "#8a98b8"; Chart.defaults.font.family = "Inter, sans-serif"; } catch (e) {} };
 

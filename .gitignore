@@ -9,3 +9,4 @@ node_modules/
 # imágenes intermedias de los docx
 entregables/_img/
 .extract_jun29.mjs
+__pycache__/

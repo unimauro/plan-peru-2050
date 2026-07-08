@@ -1,7 +1,13 @@
 # Deploy en VPS con Caddy
 
 El sitio es **estático** (~2.5 MB). Solo hay que copiar archivos + un bloque en el Caddyfile.
-La **Consulta IA** se sirve por un proxy de Caddy que mantiene la API key del lado del servidor.
+La **Consulta IA** se sirve a través del **gateway seguro `pp2050-gw`** (systemd, `127.0.0.1:3501`),
+que fija system prompt, modelo, tope de tokens, rate-limit y cap global de costo. Caddy solo hace
+`reverse_proxy` al gateway; **la API key vive únicamente en el gateway**, nunca en Caddy ni en el cliente.
+
+> ⚠️ **No** configures Caddy con `reverse_proxy https://openrouter.ai` + la key: eso convierte
+> `/api/ia` en un **proxy abierto y anónimo pagado con tu key** (cualquiera elige modelo caro y
+> `max_tokens` alto → factura arbitraria; sin system prompt ni rate-limit). Siempre a través del gateway.
 
 ## 1. Subir el sitio
 
@@ -19,28 +25,35 @@ bash deploy/deploy.sh
 Copia el bloque de `deploy/Caddyfile.snippet` a `/etc/caddy/Caddyfile`, ajustando el dominio.
 Caddy gestiona el HTTPS (Let's Encrypt) automáticamente.
 
-## 3. Key de IA (oculta)
+## 3. Gateway de IA seguro + key (oculta)
 
-Pon la key de OpenRouter en el entorno del servicio Caddy (NO en el repo):
+La key vive en un archivo aparte con permisos `600` (NO en el repo, NO en el unit, NO en Caddy):
 
 ```bash
-sudo systemctl edit caddy
+sudo install -m600 /dev/stdin /etc/pp2050-gw.env <<'EOF'
+OPENROUTER_KEY=sk-or-v1-XXXXXXXX
+# Opcional, aún más barato (Gemini nativo):
+# GEMINI_API_KEY=AIza...
+EOF
 ```
-Y agrega:
-```ini
-[Service]
-Environment=OPENROUTER_KEY=sk-or-v1-XXXXXXXX
-```
-Luego:
+
+Instala y arranca el gateway:
 ```bash
+sudo mkdir -p /opt/pp2050-gw
+sudo cp deploy/gateway/gateway.py /opt/pp2050-gw/
+sudo cp deploy/gateway/pp2050-gw.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl reload caddy
+sudo systemctl enable --now pp2050-gw
+sudo systemctl status pp2050-gw    # debe quedar active (running) en :3501
 ```
 
-El dashboard llama a `/api/ia`; Caddy lo reescribe a `openrouter.ai/api/v1/chat/completions`
-e inyecta `Authorization: Bearer {OPENROUTER_KEY}`. La key nunca llega al navegador.
+Caddy enruta `/api/ia → 127.0.0.1:3501` (ver `Caddyfile.snippet`). El cliente solo manda `{"q":"..."}`;
+el gateway fija system prompt/modelo/tope de tokens, rate-limit por IP (IP real de Caddy, no spoofeable),
+cap global diario (`PP2050_DAILY_MAX`) y CORS por dominio (`PP2050_ALLOWED_ORIGINS`). La key nunca sale del gateway.
 
-> Modelo: se define en `config.js` (`window.PP2050_IA.model`). Si el proxy no responde,
+> **Además, pon un hard-cap de gasto mensual en el panel de OpenRouter** — última línea de defensa de costo.
+>
+> Modelo: se define por env en el unit (`PP2050_MODELS` / `GEMINI_*`). Si el gateway no responde,
 > el asistente cae automáticamente a búsqueda local sobre los datos (no se rompe).
 
 ## 4. DNS

@@ -83,7 +83,8 @@
     ],
     "recomendacion": "Validar cifras con INEI (urbanización, agua, saneamiento), MINAM (residuos, aire) y MTC/ATU (transporte). Recomendable anclar el concepto a cierre de brechas básicas con tecnología, evitando la importación acrítica de modelos de smart city.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "drogas",
@@ -162,7 +163,8 @@
     ],
     "recomendacion": "Validar cifras con DEVIDA y el monitoreo de UNODC, fuentes oficiales sobre superficie de coca, producción potencial y desarrollo alternativo. Recomendable un enfoque integral que evite depender solo de la erradicación y priorice desarrollo, salud y control financiero.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "I. Democracia y Estado de Derecho"
   },
   {
     "id": "hidrocarburos",
@@ -241,7 +243,8 @@
     ],
     "recomendacion": "Validar cifras con MINEM, Perupetro y Osinergmin, que mantienen estadísticas oficiales de producción, reservas, importaciones y conexiones de gas. Recomendable encuadrar el sector dentro de una estrategia de transición energética coherente con los compromisos climáticos del país.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "institucionalidad",
@@ -320,7 +323,8 @@
     ],
     "recomendacion": "Validar indicadores con Transparencia Internacional (IPC), Banco Mundial (Worldwide Governance Indicators), SERVIR e INEI/Latinobarómetro. Por su naturaleza transversal, recomendable tratar la institucionalidad como condición habilitante del resto del plan.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
   },
   {
     "id": "parlamento-academico",
@@ -399,7 +403,8 @@
     ],
     "recomendacion": "Al ser un mecanismo institucional emergente, los indicadores son mayormente cualitativos y deben definirse junto con el Congreso, la academia y los colegios profesionales. Recomendable vincularlo a la mejora de la calidad legislativa y a la comisión de Institucionalidad.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "reforma-judicial",
@@ -485,7 +490,8 @@
     ],
     "recomendacion": "Validar cifras con el Poder Judicial, el Ministerio Público y la JNJ, además de encuestas de confianza (INEI/Latinobarómetro). Recomendable articular la reforma con las comisiones de Institucionalidad y de seguridad, dado su carácter transversal para el Estado de derecho.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "I. Democracia y Estado de Derecho"
   },
   {
     "id": "agricultura",
@@ -573,7 +579,8 @@
     ],
     "recomendacion": "Priorizar el cierre de la brecha de productividad de la agricultura familiar mediante riego tecnificado, asociatividad y financiamiento, sin descuidar la consolidación sostenible de la agroexportación. Validar todos los indicadores con cifras oficiales del INEI, MIDAGRI y CENAGRO antes de fijar metas vinculantes.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "cohesion-social",
@@ -661,7 +668,8 @@
     ],
     "recomendacion": "Tratar la cohesión social como eje transversal del plan, no como sector aislado: depende de avances simultáneos en empleo, servicios, integridad pública y prevención de conflictos. Validar indicadores con INEI, Defensoría del Pueblo y fuentes de opinión pública antes de fijar metas.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "imagen-pais",
@@ -749,7 +757,8 @@
     ],
     "recomendacion": "Vincular la mejora de la imagen país a fundamentos reales (estabilidad institucional, seguridad, calidad de servicios) y no solo a campañas; la reputación internacional es altamente sensible a shocks políticos y de seguridad. Validar todos los indicadores con MINCETUR, PROMPERU, BCRP e índices internacionales antes de fijar metas.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "inteligencia-de-negocios",
@@ -837,7 +846,8 @@
     ],
     "recomendacion": "Construir primero una línea base oficial de madurez analítica y talento (hoy inexistente o dispersa) antes de fijar metas vinculantes, y abordar la inteligencia de negocios como capacidad transversal habilitada por datos de calidad, conectividad y talento. Validar indicadores con INEI, OSIPTEL, PCM (Secretaría de Gobierno y Transformación Digital) y fuentes sectoriales.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "pecuaria",
@@ -925,7 +935,8 @@
     ],
     "recomendacion": "Aprovechar la ventaja competitiva de los camélidos sudamericanos y cerrar la brecha de productividad de la ganadería familiar, integrando sostenibilidad ambiental y sanidad. Construir línea base oficial con MIDAGRI, SENASA, INEI y CENAGRO antes de fijar metas vinculantes.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "seguros",
@@ -1013,7 +1024,8 @@
     ],
     "recomendacion": "Tratar el aseguramiento catastrófico como prioridad estratégica dada la alta exposición del Perú a sismos y eventos climáticos, y vincular la profundización del mercado a la inclusión financiera y la innovación insurtech. Validar penetración, densidad y coberturas con cifras oficiales de la SBS y APESEG antes de fijar metas vinculantes.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "agroindustria",
@@ -1099,7 +1111,8 @@
     ],
     "recomendacion": "Priorizar la estabilidad regulatoria del marco agrario y la gestión hídrica como condiciones habilitantes; el equipo del CNPP debe validar cifras con MIDAGRI, SUNAT y la ANA, y precisar metas de riego tecnificado e inclusión de la agricultura familiar con datos del Censo Agropecuario.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "competitividad",
@@ -1185,7 +1198,8 @@
     ],
     "recomendacion": "La comisión debe priorizar formalización e institucionalidad como palancas transversales; se recomienda validar indicadores con INEI, BCRP y CONCYTEC y articular metas con las comisiones de Industria, Emprendimiento y Transformación Digital para evitar duplicidades.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "emprendimiento",
@@ -1271,7 +1285,8 @@
     ],
     "recomendacion": "La comisión debe priorizar el cierre de la brecha de financiamiento y la descentralización del ecosistema; se recomienda validar indicadores con GEM Perú, ProInnóvate y PRODUCE, y coordinar con las comisiones de Transformación Digital y Economía del Conocimiento.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "la-familia",
@@ -1357,7 +1372,8 @@
     ],
     "recomendacion": "La comisión debe priorizar la prevención de la violencia, el sistema de cuidados y la primera infancia; se recomienda validar todos los indicadores con la ENDES (INEI), MIMP y MIDIS, y articular con las comisiones de Salud, Educación y Pensiones de Jubilación dado el envejecimiento poblacional.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "pensiones-de-jubilacion",
@@ -1443,7 +1459,8 @@
     ],
     "recomendacion": "La comisión debe priorizar una reforma previsional integral con enfoque de cobertura universal y sostenibilidad; se recomienda validar indicadores con SBS, ONP, MEF e INEI, y coordinar con las comisiones de La Familia y Competitividad (informalidad), pues la cobertura depende críticamente de la formalización laboral.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "transformacion-digital",
@@ -1529,7 +1546,8 @@
     ],
     "recomendacion": "La comisión debe priorizar la conectividad rural, las competencias digitales y la ciberseguridad del Estado como base de la transformación; se recomienda validar indicadores con INEI, la Secretaría de Gobierno y Transformación Digital (PCM) y OSIPTEL, y articular con las comisiones de Emprendimiento, Competitividad y Educación.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
   },
   {
     "id": "aguas",
@@ -1626,7 +1644,8 @@
     ],
     "recomendacion": "Validar las cifras de cobertura con la última ENAPRES/INEI y SUNASS, y completar con datos oficiales de ANA sobre tratamiento de aguas residuales y eficiencia de riego antes de fijar metas definitivas. Priorizar la seguridad hídrica de la vertiente del Pacífico y la sostenibilidad financiera de las EPS como ejes críticos.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "energia",
@@ -1719,7 +1738,8 @@
     ],
     "recomendacion": "Confirmar con MINEM/OSINERGMIN el coeficiente de electrificación actual, la composición de la matriz de generación y el número de conexiones de gas natural antes de fijar metas. Articular con Transportes (electromovilidad) y Sostenibilidad/Ambiente (NDC y descarbonización).",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "industria-papel-y-libro",
@@ -1812,7 +1832,8 @@
     ],
     "recomendacion": "Confirmar con la Cámara Peruana del Libro, la Biblioteca Nacional del Perú y el Ministerio de Cultura las cifras de títulos publicados, hábitos de lectura y red de bibliotecas. El puntaje PISA debe verificarse con el reporte oficial más reciente. Sector predominantemente cualitativo; priorizar levantamiento de datos base.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "macroeconomia",
@@ -1905,7 +1926,8 @@
     ],
     "recomendacion": "Confirmar con BCRP, MEF e INEI los valores base de PIB per cápita, presión tributaria, deuda/PIB e informalidad antes de fijar metas. Esta comisión es transversal: debe articular las metas de crecimiento y productividad con las demás comisiones sectoriales. Cuenta con varios indicadores de fuente pública, pero requiere verificación de cifras actualizadas.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "prevision",
@@ -1998,7 +2020,8 @@
     ],
     "recomendacion": "Confirmar con SBS, ONP, MIDIS (Pensión 65) e INEI las cifras de cobertura, afiliación, beneficiarios y proyecciones demográficas antes de fijar metas. Tema de alta sensibilidad política y técnica; se recomienda alinear con una reforma integral del sistema. Sector mayormente cualitativo a nivel de metas; requiere robustecer la base de datos.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "transportes",
@@ -2091,7 +2114,8 @@
     ],
     "recomendacion": "Confirmar con MTC, Provías y la Policía Nacional los valores base de pavimentación vial, fallecidos por accidentes y costos logísticos antes de fijar metas. Articular estrechamente con las comisiones de Energía (electromovilidad) y Comercio Exterior (logística y Chancay). Priorizar la movilidad urbana sostenible y la seguridad vial.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "banca",
@@ -2174,7 +2198,8 @@
     ],
     "recomendacion": "Priorizar la inclusión crediticia de mipymes y población rural junto con un marco de open finance y ciberseguridad robusto, manteniendo la solidez prudencial. Validar con la SBS y el BCRP las cifras de profundización financiera y metas de digitalización antes de oficializar la línea base.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "defensa",
@@ -2257,7 +2282,8 @@
     ],
     "recomendacion": "Asegurar financiamiento plurianual estable para la recapitalización y priorizar capacidades duales (ciber, satelital, vigilancia amazónica) con desarrollo de industria nacional. Las cifras de gasto y disponibilidad deben validarse con el MINDEF y el Comando Conjunto antes de oficializar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "I. Democracia y Estado de Derecho"
   },
   {
     "id": "energia-electrica",
@@ -2340,7 +2366,8 @@
     ],
     "recomendacion": "Aprovechar la ventaja competitiva del Perú en solar y eólica para descarbonizar la matriz y atraer industria limpia, cerrando primero la brecha de electrificación rural. Las metas de participación renovable y electromovilidad deben validarse con el MINEM y el COES antes de oficializar.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "industria-textil",
@@ -2423,7 +2450,8 @@
     ],
     "recomendacion": "Apostar por la diferenciación premium de fibras peruanas (Pima, alpaca, vicuña) con trazabilidad y sostenibilidad, antes que competir por precio con Asia, y reactivar la cadena nacional del algodón. Validar cifras de exportación y empleo con PRODUCE, ADEX y SNI antes de oficializar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "metalurgia",
@@ -2506,7 +2534,8 @@
     ],
     "recomendacion": "Aprovechar la posición del Perú como gran productor de cobre para escalar refinación limpia y procesamiento de minerales críticos de la transición energética, condicionando el avance a la remediación ambiental y la licencia social. Validar cifras con MINEM, INGEMMET y OEFA antes de oficializar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "promocion-de-la-inversion",
@@ -2589,7 +2618,8 @@
     ],
     "recomendacion": "Priorizar la predictibilidad institucional, la simplificación de procesos y la licencia social como condiciones para destrabar y diversificar la inversión, vinculándola al cierre de brechas territoriales. Validar cifras de IED, inversión/PBI y cartera con ProInversión, MEF y BCRP antes de oficializar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "turismo",
@@ -2672,7 +2702,8 @@
     ],
     "recomendacion": "Diversificar la oferta más allá de Cusco/Machu Picchu, invirtiendo en conectividad y sostenibilidad, y apalancar la gastronomía como eje articulador, condicionando la recuperación a la estabilidad y seguridad. Validar cifras de llegadas, divisas y PBI turístico con MINCETUR y PROMPERU antes de oficializar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "biotecnologia",
@@ -2750,7 +2781,8 @@
     ],
     "recomendacion": "Priorizar la bioeconomía de la biodiversidad como ventaja comparativa peruana, con un marco de bioseguridad y reparto de beneficios claro. Validar cifras de I+D y talento con CONCYTEC e INEI.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "deporte",
@@ -2828,7 +2860,8 @@
     ],
     "recomendacion": "Encuadrar el deporte como política de salud pública con metas poblacionales medibles. Validar prevalencias de obesidad y actividad física con MINSA/INEI y ajustar metas.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "proyecto-pais-joven",
@@ -2906,7 +2939,8 @@
     ],
     "recomendacion": "Tratar el bono demográfico como ventana crítica y medible en el tiempo. Validar tasas de ninis, informalidad juvenil y acceso educativo con INEI y MTPE.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "vacunas-y-laboratorios",
@@ -2984,7 +3018,8 @@
     ],
     "recomendacion": "Iniciar por capacidades de llenado-envasado y regulación de referencia como pasos realistas hacia mayor soberanía. Validar coberturas de vacunación y capacidades del INS/DIGEMID con MINSA.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "capital-social",
@@ -3070,7 +3105,8 @@
     ],
     "recomendacion": "Validar las cifras con fuentes de opinión pública (Latinobarómetro, IEP, INEI) y con los reportes de conflictos de la Defensoría del Pueblo, que ofrecen series comparables. El capital social es difícil de medir con un solo indicador, por lo que se recomienda un tablero combinado de confianza, participación y conflictividad, y tratar todo el contenido como preliminar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "desarrollo-rural",
@@ -3156,7 +3192,8 @@
     ],
     "recomendacion": "Validar las cifras con INEI (ENAHO, ENDES, CENAGRO), MIDAGRI y MVCS, que mantienen estadísticas oficiales desagregadas por ámbito rural. Se recomienda priorizar el cierre simultáneo de brechas de servicios y de productividad, dado que actúan de forma interdependiente sobre la pobreza rural. Todo el contenido es preliminar y a validar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "etica",
@@ -3242,7 +3279,8 @@
     ],
     "recomendacion": "Validar las cifras con Transparencia Internacional (CPI), la Contraloría, la Secretaría de Integridad Pública de la PCM y SERVIR. Se recomienda usar un tablero combinado de percepción, cobertura de sistemas de integridad y resultados del control, evitando depender de un único indicador. Todo el contenido es preliminar y a validar por el equipo.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "IV. Estado Eficiente, Transparente y Descentralizado"
   },
   {
     "id": "innovacion",
@@ -3328,7 +3366,8 @@
     ],
     "recomendacion": "Validar las cifras con CONCYTEC, INDECOPI (patentes), la Encuesta Nacional de Innovación, RICYT, el Banco Mundial y el Índice Global de Innovación de la OMPI, que ofrecen series comparables internacionalmente. Se recomienda fijar primero una línea base oficial de inversión en I+D y densidad de investigadores, ya que condicionan el resto de metas. Todo el contenido es preliminar y a validar.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "quimica",
@@ -3421,7 +3460,8 @@
     ],
     "recomendacion": "Este perfil es mayormente cualitativo: las cifras de balanza comercial química, dependencia de fertilizantes y uso petroquímico del gas deben validarse con Produce, Sunat/Aduanas, BCRP y Minem antes de fijar metas numéricas. Definir primero los segmentos prioritarios de sustitución de importaciones.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "vivienda",
@@ -3514,7 +3554,8 @@
     ],
     "recomendacion": "Verificar las cifras de cobertura de agua y saneamiento con la ENAPRES/INEI más reciente y el déficit habitacional con el MVCS, ya que las definiciones varían. Priorizar el componente cualitativo del déficit y la asistencia técnica a la autoconstrucción por su impacto en seguridad sísmica.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "II. Equidad y Justicia Social"
   },
   {
     "id": "ciber-seguridad",
@@ -3607,7 +3648,8 @@
     ],
     "recomendacion": "Validar la posición del Perú en el Global Cybersecurity Index (UIT) y el estado del Centro Nacional de Seguridad Digital con la Secretaría de Gobierno y Transformación Digital (PCM) antes de fijar metas. Priorizar la protección de infraestructuras críticas y el cierre de la brecha de talento. Tema afín a las consultorías CND/CNSD del usuario.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "I. Democracia y Estado de Derecho"
   },
   {
     "id": "desarrollo-urbano",
@@ -3700,7 +3742,8 @@
     ],
     "recomendacion": "Confirmar el porcentaje de población urbana con el último censo/INEI y el déficit de áreas verdes y planes urbanos con el MVCS. Coordinar estrechamente con las comisiones de Vivienda e Infraestructura por su fuerte interdependencia. Priorizar planificación, movilidad sostenible y reducción de riesgo.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "forestal",
@@ -3793,7 +3836,8 @@
     ],
     "recomendacion": "Priorizar la articulación interinstitucional (MINAM, SERFOR, OSINFOR, MIDAGRI, fiscalías ambientales y gobiernos regionales) para enfrentar de forma integrada deforestación, minería ilegal y cultivos ilícitos, apalancando financiamiento climático internacional con trazabilidad y salvaguardas sociales. Validar las cifras de línea base con Geobosques/MINAM y SERFOR antes de fijar metas vinculantes.",
     "revision": true,
-    "nivel_confianza": "preliminar"
+    "nivel_confianza": "preliminar",
+    "eje_an": "III. Competitividad del País"
   },
   {
     "id": "inteligencia-artificial",
@@ -3886,6 +3930,7 @@
     ],
     "recomendacion": "Tratar la IA como política de Estado transversal y no como iniciativa aislada: priorizar simultáneamente talento, datos e infraestructura de cómputo, pues sin estos habilitadores la normativa pionera no se traduce en adopción real. Validar las cifras de I+D y conectividad con CONCYTEC e INEI, y definir metas de talento con base en un diagnóstico de oferta-demanda laboral antes de comprometer cifras.",
     "revision": true,
-    "nivel_confianza": "medio"
+    "nivel_confianza": "medio",
+    "eje_an": "III. Competitividad del País"
   }
 ]
