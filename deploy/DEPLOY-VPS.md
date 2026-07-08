@@ -62,19 +62,21 @@ Apunta el dominio/subdominio (registro A) a la IP del VPS. Caddy emite el certif
 
 ## Actualizaciones
 
-**Auto-deploy en cada push a `main`** (GitHub Actions → VPS). Ver `.github/workflows/deploy.yml`
-y `deploy/vps-apply.sh`. El flujo: push → Actions hace SSH al VPS con una **deploy key** cuyo
-`authorized_keys` tiene *forced-command* (solo ejecuta `vps-apply.sh`, no da shell) → el VPS hace
-`git pull`, actualiza sitio + `gateway.py` + unit (con **backup y rollback** si el servicio no
-levanta), recarga Caddy y hace healthcheck de `/api/ia`.
+**Auto-deploy en cada push a `main`** (GitHub Actions → VPS), con **verificación de firma**.
+Flujo: push (commit **firmado** con SSH) → Actions hace SSH con la **deploy key** cuyo
+`authorized_keys` tiene *forced-command* al **bootstrap inmutable** `/opt/pp2050/bin/vps-boot.sh`
+(root:root 700, FUERA del repo, no da shell). El bootstrap: `flock` → `git fetch` →
+**`git verify-commit origin/main`** contra `allowed_signers` (si no es una firma de confianza, **ABORTA**)
+→ `git reset --hard` → ejecuta `deploy/vps-apply.sh` (ya verificado), que actualiza sitio + `gateway.py`
++ unit con **backup/rollback** y healthcheck de `/api/ia`. Así, comprometer GitHub no basta: sin la
+llave de **firma** no hay deploy.
 
-Deploy manual (fallback): `bash deploy/deploy.sh` (solo estático) o, en el VPS,
-`sudo /opt/pp2050/repo/deploy/vps-apply.sh` (completo).
+Deploy manual (fallback): en el VPS, `sudo /opt/pp2050/bin/vps-boot.sh`.
 
 ### Setup una sola vez (en el VPS)
 
 ```bash
-# 1) Clon del repo público (sin credenciales)
+# 1) Clon del repo público
 sudo mkdir -p /opt/pp2050 && sudo git clone https://github.com/unimauro/plan-peru-2050.git /opt/pp2050/repo
 
 # 2) Llave (rotada) en archivo 600 — NO en el unit
@@ -82,9 +84,19 @@ sudo install -m600 /dev/stdin /etc/pp2050-gw.env <<'EOF'
 OPENROUTER_KEY=sk-or-v1-NUEVA_KEY_ROTADA
 EOF
 
-# 3) Deploy key con forced-command (pega la PÚBLICA de la deploy key):
-#    command="/opt/pp2050/repo/deploy/vps-apply.sh",no-pty,no-port-forwarding,no-agent-forwarding,no-X11-forwarding ssh-ed25519 AAAA... pp2050-deploy
+# 3) Firmantes de confianza (email + llave pública SSH con la que firmas los commits)
+echo "unimauro@gmail.com ssh-ed25519 AAAA..." | sudo tee /opt/pp2050/allowed_signers
+
+# 4) Bootstrap inmutable fuera del repo + permisos estrictos
+sudo install -o root -g root -m700 /opt/pp2050/repo/deploy/vps-boot.sh /opt/pp2050/bin/vps-boot.sh
+sudo chown -R root:root /opt/pp2050 && sudo chmod -R go-w /opt/pp2050
+
+# 5) Deploy key con forced-command → bootstrap:
+#    restrict,command="/opt/pp2050/bin/vps-boot.sh" ssh-ed25519 AAAA... pp2050-deploy
 sudo nano /root/.ssh/authorized_keys
 ```
+
+En tu máquina, firma los commits de este repo:
+`git config gpg.format ssh; git config user.signingkey ~/.ssh/id_ed25519.pub; git config commit.gpgsign true`
 
 En GitHub (repo → Settings → Secrets → Actions): `VPS_HOST`, `VPS_DEPLOY_KEY` (privada), `VPS_KNOWN_HOSTS`.
