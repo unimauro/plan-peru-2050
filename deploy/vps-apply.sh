@@ -62,8 +62,13 @@ if caddy validate --config /etc/caddy/Caddyfile >/dev/null 2>&1; then
 else
   echo "   ⚠ Caddy NO validó — NO se recargó (revisar a mano)"
 fi
-code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 -X POST \
-  http://127.0.0.1:3501/api/ia -H 'Content-Type: application/json' -d '{"q":"hola"}' || echo 000)
+code=000
+for i in $(seq 1 10); do
+  code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 12 -X POST \
+    http://127.0.0.1:3501/api/ia -H 'Content-Type: application/json' -d '{"q":"hola"}' || true)
+  case "$code" in 200|429) break;; esac
+  sleep 1
+done
 echo "   healthcheck /api/ia → HTTP $code"
 case "$code" in
   200|429) echo "✓ Deploy OK";;
