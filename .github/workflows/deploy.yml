@@ -1,0 +1,33 @@
+name: Deploy al VPS
+
+# En cada push a main, dispara el apply en el VPS por SSH.
+# La clave de deploy tiene forced-command en authorized_keys → solo puede
+# ejecutar deploy/vps-apply.sh (no da shell). Ver deploy/DEPLOY-VPS.md.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: vps-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar deploy en el VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_DEPLOY_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+          VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          install -d -m700 ~/.ssh
+          printf '%s\n' "$VPS_DEPLOY_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          # El comando remoto se ignora: authorized_keys fuerza vps-apply.sh.
+          ssh -i ~/.ssh/id_deploy -o IdentitiesOnly=yes \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              "root@${VPS_HOST}" apply

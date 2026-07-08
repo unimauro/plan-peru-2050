@@ -62,4 +62,29 @@ Apunta el dominio/subdominio (registro A) a la IP del VPS. Caddy emite el certif
 
 ## Actualizaciones
 
-Cada vez que cambien datos o documentos: `git push` (mantiene el versionado) y luego `bash deploy/deploy.sh`.
+**Auto-deploy en cada push a `main`** (GitHub Actions → VPS). Ver `.github/workflows/deploy.yml`
+y `deploy/vps-apply.sh`. El flujo: push → Actions hace SSH al VPS con una **deploy key** cuyo
+`authorized_keys` tiene *forced-command* (solo ejecuta `vps-apply.sh`, no da shell) → el VPS hace
+`git pull`, actualiza sitio + `gateway.py` + unit (con **backup y rollback** si el servicio no
+levanta), recarga Caddy y hace healthcheck de `/api/ia`.
+
+Deploy manual (fallback): `bash deploy/deploy.sh` (solo estático) o, en el VPS,
+`sudo /opt/pp2050/repo/deploy/vps-apply.sh` (completo).
+
+### Setup una sola vez (en el VPS)
+
+```bash
+# 1) Clon del repo público (sin credenciales)
+sudo mkdir -p /opt/pp2050 && sudo git clone https://github.com/unimauro/plan-peru-2050.git /opt/pp2050/repo
+
+# 2) Llave (rotada) en archivo 600 — NO en el unit
+sudo install -m600 /dev/stdin /etc/pp2050-gw.env <<'EOF'
+OPENROUTER_KEY=sk-or-v1-NUEVA_KEY_ROTADA
+EOF
+
+# 3) Deploy key con forced-command (pega la PÚBLICA de la deploy key):
+#    command="/opt/pp2050/repo/deploy/vps-apply.sh",no-pty,no-port-forwarding,no-agent-forwarding,no-X11-forwarding ssh-ed25519 AAAA... pp2050-deploy
+sudo nano /root/.ssh/authorized_keys
+```
+
+En GitHub (repo → Settings → Secrets → Actions): `VPS_HOST`, `VPS_DEPLOY_KEY` (privada), `VPS_KNOWN_HOSTS`.
