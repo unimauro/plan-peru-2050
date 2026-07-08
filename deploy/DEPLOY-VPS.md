@@ -62,16 +62,16 @@ Apunta el dominio/subdominio (registro A) a la IP del VPS. Caddy emite el certif
 
 ## Actualizaciones
 
-**Auto-deploy en cada push a `main`** (GitHub Actions → VPS), con **verificación de firma**.
-Flujo: push (commit **firmado** con SSH) → Actions hace SSH con la **deploy key** cuyo
-`authorized_keys` tiene *forced-command* al **bootstrap inmutable** `/opt/pp2050/bin/vps-boot.sh`
-(root:root 700, FUERA del repo, no da shell). El bootstrap: `flock` → `git fetch` →
-**`git verify-commit origin/main`** contra `allowed_signers` (si no es una firma de confianza, **ABORTA**)
-→ `git reset --hard` → ejecuta `deploy/vps-apply.sh` (ya verificado), que actualiza sitio + `gateway.py`
-+ unit con **backup/rollback** y healthcheck de `/api/ia`. Así, comprometer GitHub no basta: sin la
-llave de **firma** no hay deploy.
+**Auto-deploy por POLL en el VPS** (patrón "app viva" de megol/qhaway), con **verificación de firma**.
+Solo tráfico SALIENTE del VPS (no depende de SSH entrante desde datacenter, que Hostinger filtra a ratos).
+Flujo: `push` (commit **firmado** con SSH) → un **cron cada ~2 min** corre `/opt/pp2050/bin/vps-poll.sh`
+→ `git fetch`; si hay commit nuevo en `origin/main` → llama al **bootstrap** `/opt/pp2050/bin/vps-boot.sh`
+(root:root 700, fuera del repo): `flock` → **`git verify-commit`** contra `allowed_signers` (si la firma
+no es de confianza, **ABORTA**) → `git reset --hard` → `deploy/vps-apply.sh` (sitio + `gateway.py` + unit,
+con **backup/rollback** y healthcheck). Comprometer GitHub no basta: sin la llave de **firma** no hay deploy.
 
-Deploy manual (fallback): en el VPS, `sudo /opt/pp2050/bin/vps-boot.sh`.
+Forzar deploy YA (sin esperar el cron): en el VPS `sudo /opt/pp2050/bin/vps-boot.sh`, o desde tu laptop
+`ssh -i ~/.ssh/pp2050_deploy root@VPS` (la deploy key tiene forced-command al bootstrap).
 
 ### Setup una sola vez (en el VPS)
 
@@ -91,12 +91,14 @@ echo "unimauro@gmail.com ssh-ed25519 AAAA..." | sudo tee /opt/pp2050/allowed_sig
 sudo install -o root -g root -m700 /opt/pp2050/repo/deploy/vps-boot.sh /opt/pp2050/bin/vps-boot.sh
 sudo chown -R root:root /opt/pp2050 && sudo chmod -R go-w /opt/pp2050
 
-# 5) Deploy key con forced-command → bootstrap:
+# 5) Poll por cron (auto-deploy) + bootstrap fuera del repo
+sudo install -o root -g root -m700 /opt/pp2050/repo/deploy/vps-poll.sh /opt/pp2050/bin/vps-poll.sh
+( sudo crontab -l 2>/dev/null; echo '*/2 * * * * /opt/pp2050/bin/vps-poll.sh >> /var/log/pp2050-deploy.log 2>&1' ) | sudo crontab -
+
+# 6) (opcional) Deploy key para forzar deploy desde tu laptop, con forced-command → bootstrap:
 #    restrict,command="/opt/pp2050/bin/vps-boot.sh" ssh-ed25519 AAAA... pp2050-deploy
 sudo nano /root/.ssh/authorized_keys
 ```
 
 En tu máquina, firma los commits de este repo:
 `git config gpg.format ssh; git config user.signingkey ~/.ssh/id_ed25519.pub; git config commit.gpgsign true`
-
-En GitHub (repo → Settings → Secrets → Actions): `VPS_HOST`, `VPS_DEPLOY_KEY` (privada), `VPS_KNOWN_HOSTS`.
