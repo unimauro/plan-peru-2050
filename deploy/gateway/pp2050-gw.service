@@ -9,19 +9,16 @@ DynamicUser=true
 ExecStart=/usr/bin/python3 /opt/pp2050-gw/gateway.py
 Restart=on-failure
 RestartSec=3
-# Las llaves (OPENROUTER_KEY / GEMINI_API_KEY) viven en un archivo aparte con permisos 600,
-# NO en este unit (que suele ser world-readable via `systemctl show`).
+# El LLM lo hace ai.tunky.net (la OPENROUTER_KEY vive SOLO allí). Aquí solo un
+# X-Client-Token revocable, en archivo aparte 600 (no en el unit, no en el cliente):
 #   sudo install -m600 /dev/stdin /etc/pp2050-gw.env <<'EOF'
-#   OPENROUTER_KEY=sk-or-v1-...
-#   # GEMINI_API_KEY=AIza...
+#   PP2050_AITUNKY_TOKEN=pp2050_...
 #   EOF
 EnvironmentFile=/etc/pp2050-gw.env
 Environment=PP2050_DATA=/var/www/plan-peru-2050/data
 Environment=PP2050_GW_PORT=3501
-# Modelo principal Gemini 2.5 Flash LITE (el Gemini más barato de OpenRouter) + fallbacks.
-Environment=PP2050_MODELS=google/gemini-2.5-flash-lite,google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct
-# Alternativa: Gemini NATIVO (aún más barato, como liti.app). Ponlo en /etc/pp2050-gw.env:
-#   GEMINI_API_KEY=AIza...  /  Environment=GEMINI_MODEL=gemini-flash-latest
+Environment=PP2050_AITUNKY_PROJECT=plan-peru-2050
+Environment=PP2050_AITUNKY_ORIGIN=https://planperu2050.pe
 # Tope GLOBAL de consultas/día (freno de costo) y orígenes CORS permitidos:
 Environment=PP2050_DAILY_MAX=1500
 Environment=PP2050_ALLOWED_ORIGINS=https://planperu2050.pe,https://www.planperu2050.pe,https://plan2050.tunky.net
