@@ -30,9 +30,17 @@ jobs:
           chmod 600 ~/.ssh/id_deploy
           printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/known_hosts
           # El comando remoto se ignora: authorized_keys fuerza vps-boot.sh.
-          ssh -i ~/.ssh/id_deploy \
+          # Reintentos ante blips de red datacenter→Hostinger (timeout SSH transitorio).
+          n=0
+          until ssh -i ~/.ssh/id_deploy \
               -o IdentitiesOnly=yes \
               -o StrictHostKeyChecking=yes \
               -o BatchMode=yes \
+              -o ConnectTimeout=25 \
+              -o ServerAliveInterval=15 -o ServerAliveCountMax=4 \
               -o UserKnownHostsFile=~/.ssh/known_hosts \
-              "root@${VPS_HOST}" apply
+              "root@${VPS_HOST}" apply; do
+            n=$((n+1))
+            [ "$n" -ge 3 ] && { echo "✗ SSH falló tras $n intentos"; exit 1; }
+            echo "· Reintentando SSH en 25s (intento $((n+1))/3)…"; sleep 25
+          done
