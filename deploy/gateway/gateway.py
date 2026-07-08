@@ -85,7 +85,9 @@ STOP = set("para con los las del una unos unas que como mas pero por sobre este 
            "dime dame cuentame explica habla acerca informacion".split())
 
 def retrieve(q, k=3):
-    terms = [w for w in re.split(r"\s+", norm(q)) if len(w) > 3 and w not in STOP]
+    # findall de tokens alfanuméricos: descarta signos (?,¿,.) que antes quedaban pegados
+    # al término (p.ej. "salud?") y rompían el match contra los nombres de comisión.
+    terms = [w for w in re.findall(r"[a-z0-9]+", norm(q)) if len(w) > 3 and w not in STOP]
     scored = []
     for c in COMS:
         name = norm(c.get("nombre", ""))
