@@ -176,7 +176,6 @@ function renderGrid() {
     card.innerHTML = `
       ${badge}
       ${c.eje_an ? `<div class="eje" style="color:${ejeColor(c.eje_an)}">${esc(c.eje_an)}</div>` : `<div class="eje">Comisión temática</div>`}
-      ${c.eje ? `<div class="eje-sub" style="color:var(--mut2);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em">${esc(c.eje)}</div>` : ""}
       <h3>${esc(c.nombre)}</h3>
       <p>${esc(c.resumen || "Comisión del Plan Perú 2050. Redacción en proceso.")}</p>
       ${has ? `<div class="mini"><span><b>${((c.objetivos_estrategicos || c.metas) || []).length}</b> objetivos</span><span><b>${nInd}</b> indicadores</span><span><b>${(c.cien_dias || []).length}</b> hitos 100d</span></div>` : ""}`;
@@ -204,7 +203,6 @@ function openDetail(id) {
   s.innerHTML = `
     <button class="close" onclick="closeDetail()">×</button>
     ${c.eje_an ? `<div class="eje" style="color:${ejeColor(c.eje_an)};font-size:.74rem;letter-spacing:.04em;font-weight:700">${esc(c.eje_an)}</div>` : ""}
-    ${c.eje ? `<div class="eje" style="color:var(--mut2);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600">${esc(c.eje)}</div>` : ""}
     <h2 class="serif">${esc(c.nombre)}</h2>
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
@@ -362,7 +360,7 @@ function renderOverview() {
     CHARTS.avance = new Chart(a, {
       type: "bar",
       data: { labels: det.map((x) => x.c.nombre.length > 22 ? x.c.nombre.slice(0, 20) + "…" : x.c.nombre),
-        datasets: [{ data: det.map((x) => +x.av.toFixed(1)), backgroundColor: det.map((x) => ejeColor(x.c.eje)), borderRadius: 6 }] },
+        datasets: [{ data: det.map((x) => +x.av.toFixed(1)), backgroundColor: det.map((x) => ejeColor(x.c.eje_an)), borderRadius: 6 }] },
       options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: (i) => ` ${i.raw}% de avance hacia 2050` } } },
         scales: { x: { max: 100, grid: { color: "#1e2840" }, ticks: { callback: (v) => v + "%" } }, y: { grid: { display: false } } },
         onClick: (e, els) => { if (els[0]) openDetail(det[els[0].index].c.id); } },
@@ -372,8 +370,8 @@ function renderOverview() {
   const e = document.getElementById("chartEjes");
   if (e) {
     const byEje = {};
-    detailed().forEach((c) => { if (c.eje) byEje[c.eje] = (byEje[c.eje] || 0) + 1; });
-    const labels = Object.keys(byEje);
+    detailed().forEach((c) => { if (c.eje_an) byEje[c.eje_an] = (byEje[c.eje_an] || 0) + 1; });
+    const labels = Object.keys(byEje).sort();
     CHARTS.ejes && CHARTS.ejes.destroy();
     CHARTS.ejes = new Chart(e, {
       type: "doughnut",
@@ -384,14 +382,14 @@ function renderOverview() {
   // Cobertura por eje (validadas vs en revisión, apilado)
   const cv = document.getElementById("chartCobertura");
   if (cv) {
-    const ejesAll = [...new Set(detailed().map((c) => c.eje).filter(Boolean))].sort();
+    const ejesAll = [...new Set(detailed().map((c) => c.eje_an).filter(Boolean))].sort();
     CHARTS.cobertura && CHARTS.cobertura.destroy();
     CHARTS.cobertura = new Chart(cv, {
       type: "bar",
       data: { labels: ejesAll.map((e) => (e.length > 20 ? e.slice(0, 18) + "…" : e)),
         datasets: [
-          { label: "Validadas", data: ejesAll.map((e) => validated().filter((c) => c.eje === e).length), backgroundColor: "#2ed47a", borderRadius: 4 },
-          { label: "En revisión", data: ejesAll.map((e) => reviewed().filter((c) => c.eje === e).length), backgroundColor: "#e0a52e", borderRadius: 4 },
+          { label: "Validadas", data: ejesAll.map((e) => validated().filter((c) => c.eje_an === e).length), backgroundColor: "#2ed47a", borderRadius: 4 },
+          { label: "En revisión", data: ejesAll.map((e) => reviewed().filter((c) => c.eje_an === e).length), backgroundColor: "#e0a52e", borderRadius: 4 },
         ] },
       options: { indexAxis: "y", plugins: { legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { x: { stacked: true, grid: { color: "#1e2840" } }, y: { stacked: true, grid: { display: false } } } },
