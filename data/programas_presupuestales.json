@@ -1,0 +1,644 @@
+{
+  "fuente": "MEF Consulta Amigable (vía ETL qhaway-dashboard)",
+  "anio": 2026,
+  "total": 91,
+  "programas": [
+    {
+      "codigo": "0002",
+      "nombre": "SALUD MATERNO NEONATAL",
+      "devengado": 1426092559.0,
+      "pim": 2716073056.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0016",
+      "nombre": "TBC-VIH/SIDA",
+      "devengado": 396848292.0,
+      "pim": 941947548.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0017",
+      "nombre": "ENFERMEDADES METAXENICAS Y ZOONOSIS",
+      "devengado": 238104980.0,
+      "pim": 505258808.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0018",
+      "nombre": "ENFERMEDADES NO TRANSMISIBLES",
+      "devengado": 447608766.0,
+      "pim": 821507380.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0024",
+      "nombre": "PREVENCION Y CONTROL DEL CANCER",
+      "devengado": 705089698.0,
+      "pim": 1482324559.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0030",
+      "nombre": "REDUCCION DE DELITOS Y FALTAS QUE AFECTAN LA SEGURIDAD CIUDADANA",
+      "devengado": 3217395314.0,
+      "pim": 7289825592.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0031",
+      "nombre": "REDUCCION DEL TRAFICO ILICITO DE DROGAS",
+      "devengado": 136989141.0,
+      "pim": 296371784.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0032",
+      "nombre": "LUCHA CONTRA EL TERRORISMO",
+      "devengado": 52982645.0,
+      "pim": 236639436.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0036",
+      "nombre": "GESTION INTEGRAL DE RESIDUOS SOLIDOS",
+      "devengado": 1265102845.0,
+      "pim": 2955863674.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0039",
+      "nombre": "MEJORA DE LA SANIDAD ANIMAL",
+      "devengado": 48441439.0,
+      "pim": 126935551.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0040",
+      "nombre": "MEJORA Y MANTENIMIENTO DE LA SANIDAD VEGETAL",
+      "devengado": 65990843.0,
+      "pim": 175217489.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0041",
+      "nombre": "MEJORA DE LA INOCUIDAD AGROALIMENTARIA",
+      "devengado": 33233549.0,
+      "pim": 79284535.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0042",
+      "nombre": "APROVECHAMIENTO DE LOS RECURSOS HIDRICOS PARA USO AGRARIO",
+      "devengado": 989577684.0,
+      "pim": 2874218473.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0046",
+      "nombre": "ACCESO Y USO DE LA ELECTRIFICACION RURAL",
+      "devengado": 217887553.0,
+      "pim": 541816063.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0047",
+      "nombre": "ACCESO Y USO ADECUADO DE LOS SERVICIOS PUBLICOS DE TELECOMUNICACIONES E INFORMACION ASOCIADOS",
+      "devengado": 226921052.0,
+      "pim": 757891587.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0048",
+      "nombre": "PREVENCION Y ATENCION DE INCENDIOS, EMERGENCIAS MEDICAS, RESCATES Y OTROS",
+      "devengado": 22420881.0,
+      "pim": 95269842.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0049",
+      "nombre": "PROGRAMA NACIONAL DE APOYO DIRECTO A LOS MAS POBRES",
+      "devengado": 376280176.0,
+      "pim": 1048261224.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0051",
+      "nombre": "PREVENCION Y TRATAMIENTO DEL CONSUMO DE DROGAS",
+      "devengado": 12097572.0,
+      "pim": 43130401.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0057",
+      "nombre": "CONSERVACION DE LA DIVERSIDAD BIOLOGICA Y APROVECHAMIENTO SOSTENIBLE DE LOS RECURSOS NATURALES EN AREA NATURAL PROTEGIDA",
+      "devengado": 64773015.0,
+      "pim": 154887561.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0058",
+      "nombre": "ACCESO DE LA POBLACION A LA PROPIEDAD PREDIAL FORMALIZADA",
+      "devengado": 22311075.0,
+      "pim": 53627642.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0062",
+      "nombre": "OPTIMIZACION DE LA POLITICA DE PROTECCION Y ATENCION A LAS COMUNIDADES PERUANAS EN EL EXTERIOR",
+      "devengado": 152778660.0,
+      "pim": 286168854.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0065",
+      "nombre": "APROVECHAMIENTO DE LAS OPORTUNIDADES COMERCIALES BRINDADAS POR LOS PRINCIPALES SOCIOS COMERCIALES DEL PERU",
+      "devengado": 52558249.0,
+      "pim": 146653271.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0066",
+      "nombre": "FORMACION UNIVERSITARIA DE PREGRADO",
+      "devengado": 1553163336.0,
+      "pim": 4302857825.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0067",
+      "nombre": "CELERIDAD EN LOS PROCESOS JUDICIALES DE FAMILIA",
+      "devengado": 95549008.0,
+      "pim": 210850274.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0068",
+      "nombre": "REDUCCION DE VULNERABILIDAD Y ATENCION DE EMERGENCIAS POR DESASTRES",
+      "devengado": 1161924466.0,
+      "pim": 3047837216.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0072",
+      "nombre": "PROGRAMA DE DESARROLLO ALTERNATIVO INTEGRAL Y SOSTENIBLE - PIRDAIS",
+      "devengado": 77050067.0,
+      "pim": 232713765.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0073",
+      "nombre": "PROGRAMA PARA LA GENERACION DEL EMPLEO SOCIAL INCLUSIVO - TRABAJA PERU",
+      "devengado": 262608941.0,
+      "pim": 635958174.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0074",
+      "nombre": "GESTION INTEGRADA Y EFECTIVA DEL CONTROL DE OFERTA DE DROGAS EN EL PERU",
+      "devengado": 1781902.0,
+      "pim": 108047185.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0079",
+      "nombre": "ACCESO DE LA POBLACION A LA IDENTIDAD",
+      "devengado": 147641117.0,
+      "pim": 369596015.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0082",
+      "nombre": "PROGRAMA NACIONAL DE SANEAMIENTO URBANO",
+      "devengado": 1215861360.0,
+      "pim": 2779103833.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0083",
+      "nombre": "PROGRAMA NACIONAL DE SANEAMIENTO RURAL",
+      "devengado": 943857714.0,
+      "pim": 2824479858.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0086",
+      "nombre": "MEJORA DE LOS SERVICIOS DEL SISTEMA DE JUSTICIA PENAL",
+      "devengado": 1797325078.0,
+      "pim": 3769635918.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0087",
+      "nombre": "INCREMENTO DE LA COMPETIVIDAD DEL SECTOR ARTESANIA",
+      "devengado": 10441024.0,
+      "pim": 26839606.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0089",
+      "nombre": "REDUCCION DE LA DEGRADACION DE LOS SUELOS AGRARIOS",
+      "devengado": 23333357.0,
+      "pim": 43752841.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0090",
+      "nombre": "LOGROS DE APRENDIZAJE DE ESTUDIANTES DE LA EDUCACION BASICA REGULAR",
+      "devengado": 15242857185.0,
+      "pim": 30361618503.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0093",
+      "nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS",
+      "devengado": 36661924.0,
+      "pim": 96828309.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0094",
+      "nombre": "ORDENAMIENTO Y DESARROLLO DE LA ACUICULTURA",
+      "devengado": 16072189.0,
+      "pim": 44583141.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0095",
+      "nombre": "FORTALECIMIENTO DE LA PESCA ARTESANAL",
+      "devengado": 34187365.0,
+      "pim": 85532039.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0096",
+      "nombre": "GESTION DE LA CALIDAD DEL AIRE",
+      "devengado": 1683893.0,
+      "pim": 8650456.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0097",
+      "nombre": "PROGRAMA NACIONAL DE ASISTENCIA SOLIDARIA PENSION 65",
+      "devengado": 647375393.0,
+      "pim": 1315684035.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0099",
+      "nombre": "CELERIDAD DE LOS PROCESOS JUDICIALES LABORALES",
+      "devengado": 91498002.0,
+      "pim": 188331802.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0101",
+      "nombre": "INCREMENTO DE LA PRACTICA DE ACTIVIDADES FISICAS, DEPORTIVAS Y RECREATIVAS EN LA POBLACION PERUANA",
+      "devengado": 895293661.0,
+      "pim": 2583661054.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0103",
+      "nombre": "FORTALECIMIENTO DE LAS CONDICIONES LABORALES",
+      "devengado": 106657319.0,
+      "pim": 278267392.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0104",
+      "nombre": "REDUCCION DE LA MORTALIDAD POR EMERGENCIAS Y URGENCIAS MEDICAS",
+      "devengado": 673564307.0,
+      "pim": 1282686371.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0106",
+      "nombre": "INCLUSION DE NIÑOS, NIÑAS Y JOVENES CON DISCAPACIDAD EN LA EDUCACION BASICA Y TECNICO PRODUCTIVA",
+      "devengado": 171677791.0,
+      "pim": 362272824.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0107",
+      "nombre": "MEJORA DE  LA FORMACION EN CARRERAS DOCENTES EN INSTITUTOS DE EDUCACION SUPERIOR NO UNIVERSITARIA",
+      "devengado": 225593950.0,
+      "pim": 526659670.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0109",
+      "nombre": "NUESTRAS CIUDADES",
+      "devengado": 65309049.0,
+      "pim": 193520189.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0110",
+      "nombre": "FISCALIZACION ADUANERA",
+      "devengado": 29894971.0,
+      "pim": 65512692.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0111",
+      "nombre": "APOYO AL HABITAT RURAL",
+      "devengado": 16114535.0,
+      "pim": 25894498.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0113",
+      "nombre": "SERVICIOS REGISTRALES ACCESIBLES Y OPORTUNOS CON COBERTURA UNIVERSAL",
+      "devengado": 274761050.0,
+      "pim": 561688936.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0114",
+      "nombre": "PROTECCION AL CONSUMIDOR",
+      "devengado": 22197362.0,
+      "pim": 50989442.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0115",
+      "nombre": "PROGRAMA NACIONAL DE ALIMENTACION ESCOLAR",
+      "devengado": 628842313.0,
+      "pim": 2515601364.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0116",
+      "nombre": "MEJORAMIENTO DE LA EMPLEABILIDAD E INSERCION LABORAL-PROEMPLEO",
+      "devengado": 14729220.0,
+      "pim": 44469064.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0117",
+      "nombre": "ATENCION OPORTUNA DE NIÑAS, NIÑOS Y ADOLESCENTES EN PRESUNTO ESTADO DE ABANDONO",
+      "devengado": 137725344.0,
+      "pim": 324606978.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0118",
+      "nombre": "ACCESO DE HOGARES RURALES CON ECONOMIAS DE SUBSISTENCIA A MERCADOS LOCALES - HAKU WIÑAY",
+      "devengado": 226887571.0,
+      "pim": 259898799.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0119",
+      "nombre": "CELERIDAD EN LOS PROCESOS JUDICIALES CIVIL-COMERCIAL",
+      "devengado": 11254375.0,
+      "pim": 18753172.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0120",
+      "nombre": "REMEDIACION DE PASIVOS AMBIENTALES MINEROS",
+      "devengado": 253188.0,
+      "pim": 35452310.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0121",
+      "nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO",
+      "devengado": 248201479.0,
+      "pim": 670905528.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0122",
+      "nombre": "ACCESO Y PERMANENCIA DE POBLACION CON ALTO RENDIMIENTO ACADEMICO A UNA EDUCACION SUPERIOR DE CALIDAD",
+      "devengado": 641300038.0,
+      "pim": 1474772326.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0123",
+      "nombre": "MEJORA DE LAS COMPETENCIAS DE LA POBLACION PENITENCIARIA PARA SU REINSERCION SOCIAL POSITIVA",
+      "devengado": 459739407.0,
+      "pim": 1024529397.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0124",
+      "nombre": "MEJORA DE LA PROVISIÓN DE LOS SERVICIOS DE TELECOMUNICACIONES",
+      "devengado": 26171475.0,
+      "pim": 64119427.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0125",
+      "nombre": "MEJORA DE LA EFICIENCIA DE LOS PROCESOS ELECTORALES E INCREMENTO DE LA PARTICIPACION POLITICA DE LA CIUDADANIA",
+      "devengado": 805720034.0,
+      "pim": 1774432155.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0126",
+      "nombre": "FORMALIZACION MINERA DE LA PEQUEÑA MINERIA Y MINERIA ARTESANAL",
+      "devengado": 4674965.0,
+      "pim": 14862661.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0127",
+      "nombre": "MEJORA DE LA COMPETITIVIDAD DE LOS DESTINOS TURISTICOS",
+      "devengado": 164079409.0,
+      "pim": 618701721.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0128",
+      "nombre": "REDUCCION DE LA MINERIA ILEGAL",
+      "devengado": 49088315.0,
+      "pim": 178530944.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0129",
+      "nombre": "PREVENCION Y MANEJO DE CONDICIONES SECUNDARIAS DE SALUD EN PERSONAS CON DISCAPACIDAD",
+      "devengado": 78652392.0,
+      "pim": 151245180.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0130",
+      "nombre": "COMPETITIVIDAD Y APROVECHAMIENTO SOSTENIBLE DE LOS RECURSOS FORESTALES Y DE LA FAUNA SILVESTRE",
+      "devengado": 102303611.0,
+      "pim": 267847924.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0131",
+      "nombre": "CONTROL Y PREVENCION EN SALUD MENTAL",
+      "devengado": 344725740.0,
+      "pim": 732302963.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0132",
+      "nombre": "PUESTA EN VALOR Y USO SOCIAL DEL PATRIMONIO CULTURAL",
+      "devengado": 127217705.0,
+      "pim": 339086245.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0133",
+      "nombre": "FORTALECIMIENTO DE LA POLITICA EXTERIOR Y DE LA ACCION DIPLOMATICA",
+      "devengado": 349301641.0,
+      "pim": 560501499.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0134",
+      "nombre": "PROMOCION DE LA INVERSION PRIVADA",
+      "devengado": 34108666.0,
+      "pim": 192785518.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0135",
+      "nombre": "MEJORA DE LAS CAPACIDADES MILITARES PARA LA DEFENSA Y EL DESARROLLO NACIONAL",
+      "devengado": 4794924931.0,
+      "pim": 9062920783.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0137",
+      "nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA",
+      "devengado": 38591214.0,
+      "pim": 170168186.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0138",
+      "nombre": "REDUCCION DEL COSTO, TIEMPO E INSEGURIDAD EN EL SISTEMA DE TRANSPORTE",
+      "devengado": 5030124135.0,
+      "pim": 14329394748.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0139",
+      "nombre": "DISMINUCION DE LA INCIDENCIA DE LOS CONFLICTOS, PROTESTAS Y MOVILIZACIONES SOCIALES VIOLENTAS QUE ALTERAN EL ORDEN PUBLICO",
+      "devengado": 438435777.0,
+      "pim": 859818075.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0140",
+      "nombre": "DESARROLLO Y PROMOCION DE LAS ARTES E INDUSTRIAS CULTURALES",
+      "devengado": 60514941.0,
+      "pim": 220451646.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0141",
+      "nombre": "PROTECCION DE LA PROPIEDAD INTELECTUAL",
+      "devengado": 10689055.0,
+      "pim": 23969637.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0142",
+      "nombre": "ACCESO DE PERSONAS ADULTAS MAYORES A SERVICIOS ESPECIALIZADOS",
+      "devengado": 34671225.0,
+      "pim": 91787670.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0143",
+      "nombre": "CELERIDAD, PREDICTIBILIDAD Y ACCCESO DE LOS PROCESOS JUDICIALES TRIBUTARIOS, ADUANEROS Y DE TEMAS DE MERCADO",
+      "devengado": 11893485.0,
+      "pim": 30448630.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0144",
+      "nombre": "CONSERVACION Y USO SOSTENIBLE DE ECOSISTEMAS PARA LA PROVISION DE SERVICIOS ECOSISTEMICOS",
+      "devengado": 236518538.0,
+      "pim": 551522267.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0145",
+      "nombre": "MEJORA DE LA CALIDAD DEL SERVICIO ELECTRICO",
+      "devengado": 2399828.0,
+      "pim": 8687552.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0146",
+      "nombre": "ACCESO DE LAS FAMILIAS A VIVIENDA Y ENTORNO URBANO ADECUADO",
+      "devengado": 1435164637.0,
+      "pim": 1905201537.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0147",
+      "nombre": "FORTALECIMIENTO DE LA EDUCACION SUPERIOR TECNOLOGICA",
+      "devengado": 317583952.0,
+      "pim": 802766617.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0148",
+      "nombre": "REDUCCION DEL TIEMPO, INSEGURIDAD Y COSTO AMBIENTAL EN EL TRANSPORTE URBANO",
+      "devengado": 2828628727.0,
+      "pim": 6471033502.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0149",
+      "nombre": "MEJORA DEL DESEMPEÑO EN LAS CONTRATACIONES PUBLICAS",
+      "devengado": 52611977.0,
+      "pim": 129943097.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0150",
+      "nombre": "INCREMENTO EN EL ACCESO DE LA POBLACION A LOS SERVICIOS EDUCATIVOS PUBLICOS DE LA EDUCACION BASICA",
+      "devengado": 211456979.0,
+      "pim": 555558307.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "0151",
+      "nombre": "REDUCCION DE LA CORRUPCION EN EL USO DE LOS RECURSOS PUBLICOS",
+      "devengado": 256131533.0,
+      "pim": 549464304.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "1001",
+      "nombre": "PRODUCTOS ESPECIFICOS PARA DESARROLLO INFANTIL TEMPRANO",
+      "devengado": 1828823907.0,
+      "pim": 3842560354.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "1002",
+      "nombre": "PRODUCTOS ESPECIFICOS PARA REDUCCION DE LA VIOLENCIA CONTRA LA MUJER",
+      "devengado": 276886804.0,
+      "pim": 592189178.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "9001",
+      "nombre": "ACCIONES CENTRALES",
+      "devengado": 12690840718.0,
+      "pim": 31679478996.0,
+      "anio": 2026
+    },
+    {
+      "codigo": "9002",
+      "nombre": "ASIGNACIONES PRESUPUESTARIAS QUE NO RESULTAN EN PRODUCTOS",
+      "devengado": 46957209388.0,
+      "pim": 109398572438.0,
+      "anio": 2026
+    }
+  ]
+}

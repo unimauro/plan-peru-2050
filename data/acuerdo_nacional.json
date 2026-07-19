@@ -1,0 +1,216 @@
+{
+  "fuente": "Acuerdo Nacional — acuerdonacional.pe (políticas de estado)",
+  "nota": "Nivel 1 (4 ejes) y nivel 2 (36 políticas de estado). Nivel 3 (objetivos por política) pendiente de cargar. Políticas 32-36 marcadas por_validar: su agrupación por eje varía según fuente, requiere revisión humana.",
+  "total_politicas": 36,
+  "ejes": [
+    {
+      "id": "I",
+      "nombre": "I. Democracia y Estado de Derecho",
+      "politicas": [
+        {
+          "n": 1,
+          "nombre": "Fortalecimiento del régimen democrático y del Estado de derecho",
+          "objetivos": []
+        },
+        {
+          "n": 2,
+          "nombre": "Democratización de la vida política y fortalecimiento del sistema de partidos",
+          "objetivos": []
+        },
+        {
+          "n": 3,
+          "nombre": "Afirmación de la identidad nacional",
+          "objetivos": []
+        },
+        {
+          "n": 4,
+          "nombre": "Institucionalización del diálogo y la concertación",
+          "objetivos": []
+        },
+        {
+          "n": 5,
+          "nombre": "Gobierno en función de objetivos con planeamiento estratégico, prospectiva nacional y procedimientos transparentes",
+          "objetivos": []
+        },
+        {
+          "n": 6,
+          "nombre": "Política exterior para la paz, la democracia, el desarrollo y la integración",
+          "objetivos": []
+        },
+        {
+          "n": 7,
+          "nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
+          "objetivos": []
+        },
+        {
+          "n": 8,
+          "nombre": "Descentralización política, económica y administrativa para propiciar el desarrollo integral, armónico y sostenido del Perú",
+          "objetivos": []
+        },
+        {
+          "n": 9,
+          "nombre": "Política de Seguridad Nacional",
+          "objetivos": []
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "nombre": "II. Equidad y Justicia Social",
+      "politicas": [
+        {
+          "n": 10,
+          "nombre": "Reducción de la pobreza",
+          "objetivos": []
+        },
+        {
+          "n": 11,
+          "nombre": "Promoción de la igualdad de oportunidades sin discriminación",
+          "objetivos": []
+        },
+        {
+          "n": 12,
+          "nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "objetivos": []
+        },
+        {
+          "n": 13,
+          "nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "objetivos": []
+        },
+        {
+          "n": 14,
+          "nombre": "Acceso al empleo pleno, digno y productivo",
+          "objetivos": []
+        },
+        {
+          "n": 15,
+          "nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "objetivos": []
+        },
+        {
+          "n": 16,
+          "nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud",
+          "objetivos": []
+        },
+        {
+          "n": 36,
+          "nombre": "Desarrollo Infantil Temprano",
+          "objetivos": [],
+          "por_validar": true
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "nombre": "III. Competitividad del País",
+      "politicas": [
+        {
+          "n": 17,
+          "nombre": "Afirmación de la economía social de mercado",
+          "objetivos": []
+        },
+        {
+          "n": 18,
+          "nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "objetivos": []
+        },
+        {
+          "n": 19,
+          "nombre": "Desarrollo sostenible y gestión ambiental",
+          "objetivos": []
+        },
+        {
+          "n": 20,
+          "nombre": "Desarrollo de la ciencia y la tecnología",
+          "objetivos": []
+        },
+        {
+          "n": 21,
+          "nombre": "Desarrollo en infraestructura y vivienda",
+          "objetivos": []
+        },
+        {
+          "n": 22,
+          "nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "objetivos": []
+        },
+        {
+          "n": 23,
+          "nombre": "Política de desarrollo agrario y rural",
+          "objetivos": []
+        },
+        {
+          "n": 33,
+          "nombre": "Política de Estado sobre los recursos hídricos",
+          "objetivos": [],
+          "por_validar": true
+        },
+        {
+          "n": 34,
+          "nombre": "Ordenamiento y gestión territorial",
+          "objetivos": [],
+          "por_validar": true
+        },
+        {
+          "n": 35,
+          "nombre": "Sociedad de la información y sociedad del conocimiento",
+          "objetivos": [],
+          "por_validar": true
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "nombre": "IV. Estado Eficiente, Transparente y Descentralizado",
+      "politicas": [
+        {
+          "n": 24,
+          "nombre": "Afirmación de un Estado eficiente y transparente",
+          "objetivos": []
+        },
+        {
+          "n": 25,
+          "nombre": "Cautela de la institucionalidad de las Fuerzas Armadas y su servicio a la democracia",
+          "objetivos": []
+        },
+        {
+          "n": 26,
+          "nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+          "objetivos": []
+        },
+        {
+          "n": 27,
+          "nombre": "Erradicación de la producción, el tráfico y el consumo ilegal de drogas",
+          "objetivos": []
+        },
+        {
+          "n": 28,
+          "nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial",
+          "objetivos": []
+        },
+        {
+          "n": 29,
+          "nombre": "Acceso a la información, libertad de expresión y libertad de prensa",
+          "objetivos": []
+        },
+        {
+          "n": 30,
+          "nombre": "Eliminación del terrorismo y afirmación de la reconciliación nacional",
+          "objetivos": []
+        },
+        {
+          "n": 31,
+          "nombre": "Sostenibilidad fiscal y reducción del peso de la deuda",
+          "objetivos": []
+        },
+        {
+          "n": 32,
+          "nombre": "Gestión del Riesgo de Desastres",
+          "objetivos": [],
+          "por_validar": true
+        }
+      ]
+    }
+  ]
+}
