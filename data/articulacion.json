@@ -1,0 +1,2809 @@
+{
+  "fuente": "IA (multi-agente) — PROPUESTA a validar por humano",
+  "metodo": "igual_similar/desagregado/causal por comisión",
+  "total_comisiones": 64,
+  "articulaciones": [
+    {
+      "comision_id": "peru-en-la-era-digital",
+      "comision_nombre": "Perú en la Era Digital",
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda la era digital como fenómeno transversal de desarrollo (competencias digitales, alfabetización en IA, sociedad conectada), que es exactamente el objeto de la Política 35 'Sociedad de la información y sociedad del conocimiento'.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 24,
+          "tipo": "causal",
+          "justificacion": "Los objetivos de 90% de servicios públicos digitales de extremo a extremo, identidad digital e interoperabilidad plenamente implementadas son medios que producen un Estado eficiente y transparente (Política 24).",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "El objetivo de 70% de mipymes formales con adopción digital productiva y ecosistemas regionales de innovación digital busca elevar la competitividad y productividad de la actividad económica (Política 18), coherente con el eje III de Competitividad del País.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0047",
+          "tipo": "igual_similar",
+          "justificacion": "El PP de acceso y uso de servicios públicos de telecomunicaciones e información corresponde directamente al objetivo de la comisión de conectividad significativa universal en hogares, escuelas, centros de salud, comisarías y municipalidades.",
+          "pp_nombre": "ACCESO Y USO ADECUADO DE LOS SERVICIOS PUBLICOS DE TELECOMUNICACIONES E INFORMACION ASOCIADOS"
+        },
+        {
+          "codigo": "0124",
+          "tipo": "causal",
+          "justificacion": "Mejorar la provisión de los servicios de telecomunicaciones es condición habilitante de la infraestructura digital territorial (fibra, 5G/6G, nube, centros de datos) que la comisión plantea desplegar.",
+          "pp_nombre": "MEJORA DE LA PROVISIÓN DE LOS SERVICIOS DE TELECOMUNICACIONES"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "El desarrollo de ciencia, tecnología e innovación tecnológica sustenta los ecosistemas regionales de innovación digital y las soluciones de IA y datos que la comisión propone implementar en salud, educación, ambiente y justicia.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "espacio",
+      "comision_nombre": "Aeroespacial (Aeronáutica y Espacio)",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especializa la Política de Estado de ciencia y tecnología en el dominio aeroespacial: fija >15 satélites operativos, 0.15% del PBI en I+D+i, un Fondo Nacional de Innovación Aeroespacial y la creación de la Agencia Espacial del Perú.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "La estrategia desagrega el eje de infraestructura al subsector aeronáutico, con la construcción de 40 aeropuertos secundarios y la modernización de sistemas CNS/ATM para integrar territorios desconectados.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "El ecosistema aeroespacial que propone (150 startups espaciales, ser 'actor aeroespacial relevante en América Latina') es medio para elevar la competitividad y productividad, generando la actividad económica de alto valor que persigue esta política.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "desagregado",
+          "justificacion": "El PP de ciencia, tecnología e innovación tecnológica es la envolvente presupuestal directa del pilar de tecnología espacial: I+D+i (0.15% del PBI), satélites, startups y el Fondo Nacional de Innovación Aeroespacial que plantea la comisión.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0138",
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el sistema de transporte hacia el modo aéreo: quintuplicar la conectividad (1.8 pasajeros per cápita/año) y construir 40 aeropuertos secundarios reducen costo, tiempo e inseguridad en el transporte, objeto de este PP.",
+          "pp_nombre": "REDUCCION DEL COSTO, TIEMPO E INSEGURIDAD EN EL SISTEMA DE TRANSPORTE"
+        }
+      ]
+    },
+    {
+      "comision_id": "medio-ambiente",
+      "comision_nombre": "Medio Ambiente",
+      "acuerdo_nacional": [
+        {
+          "politica": 19,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión propone una estrategia ambiental de largo plazo (economía circular, valorización de residuos, sostenibilidad e institucionalidad ambiental con rango constitucional), que coincide directamente con la Política 19 'Desarrollo sostenible y gestión ambiental'.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "El pilar de Tecnología/Innovación/Trazabilidad, la meta de elevar la I+D+i ambiental al 1.5% del PBI con patentes locales y la fiscalización con IA/IoT/satélites desagregan la Política 20 'Desarrollo de la ciencia y la tecnología' hacia el dominio ambiental.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0036",
+          "tipo": "igual_similar",
+          "justificacion": "El primer pilar y objetivo de la comisión (economía circular, Nodos Circulares, Bolsa de Residuos Sólidos y +50% de valorización de residuos al 2050) corresponde directamente al PP 0036 'Gestión Integral de Residuos Sólidos'.",
+          "pp_nombre": "GESTION INTEGRAL DE RESIDUOS SOLIDOS"
+        },
+        {
+          "codigo": "0096",
+          "tipo": "desagregado",
+          "justificacion": "La acción AE3.1 de actualización y endurecimiento de los ECA y LMP alineados a la OCDE abarca los estándares de calidad del aire que el PP 0096 'Gestión de la Calidad del Aire' operativiza como sub-dominio de la calidad ambiental.",
+          "pp_nombre": "GESTION DE LA CALIDAD DEL AIRE"
+        }
+      ]
+    },
+    {
+      "comision_id": "ciencia-y-tecnologia",
+      "comision_nombre": "Ciencia y Tecnología",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión tiene como eje central la ciencia y la tecnología como motor de desarrollo (modelo 'Educación con Ciencia y Tecnología para la Producción'), coincidiendo de forma directa con la Política de Estado de Desarrollo de la ciencia y la tecnología.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 12,
+          "tipo": "desagregado",
+          "justificacion": "Su OE1 'institucionalizar la cadena de valor educativo' con control riguroso de calidad y la Acción 1.1 (SUNEDU Integral) especifican y operacionalizan la garantía de una educación pública de calidad que promueve esta política.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "eje": "II"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "El fin declarado es pasar de un modelo extractivista a una nación industrializada que produce y exporta con valor agregado (parques industriales exportadores), es decir, la CyT como causa de mayor competitividad y productividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Desarrollo de la ciencia, tecnología e innovación tecnológica' coincide semánticamente de forma directa con el objeto y nombre de la comisión de Ciencia y Tecnología.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0066",
+          "tipo": "desagregado",
+          "justificacion": "El OE2 busca transformar las universidades en centros generadores de conocimiento y empresas tecnológicas manteniendo su función formativa, especificando y ampliando el alcance del PP de Formación universitaria de pregrado.",
+          "pp_nombre": "FORMACION UNIVERSITARIA DE PREGRADO"
+        },
+        {
+          "codigo": "0141",
+          "tipo": "causal",
+          "justificacion": "El OE2 apunta a que las universidades generen patentes y empresas tecnológicas, de modo que el fortalecimiento científico propuesto deriva causalmente en mayor protección de la propiedad intelectual.",
+          "pp_nombre": "PROTECCION DE LA PROPIEDAD INTELECTUAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "maritimo-fluvial-y-lacustre",
+      "comision_nombre": "Marítimo, Fluvial y Lacustre",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "El pilar 'Puertos y Logística' y la acción de 'modernización de terminales portuarios amazónicos e infraestructura resiliente en Iquitos y Pucallpa' desagregan al ámbito portuario/fluvial la Política de desarrollo en infraestructura.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 22,
+          "tipo": "causal",
+          "justificacion": "Los objetivos de transportar el 25% del tonelaje de exportación en naves peruanas y escalar del puesto 72 al Top 40 del Índice de Conectividad Marítima de la UNCTAD son medios que causan la ampliación y competitividad del comercio exterior.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "El modelo de 'Economía Azul' para recuperar la soberanía logística, junto con el Segundo Registro (REB) y el Tonnage Tax, especifican en el sector marítimo-naval la búsqueda de competitividad, productividad y formalización de la actividad económica (eje III).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0138",
+          "tipo": "desagregado",
+          "justificacion": "La implementación del Port Community System (PCS) que sincroniza datos entre puertos y transporte terrestre, y la modernización de terminales, desagregan al modo marítimo-fluvial la reducción del costo, tiempo e inseguridad en el sistema de transporte.",
+          "pp_nombre": "REDUCCION DEL COSTO, TIEMPO E INSEGURIDAD EN EL SISTEMA DE TRANSPORTE"
+        }
+      ]
+    },
+    {
+      "comision_id": "capital-del-conocimiento",
+      "comision_nombre": "Capital del Conocimiento",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión propone incrementar la inversión en I+D hasta 2-2.5% del PBI y alcanzar ~2,000 investigadores por millón de habitantes al 2050, lo que coincide directamente con la Política 20 de Desarrollo de la ciencia y la tecnología.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "El eje central de la comisión es convertir al Perú en una Economía del Conocimiento y hub digital (conectividad de alta velocidad, centros de datos), lo que se corresponde semánticamente con la Sociedad de la información y sociedad del conocimiento de la Política 35.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 12,
+          "tipo": "causal",
+          "justificacion": "La comisión sustenta el pilar de capital humano en impulsar la formación CTIM, alfabetización digital y universidades orientadas a investigación desde la educación, presupuesto de la Política 12 de educación de calidad que causa la formación del talento del conocimiento.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca incrementar la inversión nacional en I+D+i y crear fondos competitivos y capital de riesgo para startups tecnológicas, lo que corresponde de forma directa al PP Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0141",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión plantea simplificar y digitalizar el registro de patentes (fast-track) y posicionar al Perú como exportador de licencias y propiedad intelectual, temática que coincide con el PP de Protección de la Propiedad Intelectual.",
+          "pp_nombre": "PROTECCION DE LA PROPIEDAD INTELECTUAL"
+        },
+        {
+          "codigo": "0066",
+          "tipo": "causal",
+          "justificacion": "La meta de ~2,000 investigadores por millón de habitantes y de fortalecer universidades orientadas a investigación y posgrado se apoya causalmente en el PP de Formación Universitaria de Pregrado como base del pipeline de capital humano CTIM.",
+          "pp_nombre": "FORMACION UNIVERSITARIA DE PREGRADO"
+        }
+      ]
+    },
+    {
+      "comision_id": "salud",
+      "comision_nombre": "Salud (Gemelos Digitales)",
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión pertenece al eje de Equidad y Justicia Social y busca reducir hospitalizaciones evitables por descompensación cardíaca y la mortalidad por arritmias, integrándose a la HCE nacional; es una expresión directa del acceso universal y equitativo a los servicios de salud.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        },
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el desarrollo de la ciencia y tecnología aplicándolo al sector salud: desarrolla capacidades nacionales en IA aplicada, forma talento especializado y genera evidencia científica nacional publicable internacionalmente.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 35,
+          "tipo": "desagregado",
+          "justificacion": "El proyecto materializa la sociedad de la información/conocimiento en salud mediante infraestructura de datos, interoperabilidad con estándar HL7 FHIR y gobernanza articulada con la Ley 31814 (IA) y la Ley 29733 (datos).",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0018",
+          "tipo": "desagregado",
+          "justificacion": "La Fase I se centra en gestión clínica cardiovascular (arritmias e insuficiencia cardíaca), que son enfermedades no transmisibles; la comisión especializa y tecnifica un subconjunto del ámbito de este programa presupuestal.",
+          "pp_nombre": "ENFERMEDADES NO TRANSMISIBLES"
+        },
+        {
+          "codigo": "0104",
+          "tipo": "causal",
+          "justificacion": "El objetivo explícito de reducir hospitalizaciones evitables por descompensación cardíaca y la mortalidad por arritmias no diagnosticadas oportunamente incide directamente, como intervención causal, sobre la reducción de la mortalidad por emergencias y urgencias médicas cardíacas.",
+          "pp_nombre": "REDUCCION DE LA MORTALIDAD POR EMERGENCIAS Y URGENCIAS MEDICAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "telecomunicaciones",
+      "comision_nombre": "Telecomunicaciones",
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión formula el Plan Prospectivo para masificar el acceso a internet, 5G, TIC e IA y cerrar la brecha digital, que es exactamente el objeto de la Política 35 (Sociedad de la información y sociedad del conocimiento).",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el componente de telecomunicaciones de la infraestructura nacional: despliegue de fibra óptica (FO-MO), red satelital y modernización de la RDNFO para conectar 30,000 centros poblados, especificando la Política 21 (Desarrollo en infraestructura y vivienda).",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "La conectividad de banda ancha y la migración a 5G/IA que impulsa la comisión son habilitadores de la Política 20 (Desarrollo de la ciencia y la tecnología), pues sin infraestructura digital no hay soporte para innovación tecnológica.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0047",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 0047 (Acceso y uso adecuado de los servicios públicos de telecomunicaciones e información asociados) coincide directamente con el objetivo de la comisión de dar acceso a internet a nuevos centros poblados mediante redes terrestres y satelitales.",
+          "pp_nombre": "ACCESO Y USO ADECUADO DE LOS SERVICIOS PUBLICOS DE TELECOMUNICACIONES E INFORMACION ASOCIADOS"
+        },
+        {
+          "codigo": "0124",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 0124 (Mejora de la provisión de los servicios de telecomunicaciones) se alinea semánticamente con las acciones de la comisión de implementar redes híbridas, red satelital nacional y modernizar la RDNFO para mejorar la provisión del servicio.",
+          "pp_nombre": "MEJORA DE LA PROVISIÓN DE LOS SERVICIOS DE TELECOMUNICACIONES"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "La masificación de 5G, TIC e IA que persigue la comisión alimenta el PP 0137 (Desarrollo de la ciencia, tecnología e innovación tecnológica), en tanto la infraestructura digital es condición para la adopción tecnológica e innovación.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "industria",
+      "comision_nombre": "Desarrollo Humano e Industrialización",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la búsqueda de competitividad y productividad en una agenda concreta de industrialización nacional (plantas metalmecánicas, acerías, petroquímica) para transformar al Perú de país primario exportador a nación industrializada.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 10,
+          "tipo": "igual_similar",
+          "justificacion": "El OE1 de la comisión —erradicar la pobreza extrema del Segmento E (10 millones de peruanos) mediante inversión integral en el nuevo ciudadano— coincide directamente con la Política de Estado de Reducción de la pobreza.",
+          "politica_nombre": "Reducción de la pobreza",
+          "eje": "II"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "El OE2 plantea desarrollar industrias metalmecánicas 'con tecnología propia', lo que hace del desarrollo de la ciencia y la tecnología una condición causal para la industrialización que persigue la comisión.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Desarrollo productivo de las empresas' es el instrumento presupuestal más cercano al pilar de Industrialización Nacional de la comisión, orientado a la generación de valor agregado y bienes de capital.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0049",
+          "tipo": "igual_similar",
+          "justificacion": "El OE1 apunta a erradicar la pobreza extrema del segmento más pobre, alineándose con el PP de Apoyo Directo a los Más Pobres (Juntos) como vehículo de la política de reducción de pobreza.",
+          "pp_nombre": "PROGRAMA NACIONAL DE APOYO DIRECTO A LOS MAS POBRES"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "La aspiración de la comisión a industrias metalmecánicas con 'tecnología propia' (OE2) depende del PP de Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica como habilitador.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "acuicultura-y-pesca",
+      "comision_nombre": "Acuicultura y Pesca",
+      "acuerdo_nacional": [
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea explícitamente desarrollar la acuicultura como 'eje de seguridad alimentaria, generación de proteína accesible'; el aumento del volumen y calidad de producción acuícola es la causa que contribuye directamente al fin de esta política.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "eje": "II"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "Los objetivos de la comisión (incrementar productividad, 'fomentar la viabilidad económica y competitividad de las granjas acuícolas' y la 'formalidad de productores') especifican y desagregan la política de competitividad, productividad y formalización de la actividad económica al sector acuícola.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 22,
+          "tipo": "desagregado",
+          "justificacion": "La comisión busca una 'oferta exportable con valor agregado' y el 'posicionamiento y fortalecimiento de productos acuícolas en mercados internacionales mediante PROMPERU', concretando la política de comercio exterior y ampliación de mercados en el rubro acuícola.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0094",
+          "tipo": "igual_similar",
+          "justificacion": "Correspondencia semántica directa: el PP 'Ordenamiento y Desarrollo de la Acuicultura' cubre exactamente el objeto de la comisión de incrementar producción, inversión, insumos y control sanitario acuícola.",
+          "pp_nombre": "ORDENAMIENTO Y DESARROLLO DE LA ACUICULTURA"
+        },
+        {
+          "codigo": "0095",
+          "tipo": "desagregado",
+          "justificacion": "La comisión es 'Acuicultura y Pesca' e incorpora al eslabón pesquero (manipulación de productos pesqueros, SANIPES); el PP 'Fortalecimiento de la Pesca Artesanal' desagrega el componente pesquero de la comisión.",
+          "pp_nombre": "FORTALECIMIENTO DE LA PESCA ARTESANAL"
+        },
+        {
+          "codigo": "0121",
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'desarrollar el mercado interno' y fortalecer la gestión y comercialización de los productores acuícolas; mejorar la articulación de pequeños productores al mercado es un medio que habilita ese resultado.",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        }
+      ]
+    },
+    {
+      "comision_id": "educacion-tres-niveles",
+      "comision_nombre": "Educación (Tres Niveles)",
+      "acuerdo_nacional": [
+        {
+          "politica": 12,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión propone una revolución educativa que coloca la educación como máxima prioridad del país (PBI educativo del 6%) y una educación pública de calidad orientada al desarrollo social con equidad; coincide directamente con el acceso universal a una educación pública gratuita y de calidad.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "eje": "II"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "La propuesta se funda explícitamente en 'ciencia, tecnología e I+D permanente' y en crear 'un organismo pensante como cabeza del sistema (ente rector de I+D)'; la reforma educativa opera como motor del desarrollo científico-tecnológico nacional.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 36,
+          "tipo": "desagregado",
+          "justificacion": "Entre sus acciones la comisión especifica los sectores temáticos de la educación empezando por los 'primeros 4 años' y la formación de la personalidad básica, desagregando la etapa del desarrollo infantil temprano dentro de la propuesta de tres niveles.",
+          "politica_nombre": "Desarrollo Infantil Temprano",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0090",
+          "tipo": "igual_similar",
+          "justificacion": "El corazón de la propuesta es una nueva educación de calidad que potencie las capacidades de las personas; el PP de logros de aprendizaje de estudiantes de la educación básica regular corresponde directamente al nivel básico que articula la comisión.",
+          "pp_nombre": "LOGROS DE APRENDIZAJE DE ESTUDIANTES DE LA EDUCACION BASICA REGULAR"
+        },
+        {
+          "codigo": "0150",
+          "tipo": "igual_similar",
+          "justificacion": "La 'sociedad educadora' y el acceso a la educación como tarea de todos que plantea la comisión se corresponden con el incremento en el acceso de la población a los servicios educativos públicos de la educación básica.",
+          "pp_nombre": "INCREMENTO EN EL ACCESO DE LA POBLACION A LOS SERVICIOS EDUCATIVOS PUBLICOS DE LA EDUCACION BASICA"
+        },
+        {
+          "codigo": "0147",
+          "tipo": "desagregado",
+          "justificacion": "La comisión abarca tres niveles e incluye acciones de educación técnica y 'convalidación técnica' con vocación a la producción y exportación; el PP de fortalecimiento de la educación superior tecnológica desagrega ese componente formativo-técnico.",
+          "pp_nombre": "FORTALECIMIENTO DE LA EDUCACION SUPERIOR TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "comercio-exterior-e-insercion-en-el-merc",
+      "comision_nombre": "Comercio Exterior e Inserción en el Mercado Externo",
+      "acuerdo_nacional": [
+        {
+          "politica": 22,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión es literalmente el sector comercio exterior: su propósito de 'diversificar la oferta exportadora' e impulsar el 'intercambio comercial con variedad de productos a múltiples países' coincide de forma directa con la Política de comercio exterior para la ampliación de mercados con reciprocidad.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica al ámbito exportador el mandato de competitividad y formalización: busca 'construir competitividad a partir de la biodiversidad, la educación y la innovación' y generar 'empleo formal', desagregando la política de competitividad, productividad y formalización al sector del comercio exterior.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "La comisión presenta el comercio exterior como 'instrumento clave para la lucha contra la pobreza' y fija como Objetivo Estratégico N°3 la 'Reducción de la Pobreza', una relación causa-efecto explícita con la política de reducción de la pobreza.",
+          "politica_nombre": "Reducción de la pobreza",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0065",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Aprovechamiento de las oportunidades comerciales brindadas por los principales socios comerciales del Perú' coincide semánticamente con el eje central de la comisión: el intercambio comercial en crecimiento y la ampliación de mercados y países.",
+          "pp_nombre": "APROVECHAMIENTO DE LAS OPORTUNIDADES COMERCIALES BRINDADAS POR LOS PRINCIPALES SOCIOS COMERCIALES DEL PERU"
+        },
+        {
+          "codigo": "0087",
+          "tipo": "desagregado",
+          "justificacion": "La artesanía es un subsector exportador de valor agregado basado en biodiversidad y cultura; el PP de competitividad artesanal desagrega la meta de la comisión de 'diversificar la oferta exportadora hacia productos y servicios con valor agregado'.",
+          "pp_nombre": "INCREMENTO DE LA COMPETIVIDAD DEL SECTOR ARTESANIA"
+        },
+        {
+          "codigo": "0121",
+          "tipo": "causal",
+          "justificacion": "Mejorar la articulación de pequeños productores al mercado habilita la 'asociatividad en la agroexportación de productos orgánicos' y la 'descentralización regional del sector exportador' que la comisión propone como acciones prioritarias (relación causa-efecto).",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        }
+      ]
+    },
+    {
+      "comision_id": "energia-nuclear",
+      "comision_nombre": "Energía Nuclear",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo central de la comisión es 'generar y transferir conocimientos y tecnologías en el área nuclear y afines', lo que coincide directamente con la Política 20 de Desarrollo de la ciencia y la tecnología; la comisión es en esencia una agenda de CTI en el dominio nuclear.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'promover el uso de las aplicaciones nucleares y afines en los sectores productivos y de servicios' y 'establecer alianzas con sectores que buscan impulsar la competitividad', de modo que las aplicaciones nucleares operan como causa de mayor competitividad y productividad (Política 18).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "La 'salud humana' es uno de los cinco sectores priorizados de uso pacífico de la energía nuclear (medicina nuclear/radioterapia), por lo que la comisión desagrega tecnológicamente parte del acceso a servicios de salud de la Política 13.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "desagregado",
+          "justificacion": "El PP 0137 'Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica' es el marco presupuestal directo; la comisión lo desagrega temáticamente al especializar la generación y transferencia de conocimiento en el dominio nuclear y afines.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0024",
+          "tipo": "causal",
+          "justificacion": "La comisión prioriza el sector 'salud humana' con aplicaciones nucleares (radioterapia, medicina nuclear); estas técnicas son insumo causal del PP 0024 'Prevención y Control del Cáncer', principal aplicación clínica establecida de la energía nuclear en el país.",
+          "pp_nombre": "PREVENCION Y CONTROL DEL CANCER"
+        }
+      ]
+    },
+    {
+      "comision_id": "reforma-del-estado",
+      "comision_nombre": "Reforma del Estado",
+      "acuerdo_nacional": [
+        {
+          "politica": 24,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión se enmarca explícitamente en el Cuarto Objetivo del Acuerdo Nacional (Estado eficiente, transparente y descentralizado) y busca una gestión eficaz, eficiente y transparente del aparato público, coincidencia directa con la Política 24 'Afirmación de un Estado eficiente y transparente'.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        },
+        {
+          "politica": 26,
+          "tipo": "igual_similar",
+          "justificacion": "El Proyecto N°5 propone la 'Erradicación sistemática de la corrupción' con normas para prevenir y sancionar los actos de corrupción, alineándose directamente con la Política 26 sobre promoción de la ética y erradicación de la corrupción.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+          "eje": "IV"
+        },
+        {
+          "politica": 5,
+          "tipo": "desagregado",
+          "justificacion": "El Objetivo Estratégico N°3 plantea 'implantar un sistema de planificación de largo plazo con visión de futuro del país', desagregando operativamente la Política 5 de gobierno por objetivos con planeamiento estratégico y prospectiva nacional.",
+          "politica_nombre": "Gobierno en función de objetivos con planeamiento estratégico, prospectiva nacional y procedimientos transparentes",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0151",
+          "tipo": "igual_similar",
+          "justificacion": "El Proyecto N°5 (erradicación de la corrupción) y el OE6 (administrar los recursos de manera eficiente y transparente) coinciden semánticamente con el PP 0151 'Reducción de la corrupción en el uso de los recursos públicos'.",
+          "pp_nombre": "REDUCCION DE LA CORRUPCION EN EL USO DE LOS RECURSOS PUBLICOS"
+        },
+        {
+          "codigo": "0125",
+          "tipo": "desagregado",
+          "justificacion": "El Proyecto N°2 'Modernización del Sistema Electoral' y el Proyecto N°4 de participación ciudadana concretan lo que el PP 0125 'Mejora de la eficiencia de los procesos electorales e incremento de la participación política de la ciudadanía' financia.",
+          "pp_nombre": "MEJORA DE LA EFICIENCIA DE LOS PROCESOS ELECTORALES E INCREMENTO DE LA PARTICIPACION POLITICA DE LA CIUDADANIA"
+        },
+        {
+          "codigo": "0149",
+          "tipo": "causal",
+          "justificacion": "El OE6 de administrar los recursos de manera eficiente y transparente se materializa a través del PP 0149 'Mejora del desempeño en las contrataciones públicas', instrumento presupuestal que operacionaliza la gestión transparente del gasto.",
+          "pp_nombre": "MEJORA DEL DESEMPEÑO EN LAS CONTRATACIONES PUBLICAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "infraestructura-y-construccion",
+      "comision_nombre": "Infraestructura y Construcción",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: la comisión estima la brecha de inversión en infraestructura del país, exactamente el objeto de la Política 21 'Desarrollo en infraestructura y vivienda'.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'optimizar los costos logísticos' y alcanzar una infraestructura competitiva, lo que es causa directa de la mejora de la competitividad y productividad que persigue la Política 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 34,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica territorialmente el ordenamiento al proponer un 'sistema de planificación multimodal', redes que 'integren a las poblaciones', un hub de puertos y aeropuertos y zonas de actividades logísticas, desagregando la Política 34 de ordenamiento y gestión territorial.",
+          "politica_nombre": "Ordenamiento y gestión territorial",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0138",
+          "tipo": "igual_similar",
+          "justificacion": "Mismo objeto: la comisión apunta a 'optimizar los costos logísticos' y a ejecutar redes viales, ferrocarriles, hidrovías, puertos y aeropuertos; el PP 0138 reduce costo, tiempo e inseguridad del sistema de transporte.",
+          "pp_nombre": "REDUCCION DEL COSTO, TIEMPO E INSEGURIDAD EN EL SISTEMA DE TRANSPORTE"
+        },
+        {
+          "codigo": "0148",
+          "tipo": "desagregado",
+          "justificacion": "El PP 0148 (transporte urbano) es el subconjunto urbano de la infraestructura de transporte que la comisión desarrolla para integrar poblaciones y reducir costos logísticos.",
+          "pp_nombre": "REDUCCION DEL TIEMPO, INSEGURIDAD Y COSTO AMBIENTAL EN EL TRANSPORTE URBANO"
+        }
+      ]
+    },
+    {
+      "comision_id": "orden-publico-y-seguridad",
+      "comision_nombre": "Orden Público y Seguridad",
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca 'reducir la violencia criminal' (homicidios, extorsión, sicariato) y 'fortalecer la confianza ciudadana', que es exactamente el objeto de la Política 7 sobre erradicación de la violencia y seguridad ciudadana.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
+          "eje": "I"
+        },
+        {
+          "politica": 9,
+          "tipo": "igual_similar",
+          "justificacion": "El plan propone un 'Estado Estratégico de Seguridad' para 'recuperar el control territorial del Estado' y garantizar presencia efectiva en todo el territorio nacional, correspondiendo directamente a la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional",
+          "eje": "I"
+        },
+        {
+          "politica": 27,
+          "tipo": "causal",
+          "justificacion": "Uno de sus objetivos es 'desarticular las economías criminales vinculadas a narcotráfico', lo que contribuye causalmente a la erradicación de la producción, tráfico y consumo ilegal de drogas de la Política 27.",
+          "politica_nombre": "Erradicación de la producción, el tráfico y el consumo ilegal de drogas",
+          "eje": "IV"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0030",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de 'reducir la violencia criminal en la población (homicidios, delitos violentos, extorsión)' coincide semánticamente con el PP de Reducción de Delitos y Faltas que afectan la Seguridad Ciudadana.",
+          "pp_nombre": "REDUCCION DE DELITOS Y FALTAS QUE AFECTAN LA SEGURIDAD CIUDADANA"
+        },
+        {
+          "codigo": "0139",
+          "tipo": "igual_similar",
+          "justificacion": "La 'Normativa de control territorial' y el fortalecimiento de la intervención estatal en zonas vulnerables se alinean con la disminución de conflictos y movilizaciones violentas que alteran el orden público, núcleo del nombre de la comisión.",
+          "pp_nombre": "DISMINUCION DE LA INCIDENCIA DE LOS CONFLICTOS, PROTESTAS Y MOVILIZACIONES SOCIALES VIOLENTAS QUE ALTERAN EL ORDEN PUBLICO"
+        },
+        {
+          "codigo": "0031",
+          "tipo": "desagregado",
+          "justificacion": "El PP de Reducción del Tráfico Ilícito de Drogas especifica una de las economías criminales que la comisión se propone desarticular (narcotráfico).",
+          "pp_nombre": "REDUCCION DEL TRAFICO ILICITO DE DROGAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "mipymes",
+      "comision_nombre": "MYPE / MIPYMES",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "La comision busca transformar a las MYPE en unidades competitivas y formalizadas (transito del enfoque manufacturero al mentefacturero, clusteres y asociatividad), lo que coincide directamente con la Politica 18 de competitividad, productividad y formalizacion de la actividad economica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "Los OE2 y OE4 apuntan a desarrollar tecnologias en las empresas, crear PYME de base tecnologica y spin-off y difundir transferencia tecnologica; el desarrollo de la ciencia y la tecnologia (Politica 20) es la causa habilitante de esa transformacion tecnologica de las MYPE.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 17,
+          "tipo": "desagregado",
+          "justificacion": "La hoja de ruta para interrelacionar a micro, pequenos y medianos empresarios entre si y con las grandes empresas (OE1) desagrega, en el segmento MYPE, la promocion del tejido empresarial que contempla la Politica 17 de afirmacion de la economia social de mercado.",
+          "politica_nombre": "Afirmación de la economía social de mercado",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 0093 'Desarrollo Productivo de las Empresas' corresponde semanticamente casi de forma directa al objeto de la comision: elevar la productividad, asociatividad (clusteres) y competitividad de las micro y pequenas empresas.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "El PP 0137 'Desarrollo de la Ciencia, Tecnologia e Innovacion Tecnologica' provee las capacidades de I+D+i que hacen posible la meta central de la comision de MYPE de base tecnologica, spin-off y transferencia tecnologica (OE2 y OE4).",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "pesca",
+      "comision_nombre": "Pesca",
+      "acuerdo_nacional": [
+        {
+          "politica": 19,
+          "tipo": "causal",
+          "justificacion": "La comisión busca explotar racionalmente los recursos renovables y 'lograr un ambiente marino saludable preservando el medio ambiente y la biodiversidad' del ecosistema de Humboldt frente a la sobrepesca, lo que es una aplicación directa del desarrollo sostenible y la gestión ambiental.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "La comisión prioriza el consumo humano directo y busca 'fomentar el consumo de recursos hidrobiológicos' como proteína accesible, contribuyendo causalmente a la seguridad alimentaria y la nutrición de la población.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "eje": "II"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la política de competitividad, productividad y formalización al sector pesquero: agregar valor a los productos de extracción y enfrentar la informalidad artesanal reformando la estructura tributaria y los derechos de pesca.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0095",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda directamente la informalidad de la pesca artesanal y busca armonizar los lineamientos entre pesca artesanal e industrial, coincidiendo semánticamente con el PP de fortalecimiento de la pesca artesanal.",
+          "pp_nombre": "FORTALECIMIENTO DE LA PESCA ARTESANAL"
+        },
+        {
+          "codigo": "0144",
+          "tipo": "causal",
+          "justificacion": "El objetivo f de la comisión persigue un ambiente marino saludable preservando el ecosistema de Humboldt y la biodiversidad; la conservación y uso sostenible de ecosistemas para servicios ecosistémicos es la condición que sostiene la productividad pesquera sustentable.",
+          "pp_nombre": "CONSERVACION Y USO SOSTENIBLE DE ECOSISTEMAS PARA LA PROVISION DE SERVICIOS ECOSISTEMICOS"
+        }
+      ]
+    },
+    {
+      "comision_id": "mineria",
+      "comision_nombre": "Minería",
+      "acuerdo_nacional": [
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "La comisión propone una minería 'en armonía con el ambiente y la comunidad' y 'normativas eficientes sobre beneficios y sanciones por cuidado del medio ambiente', aplicando al sector minero la política de desarrollo sostenible y gestión ambiental.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión busca minería con 'valor agregado' y crea 'oficinas del Estado para el apoyo de ventas a la mediana y pequeña empresa minera', desagregando la política de competitividad, productividad y formalización de la actividad económica al sector extractivo.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 22,
+          "tipo": "causal",
+          "justificacion": "El objetivo de 'mantenimiento y exploración de mercados' y la acción de crear 'oficinas de mercadeo en cada consulado y embajada para mayor demanda de commodities' alimentan la ampliación de mercados de exportación que persigue esta política.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0120",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión plantea una minería responsable con el ambiente y 'normativas... por cuidado del medio ambiente'; el PP de remediación de pasivos ambientales mineros comparte directamente el dominio minería-ambiente.",
+          "pp_nombre": "REMEDIACION DE PASIVOS AMBIENTALES MINEROS"
+        },
+        {
+          "codigo": "0126",
+          "tipo": "desagregado",
+          "justificacion": "La comisión dedica un proyecto al 'apoyo de ventas a la mediana y pequeña empresa minera' y a la mano de obra minera; el PP concreta ese enfoque en el subconjunto de la pequeña minería y minería artesanal formalizada.",
+          "pp_nombre": "FORMALIZACION MINERA DE LA PEQUEÑA MINERIA Y MINERIA ARTESANAL"
+        },
+        {
+          "codigo": "0128",
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'revertir la atmósfera antiminera' y reducir los conflictos sociales mediante sanciones al daño ambiental; reducir la minería ilegal es causa directa de menos conflictividad y mejor imagen del sector.",
+          "pp_nombre": "REDUCCION DE LA MINERIA ILEGAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "ciudades-inteligentes",
+      "comision_nombre": "Ciudades Inteligentes",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión centra la ciudad inteligente en cerrar brechas de infraestructura urbana (agua, saneamiento, transporte masivo metro/BRT) y reducir la ocupación informal, que es el núcleo mismo de la Política de desarrollo en infraestructura y vivienda.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 34,
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de 'reducir la ocupación informal de zonas de alto riesgo mediante planificación urbana basada en datos' especifica al ámbito de las ciudades el ordenamiento y gestión territorial de la política de Estado.",
+          "politica_nombre": "Ordenamiento y gestión territorial",
+          "eje": "III"
+        },
+        {
+          "politica": 35,
+          "tipo": "desagregado",
+          "justificacion": "'Digitalizar e interoperar los servicios municipales clave con datos abiertos' y desplegar plataformas de datos urbanos aplica al gobierno local la sociedad de la información y del conocimiento.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0109",
+          "tipo": "igual_similar",
+          "justificacion": "'Nuestras Ciudades' es el programa de desarrollo urbano y planificación de ciudades, que coincide directamente con el enfoque de la comisión de cerrar brechas urbanas básicas y gestionar la ciudad con datos y tecnología.",
+          "pp_nombre": "NUESTRAS CIUDADES"
+        },
+        {
+          "codigo": "0148",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de 'consolidar redes de transporte masivo integrado en Lima y ciudades intermedias' y acelerar metro y corredores BRT corresponde al PP de reducción del tiempo, inseguridad y costo ambiental en el transporte urbano.",
+          "pp_nombre": "REDUCCION DEL TIEMPO, INSEGURIDAD Y COSTO AMBIENTAL EN EL TRANSPORTE URBANO"
+        },
+        {
+          "codigo": "0082",
+          "tipo": "igual_similar",
+          "justificacion": "'Universalizar agua, saneamiento y gestión adecuada de residuos en las principales ciudades' se articula directamente con el Programa Nacional de Saneamiento Urbano.",
+          "pp_nombre": "PROGRAMA NACIONAL DE SANEAMIENTO URBANO"
+        }
+      ]
+    },
+    {
+      "comision_id": "drogas",
+      "comision_nombre": "Drogas",
+      "acuerdo_nacional": [
+        {
+          "politica": 27,
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: la comisión aborda de forma integral la reducción de cultivos ilícitos, la desarticulación del narcotráfico y la prevención/tratamiento del consumo, exactamente el objeto de la Política 27 sobre erradicación de la producción, el tráfico y el consumo ilegal de drogas.",
+          "politica_nombre": "Erradicación de la producción, el tráfico y el consumo ilegal de drogas",
+          "eje": "IV"
+        },
+        {
+          "politica": 26,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica un componente de la Política 26 al plantear reforzar el control de insumos químicos y la unidad de inteligencia financiera contra el lavado de activos frente a la captura del Estado por economías ilegales.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+          "eje": "IV"
+        },
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "La comisión vincula el narcotráfico con la violencia y la pérdida de control territorial (VRAEM), de modo que reducir las economías ilegales del narcotráfico contribuye causalmente a la seguridad ciudadana que persigue la Política 7.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0072",
+          "tipo": "igual_similar",
+          "justificacion": "El PIRDAIS es el instrumento presupuestal del desarrollo alternativo integral y sostenible que la comisión propone escalar con titulación de tierras, acceso a mercados e infraestructura productiva para reducir cultivos ilícitos.",
+          "pp_nombre": "PROGRAMA DE DESARROLLO ALTERNATIVO INTEGRAL Y SOSTENIBLE - PIRDAIS"
+        },
+        {
+          "codigo": "0074",
+          "tipo": "igual_similar",
+          "justificacion": "El control de oferta de drogas del PP 0074 corresponde directamente a la acción de la comisión de desarticular redes de narcotráfico con interdicción inteligente y control de insumos químicos y activos.",
+          "pp_nombre": "GESTION INTEGRADA Y EFECTIVA DEL CONTROL DE OFERTA DE DROGAS EN EL PERU"
+        },
+        {
+          "codigo": "0051",
+          "tipo": "igual_similar",
+          "justificacion": "El PP de prevención y tratamiento del consumo de drogas coincide con el objetivo de la comisión de ampliar la cobertura de prevención y tratamiento del consumo problemático con enfoque de salud pública.",
+          "pp_nombre": "PREVENCION Y TRATAMIENTO DEL CONSUMO DE DROGAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "hidrocarburos",
+      "comision_nombre": "Hidrocarburos",
+      "acuerdo_nacional": [
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "La comision sectoriza el desarrollo sostenible y la gestion ambiental al ambito energetico: plantea una 'transicion energetica ordenada', 'descarbonizacion progresiva' y 'reforzar la fiscalizacion ambiental y la remediacion de pasivos en la Amazonia y la costa norte'.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "Especifica la politica de infraestructura en clave de gas natural: 'definir e implementar la infraestructura de transporte de gas hacia el sur' y 'ampliar programas de conexion domiciliaria y de gas vehicular e industrial'.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La accion de 'modernizar el marco regulatorio para atraer inversion sostenible y mejorar la competitividad de la refinacion' alimenta directamente la busqueda de competitividad, productividad y formalizacion de la actividad economica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0120",
+          "tipo": "igual_similar",
+          "justificacion": "La accion de 'remediacion de pasivos... en la Amazonia y la costa norte' coincide en naturaleza e instrumento con la Remediacion de Pasivos Ambientales; es el vehiculo presupuestal mas cercano, aunque hoy este acotado al sector minero.",
+          "pp_nombre": "REMEDIACION DE PASIVOS AMBIENTALES MINEROS"
+        }
+      ]
+    },
+    {
+      "comision_id": "parlamento-academico",
+      "comision_nombre": "Parlamento Académico",
+      "acuerdo_nacional": [
+        {
+          "politica": 4,
+          "tipo": "igual_similar",
+          "justificacion": "El Parlamento Académico se define como 'un espacio de deliberación que vincula la academia, los colegios profesionales y la sociedad civil con la formulación de políticas públicas', y su acción de 'institucionalizar sesiones de deliberación académica' es una expresión directa de la institucionalización del diálogo y la concertación.",
+          "politica_nombre": "Institucionalización del diálogo y la concertación",
+          "eje": "I"
+        },
+        {
+          "politica": 5,
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'aumentar la proporción de iniciativas legislativas con análisis técnico y de impacto' y basar las decisiones en evidencia; ese soporte técnico es condición para un gobierno con planeamiento estratégico, prospectiva y procedimientos transparentes.",
+          "politica_nombre": "Gobierno en función de objetivos con planeamiento estratégico, prospectiva nacional y procedimientos transparentes",
+          "eje": "I"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "Al 'articular de forma estable a universidades, colegios profesionales y centros de investigación con el Estado' y 'mejorar la traducción de la investigación nacional en recomendaciones de política', la comisión canaliza el desarrollo de la ciencia y la tecnología hacia la decisión pública.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "El PP genera ciencia, tecnología e innovación (investigación nacional) que constituye el insumo de evidencia que el Parlamento Académico busca 'traducir en recomendaciones de política' y articular con el Estado; es un vínculo causal aguas arriba, aunque el PP no cubre la función legislativa-asesora en sí.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "agricultura",
+      "comision_nombre": "Agricultura",
+      "acuerdo_nacional": [
+        {
+          "politica": 23,
+          "tipo": "igual_similar",
+          "justificacion": "La Política 23 'Política de desarrollo agrario y rural' es el correlato directo de la comisión, que aborda la transición de la agricultura dual hacia un sistema agroalimentario productivo y el cierre de brechas de la agricultura familiar en sierra y selva.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        },
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "El objetivo de la comisión de 'Garantizar la seguridad alimentaria nacional reduciendo la dependencia de importaciones en cultivos estratégicos' produce el resultado buscado por la Política 15 'Promoción de la seguridad alimentaria y nutrición'.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "eje": "II"
+        },
+        {
+          "politica": 33,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la Política 33 sobre recursos hídricos al uso agrario, con su acción de 'tecnificación del riego y de siembra y cosecha de agua, articulado a la planificación por cuencas'.",
+          "politica_nombre": "Política de Estado sobre los recursos hídricos",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0042",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Aprovechamiento de los recursos hídricos para uso agrario' coincide con la acción central de la comisión: el 'Programa nacional de tecnificación del riego y de siembra y cosecha de agua' en cuencas de sierra y selva.",
+          "pp_nombre": "APROVECHAMIENTO DE LOS RECURSOS HIDRICOS PARA USO AGRARIO"
+        },
+        {
+          "codigo": "0121",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Mejora de la articulación de pequeños productores al mercado' refleja directamente la acción de 'Fortalecimiento de la asociatividad mediante cooperativas y organizaciones de productores con servicios compartidos de acopio y comercialización'.",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        },
+        {
+          "codigo": "0118",
+          "tipo": "desagregado",
+          "justificacion": "El PP Haku Wiñay ('Acceso de hogares rurales con economías de subsistencia a mercados locales') especifica el foco de la comisión en la 'agricultura familiar de subsistencia en sierra y selva' y su vinculación a mercados regionales.",
+          "pp_nombre": "ACCESO DE HOGARES RURALES CON ECONOMIAS DE SUBSISTENCIA A MERCADOS LOCALES - HAKU WIÑAY"
+        }
+      ]
+    },
+    {
+      "comision_id": "institucionalidad",
+      "comision_nombre": "Institucionalidad",
+      "acuerdo_nacional": [
+        {
+          "politica": 24,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca fortalecer un Estado con 'efectividad gubernamental', servicio civil meritocrático y un 'Estado digital, interoperable', lo que coincide directamente con la Política 24 de afirmación de un Estado eficiente y transparente (el propio eje de la comisión).",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        },
+        {
+          "politica": 26,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la lucha anticorrupción en acciones concretas -'fortalecer la integridad pública con datos abiertos, control interno y autonomía de los órganos de control'-, especificando la Política 26 de ética, transparencia y erradicación de la corrupción.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+          "eje": "IV"
+        },
+        {
+          "politica": 2,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión diagnostica 'fragmentación partidaria' y propone 'reformas político-electorales para reducir la fragmentación y fortalecer partidos', lo que se corresponde con la Política 2 de democratización de la vida política y fortalecimiento del sistema de partidos.",
+          "politica_nombre": "Democratización de la vida política y fortalecimiento del sistema de partidos",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0151",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión plantea 'mejorar de forma sostenida los indicadores de control de la corrupción' y 'fortalecer la integridad pública', temática idéntica al PP 0151 de reducción de la corrupción en el uso de los recursos públicos.",
+          "pp_nombre": "REDUCCION DE LA CORRUPCION EN EL USO DE LOS RECURSOS PUBLICOS"
+        },
+        {
+          "codigo": "0125",
+          "tipo": "igual_similar",
+          "justificacion": "La acción de 'impulsar reformas político-electorales para reducir la fragmentación y fortalecer partidos' se alinea semánticamente con el PP 0125 de mejora de la eficiencia de los procesos electorales e incremento de la participación política.",
+          "pp_nombre": "MEJORA DE LA EFICIENCIA DE LOS PROCESOS ELECTORALES E INCREMENTO DE LA PARTICIPACION POLITICA DE LA CIUDADANIA"
+        },
+        {
+          "codigo": "0149",
+          "tipo": "causal",
+          "justificacion": "El objetivo de 'efectividad gubernamental' e integridad en el manejo público se ve favorecido causalmente por el PP 0149 de mejora del desempeño en las contrataciones públicas, principal vector de eficiencia y prevención de corrupción del Estado.",
+          "pp_nombre": "MEJORA DEL DESEMPEÑO EN LAS CONTRATACIONES PUBLICAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "reforma-judicial",
+      "comision_nombre": "Reforma Judicial",
+      "acuerdo_nacional": [
+        {
+          "politica": 28,
+          "tipo": "igual_similar",
+          "justificacion": "Correspondencia directa: la Política 28 (\"acceso a la justicia e independencia judicial\") coincide semánticamente con el núcleo de la comisión, que busca combinar independencia e integridad y ampliar el acceso efectivo a la justicia para poblaciones rurales y vulnerables.",
+          "politica_nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial",
+          "eje": "IV"
+        },
+        {
+          "politica": 26,
+          "tipo": "causal",
+          "justificacion": "La comisión propone consolidar la selección meritocrática y el control de integridad de jueces y fiscales y especializar la justicia en delitos de corrupción, lo que contribuye directamente a la erradicación de la corrupción que persigue la Política 26.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+          "eje": "IV"
+        },
+        {
+          "politica": 1,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea la reforma judicial como condición para la seguridad jurídica y el desarrollo; una justicia predecible e independiente fortalece el régimen democrático y el Estado de derecho de la Política 1 (eje I en el que se ubica la comisión).",
+          "politica_nombre": "Fortalecimiento del régimen democrático y del Estado de derecho",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0086",
+          "tipo": "desagregado",
+          "justificacion": "El PP \"Mejora de los servicios del sistema de justicia penal\" concreta presupuestalmente la mejora del sistema de justicia y se alinea con la acción de la comisión de especializar la justicia en delitos de corrupción y crimen organizado; es la vertiente penal (desagregada) de la reforma propuesta.",
+          "pp_nombre": "MEJORA DE LOS SERVICIOS DEL SISTEMA DE JUSTICIA PENAL"
+        },
+        {
+          "codigo": "0143",
+          "tipo": "desagregado",
+          "justificacion": "El PP de \"Celeridad, predictibilidad y acceso de los procesos judiciales\" reproduce exactamente tres objetivos de la comisión (reducir plazos, predictibilidad jurisprudencial y acceso efectivo), aplicados a la materia tributaria/aduanera y de mercado.",
+          "pp_nombre": "CELERIDAD, PREDICTIBILIDAD Y ACCCESO DE LOS PROCESOS JUDICIALES TRIBUTARIOS, ADUANEROS Y DE TEMAS DE MERCADO"
+        },
+        {
+          "codigo": "0067",
+          "tipo": "desagregado",
+          "justificacion": "El PP \"Celeridad en los procesos judiciales de familia\" operativiza, en la materia de familia, el objetivo de la comisión de reducir significativamente la carga procesal y los plazos de resolución de casos.",
+          "pp_nombre": "CELERIDAD EN LOS PROCESOS JUDICIALES DE FAMILIA"
+        }
+      ]
+    },
+    {
+      "comision_id": "cohesion-social",
+      "comision_nombre": "Cohesión Social",
+      "acuerdo_nacional": [
+        {
+          "politica": 11,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca 'garantizar la inclusión efectiva y la no discriminación de pueblos indígenas, afroperuanos, migrantes y personas con discapacidad', lo que coincide directamente con la Política de promoción de la igualdad de oportunidades sin discriminación.",
+          "politica_nombre": "Promoción de la igualdad de oportunidades sin discriminación",
+          "eje": "II"
+        },
+        {
+          "politica": 4,
+          "tipo": "igual_similar",
+          "justificacion": "Su acción central es un 'sistema nacional de prevención y gestión de conflictos sociales con diálogo temprano', equivalente a la institucionalización del diálogo y la concertación.",
+          "politica_nombre": "Institucionalización del diálogo y la concertación",
+          "eje": "I"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "El objetivo de 'reducir significativamente la desigualdad de ingresos y las brechas territoriales' junto con la ampliación de protección social no contributiva conduce a la reducción de la pobreza.",
+          "politica_nombre": "Reducción de la pobreza",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0139",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión propone un 'sistema nacional de prevención y gestión de conflictos sociales' y reducir la conflictividad, lo que corresponde semánticamente al PP de disminución de la incidencia de conflictos, protestas y movilizaciones sociales violentas.",
+          "pp_nombre": "DISMINUCION DE LA INCIDENCIA DE LOS CONFLICTOS, PROTESTAS Y MOVILIZACIONES SOCIALES VIOLENTAS QUE ALTERAN EL ORDEN PUBLICO"
+        },
+        {
+          "codigo": "0049",
+          "tipo": "desagregado",
+          "justificacion": "La 'ampliación de protección social no contributiva' y la reducción de brechas se concretan en el Programa Nacional de Apoyo Directo a los Más Pobres (Juntos) como instrumento específico de transferencias.",
+          "pp_nombre": "PROGRAMA NACIONAL DE APOYO DIRECTO A LOS MAS POBRES"
+        },
+        {
+          "codigo": "0097",
+          "tipo": "desagregado",
+          "justificacion": "La ampliación de la protección social no contributiva que plantea la comisión se materializa en Pensión 65, esquema de asistencia solidaria para población vulnerable.",
+          "pp_nombre": "PROGRAMA NACIONAL DE ASISTENCIA SOLIDARIA PENSION 65"
+        }
+      ]
+    },
+    {
+      "comision_id": "imagen-pais",
+      "comision_nombre": "Imagen País",
+      "acuerdo_nacional": [
+        {
+          "politica": 6,
+          "tipo": "desagregado",
+          "justificacion": "La comisión propone 'consolidar la diplomacia cultural y gastronómica como activo estratégico de soft power' y campañas internacionales de reputación, desagregando la dimensión de proyección/imagen dentro de la Política de Estado de política exterior para el desarrollo y la integración.",
+          "politica_nombre": "Política exterior para la paz, la democracia, el desarrollo y la integración",
+          "eje": "I"
+        },
+        {
+          "politica": 22,
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'elevar las llegadas internacionales y el ingreso de divisas' y 'atraer inversión y talento' mediante una marca país que alinea turismo y exportaciones; una mejor imagen país opera como causa para la ampliación de mercados que persigue esta política.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        },
+        {
+          "politica": 3,
+          "tipo": "causal",
+          "justificacion": "La comisión promueve la 'gastronomía e industrias creativas peruanas' y la proyección cultural como marca país; la afirmación de la identidad nacional es el sustento del cual se deriva ese posicionamiento reputacional internacional.",
+          "politica_nombre": "Afirmación de la identidad nacional",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0127",
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia semántica directa: la comisión plantea un 'programa de diversificación de destinos turísticos con infraestructura, conectividad aérea y seguridad' y mejorar la experiencia del visitante, lo mismo que el PP de mejora de la competitividad de los destinos turísticos.",
+          "pp_nombre": "MEJORA DE LA COMPETITIVIDAD DE LOS DESTINOS TURISTICOS"
+        },
+        {
+          "codigo": "0133",
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica la diplomacia cultural y gastronómica y la 'proyección cultural y diplomática' del Perú, que constituyen una desagregación temática del fortalecimiento de la política exterior y la acción diplomática.",
+          "pp_nombre": "FORTALECIMIENTO DE LA POLITICA EXTERIOR Y DE LA ACCION DIPLOMATICA"
+        },
+        {
+          "codigo": "0134",
+          "tipo": "causal",
+          "justificacion": "La comisión contempla 'campañas internacionales de reputación y atracción de inversión, vinculadas a estabilidad institucional'; mejorar la imagen y percepción de riesgo país es causa de la mayor promoción de la inversión privada.",
+          "pp_nombre": "PROMOCION DE LA INVERSION PRIVADA"
+        }
+      ]
+    },
+    {
+      "comision_id": "inteligencia-de-negocios",
+      "comision_nombre": "Inteligencia de Negocios",
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La comision busca consolidar un ecosistema de datos abiertos, interoperables y cultura de decisiones basadas en datos, que es exactamente el nucleo de la Politica 35 'Sociedad de la informacion y sociedad del conocimiento'.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "Los objetivos de cerrar la brecha de talento en ciencia de datos e IA y la articulacion academia-empresa-Estado para investigacion aplicada desagregan y especifican el mandato de la Politica 20 'Desarrollo de la ciencia y la tecnologia'.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La adopcion de business intelligence y analitica en el tejido empresarial, incluidas mipymes, es un medio para elevar la competitividad, productividad y formalizacion economica que persigue la Politica 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "desagregado",
+          "justificacion": "La comision especifica la formacion en ciencia de datos e IA y la investigacion aplicada academia-empresa-Estado, que son componentes concretos del PP 0137 'Desarrollo de la ciencia, tecnologia e innovacion tecnologica'.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0047",
+          "tipo": "causal",
+          "justificacion": "El objetivo de garantizar infraestructura digital habilitante (conectividad, banda ancha) en todo el territorio depende causalmente del acceso y uso de los servicios de telecomunicaciones e informacion que provee el PP 0047.",
+          "pp_nombre": "ACCESO Y USO ADECUADO DE LOS SERVICIOS PUBLICOS DE TELECOMUNICACIONES E INFORMACION ASOCIADOS"
+        },
+        {
+          "codigo": "0093",
+          "tipo": "causal",
+          "justificacion": "Los incentivos y asistencia tecnica para adopcion de business intelligence en mipymes que plantea la comision operan como causa del fortalecimiento empresarial que persigue el PP 0093 'Desarrollo productivo de las empresas'.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "pecuaria",
+      "comision_nombre": "Pecuaria",
+      "acuerdo_nacional": [
+        {
+          "politica": 23,
+          "tipo": "desagregado",
+          "justificacion": "La comisión aborda la ganadería bovina, ovina, porcina, avícola y de camélidos y la articulación de la ganadería familiar altoandina y amazónica a mercados, lo que constituye una desagregación sectorial (pecuaria/rural) de la Política de desarrollo agrario y rural.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        },
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "Al plantear duplicar la productividad de leche y carne y desarrollar cadenas de proteína animal, la ganadería es fuente directa de proteína accesible, incidiendo causalmente en la seguridad alimentaria y la nutrición.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "eje": "II"
+        },
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "El foco de la comisión en productividad, trazabilidad, asociatividad y articulación de la ganadería familiar a mercados formales coincide con la búsqueda de competitividad, productividad y formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0039",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión incluye como acción el 'fortalecimiento del servicio de sanidad animal (SENASA), vigilancia epidemiológica y trazabilidad', lo que es idéntico al objeto del PP Mejora de la Sanidad Animal.",
+          "pp_nombre": "MEJORA DE LA SANIDAD ANIMAL"
+        },
+        {
+          "codigo": "0121",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de 'articular la ganadería familiar a mercados formales mediante asociatividad y acopio' coincide directamente con la Mejora de la articulación de pequeños productores al mercado.",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        },
+        {
+          "codigo": "0041",
+          "tipo": "desagregado",
+          "justificacion": "La meta de 'universalizar sanidad animal e implementar trazabilidad en cadenas priorizadas' y de agregar valor con trazabilidad de origen desagrega, para el ámbito pecuario, la Mejora de la inocuidad agroalimentaria.",
+          "pp_nombre": "MEJORA DE LA INOCUIDAD AGROALIMENTARIA"
+        }
+      ]
+    },
+    {
+      "comision_id": "seguros",
+      "comision_nombre": "Seguros",
+      "acuerdo_nacional": [
+        {
+          "politica": 17,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desarrolla un componente del mercado financiero propio de la economía social de mercado: profundizar la penetración del seguro con regulación prudencial que equilibre solidez, innovación y protección al asegurado.",
+          "politica_nombre": "Afirmación de la economía social de mercado",
+          "eje": "III"
+        },
+        {
+          "politica": 32,
+          "tipo": "causal",
+          "justificacion": "El aseguramiento catastrófico y los seguros paramétricos para riesgos sísmicos y climáticos transfieren y reducen las pérdidas por desastres; la comisión explicita su articulación con la política de gestión del riesgo de desastres.",
+          "politica_nombre": "Gestión del Riesgo de Desastres",
+          "eje": "IV"
+        },
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "La inclusión aseguradora de hogares de menores ingresos y mipymes mediante microseguros especifica la dimensión de protección/seguridad social frente a riesgos de la población vulnerable.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0068",
+          "tipo": "causal",
+          "justificacion": "El desarrollo de esquemas de aseguramiento catastrófico y seguros paramétricos frente a sismos y clima que plantea la comisión reduce la vulnerabilidad financiera y complementa la atención de emergencias por desastres de este PP.",
+          "pp_nombre": "REDUCCION DE VULNERABILIDAD Y ATENCION DE EMERGENCIAS POR DESASTRES"
+        }
+      ]
+    },
+    {
+      "comision_id": "agroindustria",
+      "comision_nombre": "Agroindustria",
+      "acuerdo_nacional": [
+        {
+          "politica": 23,
+          "tipo": "igual_similar",
+          "justificacion": "La Política 23 (Desarrollo agrario y rural) es el techo directo de la comisión: sus objetivos de integrar la agricultura familiar a cadenas formales con asistencia técnica, crédito de AGROBANCO y extensión rural masiva son precisamente el desarrollo agrario y rural que enuncia la política.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        },
+        {
+          "politica": 22,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la Política 22 (comercio exterior para ampliación de mercados) al foco agroexportador: multiplicar el valor de la agroexportación con productos procesados y acceder a mercados premium mediante certificaciones y trazabilidad.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        },
+        {
+          "politica": 33,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica la Política 33 (recursos hídricos) al ámbito productivo agrario: universalizar el riego tecnificado, el reúso de aguas residuales tratadas y la siembra y cosecha de agua en las cuencas productivas.",
+          "politica_nombre": "Política de Estado sobre los recursos hídricos",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0121",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 0121 (Mejora de la articulación de pequeños productores al mercado) coincide con el objetivo de integrar a la mitad de la agricultura familiar en cadenas formales y con la acción de articularla mediante cooperativas, compras públicas y crédito.",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        },
+        {
+          "codigo": "0042",
+          "tipo": "desagregado",
+          "justificacion": "El PP 0042 (Aprovechamiento de los recursos hídricos para uso agrario) es desagregado por la comisión al escalar riego tecnificado, reúso de aguas residuales tratadas y siembra y cosecha de agua en cabeceras de cuenca.",
+          "pp_nombre": "APROVECHAMIENTO DE LOS RECURSOS HIDRICOS PARA USO AGRARIO"
+        },
+        {
+          "codigo": "0041",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 0041 (Mejora de la inocuidad agroalimentaria) se corresponde con el fortalecimiento de SENASA en sanidad y bioseguridad y con la trazabilidad digital obligatoria y estándares para la oferta exportable.",
+          "pp_nombre": "MEJORA DE LA INOCUIDAD AGROALIMENTARIA"
+        }
+      ]
+    },
+    {
+      "comision_id": "competitividad",
+      "comision_nombre": "Competitividad",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: la comisión busca 'reducir la informalidad laboral' y 'elevar la productividad', que es literalmente el objeto de la Política 18 (competitividad, productividad y formalización de la actividad económica).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "La comisión toma la ciencia y tecnología como palanca específica de la competitividad al fijar como objetivo 'elevar el gasto en I+D como porcentaje del PBI' y crear 'fondos competitivos para I+D+i y transferencia tecnológica', desagregando así el contenido de la Política 20.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 24,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea que 'instituciones débiles' frenan el crecimiento y propone un 'servicio civil meritocrático' y 'predictibilidad regulatoria'; un Estado eficiente y transparente (Política 24) opera como causa habilitante de la competitividad buscada.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "desagregado",
+          "justificacion": "El PP 'Desarrollo Productivo de las Empresas' es el instrumento presupuestal que concreta el objetivo de la comisión de elevar la productividad y reducir 'el costo de la formalidad de las MYPE'.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "igual_similar",
+          "justificacion": "Corresponde directamente al objetivo de la comisión de 'elevar el gasto en I+D' y a su acción de 'crear incentivos y fondos competitivos para I+D+i, transferencia tecnológica y adopción digital empresarial'.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0134",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Promoción de la Inversión Privada' se alinea con el objetivo explícito de la comisión de 'elevar sostenidamente la inversión privada' y estabilizar el marco regulatorio para la inversión.",
+          "pp_nombre": "PROMOCION DE LA INVERSION PRIVADA"
+        }
+      ]
+    },
+    {
+      "comision_id": "la-familia",
+      "comision_nombre": "La Familia",
+      "acuerdo_nacional": [
+        {
+          "politica": 16,
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: la comisión busca fortalecer a la familia y proteger a la niñez y adolescencia (violencia familiar, embarazo adolescente, cuidado infantil), exactamente el objeto de la Política 16.",
+          "politica_nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud",
+          "eje": "II"
+        },
+        {
+          "politica": 36,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión fija como objetivo universalizar el desarrollo infantil temprano y escalar programas de DIT, que es literalmente el contenido de la Política de Estado 36.",
+          "politica_nombre": "Desarrollo Infantil Temprano",
+          "eje": "II"
+        },
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "El objetivo de erradicar la anemia y la desnutrición crónica infantil se logra mediante la seguridad alimentaria y nutrición de la Política 15, relación causa-efecto entre nutrición familiar y salud infantil.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "1002",
+          "tipo": "igual_similar",
+          "justificacion": "La acción de fortalecer los Centros Emergencia Mujer y los servicios de prevención de la violencia coincide directamente con este PP de reducción de la violencia contra la mujer.",
+          "pp_nombre": "PRODUCTOS ESPECIFICOS PARA REDUCCION DE LA VIOLENCIA CONTRA LA MUJER"
+        },
+        {
+          "codigo": "1001",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de universalizar el desarrollo infantil temprano y erradicar la anemia mediante suplementación y acompañamiento familiar corresponde exactamente a los productos específicos de DIT de este PP.",
+          "pp_nombre": "PRODUCTOS ESPECIFICOS PARA DESARROLLO INFANTIL TEMPRANO"
+        },
+        {
+          "codigo": "0002",
+          "tipo": "causal",
+          "justificacion": "Ampliar el acceso a salud sexual y reproductiva para adolescentes y reducir el embarazo adolescente incide causalmente sobre los resultados de salud materno neonatal que atiende este PP.",
+          "pp_nombre": "SALUD MATERNO NEONATAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "emprendimiento",
+      "comision_nombre": "Emprendimiento",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca elevar la supervivencia y competitividad de nuevas empresas y reducir el tiempo y costo de constituir y formalizar empresas, que es exactamente el contenido de la Política 18 (competitividad, productividad y formalización de la actividad económica).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 17,
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de desarrollar un mercado robusto de capital semilla, inversión ángel y venture capital con apalancamiento privado desagrega y concreta la afirmación de la economía social de mercado (Política 17) en el segmento emprendedor.",
+          "politica_nombre": "Afirmación de la economía social de mercado",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "El tránsito del emprendimiento por necesidad al emprendimiento por oportunidad e innovación y el escalamiento de startups dependen causalmente del desarrollo de la ciencia y la tecnología (Política 20).",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "igual_similar",
+          "justificacion": "El PP Desarrollo Productivo de las Empresas coincide directamente con el objetivo de la comisión de elevar la supervivencia, productividad y competitividad de nuevas empresas y scale-ups.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "El PP de Ciencia, Tecnología e Innovación Tecnológica financia el capital semilla y la innovación (tipo ProInnóvate) que la comisión identifica como motor causal para pasar de emprendimiento por necesidad a emprendimiento por oportunidad e innovación.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "pensiones-de-jubilacion",
+      "comision_nombre": "Pensiones de Jubilación",
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el componente de 'seguridad social' de esta política, enfocándose específicamente en el sistema previsional (pilar no contributivo, contributivo y voluntario, ONP/AFP y Pensión 65) para garantizar que toda persona adulta mayor reciba una pensión.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "El objetivo de garantizar una pensión básica universal y fortalecer Pensión 65 con mejor focalización actúa como mecanismo causal para reducir la pobreza en la vejez, especialmente ante la alta informalidad que deja sin cobertura a la mayoría.",
+          "politica_nombre": "Reducción de la pobreza",
+          "eje": "II"
+        },
+        {
+          "politica": 31,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea explícitamente 'garantizar la sostenibilidad fiscal del sistema ante el envejecimiento poblacional' y vincular la edad de jubilación y parámetros a la demografía, lo que incide directamente en la sostenibilidad fiscal del Estado.",
+          "politica_nombre": "Sostenibilidad fiscal y reducción del peso de la deuda",
+          "eje": "IV"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0097",
+          "tipo": "igual_similar",
+          "justificacion": "Correspondencia directa: la comisión propone 'Fortalecer y ampliar Pensión 65 con montos adecuados y mejor focalización', que es exactamente el objeto del Programa Nacional de Asistencia Solidaria Pensión 65 (pilar no contributivo).",
+          "pp_nombre": "PROGRAMA NACIONAL DE ASISTENCIA SOLIDARIA PENSION 65"
+        },
+        {
+          "codigo": "0142",
+          "tipo": "causal",
+          "justificacion": "La comisión busca que toda persona adulta mayor tenga ingresos y protección en la vejez; el acceso de adultos mayores a servicios especializados complementa causalmente la política previsional al atender a la misma población objetivo del envejecimiento poblacional.",
+          "pp_nombre": "ACCESO DE PERSONAS ADULTAS MAYORES A SERVICIOS ESPECIALIZADOS"
+        }
+      ]
+    },
+    {
+      "comision_id": "transformacion-digital",
+      "comision_nombre": "Transformación Digital",
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda directamente la digitalización del país, las competencias digitales y el talento en datos e IA, lo que coincide semánticamente con la Política 35 'Sociedad de la información y sociedad del conocimiento'.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 24,
+          "tipo": "causal",
+          "justificacion": "Los objetivos de 'digitalizar e interoperar la mayoría de los servicios y trámites del Estado' en torno a la identidad digital y la Plataforma Nacional de Datos son medio directo para 'afirmar un Estado eficiente y transparente' (eje IV donde se ubica la comisión).",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "La meta de 'formar talento especializado en datos e IA' y 'establecer una gobernanza ética y soberana de la IA' depende del desarrollo de la ciencia y la tecnología, base de la Política 20.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0047",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de 'conectividad universal de banda ancha asequible cerrando la brecha urbano-rural' coincide con el PP 'Acceso y uso adecuado de los servicios públicos de telecomunicaciones e información asociados'.",
+          "pp_nombre": "ACCESO Y USO ADECUADO DE LOS SERVICIOS PUBLICOS DE TELECOMUNICACIONES E INFORMACION ASOCIADOS"
+        },
+        {
+          "codigo": "0124",
+          "tipo": "desagregado",
+          "justificacion": "La acción de 'desplegar infraestructura de banda ancha priorizando zonas rurales y amazónicas' se operacionaliza presupuestalmente a través de la 'Mejora de la provisión de los servicios de telecomunicaciones'.",
+          "pp_nombre": "MEJORA DE LA PROVISIÓN DE LOS SERVICIOS DE TELECOMUNICACIONES"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "La formación de talento en datos e IA y la adopción de IA en MYPE y sectores productivos se sustentan en el PP 'Desarrollo de la ciencia, tecnología e innovación tecnológica'.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "macroeconomia",
+      "comision_nombre": "Macroeconomía",
+      "acuerdo_nacional": [
+        {
+          "politica": 17,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda la estabilidad y el crecimiento sostenido y el rol del mercado bajo reglas fiscales y monetarias, lo que coincide directamente con la afirmación de la economía social de mercado.",
+          "politica_nombre": "Afirmación de la economía social de mercado",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "Sus objetivos de reducir la informalidad laboral y empresarial y elevar la productividad replican textualmente la búsqueda de competitividad, productividad y formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 31,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión explicita la disciplina fiscal y asegurar la sostenibilidad de la deuda pública dentro de límites prudentes, que es el contenido central de la sostenibilidad fiscal y reducción del peso de la deuda.",
+          "politica_nombre": "Sostenibilidad fiscal y reducción del peso de la deuda",
+          "eje": "IV"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "causal",
+          "justificacion": "La acción de ampliar la base productiva y elevar la productividad y formalización empresarial se materializa operativamente a través del desarrollo productivo de las empresas.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0134",
+          "tipo": "causal",
+          "justificacion": "El crecimiento sostenido y la diversificación de la estructura productiva que persigue la comisión dependen causalmente de la promoción de la inversión privada.",
+          "pp_nombre": "PROMOCION DE LA INVERSION PRIVADA"
+        },
+        {
+          "codigo": "0110",
+          "tipo": "causal",
+          "justificacion": "El objetivo de ampliar y hacer más eficiente la recaudación combatiendo la evasión y elusión se sustenta parcialmente en la fiscalización aduanera.",
+          "pp_nombre": "FISCALIZACION ADUANERA"
+        }
+      ]
+    },
+    {
+      "comision_id": "energia",
+      "comision_nombre": "Energía",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el componente energético de la infraestructura nacional: acceso universal a electricidad confiable, masificación del gas natural mediante ductos y conexiones domiciliarias, y modernización de transmisión y distribución, que son parte de la Política 21 de desarrollo en infraestructura y vivienda.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "causal",
+          "justificacion": "Los objetivos de elevar la participación de renovables no convencionales y reducir la intensidad energética y las emisiones del sector mediante eficiencia y electrificación son causa directa del desarrollo sostenible y la gestión ambiental que persigue la Política 19.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La seguridad energética y la eficiencia energética en industria y edificaciones que promueve la comisión son insumo causal de la competitividad y productividad de la actividad económica de la Política 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0046",
+          "tipo": "igual_similar",
+          "justificacion": "Corresponde directamente a la acción de 'ejecutar programas de electrificación rural con sistemas fotovoltaicos y microredes en zonas aisladas' y al objetivo de acceso universal a electricidad en la Amazonía con soluciones renovables, que es exactamente el 'Acceso y uso de la electrificación rural'.",
+          "pp_nombre": "ACCESO Y USO DE LA ELECTRIFICACION RURAL"
+        },
+        {
+          "codigo": "0145",
+          "tipo": "igual_similar",
+          "justificacion": "Se alinea con la acción de 'modernizar la transmisión y distribución e implementar medición inteligente y gestión de demanda', equivalente a la mejora de la calidad del servicio eléctrico del PP.",
+          "pp_nombre": "MEJORA DE LA CALIDAD DEL SERVICIO ELECTRICO"
+        }
+      ]
+    },
+    {
+      "comision_id": "aguas",
+      "comision_nombre": "Aguas",
+      "acuerdo_nacional": [
+        {
+          "politica": 33,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda expresamente la gestión integrada de recursos hídricos y planes de gestión por cuenca con caudales ecológicos, materia idéntica a la Política de Estado sobre los recursos hídricos.",
+          "politica_nombre": "Política de Estado sobre los recursos hídricos",
+          "eje": "III"
+        },
+        {
+          "politica": 23,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica la tecnificación del riego agrícola (mayor consumidor de agua del país) y la asistencia técnica a pequeños productores, desagregando el componente hídrico de la política de desarrollo agrario y rural.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "causal",
+          "justificacion": "La seguridad hídrica frente al retroceso glaciar, la contaminación de fuentes, los caudales ecológicos y la infraestructura natural que plantea la comisión son resultado de una gestión ambiental sostenible.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0082",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de acceso universal a agua potable y saneamiento seguro en el ámbito urbano coincide directamente con el Programa Nacional de Saneamiento Urbano.",
+          "pp_nombre": "PROGRAMA NACIONAL DE SANEAMIENTO URBANO"
+        },
+        {
+          "codigo": "0083",
+          "tipo": "igual_similar",
+          "justificacion": "La meta de acceso universal a agua y saneamiento en el ámbito rural corresponde al Programa Nacional de Saneamiento Rural.",
+          "pp_nombre": "PROGRAMA NACIONAL DE SANEAMIENTO RURAL"
+        },
+        {
+          "codigo": "0042",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de tecnificar el riego y elevar la eficiencia del uso del agua agrícola se corresponde con el Aprovechamiento de los Recursos Hídricos para Uso Agrario.",
+          "pp_nombre": "APROVECHAMIENTO DE LOS RECURSOS HIDRICOS PARA USO AGRARIO"
+        }
+      ]
+    },
+    {
+      "comision_id": "prevision",
+      "comision_nombre": "Previsión",
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica el componente previsional (pensiones contributivas y no contributivas) del acceso universal a la seguridad social que enuncia la política; su objetivo de que toda persona adulta mayor reciba alguna pensión es la dimensión pensionaria de la seguridad social.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'asegurar tasas de reemplazo que protejan a los pensionistas de la pobreza' y ampliar Pensión 65, de modo que la cobertura y suficiencia previsional operan como mecanismo causal de reducción de la pobreza en la vejez.",
+          "politica_nombre": "Reducción de la pobreza",
+          "eje": "II"
+        },
+        {
+          "politica": 14,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea 'vincular la formalización laboral con la afiliación previsional', por lo que el empleo pleno, digno y productivo (formalización) es la causa que eleva la cobertura previsional de la PEA ocupada.",
+          "politica_nombre": "Acceso al empleo pleno, digno y productivo",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0097",
+          "tipo": "igual_similar",
+          "justificacion": "El PP Pensión 65 (asistencia solidaria) coincide directamente con la acción de la comisión de 'fortalecer y ampliar la pensión no contributiva (Pensión 65) con montos y cobertura adecuados', que es su pilar no contributivo.",
+          "pp_nombre": "PROGRAMA NACIONAL DE ASISTENCIA SOLIDARIA PENSION 65"
+        },
+        {
+          "codigo": "0142",
+          "tipo": "desagregado",
+          "justificacion": "El PP de acceso de personas adultas mayores a servicios especializados comparte población objetivo con el objetivo de la comisión de garantizar pensión a la totalidad de adultos mayores, atendiendo una faceta (servicios) del mismo grupo previsional.",
+          "pp_nombre": "ACCESO DE PERSONAS ADULTAS MAYORES A SERVICIOS ESPECIALIZADOS"
+        }
+      ]
+    },
+    {
+      "comision_id": "transportes",
+      "comision_nombre": "Transportes",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión centra sus objetivos en pavimentar y mantener la red vial nacional, sistemas de transporte masivo e infraestructura ferroviaria, portuaria y aeroportuaria, correspondencia directa con la Política 21 'Desarrollo en infraestructura y vivienda'.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La meta de 'reducir los costos logísticos a niveles competitivos con economías de la OCDE' y la logística articulada con Chancay/Callao actúan como causa del objetivo de competitividad y productividad que persigue la Política 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "Los objetivos de transporte público de cero emisiones, electromovilidad y movilidad sostenible desagregan, en el sector transporte, el mandato de desarrollo sostenible y gestión ambiental de la Política 19.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0138",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Reducción del costo, tiempo e inseguridad en el sistema de transporte' coincide semánticamente con los objetivos de conectividad vial, reducción de costos logísticos y seguridad vial de la comisión.",
+          "pp_nombre": "REDUCCION DEL COSTO, TIEMPO E INSEGURIDAD EN EL SISTEMA DE TRANSPORTE"
+        },
+        {
+          "codigo": "0148",
+          "tipo": "desagregado",
+          "justificacion": "El PP 'Reducción del tiempo, inseguridad y costo ambiental en el transporte urbano' desagrega el objetivo de la comisión de implementar transporte público masivo, integrado y de cero emisiones en las principales ciudades (Metro de Lima, BRT, ATU).",
+          "pp_nombre": "REDUCCION DEL TIEMPO, INSEGURIDAD Y COSTO AMBIENTAL EN EL TRANSPORTE URBANO"
+        },
+        {
+          "codigo": "0109",
+          "tipo": "causal",
+          "justificacion": "El PP 'Nuestras Ciudades' se vincula causalmente con la gobernanza de la movilidad urbana (ATU) y la integración modal que la comisión busca replicar en las ciudades.",
+          "pp_nombre": "NUESTRAS CIUDADES"
+        }
+      ]
+    },
+    {
+      "comision_id": "industria-papel-y-libro",
+      "comision_nombre": "Industria Papel y Libro",
+      "acuerdo_nacional": [
+        {
+          "politica": 12,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca 'elevar la comprensión lectora y el hábito de lectura', ampliar 'la red de bibliotecas públicas y escolares' y promover la publicación cultural, lo que coincide directamente con el acceso a educación de calidad y la promoción y defensa de la cultura de esta Política de Estado.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "eje": "II"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "Los objetivos de 'formalizar y dinamizar la industria del libro nacional', reducir la piratería editorial e incrementar la producción/exportación de títulos desagregan al sector editorial la política general de competitividad, productividad y formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "La meta de 'incrementar el contenido reciclado y de fibra sostenible' y la 'economía circular de la fibra: reciclaje de papel y cartón y trazabilidad de fibra sostenible' especializan al sector papelero la política de desarrollo sostenible y gestión ambiental.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0140",
+          "tipo": "desagregado",
+          "justificacion": "La comisión aborda 'la industria editorial nacional' y la 'producción y exportación de títulos', que es una rama específica del Programa de Desarrollo y Promoción de las Artes e Industrias Culturales.",
+          "pp_nombre": "DESARROLLO Y PROMOCION DE LAS ARTES E INDUSTRIAS CULTURALES"
+        },
+        {
+          "codigo": "0141",
+          "tipo": "causal",
+          "justificacion": "El objetivo de 'reducir la piratería editorial' depende causalmente de fortalecer la protección de la propiedad intelectual, que es precisamente la finalidad de este programa presupuestal.",
+          "pp_nombre": "PROTECCION DE LA PROPIEDAD INTELECTUAL"
+        },
+        {
+          "codigo": "0090",
+          "tipo": "causal",
+          "justificacion": "Elevar 'la comprensión lectora' e integrar 'lectura y bibliotecas escolares' articulando con el sector educación contribuye causalmente a los logros de aprendizaje de los estudiantes de la educación básica regular.",
+          "pp_nombre": "LOGROS DE APRENDIZAJE DE ESTUDIANTES DE LA EDUCACION BASICA REGULAR"
+        }
+      ]
+    },
+    {
+      "comision_id": "defensa",
+      "comision_nombre": "Defensa",
+      "acuerdo_nacional": [
+        {
+          "politica": 25,
+          "tipo": "igual_similar",
+          "justificacion": "La Política 25 cauta la institucionalidad de las FFAA y su servicio a la democracia; la comisión trata directamente del sector Defensa, la modernización de sus plataformas y el fortalecimiento de las Fuerzas Armadas.",
+          "politica_nombre": "Cautela de la institucionalidad de las Fuerzas Armadas y su servicio a la democracia",
+          "eje": "IV"
+        },
+        {
+          "politica": 9,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda amenazas convencionales, ciberamenazas, protección de la Amazonía y del dominio marítimo de las 200 millas y la vigilancia de fronteras, que son el núcleo de la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional",
+          "eje": "I"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "Las acciones de ciberdefensa, vigilancia satelital y de reactivar SIMA/FAME/SEMAN articulándolos con universidades y centros de I+D dependen causalmente del desarrollo de la ciencia y la tecnología nacional (Política 20).",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0135",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Mejora de las capacidades militares para la defensa y el desarrollo nacional' coincide casi literalmente con los objetivos de recapitalización del material militar y modernización de plataformas aéreas, navales y terrestres de la comisión.",
+          "pp_nombre": "MEJORA DE LAS CAPACIDADES MILITARES PARA LA DEFENSA Y EL DESARROLLO NACIONAL"
+        },
+        {
+          "codigo": "0128",
+          "tipo": "causal",
+          "justificacion": "La acción de fortalecer la presencia y movilidad de las FFAA en la Amazonía y zonas de economías ilegales contribuye causalmente a la reducción de la minería ilegal que persigue este PP.",
+          "pp_nombre": "REDUCCION DE LA MINERIA ILEGAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "energia-electrica",
+      "comision_nombre": "Energía Eléctrica",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el componente eléctrico de la infraestructura nacional al proponer expandir y digitalizar la red de transmisión y desplegar infraestructura de carga, especificando la Política de Estado de desarrollo en infraestructura.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "causal",
+          "justificacion": "Los objetivos de descarbonizar la matriz, alcanzar un sector eléctrico carbono-neutral al 2050 e integrar renovables no convencionales son causa directa del desarrollo sostenible y la gestión ambiental que promueve esta política.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 33,
+          "tipo": "causal",
+          "justificacion": "La matriz peruana está dominada por hidroelectricidad y la comisión busca 'garantizar resiliencia hídrica frente al cambio climático', vinculando la gestión de recursos hídricos con la seguridad del suministro eléctrico.",
+          "politica_nombre": "Política de Estado sobre los recursos hídricos",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0046",
+          "tipo": "igual_similar",
+          "justificacion": "Coincide directamente con el objetivo de 'acceso universal a electricidad... incluyendo zonas rurales y amazónicas' y la acción de ejecutar planes de electrificación rural con microrredes y sistemas fotovoltaicos.",
+          "pp_nombre": "ACCESO Y USO DE LA ELECTRIFICACION RURAL"
+        },
+        {
+          "codigo": "0145",
+          "tipo": "igual_similar",
+          "justificacion": "Corresponde de forma directa al objetivo de electricidad 'confiable' y a la modernización/digitalización de la red que busca la comisión para mejorar la calidad del servicio eléctrico.",
+          "pp_nombre": "MEJORA DE LA CALIDAD DEL SERVICIO ELECTRICO"
+        }
+      ]
+    },
+    {
+      "comision_id": "banca",
+      "comision_nombre": "Banca",
+      "acuerdo_nacional": [
+        {
+          "politica": 17,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el subsistema bancario y financiero dentro de la economía social de mercado: describe un sistema bancario sólido y supervisado por la SBS, y busca profundización financiera y estabilidad, materia central de esta Política de Estado.",
+          "politica_nombre": "Afirmación de la economía social de mercado",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Las acciones de garantías y scoring crediticio alternativo para mipymes informales y rurales, junto con la reducción de márgenes de intermediación por mayor competencia, buscan como efecto la formalización y competitividad de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La transformación digital de la banca (Yape, Plin, billeteras digitales), la interoperabilidad total y el open finance regulado por la SBS corresponden directamente a la sociedad de la información y del conocimiento.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "causal",
+          "justificacion": "El esquema nacional de garantías y scoring crediticio para mipymes informales y rurales que plantea la comisión habilita el crédito que causalmente sostiene el desarrollo productivo de las empresas, foco de este programa.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "industria-textil",
+      "comision_nombre": "Industria Textil",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca 'reducir sustancialmente la informalidad en confecciones y elevar la productividad' y agregar valor, que es exactamente el objeto de la Política 18 (competitividad, productividad y formalización de la actividad económica).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 22,
+          "tipo": "desagregado",
+          "justificacion": "La 'fuerte vocación exportadora' y el objetivo de 'recuperar y ampliar la cuota exportadora en segmentos de alto valor' aterrizan sectorialmente la Política 22 de comercio exterior y ampliación de mercados.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+          "eje": "III"
+        },
+        {
+          "politica": 23,
+          "tipo": "causal",
+          "justificacion": "La acción de 'mejora genética, riego tecnificado y financiamiento para reactivar el algodón peruano' (Pima y Tangüis) depende del desarrollo agrario y rural de la Política 23, que provee el insumo base de la cadena textil.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0093",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Desarrollo Productivo de las Empresas' coincide con la acción de 'formalizar y articular clústeres de confección con asistencia técnica, automatización y acceso a crédito' para elevar productividad.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0065",
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de recuperar cuota exportadora premium y 'fortalecer diseño, marca país y canales de comercio electrónico para exportación' desagrega en el sector textil el aprovechamiento de oportunidades con socios comerciales del PP 0065.",
+          "pp_nombre": "APROVECHAMIENTO DE LAS OPORTUNIDADES COMERCIALES BRINDADAS POR LOS PRINCIPALES SOCIOS COMERCIALES DEL PERU"
+        },
+        {
+          "codigo": "0121",
+          "tipo": "causal",
+          "justificacion": "El objetivo de 'reactivar la producción nacional de algodón Pima y Tangüis integrada a la cadena' se apoya en la articulación de pequeños productores al mercado que impulsa el PP 0121.",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        }
+      ]
+    },
+    {
+      "comision_id": "metalurgia",
+      "comision_nombre": "Metalurgia",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica, en el sector metalúrgico, la búsqueda de competitividad y productividad: propone agregar valor mediante fundición/refinación local, procesamiento de minerales críticos y encadenamientos industriales de mayor sofisticación, en lugar de exportar solo concentrados.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de refinación y fundición con estándares ambientales limpios y de remediar la mayor parte de los pasivos ambientales mineros y metalúrgicos históricos desagrega la política de desarrollo sostenible y gestión ambiental al ámbito metalúrgico.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea la I+D en metalurgia limpia, una estrategia nacional de minerales críticos con procesamiento local y la formación de ingenieros metalúrgicos como medio (causa) para lograr el salto de valor agregado, apoyándose en el desarrollo de la ciencia y la tecnología.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0120",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de 'remediar la mayor parte de los pasivos ambientales mineros y metalúrgicos históricos' y la acción de ejecutar un programa nacional de remediación de pasivos coinciden directamente con el PP de Remediación de Pasivos Ambientales Mineros.",
+          "pp_nombre": "REMEDIACION DE PASIVOS AMBIENTALES MINEROS"
+        },
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "La acción de crear una estrategia de minerales críticos con I+D y procesamiento local y de fortalecer la investigación en metalurgia limpia se canaliza a través del PP de Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0093",
+          "tipo": "desagregado",
+          "justificacion": "La promoción de clústeres que integren minería, metalurgia y manufactura metálica de mayor valor y los encadenamientos industriales especifican, para la cadena metalúrgica, el PP de Desarrollo Productivo de las Empresas.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "turismo",
+      "comision_nombre": "Turismo",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la búsqueda de competitividad, productividad y formalización al sector turístico: sus objetivos de 'elevar la formalización y la calidad de los servicios turísticos' y 'formalizar y certificar prestadores con estándares de calidad' son una especificación sectorial de esta política.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "La comisión aplica el desarrollo sostenible y la gestión ambiental al turismo: propone 'consolidar un modelo de turismo sostenible que proteja el patrimonio y beneficie a las comunidades' y gestionar la capacidad de carga y conservación de sitios naturales y patrimoniales.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 3,
+          "tipo": "causal",
+          "justificacion": "La puesta en valor del patrimonio cultural y natural (Machu Picchu, redes incas, gastronomía, cultura viva) que sustenta el turismo refuerza la afirmación de la identidad nacional; la comisión articula rutas de cultura viva y fortalece la marca Perú.",
+          "politica_nombre": "Afirmación de la identidad nacional",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0127",
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: el PP 'Mejora de la competitividad de los destinos turísticos' es exactamente el instrumento presupuestal de los objetivos de la comisión de diversificar destinos, elevar calidad y competitividad del turismo.",
+          "pp_nombre": "MEJORA DE LA COMPETITIVIDAD DE LOS DESTINOS TURISTICOS"
+        },
+        {
+          "codigo": "0132",
+          "tipo": "causal",
+          "justificacion": "La puesta en valor y uso social del patrimonio cultural es condición del producto turístico: la comisión prioriza la conservación y gestión de capacidad de carga en Machu Picchu y otros sitios patrimoniales como base de la oferta.",
+          "pp_nombre": "PUESTA EN VALOR Y USO SOCIAL DEL PATRIMONIO CULTURAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "promocion-de-la-inversion",
+      "comision_nombre": "Promoción de La Inversión",
+      "acuerdo_nacional": [
+        {
+          "politica": 17,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión gira en torno a la inversión privada (ProInversión, APP, Obras por Impuestos) y a garantizar estabilidad jurídica y respeto a contratos, que es precisamente el contenido de la Política 17 de afirmación de la economía social de mercado, la cual compromete al Estado a estimular y dar seguridad a la inversión privada.",
+          "politica_nombre": "Afirmación de la economía social de mercado",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Los objetivos de elevar la tasa de inversión sobre el PBI, simplificar trámites y diversificar hacia sectores de valor agregado son causa directa de mayor competitividad, productividad y formalización de la actividad económica que persigue la Política 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 21,
+          "tipo": "causal",
+          "justificacion": "La comisión busca explícitamente 'cerrar la mayor parte de la brecha de infraestructura de largo plazo con capital privado', lo que produce el desarrollo en infraestructura y vivienda que constituye la Política 21.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0134",
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia semántica directa: el PP 'Promoción de la Inversión Privada' es el instrumento presupuestal exacto de la comisión, que se articula en torno a ProInversión y al régimen de APP/Obras por Impuestos.",
+          "pp_nombre": "PROMOCION DE LA INVERSION PRIVADA"
+        },
+        {
+          "codigo": "0093",
+          "tipo": "causal",
+          "justificacion": "La acción de la comisión de 'promover incentivos para inversión en sectores de valor agregado, tecnología y regiones rezagadas' conduce al desarrollo productivo de las empresas que financia este PP; la mejora del clima de inversión es causa del fortalecimiento productivo empresarial.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "biotecnologia",
+      "comision_nombre": "Biotecnologia",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "igual_similar",
+          "justificacion": "El eje central de la comision es elevar el gasto en I+D al 1% del PBI con foco en ciencias de la vida, crear centros nacionales de excelencia y mecanismos de transferencia tecnologica universidad-empresa, lo que coincide directamente con la Politica 20 de Desarrollo de la ciencia y la tecnologia.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "La comision desagrega el aprovechamiento sostenible de la biodiversidad al establecer un marco de bioseguridad y acceso a recursos geneticos, biobancos y registros bajo el Protocolo de Nagoya, especificando en materia biotecnologica la Politica 19 de desarrollo sostenible y gestion ambiental.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Al buscar convertir la megabiodiversidad y la diversidad genetica en valor agregado nacional mediante cadenas de valor de bioproductos, la comision plantea la biotecnologia como causa de mayor competitividad y productividad, en linea con la Politica 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "igual_similar",
+          "justificacion": "La comision propone crear fondos competitivos para I+D, plantas piloto de escalamiento y transferencia tecnologica en ciencias de la vida, lo que corresponde semanticamente al PP 0137 Desarrollo de la ciencia, tecnologia e innovacion tecnologica.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0057",
+          "tipo": "causal",
+          "justificacion": "La comision busca convertir la diversidad genetica en valor agregado mediante biobancos y registros de recursos geneticos; la conservacion de la diversidad biologica y el aprovechamiento sostenible que financia el PP 0057 provee la base biologica para esa bioeconomia.",
+          "pp_nombre": "CONSERVACION DE LA DIVERSIDAD BIOLOGICA Y APROVECHAMIENTO SOSTENIBLE DE LOS RECURSOS NATURALES EN AREA NATURAL PROTEGIDA"
+        }
+      ]
+    },
+    {
+      "comision_id": "vacunas-y-laboratorios",
+      "comision_nombre": "Vacunas y Laboratorios",
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el acceso universal a la salud en un componente específico de soberanía sanitaria: asegurar coberturas de vacunación elevadas y sostenidas y una red de laboratorios de referencia con capacidad de respuesta a emergencias.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "El desarrollo de ciencia y tecnología es condición para la capacidad nacional que busca la comisión: fondos de I+D en vacunas articulados entre Estado, academia y privados y alianzas de transferencia tecnológica para producir biológicos.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "La comisión plantea fondos de I+D en vacunas articulados entre Estado, academia y privados; el PP de desarrollo de ciencia, tecnología e innovación es el vehículo presupuestal que financia esa capacidad de investigación y producción de biológicos.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "deporte",
+      "comision_nombre": "Deporte",
+      "acuerdo_nacional": [
+        {
+          "politica": 12,
+          "tipo": "igual_similar",
+          "justificacion": "La Política 12 promueve y defiende explícitamente el deporte junto a la educación; la comisión aborda directamente ese mandato al buscar educación física de calidad en la educación básica, ligas estudiantiles e infraestructura deportiva.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "eje": "II"
+        },
+        {
+          "politica": 13,
+          "tipo": "causal",
+          "justificacion": "La comisión plantea el deporte como política de salud pública para reducir sobrepeso y obesidad mediante actividad física masiva, lo que causalmente contribuye al acceso universal a la salud que persigue la Política 13.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+          "eje": "II"
+        },
+        {
+          "politica": 16,
+          "tipo": "desagregado",
+          "justificacion": "El sistema nacional de detección y desarrollo de talento, las becas deportivas y las ligas estudiantiles desagregan hacia el ámbito deportivo la promoción y protección de la niñez, adolescencia y juventud de la Política 16.",
+          "politica_nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0101",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Incremento de la práctica de actividades físicas, deportivas y recreativas en la población peruana' coincide semánticamente de forma directa con el programa nacional de actividad física comunitaria masiva y el acceso a infraestructura deportiva que propone la comisión.",
+          "pp_nombre": "INCREMENTO DE LA PRACTICA DE ACTIVIDADES FISICAS, DEPORTIVAS Y RECREATIVAS EN LA POBLACION PERUANA"
+        },
+        {
+          "codigo": "0018",
+          "tipo": "causal",
+          "justificacion": "El objetivo de reducir sobrepeso y obesidad mediante actividad física masiva incide causalmente en el PP de Enfermedades No Transmisibles, cuyos factores de riesgo incluyen el sedentarismo y la obesidad.",
+          "pp_nombre": "ENFERMEDADES NO TRANSMISIBLES"
+        }
+      ]
+    },
+    {
+      "comision_id": "desarrollo-rural",
+      "comision_nombre": "Desarrollo Rural",
+      "acuerdo_nacional": [
+        {
+          "politica": 23,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión aborda directamente el desarrollo rural y agrario (elevar productividad e ingresos de la agricultura familiar, extensión agraria, sanidad, crédito y asociatividad), lo que coincide semánticamente de forma directa con la Política de desarrollo agrario y rural.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        },
+        {
+          "politica": 10,
+          "tipo": "desagregado",
+          "justificacion": "El primer objetivo es 'reducir de forma estructural la pobreza y pobreza extrema rural hacia niveles cercanos a los urbanos', desagregando territorialmente al ámbito rural la Política de reducción de la pobreza.",
+          "politica_nombre": "Reducción de la pobreza",
+          "eje": "II"
+        },
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "Las acciones de riego, tecnificación, programas de adaptación climática y reducción de anemia buscan 'fortalecer la seguridad alimentaria', vinculándose causalmente con la promoción de la seguridad alimentaria y nutrición.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0118",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de elevar ingresos de la agricultura familiar de subsistencia y las acciones de acceso a mercados coinciden directamente con el PP de acceso de hogares rurales con economías de subsistencia a mercados locales (HAKU WIÑAY).",
+          "pp_nombre": "ACCESO DE HOGARES RURALES CON ECONOMIAS DE SUBSISTENCIA A MERCADOS LOCALES - HAKU WIÑAY"
+        },
+        {
+          "codigo": "0121",
+          "tipo": "igual_similar",
+          "justificacion": "La acción de 'fortalecer cooperativas y organizaciones de productores con agregación de valor' y elevar el acceso a mercados de la pequeña agricultura corresponde semánticamente al PP de mejora de la articulación de pequeños productores al mercado.",
+          "pp_nombre": "MEJORA DE LA ARTICULACION DE PEQUEÑOS PRODUCTORES AL MERCADO"
+        },
+        {
+          "codigo": "0111",
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de universalizar servicios básicos y el hábitat en el Perú rural se especifica en el PP de apoyo al hábitat rural, orientado a las mismas brechas de infraestructura y vivienda rural.",
+          "pp_nombre": "APOYO AL HABITAT RURAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "proyecto-pais-joven",
+      "comision_nombre": "Proyecto País Joven",
+      "acuerdo_nacional": [
+        {
+          "politica": 16,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión tiene como eje central convertir a la juventud en motor de desarrollo, lo que coincide directamente con la política de promoción y protección de la adolescencia y la juventud.",
+          "politica_nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud",
+          "eje": "II"
+        },
+        {
+          "politica": 14,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el acceso al empleo pleno, digno y productivo al segmento juvenil: reducir ninis e informalidad laboral juvenil y programas de 'primer empleo formal' articulados con el sector privado.",
+          "politica_nombre": "Acceso al empleo pleno, digno y productivo",
+          "eje": "II"
+        },
+        {
+          "politica": 12,
+          "tipo": "desagregado",
+          "justificacion": "Especifica la educación de calidad al ámbito juvenil mediante 'formación pertinente con competencias digitales y técnicas demandadas' y becas orientadas a carreras con demanda y STEM.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+          "eje": "II"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0116",
+          "tipo": "causal",
+          "justificacion": "El PP de mejora de la empleabilidad e inserción laboral (PROEMPLEO) es el instrumento que produce el resultado buscado por la comisión: reducir ninis e informalidad juvenil vía formación dual y primer empleo formal.",
+          "pp_nombre": "MEJORAMIENTO DE LA EMPLEABILIDAD E INSERCION LABORAL-PROEMPLEO"
+        },
+        {
+          "codigo": "0122",
+          "tipo": "igual_similar",
+          "justificacion": "El PP de acceso a educación superior de calidad por alto rendimiento (Beca 18) coincide con la acción de 'becas y créditos educativos orientados a carreras con demanda y STEM' de la comisión.",
+          "pp_nombre": "ACCESO Y PERMANENCIA DE POBLACION CON ALTO RENDIMIENTO ACADEMICO A UNA EDUCACION SUPERIOR DE CALIDAD"
+        },
+        {
+          "codigo": "0147",
+          "tipo": "desagregado",
+          "justificacion": "El fortalecimiento de la educación superior tecnológica concreta una parte de la 'formación pertinente con competencias digitales y técnicas demandadas' que plantea la comisión para la juventud.",
+          "pp_nombre": "FORTALECIMIENTO DE LA EDUCACION SUPERIOR TECNOLOGICA"
+        }
+      ]
+    },
+    {
+      "comision_id": "capital-social",
+      "comision_nombre": "Capital Social",
+      "acuerdo_nacional": [
+        {
+          "politica": 4,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca 'reducir la conflictividad social a través de mecanismos institucionalizados de diálogo temprano y participación' e 'institucionalizar sistemas de diálogo y alerta temprana de conflictos', lo que coincide directamente con la Política de Estado de institucionalización del diálogo y la concertación.",
+          "politica_nombre": "Institucionalización del diálogo y la concertación",
+          "eje": "I"
+        },
+        {
+          "politica": 24,
+          "tipo": "causal",
+          "justificacion": "La comisión propone 'elevar la confianza en instituciones mediante transparencia' y 'fortalecer mecanismos de transparencia, acceso a información pública y rendición de cuentas'; un Estado eficiente y transparente es la causa que reconstruye la confianza institucional que define al capital social.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        },
+        {
+          "politica": 7,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega el fortalecimiento del civismo en acciones concretas de 'participación cívica, voluntariado y asociativismo, especialmente entre jóvenes', especificando el componente de civismo contenido en esta Política de Estado.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0139",
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de 'reducir la conflictividad social' y la acción de 'alerta temprana de conflictos con presencia territorial permanente del Estado' corresponden semánticamente al PP de disminución de la incidencia de conflictos, protestas y movilizaciones sociales violentas.",
+          "pp_nombre": "DISMINUCION DE LA INCIDENCIA DE LOS CONFLICTOS, PROTESTAS Y MOVILIZACIONES SOCIALES VIOLENTAS QUE ALTERAN EL ORDEN PUBLICO"
+        },
+        {
+          "codigo": "0125",
+          "tipo": "desagregado",
+          "justificacion": "La comisión busca 'aumentar la participación cívica' y reforzar el 'presupuesto participativo y la participación ciudadana con incidencia vinculante'; el PP de incremento de la participación política de la ciudadanía instrumentaliza esa dimensión participativa.",
+          "pp_nombre": "MEJORA DE LA EFICIENCIA DE LOS PROCESOS ELECTORALES E INCREMENTO DE LA PARTICIPACION POLITICA DE LA CIUDADANIA"
+        },
+        {
+          "codigo": "0151",
+          "tipo": "causal",
+          "justificacion": "La comisión ancla la confianza institucional en 'transparencia y rendición de cuentas en los tres niveles de gobierno'; reducir la corrupción en el uso de los recursos públicos es la vía presupuestal que causa esa recuperación de confianza.",
+          "pp_nombre": "REDUCCION DE LA CORRUPCION EN EL USO DE LOS RECURSOS PUBLICOS"
+        }
+      ]
+    },
+    {
+      "comision_id": "innovacion",
+      "comision_nombre": "Innovación",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca 'fortalecer el sistema nacional de CTI', elevar la inversión en I+D+i y aumentar investigadores y patentes: coincidencia semántica directa con la Política 20 'Desarrollo de la ciencia y la tecnología'.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La comisión persigue 'diversificar la matriz productiva hacia bienes y servicios intensivos en conocimiento' y fortalecer la inversión privada en innovación; ese esfuerzo innovador es causa directa de la competitividad y productividad que enuncia la Política 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "El objetivo de diversificar hacia una economía intensiva en conocimiento y superar la dependencia de materias primas se corresponde con la 'sociedad del conocimiento' que promueve la Política 35.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica' es idéntico en objeto al mandato de la comisión de fortalecer el sistema nacional de CTI y elevar la inversión en I+D+i.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0141",
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica el aumento de 'patentes de residentes' como meta; ese componente se desagrega dentro del PP 'Protección de la Propiedad Intelectual'.",
+          "pp_nombre": "PROTECCION DE LA PROPIEDAD INTELECTUAL"
+        },
+        {
+          "codigo": "0093",
+          "tipo": "causal",
+          "justificacion": "La comisión apunta a la vinculación universidad-empresa y la inversión privada en innovación para diversificar la matriz productiva, relación causa-efecto con el 'Desarrollo Productivo de las Empresas' del PP 0093.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "etica",
+      "comision_nombre": "Ética",
+      "acuerdo_nacional": [
+        {
+          "politica": 26,
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: la comisión busca 'institucionalizar la integridad como política de Estado' y 'reducir la impunidad fortaleciendo el control y la justicia anticorrupción', que es exactamente el objeto de la Política 26 (promoción de la ética y la transparencia y erradicación de la corrupción).",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+          "eje": "IV"
+        },
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica y operacionaliza el 'Estado eficiente y transparente' mediante acciones concretas de transparencia activa, datos abiertos, interoperabilidad para el control social y la reforma del servicio civil meritocrático.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente",
+          "eje": "IV"
+        },
+        {
+          "politica": 29,
+          "tipo": "causal",
+          "justificacion": "El acceso a la información pública es habilitante del control social que la comisión persigue: 'universalizar transparencia activa, datos abiertos e interoperabilidad para el control social y la auditoría' reduce corrupción al reforzar la fiscalización ciudadana.",
+          "politica_nombre": "Acceso a la información, libertad de expresión y libertad de prensa",
+          "eje": "IV"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0151",
+          "tipo": "desagregado",
+          "justificacion": "El PP 'Reducción de la corrupción en el uso de los recursos públicos' es la traducción presupuestal de un segmento central de la comisión, cuyo objetivo es 'reducir la impunidad fortaleciendo el control' y mejorar la posición del Perú en índices de percepción de corrupción.",
+          "pp_nombre": "REDUCCION DE LA CORRUPCION EN EL USO DE LOS RECURSOS PUBLICOS"
+        },
+        {
+          "codigo": "0149",
+          "tipo": "causal",
+          "justificacion": "La mejora del desempeño en contrataciones públicas ataca uno de los focos de corrupción del gasto estatal; se articula causalmente con el objetivo de la comisión de 'universalizar los sistemas de integridad' y la transparencia activa para prevenir actos de corrupción.",
+          "pp_nombre": "MEJORA DEL DESEMPEÑO EN LAS CONTRATACIONES PUBLICAS"
+        }
+      ]
+    },
+    {
+      "comision_id": "desarrollo-urbano",
+      "comision_nombre": "Desarrollo Urbano",
+      "acuerdo_nacional": [
+        {
+          "politica": 34,
+          "tipo": "igual_similar",
+          "justificacion": "La comisión busca universalizar la planificación urbana e integrar el ordenamiento territorial y la gestión del suelo urbano, que es el núcleo de la Política de Estado 34 sobre ordenamiento y gestión territorial.",
+          "politica_nombre": "Ordenamiento y gestión territorial",
+          "eje": "III"
+        },
+        {
+          "politica": 21,
+          "tipo": "igual_similar",
+          "justificacion": "Sus objetivos de ciudades planificadas y su acción de integrar política de vivienda e invertir en infraestructura urbana (transporte masivo, espacios públicos) corresponden directamente a la Política 21 de desarrollo en infraestructura y vivienda.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 32,
+          "tipo": "causal",
+          "justificacion": "El objetivo de eliminar la ocupación urbana de zonas de riesgo no mitigable e integrar la gestión de riesgo de desastres en el planeamiento urbano es un efecto directo perseguido por la Política 32 de Gestión del Riesgo de Desastres.",
+          "politica_nombre": "Gestión del Riesgo de Desastres",
+          "eje": "IV"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0109",
+          "tipo": "igual_similar",
+          "justificacion": "El PP Nuestras Ciudades comparte el mismo objeto de la comisión: planificación y desarrollo ordenado de las ciudades, incluyendo planes de desarrollo urbano y catastros.",
+          "pp_nombre": "NUESTRAS CIUDADES"
+        },
+        {
+          "codigo": "0146",
+          "tipo": "desagregado",
+          "justificacion": "El PP de acceso a vivienda y entorno urbano adecuado especifica la dimensión habitacional y de espacio público de calidad que la comisión plantea como parte de ciudades sostenibles.",
+          "pp_nombre": "ACCESO DE LAS FAMILIAS A VIVIENDA Y ENTORNO URBANO ADECUADO"
+        },
+        {
+          "codigo": "0148",
+          "tipo": "desagregado",
+          "justificacion": "El PP de reducción del tiempo, inseguridad y costo ambiental en el transporte urbano desagrega el objetivo de la comisión de consolidar sistemas integrados de transporte público y movilidad activa en las ciudades.",
+          "pp_nombre": "REDUCCION DEL TIEMPO, INSEGURIDAD Y COSTO AMBIENTAL EN EL TRANSPORTE URBANO"
+        }
+      ]
+    },
+    {
+      "comision_id": "quimica",
+      "comision_nombre": "Química",
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega en el subsector químico/petroquímico la búsqueda de competitividad, productividad y valor agregado: plantea reducir el déficit de la balanza comercial química por sustitución de importaciones (fertilizantes, plásticos) y desarrollar un polo petroquímico basado en gas natural.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        },
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "Los objetivos de 'gestión segura de sustancias químicas y residuos peligrosos conforme a estándares internacionales' y de consolidar 'química verde y bioeconomía' especifican, en clave química, el desarrollo sostenible y la gestión ambiental.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "La comisión concreta el desarrollo de la ciencia y la tecnología al 'financiar centros de I+D aplicada en química verde, biomateriales y valorización de residuos' y 'formar talento especializado en ingeniería química, procesos y seguridad química'.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "causal",
+          "justificacion": "El PP de Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica es el vehículo que habilita (causa) la acción de la comisión de financiar centros de I+D aplicada en química verde, biomateriales y valorización de residuos.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0093",
+          "tipo": "desagregado",
+          "justificacion": "El Desarrollo Productivo de las Empresas contiene, como caso específico, la industrialización química que persigue la comisión: sustitución de importaciones en segmentos priorizados y promoción de la producción nacional de fertilizantes e insumos agroquímicos.",
+          "pp_nombre": "DESARROLLO PRODUCTIVO DE LAS EMPRESAS"
+        },
+        {
+          "codigo": "0036",
+          "tipo": "desagregado",
+          "justificacion": "La Gestión Integral de Residuos Sólidos abarca el objetivo de la comisión de generalizar la gestión segura de residuos peligrosos (subconjunto químico de los residuos) conforme a estándares internacionales.",
+          "pp_nombre": "GESTION INTEGRAL DE RESIDUOS SOLIDOS"
+        }
+      ]
+    },
+    {
+      "comision_id": "vivienda",
+      "comision_nombre": "Vivienda",
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "igual_similar",
+          "justificacion": "La Política de Estado 21 'Desarrollo en infraestructura y vivienda' coincide de forma directa con el objeto de la comisión: reducir el déficit habitacional cuantitativo y cualitativo y lograr vivienda adecuada, segura y formal al 2050.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda",
+          "eje": "III"
+        },
+        {
+          "politica": 32,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especifica el componente habitacional de la Gestión del Riesgo de Desastres al proponer 'integrar la gestión de riesgo de desastres en la política de vivienda', el cumplimiento de la norma sismorresistente y 'eliminar la ocupación de zonas de riesgo no mitigable mediante prevención y reasentamiento'.",
+          "politica_nombre": "Gestión del Riesgo de Desastres",
+          "eje": "IV"
+        },
+        {
+          "politica": 34,
+          "tipo": "desagregado",
+          "justificacion": "La acción de 'habilitar suelo urbano formal y bancos de suelo' e 'integrar... el ordenamiento territorial en la política de vivienda' desagrega, en clave habitacional, la Política 34 de ordenamiento y gestión territorial.",
+          "politica_nombre": "Ordenamiento y gestión territorial",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0146",
+          "tipo": "igual_similar",
+          "justificacion": "El PP 'Acceso de las familias a vivienda y entorno urbano adecuado' es semánticamente equivalente al fin de la comisión de reducir el déficit habitacional y garantizar vivienda adecuada mediante subsidios y crédito hipotecario focalizados en menores ingresos.",
+          "pp_nombre": "ACCESO DE LAS FAMILIAS A VIVIENDA Y ENTORNO URBANO ADECUADO"
+        },
+        {
+          "codigo": "0082",
+          "tipo": "desagregado",
+          "justificacion": "El Programa Nacional de Saneamiento Urbano operativiza el objetivo de 'cobertura universal (100%) de agua potable y saneamiento al 2050' en el ámbito urbano/periurbano que la comisión prioriza al 'acelerar las inversiones en agua y saneamiento'.",
+          "pp_nombre": "PROGRAMA NACIONAL DE SANEAMIENTO URBANO"
+        },
+        {
+          "codigo": "0083",
+          "tipo": "desagregado",
+          "justificacion": "El Programa Nacional de Saneamiento Rural desagrega territorialmente la misma meta de cobertura universal de agua y saneamiento, en línea con la acción de la comisión de priorizar 'zonas rurales y periurbanas'.",
+          "pp_nombre": "PROGRAMA NACIONAL DE SANEAMIENTO RURAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "ciber-seguridad",
+      "comision_nombre": "Ciber Seguridad",
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La comision aborda la seguridad de la transformacion digital, la proteccion de datos y una cultura de seguridad digital en ciudadania y organizaciones, que es exactamente el nucleo de la Politica 35 'Sociedad de la informacion y sociedad del conocimiento'.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 9,
+          "tipo": "desagregado",
+          "justificacion": "La comision plantea un horizonte 2050 de 'soberania y resiliencia digital nacional' y acciones de 'ciberdefensa y reduccion de dependencias tecnologicas criticas', que especializan en el dominio ciber la Politica 9 de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional",
+          "eje": "I"
+        },
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "Al reducir fraude, ransomware y filtraciones que afectan a ciudadanos e infraestructuras, la ciberseguridad contribuye causalmente a la Politica 7 de seguridad ciudadana frente a nuevas formas de delito digital.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
+          "eje": "I"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0135",
+          "tipo": "desagregado",
+          "justificacion": "La accion de la comision 'Desarrollar capacidades de ciberdefensa y reducir dependencias tecnologicas criticas' desagrega, en el dominio ciber, el PP 0135 'Mejora de las capacidades militares para la defensa y el desarrollo nacional'.",
+          "pp_nombre": "MEJORA DE LAS CAPACIDADES MILITARES PARA LA DEFENSA Y EL DESARROLLO NACIONAL"
+        }
+      ]
+    },
+    {
+      "comision_id": "forestal",
+      "comision_nombre": "Forestal",
+      "acuerdo_nacional": [
+        {
+          "politica": 19,
+          "tipo": "desagregado",
+          "justificacion": "La comisión especializa la Política de desarrollo sostenible y gestión ambiental al ámbito del bosque amazónico: fija metas de 'deforestación neta cero al 2050', restauración de tierras degradadas y aporte a la 'mitigación climática' vía mercados de carbono y servicios ecosistémicos.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental",
+          "eje": "III"
+        },
+        {
+          "politica": 23,
+          "tipo": "desagregado",
+          "justificacion": "El sector forestal se enmarca institucionalmente en lo agrario y rural (SERFOR); la comisión desagrega esta política al proponer manejo forestal comunitario, bioeconomía, productos no maderables y la 'titulación y seguridad jurídica de comunidades nativas con territorios forestales'.",
+          "politica_nombre": "Política de desarrollo agrario y rural",
+          "eje": "III"
+        },
+        {
+          "politica": 34,
+          "tipo": "causal",
+          "justificacion": "Las acciones de 'acelerar la titulación de comunidades nativas y campesinas' y 'formalización de concesiones forestales' son ejercicios de ordenamiento y gestión territorial que ordenan el uso del suelo del bosque para reducir la deforestación.",
+          "politica_nombre": "Ordenamiento y gestión territorial",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0130",
+          "tipo": "igual_similar",
+          "justificacion": "Coincidencia directa: el PP 'Competitividad y aprovechamiento sostenible de los recursos forestales y de la fauna silvestre' es el vehículo presupuestal exacto del objetivo de la comisión de manejo forestal sostenible certificado, trazabilidad de la madera e industrialización con valor agregado.",
+          "pp_nombre": "COMPETITIVIDAD Y APROVECHAMIENTO SOSTENIBLE DE LOS RECURSOS FORESTALES Y DE LA FAUNA SILVESTRE"
+        },
+        {
+          "codigo": "0144",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión plantea 'un marco robusto de mercados de carbono e ingreso por servicios ecosistémicos con salvaguardas e integridad', que corresponde semánticamente al PP de 'conservación y uso sostenible de ecosistemas para la provisión de servicios ecosistémicos'.",
+          "pp_nombre": "CONSERVACION Y USO SOSTENIBLE DE ECOSISTEMAS PARA LA PROVISION DE SERVICIOS ECOSISTEMICOS"
+        },
+        {
+          "codigo": "0057",
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de manejo forestal sostenible y de frenar la deforestación de los bosques amazónicos concreta, en el bosque productivo, el PP de 'conservación de la diversidad biológica y aprovechamiento sostenible de los recursos naturales', que el PP restringe a áreas naturales protegidas.",
+          "pp_nombre": "CONSERVACION DE LA DIVERSIDAD BIOLOGICA Y APROVECHAMIENTO SOSTENIBLE DE LOS RECURSOS NATURALES EN AREA NATURAL PROTEGIDA"
+        }
+      ]
+    },
+    {
+      "comision_id": "inteligencia-artificial",
+      "comision_nombre": "Inteligencia Artificial",
+      "acuerdo_nacional": [
+        {
+          "politica": 20,
+          "tipo": "desagregado",
+          "justificacion": "La comisión desagrega la Política de desarrollo de la ciencia y la tecnología hacia un campo específico: la IA, con metas de inversión en I+D (orden de 1.5% del PBI) y formación de talento especializado en IA y ciencia de datos.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología",
+          "eje": "III"
+        },
+        {
+          "politica": 35,
+          "tipo": "desagregado",
+          "justificacion": "Sus objetivos de universalizar el acceso a internet de calidad y crear una política de datos abiertos e interoperables como bien público concretan, en la era de la IA, la Política de sociedad de la información y del conocimiento.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento",
+          "eje": "III"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "La comisión busca 'posicionar la IA como motor de productividad' y promover su adopción en sectores estratégicos (agro, minería, salud, educación), lo que causalmente apunta a la competitividad y productividad de la economía (eje III, Competitividad del País).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+          "eje": "III"
+        }
+      ],
+      "programas_presupuestales": [
+        {
+          "codigo": "0137",
+          "tipo": "desagregado",
+          "justificacion": "El objetivo de incrementar la inversión en I+D y las acciones de infraestructura de cómputo (HPC/GPU) y adopción tecnológica especifican, en el dominio de la IA, el PP de Desarrollo de la Ciencia, Tecnología e Innovación Tecnológica.",
+          "pp_nombre": "DESARROLLO DE LA CIENCIA, TECNOLOGIA E INNOVACION TECNOLOGICA"
+        },
+        {
+          "codigo": "0047",
+          "tipo": "causal",
+          "justificacion": "La comisión declara universalizar el acceso a internet de calidad como 'condición habilitante de la economía de la IA', relación causal directa con el PP de acceso y uso de servicios de telecomunicaciones e información asociados.",
+          "pp_nombre": "ACCESO Y USO ADECUADO DE LOS SERVICIOS PUBLICOS DE TELECOMUNICACIONES E INFORMACION ASOCIADOS"
+        },
+        {
+          "codigo": "0124",
+          "tipo": "causal",
+          "justificacion": "El objetivo de conectividad y 'internet de calidad', hoy limitada según el resumen, depende de mejorar la provisión de los servicios de telecomunicaciones que aborda este PP.",
+          "pp_nombre": "MEJORA DE LA PROVISIÓN DE LOS SERVICIOS DE TELECOMUNICACIONES"
+        }
+      ]
+    }
+  ]
+}
