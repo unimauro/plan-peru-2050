@@ -1,0 +1,57 @@
+{
+  "fuente": "Mapeo verificado de indicadores del Plan 2050 a series reales de BCRPData (ver reference_bcrp_data_api). Solo códigos confirmados contra la API.",
+  "mapeos": {
+    "reforma-del-estado__presion-tributaria-recaudacion-tributaria-como-p": {
+      "codigo": "PM10103FA",
+      "modo": "anual",
+      "factor": 1,
+      "fuente": "BCRP",
+      "confianza": "alta",
+      "serie": "Ingresos tributarios del Gob. Central (% PBI)"
+    },
+    "cohesion-social__tasa-de-informalidad-laboral": {
+      "codigo": "PN38071GM",
+      "modo": "ultimo",
+      "factor": 1,
+      "fuente": "BCRP",
+      "confianza": "media",
+      "serie": "Tasa de empleo informal (año móvil)",
+      "caveat": "serie descontinuada ~2022; dato vigente en INEI/ENAHO"
+    },
+    "competitividad__informalidad-laboral": {
+      "codigo": "PN38071GM",
+      "modo": "ultimo",
+      "factor": 1,
+      "fuente": "BCRP",
+      "confianza": "media",
+      "serie": "Tasa de empleo informal (año móvil)",
+      "caveat": "serie descontinuada ~2022"
+    },
+    "macroeconomia__informalidad-laboral": {
+      "codigo": "PN38071GM",
+      "modo": "ultimo",
+      "factor": 1,
+      "fuente": "BCRP",
+      "confianza": "media",
+      "serie": "Tasa de empleo informal (año móvil)",
+      "caveat": "serie descontinuada ~2022"
+    },
+    "agroindustria__valor-de-exportaciones-agropecuarias": {
+      "codigo": "PN38830BM",
+      "modo": "mensual_suma",
+      "factor": 1,
+      "fuente": "BCRP",
+      "confianza": "media",
+      "serie": "Export. no tradicionales agropecuarias FOB",
+      "caveat": "solo NO tradicional (subestima total)"
+    },
+    "industria__exportaciones-del-sector-metalmecanico": {
+      "codigo": "PN38878BM",
+      "modo": "mensual_suma",
+      "factor": 1,
+      "fuente": "BCRP",
+      "confianza": "media",
+      "serie": "Export. no tradicionales metal-mecánicas FOB"
+    }
+  }
+}

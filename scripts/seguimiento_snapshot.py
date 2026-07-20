@@ -13,8 +13,48 @@ Al agregar las comisiones nuevos indicadores, se suman solos (se leen del data/)
 Uso:  python3 scripts/seguimiento_snapshot.py [DATA_DIR]
 Cron (VPS, mensual):  0 6 1 * * python3 /opt/pp2050/repo/scripts/seguimiento_snapshot.py /var/www/plan-peru-2050/data
 """
-import os, sys, json, re, unicodedata
+import os, sys, json, re, unicodedata, urllib.request
 from datetime import datetime, timezone
+
+BCRP = "https://estadisticas.bcrp.gob.pe/estadisticas/series/api"
+
+
+def _num(v):
+    try:
+        return float(str(v).replace(",", ""))
+    except Exception:
+        return None
+
+
+def fetch_bcrp(code, modo="anual", factor=1):
+    """Jala el valor vigente de una serie de BCRPData. Ver reference_bcrp_data_api.
+    modo: 'anual' (último anual) · 'ultimo' (último valor no vacío) · 'mensual_suma' (suma 12 meses del último año completo).
+    Devuelve {valor, periodo} o None si falla (fallback al valor manual)."""
+    try:
+        rng = "/2015/2026" if modo == "anual" else "/2018-1/2026-12"
+        j = json.loads(urllib.request.urlopen(BCRP + "/" + code + "/json" + rng, timeout=25).read())
+        vals = [(p.get("name", ""), _num(p["values"][0])) for p in j.get("periods", []) if p.get("values")]
+        vals = [(n, v) for n, v in vals if v is not None]
+        if not vals:
+            return None
+        if modo == "mensual_suma":
+            byyear = {}
+            for n, v in vals:
+                m = re.search(r"(20\d{2})", n)
+                if m:
+                    byyear.setdefault(m.group(1), []).append(v)
+            comp = [(y, vs) for y, vs in byyear.items() if len(vs) >= 12]
+            if comp:
+                y, vs = max(comp)
+                return {"valor": round(sum(vs) * factor, 1), "periodo": y}
+            y = max(byyear)
+            return {"valor": round(sum(byyear[y]) * factor, 1), "periodo": y + " (parcial)"}
+        n, v = vals[-1]
+        m = re.search(r"(20\d{2})", n)
+        return {"valor": round(v * factor, 2), "periodo": (m.group(1) if m else n)}
+    except Exception as e:
+        sys.stderr.write("BCRP %s: %s\n" % (code, e))
+        return None
 
 DATA = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "data")
 OUT = os.path.join(DATA, "seguimiento.json")
@@ -51,6 +91,29 @@ def main():
             })
             valores[key] = i.get("actual")
 
+    # Auto-jalado de valores REALES (BCRPData) para los indicadores mapeados y verificados.
+    auto = {}
+    fuentes = os.path.join(DATA, "indicador_fuentes.json")
+    if os.path.exists(fuentes) and not os.environ.get("PP2050_NO_FETCH"):
+        try:
+            mapeos = json.load(open(fuentes, encoding="utf-8")).get("mapeos", {})
+        except Exception:
+            mapeos = {}
+        cache = {}
+        for key, m in mapeos.items():
+            if key not in valores:
+                continue
+            ck = (m.get("codigo"), m.get("modo", "anual"), m.get("factor", 1))
+            if ck not in cache:
+                cache[ck] = fetch_bcrp(*ck)
+            r = cache[ck]
+            if r and r.get("valor") is not None:
+                valores[key] = r["valor"]
+                auto[key] = {"fuente": m.get("fuente", "BCRP"), "codigo": m.get("codigo"),
+                             "periodo": r["periodo"], "confianza": m.get("confianza", "media")}
+        if auto:
+            print("  auto (BCRP): " + ", ".join("%s=%s(%s)" % (k.split("__")[0], valores[k], auto[k]["periodo"]) for k in auto))
+
     prev = {}
     if os.path.exists(OUT):
         try:
@@ -67,6 +130,7 @@ def main():
         "fuente": "Indicadores del Plan Perú 2050 (comisiones). Snapshot mensual de avance hacia la meta 2050.",
         "actualizado": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "indicadores": defs,
+        "auto": auto,   # indicadores con valor jalado de fuente oficial (BCRP) este mes
         "snapshots": snaps,
     }
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

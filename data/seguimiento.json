@@ -533,6 +533,44 @@
    "fuente": "referencial — CONCYTEC/UNESCO (gasto en I+D)"
   }
  ],
+ "auto": {
+  "reforma-del-estado__presion-tributaria-recaudacion-tributaria-como-p": {
+   "fuente": "BCRP",
+   "codigo": "PM10103FA",
+   "periodo": "2025",
+   "confianza": "alta"
+  },
+  "cohesion-social__tasa-de-informalidad-laboral": {
+   "fuente": "BCRP",
+   "codigo": "PN38071GM",
+   "periodo": "2022",
+   "confianza": "media"
+  },
+  "competitividad__informalidad-laboral": {
+   "fuente": "BCRP",
+   "codigo": "PN38071GM",
+   "periodo": "2022",
+   "confianza": "media"
+  },
+  "macroeconomia__informalidad-laboral": {
+   "fuente": "BCRP",
+   "codigo": "PN38071GM",
+   "periodo": "2022",
+   "confianza": "media"
+  },
+  "agroindustria__valor-de-exportaciones-agropecuarias": {
+   "fuente": "BCRP",
+   "codigo": "PN38830BM",
+   "periodo": "2025",
+   "confianza": "media"
+  },
+  "industria__exportaciones-del-sector-metalmecanico": {
+   "fuente": "BCRP",
+   "codigo": "PN38878BM",
+   "periodo": "2025",
+   "confianza": "media"
+  }
+ },
  "snapshots": [
   {
    "fecha": "2026-07",
@@ -555,7 +593,7 @@
     "salud__porcentaje-de-beneficiarios-en-regiones-fuera-de": 65,
     "salud__mercado-global-de-gemelos-digitales-en-salud": 2.1,
     "telecomunicaciones__uso-comercial-de-la-capacidad-operativa-de-la-rd": 10,
-    "industria__exportaciones-del-sector-metalmecanico": 712,
+    "industria__exportaciones-del-sector-metalmecanico": 793.3,
     "industria__ninos-mayores-de-3-anos-con-anemia": 700000,
     "industria__desercion-en-educacion-tecnica-metalmecanica": 80,
     "industria__poblacion-en-segmento-e-extrema-pobreza": 10000000,
@@ -564,11 +602,11 @@
     "infraestructura-y-construccion__densidad-de-carreteras-asfaltadas": 9,
     "infraestructura-y-construccion__red-ferroviaria": 2021,
     "infraestructura-y-construccion__densidad-ferroviaria": 1.6,
-    "reforma-del-estado__presion-tributaria-recaudacion-tributaria-como-p": 14,
+    "reforma-del-estado__presion-tributaria-recaudacion-tributaria-como-p": 14.42,
     "cohesion-social__coeficiente-de-gini-desigualdad-de-ingresos": 0.4,
-    "cohesion-social__tasa-de-informalidad-laboral": 72,
-    "agroindustria__valor-de-exportaciones-agropecuarias": 12800,
-    "competitividad__informalidad-laboral": 71,
+    "cohesion-social__tasa-de-informalidad-laboral": 70.8,
+    "agroindustria__valor-de-exportaciones-agropecuarias": 12626.1,
+    "competitividad__informalidad-laboral": 70.8,
     "competitividad__pbi-per-capita-ppa": 15000,
     "competitividad__gasto-en-i-d-sobre-pbi": 0.2,
     "la-familia__embarazo-adolescente-15-19-anos": 9,
@@ -578,7 +616,7 @@
     "aguas__acceso-a-agua-potable-por-red-publica-hogares": 90.8,
     "aguas__acceso-a-saneamiento-por-red-publica-hogares": 75,
     "energia__cobertura-del-servicio-electrico-coeficiente-de-": 96,
-    "macroeconomia__informalidad-laboral": 71,
+    "macroeconomia__informalidad-laboral": 70.8,
     "banca__adultos-con-cuenta-en-institucion-financiera-o-p": 57,
     "defensa__gasto-en-defensa": 1.2,
     "energia-electrica__cobertura-del-servicio-electrico": 96,

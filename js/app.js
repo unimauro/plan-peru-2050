@@ -391,8 +391,11 @@ function renderSeguimiento() {
       <div><div class="serif" style="font-size:2rem;font-weight:700">${rows.length}</div><div style="color:var(--mut2);font-size:.75rem">indicadores en seguimiento</div></div>
       <div style="flex:1;min-width:200px;color:var(--mut);font-size:.86rem">Ordenados del <b>más lejos</b> al más cerca de su meta. Historial: ${snaps.map((s) => s.fecha).join(" · ")}. ${prev ? "" : "Este es la línea base; el avance mes a mes se llenará solo."}</div>
     </div>`;
+  const AUTO = S.seg.auto || {};
   html += rows.map((r) => {
     const d = r.d, unidad = d.unidad ? " " + esc(d.unidad) : "";
+    const au = AUTO[d.key];
+    const autoBadge = au ? `<span title="Valor jalado automáticamente de fuente oficial" style="display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:1px 6px;border-radius:6px;color:#2ed47a;border:1px solid #2ed47a55;background:#2ed47a14;margin-left:6px">⚡ ${esc(au.fuente)} ${esc(String(au.periodo))}</span>` : "";
     let trend = "";
     if (r.pv != null && r.pv !== r.val) {
       const mejora = d.meta >= r.val ? r.val > r.pv : r.val < r.pv;
@@ -400,7 +403,7 @@ function renderSeguimiento() {
     }
     return `<div class="block" style="cursor:pointer" onclick="openDetail('${esc(d.comision_id)}')">
       <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline">
-        <div><b>${esc(d.nombre)}</b><div style="color:var(--mut2);font-size:.74rem;text-transform:uppercase;letter-spacing:.04em">${esc(d.comision)}</div></div>
+        <div><b>${esc(d.nombre)}</b>${autoBadge}<div style="color:var(--mut2);font-size:.74rem;text-transform:uppercase;letter-spacing:.04em">${esc(d.comision)}</div></div>
         <div style="text-align:right;white-space:nowrap"><span style="color:var(--mut)">${num(r.val)}${unidad}</span> → <span style="font-weight:700;color:#e0a52e">${num(d.meta)}${unidad}</span> <span style="color:var(--mut2);font-size:.78rem">${d.anioMeta || 2050}</span></div>
       </div>
       <div class="bar" style="margin:8px 0 4px"><i style="width:${r.pct}%;background:${col(r.pct)}"></i></div>
