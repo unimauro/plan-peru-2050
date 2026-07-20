@@ -1,0 +1,131 @@
+{
+ "fuente": "MEF Datos Abiertos SIAF (vía QHAWAY), gasto 2026 por departamento de destino (META), niveles agregados.",
+ "anio": 2026,
+ "departamentos": {
+  "AMAZONAS": {
+   "pim": 266250313,
+   "devengado": 110492788,
+   "ejecucion": 41.5
+  },
+  "ANCASH": {
+   "pim": 1051081227,
+   "devengado": 245679886,
+   "ejecucion": 23.4
+  },
+  "APURIMAC": {
+   "pim": 297099091,
+   "devengado": 110779288,
+   "ejecucion": 37.3
+  },
+  "AREQUIPA": {
+   "pim": 913545810,
+   "devengado": 362475454,
+   "ejecucion": 39.7
+  },
+  "AYACUCHO": {
+   "pim": 492102121,
+   "devengado": 146523741,
+   "ejecucion": 29.8
+  },
+  "CAJAMARCA": {
+   "pim": 926943689,
+   "devengado": 292494578,
+   "ejecucion": 31.6
+  },
+  "CALLAO": {
+   "pim": 329188674,
+   "devengado": 70314891,
+   "ejecucion": 21.4
+  },
+  "CUSCO": {
+   "pim": 1003715380,
+   "devengado": 288971337,
+   "ejecucion": 28.8
+  },
+  "HUANCAVELICA": {
+   "pim": 348383450,
+   "devengado": 64092812,
+   "ejecucion": 18.4
+  },
+  "HUANUCO": {
+   "pim": 412709482,
+   "devengado": 84863681,
+   "ejecucion": 20.6
+  },
+  "ICA": {
+   "pim": 468511213,
+   "devengado": 181837543,
+   "ejecucion": 38.8
+  },
+  "JUNIN": {
+   "pim": 703799425,
+   "devengado": 258866091,
+   "ejecucion": 36.8
+  },
+  "LA LIBERTAD": {
+   "pim": 708172945,
+   "devengado": 195592237,
+   "ejecucion": 27.6
+  },
+  "LAMBAYEQUE": {
+   "pim": 355880450,
+   "devengado": 91948853,
+   "ejecucion": 25.8
+  },
+  "LIMA": {
+   "pim": 14814192752,
+   "devengado": 6471828708,
+   "ejecucion": 43.7
+  },
+  "LORETO": {
+   "pim": 752543290,
+   "devengado": 304260780,
+   "ejecucion": 40.4
+  },
+  "MADRE DE DIOS": {
+   "pim": 105036326,
+   "devengado": 24209868,
+   "ejecucion": 23.0
+  },
+  "MOQUEGUA": {
+   "pim": 281644844,
+   "devengado": 97463691,
+   "ejecucion": 34.6
+  },
+  "PASCO": {
+   "pim": 328798132,
+   "devengado": 158709497,
+   "ejecucion": 48.3
+  },
+  "PIURA": {
+   "pim": 868722190,
+   "devengado": 384675181,
+   "ejecucion": 44.3
+  },
+  "PUNO": {
+   "pim": 571146070,
+   "devengado": 149981782,
+   "ejecucion": 26.3
+  },
+  "SAN MARTIN": {
+   "pim": 548545885,
+   "devengado": 185153746,
+   "ejecucion": 33.8
+  },
+  "TACNA": {
+   "pim": 199711254,
+   "devengado": 95426100,
+   "ejecucion": 47.8
+  },
+  "TUMBES": {
+   "pim": 67438368,
+   "devengado": 20286030,
+   "ejecucion": 30.1
+  },
+  "UCAYALI": {
+   "pim": 315770781,
+   "devengado": 125179631,
+   "ejecucion": 39.6
+  }
+ }
+}

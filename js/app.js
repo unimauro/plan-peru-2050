@@ -83,15 +83,16 @@ async function boot() {
     renderMap();
     render100();
     // Articulación (matriz IA multi-agente) + jerarquía del Acuerdo Nacional
-    S.artic = {}; S.an = null; S.terr = null; S.keiko = null;
+    S.artic = {}; S.an = null; S.terr = null; S.keiko = null; S.gasto = null;
     Promise.all([
       fetch("data/articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/acuerdo_nacional.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/territorial.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/keiko_articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    ]).then(([art, an, terr, keiko]) => {
+      fetch("data/gasto_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]).then(([art, an, terr, keiko, gasto]) => {
       if (art && art.articulaciones) art.articulaciones.forEach((a) => (S.artic[a.comision_id] = a));
-      S.an = an; S.terr = terr; S.keiko = keiko;
+      S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto;
       renderArticulacion();
       renderTerritorial();
       renderKeiko();
@@ -318,8 +319,17 @@ function renderTerritorial() {
       <thead><tr style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em"><th style="text-align:left;padding:4px 8px">Distrito</th><th style="text-align:right;padding:4px 8px">IDH</th><th style="text-align:right;padding:4px 8px">Pobreza</th><th style="text-align:right;padding:4px 8px">Pob. extrema</th><th style="text-align:right;padding:4px 8px">Población</th></tr></thead>
       <tbody>${trs}</tbody></table></div></div>`;
   }).join("");
-  box.innerHTML = `<div class="revbanner" style="margin-bottom:16px">🗺️ Datos <b>reales</b>: IDH 2019 + % de pobreza y pobreza extrema (PNUD/INEI) + población 2020, por distrito (reuso de Proyecto INTI). Semáforo: <span style="color:#2ed47a">■</span> mejor · <span style="color:#e0a52e">■</span> medio · <span style="color:#d91023">■</span> crítico.</div>
+  const g = S.gasto && S.gasto.departamentos ? S.gasto.departamentos[sel.toUpperCase()] : null;
+  const fmtM = (n) => "S/ " + Math.round(n / 1e6).toLocaleString("es-PE") + " M";
+  const gastoHtml = g ? `<div class="block" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:14px">
+      <div style="min-width:150px"><div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em">Gasto público ${S.gasto.anio} · MEF</div><div style="font-size:.76rem;color:var(--mut)">destino territorial (META)</div></div>
+      <div><div class="serif" style="font-size:1.3rem;font-weight:700">${fmtM(g.pim)}</div><div style="color:var(--mut2);font-size:.72rem">PIM (presupuesto)</div></div>
+      <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:#2ed47a">${fmtM(g.devengado)}</div><div style="color:var(--mut2);font-size:.72rem">Devengado</div></div>
+      <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:${g.ejecucion >= 60 ? "#2ed47a" : g.ejecucion >= 40 ? "#e0a52e" : "#d91023"}">${g.ejecucion}%</div><div style="color:var(--mut2);font-size:.72rem">Ejecución</div></div>
+    </div>` : "";
+  box.innerHTML = `<div class="revbanner" style="margin-bottom:16px">🗺️ Datos <b>reales</b>: IDH 2019 + % de pobreza y pobreza extrema (PNUD/INEI) + población 2020 por distrito (Proyecto INTI); gasto público del MEF/SIAF por departamento (QHAWAY). Semáforo: <span style="color:#2ed47a">■</span> mejor · <span style="color:#e0a52e">■</span> medio · <span style="color:#d91023">■</span> crítico.</div>
     <div style="margin-bottom:14px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Departamento</label><select id="terrSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${deptos.map((d) => `<option ${d === sel ? "selected" : ""}>${esc(d)}</option>`).join("")}</select></div>
+    ${gastoHtml}
     ${rows}`;
   const s = document.getElementById("terrSel");
   if (s) s.onchange = () => { S.terrDepto = s.value; renderTerritorial(); };
