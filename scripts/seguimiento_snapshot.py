@@ -96,8 +96,37 @@ def main():
             prev = json.load(open(OUT, encoding="utf-8"))
         except Exception:
             prev = {}
-    prev_auto = prev.get("auto", {})
-    prev_last = (prev.get("snapshots") or [{}])[-1].get("valores", {})
+    # Catálogo traductor: si un indicador se renombró (key = comision_id+slug(nombre) cambió),
+    # migra su historial de la key vieja a la nueva. Ver data/indicador_alias.json.
+    alias = {}
+    ap = os.path.join(DATA, "indicador_alias.json")
+    if os.path.exists(ap):
+        try:
+            alias = json.load(open(ap, encoding="utf-8")).get("alias", {})
+        except Exception:
+            alias = {}
+
+    def canon(k):
+        seen = set()
+        while k in alias and k not in seen:
+            seen.add(k)
+            k = alias[k]
+        return k
+
+    for s in prev.get("snapshots", []):  # migrar historial a las keys canónicas
+        s["valores"] = {canon(k): v for k, v in s.get("valores", {}).items()}
+    prev_auto = {canon(k): v for k, v in prev.get("auto", {}).items()}
+    prev_last = {canon(k): v for k, v in (prev.get("snapshots") or [{}])[-1].get("valores", {}).items()}
+
+    # Detectar posibles renombres SIN alias (keys en el historial que ya no existen) → avisar
+    curkeys = set(valores)
+    orphans = set()
+    for s in prev.get("snapshots", []):
+        orphans |= (set(s["valores"]) - curkeys)
+    if orphans:
+        sys.stderr.write("⚠ keys en el historial que ya no están en los indicadores actuales "
+                         "(¿renombradas? agrégalas a indicador_alias.json vieja→nueva): "
+                         + ", ".join(sorted(orphans)) + "\n")
 
     # Auto-jalado de valores REALES (BCRPData) para los indicadores mapeados y verificados.
     auto = {}

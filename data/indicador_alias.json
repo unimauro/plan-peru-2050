@@ -1,0 +1,4 @@
+{
+  "_doc": "Catálogo traductor de indicadores. Cuando una comisión RENOMBRA un indicador, su key cambia (key = comision_id + slug(nombre)) y se perdería el historial mensual. Aquí se mapea la key VIEJA → la key NUEVA para que el seguimiento migre el historial solo. El script avisa (stderr) si detecta keys en el historial que ya no existen y no están mapeadas: agrégalas aquí. Ejemplo: \"salud__valor-viejo\": \"salud__valor-nuevo\".",
+  "alias": {}
+}
