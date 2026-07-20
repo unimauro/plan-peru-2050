@@ -51,7 +51,8 @@
       "factor": 1,
       "fuente": "BCRP",
       "confianza": "media",
-      "serie": "Export. no tradicionales metal-mecánicas FOB"
+      "serie": "Export. no tradicionales metal-mecánicas FOB",
+      "caveat": "solo NO tradicional (subestima total)"
     }
   }
 }

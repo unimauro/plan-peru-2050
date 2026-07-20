@@ -58,6 +58,8 @@ const el = (t, c, h) => { const n = document.createElement(t); if (c) n.classNam
 const num = (n) => (n == null ? "—" : new Intl.NumberFormat("es-PE", { maximumFractionDigits: 2 }).format(n));
 const clamp = (n, a = 0, b = 100) => Math.max(a, Math.min(b, n));
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+// id seguro para contexto onclick="fn('...')" (los id son slugs; esc() no basta en atributos de handler)
+const sid = (s) => String(s ?? "").replace(/[^a-z0-9_-]/gi, "");
 
 async function boot() {
   try {
@@ -240,8 +242,8 @@ function openDetail(id) {
     ${c.revision ? `<div class="revbanner">⚠ Línea base <b>preliminar</b> — contenido inferido a partir del tema de la comisión y datos públicos, <b>pendiente de validación</b> por el equipo. No proviene de una redacción oficial.${c.nivel_confianza ? ` (confianza: ${esc(c.nivel_confianza)})` : ""}</div>` : ""}
     ${c.resumen ? `<p style="color:var(--mut);font-size:1.02rem;margin:6px 0 0">${esc(c.resumen)}</p>` : ""}
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
-      <button class="dlbtn" onclick="openPdf('entregables/pdf/${c.id}.pdf')">⬇ Descargar ficha (PDF)${c.revision ? " · preliminar" : ""}</button>
-      ${!c.revision ? `<button class="dlbtn ghost" onclick="shareCom('${c.id}','${esc(c.nombre).replace(/'/g, "")}')">🔗 Compartir</button>` : ""}
+      <button class="dlbtn" onclick="openPdf('entregables/pdf/${sid(c.id)}.pdf')">⬇ Descargar ficha (PDF)${c.revision ? " · preliminar" : ""}</button>
+      ${!c.revision ? `<button class="dlbtn ghost" onclick="shareCom('${sid(c.id)}','${esc(c.nombre).replace(/'/g, "")}')">🔗 Compartir</button>` : ""}
     </div>
     ${c.vision ? `<div class="block"><h4>I · Síntesis de la situación futura</h4><p>${esc(c.vision)}</p></div>` : ""}
     ${(c.diagnostico || []).length ? `<div class="block"><h4>II · Síntesis de la situación actual</h4><ul class="ul">${c.diagnostico.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
@@ -282,7 +284,7 @@ function renderArticulacion() {
     e.politicas.forEach((p) => {
       const coms = byPol[p.n] || [];
       html += `<div style="margin:0 0 12px;padding-left:10px;border-left:1px solid var(--line)"><div style="font-weight:600">${p.n}. ${esc(p.nombre)} ${coms.length ? `<span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${coms.length})</span>` : `<span style="color:var(--mut2);font-weight:400;font-size:.76rem">— sin comisiones enlazadas aún</span>`}</div>`;
-      if (coms.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${coms.map((cm) => `<button onclick="openDetail('${esc(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(nom(cm.id))} ${tipoBadge(cm.tipo)}</button>`).join("")}</div>`;
+      if (coms.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${coms.map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(nom(cm.id))} ${tipoBadge(cm.tipo)}</button>`).join("")}</div>`;
       html += `</div>`;
     });
     html += `</div>`;
@@ -324,10 +326,10 @@ function renderTerritorial() {
   const g = S.gasto && S.gasto.departamentos ? S.gasto.departamentos[sel.toUpperCase()] : null;
   const fmtM = (n) => "S/ " + Math.round(n / 1e6).toLocaleString("es-PE") + " M";
   const gastoHtml = g ? `<div class="block" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:14px">
-      <div style="min-width:150px"><div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em">Gasto público ${S.gasto.anio} · MEF</div><div style="font-size:.76rem;color:var(--mut)">destino territorial (META)</div></div>
+      <div style="min-width:150px"><div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em">Gasto público ${esc(String(S.gasto.anio))} · MEF</div><div style="font-size:.76rem;color:var(--mut)">destino territorial (META) · año en curso</div></div>
       <div><div class="serif" style="font-size:1.3rem;font-weight:700">${fmtM(g.pim)}</div><div style="color:var(--mut2);font-size:.72rem">PIM (presupuesto)</div></div>
       <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:#2ed47a">${fmtM(g.devengado)}</div><div style="color:var(--mut2);font-size:.72rem">Devengado</div></div>
-      <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:${g.ejecucion >= 60 ? "#2ed47a" : g.ejecucion >= 40 ? "#e0a52e" : "#d91023"}">${g.ejecucion}%</div><div style="color:var(--mut2);font-size:.72rem">Ejecución</div></div>
+      <div><div class="serif" style="font-size:1.3rem;font-weight:700">${esc(String(g.ejecucion))}%</div><div style="color:var(--mut2);font-size:.72rem">Ejecutado a la fecha</div></div>
     </div>` : "";
   box.innerHTML = `<div class="revbanner" style="margin-bottom:16px">🗺️ Datos <b>reales</b>: IDH 2019 + % de pobreza y pobreza extrema (PNUD/INEI) + población 2020 por distrito (Proyecto INTI); gasto público del MEF/SIAF por departamento (QHAWAY). Semáforo: <span style="color:#2ed47a">■</span> mejor · <span style="color:#e0a52e">■</span> medio · <span style="color:#d91023">■</span> crítico.</div>
     <div style="margin-bottom:14px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Departamento</label><select id="terrSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${deptos.map((d) => `<option ${d === sel ? "selected" : ""}>${esc(d)}</option>`).join("")}</select></div>
@@ -353,7 +355,7 @@ function renderKeiko() {
     const items = props.filter((p) => p.pilar === pil);
     html += `<div class="block" style="border-left:3px solid ${col}"><h3 style="color:${col};margin:0 0 12px">Pilar ${esc(pil)} <span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${items.length} propuestas)</span></h3>`;
     items.forEach((p) => {
-      const coms = (p.comisiones || []).map((cm) => `<button onclick="openDetail('${esc(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(cm.comision_nombre || cm.id)} ${tipoBadge(cm.tipo)}</button>`).join("");
+      const coms = (p.comisiones || []).map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(cm.comision_nombre || cm.id)} ${tipoBadge(cm.tipo)}</button>`).join("");
       const an = (p.acuerdo_nacional || []).map((a) => `<span style="font-size:.78rem;color:var(--mut)">P${a.politica} ${esc((a.politica_nombre || "").slice(0, 40))} ${tipoBadge(a.tipo)}</span>`).join(" · ");
       html += `<div style="margin:0 0 14px;padding:10px 12px;background:#0e1424;border:1px solid var(--line);border-radius:10px">
         <div style="font-weight:600">${esc(p.titulo)}</div>
@@ -389,25 +391,30 @@ function renderSeguimiento() {
   let html = `<div class="block" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:16px">
       <div><div class="serif" style="font-size:2rem;font-weight:700;color:${col(idx)}">${idx.toFixed(0)}%</div><div style="color:var(--mut2);font-size:.75rem">Índice de avance hacia 2050</div></div>
       <div><div class="serif" style="font-size:2rem;font-weight:700">${rows.length}</div><div style="color:var(--mut2);font-size:.75rem">indicadores en seguimiento</div></div>
-      <div style="flex:1;min-width:200px;color:var(--mut);font-size:.86rem">Ordenados del <b>más lejos</b> al más cerca de su meta. Historial: ${snaps.map((s) => s.fecha).join(" · ")}. ${prev ? "" : "Este es la línea base; el avance mes a mes se llenará solo."}</div>
+      <div style="flex:1;min-width:200px;color:var(--mut);font-size:.86rem">Ordenados del <b>más lejos</b> al más cerca de su meta. Historial: ${snaps.map((s) => esc(s.fecha)).join(" · ")}. ${prev ? "" : "Este es la línea base; el avance mes a mes se llenará solo."}</div>
     </div>`;
   const AUTO = S.seg.auto || {};
   html += rows.map((r) => {
     const d = r.d, unidad = d.unidad ? " " + esc(d.unidad) : "";
     const au = AUTO[d.key];
-    const autoBadge = au ? `<span title="Valor jalado automáticamente de fuente oficial" style="display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:1px 6px;border-radius:6px;color:#2ed47a;border:1px solid #2ed47a55;background:#2ed47a14;margin-left:6px">⚡ ${esc(au.fuente)} ${esc(String(au.periodo))}</span>` : "";
+    let autoBadge = "";
+    if (au) {
+      const solido = au.confianza === "alta" && !au.caveat;
+      const c = solido ? "#2ed47a" : "#e0a52e";
+      autoBadge = `<span title="Valor de fuente oficial ${esc(au.fuente)} ${esc(String(au.periodo))}${au.caveat ? " — " + esc(au.caveat) : ""}" style="display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:1px 6px;border-radius:6px;color:${c};border:1px solid ${c}55;background:${c}14;margin-left:6px">${solido ? "⚡" : "⚠"} ${esc(au.fuente)} ${esc(String(au.periodo))}</span>`;
+    }
     let trend = "";
     if (r.pv != null && r.pv !== r.val) {
       const mejora = d.meta >= r.val ? r.val > r.pv : r.val < r.pv;
       trend = `<span style="color:${mejora ? "#2ed47a" : "#d91023"};font-size:.78rem">${mejora ? "▲" : "▼"} ${num(r.val)} (antes ${num(r.pv)})</span>`;
     }
-    return `<div class="block" style="cursor:pointer" onclick="openDetail('${esc(d.comision_id)}')">
+    return `<div class="block" style="cursor:pointer" onclick="openDetail('${sid(d.comision_id)}')">
       <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline">
         <div><b>${esc(d.nombre)}</b>${autoBadge}<div style="color:var(--mut2);font-size:.74rem;text-transform:uppercase;letter-spacing:.04em">${esc(d.comision)}</div></div>
         <div style="text-align:right;white-space:nowrap"><span style="color:var(--mut)">${num(r.val)}${unidad}</span> → <span style="font-weight:700;color:#e0a52e">${num(d.meta)}${unidad}</span> <span style="color:var(--mut2);font-size:.78rem">${d.anioMeta || 2050}</span></div>
       </div>
       <div class="bar" style="margin:8px 0 4px"><i style="width:${r.pct}%;background:${col(r.pct)}"></i></div>
-      <div style="display:flex;justify-content:space-between;font-size:.8rem"><span style="color:${col(r.pct)};font-weight:600">${r.pct.toFixed(0)}% de avance</span>${trend || `<span style="color:var(--mut2)">${esc(d.fuente ? d.fuente.slice(0, 60) : "")}</span>`}</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;font-size:.8rem"><span style="color:${col(r.pct)};font-weight:600;white-space:nowrap">${r.pct.toFixed(0)}% de avance</span>${au && au.caveat ? `<span style="color:#e0a52e;text-align:right">⚠ ${esc(au.caveat)}</span>` : (trend || `<span style="color:var(--mut2)">${esc(d.fuente ? d.fuente.slice(0, 60) : "")}</span>`)}</div>
     </div>`;
   }).join("");
   box.innerHTML = html;
@@ -608,7 +615,7 @@ async function renderMap() {
     const color = (tipos[p.tipo] || {}).color || "#fff";
     const m = L.circleMarker([p.lat, p.lng], { radius: 6, color, fillColor: color, fillOpacity: 0.85, weight: 1.5 }).addTo(map);
     const com = S.list.find((c) => c.id === p.comision);
-    m.bindPopup(`<b>${esc(p.nombre)}</b><br>${esc((tipos[p.tipo] || {}).label || p.tipo)}${p.nota ? "<br><span style='color:#8a98b8'>" + esc(p.nota) + "</span>" : ""}${com && S.detail[com.id] ? `<br><a href="#" onclick="closeMapTo('${com.id}');return false" style="color:#e0a52e">Ver comisión →</a>` : ""}`);
+    m.bindPopup(`<b>${esc(p.nombre)}</b><br>${esc((tipos[p.tipo] || {}).label || p.tipo)}${p.nota ? "<br><span style='color:#8a98b8'>" + esc(p.nota) + "</span>" : ""}${com && S.detail[com.id] ? `<br><a href="#" onclick="closeMapTo('${sid(com.id)}');return false" style="color:#e0a52e">Ver comisión →</a>` : ""}`);
   });
   // Legend
   const leg = document.getElementById("maplegend");
@@ -657,7 +664,7 @@ function render100() {
   const total = list.reduce((a, c) => a + S.detail[c.id].cien_dias.length, 0);
   box.innerHTML = `
     <div class="sub" style="font-size:.85rem;color:var(--mut);margin-bottom:12px">${total} medidas inmediatas en ${list.length} comisiones, extraídas de las redacciones. Útiles como insumo para los primeros 100 días del próximo gobierno.</div>
-    <div style="display:grid;gap:8px">${list.map((c) => `<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 0"><button onclick="openDetail('${c.id}')" style="background:none;border:none;color:var(--txt);font:inherit;text-align:left;cursor:pointer;flex:1">${esc(c.nombre)}</button><span style="color:var(--gold);font-size:.82rem;white-space:nowrap">${S.detail[c.id].cien_dias.length} medidas</span></div>`).join("")}</div>
+    <div style="display:grid;gap:8px">${list.map((c) => `<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 0"><button onclick="openDetail('${sid(c.id)}')" style="background:none;border:none;color:var(--txt);font:inherit;text-align:left;cursor:pointer;flex:1">${esc(c.nombre)}</button><span style="color:var(--gold);font-size:.82rem;white-space:nowrap">${S.detail[c.id].cien_dias.length} medidas</span></div>`).join("")}</div>
     <button class="dlbtn" style="margin-top:14px" onclick="dl100All()">⬇ Descargar plan consolidado de 100 días</button>`;
 }
 function md100(c) {

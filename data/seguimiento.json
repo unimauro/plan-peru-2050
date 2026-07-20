@@ -538,37 +538,43 @@
    "fuente": "BCRP",
    "codigo": "PM10103FA",
    "periodo": "2025",
-   "confianza": "alta"
+   "confianza": "alta",
+   "caveat": null
   },
   "cohesion-social__tasa-de-informalidad-laboral": {
    "fuente": "BCRP",
    "codigo": "PN38071GM",
    "periodo": "2022",
-   "confianza": "media"
+   "confianza": "media",
+   "caveat": "serie descontinuada ~2022; dato vigente en INEI/ENAHO"
   },
   "competitividad__informalidad-laboral": {
    "fuente": "BCRP",
    "codigo": "PN38071GM",
    "periodo": "2022",
-   "confianza": "media"
+   "confianza": "media",
+   "caveat": "serie descontinuada ~2022"
   },
   "macroeconomia__informalidad-laboral": {
    "fuente": "BCRP",
    "codigo": "PN38071GM",
    "periodo": "2022",
-   "confianza": "media"
+   "confianza": "media",
+   "caveat": "serie descontinuada ~2022"
   },
   "agroindustria__valor-de-exportaciones-agropecuarias": {
    "fuente": "BCRP",
    "codigo": "PN38830BM",
    "periodo": "2025",
-   "confianza": "media"
+   "confianza": "media",
+   "caveat": "solo NO tradicional (subestima total)"
   },
   "industria__exportaciones-del-sector-metalmecanico": {
    "fuente": "BCRP",
    "codigo": "PN38878BM",
    "periodo": "2025",
-   "confianza": "media"
+   "confianza": "media",
+   "caveat": "solo NO tradicional (subestima total)"
   }
  },
  "snapshots": [

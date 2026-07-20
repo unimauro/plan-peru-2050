@@ -35,6 +35,8 @@ rsync -a --delete \
 echo "→ [3/6] Backup del estado actual (rollback)"
 [ -f "$GW_DIR/gateway.py" ] && cp "$GW_DIR/gateway.py" "$BK/gateway.py.bak"
 [ -f "$UNIT" ] && cp "$UNIT" "$BK/pp2050-gw.service.bak"
+# Historial de seguimiento (solo vive en el VPS): backup diario para no perderlo nunca
+[ -f "$WWW/data/seguimiento.json" ] && cp "$WWW/data/seguimiento.json" "$BK/seguimiento.$(date +%F).json" 2>/dev/null || true
 
 echo "→ [4/6] gateway.py + unit systemd"
 install -D -m644 "$REPO/deploy/gateway/gateway.py" "$GW_DIR/gateway.py"

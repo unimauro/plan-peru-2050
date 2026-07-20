@@ -44,11 +44,10 @@ def fetch_bcrp(code, modo="anual", factor=1):
                 if m:
                     byyear.setdefault(m.group(1), []).append(v)
             comp = [(y, vs) for y, vs in byyear.items() if len(vs) >= 12]
-            if comp:
-                y, vs = max(comp)
-                return {"valor": round(sum(vs) * factor, 1), "periodo": y}
-            y = max(byyear)
-            return {"valor": round(sum(byyear[y]) * factor, 1), "periodo": y + " (parcial)"}
+            if not comp:
+                return None  # sin año completo: NO usar suma parcial (ensuciaría el % de avance)
+            y, vs = max(comp)
+            return {"valor": round(sum(vs) * factor, 1), "periodo": y}
         n, v = vals[-1]
         m = re.search(r"(20\d{2})", n)
         return {"valor": round(v * factor, 2), "periodo": (m.group(1) if m else n)}
@@ -91,6 +90,15 @@ def main():
             })
             valores[key] = i.get("actual")
 
+    prev = {}
+    if os.path.exists(OUT):
+        try:
+            prev = json.load(open(OUT, encoding="utf-8"))
+        except Exception:
+            prev = {}
+    prev_auto = prev.get("auto", {})
+    prev_last = (prev.get("snapshots") or [{}])[-1].get("valores", {})
+
     # Auto-jalado de valores REALES (BCRPData) para los indicadores mapeados y verificados.
     auto = {}
     fuentes = os.path.join(DATA, "indicador_fuentes.json")
@@ -110,16 +118,15 @@ def main():
             if r and r.get("valor") is not None:
                 valores[key] = r["valor"]
                 auto[key] = {"fuente": m.get("fuente", "BCRP"), "codigo": m.get("codigo"),
-                             "periodo": r["periodo"], "confianza": m.get("confianza", "media")}
+                             "periodo": r["periodo"], "confianza": m.get("confianza", "media"),
+                             "caveat": m.get("caveat")}
+            elif key in prev_auto and key in prev_last:
+                # BCRP falló/no disponible: conservar el último valor oficial ya capturado (no degradar a manual)
+                valores[key] = prev_last[key]
+                auto[key] = dict(prev_auto[key])
         if auto:
             print("  auto (BCRP): " + ", ".join("%s=%s(%s)" % (k.split("__")[0], valores[k], auto[k]["periodo"]) for k in auto))
 
-    prev = {}
-    if os.path.exists(OUT):
-        try:
-            prev = json.load(open(OUT, encoding="utf-8"))
-        except Exception:
-            prev = {}
     snaps = prev.get("snapshots", [])
     mes = datetime.now(timezone.utc).strftime("%Y-%m")
     snap = {"fecha": mes, "valores": valores}
