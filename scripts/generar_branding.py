@@ -74,17 +74,21 @@ def icon(sz):
     d = ImageDraw.Draw(im)
     r = int(sz * 0.22)
     d.rounded_rectangle([0, 0, sz-1, sz-1], radius=r, fill=(10, 14, 26))
-    # franjas bandera horizontales internas
-    pad = int(sz*0.16); top = int(sz*0.18); h = sz - 2*top; band = h//3
-    d.rounded_rectangle([pad, top, sz-pad, top+band], radius=6, fill=RED)
-    d.rectangle([pad, top+band, sz-pad, top+2*band], fill=(235,240,247))
-    d.rounded_rectangle([pad, top+2*band, sz-pad, top+3*band], radius=6, fill=RED)
-    # "50" sobre la franja blanca
-    f = font(int(sz*0.26))
+    # Bandera del Perú: franjas VERTICALES rojo-blanco-rojo (no horizontales)
+    pad = int(sz*0.14); top = int(sz*0.14); bot = sz - top
+    w = sz - 2*pad; band = w // 3
+    x0 = pad
+    d.rounded_rectangle([x0, top, x0+band, bot], radius=6, fill=RED)                 # izquierda roja
+    d.rectangle([x0+band, top, x0+2*band, bot], fill=(235, 240, 247))               # centro blanca
+    d.rounded_rectangle([x0+2*band, top, x0+3*band, bot], radius=6, fill=RED)        # derecha roja
+    # "50" centrado sobre la franja blanca central
+    f = font(int(band*0.78))
     txt = "50"
-    bb = d.textbbox((0,0), txt, font=f)
+    bb = d.textbbox((0, 0), txt, font=f)
     tw, th = bb[2]-bb[0], bb[3]-bb[1]
-    d.text(((sz-tw)/2 - bb[0], top+band + (band-th)/2 - bb[1]), txt, font=f, fill=(10,14,26))
+    cx = x0 + band + band/2
+    cy = (top + bot) / 2
+    d.text((cx - tw/2 - bb[0], cy - th/2 - bb[1]), txt, font=f, fill=(10, 14, 26))
     return im
 
 icon(512).save(os.path.join(A, "icon-512.png"))
