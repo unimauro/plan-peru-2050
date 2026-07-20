@@ -83,14 +83,18 @@ async function boot() {
     renderMap();
     render100();
     // Articulación (matriz IA multi-agente) + jerarquía del Acuerdo Nacional
-    S.artic = {}; S.an = null;
+    S.artic = {}; S.an = null; S.terr = null; S.keiko = null;
     Promise.all([
       fetch("data/articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/acuerdo_nacional.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    ]).then(([art, an]) => {
+      fetch("data/territorial.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      fetch("data/keiko_articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]).then(([art, an, terr, keiko]) => {
       if (art && art.articulaciones) art.articulaciones.forEach((a) => (S.artic[a.comision_id] = a));
-      S.an = an;
+      S.an = an; S.terr = terr; S.keiko = keiko;
       renderArticulacion();
+      renderTerritorial();
+      renderKeiko();
     });
     wireAI();
     wireSearch();
@@ -283,6 +287,74 @@ function renderArticulacion() {
   box.innerHTML = html;
 }
 window.renderArticulacion = renderArticulacion;
+
+/* ---------- Territorial (semáforo depto → provincia → distrito) ---------- */
+function renderTerritorial() {
+  const box = document.getElementById("territorial");
+  if (!box) return;
+  if (!S.terr || !S.terr.territorio) { box.innerHTML = '<div class="skeleton">No se pudieron cargar los datos territoriales.</div>'; return; }
+  const T = S.terr.territorio, IND = S.terr.indicadores || {};
+  const deptos = Object.keys(T).sort();
+  const sel = S.terrDepto && T[S.terrDepto] ? S.terrDepto : deptos[0];
+  S.terrDepto = sel;
+  const sem = (v, good, mid) => v == null ? "#8a98b8" : (good(v) ? "#2ed47a" : (mid(v) ? "#e0a52e" : "#d91023"));
+  const cIDH = (v) => sem(v, (x) => x >= 0.55, (x) => x >= 0.45);
+  const cPob = (v) => sem(v, (x) => x < 20, (x) => x <= 40);
+  const cPex = (v) => sem(v, (x) => x < 5, (x) => x <= 15);
+  const cell = (txt, color) => `<td style="text-align:right;padding:4px 8px"><span style="color:${color};font-weight:600">${txt}</span></td>`;
+  const provs = T[sel];
+  let rows = Object.keys(provs).sort().map((prov) => {
+    const dists = provs[prov].slice().sort((a, b) => (a.d > b.d ? 1 : -1));
+    const trs = dists.map((di) => {
+      const x = IND[di.u] || {};
+      return `<tr style="border-bottom:1px solid var(--line)"><td style="padding:4px 8px">${esc(di.d)}</td>` +
+        cell(x.idh != null ? x.idh.toFixed(3) : "s/d", cIDH(x.idh)) +
+        cell(x.pobreza != null ? x.pobreza + "%" : "s/d", cPob(x.pobreza)) +
+        cell(x.pobreza_extrema != null ? x.pobreza_extrema + "%" : "s/d", cPex(x.pobreza_extrema)) +
+        cell(x.poblacion != null ? num(x.poblacion) : "s/d", "#c8d2e8") + `</tr>`;
+    }).join("");
+    return `<div class="block"><h4 style="margin:0 0 6px">${esc(prov)} <span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${dists.length} distritos)</span></h4>
+      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.86rem">
+      <thead><tr style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em"><th style="text-align:left;padding:4px 8px">Distrito</th><th style="text-align:right;padding:4px 8px">IDH</th><th style="text-align:right;padding:4px 8px">Pobreza</th><th style="text-align:right;padding:4px 8px">Pob. extrema</th><th style="text-align:right;padding:4px 8px">Población</th></tr></thead>
+      <tbody>${trs}</tbody></table></div></div>`;
+  }).join("");
+  box.innerHTML = `<div class="revbanner" style="margin-bottom:16px">🗺️ Datos <b>reales</b>: IDH 2019 + % de pobreza y pobreza extrema (PNUD/INEI) + población 2020, por distrito (reuso de Proyecto INTI). Semáforo: <span style="color:#2ed47a">■</span> mejor · <span style="color:#e0a52e">■</span> medio · <span style="color:#d91023">■</span> crítico.</div>
+    <div style="margin-bottom:14px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Departamento</label><select id="terrSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${deptos.map((d) => `<option ${d === sel ? "selected" : ""}>${esc(d)}</option>`).join("")}</select></div>
+    ${rows}`;
+  const s = document.getElementById("terrSel");
+  if (s) s.onchange = () => { S.terrDepto = s.value; renderTerritorial(); };
+}
+window.renderTerritorial = renderTerritorial;
+
+/* ---------- Plan de gobierno (Keiko) ⇄ Plan Perú 2050 ---------- */
+function renderKeiko() {
+  const box = document.getElementById("keiko");
+  if (!box) return;
+  if (!S.keiko || !S.keiko.propuestas) { box.innerHTML = '<div class="skeleton">No se pudo cargar el alineamiento del plan de gobierno.</div>'; return; }
+  const PILAR_COLOR = { ORDEN: "#d91023", "ECONÓMICO": "#2ed47a", SOCIAL: "#a855f7" };
+  const props = S.keiko.propuestas;
+  const nc = props.reduce((s, p) => s + (p.comisiones || []).length, 0);
+  const pilares = [...new Set(props.map((p) => p.pilar))];
+  let html = `<div class="revbanner" style="margin-bottom:16px">🗳️ <b>${props.length} propuestas</b> del Plan de Gobierno Reforzado (Fuerza Popular) alineadas a las comisiones del CIP (${nc} enlaces) y al Acuerdo Nacional — <b>propuesta con IA, a validar</b>. Tipo: ${tipoBadge("igual_similar")} ${tipoBadge("desagregado")} ${tipoBadge("causal")}.</div>`;
+  pilares.forEach((pil) => {
+    const col = PILAR_COLOR[pil] || "#8a98b8";
+    const items = props.filter((p) => p.pilar === pil);
+    html += `<div class="block" style="border-left:3px solid ${col}"><h3 style="color:${col};margin:0 0 12px">Pilar ${esc(pil)} <span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${items.length} propuestas)</span></h3>`;
+    items.forEach((p) => {
+      const coms = (p.comisiones || []).map((cm) => `<button onclick="openDetail('${esc(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(cm.comision_nombre || cm.id)} ${tipoBadge(cm.tipo)}</button>`).join("");
+      const an = (p.acuerdo_nacional || []).map((a) => `<span style="font-size:.78rem;color:var(--mut)">P${a.politica} ${esc((a.politica_nombre || "").slice(0, 40))} ${tipoBadge(a.tipo)}</span>`).join(" · ");
+      html += `<div style="margin:0 0 14px;padding:10px 12px;background:#0e1424;border:1px solid var(--line);border-radius:10px">
+        <div style="font-weight:600">${esc(p.titulo)}</div>
+        <div style="color:var(--mut);font-size:.9rem;margin:3px 0 8px">${esc(p.resumen)}</div>
+        ${coms ? `<div style="color:var(--mut2);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Comisiones del CIP</div><div style="display:flex;flex-wrap:wrap;gap:6px">${coms}</div>` : `<div style="color:var(--mut2);font-size:.82rem">Sin comisión del Plan 2050 claramente alineada.</div>`}
+        ${an ? `<div style="margin-top:8px">${an}</div>` : ""}
+      </div>`;
+    });
+    html += `</div>`;
+  });
+  box.innerHTML = html;
+}
+window.renderKeiko = renderKeiko;
 function openFromHash() {
   const id = decodeURIComponent((location.hash || "").replace(/^#/, ""));
   if (id && S.detail[id]) setTimeout(() => openDetail(id), 200);

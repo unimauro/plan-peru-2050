@@ -1,0 +1,2048 @@
+{
+  "fuente": "Plan de Gobierno Reforzado V2 — Fuerza Popular (Keiko). Alineamiento con IA, a validar por humano.",
+  "total_propuestas": 56,
+  "propuestas": [
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Centros de Comando y Videovigilancia C5i nacionales",
+      "resumen": "Red interconectada de centros C5i con mapas del delito en tiempo real e IA para análisis predictivo, meta de operar en las 24 regiones. Inicio en Lima y Callao en los primeros 100 días.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "igual_similar",
+          "justificacion": "El Plan Nacional de Seguridad y Orden Interno al 2050 del CIP ya plantea, como acciones centrales, 'centros de comando y control' con monitoreo en tiempo real, 'videovigilancia inteligente', 'inteligencia predictiva' con IA y 'georreferenciación del delito', que es exactamente lo que propone la red C5i.",
+          "comision_nombre": "Orden Público y Seguridad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "La red C5i con mapas del delito e IA predictiva es un instrumento operativo que busca reducir la violencia y fortalecer la seguridad ciudadana, fin de esta Política de Estado.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 9,
+          "tipo": "causal",
+          "justificacion": "Una red nacional de centros C5i interconectados en las 24 regiones apoya el control territorial del Estado y contribuye a la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Comando Unificado contra el Crimen Organizado",
+      "resumen": "Instancia permanente presidida por el Presidente e integrada por PCM, ministros de Interior, Defensa y Justicia, INPE, FF.AA., PNP e inteligencia para dirigir la lucha contra la inseguridad.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "El Comando Unificado es el mecanismo institucional concreto del \"Estado Estratégico de Seguridad\" y la gobernanza multinivel que propone esta comisión para recuperar el control territorial y desarticular economías criminales.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "drogas",
+          "tipo": "causal",
+          "justificacion": "Un comando presidencial que dirige la lucha contra el crimen organizado impulsaría la interdicción y desarticulación de las redes de narcotráfico y economías ilegales que aborda esta comisión.",
+          "comision_nombre": "Drogas"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "igual_similar",
+          "justificacion": "La propuesta comparte el objetivo central de esta política: erradicar la violencia y fortalecer la seguridad ciudadana frente a la inseguridad y el crimen organizado.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 9,
+          "tipo": "desagregado",
+          "justificacion": "Integrar bajo mando presidencial a FF.AA., Defensa e inteligencia para dirigir la seguridad concreta un componente operativo de la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Plan de emergencia con facultades legislativas",
+      "resumen": "Delegación de facultades legislativas por 60 días más Decretos de Urgencia económicos para combatir la inseguridad ciudadana de forma acelerada.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "causal",
+          "justificacion": "La delegación de facultades legislativas y los Decretos de Urgencia son el instrumento acelerado para combatir la inseguridad ciudadana, que es justamente el fin central de esta comisión (reducir violencia criminal, extorsión y recuperar el control territorial).",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "causal",
+          "justificacion": "Legislar por facultades delegadas busca fortalecer las instituciones que garantizan el orden interno y la seguridad ciudadana (Objetivo Estratégico N°4 de esta comisión), aunque mediante un mecanismo de emergencia Ejecutivo-Legislativo.",
+          "comision_nombre": "Reforma Del Estado"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "Las facultades legislativas y los DU son el medio propuesto para combatir la inseguridad ciudadana, que es exactamente el objeto de esta Política de Estado (erradicación de la violencia y seguridad ciudadana).",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Programa Nacional de Prevención Temprana",
+      "resumen": "Liderado desde Presidencia, ofrece deporte, cultura, arte, tutoría, becas y orientación psicosocial a niños y adolescentes en riesgo de zonas vulnerables para evitar su ingreso a economías ilegales.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "causal",
+          "justificacion": "Invertir en niños y adolescentes en riesgo para evitar su captación por economías ilegales es la vía preventiva (causa) que reduce la violencia criminal y la presencia de economías criminales en zonas vulnerables que persigue esta comisión.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "deporte",
+          "tipo": "desagregado",
+          "justificacion": "El uso de deporte, cultura y arte para poblaciones vulnerables es una aplicación específica del enfoque de la comisión de Deporte como política de cohesión social y actividad física comunitaria intersectorial.",
+          "comision_nombre": "Deporte"
+        },
+        {
+          "id": "proyecto-pais-joven",
+          "tipo": "desagregado",
+          "justificacion": "La oferta de tutoría, becas y orientación a jóvenes en riesgo concreta, para una población focalizada, la agenda de esta comisión de ofrecer oportunidades educativas y reducir ninis e informalidad juvenil.",
+          "comision_nombre": "Proyecto País Joven"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "Prevenir el ingreso de menores a economías ilegales y fortalecer su civismo mediante deporte, cultura y tutoría reduce causalmente la violencia y refuerza la seguridad ciudadana que esta política busca.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 16,
+          "tipo": "desagregado",
+          "justificacion": "El programa es una intervención concreta de promoción y protección de la niñez y adolescencia en riesgo, contenida dentro de esta política de protección de la niñez, adolescencia y juventud.",
+          "politica_nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Unidades de Flagrancia Express ampliadas",
+      "resumen": "Nuevas unidades y fortalecimiento de las 28 existentes para articular Policía, Fiscalía y Poder Judicial con procesos y sentencias rápidos, extendidas a extorsión, sicariato y cobro de cupos.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta concreta un instrumento operativo (unidades de flagrancia) dentro del objetivo del Plan de reducir la violencia criminal, la extorsion y el sicariato y recuperar el control territorial.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "reforma-judicial",
+          "tipo": "desagregado",
+          "justificacion": "Los procesos y sentencias rapidos especifican las metas de la comision de reducir la carga y los plazos procesales y especializar la justicia en crimen organizado con mayor predictibilidad.",
+          "comision_nombre": "Reforma Judicial"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "desagregado",
+          "justificacion": "Articular Policia, Fiscalia y Poder Judicial materializa el Objetivo Estrategico 4 de la comision: contar con instituciones que garanticen la administracion de justicia, el orden interno y la seguridad ciudadana.",
+          "comision_nombre": "Reforma Del Estado"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "desagregado",
+          "justificacion": "Combatir extorsion, sicariato y cobro de cupos con respuesta penal rapida es una accion especifica dentro de la erradicacion de la violencia y el fortalecimiento de la seguridad ciudadana.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 28,
+          "tipo": "causal",
+          "justificacion": "La celeridad de las unidades de flagrancia mejora el acceso efectivo y oportuno a la justicia que promueve esta politica de Estado.",
+          "politica_nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Nuevos penales de máxima seguridad",
+      "resumen": "Construcción de 4 megapenales de máxima seguridad, 4 penales modulares de 1,000 internos y 1 penal para jóvenes infractores, bajo administración temporal de las Fuerzas Armadas.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "La construcción de megapenales de máxima seguridad es una inversión concreta en infraestructura de orden interno que desagrega la estrategia de la comisión de recuperar el control territorial y desarticular las economías criminales (que la comisión ya aborda con inversión en comisarías, centros de inteligencia e infraestructura penitenciaria).",
+          "comision_nombre": "Orden Público y Seguridad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "Construir penales de máxima seguridad para aislar al crimen organizado y sicariato es una medida causal orientada a fortalecer la seguridad ciudadana y erradicar la violencia.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 9,
+          "tipo": "igual_similar",
+          "justificacion": "La administración temporal de los penales por las Fuerzas Armadas frente a la captura criminal del Estado se enmarca directamente en la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Bloqueo de señal móvil en penales",
+      "resumen": "Sistema integral y permanente de inhibición de celulares en todos los establecimientos penitenciarios para impedir que se cometan delitos desde las cárceles.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "La inhibición de señal en penales es una medida operativa concreta contenida en los objetivos de la comisión de reducir la extorsión y el sicariato y desarticular las economías criminales que hoy se dirigen desde las cárceles.",
+          "comision_nombre": "Orden Público y Seguridad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "desagregado",
+          "justificacion": "Bloquear celulares en prisiones especifica una acción puntual dentro de la Política de Estado de erradicación de la violencia y fortalecimiento de la seguridad ciudadana, al cortar la extorsión y el crimen organizado operados desde los penales.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Cárceles productivas y trabajo penitenciario",
+      "resumen": "APP para cárceles productivas y programa 'Manos que Reparan' de trabajo comunitario (colegios, áreas verdes) con redención de pena, incentivos y fondo educativo para hijos de internos.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "causal",
+          "justificacion": "El trabajo penitenciario y la redención de pena rehabilitan al interno y reducen la reincidencia, lo que contribuye directamente a reducir la violencia criminal y desarticular economías criminales, ejes centrales de esta comisión.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "cohesion-social",
+          "tipo": "causal",
+          "justificacion": "La reinserción laboral productiva de internos y el trabajo comunitario 'Manos que Reparan' reconstruyen el tejido social e incluyen a un grupo vulnerable, en línea con la reducción de conflictividad y exclusión que persigue la comisión.",
+          "comision_nombre": "Cohesión Social"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "Rehabilitar y dar trabajo al interno reduce la reincidencia delictiva, fortaleciendo directamente el civismo y la seguridad ciudadana que promueve esta Política de Estado.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 28,
+          "tipo": "desagregado",
+          "justificacion": "Las cárceles productivas y la redención de pena por trabajo materializan el fin constitucional de resocialización del régimen penitenciario, especificando un aspecto de la vigencia de los derechos humanos y el acceso a la justicia.",
+          "politica_nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Modernización de comisarías y equipamiento policial",
+      "resumen": "Construcción de comisarías seguras, patrulleros inteligentes, drones, cámaras corporales, GPS y reconocimiento facial. Meta 100 días: 1,000 patrulleros, 10,000 cámaras y 200 comisarías modernizadas.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica metas y equipos concretos (comisarías, patrulleros, cámaras, drones, biométricos) que están contenidos en las acciones de inversión de esta comisión: 'Infraestructura policial: comisarías modernas y equipamiento táctico' y 'Tecnología avanzada: IA, drones, videovigilancia inteligente y sistemas biométricos'.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "causal",
+          "justificacion": "Modernizar comisarías y equipamiento policial contribuye directamente al Objetivo Estratégico N°4 de esta comisión: contar con instituciones que garanticen el orden interno y la seguridad ciudadana.",
+          "comision_nombre": "Reforma Del Estado"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "desagregado",
+          "justificacion": "El equipamiento policial y la modernización de comisarías son medios concretos para fortalecer la seguridad ciudadana, objeto central de esta Política de Estado.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Plataforma 'Perú con Orden' y Botón de Pánico",
+      "resumen": "Sistema de información en tiempo real con denuncias, mapas de calor delictivo y alertas comunitarias, más un botón de pánico en celulares para alertar a la Policía ante emergencias.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "La plataforma y el botón de pánico son una herramienta concreta de las acciones que esta comisión ya trabaja: georreferenciación del delito, centros de comando y control en tiempo real, inteligencia predictiva y videovigilancia inteligente.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "causal",
+          "justificacion": "La infraestructura digital, la conectividad de comisarías y la analítica geoespacial para gestión de riesgos que impulsa esta comisión son condición habilitante para operar una plataforma de alertas en tiempo real y un botón de pánico ciudadano.",
+          "comision_nombre": "Perú en La Era Digital"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "desagregado",
+          "justificacion": "El sistema de denuncias, mapas de calor y alertas comunitarias es un instrumento específico para erradicar la violencia y fortalecer la seguridad ciudadana con participación cívica.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 35,
+          "tipo": "causal",
+          "justificacion": "La propuesta aplica tecnologías de información y datos en tiempo real, materializando la sociedad de la información al servicio de la seguridad pública.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Comandos mixtos contra minería ilegal y crimen organizado",
+      "resumen": "Comandos integrados por PNP, FF.AA., Fiscalía y SUNAT en zonas críticas, control de cadenas de valor criminales e implementación del SIPMMA para trazabilidad de insumos y minerales.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "igual_similar",
+          "justificacion": "El Plan Nacional de Seguridad y Orden Interno al 2050 ya plantea recuperar el control territorial y desarticular economías criminales de minería ilegal mediante coordinación interinstitucional en tiempo real, misma idea que los comandos mixtos PNP-FF.AA.-Fiscalía-SUNAT.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "drogas",
+          "tipo": "desagregado",
+          "justificacion": "La comisión propone reforzar el control de insumos químicos e integrar la lucha contra el crimen con la fiscalización de la minería ilegal; los comandos mixtos y el SIPMMA de trazabilidad de insumos y minerales especifican ese mecanismo de control de cadenas ilícitas.",
+          "comision_nombre": "Drogas"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 7,
+          "tipo": "igual_similar",
+          "justificacion": "La propuesta busca erradicar la violencia y el crimen organizado en zonas críticas, objetivo central de esta Política de Estado de seguridad ciudadana.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        },
+        {
+          "politica": 26,
+          "tipo": "desagregado",
+          "justificacion": "El control de cadenas de valor criminales, la participación de SUNAT y la trazabilidad de insumos y minerales (SIPMMA) concretan la lucha contra el lavado de dinero, la evasión tributaria y el contrabando que ordena esta política.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Shock Anticorrupción Digital con IA",
+      "resumen": "Estrategia nacional que usa inteligencia artificial en contrataciones públicas para detectar sobrecostos y colusión, con compliance digital obligatorio para altos funcionarios (piloto en 100 días).",
+      "comisiones": [
+        {
+          "id": "etica",
+          "tipo": "desagregado",
+          "justificacion": "La Comisión de Ética combate estructuralmente la corrupción con integridad, control y transparencia activa/datos abiertos para la auditoría; la propuesta concreta ese objetivo especificando una herramienta de IA para detectar colusión y sobrecostos y compliance de altos funcionarios.",
+          "comision_nombre": "Ética"
+        },
+        {
+          "id": "inteligencia-artificial",
+          "tipo": "desagregado",
+          "justificacion": "La comisión de IA plantea 'modernizar el Estado con IA para fiscalización y gestión pública con salvaguardas'; la propuesta especifica ese uso aplicándolo a la fiscalización de contrataciones públicas.",
+          "comision_nombre": "Inteligencia Artificial"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "desagregado",
+          "justificacion": "Incluye el Proyecto N°5 'Erradicación sistemática de la corrupción' y el objetivo de administrar los recursos de forma eficiente y transparente; la propuesta desagrega ese fin en un mecanismo digital de detección en compras estatales.",
+          "comision_nombre": "Reforma Del Estado"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 26,
+          "tipo": "desagregado",
+          "justificacion": "La política busca la erradicación de la corrupción y el lavado de dinero en todas sus formas; la propuesta es un medio específico (IA en contrataciones + compliance digital) para lograr ese fin.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas"
+        },
+        {
+          "politica": 24,
+          "tipo": "causal",
+          "justificacion": "Implementar detección con IA de sobrecostos/colusión y compliance obligatorio de altos funcionarios contribuye causalmente a afirmar un Estado más eficiente y transparente.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Transparencia total de compras públicas",
+      "resumen": "Publicación en tiempo real del 100% de licitaciones, contratos y adendas, más un Observatorio Ciudadano y plataforma de auditoría ciudadana con geolocalización para monitorear obras.",
+      "comisiones": [
+        {
+          "id": "reforma-del-estado",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta operativiza el OE6 (administrar los recursos de manera eficiente y transparente) y el Proyecto N°5 (erradicacion sistematica de la corrupcion) de esta comision, aplicandolos especificamente a las compras publicas.",
+          "comision_nombre": "Reforma Del Estado"
+        },
+        {
+          "id": "institucionalidad",
+          "tipo": "desagregado",
+          "justificacion": "Concreta la accion de la comision de 'fortalecer la integridad publica con datos abiertos y control' publicando en tiempo real licitaciones y contratos para vigilancia ciudadana.",
+          "comision_nombre": "Institucionalidad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 26,
+          "tipo": "desagregado",
+          "justificacion": "La transparencia total de compras publicas es un instrumento especifico de esta politica de promocion de la etica y la transparencia y erradicacion de la corrupcion en la contratacion estatal.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas"
+        },
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "La publicacion en tiempo real del 100% de contratos y el observatorio ciudadano materializan la afirmacion de un Estado eficiente y transparente en el ambito de las adquisiciones.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Contraloría fortalecida y declaraciones juradas únicas",
+      "resumen": "Ampliación del control concurrente, facultades sancionadoras y IA para la Contraloría, con sistema único de declaraciones juradas interoperable con SUNAT y UIF, y veto a empresas sancionadas por corrupción.",
+      "comisiones": [
+        {
+          "id": "reforma-del-estado",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica el fortalecimiento de la Contraloría, el control concurrente y las declaraciones juradas, que operacionalizan el Objetivo N°6 (recursos eficientes y transparentes) y el Proyecto N°5 de erradicación de la corrupción de esta comisión.",
+          "comision_nombre": "Reforma Del Estado"
+        },
+        {
+          "id": "institucionalidad",
+          "tipo": "igual_similar",
+          "justificacion": "Ambas persiguen fortalecer la integridad pública y la autonomía de los órganos de control para mejorar los indicadores de control de la corrupción del Estado.",
+          "comision_nombre": "Institucionalidad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 26,
+          "tipo": "igual_similar",
+          "justificacion": "La propuesta ataca directamente la corrupción, el lavado de dinero y la evasión tributaria mediante interoperabilidad de declaraciones con SUNAT y UIF y el veto a empresas sancionadas, el núcleo mismo de esta política.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas"
+        },
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "Fortalecer la Contraloría y crear un sistema único e interoperable de declaraciones juradas es un mecanismo concreto para afirmar un Estado eficiente y transparente.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Consolidación fiscal al 1% de déficit",
+      "resumen": "Programa de disciplina fiscal para reducir el déficit al 1% del PBI en 2031 vía eficiencia del gasto, eliminación de gastos superfluos y reforma tributaria que amplíe la base sin gravar más a los formales.",
+      "comisiones": [
+        {
+          "id": "macroeconomia",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta concreta la meta de deficit al 1% del PBI en 2031 dentro de los objetivos de la comision de asegurar la sostenibilidad de la deuda, mantener reglas fiscales y elevar la recaudacion combatiendo evasion.",
+          "comision_nombre": "Macroeconomía"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "desagregado",
+          "justificacion": "La eficiencia del gasto y la eliminacion de gastos superfluos que propone Keiko especifica el objetivo estrategico de la comision de administrar los recursos publicos de manera eficiente y transparente.",
+          "comision_nombre": "Reforma Del Estado"
+        },
+        {
+          "id": "competitividad",
+          "tipo": "causal",
+          "justificacion": "Ampliar la base tributaria sin gravar mas a los formales se logra formalizando la economia, que es justamente lo que la comision busca al simplificar el regimen tributario y reducir la informalidad.",
+          "comision_nombre": "Competitividad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 31,
+          "tipo": "igual_similar",
+          "justificacion": "La propuesta es esencialmente la misma idea que la Politica de Estado 'Sostenibilidad fiscal y reduccion del peso de la deuda', al fijar disciplina fiscal para reducir el deficit.",
+          "politica_nombre": "Sostenibilidad fiscal y reducción del peso de la deuda"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Ampliar la base tributaria sin cargar mas a los formales requiere la formalizacion de la actividad economica que promueve esta politica de competitividad, productividad y formalizacion.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Ventanilla Única Digital Nacional con IA",
+      "resumen": "Plataforma que permita realizar en línea al menos el 80% de trámites empresariales, con interoperabilidad y supervisión algorítmica; piloto en los primeros 100 días.",
+      "comisiones": [
+        {
+          "id": "transformacion-digital",
+          "tipo": "desagregado",
+          "justificacion": "La comisión plantea 'digitalizar e interoperar la mayoría de los servicios y trámites del Estado'; la Ventanilla Única especifica ese objetivo para el 80% de trámites empresariales con interoperabilidad.",
+          "comision_nombre": "Transformación Digital"
+        },
+        {
+          "id": "promocion-de-la-inversion",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya propone 'simplificar y digitalizar permisos y trámites mediante ventanillas únicas', que es exactamente la misma idea de la propuesta aplicada a trámites empresariales.",
+          "comision_nombre": "Promoción de La Inversión"
+        },
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "desagregado",
+          "justificacion": "La comisión fija que el 90% de servicios públicos priorizados estén disponibles de extremo a extremo con identidad digital e interoperabilidad; la Ventanilla Única es un subconjunto empresarial de esa meta.",
+          "comision_nombre": "Perú en La Era Digital"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "La Ventanilla Única Digital con interoperabilidad y supervisión algorítmica es un instrumento concreto de la Política 24 (Estado eficiente y transparente) de simplificación y digitalización de trámites.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        },
+        {
+          "politica": 35,
+          "tipo": "desagregado",
+          "justificacion": "La plataforma digital de trámites con interoperabilidad e IA concreta la Política 35 (Sociedad de la información y del conocimiento) en el ámbito de los servicios al empresariado.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Shock desregulatorio y estrategia 'Cero Colas'",
+      "resumen": "Eliminación de más de 500 procedimientos redundantes, plazos vinculantes para autorizaciones sectoriales y reducción de al menos 40% en tiempos de tramitación de inversiones; atención 100% digital para eliminar colas en dos años.",
+      "comisiones": [
+        {
+          "id": "promocion-de-la-inversion",
+          "tipo": "igual_similar",
+          "justificacion": "Esta comisión ya plantea exactamente lo mismo: 'reducir los plazos de adjudicación y ejecución de proyectos' y 'simplificar y digitalizar permisos y trámites mediante ventanillas únicas y silencio administrativo positivo', que es el núcleo de la reducción del 40% en tiempos de tramitación de inversiones y los plazos vinculantes de la propuesta.",
+          "comision_nombre": "Promoción de La Inversión"
+        },
+        {
+          "id": "transformacion-digital",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión persigue 'digitalizar e interoperar la mayoría de los servicios y trámites del Estado' en torno a la identidad digital, que es precisamente la 'atención 100% digital para eliminar colas' que propone la estrategia 'Cero Colas'.",
+          "comision_nombre": "Transformación Digital"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "desagregado",
+          "justificacion": "La eliminación de más de 500 procedimientos redundantes es una acción concreta contenida en el objetivo de la comisión de contar con entidades que cumplan eficaz y eficientemente sus roles y con una organización pública simplificada al servicio de la población.",
+          "comision_nombre": "Reforma Del Estado"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "El shock desregulatorio, los plazos vinculantes y la atención 100% digital son manifestaciones específicas de la Política de Estado 24 'Afirmación de un Estado eficiente y transparente', que busca simplificar procedimientos y modernizar la gestión pública.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Reducir trámites redundantes y acortar los tiempos de autorización de inversiones abarata el costo de operar y formalizarse, lo que es causa directa de la mayor competitividad, productividad y formalización que persigue la Política de Estado 18.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        }
+      ]
+    },
+    {
+      "pilar": "ORDEN",
+      "pilar_n": 1,
+      "titulo": "Reforma judicial con EJE y meritocracia",
+      "resumen": "Reforma integral del sistema de justicia con interoperabilidad digital, IA predictiva, Expediente Judicial Electrónico obligatorio a nivel nacional, y modernización meritocrática de la gestión pública liderada por SERVIR.",
+      "comisiones": [
+        {
+          "id": "reforma-judicial",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya trabaja exactamente lo propuesto: universalizar el expediente judicial electrónico e interoperabilidad del sistema de justicia más la selección meritocrática de jueces y fiscales.",
+          "comision_nombre": "Reforma Judicial"
+        },
+        {
+          "id": "institucionalidad",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica la modernización meritocrática vía SERVIR y la interoperabilidad, que son componentes del objetivo de la comisión de consolidar un servicio civil meritocrático y un Estado digital interoperable.",
+          "comision_nombre": "Institucionalidad"
+        },
+        {
+          "id": "reforma-del-estado",
+          "tipo": "igual_similar",
+          "justificacion": "Coincide con sus objetivos de contar con capital humano competente y probo (meritocracia) y con instituciones que garanticen la administración de justicia.",
+          "comision_nombre": "Reforma Del Estado"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 28,
+          "tipo": "igual_similar",
+          "justificacion": "La reforma integral del sistema de justicia con EJE e independencia judicial es exactamente el acceso a la justicia e independencia judicial que enuncia esta política.",
+          "politica_nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial"
+        },
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "La modernización meritocrática liderada por SERVIR y la interoperabilidad digital son formas concretas de afirmar un Estado eficiente y transparente.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "PROMPYME con rango viceministerial",
+      "resumen": "Crear PROMPYME adscrito a la PCM que unifique ProInnóvate, Procompite, los CITE y la promoción de exportaciones, con un área de inteligencia de mercados y estadística MYPE.",
+      "comisiones": [
+        {
+          "id": "mipymes",
+          "tipo": "desagregado",
+          "justificacion": "PROMPYME concretiza institucionalmente el OE6 de la comisión (\"crear centros especializados de apoyo para las MYPE\") y su promoción de innovación, clústeres y transferencia tecnológica, unificándolos en una sola entidad con rango viceministerial.",
+          "comision_nombre": "Mipymes"
+        },
+        {
+          "id": "comercio-exterior-e-insercion-en-el-merc",
+          "tipo": "desagregado",
+          "justificacion": "La función de promoción de exportaciones y el área de inteligencia de mercados de PROMPYME operacionalizan, para el segmento MYPE, la diversificación y descentralización de la oferta exportadora que plantea esta comisión.",
+          "comision_nombre": "Comercio Exterior E Inserción en El Mercado Externo"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "PROMPYME es un mecanismo institucional específico para impulsar la competitividad, productividad y formalización de las MYPE, que es el núcleo de esta Política de Estado.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 22,
+          "tipo": "desagregado",
+          "justificacion": "La promoción de exportaciones y la inteligencia de mercados que integraría PROMPYME instrumentalizan, en el segmento MYPE, la ampliación de mercados que persigue la política de comercio exterior.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "\"Licencia 0\" para MYPEs",
+      "resumen": "Eliminar costos y trámites de formalización (registros, licencias municipales, defensa civil) mediante una ventanilla única electrónica nacional con IA interoperable con SUNAT, SUNARP, Indecopi y municipios; sin licencia previa para riesgo bajo y medio.",
+      "comisiones": [
+        {
+          "id": "emprendimiento",
+          "tipo": "igual_similar",
+          "justificacion": "Uno de sus objetivos es literalmente 'reducir el tiempo y costo de constituir, formalizar y cerrar empresas', que es el núcleo exacto de la propuesta Licencia 0.",
+          "comision_nombre": "Emprendimiento"
+        },
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "desagregado",
+          "justificacion": "La ventanilla única electrónica nacional con IA interoperable (SUNAT/SUNARP/Indecopi/municipios) es una concreción de sus metas de servicios públicos de extremo a extremo, identidad digital e interoperabilidad plena y de mipymes formales con adopción digital.",
+          "comision_nombre": "Perú en La Era Digital"
+        },
+        {
+          "id": "competitividad",
+          "tipo": "causal",
+          "justificacion": "Eliminar los costos y trámites de formalización ataca directamente la informalidad y mejora la predictibilidad regulatoria que la comisión busca reducir/elevar.",
+          "comision_nombre": "Competitividad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "igual_similar",
+          "justificacion": "La propuesta busca formalizar la actividad económica de las MYPEs reduciendo costos y barreras, que es precisamente el objeto de esta Política de Estado (competitividad, productividad y formalización).",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 24,
+          "tipo": "desagregado",
+          "justificacion": "La ventanilla única electrónica que suprime trámites y licencias previas es una aplicación concreta de la simplificación administrativa y del Estado eficiente que promueve esta política.",
+          "politica_nombre": "Afirmación de un Estado eficiente y transparente"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Compras MyPerú y factoring MYPE",
+      "resumen": "Fijar Compras MyPerú como política de Estado con presupuesto mínimo de S/1,000 millones anuales y crear un Programa Nacional de Factoring MYPE con garantía parcial del Estado para dar liquidez a micro y pequeñas empresas.",
+      "comisiones": [
+        {
+          "id": "mipymes",
+          "tipo": "causal",
+          "justificacion": "Garantizar demanda pública (Compras MyPerú) y liquidez vía factoring son instrumentos que impulsan directamente el desarrollo y la competitividad de las micro y pequeñas empresas que trabaja esta comisión.",
+          "comision_nombre": "Mipymes"
+        },
+        {
+          "id": "banca",
+          "tipo": "desagregado",
+          "justificacion": "El Programa Nacional de Factoring MYPE con garantía parcial del Estado es un instrumento específico del 'esquema nacional de garantías y scoring crediticio para mipymes' que plantea explícitamente la comisión de Banca.",
+          "comision_nombre": "Banca"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "Compras estatales dirigidas a MYPE y factoring con garantía estatal son medidas concretas de la política de competitividad, productividad y formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 17,
+          "tipo": "desagregado",
+          "justificacion": "El apoyo estatal para dar mercado y acceso al crédito a las micro y pequeñas empresas es un componente propio de la afirmación de la economía social de mercado, que promueve a la pequeña y microempresa.",
+          "politica_nombre": "Afirmación de la economía social de mercado"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Capital semilla y beneficios para jóvenes",
+      "resumen": "Programa \"Capital Semilla Joven\" para egresados que emprendan, exoneración del Impuesto a la Renta por tres años a jóvenes emprendedores inscritos en RUC y crédito tributario del 50% por contratar practicantes.",
+      "comisiones": [
+        {
+          "id": "emprendimiento",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya plantea 'escalar fondos públicos de capital semilla' y 'desarrollar un mercado robusto de capital semilla' para jóvenes, exactamente la idea del programa Capital Semilla Joven de la propuesta.",
+          "comision_nombre": "Emprendimiento"
+        },
+        {
+          "id": "proyecto-pais-joven",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión trabaja 'fondos y aceleradoras para emprendimiento juvenil' y 'primer empleo formal', coincidiendo con el capital semilla para egresados y el crédito por contratar practicantes.",
+          "comision_nombre": "Proyecto País Joven"
+        },
+        {
+          "id": "competitividad",
+          "tipo": "desagregado",
+          "justificacion": "La exoneración de Impuesto a la Renta y el crédito tributario son instrumentos concretos del objetivo más amplio de la comisión de 'simplificar el régimen tributario para reducir el costo de la formalidad de las MYPE'.",
+          "comision_nombre": "Competitividad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La exoneración de renta a jóvenes inscritos en RUC y el capital semilla son medidas específicas de la Política de 'competitividad, productividad y formalización de la actividad económica'.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 14,
+          "tipo": "causal",
+          "justificacion": "El crédito tributario del 50% por contratar practicantes incentiva la contratación juvenil, contribuyendo causalmente al 'acceso al empleo pleno, digno y productivo'.",
+          "politica_nombre": "Acceso al empleo pleno, digno y productivo"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Ley de comercio ambulatorio y formalización inclusiva",
+      "resumen": "Ley que reconozca el comercio ambulatorio como trabajo legítimo con rutas de formalización progresiva, modernización de mercados de abastos bajo alquiler social, y prohibición de decomisos y desalojos arbitrarios.",
+      "comisiones": [
+        {
+          "id": "cohesion-social",
+          "tipo": "desagregado",
+          "justificacion": "La comisión fija como objetivo 'formalizar progresivamente el empleo' y acciona 'rutas de formalización del empleo' con inclusión de grupos vulnerables; la propuesta lo concreta para el gremio de comerciantes ambulantes.",
+          "comision_nombre": "Cohesión Social"
+        },
+        {
+          "id": "competitividad",
+          "tipo": "desagregado",
+          "justificacion": "La comisión busca 'reducir drásticamente la informalidad laboral' y 'reducir el costo de la formalidad de las MYPE'; la propuesta especifica ese objetivo con rutas de formalización progresiva para el comercio ambulatorio.",
+          "comision_nombre": "Competitividad"
+        },
+        {
+          "id": "macroeconomia",
+          "tipo": "causal",
+          "justificacion": "La acción de la comisión de 'reducir costos de formalización' y bajar la informalidad empresarial es condición que habilita las rutas de formalización progresiva que plantea la propuesta.",
+          "comision_nombre": "Macroeconomía"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La Política de 'formalización de la actividad económica' se concreta en la propuesta como formalización progresiva del comercio ambulatorio y modernización de mercados de abastos.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 14,
+          "tipo": "desagregado",
+          "justificacion": "El 'acceso al empleo pleno, digno y productivo' se especifica al reconocer el comercio ambulatorio como trabajo legítimo y prohibir decomisos y desalojos arbitrarios.",
+          "politica_nombre": "Acceso al empleo pleno, digno y productivo"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Modernización de la Ley General de Minería",
+      "resumen": "Establecer plazos obligatorios de exploración/producción contra la especulación, un fast track para proyectos estratégicos, incentivos a la reinversión y un régimen diferenciado para la minería artesanal y de pequeña escala con acceso a crédito formal.",
+      "comisiones": [
+        {
+          "id": "mineria",
+          "tipo": "desagregado",
+          "justificacion": "La comisión Minería del Plan Perú 2050 plantea 'Nuevas políticas del Estado y de las empresas mineras' y un proyecto explícito de apoyo estatal a la mediana y pequeña empresa minera; la propuesta de Keiko especifica esas políticas en reformas legales concretas (plazos, fast track y régimen diferenciado para la minería artesanal y de pequeña escala).",
+          "comision_nombre": "Minería"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "El régimen diferenciado para la minería artesanal y de pequeña escala con acceso a crédito formal, más el fast track e incentivos a la reinversión, concretan en el sector minero la Política 18 de competitividad, productividad y formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 17,
+          "tipo": "causal",
+          "justificacion": "Establecer plazos contra la especulación e incentivos a la reinversión busca dar seguridad jurídica y promover la inversión privada minera, lo que refuerza la afirmación de la economía social de mercado de la Política 17.",
+          "politica_nombre": "Afirmación de la economía social de mercado"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Comandos mixtos contra la minería ilegal",
+      "resumen": "Instalar comandos mixtos PNP-FF.AA.-Fiscalía-SUNAT en zonas críticas para enfrentar la minería ilegal y el crimen organizado, culminando además el SIPMMA para trazabilidad de insumos y minerales.",
+      "comisiones": [
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "desagregado",
+          "justificacion": "Los comandos mixtos y el SIPMMA son un instrumento operativo concreto del objetivo de la comisión de desarticular economías criminales vinculadas a la minería ilegal y recuperar el control territorial del Estado.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "drogas",
+          "tipo": "igual_similar",
+          "justificacion": "Comparte la misma idea de reforzar el control de insumos (SIPMMA) e integrar el combate al crimen organizado con el control de la minería ilegal que plantea la comisión.",
+          "comision_nombre": "Drogas"
+        },
+        {
+          "id": "defensa",
+          "tipo": "desagregado",
+          "justificacion": "La participación de las FF.AA. en los comandos mixtos concreta la acción de la comisión de fortalecer la presencia y movilidad militar en zonas de economías ilegales, incluida la minería ilegal.",
+          "comision_nombre": "Defensa"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 9,
+          "tipo": "igual_similar",
+          "justificacion": "Enfrentar la minería ilegal y el crimen organizado con fuerza conjunta PNP-FF.AA. y recuperar el control territorial es el núcleo de la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional"
+        },
+        {
+          "politica": 7,
+          "tipo": "desagregado",
+          "justificacion": "Los comandos mixtos son un mecanismo específico para combatir el crimen organizado que amenaza la seguridad ciudadana, contribuyendo a la erradicación de la violencia.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Canon para el Pueblo (40%)",
+      "resumen": "Redistribuir directamente hasta el 40% del canon minero a la población de la zona de extracción con control comunitario, junto a un Fondo de Compensación Energética para comunidades en zonas de proyectos.",
+      "comisiones": [
+        {
+          "id": "mineria",
+          "tipo": "causal",
+          "justificacion": "La redistribucion del 40% del canon con control comunitario es un mecanismo fiscal concreto para lograr el 'desarrollo sostenible de las areas de influencia' y la alianza Estado-Empresa-Comunidad que la comision busca para reducir los conflictos sociales.",
+          "comision_nombre": "Minería"
+        },
+        {
+          "id": "hidrocarburos",
+          "tipo": "causal",
+          "justificacion": "El Fondo de Compensacion Energetica para comunidades en zonas de proyectos opera como instrumento para 'reducir la conflictividad social en zonas de operacion', objetivo explicito de la comision.",
+          "comision_nombre": "Hidrocarburos"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 8,
+          "tipo": "desagregado",
+          "justificacion": "El canon es un instrumento de descentralizacion economica; transferir directamente el 40% a la poblacion de la zona de extraccion con control comunitario especifica una forma concreta de descentralizacion fiscal y economica hacia los territorios.",
+          "politica_nombre": "Descentralización política, económica y administrativa para propiciar el desarrollo integral, armónico y sostenido del Perú"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "La transferencia directa de recursos del canon a la poblacion de las zonas extractivas busca elevar sus ingresos y reducir la pobreza local, efecto central de esta politica de Estado.",
+          "politica_nombre": "Reducción de la pobreza"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Reestructuración de Petroperú",
+      "resumen": "Concentrar a Petroperú solo en refinación y distribución (Talara), vender activos no estratégicos para reducir pasivos y separar el Oleoducto Norperuano bajo un operador especializado.",
+      "comisiones": [
+        {
+          "id": "hidrocarburos",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica una reestructuración concreta de Petroperú (foco en la refinación de Talara, saneamiento de pasivos y del Oleoducto Norperuano) contenida en las acciones de la comisión de modernizar el marco regulatorio para mejorar la competitividad de la refinación y remediar pasivos en la costa norte.",
+          "comision_nombre": "Hidrocarburos"
+        },
+        {
+          "id": "macroeconomia",
+          "tipo": "causal",
+          "justificacion": "Vender activos no estratégicos para reducir los pasivos de Petroperú disminuye un riesgo fiscal contingente, en línea con el objetivo de la comisión de fortalecer la institucionalidad fiscal y la gestión de pasivos contingentes.",
+          "comision_nombre": "Macroeconomía"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 31,
+          "tipo": "causal",
+          "justificacion": "Reducir los pasivos de Petroperú mediante la venta de activos no estratégicos contribuye directamente a la sostenibilidad fiscal y a la reducción del peso de la deuda, evitando que las obligaciones de la estatal presionen las finanzas públicas.",
+          "politica_nombre": "Sostenibilidad fiscal y reducción del peso de la deuda"
+        },
+        {
+          "politica": 17,
+          "tipo": "causal",
+          "justificacion": "Concentrar a Petroperú en su núcleo de negocio y ceder el Oleoducto Norperuano a un operador especializado expresa el rol subsidiario del Estado y la participación privada propios de la economía social de mercado.",
+          "politica_nombre": "Afirmación de la economía social de mercado"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Matriz energética limpia al 20%",
+      "resumen": "Elevar al 20% la participación de renovables no convencionales (solar, eólica, geotérmica, hidrógeno verde), lanzar una Agenda Nacional del Hidrógeno Verde y crear el Polo Energético del Norte y el Gasoducto Sur Andino.",
+      "comisiones": [
+        {
+          "id": "energia",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión Energía plantea explícitamente 'elevar sustancialmente la participación de renovables no convencionales' y reformar subastas para integrarlas, exactamente el núcleo de la propuesta de matriz limpia al 20%.",
+          "comision_nombre": "Energía"
+        },
+        {
+          "id": "energia-electrica",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión Energía Eléctrica busca 'diversificar la matriz con alta penetración de solar y eólica' e integrar el potencial solar del sur, coincidiendo con las renovables y el Polo Energético del Norte de la propuesta.",
+          "comision_nombre": "Energía Eléctrica"
+        },
+        {
+          "id": "hidrocarburos",
+          "tipo": "desagregado",
+          "justificacion": "El Gasoducto Sur Andino de la propuesta concreta el objetivo de la comisión Hidrocarburos de 'masificar el acceso a gas natural incluyendo el sur del país' mediante infraestructura de transporte de gas.",
+          "comision_nombre": "Hidrocarburos"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 19,
+          "tipo": "causal",
+          "justificacion": "Elevar renovables e hidrógeno verde reduce emisiones y descarboniza la matriz, contribuyendo causalmente al Desarrollo sostenible y gestión ambiental.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "El Polo Energético del Norte y el Gasoducto Sur Andino son proyectos específicos de infraestructura energética contenidos en la política de Desarrollo en infraestructura.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Reservas estratégicas y control de combustibles",
+      "resumen": "Crear reservas estratégicas de combustibles y gas natural y un Sistema Nacional de Trazabilidad de Combustibles interoperable con SUNAT y la Policía para reducir el contrabando (15% del mercado).",
+      "comisiones": [
+        {
+          "id": "hidrocarburos",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta concreta un mecanismo (reservas estratégicas de combustibles y gas natural) contenido en los objetivos de la comisión de seguridad energética y reducción de la dependencia de importaciones de petróleo y derivados.",
+          "comision_nombre": "Hidrocarburos"
+        },
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "causal",
+          "justificacion": "El Sistema de Trazabilidad interoperable con SUNAT y Policía es un instrumento que produce el resultado buscado por la comisión: desarticular economías criminales y reducir el contrabando de combustibles.",
+          "comision_nombre": "Orden Público y Seguridad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 26,
+          "tipo": "desagregado",
+          "justificacion": "La trazabilidad interoperable con SUNAT y Policía especifica un mecanismo concreto de la política para erradicar el contrabando en todas sus formas y la evasión tributaria asociada.",
+          "politica_nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas"
+        },
+        {
+          "politica": 9,
+          "tipo": "causal",
+          "justificacion": "Constituir reservas estratégicas de combustibles y gas natural fortalece la seguridad energética como componente de la Política de Seguridad Nacional.",
+          "politica_nombre": "Política de Seguridad Nacional"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Grandes represas y riego tecnificado",
+      "resumen": "Ejecutar grandes proyectos de represamiento (Chavimochic III, Majes Siguas II, Poechos II, Olmos, Chinecas, Alto Piura, Puyango-Tumbes) y un Programa Nacional de Riego Tecnificado para elevar la superficie con riego del 34% al 60%.",
+      "comisiones": [
+        {
+          "id": "aguas",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión de Aguas ya trabaja 'tecnificar la mayor parte de la superficie agrícola bajo riego' e infraestructura hídrica de regulación, la misma idea central de la propuesta de represas y riego tecnificado.",
+          "comision_nombre": "Aguas"
+        },
+        {
+          "id": "agricultura",
+          "tipo": "desagregado",
+          "justificacion": "La comisión plantea genéricamente 'expandir el riego tecnificado y la infraestructura de siembra y cosecha de agua en cuencas priorizadas', y la propuesta lo especifica con proyectos concretos (Chavimochic III, Majes Siguas II, Olmos) y una meta cuantitativa 34%→60%.",
+          "comision_nombre": "Agricultura"
+        },
+        {
+          "id": "agroindustria",
+          "tipo": "causal",
+          "justificacion": "Los grandes represamientos costeros (Chavimochic, Majes, Olmos) y el riego tecnificado son el insumo hídrico que habilita el objetivo de la comisión de multiplicar y sostener la agroexportación bajo estrés hídrico.",
+          "comision_nombre": "Agroindustria"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 33,
+          "tipo": "desagregado",
+          "justificacion": "La Política de Estado sobre los recursos hídricos abarca el aprovechamiento eficiente y el almacenamiento del agua; la propuesta la concreta en represas de regulación y tecnificación del riego para elevar la eficiencia hídrica.",
+          "politica_nombre": "Política de Estado sobre los recursos hídricos"
+        },
+        {
+          "politica": 23,
+          "tipo": "causal",
+          "justificacion": "Ampliar la superficie con riego del 34% al 60% eleva la productividad e ingresos agrarios, efecto directo buscado por la Política de desarrollo agrario y rural.",
+          "politica_nombre": "Política de desarrollo agrario y rural"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "5,000 tractores y Banco Agrario",
+      "resumen": "Entregar 5,000 tractores financiados por el Estado con centros de mecanización compartida y ampliar el financiamiento agropecuario vía Banco Agrario y COFIDE con líneas verdes, seguros climáticos paramétricos y cadenas de frío.",
+      "comisiones": [
+        {
+          "id": "agricultura",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta concreta (mecanización con tractores, reforma del financiamiento agrario vía Banco Agrario, seguro agrícola indexado y almacenamiento en frío) especifica instrumentos que la Comisión de Agricultura ya enuncia en sus acciones de tecnificación, reforma del financiamiento agrario e infraestructura rural de frío.",
+          "comision_nombre": "Agricultura"
+        },
+        {
+          "id": "seguros",
+          "tipo": "desagregado",
+          "justificacion": "Los seguros climáticos paramétricos y el aseguramiento agropecuario de la propuesta son un caso específico de las acciones de la Comisión de Seguros, que ya plantea seguros paramétricos climáticos y el fortalecimiento del Seguro Agrario.",
+          "comision_nombre": "Seguros"
+        },
+        {
+          "id": "agroindustria",
+          "tipo": "desagregado",
+          "justificacion": "El financiamiento vía Banco Agrario/COFIDE y las cadenas de frío coinciden con las acciones de la Comisión de Agroindustria, que menciona explícitamente el crédito de AGROBANCO y la infraestructura de frío para articular a la agricultura familiar.",
+          "comision_nombre": "Agroindustria"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 23,
+          "tipo": "desagregado",
+          "justificacion": "La entrega de tractores y la ampliación del financiamiento y aseguramiento agropecuario son instrumentos concretos de la Política de desarrollo agrario y rural.",
+          "politica_nombre": "Política de desarrollo agrario y rural"
+        },
+        {
+          "politica": 15,
+          "tipo": "causal",
+          "justificacion": "Elevar la productividad agropecuaria mediante mecanización, crédito y cadenas de frío contribuye causalmente a la seguridad alimentaria nacional y a reducir la dependencia de importaciones.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Reactivar el Ministerio de Pesca",
+      "resumen": "Devolver rango ministerial a Pesca, modernizar el 100% de los Desembarcaderos Pesqueros Artesanales, formalizar embarcaciones (\"Formalízate Pez\") y crear un Seguro Pesquero Nacional y el fondo PESCA SOLIDARIA con compensación durante vedas.",
+      "comisiones": [
+        {
+          "id": "pesca",
+          "tipo": "desagregado",
+          "justificacion": "La Comisión Pesca aborda la informalidad artesanal y la debilidad institucional del sector, y la propuesta especifica esas soluciones concretas (rango ministerial, modernizar DPA, formalizar embarcaciones y seguro pesquero).",
+          "comision_nombre": "Pesca"
+        },
+        {
+          "id": "acuicultura-y-pesca",
+          "tipo": "desagregado",
+          "justificacion": "Comparte el objetivo de formalizar y fortalecer la gestión de los productores pesqueros, que la propuesta concreta mediante 'Formalízate Pez' y la reactivación del ente rector del sector.",
+          "comision_nombre": "Acuicultura y Pesca"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "La formalización de embarcaciones artesanales vía 'Formalízate Pez' es una aplicación directa de la política de formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 19,
+          "tipo": "causal",
+          "justificacion": "La compensación durante vedas del fondo PESCA SOLIDARIA incentiva el cumplimiento de las vedas biológicas, favoreciendo el manejo sostenible del recurso marino.",
+          "politica_nombre": "Desarrollo sostenible y gestión ambiental"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Metros, trenes y megapuerto de Chancay",
+      "resumen": "Culminar la Línea 2 y ejecutar Líneas 3-6 del Metro de Lima más metros en Arequipa, Trujillo y Piura, impulsar el Tren Bioceánico Perú-Brasil y consolidar el megapuerto de Chancay como plataforma del Pacífico Sur.",
+      "comisiones": [
+        {
+          "id": "infraestructura-y-construccion",
+          "tipo": "desagregado",
+          "justificacion": "La comisión ya plantea ejecutar ferrocarriles, puertos y un hub del Pacífico Sur, y la propuesta especifica esas obras concretas (Tren Bioceánico, megapuerto de Chancay, líneas de metro).",
+          "comision_nombre": "Infraestructura y Construcción"
+        },
+        {
+          "id": "ciudades-inteligentes",
+          "tipo": "desagregado",
+          "justificacion": "La comisión propone acelerar la red de metro/BRT en Lima y el transporte masivo en ciudades intermedias, que es exactamente lo que la propuesta detalla con las Líneas 2-6 y los metros de Arequipa, Trujillo y Piura.",
+          "comision_nombre": "Ciudades Inteligentes"
+        },
+        {
+          "id": "maritimo-fluvial-y-lacustre",
+          "tipo": "desagregado",
+          "justificacion": "El megapuerto de Chancay como plataforma del Pacífico Sur concreta el pilar de Puertos y Logística de la comisión y su meta de escalar en el Índice de Conectividad Marítima de la UNCTAD.",
+          "comision_nombre": "Marítimo, Fluvial y Lacustre"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "Metros, trenes y megapuerto son inversión directa en la infraestructura de transporte que abarca la Política de Estado 21.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        },
+        {
+          "politica": 22,
+          "tipo": "causal",
+          "justificacion": "El megapuerto de Chancay y el Tren Bioceánico Perú-Brasil funcionan como plataformas logísticas que amplían mercados y facilitan el comercio exterior, causando el efecto que persigue la Política 22.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Pavimentar 100% de caminos rurales críticos",
+      "resumen": "Rehabilitar y pavimentar el 100% de los caminos rurales críticos triplicando la inversión, modernizar 17 aeropuertos concesionados y aeropuertos regionales, y poner operativo Chinchero-Cusco.",
+      "comisiones": [
+        {
+          "id": "infraestructura-y-construccion",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión plantea exactamente ejecutar redes viales, carreteras asfaltadas y aeropuertos y crear un hub de puertos y aeropuertos del Pacífico Sur, que coincide con pavimentar caminos y modernizar aeropuertos.",
+          "comision_nombre": "Infraestructura y Construcción"
+        },
+        {
+          "id": "transportes",
+          "tipo": "igual_similar",
+          "justificacion": "Su objetivo de 'pavimentar y mantener la red vial' y desarrollar infraestructura logística articulada con puertos y aeropuertos es la misma idea que la propuesta de caminos rurales y aeropuertos regionales.",
+          "comision_nombre": "Transportes"
+        },
+        {
+          "id": "espacio",
+          "tipo": "desagregado",
+          "justificacion": "La modernización de 17 aeropuertos concesionados, aeropuertos regionales y Chinchero-Cusco especifica el pilar de aviación civil e infraestructura aeroportuaria que la comisión Aeroespacial trabaja de forma más amplia (40 aeropuertos secundarios).",
+          "comision_nombre": "Espacio"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "Pavimentar caminos rurales y modernizar aeropuertos es una concreción sectorial (vial y aeroportuaria) de la Política de Estado de desarrollo en infraestructura.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Rehabilitar caminos rurales críticos y modernizar aeropuertos reduce costos logísticos y de conectividad, lo que impulsa la competitividad y productividad de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Conectividad digital universal",
+      "resumen": "Rediseñar la gestión de la Red Dorsal Nacional de Fibra Óptica vía concesión supervisada y un Plan de Cobertura Universal de Internet Satelital y Móvil para llegar al 90% de cobertura en todos los distritos.",
+      "comisiones": [
+        {
+          "id": "telecomunicaciones",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión propone exactamente lo mismo: reformular la RDNFO en la RDNFOA y desplegar una red satelital nacional con dualidad terrestre-satelital para conectar el 90% de los centros poblados.",
+          "comision_nombre": "Telecomunicaciones"
+        },
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "causal",
+          "justificacion": "El rediseño de la Red Dorsal y la cobertura satelital-móvil son el medio de infraestructura que produce el resultado buscado por la comisión de conectividad significativa universal con 100% de capitales distritales conectadas.",
+          "comision_nombre": "Perú en La Era Digital"
+        },
+        {
+          "id": "capital-del-conocimiento",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica y concreta la acción de la comisión de expandir la conectividad de alta velocidad mediante la Red Dorsal de Fibra Óptica 2.0.",
+          "comision_nombre": "Capital Del Conocimiento"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "La conectividad digital universal es la expresión directa de la Política de Estado de construir la sociedad de la información y del conocimiento con acceso masivo a las TIC.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "La propuesta desagrega la infraestructura de telecomunicaciones (fibra óptica y redes satelital-móvil) como componente específico de la política de desarrollo en infraestructura.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Turismo: Machu Picchu, FEDETUR y Cielos Abiertos",
+      "resumen": "Ampliar circuitos y acceso a Machu Picchu y Choquequirao, crear el fondo FEDETUR para MYPEs turísticas, aplicar política de \"Cielos Abiertos\" y meta de 6 millones de turistas internacionales.",
+      "comisiones": [
+        {
+          "id": "turismo",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión de Turismo aborda exactamente los mismos ejes de la propuesta: gestión de capacidad y conservación de Machu Picchu, diversificación de circuitos, conectividad aérea y aumento sostenido de llegadas internacionales.",
+          "comision_nombre": "Turismo"
+        },
+        {
+          "id": "imagen-pais",
+          "tipo": "causal",
+          "justificacion": "La política de Cielos Abiertos y la meta de 6 millones de turistas son medios que producen el objetivo de la comisión Imagen País de elevar las llegadas internacionales, el ingreso de divisas y el posicionamiento del Perú como destino líder de Sudamérica.",
+          "comision_nombre": "Imagen País"
+        },
+        {
+          "id": "mipymes",
+          "tipo": "desagregado",
+          "justificacion": "El fondo FEDETUR para MYPEs turísticas especifica, para el sector turismo, la agenda de financiamiento, asociatividad y competitividad de las micro y pequeñas empresas que ya trabaja la comisión MYPE/MIPYMES.",
+          "comision_nombre": "Mipymes"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "El apoyo vía FEDETUR a MYPEs turísticas y la mejora de servicios concreta, en el sector turismo, la Política 18 de búsqueda de competitividad, productividad y formalización de la actividad económica.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 22,
+          "tipo": "causal",
+          "justificacion": "Cielos Abiertos y la meta de 6 millones de turistas internacionales amplían mercados y generan divisas por exportación de servicios turísticos, efecto buscado por la Política 22 de comercio exterior para la ampliación de mercados.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad"
+        }
+      ]
+    },
+    {
+      "pilar": "ECONÓMICO",
+      "pilar_n": 2,
+      "titulo": "Parques industriales, ZEE y VUCE 2.0",
+      "resumen": "Plan Nacional de Parques Industriales Modernos (10 polos), Zonas Económicas Especiales con industria 4.0, Fondo Nacional de Innovación Exportadora y VUCE 2.0 con IA para reducir 50% los tiempos de exportación.",
+      "comisiones": [
+        {
+          "id": "ciencia-y-tecnologia",
+          "tipo": "igual_similar",
+          "justificacion": "Sus objetivos OE3 y OE4 plantean explícitamente crear Parques Científicos y Tecnológicos junto a Parques Industriales regionales y consolidar el planeamiento de parques industriales exportadores, misma idea que los 10 polos industriales de la propuesta.",
+          "comision_nombre": "Ciencia y Tecnología"
+        },
+        {
+          "id": "comercio-exterior-e-insercion-en-el-merc",
+          "tipo": "desagregado",
+          "justificacion": "La comisión busca diversificar y potenciar la oferta exportadora con valor agregado; el Fondo Nacional de Innovación Exportadora y la VUCE 2.0 con IA especifican instrumentos concretos para lograr esa mayor competitividad exportadora.",
+          "comision_nombre": "Comercio Exterior E Inserción en El Mercado Externo"
+        },
+        {
+          "id": "industria",
+          "tipo": "causal",
+          "justificacion": "La comisión persigue transformar al Perú de primario-exportador a nación industrializada con plantas industriales; las ZEE con industria 4.0 y los parques industriales de la propuesta son medios que impulsan ese salto industrializador.",
+          "comision_nombre": "Industria"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "Parques industriales, ZEE y la simplificación aduanera de la VUCE 2.0 son medidas concretas para la competitividad, productividad y formalización que persigue esta política.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        },
+        {
+          "politica": 22,
+          "tipo": "igual_similar",
+          "justificacion": "La VUCE 2.0 con IA para reducir 50% los tiempos de exportación y el Fondo de Innovación Exportadora responden directamente a la política de comercio exterior y ampliación de mercados.",
+          "politica_nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Reducir la pobreza en 50%",
+      "resumen": "Meta central del pilar: sacar a más de un millón de peruanos de la pobreza en cinco años, combinando programas sociales con crédito productivo, capacitación técnica, formalización e infraestructura básica (agua, saneamiento, luz e internet).",
+      "comisiones": [
+        {
+          "id": "cohesion-social",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya trabaja reducir la desigualdad de ingresos, formalizar el empleo y ampliar la protección social, que es exactamente la combinación programas sociales + formalización que propone la meta de reducir la pobreza.",
+          "comision_nombre": "Cohesión Social"
+        },
+        {
+          "id": "industria",
+          "tipo": "igual_similar",
+          "justificacion": "Su Objetivo Estratégico 1 es erradicar la pobreza extrema (segmento E) mediante inversión integral en el ciudadano, misma meta central de sacar a más de un millón de peruanos de la pobreza.",
+          "comision_nombre": "Industria"
+        },
+        {
+          "id": "comercio-exterior-e-insercion-en-el-merc",
+          "tipo": "causal",
+          "justificacion": "La comisión plantea el comercio exterior y el empleo formal con mejores ingresos como motor cuyo Objetivo Estratégico 3 es la reducción de la pobreza, cadena causal que sostiene la meta de la propuesta.",
+          "comision_nombre": "Comercio Exterior E Inserción en El Mercado Externo"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 10,
+          "tipo": "igual_similar",
+          "justificacion": "La propuesta es literalmente la Política de Estado de Reducción de la pobreza, fijándole una meta cuantitativa (50%, más de un millón de personas en cinco años).",
+          "politica_nombre": "Reducción de la pobreza"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "El crédito productivo, la capacitación técnica y la formalización que propone la meta son los instrumentos de competitividad, productividad y formalización de la actividad económica que causan la salida de la pobreza.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Construir 3,000 colegios y Escuelas Seguras",
+      "resumen": "Edificar 3,000 colegios en el quinquenio y ejecutar el programa Escuelas Seguras para reconstruir o rehabilitar los planteles públicos con más del 50% de infraestructura dañada, priorizando sierra y selva rural.",
+      "comisiones": [
+        {
+          "id": "industria",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya plantea como acción la construcción masiva de colegios (440 planteles por año con laboratorios y equipamiento), misma idea que edificar 3,000 colegios en el quinquenio.",
+          "comision_nombre": "Industria"
+        },
+        {
+          "id": "educacion-tres-niveles",
+          "tipo": "causal",
+          "justificacion": "Reconstruir y edificar planteles seguros, priorizando la ruralidad de sierra y selva, es condición material que habilita la revolución educativa y el acceso equitativo que propone esta comisión.",
+          "comision_nombre": "Educación (Tres Niveles)"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 12,
+          "tipo": "causal",
+          "justificacion": "Contar con planteles construidos y rehabilitados de forma segura es condición para garantizar el acceso universal a una educación pública gratuita y de calidad.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "Los locales escolares son un tipo específico de infraestructura pública, por lo que construir 3,000 colegios y rehabilitar planteles dañados concreta esta política de desarrollo en infraestructura.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "6 millones de laptops y conectividad rural total",
+      "resumen": "Adquirir 6 millones de laptops o tablets con internet para escolares e implementar proyectos de conectividad (fibra, radioenlace y satélite) para el 100% de escuelas rurales, cerrando la brecha digital.",
+      "comisiones": [
+        {
+          "id": "telecomunicaciones",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión propone exactamente cerrar la brecha digital con infraestructura dual terrestre-satelital (fibra óptica y red satelital nacional) para conectar centros poblados y escuelas rurales, misma idea que la conectividad rural total de la propuesta.",
+          "comision_nombre": "Telecomunicaciones"
+        },
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica un medio concreto (laptops para escolares y conectividad de escuelas) contenido en las metas de la comisión de conectividad significativa universal en instituciones públicas y alfabetización/educación digital escolar.",
+          "comision_nombre": "Perú en La Era Digital"
+        },
+        {
+          "id": "ciencia-y-tecnologia",
+          "tipo": "desagregado",
+          "justificacion": "La comisión ya contempla como acciones la cobertura de internet a nivel nacional y la implementación de internet en el sistema educativo, que la propuesta concreta con dispositivos y conexión para escuelas rurales.",
+          "comision_nombre": "Ciencia y Tecnología"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 35,
+          "tipo": "igual_similar",
+          "justificacion": "Cerrar la brecha digital dotando de dispositivos y conectividad a los escolares es la esencia de la política de Sociedad de la Información y del Conocimiento.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento"
+        },
+        {
+          "politica": 12,
+          "tipo": "causal",
+          "justificacion": "Entregar laptops con internet y conectar el 100% de escuelas rurales es un medio que contribuye causalmente al acceso universal a una educación pública de calidad, especialmente en zonas rurales.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "PRONABEC, créditos educativos y Alerta Estudiante",
+      "resumen": "Ampliar becas PRONABEC, crear créditos educativos con garantía estatal a tasas preferenciales y montar Alerta Estudiante, sistema nacional de alerta temprana de deserción y evaluación de calidad de la educación superior.",
+      "comisiones": [
+        {
+          "id": "proyecto-pais-joven",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya plantea como acción explícita 'becas y créditos educativos orientados a carreras con demanda y STEM', idéntica a la ampliación de PRONABEC y los créditos educativos que propone Keiko.",
+          "comision_nombre": "Proyecto País Joven"
+        },
+        {
+          "id": "ciencia-y-tecnologia",
+          "tipo": "desagregado",
+          "justificacion": "El sistema 'Alerta Estudiante' de evaluación de calidad de la educación superior es un mecanismo concreto dentro del objetivo de la comisión de controlar rigurosamente la calidad en toda la cadena formativa (SUNEDU Integral).",
+          "comision_nombre": "Ciencia y Tecnología"
+        },
+        {
+          "id": "educacion-tres-niveles",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica instrumentos de financiamiento, retención y aseguramiento de calidad para el nivel superior dentro de la revolución educativa integral que impulsa la comisión.",
+          "comision_nombre": "Educación (Tres Niveles)"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 12,
+          "tipo": "desagregado",
+          "justificacion": "Las becas y créditos amplían el acceso y 'Alerta Estudiante' vigila la calidad, concretando en la educación superior la Política de acceso universal a una educación de calidad.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte"
+        },
+        {
+          "politica": 20,
+          "tipo": "causal",
+          "justificacion": "El financiamiento y aseguramiento de calidad de la educación superior (especialmente carreras STEM) fortalece el capital humano que sostiene el desarrollo de la ciencia y la tecnología.",
+          "politica_nombre": "Desarrollo de la ciencia y la tecnología"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Capital Semilla Joven y Empleo Joven con Futuro",
+      "resumen": "Otorgar capital semilla (con o sin retorno) a egresados que emprendan negocios viables y lanzar el programa Empleo Joven con Futuro para reducir el ingreso de jóvenes a economías ilegales.",
+      "comisiones": [
+        {
+          "id": "emprendimiento",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya trabaja exactamente lo que propone Keiko: 'Desarrollar un mercado robusto de capital semilla' y 'Escalar y dar continuidad a fondos públicos de capital semilla', transformando el emprendimiento por necesidad hacia emprendimiento por oportunidad de los jóvenes egresados.",
+          "comision_nombre": "Emprendimiento"
+        },
+        {
+          "id": "capital-del-conocimiento",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica el otorgar capital semilla a egresados, que está contenido en la acción de la comisión de 'crear fondos competitivos, capital semilla y capital de riesgo para startups' junto con la retención del talento joven formado.",
+          "comision_nombre": "Capital Del Conocimiento"
+        },
+        {
+          "id": "cohesion-social",
+          "tipo": "causal",
+          "justificacion": "El programa Empleo Joven con Futuro busca dar empleo formal a los jóvenes como medio para reducir su ingreso a economías ilegales, lo que produce los objetivos de la comisión de formalizar el empleo, incluir a las juventudes y reducir la conflictividad social.",
+          "comision_nombre": "Cohesión Social"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 14,
+          "tipo": "desagregado",
+          "justificacion": "El programa Empleo Joven con Futuro concreta, focalizándola en la juventud, la Política de Estado de 'Acceso al empleo pleno, digno y productivo'.",
+          "politica_nombre": "Acceso al empleo pleno, digno y productivo"
+        },
+        {
+          "politica": 18,
+          "tipo": "desagregado",
+          "justificacion": "El capital semilla a egresados con negocios viables y la reducción del ingreso a economías ilegales especifican la 'Búsqueda de la competitividad, productividad y formalización de la actividad económica'.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Aseguramiento en salud para jóvenes en MYPE",
+      "resumen": "Régimen especial que afilia gratis al SIS a jóvenes de 18 a 23 años en microempresas y financia el 50% del aporte a EsSalud en pequeñas empresas por cinco años, para reducir costos laborales y promover la formalización.",
+      "comisiones": [
+        {
+          "id": "proyecto-pais-joven",
+          "tipo": "causal",
+          "justificacion": "El subsidio del aporte SIS/EsSalud para jovenes de 18-23 en microempresas abarata el empleo formal juvenil y ataca directamente la informalidad juvenil que esta comision busca reducir aprovechando el bono demografico.",
+          "comision_nombre": "Proyecto País Joven"
+        },
+        {
+          "id": "competitividad",
+          "tipo": "causal",
+          "justificacion": "La comision plantea reducir el costo de la formalidad de las MYPE y la informalidad laboral, y financiar parte del aporte a la seguridad social es un mecanismo concreto que reduce ese costo laboral e induce formalizacion.",
+          "comision_nombre": "Competitividad"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "Afiliar gratis al SIS y cofinanciar el aporte a EsSalud especifica, para el segmento de jovenes en MYPE, el acceso universal a los servicios de salud y a la seguridad social.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        },
+        {
+          "politica": 18,
+          "tipo": "causal",
+          "justificacion": "Abaratar el costo laboral mediante el subsidio del aseguramiento persigue directamente la formalizacion de la actividad economica de las micro y pequenas empresas.",
+          "politica_nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Centros COOL y Línea Joven Contigo 24/7",
+      "resumen": "Crear Centros de Oportunidades y Orientación Local para Jóvenes (COOL) con acompañamiento psicológico y una línea telefónica/WhatsApp gratuita 24/7 atendida por psicólogos, para atender salud mental y reducir delincuencia juvenil.",
+      "comisiones": [
+        {
+          "id": "proyecto-pais-joven",
+          "tipo": "desagregado",
+          "justificacion": "Los Centros COOL de oportunidades y orientación local para jóvenes concretan un servicio específico dentro de la agenda juvenil (ninis, participación y desarrollo del bono demográfico) que impulsa esta comisión.",
+          "comision_nombre": "Proyecto País Joven"
+        },
+        {
+          "id": "orden-publico-y-seguridad",
+          "tipo": "causal",
+          "justificacion": "El acompañamiento psicológico y la línea 24/7 son una intervención preventiva sobre la juventud que causalmente contribuye a reducir la delincuencia juvenil, objetivo central de esta comisión.",
+          "comision_nombre": "Orden Público y Seguridad"
+        },
+        {
+          "id": "la-familia",
+          "tipo": "desagregado",
+          "justificacion": "La línea gratuita atendida por psicólogos y el acompañamiento a jóvenes especifican los servicios de prevención y atención (salud mental y bienestar adolescente) que esta comisión propone fortalecer.",
+          "comision_nombre": "La Familia"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 16,
+          "tipo": "desagregado",
+          "justificacion": "La propuesta concreta la protección de la adolescencia y juventud mediante centros y una línea de acompañamiento psicológico, contenida en esta Política de Estado.",
+          "politica_nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud"
+        },
+        {
+          "politica": 7,
+          "tipo": "causal",
+          "justificacion": "Al brindar salud mental y orientación a jóvenes para reducir la delincuencia juvenil, la propuesta contribuye causalmente a la erradicación de la violencia y la seguridad ciudadana.",
+          "politica_nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Telemedicina nacional e historia clínica electrónica",
+      "resumen": "Desplegar telemedicina en zonas rurales, implementar Citas Prontas para reducir tiempos de espera y crear una historia clínica electrónica interoperable ligada al DNI entre MINSA, EsSalud y Sanidades.",
+      "comisiones": [
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "igual_similar",
+          "justificacion": "Esta comisión ya contempla explícitamente como acción la 'Salud y bienestar digital: telesalud, historia clínica digital interoperable y analítica para atención primaria (AE1.3)', que es exactamente lo que propone Keiko.",
+          "comision_nombre": "Perú en La Era Digital"
+        },
+        {
+          "id": "salud",
+          "tipo": "causal",
+          "justificacion": "La comisión de Salud (Gemelos Digitales) tiene como objetivo la 'infraestructura de datos e interoperabilidad con estándar HL7 FHIR integrada a la HCE nacional', de modo que la historia clínica electrónica interoperable de la propuesta es condición habilitante para lo que el CIP construye.",
+          "comision_nombre": "Salud"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "causal",
+          "justificacion": "La telemedicina rural y Citas Prontas son mecanismos que amplían y agilizan el acceso universal a los servicios de salud, efecto directo de esta Política de Estado.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        },
+        {
+          "politica": 35,
+          "tipo": "desagregado",
+          "justificacion": "La historia clínica electrónica interoperable ligada al DNI entre MINSA, EsSalud y Sanidades es una aplicación concreta de la sociedad de la información y del conocimiento en el sector salud.",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Sistema Nacional de Cuidados y Carnet Adulto Mayor",
+      "resumen": "Crear el Sistema Nacional de Cuidados como política de Estado para dependientes y un Carnet Nacional del Adulto Mayor con descuentos obligatorios en medicamentos y consultas, públicas y privadas.",
+      "comisiones": [
+        {
+          "id": "la-familia",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión La Familia ya plantea explícitamente 'Implementar un Sistema Nacional de Cuidados' para personas dependientes y 'adaptar políticas de protección social al envejecimiento poblacional y al cuidado de personas mayores', que es exactamente la misma idea de la propuesta.",
+          "comision_nombre": "La Familia"
+        },
+        {
+          "id": "cohesion-social",
+          "tipo": "desagregado",
+          "justificacion": "La propuesta especifica un instrumento concreto (carnet y descuentos para el adulto mayor) dentro de la 'ampliación de protección social no contributiva' e inclusión de grupos vulnerables que impulsa la comisión.",
+          "comision_nombre": "Cohesión Social"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "El Carnet del Adulto Mayor con descuentos obligatorios en medicamentos y consultas y el Sistema de Cuidados concretan, para un grupo específico, el acceso universal a los servicios de salud y a la seguridad social.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        },
+        {
+          "politica": 16,
+          "tipo": "causal",
+          "justificacion": "Un Sistema Nacional de Cuidados para personas dependientes descarga el cuidado no remunerado del hogar y, por esa vía, fortalece y protege a la familia.",
+          "politica_nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "FINSAL, Ley del Cáncer y medicamentos con descuento",
+      "resumen": "Modernizar el Fondo para Enfermedades de Alto Costo (FINSAL), implementar plenamente la Ley Nacional del Cáncer con presupuesto y metas, y crear un programa de medicamentos con descuento preferencial para enfermedades crónicas.",
+      "comisiones": [
+        {
+          "id": "vacunas-y-laboratorios",
+          "tipo": "causal",
+          "justificacion": "El fortalecimiento de la soberania farmaceutica y de DIGEMID que impulsa el CIP habilita mayor disponibilidad y menor costo de medicamentos, condicion para el programa de medicamentos con descuento y el acceso a tratamientos oncologicos de la propuesta.",
+          "comision_nombre": "Vacunas y Laboratorios"
+        },
+        {
+          "id": "salud",
+          "tipo": "causal",
+          "justificacion": "La agenda del CIP para reducir hospitalizaciones y mortalidad evitables por enfermedades cronicas (cardiovasculares) converge causalmente con FINSAL, la Ley del Cancer y los medicamentos con descuento para cronicas, que buscan el mismo resultado de reducir la carga y el gasto por enfermedades de alto costo.",
+          "comision_nombre": "Salud"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "FINSAL, la implementacion plena de la Ley del Cancer y los medicamentos con descuento son instrumentos concretos que desagregan y operativizan la Politica 13 de acceso universal a los servicios de salud y a la seguridad social.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "Al proteger a las familias del gasto catastrofico por enfermedades de alto costo y abaratar medicamentos cronicos, la propuesta previene el empobrecimiento por motivos de salud y contribuye causalmente a la reduccion de la pobreza.",
+          "politica_nombre": "Reducción de la pobreza"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Bebés que Nacen Fuertes: reducir la anemia",
+      "resumen": "Ejecutar el Paquete 1,000 días con suplementación de hierro, control prenatal reforzado y visitas domiciliarias, con meta de reducir la anemia infantil del 43% al 20% al 2031.",
+      "comisiones": [
+        {
+          "id": "la-familia",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión ya fija como objetivo erradicar la anemia y la desnutrición crónica infantil y una acción de reducción de anemia con suplementación y acompañamiento familiar, misma idea que el Paquete 1,000 días.",
+          "comision_nombre": "La Familia"
+        },
+        {
+          "id": "ciencia-y-tecnologia",
+          "tipo": "desagregado",
+          "justificacion": "Su Acción 1.2 (Programa de Protección Prenatal y Nutrición Temprana con alimentación y asistencia médica desde la gestación) contiene lo que la propuesta especifica como control prenatal reforzado y suplementación de hierro.",
+          "comision_nombre": "Ciencia y Tecnología"
+        },
+        {
+          "id": "industria",
+          "tipo": "desagregado",
+          "justificacion": "Su Acción 1.1.1 (Programa de Alimentación y Salud desde la gestación) es el marco amplio del que el Paquete 1,000 días con suplementación de hierro es una instancia específica de intervención temprana.",
+          "comision_nombre": "Industria"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 15,
+          "tipo": "desagregado",
+          "justificacion": "Reducir la anemia infantil mediante suplementación de hierro es una intervención concreta contenida en la Política de promoción de la seguridad alimentaria y nutrición.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición"
+        },
+        {
+          "politica": 36,
+          "tipo": "desagregado",
+          "justificacion": "El Paquete 1,000 días (gestación y primeros años, control prenatal y visitas domiciliarias) operacionaliza directamente la Política de Desarrollo Infantil Temprano.",
+          "politica_nombre": "Desarrollo Infantil Temprano"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Desayuno para Aprender y compras locales",
+      "resumen": "Reformular la alimentación escolar con menús ricos en proteínas y compras directas a productores locales certificados, con la meta de que el 50% de los alimentos de programas sociales provenga de productores locales.",
+      "comisiones": [
+        {
+          "id": "agroindustria",
+          "tipo": "desagregado",
+          "justificacion": "La comisión ya propone como acción 'articular la agricultura familiar mediante compras públicas (alimentación escolar)', y la propuesta desagrega y cuantifica ese mecanismo con la meta del 50% de alimentos de programas sociales provenientes de productores locales.",
+          "comision_nombre": "Agroindustria"
+        },
+        {
+          "id": "la-familia",
+          "tipo": "causal",
+          "justificacion": "Los menús escolares ricos en proteínas son un medio directo para alcanzar el objetivo de la comisión de erradicar la anemia y la desnutrición crónica infantil.",
+          "comision_nombre": "La Familia"
+        },
+        {
+          "id": "agricultura",
+          "tipo": "causal",
+          "justificacion": "Las compras directas a productores locales certificados generan la demanda formal que fortalece la asociatividad, los ingresos y la seguridad alimentaria de la agricultura familiar que persigue la comisión.",
+          "comision_nombre": "Agricultura"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 15,
+          "tipo": "igual_similar",
+          "justificacion": "Reformular la alimentación escolar con menús ricos en proteínas es, en esencia, la promoción de la seguridad alimentaria y nutrición que enuncia esta Política de Estado.",
+          "politica_nombre": "Promoción de la seguridad alimentaria y nutrición"
+        },
+        {
+          "politica": 23,
+          "tipo": "causal",
+          "justificacion": "Priorizar las compras a productores locales certificados impulsa el desarrollo agrario y rural al asegurar mercado estable a la agricultura familiar.",
+          "politica_nombre": "Política de desarrollo agrario y rural"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Construir 1.25 millones de viviendas",
+      "resumen": "Edificar 1.25 millones de viviendas vía inversión pública, privada y APP para reducir en más del 50% el déficit habitacional, y reactivar Techo Propio con un bono reforzado hasta 50% mayor.",
+      "comisiones": [
+        {
+          "id": "vivienda",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión Vivienda del CIP persigue exactamente 'reducir sustancialmente el déficit habitacional cuantitativo y cualitativo' y 'ampliar y focalizar los programas de subsidio habitacional y crédito hipotecario hacia sectores de menores ingresos', misma idea que construir 1.25 millones de viviendas y reforzar el bono de Techo Propio.",
+          "comision_nombre": "Vivienda"
+        },
+        {
+          "id": "desarrollo-urbano",
+          "tipo": "causal",
+          "justificacion": "Edificar 1.25 millones de viviendas depende de habilitar suelo urbano formal e integrar la política de vivienda con el ordenamiento territorial y la gestión de riesgo, ejes que trabaja esta comisión.",
+          "comision_nombre": "Desarrollo Urbano"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "igual_similar",
+          "justificacion": "La Política de Estado 21 'Desarrollo en infraestructura y vivienda' coincide directamente con la meta de edificar viviendas y reducir en más del 50% el déficit habitacional.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "Al reforzar Techo Propio con un bono hasta 50% mayor y llevar vivienda a sectores de menores ingresos, la propuesta contribuye a la reducción de la pobreza (Política 10) en su dimensión habitacional.",
+          "politica_nombre": "Reducción de la pobreza"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Mi Título, Mi Hogar Seguro: 1 millón de títulos",
+      "resumen": "Titulación masiva y digital con ventanilla única e inteligencia artificial, emitiendo 1 millón de títulos de propiedad, más subsidios para reforzamiento estructural en zonas de riesgo, con un COFOPRI modernizado.",
+      "comisiones": [
+        {
+          "id": "vivienda",
+          "tipo": "desagregado",
+          "justificacion": "La titulación masiva de vivienda formal más los subsidios de reforzamiento estructural en zonas de riesgo especifican instrumentos concretos de la agenda de la comisión de vivienda adecuada, formal, segura y sismorresistente (reducción del déficit cualitativo, asistencia técnica a la autoconstrucción y ocupación de zonas de riesgo).",
+          "comision_nombre": "Vivienda"
+        },
+        {
+          "id": "desarrollo-urbano",
+          "tipo": "desagregado",
+          "justificacion": "El COFOPRI modernizado y la titulación masiva concretan las acciones de gestión del suelo, actualización de catastros y atención de la ocupación informal de zonas de riesgo que plantea la comisión de Desarrollo Urbano.",
+          "comision_nombre": "Desarrollo Urbano"
+        },
+        {
+          "id": "ciudades-inteligentes",
+          "tipo": "desagregado",
+          "justificacion": "La ventanilla única digital con inteligencia artificial para emitir títulos operacionaliza la acción de la comisión de modernizar catastros y trámites municipales digitales con identidad digital nacional.",
+          "comision_nombre": "Ciudades Inteligentes"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "El programa de un millón de títulos de propiedad y vivienda segura es una concreción directa de la Política de Estado de desarrollo en infraestructura y vivienda.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        },
+        {
+          "politica": 32,
+          "tipo": "desagregado",
+          "justificacion": "Los subsidios para reforzamiento estructural de viviendas en zonas de riesgo son una medida específica de la Política de Estado de Gestión del Riesgo de Desastres.",
+          "politica_nombre": "Gestión del Riesgo de Desastres"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Agua que Cuida la Vida: cobertura universal",
+      "resumen": "Programa con 500 cisternas y plantas móviles de potabilización para 2 millones de personas en situación crítica, con meta de 100% de cobertura nacional de agua potable y alcantarillado y construcción de nuevas PTAR.",
+      "comisiones": [
+        {
+          "id": "aguas",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión de Aguas ya fija como objetivos el acceso universal a agua potable y saneamiento gestionados de forma segura y el tratamiento del 100% de las aguas residuales urbanas (PTAR), exactamente la meta que plantea la propuesta de Keiko.",
+          "comision_nombre": "Aguas"
+        },
+        {
+          "id": "vivienda",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión de Vivienda tiene como objetivo alcanzar cobertura universal (100%) de agua potable y saneamiento al 2050 y como acción acelerar las inversiones en agua y saneamiento priorizando zonas rurales y periurbanas, coincidente con la propuesta.",
+          "comision_nombre": "Vivienda"
+        },
+        {
+          "id": "ciudades-inteligentes",
+          "tipo": "desagregado",
+          "justificacion": "La comisión incluye entre sus objetivos universalizar agua y saneamiento en las principales ciudades; la propuesta desagrega esa meta con provisión concreta (cisternas y plantas móviles de potabilización) a población en situación crítica.",
+          "comision_nombre": "Ciudades Inteligentes"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 33,
+          "tipo": "desagregado",
+          "justificacion": "La cobertura universal de agua potable que propone Keiko especifica y concreta un componente central de la Política de Estado sobre los recursos hídricos.",
+          "politica_nombre": "Política de Estado sobre los recursos hídricos"
+        },
+        {
+          "politica": 21,
+          "tipo": "desagregado",
+          "justificacion": "La construcción de redes de alcantarillado y nuevas PTAR materializa el componente de saneamiento de la Política de desarrollo en infraestructura y vivienda.",
+          "politica_nombre": "Desarrollo en infraestructura y vivienda"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Duplicar Pensión 65, Contigo y Juntos",
+      "resumen": "Elevar Pensión 65 de S/350 a S/700 bimestrales, Contigo de S/300 a S/600 mensuales y Juntos de S/200 a S/400 bimestrales, subir la pensión mínima ONP a S/800 e implementar una pensión universal como piso mínimo.",
+      "comisiones": [
+        {
+          "id": "pensiones-de-jubilacion",
+          "tipo": "desagregado",
+          "justificacion": "La comisión ya plantea 'fortalecer y ampliar Pensión 65 con montos adecuados' y un pilar no contributivo universal, y la propuesta desagrega esa meta fijando montos concretos (S/700) y una pensión universal como piso.",
+          "comision_nombre": "Pensiones de Jubilación"
+        },
+        {
+          "id": "prevision",
+          "tipo": "igual_similar",
+          "justificacion": "Coincide con su objetivo de que 'la totalidad de los adultos mayores reciba alguna pensión' y su acción de 'ampliar la pensión no contributiva (Pensión 65) con montos y cobertura adecuados'.",
+          "comision_nombre": "Previsión"
+        },
+        {
+          "id": "cohesion-social",
+          "tipo": "desagregado",
+          "justificacion": "La comisión propone 'ampliar la protección social no contributiva', y la propuesta especifica ese objetivo elevando programas concretos de transferencias como Contigo (discapacidad) y Juntos (pobreza).",
+          "comision_nombre": "Cohesión Social"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "Elevar Pensión 65, la pensión mínima ONP y crear una pensión universal son instrumentos concretos del acceso universal a la seguridad social que postula esta política.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "Duplicar las transferencias monetarias de Pensión 65, Juntos y Contigo eleva el ingreso de los hogares vulnerables, reduciendo directamente la pobreza monetaria.",
+          "politica_nombre": "Reducción de la pobreza"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Preinscripción automática y pagos digitales previsionales",
+      "resumen": "Preinscribir automáticamente a Pensión 65 a los 64 años (enlace RENIEC-SISFOH-EsSalud), desplegar brigadas móviles de afiliación y una ventanilla única digital, con pago 100% digital vía Banco de la Nación.",
+      "comisiones": [
+        {
+          "id": "prevision",
+          "tipo": "desagregado",
+          "justificacion": "La comisión ya plantea 'fortalecer y ampliar la pensión no contributiva (Pensión 65) con cobertura adecuada' y garantizar que todo adulto mayor reciba alguna pensión; la propuesta especifica el mecanismo operativo (preinscripción automática, brigadas y pago digital) para lograrlo.",
+          "comision_nombre": "Previsión"
+        },
+        {
+          "id": "pensiones-de-jubilacion",
+          "tipo": "desagregado",
+          "justificacion": "Contiene la acción explícita 'fortalecer y ampliar Pensión 65 con mejor focalización' y el objetivo de que toda persona adulta mayor reciba una pensión básica, que la propuesta desagrega en afiliación automática a los 64 años y ventanilla única.",
+          "comision_nombre": "Pensiones de Jubilación"
+        },
+        {
+          "id": "transformacion-digital",
+          "tipo": "causal",
+          "justificacion": "La interoperabilidad del Estado en torno a la identidad digital (RENIEC) y la digitalización de servicios que impulsa esta comisión son el habilitante que hace posible el enlace RENIEC-SISFOH-EsSalud, la ventanilla única digital y el pago 100% digital de la propuesta.",
+          "comision_nombre": "Transformación Digital"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 13,
+          "tipo": "desagregado",
+          "justificacion": "Pensión 65 es un componente de la seguridad social no contributiva; la propuesta especifica cómo ampliar el acceso universal a la seguridad social de los adultos mayores mediante preinscripción automática.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        },
+        {
+          "politica": 10,
+          "tipo": "causal",
+          "justificacion": "Al preinscribir y pagar de forma expedita a la población adulta mayor pobre focalizada por el SISFOH, la propuesta contribuye directamente a reducir la pobreza en la vejez.",
+          "politica_nombre": "Reducción de la pobreza"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Educación física obligatoria y masificación deportiva",
+      "resumen": "Establecer educación física obligatoria y ampliada en primaria y secundaria, recuperar infraestructura comunitaria (parques y canchas) y crear un sistema de becas deportivas vinculado a Beca 18, con meta de 60% de población activa físicamente.",
+      "comisiones": [
+        {
+          "id": "deporte",
+          "tipo": "igual_similar",
+          "justificacion": "La comisión Deporte plantea exactamente lo mismo: educación física de calidad en la educación básica, infraestructura deportiva descentralizada, becas y detección de talento, y actividad física masiva para reducir sobrepeso/obesidad.",
+          "comision_nombre": "Deporte"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 12,
+          "tipo": "desagregado",
+          "justificacion": "La propuesta concreta la 'promoción y defensa del deporte' y la calidad educativa que consagra la Política 12, especificándolas en educación física obligatoria y masificación deportiva.",
+          "politica_nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte"
+        },
+        {
+          "politica": 13,
+          "tipo": "causal",
+          "justificacion": "La masificación de la actividad física (meta de 60% de población activa) reduce el sobrepeso y las enfermedades no transmisibles, contribuyendo causalmente a los objetivos de salud de la Política 13.",
+          "politica_nombre": "Acceso universal a los servicios de salud y a la seguridad social"
+        }
+      ]
+    },
+    {
+      "pilar": "SOCIAL",
+      "pilar_n": 3,
+      "titulo": "Ventanilla Única Consular Digital para peruanos en el exterior",
+      "resumen": "Modernizar los consulados con una Ventanilla Única Consular Digital interoperable para trámites remotos (DNI, pasaporte, registros) y lanzar el programa Invierte desde el Exterior para canalizar inversión productiva de los PEX.",
+      "comisiones": [
+        {
+          "id": "transformacion-digital",
+          "tipo": "desagregado",
+          "justificacion": "La ventanilla consular digital interoperable para trámites remotos (DNI, pasaporte, registros) es una aplicación específica del objetivo de la comisión de digitalizar e interoperar los servicios y trámites del Estado en torno a la identidad digital.",
+          "comision_nombre": "Transformación Digital"
+        },
+        {
+          "id": "peru-en-la-era-digital",
+          "tipo": "desagregado",
+          "justificacion": "El trámite consular de extremo a extremo con identidad digital e interoperabilidad concreta, para los peruanos en el exterior, el objetivo de la comisión de tener el 90% de servicios públicos priorizados disponibles de extremo a extremo con identidad digital plenamente implementada.",
+          "comision_nombre": "Perú en La Era Digital"
+        },
+        {
+          "id": "promocion-de-la-inversion",
+          "tipo": "causal",
+          "justificacion": "El programa 'Invierte desde el Exterior' canaliza una nueva fuente de capital (la diáspora) hacia inversión productiva, contribuyendo causalmente a elevar y diversificar la inversión que persigue esta comisión.",
+          "comision_nombre": "Promoción de La Inversión"
+        }
+      ],
+      "acuerdo_nacional": [
+        {
+          "politica": 6,
+          "tipo": "desagregado",
+          "justificacion": "La modernización consular y la atención a las comunidades peruanas en el exterior son un componente específico de la política exterior orientada al desarrollo y la integración.",
+          "politica_nombre": "Política exterior para la paz, la democracia, el desarrollo y la integración"
+        },
+        {
+          "politica": 35,
+          "tipo": "desagregado",
+          "justificacion": "La ventanilla única consular digital interoperable materializa, en el servicio consular, la política de sociedad de la información y del conocimiento (gobierno digital e interoperabilidad de servicios públicos).",
+          "politica_nombre": "Sociedad de la información y sociedad del conocimiento"
+        }
+      ]
+    }
+  ]
+}
