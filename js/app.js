@@ -82,6 +82,16 @@ async function boot() {
     renderOverview();
     renderMap();
     render100();
+    // Articulación (matriz IA multi-agente) + jerarquía del Acuerdo Nacional
+    S.artic = {}; S.an = null;
+    Promise.all([
+      fetch("data/articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      fetch("data/acuerdo_nacional.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]).then(([art, an]) => {
+      if (art && art.articulaciones) art.articulaciones.forEach((a) => (S.artic[a.comision_id] = a));
+      S.an = an;
+      renderArticulacion();
+    });
     wireAI();
     wireSearch();
     wireTabs();
@@ -197,6 +207,22 @@ function indicatorRow(i) {
   </div>`;
 }
 
+const TIPO_LABEL = { igual_similar: "igual / similar", desagregado: "desagregado", causal: "causal" };
+const TIPO_COLOR = { igual_similar: "#2ed47a", desagregado: "#3b82f6", causal: "#e0a52e" };
+const tipoBadge = (t) => `<span style="display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 6px;border-radius:6px;color:${TIPO_COLOR[t] || "#8a98b8"};border:1px solid ${TIPO_COLOR[t] || "#8a98b8"}55;background:${TIPO_COLOR[t] || "#8a98b8"}14">${esc(TIPO_LABEL[t] || t || "")}</span>`;
+
+function articBlock(id) {
+  const a = S.artic && S.artic[id];
+  if (!a) return "";
+  const an = a.acuerdo_nacional || [], pp = a.programas_presupuestales || [];
+  if (!an.length && !pp.length) return "";
+  const row = (label, tipo, just) => `<li style="margin-bottom:8px"><div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap"><b>${esc(label)}</b>${tipoBadge(tipo)}</div>${just ? `<span style="color:var(--mut);font-size:.9rem">${esc(just)}</span>` : ""}</li>`;
+  return `<div class="block"><h4>Articulación estratégica <span style="font-weight:400;color:var(--mut2);font-size:.72rem">· propuesta con IA, a validar por el equipo</span></h4>
+    ${an.length ? `<div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:6px 0 4px">⬆ Acuerdo Nacional</div><ul class="ul">${an.map((x) => row(`P${x.politica} · ${x.politica_nombre || ""}`, x.tipo, x.justificacion)).join("")}</ul>` : ""}
+    ${pp.length ? `<div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">⬇ Programas Presupuestales (MEF)</div><ul class="ul">${pp.map((x) => row(`${x.codigo} · ${x.pp_nombre || ""}`, x.tipo, x.justificacion)).join("")}</ul>` : ""}
+  </div>`;
+}
+
 function openDetail(id) {
   const c = S.list.find((x) => x.id === id); if (!c) return;
   const s = $("#sheet");
@@ -218,6 +244,7 @@ function openDetail(id) {
     ${(c.cien_dias || []).length ? `<div class="block"><h4>VI · Hitos de los primeros 100 días</h4><ul class="ul ul100">${c.cien_dias.map((d) => `<li>${esc(d.accion || d)}${d.tipo ? ` <span class="tag100">${esc(d.tipo)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
     ${(c.articulacion_acuerdo_pedn || []).length ? `<div class="block"><h4>VII · Articulación con el Acuerdo Nacional y el PEDN al 2050</h4><ul class="ul">${c.articulacion_acuerdo_pedn.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
     ${(c.articulacion_programas || []).length ? `<div class="block"><h4>VIII · Articulación con los Programas Presupuestales</h4><ul class="ul">${c.articulacion_programas.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+    ${articBlock(c.id)}
     ${(c.pilares || []).length ? `<div class="block"><h4>Pilares de la estrategia</h4>${c.pilares.map((p) => `<div class="pilar"><b>${esc(p.nombre)}</b><span>${esc(p.descripcion)}</span></div>`).join("")}</div>` : ""}
     ${c.recomendacion ? `<div class="block"><h4>Recomendación de política</h4><div class="reco">${esc(c.recomendacion)}</div></div>` : ""}`;
   $("#modal").classList.add("open");
@@ -232,6 +259,30 @@ function closeDetail() {
 $("#modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeDetail(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDetail(); });
 window.closeDetail = closeDetail;
+
+/* ---------- Articulación (cubo: eje → política → comisiones) ---------- */
+function renderArticulacion() {
+  const box = document.getElementById("articulacion");
+  if (!box) return;
+  if (!S.an || !S.artic || !Object.keys(S.artic).length) { box.innerHTML = '<div class="skeleton">No se pudo cargar la articulación.</div>'; return; }
+  const nom = (id) => { const c = S.list.find((x) => x.id === id); return c ? c.nombre : id; };
+  const byPol = {};
+  Object.values(S.artic).forEach((a) => (a.acuerdo_nacional || []).forEach((x) => { (byPol[x.politica] = byPol[x.politica] || []).push({ id: a.comision_id, tipo: x.tipo }); }));
+  const total = Object.values(byPol).reduce((s, a) => s + a.length, 0);
+  let html = `<div class="revbanner" style="margin-bottom:16px">🔗 Propuesta generada con IA (un análisis por comisión) — <b>a validar por el equipo</b>. Tipo de relación: ${tipoBadge("igual_similar")} ${tipoBadge("desagregado")} ${tipoBadge("causal")}. ${Object.keys(S.artic).length} comisiones · ${total} enlaces al Acuerdo Nacional.</div>`;
+  S.an.ejes.forEach((e) => {
+    html += `<div class="block" style="border-left:3px solid ${ejeColor(e.nombre)}"><h3 style="color:${ejeColor(e.nombre)};margin:0 0 10px">${esc(e.nombre)}</h3>`;
+    e.politicas.forEach((p) => {
+      const coms = byPol[p.n] || [];
+      html += `<div style="margin:0 0 12px;padding-left:10px;border-left:1px solid var(--line)"><div style="font-weight:600">${p.n}. ${esc(p.nombre)} ${coms.length ? `<span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${coms.length})</span>` : `<span style="color:var(--mut2);font-weight:400;font-size:.76rem">— sin comisiones enlazadas aún</span>`}</div>`;
+      if (coms.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${coms.map((cm) => `<button onclick="openDetail('${esc(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(nom(cm.id))} ${tipoBadge(cm.tipo)}</button>`).join("")}</div>`;
+      html += `</div>`;
+    });
+    html += `</div>`;
+  });
+  box.innerHTML = html;
+}
+window.renderArticulacion = renderArticulacion;
 function openFromHash() {
   const id = decodeURIComponent((location.hash || "").replace(/^#/, ""));
   if (id && S.detail[id]) setTimeout(() => openDetail(id), 200);
