@@ -27,7 +27,10 @@ echo "→ [2/6] Sitio estático → $WWW"
 rsync -a --delete \
   --exclude='.git' --exclude='.github' --exclude='fuentes' --exclude='scripts' \
   --exclude='deploy' --exclude='entregables/_img' --exclude='.*.mjs' --exclude='ROADMAP.md' \
+  --exclude='data/seguimiento.json' \
   "$REPO"/ "$WWW"/
+# Seguimiento: si el VPS aún no tiene su historial acumulado, sembrarlo con la línea base del repo
+[ -f "$WWW/data/seguimiento.json" ] || cp "$REPO/data/seguimiento.json" "$WWW/data/seguimiento.json" 2>/dev/null || true
 
 echo "→ [3/6] Backup del estado actual (rollback)"
 [ -f "$GW_DIR/gateway.py" ] && cp "$GW_DIR/gateway.py" "$BK/gateway.py.bak"

@@ -83,19 +83,21 @@ async function boot() {
     renderMap();
     render100();
     // Articulación (matriz IA multi-agente) + jerarquía del Acuerdo Nacional
-    S.artic = {}; S.an = null; S.terr = null; S.keiko = null; S.gasto = null;
+    S.artic = {}; S.an = null; S.terr = null; S.keiko = null; S.gasto = null; S.seg = null;
     Promise.all([
       fetch("data/articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/acuerdo_nacional.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/territorial.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/keiko_articulacion.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/gasto_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    ]).then(([art, an, terr, keiko, gasto]) => {
+      fetch("data/seguimiento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]).then(([art, an, terr, keiko, gasto, seg]) => {
       if (art && art.articulaciones) art.articulaciones.forEach((a) => (S.artic[a.comision_id] = a));
-      S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto;
+      S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto; S.seg = seg;
       renderArticulacion();
       renderTerritorial();
       renderKeiko();
+      renderSeguimiento();
     });
     wireAI();
     wireSearch();
@@ -365,6 +367,49 @@ function renderKeiko() {
   box.innerHTML = html;
 }
 window.renderKeiko = renderKeiko;
+
+/* ---------- Seguimiento de indicadores (qué tan cerca/lejos de la meta 2050) ---------- */
+function segAvance(actual, meta) {
+  if (actual == null || meta == null) return null;
+  if (meta >= actual) return meta ? clamp((actual / meta) * 100) : 0; // meta de aumento
+  return actual ? clamp((meta / actual) * 100) : 0;                    // meta de reducción
+}
+function renderSeguimiento() {
+  const box = document.getElementById("seguimiento");
+  if (!box) return;
+  if (!S.seg || !S.seg.indicadores || !S.seg.snapshots || !S.seg.snapshots.length) { box.innerHTML = '<div class="skeleton">No se pudo cargar el seguimiento.</div>'; return; }
+  const snaps = S.seg.snapshots, last = snaps[snaps.length - 1], prev = snaps.length > 1 ? snaps[snaps.length - 2] : null;
+  const rows = S.seg.indicadores.map((d) => {
+    const val = last.valores[d.key], pv = prev ? prev.valores[d.key] : undefined;
+    const pct = segAvance(val, d.meta);
+    return { d, val, pv, pct };
+  }).filter((r) => r.pct != null).sort((a, b) => a.pct - b.pct);
+  const idx = rows.length ? rows.reduce((s, r) => s + r.pct, 0) / rows.length : 0;
+  const col = (p) => p >= 66 ? "#2ed47a" : p >= 33 ? "#e0a52e" : "#d91023";
+  let html = `<div class="block" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:16px">
+      <div><div class="serif" style="font-size:2rem;font-weight:700;color:${col(idx)}">${idx.toFixed(0)}%</div><div style="color:var(--mut2);font-size:.75rem">Índice de avance hacia 2050</div></div>
+      <div><div class="serif" style="font-size:2rem;font-weight:700">${rows.length}</div><div style="color:var(--mut2);font-size:.75rem">indicadores en seguimiento</div></div>
+      <div style="flex:1;min-width:200px;color:var(--mut);font-size:.86rem">Ordenados del <b>más lejos</b> al más cerca de su meta. Historial: ${snaps.map((s) => s.fecha).join(" · ")}. ${prev ? "" : "Este es la línea base; el avance mes a mes se llenará solo."}</div>
+    </div>`;
+  html += rows.map((r) => {
+    const d = r.d, unidad = d.unidad ? " " + esc(d.unidad) : "";
+    let trend = "";
+    if (r.pv != null && r.pv !== r.val) {
+      const mejora = d.meta >= r.val ? r.val > r.pv : r.val < r.pv;
+      trend = `<span style="color:${mejora ? "#2ed47a" : "#d91023"};font-size:.78rem">${mejora ? "▲" : "▼"} ${num(r.val)} (antes ${num(r.pv)})</span>`;
+    }
+    return `<div class="block" style="cursor:pointer" onclick="openDetail('${esc(d.comision_id)}')">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline">
+        <div><b>${esc(d.nombre)}</b><div style="color:var(--mut2);font-size:.74rem;text-transform:uppercase;letter-spacing:.04em">${esc(d.comision)}</div></div>
+        <div style="text-align:right;white-space:nowrap"><span style="color:var(--mut)">${num(r.val)}${unidad}</span> → <span style="font-weight:700;color:#e0a52e">${num(d.meta)}${unidad}</span> <span style="color:var(--mut2);font-size:.78rem">${d.anioMeta || 2050}</span></div>
+      </div>
+      <div class="bar" style="margin:8px 0 4px"><i style="width:${r.pct}%;background:${col(r.pct)}"></i></div>
+      <div style="display:flex;justify-content:space-between;font-size:.8rem"><span style="color:${col(r.pct)};font-weight:600">${r.pct.toFixed(0)}% de avance</span>${trend || `<span style="color:var(--mut2)">${esc(d.fuente ? d.fuente.slice(0, 60) : "")}</span>`}</div>
+    </div>`;
+  }).join("");
+  box.innerHTML = html;
+}
+window.renderSeguimiento = renderSeguimiento;
 function openFromHash() {
   const id = decodeURIComponent((location.hash || "").replace(/^#/, ""));
   if (id && S.detail[id]) setTimeout(() => openDetail(id), 200);
