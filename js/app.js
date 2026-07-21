@@ -279,7 +279,8 @@ function renderArticulacion() {
   const byPol = {};
   Object.values(S.artic).forEach((a) => (a.acuerdo_nacional || []).forEach((x) => { (byPol[x.politica] = byPol[x.politica] || []).push({ id: a.comision_id, tipo: x.tipo }); }));
   const total = Object.values(byPol).reduce((s, a) => s + a.length, 0);
-  let html = `<div class="revbanner" style="margin-bottom:16px">🔗 Propuesta generada con IA (un análisis por comisión) — <b>a validar por el equipo</b>. Tipo de relación: ${tipoBadge("igual_similar")} ${tipoBadge("desagregado")} ${tipoBadge("causal")}. ${Object.keys(S.artic).length} comisiones · ${total} enlaces al Acuerdo Nacional.</div>`;
+  let html = `<div class="revbanner" style="margin-bottom:12px">🔗 Propuesta generada con IA (un análisis por comisión) — <b>a validar por el equipo</b>. Tipo de relación: ${tipoBadge("igual_similar")} ${tipoBadge("desagregado")} ${tipoBadge("causal")}. ${Object.keys(S.artic).length} comisiones · ${total} enlaces al Acuerdo Nacional.</div>
+    <div style="margin-bottom:16px"><a href="entregables/articulacion.xlsx" download class="dlbtn" style="text-decoration:none">⬇ Descargar matriz completa para validar (Excel)</a> <span style="color:var(--mut2);font-size:.8rem">— Políticas de Estado · Programas Presupuestales · Plan de gobierno, con columnas para revisar cada relación.</span></div>`;
   S.an.ejes.forEach((e) => {
     html += `<div class="block" style="border-left:3px solid ${ejeColor(e.nombre)}"><h3 style="color:${ejeColor(e.nombre)};margin:0 0 10px">${esc(e.nombre)}</h3>`;
     e.politicas.forEach((p) => {

@@ -162,7 +162,7 @@ def commission_story(c, revision=False):
     s = []
     s.append(Paragraph("PLAN PERÚ 2050 · INFORME EJECUTIVO", S["eyebrow"]))
     s.append(Paragraph(E(c["nombre"]), S["title"]))
-    if c.get("eje"): s.append(Paragraph("Eje estratégico: " + E(c["eje"]), S["sub"]))
+    if c.get("eje_an"): s.append(Paragraph("Eje del Acuerdo Nacional: " + E(c["eje_an"]), S["sub"]))
     if revision:
         s.append(Paragraph("⚠ Línea base <b>preliminar</b> — contenido inferido, pendiente de validación. No proviene de redacción oficial.", S["reco"]))
     if c.get("resumen"): s.append(Paragraph("<b>Introducción.</b> " + E(c["resumen"]), S["resumen"]))
@@ -260,14 +260,15 @@ def build_100():
     print("  ✓ pdf/plan-100-dias.pdf")
 
 # ---------- 3) Síntesis por ejes (con gráficos) ----------
-EJES = [("Economía del Conocimiento","Dimensión económica"),("Competitividad","Dimensión económica"),
-        ("Infraestructura y Conectividad","Económica / territorial"),("Sostenibilidad y Ambiente","Dimensión ambiental"),
-        ("Bienestar y Salud","Dimensión social"),("Soberanía y Defensa","Institucional / soberanía")]
+EJES = [("I. Democracia y Estado de Derecho","Acuerdo Nacional"),
+        ("II. Equidad y Justicia Social","Acuerdo Nacional"),
+        ("III. Competitividad del País","Acuerdo Nacional"),
+        ("IV. Estado Eficiente, Transparente y Descentralizado","Acuerdo Nacional")]
 
 def chart_ejes_dist(coms):
     labels = [e for e, _ in EJES]
-    nv = [sum(1 for c in coms if c.get("eje") == e and c["_val"]) for e in labels]
-    nr = [sum(1 for c in coms if c.get("eje") == e and not c["_val"]) for e in labels]
+    nv = [sum(1 for c in coms if c.get("eje_an") == e and c["_val"]) for e in labels]
+    nr = [sum(1 for c in coms if c.get("eje_an") == e and not c["_val"]) for e in labels]
     fig, ax = plt.subplots(figsize=(7.4, 3.2))
     y = range(len(labels))
     ax.barh(list(y), nv, color="#1B8A4B", label="Validado")
@@ -283,7 +284,7 @@ def chart_ejes_avance(coms):
     for e, _ in EJES:
         avs = []
         for c in coms:
-            if c.get("eje") == e and c["_val"]:
+            if c.get("eje_an") == e and c["_val"]:
                 vv = [avance(i) for i in c.get("indicadores", []) if avance(i) is not None]
                 if vv: avs.append(sum(vv)/len(vv))
         if avs: rows.append((e, sum(avs)/len(avs)))
@@ -312,7 +313,7 @@ def build_sintesis():
         s.append(Paragraph("Avance promedio por eje", S["h4"]))
         s.append(Image(d2, width=170*mm, height=170*mm*plt_ratio(d2)))
     for e, dim in EJES:
-        grp = [c for c in coms if c.get("eje") == e]
+        grp = [c for c in coms if c.get("eje_an") == e]
         if not grp: continue
         grp.sort(key=lambda c: (not c["_val"], c["nombre"]))
         nv = sum(1 for c in grp if c["_val"])
