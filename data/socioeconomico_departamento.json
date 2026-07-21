@@ -1,0 +1,130 @@
+{
+ "fuente": "INEI. VAB 2023 corrientes (PBI por Departamentos 2007-2023, Cuadro N°4). Vulnerabilidad a la pobreza monetaria por grupos de departamentos (INEI 2019; nacional 31.4% en 2023). Per cápita = VAB/población.",
+ "departamentos": {
+  "Amazonas": {
+   "vab_2023_millones": 6480,
+   "vab_percapita_soles": 15217,
+   "vulnerabilidad_pct": 43.3
+  },
+  "Ancash": {
+   "vab_2023_millones": 35505,
+   "vab_percapita_soles": 30446,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Apurimac": {
+   "vab_2023_millones": 16059,
+   "vab_percapita_soles": 35375,
+   "vulnerabilidad_pct": 43.3
+  },
+  "Arequipa": {
+   "vab_2023_millones": 54062,
+   "vab_percapita_soles": 40654,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Ayacucho": {
+   "vab_2023_millones": 11240,
+   "vab_percapita_soles": 17283,
+   "vulnerabilidad_pct": 39.2
+  },
+  "Cajamarca": {
+   "vab_2023_millones": 22779,
+   "vab_percapita_soles": 14791,
+   "vulnerabilidad_pct": 39.2
+  },
+  "Callao": {
+   "vab_2023_millones": 48018,
+   "vab_percapita_soles": 48528,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Cusco": {
+   "vab_2023_millones": 40512,
+   "vab_percapita_soles": 30673,
+   "vulnerabilidad_pct": 35.7
+  },
+  "Huancavelica": {
+   "vab_2023_millones": 6933,
+   "vab_percapita_soles": 14298,
+   "vulnerabilidad_pct": 39.2
+  },
+  "Huanuco": {
+   "vab_2023_millones": 12720,
+   "vab_percapita_soles": 15387,
+   "vulnerabilidad_pct": 43.3
+  },
+  "Ica": {
+   "vab_2023_millones": 43042,
+   "vab_percapita_soles": 53124,
+   "vulnerabilidad_pct": 27.0
+  },
+  "Junin": {
+   "vab_2023_millones": 27200,
+   "vab_percapita_soles": 19762,
+   "vulnerabilidad_pct": 35.7
+  },
+  "La Libertad": {
+   "vab_2023_millones": 43674,
+   "vab_percapita_soles": 22650,
+   "vulnerabilidad_pct": 35.7
+  },
+  "Lambayeque": {
+   "vab_2023_millones": 22813,
+   "vab_percapita_soles": 17676,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Lima": {
+   "vab_2023_millones": 380325,
+   "vab_percapita_soles": 36931,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Loreto": {
+   "vab_2023_millones": 15212,
+   "vab_percapita_soles": 14407,
+   "vulnerabilidad_pct": 43.3
+  },
+  "Madre De Dios": {
+   "vab_2023_millones": 3406,
+   "vab_percapita_soles": 23194,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Moquegua": {
+   "vab_2023_millones": 19081,
+   "vab_percapita_soles": 102565,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Pasco": {
+   "vab_2023_millones": 9303,
+   "vab_percapita_soles": 31168,
+   "vulnerabilidad_pct": 43.3
+  },
+  "Piura": {
+   "vab_2023_millones": 46545,
+   "vab_percapita_soles": 26822,
+   "vulnerabilidad_pct": 35.7
+  },
+  "Puno": {
+   "vab_2023_millones": 19026,
+   "vab_percapita_soles": 13562,
+   "vulnerabilidad_pct": 39.2
+  },
+  "San Martin": {
+   "vab_2023_millones": 11954,
+   "vab_percapita_soles": 13683,
+   "vulnerabilidad_pct": 35.7
+  },
+  "Tacna": {
+   "vab_2023_millones": 13781,
+   "vab_percapita_soles": 39475,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Tumbes": {
+   "vab_2023_millones": 5060,
+   "vab_percapita_soles": 20564,
+   "vulnerabilidad_pct": 30.5
+  },
+  "Ucayali": {
+   "vab_2023_millones": 8921,
+   "vab_percapita_soles": 17940,
+   "vulnerabilidad_pct": 30.5
+  }
+ }
+}
