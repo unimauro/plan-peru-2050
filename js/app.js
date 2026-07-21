@@ -39,6 +39,7 @@ function setView(view) {
   document.querySelectorAll("#tabs .tab").forEach((t) => t.classList.toggle("on", t.dataset.view === view));
   applyVisibility();
   if (view === "simular") setTimeout(() => { try { S.simChart && S.simChart.resize(); S.simProj && S.simProj.resize(); } catch (e) {} }, 50);
+  if (view === "territorial") setTimeout(() => { try { S.terrMapObj && S.terrMapObj.invalidateSize(); } catch (e) {} }, 60);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function wireTabs() { document.querySelectorAll("#tabs .tab").forEach((t) => { t.onclick = () => setView(t.dataset.view); }); }
@@ -99,6 +100,7 @@ async function boot() {
       S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto; S.seg = seg; S.socio = socio;
       renderArticulacion();
       renderTerritorial();
+      renderTerrMap();
       renderKeiko();
       renderSeguimiento();
       renderSankey();
@@ -350,6 +352,64 @@ function renderTerritorial() {
   if (s) s.onchange = () => { S.terrDepto = s.value; renderTerritorial(); };
 }
 window.renderTerritorial = renderTerritorial;
+
+/* ---------- Mapa territorial interactivo (choropleth por distrito) ---------- */
+const TERR_IND = {
+  idh: { label: "IDH (2019)", good: "high", fmt: (v) => v.toFixed(3),
+    buckets: [[0.6, "#12703a"], [0.52, "#2ed47a"], [0.46, "#e0a52e"], [0.4, "#e8743b"], [-1, "#d91023"]] },
+  pob: { label: "Pobreza (%)", good: "low", fmt: (v) => v.toFixed(1) + "%",
+    buckets: [[10, "#12703a"], [20, "#2ed47a"], [30, "#e0a52e"], [40, "#e8743b"], [1e9, "#d91023"]] },
+  pex: { label: "Pobreza extrema (%)", good: "low", fmt: (v) => v.toFixed(1) + "%",
+    buckets: [[2, "#12703a"], [5, "#2ed47a"], [10, "#e0a52e"], [20, "#e8743b"], [1e9, "#d91023"]] },
+};
+function terrColor(ind, v) {
+  if (v == null) return "#2a3350";
+  const b = TERR_IND[ind].buckets;
+  if (TERR_IND[ind].good === "high") { for (const [thr, c] of b) if (v >= thr) return c; return b[b.length - 1][1]; }
+  for (const [thr, c] of b) if (v <= thr) return c; return b[b.length - 1][1];
+}
+function renderTerrMap() {
+  const wrap = document.getElementById("terrMapWrap");
+  if (!wrap || typeof L === "undefined") return;
+  if (S._terrMapBuilt) return; // construir una sola vez
+  S._terrMapBuilt = true;
+  S.terrInd = "idh";
+  wrap.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px">
+      <label style="color:var(--mut2);font-size:.8rem">Indicador en el mapa</label>
+      <select id="terrIndSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">
+        ${Object.entries(TERR_IND).map(([k, v]) => `<option value="${k}">${esc(v.label)}</option>`).join("")}</select>
+      <span id="terrLegend" style="display:flex;gap:0;font-size:.7rem;color:var(--mut);margin-left:6px"></span>
+    </div>
+    <div id="terrMap" style="height:520px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0a0e1a"></div>
+    <div style="color:var(--mut2);font-size:.78rem;margin:8px 0 20px">Datos reales por distrito (IDH 2019, pobreza — PNUD/INEI, vía Proyecto INTI). Clic en un distrito para ver su detalle. VAB y vulnerabilidad se muestran por departamento arriba.</div>`;
+  const map = L.map("terrMap", { scrollWheelZoom: false, attributionControl: false }).setView([-9.5, -74.5], 5);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png", { maxZoom: 12 }).addTo(map);
+  const legend = () => {
+    const cfg = TERR_IND[S.terrInd];
+    document.getElementById("terrLegend").innerHTML = cfg.buckets.map(([, c]) => `<span style="width:22px;height:12px;display:inline-block;background:${c}"></span>`).join("") +
+      `<span style="margin-left:6px">${cfg.good === "high" ? "◀ menor · mayor ▶" : "◀ mejor · peor ▶"}</span>`;
+  };
+  const style = (f) => ({ fillColor: terrColor(S.terrInd, f.properties[S.terrInd]), weight: .3, color: "#0a0e1a", fillOpacity: .85 });
+  let layer;
+  fetch("data/distritos.geojson").then((r) => r.json()).then((gj) => {
+    layer = L.geoJSON(gj, {
+      style,
+      onEachFeature: (f, lyr) => {
+        const p = f.properties;
+        lyr.bindPopup(`<b>${esc(p.d || "")}</b><br><span style="color:#8a98b8">${esc(p.pr || "")} · ${esc(p.dp || "")}</span><br>
+          IDH: <b>${p.idh != null ? p.idh.toFixed(3) : "s/d"}</b><br>Pobreza: <b>${p.pob != null ? p.pob + "%" : "s/d"}</b><br>
+          Pobreza extrema: <b>${p.pex != null ? p.pex + "%" : "s/d"}</b><br>Población: <b>${p.p != null ? num(p.p) : "s/d"}</b>`);
+        lyr.on("mouseover", () => lyr.setStyle({ weight: 1.5, color: "#fff" }));
+        lyr.on("mouseout", () => lyr.setStyle({ weight: .3, color: "#0a0e1a" }));
+      },
+    }).addTo(map);
+  }).catch(() => { document.getElementById("terrMap").innerHTML = '<div class="skeleton" style="padding:20px">No se pudo cargar el mapa.</div>'; });
+  document.getElementById("terrIndSel").onchange = (e) => { S.terrInd = e.target.value; if (layer) layer.setStyle(style); legend(); };
+  legend();
+  setTimeout(() => map.invalidateSize(), 120);
+  S.terrMapObj = map;
+}
+window.renderTerrMap = renderTerrMap;
 
 /* ---------- Plan de gobierno (Keiko) ⇄ Plan Perú 2050 ---------- */
 function renderKeiko() {
