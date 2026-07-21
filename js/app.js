@@ -100,6 +100,7 @@ async function boot() {
       renderTerritorial();
       renderKeiko();
       renderSeguimiento();
+      renderSankey();
     });
     wireAI();
     wireSearch();
@@ -420,6 +421,57 @@ function renderSeguimiento() {
   box.innerHTML = html;
 }
 window.renderSeguimiento = renderSeguimiento;
+
+/* ---------- Flujos (Sankey por capas: Acuerdo Nacional → Comisiones → Programas Presupuestales) ---------- */
+function renderSankey() {
+  const box = document.getElementById("flujos");
+  if (!box) return;
+  if (!S.an || !S.artic || !Object.keys(S.artic).length) { box.innerHTML = '<div class="skeleton">No se pudieron cargar los datos de articulación.</div>'; return; }
+  const ejes = S.an.ejes;
+  const sel = (S.sankeyEje && ejes.find((e) => e.id === S.sankeyEje)) ? S.sankeyEje : ejes[0].id;
+  S.sankeyEje = sel;
+  const eje = ejes.find((e) => e.id === sel);
+  const polSet = new Set(eje.politicas.map((p) => p.n));
+  const polName = {}; eje.politicas.forEach((p) => (polName[p.n] = p.nombre));
+  const comName = (id) => { const c = S.list.find((x) => x.id === id); return c ? c.nombre : id; };
+  const short = (s, n) => (s && s.length > n ? s.slice(0, n - 1) + "…" : (s || ""));
+  const links = [], labels = {}, column = {};
+  Object.values(S.artic).forEach((a) => {
+    const anHits = (a.acuerdo_nacional || []).filter((x) => polSet.has(x.politica));
+    if (!anHits.length) return;
+    const cid = "com:" + a.comision_id; labels[cid] = short(comName(a.comision_id), 34); column[cid] = 1;
+    anHits.forEach((x) => { const pid = "P" + x.politica; labels[pid] = x.politica + ". " + short(polName[x.politica], 38); column[pid] = 0; links.push({ from: pid, to: cid, flow: 1 }); });
+    (a.programas_presupuestales || []).forEach((p) => { const ppid = "pp:" + p.codigo; labels[ppid] = p.codigo + " " + short(p.pp_nombre || "", 28); column[ppid] = 2; links.push({ from: cid, to: ppid, flow: 1 }); });
+  });
+  const color = ejeColor(eje.nombre);
+  const nNodes = new Set([].concat(links.map((l) => l.from), links.map((l) => l.to))).size;
+  const h = Math.max(380, nNodes * 20);
+  box.innerHTML = `<div style="margin-bottom:10px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Eje del Acuerdo Nacional</label><select id="skSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${ejes.map((e) => `<option value="${esc(e.id)}" ${e.id === sel ? "selected" : ""}>${esc(e.nombre)}</option>`).join("")}</select></div>
+    <div style="color:var(--mut);font-size:.85rem;margin-bottom:10px">Capas: <b>Políticas de Estado</b> → <b>Comisiones del CIP</b> → <b>Programas Presupuestales</b>. El grosor del flujo = nº de vínculos. Propuesta con IA, a validar.</div>
+    <div style="overflow-x:auto"><div style="height:${h}px;min-width:680px"><canvas id="skCanvas"></canvas></div></div>`;
+  const s = document.getElementById("skSel"); if (s) s.onchange = () => { S.sankeyEje = s.value; renderSankey(); };
+  if (!links.length) { document.getElementById("skCanvas").outerHTML = '<div class="skeleton">Sin flujos para este eje.</div>'; return; }
+  chartFont();
+  // color por capa: Políticas = color del eje · Comisiones = dorado · Programas Ppto = azul
+  const layerColor = (node) => (node && node[0] === "P" && node.slice(0, 3) !== "pp:") ? color : (node && node.slice(0, 4) === "com:") ? "#e0a52e" : "#3b82f6";
+  CHARTS.sankey && CHARTS.sankey.destroy();
+  try {
+    CHARTS.sankey = new Chart(document.getElementById("skCanvas"), {
+      type: "sankey",
+      data: { datasets: [{
+        data: links, labels, column,
+        colorFrom: (c) => layerColor(c.raw && c.raw.from),
+        colorTo: (c) => layerColor(c.raw && c.raw.to),
+        colorMode: "gradient", alpha: 0.6, borderWidth: 0, nodeWidth: 12,
+        color: "#e6ecf7", font: { size: 11 },
+      }] },
+      options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => " " + (labels[c.raw.from] || c.raw.from) + " → " + (labels[c.raw.to] || c.raw.to) } } } },
+    });
+  } catch (e) {
+    document.getElementById("skCanvas").outerHTML = '<div class="skeleton">No se pudo dibujar el diagrama de flujos (' + esc(String(e.message || e)) + ').</div>';
+  }
+}
+window.renderSankey = renderSankey;
 function openFromHash() {
   const id = decodeURIComponent((location.hash || "").replace(/^#/, ""));
   if (id && S.detail[id]) setTimeout(() => openDetail(id), 200);

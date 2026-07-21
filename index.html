@@ -60,6 +60,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey@0.14.0/dist/chartjs-chart-sankey.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -281,6 +282,7 @@
       <button class="tab" data-view="territorial">🗺️ <span>Territorial</span></button>
       <button class="tab" data-view="keiko">🗳️ <span>Plan de gobierno</span></button>
       <button class="tab" data-view="seguimiento">📈 <span>Seguimiento</span></button>
+      <button class="tab" data-view="flujos">🔀 <span>Flujos</span></button>
       <button class="tab" data-view="simular">🎚️ <span>Simulación</span></button>
       <button class="tab" data-view="faq">❔ <span>FAQ</span></button>
     </nav>
@@ -362,6 +364,11 @@
   <section data-view="seguimiento">
     <div class="section-title"><h2 class="serif">Seguimiento de indicadores</h2><span>Qué tan cerca o lejos estamos de las metas aspiracionales 2050 · actualización mensual</span></div>
     <div id="seguimiento"><div class="skeleton">Cargando seguimiento…</div></div>
+  </section>
+
+  <section data-view="flujos">
+    <div class="section-title"><h2 class="serif">Flujos de articulación</h2><span>Del Acuerdo Nacional a las comisiones y a los Programas Presupuestales (diagrama Sankey por capas)</span></div>
+    <div id="flujos"><div class="skeleton">Cargando flujos…</div></div>
   </section>
 
   <section data-sec="sim" data-view="simular">
