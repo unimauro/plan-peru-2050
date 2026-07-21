@@ -13,7 +13,7 @@ from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table, Tab
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
-OUT = os.path.join(ROOT, "entregables", "Informe-Plan-Peru-2050.pdf")
+OUT = os.path.join(ROOT, "entregables", "Primer-Informe-Plan-Peru-2050.pdf")
 
 RED = colors.HexColor("#D91023"); GOLD = colors.HexColor("#B8840E")
 DARK = colors.HexColor("#1A2238"); GREY = colors.HexColor("#5D6B88")
@@ -92,20 +92,21 @@ def header_footer(canvas, doc):
     canvas.setFillColor(RED); canvas.rect(0, A4[1] - 6, A4[0], 6, fill=1, stroke=0)
     canvas.setFillColor(GOLD); canvas.rect(0, A4[1] - 9, A4[0], 3, fill=1, stroke=0)
     canvas.setFillColor(GREY); canvas.setFont("Helvetica", 7.5)
-    canvas.drawString(18 * mm, 10 * mm, "Plan Perú 2050 · CNPP — Colegio de Ingenieros del Perú")
+    canvas.drawString(18 * mm, 10 * mm, "Plan Perú 2050 · Primer Informe · 21-jul-2026 · CNPP — Colegio de Ingenieros del Perú")
     canvas.drawRightString(A4[0] - 18 * mm, 10 * mm, str(doc.page))
     canvas.restoreState()
 
 
 story = []
 # Portada
-story += [Spacer(1, 10), Paragraph("PLAN PERÚ 2050", S["eyebrow"]),
-          Paragraph("Informe de avance de la plataforma digital", S["cover"]),
+story += [Spacer(1, 10), Paragraph("PLAN PERÚ 2050 &nbsp;·&nbsp; PRIMER INFORME", S["eyebrow"]),
+          Paragraph("Primer Informe de avance de la plataforma digital", S["cover"]),
           Paragraph("Comisiones Temáticas Nacionales · CNPP — Colegio de Ingenieros del Perú", S["coversub"]),
           Spacer(1, 14),
+          Paragraph("<b>Informe N°:</b> 1 (de 3)", S["meta"]),
+          Paragraph("<b>Fecha:</b> 21 de julio de 2026", S["meta"]),
           Paragraph("<b>Elaborado por:</b> Ing. Carlos Cárdenas Fernández", S["meta"]),
           Paragraph("<b>Dirigido a:</b> Ing. Tellys Paucar — FIIS / Colegio de Ingenieros del Perú", S["meta"]),
-          Paragraph("<b>Fecha:</b> " + date.today().strftime("%d de julio de %Y"), S["meta"]),
           Paragraph('<b>Plataforma:</b> <font color="#B8840E">https://planperu2050.pe</font>', S["meta"]),
           Spacer(1, 12)]
 

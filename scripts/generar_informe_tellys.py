@@ -12,7 +12,7 @@ from docx.oxml import OxmlElement
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
-OUT = os.path.join(ROOT, "entregables", "Informe-Plan-Peru-2050.docx")
+OUT = os.path.join(ROOT, "entregables", "Primer-Informe-Plan-Peru-2050.docx")
 
 RED = RGBColor(0xD9, 0x10, 0x23); GOLD = RGBColor(0xB8, 0x84, 0x0E)
 DARK = RGBColor(0x1A, 0x22, 0x38); GREY = RGBColor(0x5D, 0x6B, 0x88)
@@ -86,12 +86,13 @@ def _shade(cell, hexc):
 
 
 # ===================== PORTADA =====================
-para("PLAN PERÚ 2050", size=10, color=GOLD, bold=True, after=0)
-para("Informe de avance de la plataforma digital", size=24, color=RED, bold=True, after=2)
+para("PLAN PERÚ 2050  ·  PRIMER INFORME", size=10, color=GOLD, bold=True, after=0)
+para("Primer Informe de avance de la plataforma digital", size=23, color=RED, bold=True, after=2)
 para("Comisiones Temáticas Nacionales · CNPP — Colegio de Ingenieros del Perú", size=12, color=GREY, after=18)
-para("Elaborado por: Ing. Carlos Cárdenas Fernández", size=11, bold=True, after=1)
+para("Informe N°: 1 (de 3)", size=11, bold=True, after=1)
+para("Fecha: 21 de julio de 2026", size=11, bold=True, after=1)
+para("Elaborado por: Ing. Carlos Cárdenas Fernández", size=11, after=1)
 para("Dirigido a: Ing. Tellys Paucar — FIIS / Colegio de Ingenieros del Perú", size=11, after=1)
-para("Fecha: " + date.today().strftime("%d de julio de %Y"), size=11, after=1)
 para("Plataforma en línea: https://planperu2050.pe", size=11, color=GOLD, after=16)
 
 # ===================== 1. RESUMEN =====================
