@@ -452,8 +452,11 @@ function renderSankey() {
   const s = document.getElementById("skSel"); if (s) s.onchange = () => { S.sankeyEje = s.value; renderSankey(); };
   if (!links.length) { document.getElementById("skCanvas").outerHTML = '<div class="skeleton">Sin flujos para este eje.</div>'; return; }
   chartFont();
-  // color por capa: Políticas = color del eje · Comisiones = dorado · Programas Ppto = azul
-  const layerColor = (node) => (node && node[0] === "P" && node.slice(0, 3) !== "pp:") ? color : (node && node.slice(0, 4) === "com:") ? "#e0a52e" : "#3b82f6";
+  try { Chart.defaults.color = "#eef2f9"; } catch (e) {}   // etiquetas del Sankey brillantes (legibles sobre oscuro)
+  // color por capa (vivos): Políticas = color del eje · Comisiones = dorado · Programas Ppto = azul
+  const ejeBright = { "#d91023": "#ff5a6e", "#a855f7": "#c98bff", "#2ed47a": "#4ef29a", "#3b82f6": "#6aa8ff" };
+  const polColor = ejeBright[color] || color;
+  const layerColor = (node) => (node && node[0] === "P" && node.slice(0, 3) !== "pp:") ? polColor : (node && node.slice(0, 4) === "com:") ? "#f4c542" : "#5aa9ff";
   CHARTS.sankey && CHARTS.sankey.destroy();
   try {
     CHARTS.sankey = new Chart(document.getElementById("skCanvas"), {
@@ -462,10 +465,10 @@ function renderSankey() {
         data: links, labels, column,
         colorFrom: (c) => layerColor(c.raw && c.raw.from),
         colorTo: (c) => layerColor(c.raw && c.raw.to),
-        colorMode: "gradient", alpha: 0.6, borderWidth: 0, nodeWidth: 12,
-        color: "#e6ecf7", font: { size: 11 },
+        colorMode: "gradient", alpha: 0.85, borderWidth: 0, nodeWidth: 14,
+        color: "#eef2f9", size: 12, padding: 8,
       }] },
-      options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => " " + (labels[c.raw.from] || c.raw.from) + " → " + (labels[c.raw.to] || c.raw.to) } } } },
+      options: { maintainAspectRatio: false, layout: { padding: { left: 4, right: 8 } }, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => " " + (labels[c.raw.from] || c.raw.from) + " → " + (labels[c.raw.to] || c.raw.to) } } } },
     });
   } catch (e) {
     document.getElementById("skCanvas").outerHTML = '<div class="skeleton">No se pudo dibujar el diagrama de flujos (' + esc(String(e.message || e)) + ').</div>';
