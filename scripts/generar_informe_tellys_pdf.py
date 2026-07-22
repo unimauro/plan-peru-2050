@@ -106,6 +106,7 @@ story += [Spacer(1, 10), Paragraph("PLAN PERÚ 2050 &nbsp;·&nbsp; PRIMER INFORM
           Paragraph("<b>Informe N°:</b> 1 (de 3)", S["meta"]),
           Paragraph("<b>Fecha:</b> 21 de julio de 2026", S["meta"]),
           Paragraph("<b>Elaborado por:</b> Ing. Carlos Cárdenas Fernández", S["meta"]),
+          Paragraph("<b>Revisor principal:</b> Ing. Alejandro Camarena", S["meta"]),
           Paragraph("<b>Dirigido a:</b> Ing. Tellys Paucar y equipo técnico del Plan Perú 2050 — CNPP / Colegio de Ingenieros del Perú", S["meta"]),
           Paragraph('<b>Plataforma:</b> <font color="#B8840E">https://planperu2050.pe</font>', S["meta"]),
           Spacer(1, 12)]

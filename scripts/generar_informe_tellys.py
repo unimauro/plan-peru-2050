@@ -92,6 +92,7 @@ para("Comisiones Temáticas Nacionales · CNPP — Colegio de Ingenieros del Per
 para("Informe N°: 1 (de 3)", size=11, bold=True, after=1)
 para("Fecha: 21 de julio de 2026", size=11, bold=True, after=1)
 para("Elaborado por: Ing. Carlos Cárdenas Fernández", size=11, after=1)
+para("Revisor principal: Ing. Alejandro Camarena", size=11, after=1)
 para("Dirigido a: Ing. Tellys Paucar y equipo técnico del Plan Perú 2050 — CNPP / Colegio de Ingenieros del Perú", size=11, after=1)
 para("Plataforma en línea: https://planperu2050.pe", size=11, color=GOLD, after=16)
 
