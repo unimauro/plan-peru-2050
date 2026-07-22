@@ -95,9 +95,10 @@ async function boot() {
       fetch("data/gasto_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/seguimiento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/socioeconomico_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    ]).then(([art, an, terr, keiko, gasto, seg, socio]) => {
+      fetch("data/gasto_tipo_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]).then(([art, an, terr, keiko, gasto, seg, socio, gtipo]) => {
       if (art && art.articulaciones) art.articulaciones.forEach((a) => (S.artic[a.comision_id] = a));
-      S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto; S.seg = seg; S.socio = socio;
+      S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto; S.seg = seg; S.socio = socio; S.gtipo = gtipo;
       renderArticulacion();
       renderTerritorial();
       renderTerrMap();
@@ -336,6 +337,25 @@ function renderTerritorial() {
       <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:#2ed47a">${fmtM(g.devengado)}</div><div style="color:var(--mut2);font-size:.72rem">Devengado</div></div>
       <div><div class="serif" style="font-size:1.3rem;font-weight:700">${esc(String(g.ejecucion))}%</div><div style="color:var(--mut2);font-size:.72rem">Ejecutado a la fecha</div></div>
     </div>` : "";
+  // Presupuesto corriente vs inversión (MEF, por tipo de gasto)
+  let gt = null;
+  if (S.gtipo && S.gtipo.departamentos) {
+    const up = sel.toUpperCase();
+    gt = S.gtipo.departamentos[up] || (up === "CALLAO" ? S.gtipo.departamentos["PROVINCIA CONSTITUCIONAL DEL CALLAO"] : null);
+  }
+  let gtipoHtml = "";
+  if (gt) {
+    const c = gt.corriente_pim || 0, inv = gt.inversion_pim || 0, tot = c + inv || 1;
+    const pc = Math.round(100 * c / tot), pi = 100 - pc;
+    gtipoHtml = `<div class="block" style="margin-bottom:14px">
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:8px">
+        <div style="min-width:150px"><div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em">Presupuesto por tipo · MEF ${esc(String(S.gtipo.anio))}</div><div style="font-size:.76rem;color:var(--mut)">PIM del año</div></div>
+        <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:#e0a52e">${fmtM(c)}</div><div style="color:var(--mut2);font-size:.72rem">Corriente (${pc}%)</div></div>
+        <div><div class="serif" style="font-size:1.3rem;font-weight:700;color:#3b82f6">${fmtM(inv)}</div><div style="color:var(--mut2);font-size:.72rem">Inversión / capital (${pi}%)</div></div>
+      </div>
+      <div style="display:flex;height:10px;border-radius:6px;overflow:hidden"><div style="width:${pc}%;background:#e0a52e"></div><div style="width:${pi}%;background:#3b82f6"></div></div>
+    </div>`;
+  }
   const so = S.socio && S.socio.departamentos ? S.socio.departamentos[sel] : null;
   const socioHtml = so ? `<div class="block" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:14px">
       <div style="min-width:150px"><div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em">Desarrollo productivo · INEI</div><div style="font-size:.76rem;color:var(--mut)">VAB 2023 · vulnerabilidad 2019</div></div>
@@ -346,6 +366,7 @@ function renderTerritorial() {
   box.innerHTML = `<div class="revbanner" style="margin-bottom:16px">🗺️ Datos <b>reales</b>: IDH 2019 + % de pobreza y pobreza extrema (PNUD/INEI) + población 2020 por distrito (Proyecto INTI); gasto público del MEF/SIAF por departamento (QHAWAY). Semáforo: <span style="color:#2ed47a">■</span> mejor · <span style="color:#e0a52e">■</span> medio · <span style="color:#d91023">■</span> crítico.</div>
     <div style="margin-bottom:14px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Departamento</label><select id="terrSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${deptos.map((d) => `<option ${d === sel ? "selected" : ""}>${esc(d)}</option>`).join("")}</select></div>
     ${gastoHtml}
+    ${gtipoHtml}
     ${socioHtml}
     ${rows}`;
   const s = document.getElementById("terrSel");

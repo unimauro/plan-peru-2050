@@ -1,0 +1,214 @@
+{
+ "fuente": "MEF Consulta Amigable 2026 — gasto por departamento (destino META) clasificado en corriente vs inversión (genérica 6 = Adquisición de Activos No Financieros).",
+ "anio": 2026,
+ "departamentos": {
+  "AMAZONAS": {
+   "corriente_pim": 2375830122,
+   "corriente_dev": 1326345754,
+   "inversion_pim": 1264032244,
+   "inversion_dev": 613174667,
+   "deuda_pim": 23569484,
+   "deuda_dev": 22619569
+  },
+  "ANCASH": {
+   "corriente_pim": 5391548112,
+   "corriente_dev": 2937856457,
+   "inversion_pim": 4792602935,
+   "inversion_dev": 1607582106,
+   "deuda_pim": 2678162,
+   "deuda_dev": 0
+  },
+  "APURIMAC": {
+   "corriente_pim": 2560123929,
+   "corriente_dev": 1419623028,
+   "inversion_pim": 1940020834,
+   "inversion_dev": 785900029,
+   "deuda_pim": 28621373,
+   "deuda_dev": 14397137
+  },
+  "AREQUIPA": {
+   "corriente_pim": 5717530390,
+   "corriente_dev": 3177364731,
+   "inversion_pim": 3303433725,
+   "inversion_dev": 1657487607,
+   "deuda_pim": 81735764,
+   "deuda_dev": 39352917
+  },
+  "AYACUCHO": {
+   "corriente_pim": 3452029736,
+   "corriente_dev": 1857377596,
+   "inversion_pim": 1895076423,
+   "inversion_dev": 875544745,
+   "deuda_pim": 66322150,
+   "deuda_dev": 40424048
+  },
+  "CAJAMARCA": {
+   "corriente_pim": 6293110254,
+   "corriente_dev": 3514735315,
+   "inversion_pim": 3313956601,
+   "inversion_dev": 1295046044,
+   "deuda_pim": 103502767,
+   "deuda_dev": 33144471
+  },
+  "PROVINCIA CONSTITUCIONAL DEL CALLAO": {
+   "corriente_pim": 5981118591,
+   "corriente_dev": 3142213769,
+   "inversion_pim": 1424419639,
+   "inversion_dev": 581997250,
+   "deuda_pim": 45590789,
+   "deuda_dev": 18079596
+  },
+  "CUSCO": {
+   "corriente_pim": 6237335435,
+   "corriente_dev": 3196667264,
+   "inversion_pim": 5604013883,
+   "inversion_dev": 2287166275,
+   "deuda_pim": 179947027,
+   "deuda_dev": 69998889
+  },
+  "HUANCAVELICA": {
+   "corriente_pim": 2383544238,
+   "corriente_dev": 1284814364,
+   "inversion_pim": 1351036618,
+   "inversion_dev": 487152352,
+   "deuda_pim": 5172948,
+   "deuda_dev": 1132899
+  },
+  "HUANUCO": {
+   "corriente_pim": 3624494205,
+   "corriente_dev": 1973464151,
+   "inversion_pim": 1699852017,
+   "inversion_dev": 638955369,
+   "deuda_pim": 10549167,
+   "deuda_dev": 9338164
+  },
+  "ICA": {
+   "corriente_pim": 3752575124,
+   "corriente_dev": 2142540623,
+   "inversion_pim": 2157756379,
+   "inversion_dev": 1034775651,
+   "deuda_pim": 118444926,
+   "deuda_dev": 67765096
+  },
+  "JUNIN": {
+   "corriente_pim": 5445892513,
+   "corriente_dev": 3010075738,
+   "inversion_pim": 2520879569,
+   "inversion_dev": 1095704649,
+   "deuda_pim": 19677829,
+   "deuda_dev": 5056887
+  },
+  "LA LIBERTAD": {
+   "corriente_pim": 6606191473,
+   "corriente_dev": 3505192552,
+   "inversion_pim": 3642905817,
+   "inversion_dev": 1464422533,
+   "deuda_pim": 62778619,
+   "deuda_dev": 22048737
+  },
+  "LAMBAYEQUE": {
+   "corriente_pim": 4087518646,
+   "corriente_dev": 2246338401,
+   "inversion_pim": 1996926681,
+   "inversion_dev": 964294615,
+   "deuda_pim": 59583,
+   "deuda_dev": 0
+  },
+  "LIMA": {
+   "corriente_pim": 78611112554,
+   "corriente_dev": 40244836060,
+   "inversion_pim": 15555634163,
+   "inversion_dev": 8635158102,
+   "deuda_pim": 30830930380,
+   "deuda_dev": 15807895963
+  },
+  "LORETO": {
+   "corriente_pim": 5193317308,
+   "corriente_dev": 2974367211,
+   "inversion_pim": 2738594868,
+   "inversion_dev": 1241043934,
+   "deuda_pim": 13576007,
+   "deuda_dev": 6203726
+  },
+  "MADRE DE DIOS": {
+   "corriente_pim": 1019020281,
+   "corriente_dev": 510545222,
+   "inversion_pim": 478169748,
+   "inversion_dev": 140885196,
+   "deuda_pim": 0,
+   "deuda_dev": 0
+  },
+  "MOQUEGUA": {
+   "corriente_pim": 1375586092,
+   "corriente_dev": 717411200,
+   "inversion_pim": 1227437500,
+   "inversion_dev": 529161320,
+   "deuda_pim": 36318888,
+   "deuda_dev": 8760401
+  },
+  "PASCO": {
+   "corriente_pim": 1519584112,
+   "corriente_dev": 864444984,
+   "inversion_pim": 1014102260,
+   "inversion_dev": 482137138,
+   "deuda_pim": 16970615,
+   "deuda_dev": 3876525
+  },
+  "PIURA": {
+   "corriente_pim": 6884712090,
+   "corriente_dev": 3745208154,
+   "inversion_pim": 4102237480,
+   "inversion_dev": 2029164210,
+   "deuda_pim": 56593956,
+   "deuda_dev": 13933778
+  },
+  "PUNO": {
+   "corriente_pim": 5163142488,
+   "corriente_dev": 2775242487,
+   "inversion_pim": 3069671528,
+   "inversion_dev": 1253896357,
+   "deuda_pim": 11447034,
+   "deuda_dev": 2666874
+  },
+  "SAN MARTIN": {
+   "corriente_pim": 3642320071,
+   "corriente_dev": 2036623201,
+   "inversion_pim": 1509249545,
+   "inversion_dev": 641024811,
+   "deuda_pim": 13381492,
+   "deuda_dev": 10567543
+  },
+  "TACNA": {
+   "corriente_pim": 2047741119,
+   "corriente_dev": 1119699239,
+   "inversion_pim": 1351808881,
+   "inversion_dev": 705958945,
+   "deuda_pim": 7026219,
+   "deuda_dev": 7026218
+  },
+  "TUMBES": {
+   "corriente_pim": 1397535087,
+   "corriente_dev": 763294805,
+   "inversion_pim": 620388987,
+   "inversion_dev": 199694838,
+   "deuda_pim": 2318255,
+   "deuda_dev": 452988
+  },
+  "UCAYALI": {
+   "corriente_pim": 2535749609,
+   "corriente_dev": 1404765410,
+   "inversion_pim": 1333331345,
+   "inversion_dev": 567556932,
+   "deuda_pim": 34607788,
+   "deuda_dev": 6485410
+  },
+  "EXTERIOR": {
+   "corriente_pim": 815061801,
+   "corriente_dev": 485631645,
+   "inversion_pim": 1376230,
+   "inversion_dev": 555448,
+   "deuda_pim": 0,
+   "deuda_dev": 0
+  }
+ }
+}
