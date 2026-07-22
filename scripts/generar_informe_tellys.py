@@ -96,6 +96,15 @@ para("Revisor principal: Ing. Alejandro Camarena", size=11, after=1)
 para("Dirigido a: Ing. Tellys Paucar y equipo técnico del Plan Perú 2050 — CNPP / Colegio de Ingenieros del Perú", size=11, after=1)
 para("Plataforma en línea: https://planperu2050.pe", size=11, color=GOLD, after=16)
 
+# ===================== ÍNDICE =====================
+h1("Índice")
+for t in ["1. Resumen ejecutivo", "2. La plataforma y sus módulos",
+          "3. Articulación estratégica (hacia arriba y hacia abajo)", "4. Articulación con el plan de gobierno entrante",
+          "5. Inteligencia territorial", "6. Seguimiento mensual de indicadores",
+          "7. Estado de las observaciones de la última reunión", "8. Fuentes de datos y principio anti-sobreafirmación",
+          "9. Cómo revisar y validar", "10. Próximos pasos", "Anexo. Enlaces"]:
+    bullet(t)
+
 # ===================== 1. RESUMEN =====================
 h1("1. Resumen ejecutivo")
 para("Se ha construido y puesto en producción una plataforma web interactiva del Plan Perú 2050 "
@@ -186,7 +195,19 @@ table(["Observación", "Estado"], [
 
 # ===================== 8. FUENTES =====================
 h1("8. Fuentes de datos y principio anti-sobreafirmación")
-para("Todo el contenido está claramente rotulado según su naturaleza, para no presentar como oficial lo que es "
+para("Cada dato del tablero indica su fuente y su año. Detalle de las fuentes oficiales utilizadas:")
+table(["Información", "Fuente · Año"], [
+    ["Comisiones Temáticas (visión, diagnóstico, objetivos, metas)", "Redacciones del CNPP — Colegio de Ingenieros del Perú"],
+    ["Ejes y Políticas de Estado", "Acuerdo Nacional — acuerdonacional.pe"],
+    ["Programas Presupuestales", "MEF — Consulta Amigable / SIAF"],
+    ["Gasto público y corriente vs. inversión por departamento", "MEF — Consulta Amigable / SIAF (año en curso)"],
+    ["IDH, pobreza, pobreza extrema y población por distrito", "PNUD e INEI (IDH 2019)"],
+    ["Valor Agregado Bruto (VAB) por departamento", "INEI — PBI por Departamentos 2007–2023 (2023E)"],
+    ["Vulnerabilidad económica a la pobreza", "INEI (nacional 31,4% 2023; departamental por grupos 2019)"],
+    ["Presión tributaria e informalidad laboral", "BCRP — BCRPData"],
+    ["Geometría del mapa (distritos)", "GeoJSON de distritos del Perú (INEI/MINAM)"],
+], widths=[8.5, 8.5])
+para("Además, todo el contenido está rotulado según su naturaleza, para no presentar como oficial lo que es "
      "estimado o inferido:")
 bullet("Dato oficial (con fuente y año): IDH y pobreza (PNUD/INEI), gasto MEF (SIAF), VAB y vulnerabilidad (INEI), presión tributaria e informalidad (BCRP).")
 bullet("Propuesta con IA (a validar): la matriz de articulación y el alineamiento del plan de gobierno.")

@@ -111,6 +111,18 @@ story += [Spacer(1, 10), Paragraph("PLAN PERÚ 2050 &nbsp;·&nbsp; PRIMER INFORM
           Paragraph('<b>Plataforma:</b> <font color="#B8840E">https://planperu2050.pe</font>', S["meta"]),
           Spacer(1, 12)]
 
+# Índice
+story += H1("Índice")
+_toc = [
+    "1. Resumen ejecutivo", "2. La plataforma y sus módulos",
+    "3. Articulación estratégica (hacia arriba y hacia abajo)", "4. Articulación con el plan de gobierno entrante",
+    "5. Inteligencia territorial", "6. Seguimiento mensual de indicadores",
+    "7. Estado de las observaciones de la última reunión", "8. Fuentes de datos y principio anti-sobreafirmación",
+    "9. Cómo revisar y validar", "10. Próximos pasos", "Anexo. Enlaces",
+]
+story += [ListFlowable([ListItem(Paragraph(E(t), S["bullet"]), leftIndent=6) for t in _toc],
+                       bulletType="bullet", start="•", bulletColor=GOLD, leftIndent=12), Spacer(1, 6)]
+
 story += H1("1. Resumen ejecutivo")
 story += P("Se ha construido y puesto en producción una plataforma web interactiva del Plan Perú 2050 "
            "(https://planperu2050.pe) que sistematiza las %d Comisiones Temáticas Nacionales, las articula con el "
@@ -190,8 +202,20 @@ story += tbl(["Observación", "Estado"], [
     ["Presupuesto corriente vs. inversión por territorio", "ATENDIDO — por departamento (MEF, tipo de gasto)"],
 ], [92, 71])
 
-story += H1("8. Fuentes y principio anti-sobreafirmación")
-story += P("Todo el contenido está rotulado según su naturaleza, para no presentar como oficial lo que es estimado o inferido:")
+story += H1("8. Fuentes de datos y principio anti-sobreafirmación")
+story += P("Cada dato del tablero indica su fuente y su año. Detalle de las fuentes oficiales utilizadas:")
+story += tbl(["Información", "Fuente · Año"], [
+    ["Comisiones Temáticas (visión, diagnóstico, objetivos, metas)", "Redacciones del CNPP — Colegio de Ingenieros del Perú"],
+    ["Ejes y Políticas de Estado", "Acuerdo Nacional — acuerdonacional.pe"],
+    ["Programas Presupuestales", "MEF — Consulta Amigable / SIAF"],
+    ["Gasto público y corriente vs. inversión por departamento", "MEF — Consulta Amigable / SIAF (año en curso)"],
+    ["IDH, pobreza, pobreza extrema y población por distrito", "PNUD e INEI (IDH 2019)"],
+    ["Valor Agregado Bruto (VAB) por departamento", "INEI — PBI por Departamentos 2007–2023 (2023E)"],
+    ["Vulnerabilidad económica a la pobreza", "INEI (nacional 31,4% 2023; departamental por grupos 2019)"],
+    ["Presión tributaria e informalidad laboral", "BCRP — BCRPData"],
+    ["Geometría del mapa (distritos)", "GeoJSON de distritos del Perú (INEI/MINAM)"],
+], [80, 83])
+story += P("Además, todo el contenido está rotulado según su naturaleza, para no presentar como oficial lo que es estimado o inferido:")
 story += bl([
     ("Dato oficial (fuente y año):", "IDH y pobreza (PNUD/INEI), gasto MEF (SIAF), VAB y vulnerabilidad (INEI), presión tributaria e informalidad (BCRP)."),
     ("Propuesta con IA (a validar):", "la matriz de articulación y el alineamiento del plan de gobierno."),
