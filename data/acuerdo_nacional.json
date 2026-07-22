@@ -1,216 +1,1493 @@
 {
-  "fuente": "Acuerdo Nacional — acuerdonacional.pe (políticas de estado)",
-  "nota": "Nivel 1 (4 ejes) y nivel 2 (36 políticas de estado). Nivel 3 (objetivos por política) pendiente de cargar. Políticas 32-36 marcadas por_validar: su agrupación por eje varía según fuente, requiere revisión humana.",
-  "total_politicas": 36,
-  "ejes": [
+ "fuente": "Acuerdo Nacional — acuerdonacional.pe (políticas de estado)",
+ "nota": "Nivel 1 (4 ejes), nivel 2 (36 políticas de estado) y nivel 3 (objetivos por política, letras a-l). Fuente: acuerdonacional.pe. Objetivos resumidos del texto oficial (paráfrasis fiel). Políticas 32-36 marcadas por_validar por su agrupación de eje.",
+ "total_politicas": 36,
+ "ejes": [
+  {
+   "id": "I",
+   "nombre": "I. Democracia y Estado de Derecho",
+   "politicas": [
     {
-      "id": "I",
-      "nombre": "I. Democracia y Estado de Derecho",
-      "politicas": [
-        {
-          "n": 1,
-          "nombre": "Fortalecimiento del régimen democrático y del Estado de derecho",
-          "objetivos": []
-        },
-        {
-          "n": 2,
-          "nombre": "Democratización de la vida política y fortalecimiento del sistema de partidos",
-          "objetivos": []
-        },
-        {
-          "n": 3,
-          "nombre": "Afirmación de la identidad nacional",
-          "objetivos": []
-        },
-        {
-          "n": 4,
-          "nombre": "Institucionalización del diálogo y la concertación",
-          "objetivos": []
-        },
-        {
-          "n": 5,
-          "nombre": "Gobierno en función de objetivos con planeamiento estratégico, prospectiva nacional y procedimientos transparentes",
-          "objetivos": []
-        },
-        {
-          "n": 6,
-          "nombre": "Política exterior para la paz, la democracia, el desarrollo y la integración",
-          "objetivos": []
-        },
-        {
-          "n": 7,
-          "nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
-          "objetivos": []
-        },
-        {
-          "n": 8,
-          "nombre": "Descentralización política, económica y administrativa para propiciar el desarrollo integral, armónico y sostenido del Perú",
-          "objetivos": []
-        },
-        {
-          "n": 9,
-          "nombre": "Política de Seguridad Nacional",
-          "objetivos": []
-        }
-      ]
+     "n": 1,
+     "nombre": "Fortalecimiento del régimen democrático y del Estado de derecho",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Defenderá el imperio de la Constitución como Estado constitucional unitario y descentralizado, con equilibrio de poderes."
+      },
+      {
+       "letra": "b",
+       "texto": "Garantizará el respeto a ideas, organizaciones políticas y de la sociedad civil, y las libertades fundamentales."
+      },
+      {
+       "letra": "c",
+       "texto": "Fomentará una cultura democrática con ciudadanía consciente de sus derechos y deberes."
+      },
+      {
+       "letra": "d",
+       "texto": "Establecerá normas que sancionen a quienes violen la constitucionalidad, los derechos fundamentales y la legalidad."
+      }
+     ]
     },
     {
-      "id": "II",
-      "nombre": "II. Equidad y Justicia Social",
-      "politicas": [
-        {
-          "n": 10,
-          "nombre": "Reducción de la pobreza",
-          "objetivos": []
-        },
-        {
-          "n": 11,
-          "nombre": "Promoción de la igualdad de oportunidades sin discriminación",
-          "objetivos": []
-        },
-        {
-          "n": 12,
-          "nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
-          "objetivos": []
-        },
-        {
-          "n": 13,
-          "nombre": "Acceso universal a los servicios de salud y a la seguridad social",
-          "objetivos": []
-        },
-        {
-          "n": 14,
-          "nombre": "Acceso al empleo pleno, digno y productivo",
-          "objetivos": []
-        },
-        {
-          "n": 15,
-          "nombre": "Promoción de la seguridad alimentaria y nutrición",
-          "objetivos": []
-        },
-        {
-          "n": 16,
-          "nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud",
-          "objetivos": []
-        },
-        {
-          "n": 36,
-          "nombre": "Desarrollo Infantil Temprano",
-          "objetivos": [],
-          "por_validar": true
-        }
-      ]
+     "n": 2,
+     "nombre": "Democratización de la vida política y fortalecimiento del sistema de partidos",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá normas que garanticen el pleno respeto y vigencia de los derechos políticos."
+      },
+      {
+       "letra": "b",
+       "texto": "Asegurará el sistema de partidos con democracia interna, transparencia financiera y difusión de programas."
+      },
+      {
+       "letra": "c",
+       "texto": "Garantizará la celebración de elecciones libres y transparentes."
+      },
+      {
+       "letra": "d",
+       "texto": "Mantendrá la representación plena de ciudadanos y el respeto a las minorías en instancias electas."
+      },
+      {
+       "letra": "e",
+       "texto": "Favorecerá la participación ciudadana en decisiones públicas mediante mecanismos constitucionales, partidos y organizaciones."
+      }
+     ]
     },
     {
-      "id": "III",
-      "nombre": "III. Competitividad del País",
-      "politicas": [
-        {
-          "n": 17,
-          "nombre": "Afirmación de la economía social de mercado",
-          "objetivos": []
-        },
-        {
-          "n": 18,
-          "nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
-          "objetivos": []
-        },
-        {
-          "n": 19,
-          "nombre": "Desarrollo sostenible y gestión ambiental",
-          "objetivos": []
-        },
-        {
-          "n": 20,
-          "nombre": "Desarrollo de la ciencia y la tecnología",
-          "objetivos": []
-        },
-        {
-          "n": 21,
-          "nombre": "Desarrollo en infraestructura y vivienda",
-          "objetivos": []
-        },
-        {
-          "n": 22,
-          "nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
-          "objetivos": []
-        },
-        {
-          "n": 23,
-          "nombre": "Política de desarrollo agrario y rural",
-          "objetivos": []
-        },
-        {
-          "n": 33,
-          "nombre": "Política de Estado sobre los recursos hídricos",
-          "objetivos": [],
-          "por_validar": true
-        },
-        {
-          "n": 34,
-          "nombre": "Ordenamiento y gestión territorial",
-          "objetivos": [],
-          "por_validar": true
-        },
-        {
-          "n": 35,
-          "nombre": "Sociedad de la información y sociedad del conocimiento",
-          "objetivos": [],
-          "por_validar": true
-        }
-      ]
+     "n": 3,
+     "nombre": "Afirmación de la identidad nacional",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá la protección y difusión de la memoria histórica del país."
+      },
+      {
+       "letra": "b",
+       "texto": "Promoverá la solidaridad, la tolerancia y el respeto a las diferencias para una auténtica unidad."
+      },
+      {
+       "letra": "c",
+       "texto": "Promoverá una visión de futuro compartida con valores que conduzcan a un desarrollo nacional armónico."
+      }
+     ]
     },
     {
-      "id": "IV",
-      "nombre": "IV. Estado Eficiente, Transparente y Descentralizado",
-      "politicas": [
-        {
-          "n": 24,
-          "nombre": "Afirmación de un Estado eficiente y transparente",
-          "objetivos": []
-        },
-        {
-          "n": 25,
-          "nombre": "Cautela de la institucionalidad de las Fuerzas Armadas y su servicio a la democracia",
-          "objetivos": []
-        },
-        {
-          "n": 26,
-          "nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
-          "objetivos": []
-        },
-        {
-          "n": 27,
-          "nombre": "Erradicación de la producción, el tráfico y el consumo ilegal de drogas",
-          "objetivos": []
-        },
-        {
-          "n": 28,
-          "nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial",
-          "objetivos": []
-        },
-        {
-          "n": 29,
-          "nombre": "Acceso a la información, libertad de expresión y libertad de prensa",
-          "objetivos": []
-        },
-        {
-          "n": 30,
-          "nombre": "Eliminación del terrorismo y afirmación de la reconciliación nacional",
-          "objetivos": []
-        },
-        {
-          "n": 31,
-          "nombre": "Sostenibilidad fiscal y reducción del peso de la deuda",
-          "objetivos": []
-        },
-        {
-          "n": 32,
-          "nombre": "Gestión del Riesgo de Desastres",
-          "objetivos": [],
-          "por_validar": true
-        }
-      ]
+     "n": 4,
+     "nombre": "Institucionalización del diálogo y la concertación",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá y consolidará una cultura de diálogo y concertación."
+      },
+      {
+       "letra": "b",
+       "texto": "Institucionalizará canales de participación ciudadana en las funciones ejecutivas y legislativas de los tres niveles."
+      },
+      {
+       "letra": "c",
+       "texto": "Institucionalizará la concertación en prospectiva nacional, formulación presupuestal y planeamiento estratégico."
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "nombre": "Gobierno en función de objetivos con planeamiento estratégico, prospectiva nacional y procedimientos transparentes",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Impulsará un sistema nacional de planeamiento estratégico con objetivos, metas e indicadores a corto, mediano y largo plazo."
+      },
+      {
+       "letra": "b",
+       "texto": "Promoverá que la gestión alcance los objetivos de los planes, con control del cumplimiento de metas presupuestarias."
+      },
+      {
+       "letra": "c",
+       "texto": "Garantizará el informe periódico de la gestión del Poder Ejecutivo sobre el avance de objetivos."
+      },
+      {
+       "letra": "d",
+       "texto": "Promoverá que los funcionarios orienten su gestión a las metas y sean permanentemente capacitados."
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "nombre": "Política exterior para la paz, la democracia, el desarrollo y la integración",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá un clima de paz y seguridad mundial, reduciendo el armamentismo y el desarme en América Latina."
+      },
+      {
+       "letra": "b",
+       "texto": "Promoverá derechos humanos, democracia y Estado de derecho, y la lucha contra corrupción, narcotráfico y terrorismo."
+      },
+      {
+       "letra": "c",
+       "texto": "Participará en procesos de integración y asociación preferencial con países vecinos."
+      },
+      {
+       "letra": "d",
+       "texto": "Impulsará el desarrollo sostenible de regiones fronterizas y su integración con países vecinos."
+      },
+      {
+       "letra": "e",
+       "texto": "Fortalecerá la diplomacia que promueva intereses del Estado, proteja peruanos en el exterior e impulse comercio e inversión."
+      },
+      {
+       "letra": "f",
+       "texto": "Impulsará políticas migratorias globales que incorporen la promoción de oportunidades laborales."
+      },
+      {
+       "letra": "g",
+       "texto": "Respetará la soberanía de los Estados y el principio de no intervención."
+      }
+     ]
+    },
+    {
+     "n": 7,
+     "nombre": "Erradicación de la violencia y fortalecimiento del civismo y de la seguridad ciudadana",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Consolidará políticas para prevenir, disuadir, sancionar y eliminar conductas que pongan en peligro personas y propiedad."
+      },
+      {
+       "letra": "b",
+       "texto": "Propiciará una cultura cívica de respeto a la ley y normas de convivencia contra la violencia."
+      },
+      {
+       "letra": "c",
+       "texto": "Extenderá mecanismos legales contra el maltrato familiar y la violación de niños, ancianos y mujeres."
+      },
+      {
+       "letra": "d",
+       "texto": "Garantizará su presencia efectiva en las zonas vulnerables a la violencia."
+      },
+      {
+       "letra": "e",
+       "texto": "Fomentará una cultura de paz con educación y ética públicas, justicia y reconciliación."
+      },
+      {
+       "letra": "f",
+       "texto": "Desarrollará especialización en los organismos públicos responsables de la seguridad ciudadana."
+      },
+      {
+       "letra": "g",
+       "texto": "Promoverá los valores éticos y cívicos de la Policía Nacional, su capacitación y retribución."
+      },
+      {
+       "letra": "h",
+       "texto": "Promoverá un sistema nacional de seguridad ciudadana en provincias y distritos, presidido por alcaldes."
+      }
+     ]
+    },
+    {
+     "n": 8,
+     "nombre": "Descentralización política, económica y administrativa para propiciar el desarrollo integral, armónico y sostenido del Perú",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Apoyará el fortalecimiento administrativo y financiero de los gobiernos regionales y locales."
+      },
+      {
+       "letra": "b",
+       "texto": "Institucionalizará la participación ciudadana en las decisiones políticas, económicas y administrativas."
+      },
+      {
+       "letra": "c",
+       "texto": "Promoverá eficiencia y transparencia en servicios públicos e infraestructura en todos los ámbitos territoriales."
+      },
+      {
+       "letra": "d",
+       "texto": "Establecerá delimitación de funciones, competencias y coordinación entre los tres niveles de gobierno."
+      },
+      {
+       "letra": "e",
+       "texto": "Desarrollará plataformas regionales de competitividad para el crecimiento de las economías locales y regionales."
+      },
+      {
+       "letra": "f",
+       "texto": "Desarrollará captación de recursos fiscales con mecanismos de compensación para una distribución equitativa."
+      },
+      {
+       "letra": "g",
+       "texto": "Incorporará mecanismos para mejorar la gestión, competencia y eficiencia de entes públicos y privados."
+      },
+      {
+       "letra": "h",
+       "texto": "Favorecerá espacios macrorregionales desde una perspectiva de integración geoeconómica."
+      },
+      {
+       "letra": "i",
+       "texto": "Favorecerá el asociacionismo intermunicipal e interregional para temas específicos."
+      },
+      {
+       "letra": "j",
+       "texto": "Fomentará el acceso al capital regional y local, especialmente para la micro, pequeña y mediana empresa."
+      },
+      {
+       "letra": "k",
+       "texto": "Fomentará mecanismos de compensación presupuestal para desastres naturales según la pobreza de cada región."
+      }
+     ]
+    },
+    {
+     "n": 9,
+     "nombre": "Política de Seguridad Nacional",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Fomentará la participación activa de toda la sociedad en los objetivos de la seguridad nacional."
+      },
+      {
+       "letra": "b",
+       "texto": "Garantizará la plena operatividad de las Fuerzas Armadas para disuasión, defensa, prevención de conflictos y paz."
+      },
+      {
+       "letra": "c",
+       "texto": "Impulsará la enseñanza de los conceptos básicos de seguridad nacional en todos los niveles educativos."
+      },
+      {
+       "letra": "d",
+       "texto": "Fomentará la protección de la Antártida, el medio ambiente, la Amazonía y la integración nacional."
+      },
+      {
+       "letra": "e",
+       "texto": "Mantendrá coordinación entre el sistema de defensa nacional y la política exterior para defender intereses permanentes."
+      }
+     ]
     }
-  ]
+   ]
+  },
+  {
+   "id": "II",
+   "nombre": "II. Equidad y Justicia Social",
+   "politicas": [
+    {
+     "n": 10,
+     "nombre": "Reducción de la pobreza",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá la producción, el desarrollo empresarial local y el empleo."
+      },
+      {
+       "letra": "b",
+       "texto": "Fortalecerá capacidades locales de gestión, transferencia tecnológica y acceso al crédito."
+      },
+      {
+       "letra": "c",
+       "texto": "Promoverá proyectos de infraestructura logística y productiva con la actividad privada."
+      },
+      {
+       "letra": "d",
+       "texto": "Asignará recursos crecientes de inversión social en educación y salud."
+      },
+      {
+       "letra": "e",
+       "texto": "Fomentará ciudadanía y participación de personas en pobreza en los programas."
+      },
+      {
+       "letra": "f",
+       "texto": "Establecerá sistema local de atención y promoción del empleo a personas sin sustento."
+      },
+      {
+       "letra": "g",
+       "texto": "Fomentará eficacia, equidad y transparencia del Estado en el uso de recursos."
+      },
+      {
+       "letra": "h",
+       "texto": "Garantizará derechos y acceso a la justicia de la población pobre."
+      },
+      {
+       "letra": "i",
+       "texto": "Fomentará cultura de prevención y control de riesgos ante desastres."
+      }
+     ]
+    },
+    {
+     "n": 11,
+     "nombre": "Promoción de la igualdad de oportunidades sin discriminación",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Combatirá toda forma de discriminación, promoviendo la igualdad de oportunidades."
+      },
+      {
+       "letra": "b",
+       "texto": "Fortalecerá la participación de las mujeres como sujetos sociales y políticos."
+      },
+      {
+       "letra": "c",
+       "texto": "Fortalecerá la institución rectora de la equidad de género."
+      },
+      {
+       "letra": "d",
+       "texto": "Dará acceso equitativo a las mujeres a recursos productivos y empleo."
+      },
+      {
+       "letra": "e",
+       "texto": "Desarrollará sistemas de protección a grupos discriminados o excluidos."
+      },
+      {
+       "letra": "f",
+       "texto": "Protegerá derechos de comunidades étnicas discriminadas con programas de desarrollo social."
+      }
+     ]
+    },
+    {
+     "n": 12,
+     "nombre": "Acceso universal a una educación pública gratuita y de calidad y promoción y defensa de la cultura y del deporte",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Garantizará acceso universal a educación inicial y desarrollo de cero a cinco años."
+      },
+      {
+       "letra": "b",
+       "texto": "Eliminará brechas de calidad entre educación pública/privada y rural/urbana."
+      },
+      {
+       "letra": "c",
+       "texto": "Fortalecerá y revalorará la carrera magisterial mediante pacto social."
+      },
+      {
+       "letra": "d",
+       "texto": "Afianzará educación básica de calidad para niños, púberes y adolescentes."
+      },
+      {
+       "letra": "e",
+       "texto": "Profundizará la educación científica y ampliará el uso de nuevas tecnologías."
+      },
+      {
+       "letra": "f",
+       "texto": "Mejorará la calidad de la educación superior y técnica pública."
+      },
+      {
+       "letra": "g",
+       "texto": "Creará mecanismos de certificación y calificación de la educación."
+      },
+      {
+       "letra": "h",
+       "texto": "Erradicará todas las formas de analfabetismo en zonas urbano-marginal y rural."
+      },
+      {
+       "letra": "i",
+       "texto": "Garantizará incremento anual del 0.25% del PBI en educación hasta llegar al 6%."
+      },
+      {
+       "letra": "j",
+       "texto": "Restablecerá educación física y artística y promoverá el deporte desde la niñez."
+      },
+      {
+       "letra": "k",
+       "texto": "Fomentará cultura de evaluación y vigilancia social de la educación."
+      },
+      {
+       "letra": "l",
+       "texto": "Promoverá la educación de jóvenes, adultos y la educación laboral."
+      }
+     ]
+    },
+    {
+     "n": 13,
+     "nombre": "Acceso universal a los servicios de salud y a la seguridad social",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Potenciará promoción de salud y control de enfermedades transmisibles y crónicas."
+      },
+      {
+       "letra": "b",
+       "texto": "Promoverá prevención y control de enfermedades mentales y drogadicción."
+      },
+      {
+       "letra": "c",
+       "texto": "Ampliará acceso al agua potable y saneamiento básico."
+      },
+      {
+       "letra": "d",
+       "texto": "Desarrollará plan integral de control de enfermedades emergentes por región."
+      },
+      {
+       "letra": "e",
+       "texto": "Promoverá hábitos de vida saludables."
+      },
+      {
+       "letra": "f",
+       "texto": "Ampliará y descentralizará servicios de salud en áreas más pobres."
+      },
+      {
+       "letra": "g",
+       "texto": "Fortalecerá redes sociales en salud con participación ciudadana."
+      },
+      {
+       "letra": "h",
+       "texto": "Promoverá maternidad saludable y planificación familiar sin coerción."
+      },
+      {
+       "letra": "i",
+       "texto": "Promoverá acceso gratuito y masivo a servicios públicos de salud."
+      },
+      {
+       "letra": "j",
+       "texto": "Promoverá acceso universal a la seguridad social y fondo de salud."
+      },
+      {
+       "letra": "k",
+       "texto": "Desarrollará políticas de salud ocupacional extendidas a la seguridad social."
+      },
+      {
+       "letra": "l",
+       "texto": "Incrementará progresivamente el presupuesto del sector salud."
+      }
+     ]
+    },
+    {
+     "n": 14,
+     "nombre": "Acceso al empleo pleno, digno y productivo",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Fomentará concertación Estado-empresa-educación para investigación e innovación."
+      },
+      {
+       "letra": "b",
+       "texto": "Contará con normas que promuevan la formalización del empleo digno."
+      },
+      {
+       "letra": "c",
+       "texto": "Garantizará la sindicalización mediante una Ley General del Trabajo."
+      },
+      {
+       "letra": "d",
+       "texto": "Desarrollará programas de promoción de la micro, pequeña y mediana empresa."
+      },
+      {
+       "letra": "e",
+       "texto": "Establecerá régimen laboral transitorio de derechos en microempresas."
+      },
+      {
+       "letra": "f",
+       "texto": "Apoyará pequeñas empresas artesanales y generación de empleo."
+      },
+      {
+       "letra": "g",
+       "texto": "Promoverá inversión empresarial en capacitación laboral."
+      },
+      {
+       "letra": "h",
+       "texto": "Garantizará acceso a información sobre el mercado laboral."
+      },
+      {
+       "letra": "i",
+       "texto": "Fomentará eliminación de la extrema desigualdad de ingresos."
+      },
+      {
+       "letra": "j",
+       "texto": "Incluirá programas de empleo femenino, de adultos mayores y jóvenes."
+      },
+      {
+       "letra": "k",
+       "texto": "Promoverá mano de obra local y empleo para personas con discapacidad."
+      },
+      {
+       "letra": "l",
+       "texto": "Garantizará igual remuneración por trabajo de igual valor sin discriminación."
+      }
+     ]
+    },
+    {
+     "n": 15,
+     "nombre": "Promoción de la seguridad alimentaria y nutrición",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Alentará producción de alimentos sostenible y diversificada."
+      },
+      {
+       "letra": "b",
+       "texto": "Garantizará alimentos asequibles, apropiados y suficientes en nutrientes."
+      },
+      {
+       "letra": "c",
+       "texto": "Evitará que la importación de alimentos genere dependencia alimentaria."
+      },
+      {
+       "letra": "d",
+       "texto": "Promoverá código de ética obligatorio para comercialización de alimentos."
+      },
+      {
+       "letra": "e",
+       "texto": "Aplicará controles de calidad y vigilancia sobre producción y distribución."
+      },
+      {
+       "letra": "f",
+       "texto": "Garantizará el saneamiento básico."
+      },
+      {
+       "letra": "g",
+       "texto": "Promoverá participación, organización y vigilancia de los consumidores."
+      },
+      {
+       "letra": "h",
+       "texto": "Tomará medidas contra sequías, desertificación, plagas y pérdida de biodiversidad."
+      },
+      {
+       "letra": "i",
+       "texto": "Reforzará investigación en agricultura, ganadería, bosques y recursos."
+      },
+      {
+       "letra": "j",
+       "texto": "Ayudará a familias expuestas a inseguridad alimentaria a cubrir necesidades."
+      },
+      {
+       "letra": "k",
+       "texto": "Asegurará alimentos a niños menores de cinco años, gestantes y escolares."
+      },
+      {
+       "letra": "l",
+       "texto": "Desarrollará política intersectorial descentralizada contra la desnutrición."
+      }
+     ]
+    },
+    {
+     "n": 16,
+     "nombre": "Fortalecimiento de la familia, promoción y protección de la niñez, la adolescencia y la juventud",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Garantizará programas educativos para el desarrollo de familias estables."
+      },
+      {
+       "letra": "b",
+       "texto": "Promoverá la paternidad y la maternidad responsables."
+      },
+      {
+       "letra": "c",
+       "texto": "Fortalecerá participación y liderazgo de niños y adolescentes."
+      },
+      {
+       "letra": "d",
+       "texto": "Garantizará acceso de niños y adolescentes a educación y salud integrales."
+      },
+      {
+       "letra": "e",
+       "texto": "Prevendrá violencia familiar, maltrato y explotación contra menores."
+      },
+      {
+       "letra": "f",
+       "texto": "Prevendrá pandillaje y promoverá reinserción de adolescentes infractores."
+      },
+      {
+       "letra": "g",
+       "texto": "Atenderá a niños y jóvenes con secuelas del terrorismo."
+      },
+      {
+       "letra": "h",
+       "texto": "Fortalecerá el ente rector y las Defensorías del Niño y Adolescente."
+      },
+      {
+       "letra": "i",
+       "texto": "Fomentará recreación y educación productiva y emprendedora juvenil."
+      },
+      {
+       "letra": "j",
+       "texto": "Implementará atención integral para adolescentes embarazadas y parejas jóvenes."
+      },
+      {
+       "letra": "k",
+       "texto": "Fortalecerá sistemas de cuidado infantil diurno multisectorial."
+      },
+      {
+       "letra": "l",
+       "texto": "Apoyará inversión en espacios de recreación, deporte y cultura juvenil."
+      }
+     ]
+    },
+    {
+     "n": 36,
+     "nombre": "Desarrollo Infantil Temprano",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Generará condiciones para embarazo saludable, parto seguro y nutrición adecuada."
+      },
+      {
+       "letra": "b",
+       "texto": "Garantizará el derecho a la identidad de todos los recién nacidos."
+      },
+      {
+       "letra": "c",
+       "texto": "Garantizará salud y nutrición con controles, vacunas y lucha contra la anemia."
+      },
+      {
+       "letra": "d",
+       "texto": "Sensibilizará sobre la importancia del apego seguro desde la gestación."
+      },
+      {
+       "letra": "e",
+       "texto": "Garantizará cobertura de servicios de educación y cuidado infantil diurno."
+      },
+      {
+       "letra": "f",
+       "texto": "Brindará atención especial a niños neurodivergentes y con discapacidad."
+      },
+      {
+       "letra": "g",
+       "texto": "Protegerá a niños de todas las formas de violencia y explotación."
+      },
+      {
+       "letra": "h",
+       "texto": "Promoverá bienestar y competencias parentales de madres, padres y cuidadores."
+      },
+      {
+       "letra": "i",
+       "texto": "Promoverá conciliación entre la vida laboral y familiar."
+      },
+      {
+       "letra": "j",
+       "texto": "Fortalecerá gobernanza y articulación intersectorial de la primera infancia."
+      },
+      {
+       "letra": "k",
+       "texto": "Promoverá investigaciones y repositorio sobre desarrollo infantil temprano."
+      },
+      {
+       "letra": "l",
+       "texto": "Fomentará innovación, tecnología y observatorio de seguimiento distrital."
+      }
+     ],
+     "por_validar": true
+    }
+   ]
+  },
+  {
+   "id": "III",
+   "nombre": "III. Competitividad del País",
+   "politicas": [
+    {
+     "n": 17,
+     "nombre": "Afirmación de la economía social de mercado",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Garantizar la estabilidad de las instituciones y las reglas de juego."
+      },
+      {
+       "letra": "b",
+       "texto": "Promover competitividad y planeamiento estratégico concertado nacional, regional y local."
+      },
+      {
+       "letra": "c",
+       "texto": "Estimular la inversión privada."
+      },
+      {
+       "letra": "d",
+       "texto": "Fomentar el desarrollo de la infraestructura."
+      },
+      {
+       "letra": "e",
+       "texto": "Evitar el abuso de posición dominante y proteger a los consumidores."
+      },
+      {
+       "letra": "f",
+       "texto": "Fomentar igualdad de oportunidades y adecuada distribución del ingreso."
+      },
+      {
+       "letra": "g",
+       "texto": "Fortalecer el aparato productivo invirtiendo en capacidades humanas y capital fijo."
+      }
+     ]
+    },
+    {
+     "n": 18,
+     "nombre": "Búsqueda de la competitividad, productividad y formalización de la actividad económica",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Consolidar administración eficiente, transparente, moderna y descentralizada."
+      },
+      {
+       "letra": "b",
+       "texto": "Garantizar marco legal que promueva formalización y competitividad económica."
+      },
+      {
+       "letra": "c",
+       "texto": "Simplificar la administración y eliminar barreras de entrada y salida al mercado."
+      },
+      {
+       "letra": "d",
+       "texto": "Proveer infraestructura adecuada."
+      },
+      {
+       "letra": "e",
+       "texto": "Promover mayor competencia en mercados de bienes, servicios, financieros y capitales."
+      },
+      {
+       "letra": "f",
+       "texto": "Política tributaria que no grave la inversión, el empleo ni las exportaciones."
+      },
+      {
+       "letra": "g",
+       "texto": "Promover valor agregado e incrementar exportaciones, especialmente no tradicionales."
+      },
+      {
+       "letra": "h",
+       "texto": "Garantizar el acceso a la información económica."
+      },
+      {
+       "letra": "i",
+       "texto": "Fomentar investigación, adaptación y transferencia tecnológica y científica."
+      },
+      {
+       "letra": "j",
+       "texto": "Facilitar la capacitación de cuadros gerenciales y de la fuerza laboral."
+      },
+      {
+       "letra": "k",
+       "texto": "Construir cultura de competitividad y compromiso empresarial con objetivos nacionales."
+      }
+     ]
+    },
+    {
+     "n": 19,
+     "nombre": "Desarrollo sostenible y gestión ambiental",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Fortalecer la institucionalidad de la gestión ambiental y su coordinación descentralizada."
+      },
+      {
+       "letra": "b",
+       "texto": "Promover participación responsable del sector privado y sociedad civil en decisiones ambientales."
+      },
+      {
+       "letra": "c",
+       "texto": "Promover ordenamiento territorial y manejo de cuencas, bosques y zonas marino costeras."
+      },
+      {
+       "letra": "d",
+       "texto": "Aplicar instrumentos de gestión ambiental de prevención y producción limpia."
+      },
+      {
+       "letra": "e",
+       "texto": "Incorporar en cuentas nacionales la valoración de recursos y la degradación ambiental."
+      },
+      {
+       "letra": "f",
+       "texto": "Estimular la inversión ambiental y la transferencia de tecnología limpia."
+      },
+      {
+       "letra": "g",
+       "texto": "Promover uso eficiente y conservación de suelo, subsuelo, agua y aire."
+      },
+      {
+       "letra": "h",
+       "texto": "Reconocer y defender el conocimiento y cultura tradicionales indígenas."
+      },
+      {
+       "letra": "i",
+       "texto": "Promover ordenamiento urbano y manejo integrado de residuos urbanos e industriales."
+      },
+      {
+       "letra": "j",
+       "texto": "Fortalecer la educación y la investigación ambiental."
+      },
+      {
+       "letra": "k",
+       "texto": "Implementar el Sistema de Evaluación de Impacto Ambiental con participación ciudadana."
+      },
+      {
+       "letra": "l",
+       "texto": "Regular la eliminación de la contaminación sonora."
+      }
+     ]
+    },
+    {
+     "n": 20,
+     "nombre": "Desarrollo de la ciencia y la tecnología",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Asignar recursos y financiamiento a capacidades humanas, investigación e innovación tecnológica."
+      },
+      {
+       "letra": "b",
+       "texto": "Elevar la investigación y desarrollo en universidades, institutos y empresas."
+      },
+      {
+       "letra": "c",
+       "texto": "Formar recursos humanos calificados en sectores productivos más promisorios."
+      },
+      {
+       "letra": "d",
+       "texto": "Desarrollar programas nacionales y regionales de impacto productivo, social y ambiental."
+      },
+      {
+       "letra": "e",
+       "texto": "Promover creatividad, método experimental y razonamiento crítico en la población."
+      }
+     ]
+    },
+    {
+     "n": 21,
+     "nombre": "Desarrollo en infraestructura y vivienda",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Elaborar plan nacional de infraestructura energética, vial, portuaria y de telecomunicaciones."
+      },
+      {
+       "letra": "b",
+       "texto": "Tratamiento especial a obras sociales: salud, educación, saneamiento, riego y drenaje."
+      },
+      {
+       "letra": "c",
+       "texto": "Promover corredores turísticos y de exportación e integración fronteriza."
+      },
+      {
+       "letra": "d",
+       "texto": "Edificar infraestructura local con participación de la población."
+      },
+      {
+       "letra": "e",
+       "texto": "Elaborar plan nacional de vivienda y simplificar su construcción y registro."
+      },
+      {
+       "letra": "f",
+       "texto": "Consolidar sistema habitacional integrado con Estado subsidiario y facilitador."
+      },
+      {
+       "letra": "g",
+       "texto": "Apoyar a las familias para acceder a una vivienda digna."
+      },
+      {
+       "letra": "h",
+       "texto": "Fomentar construcción masiva e industrializada con sistemas de gestión de calidad."
+      },
+      {
+       "letra": "i",
+       "texto": "Fomentar la capacitación y acreditación de la mano de obra en construcción."
+      },
+      {
+       "letra": "j",
+       "texto": "Fomentar saneamiento físico legal y titulación de viviendas."
+      },
+      {
+       "letra": "k",
+       "texto": "Mejorar la calidad de las viviendas autoconstruidas."
+      }
+     ]
+    },
+    {
+     "n": 22,
+     "nombre": "Política de comercio exterior para la ampliación de mercados con reciprocidad",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Asegurar estabilidad jurídica y macroeconómica."
+      },
+      {
+       "letra": "b",
+       "texto": "Preservar una política cambiaria flexible."
+      },
+      {
+       "letra": "c",
+       "texto": "Política arancelaria que reduzca el nivel y la dispersión de aranceles."
+      },
+      {
+       "letra": "d",
+       "texto": "Política tributaria equitativa que asegure devolución de impuestos al exportador."
+      },
+      {
+       "letra": "e",
+       "texto": "Fortalecer la cadena logística y la facilitación aduanera y comercial."
+      },
+      {
+       "letra": "f",
+       "texto": "Mejorar la infraestructura de comercio exterior con el sector privado."
+      },
+      {
+       "letra": "g",
+       "texto": "Establecer política dinámica e integral de promoción comercial."
+      },
+      {
+       "letra": "h",
+       "texto": "Combatir subvaluación, dumping, contrabando y competencia desleal."
+      },
+      {
+       "letra": "i",
+       "texto": "Eliminar barreras para-arancelarias a nuestras exportaciones."
+      },
+      {
+       "letra": "j",
+       "texto": "Procurar acuerdos comerciales para diversificar mercados con valor agregado."
+      },
+      {
+       "letra": "k",
+       "texto": "Construir oferta exportable competitiva con la pequeña y mediana empresa."
+      },
+      {
+       "letra": "l",
+       "texto": "Armonizar las políticas públicas que afecten el comercio exterior."
+      }
+     ]
+    },
+    {
+     "n": 23,
+     "nombre": "Política de desarrollo agrario y rural",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Expandir frontera agrícola y producción con valor agregado y exportaciones."
+      },
+      {
+       "letra": "b",
+       "texto": "Desarrollar infraestructura de riego, transporte, electrificación, almacenaje y conservación."
+      },
+      {
+       "letra": "c",
+       "texto": "Articular ciudades intermedias e infraestructura rural para inversión y empleo."
+      },
+      {
+       "letra": "d",
+       "texto": "Modernizar el agro y la agroindustria con investigación genética y tecnología."
+      },
+      {
+       "letra": "e",
+       "texto": "Formular políticas de incentivo a la actividad agrícola rentable."
+      },
+      {
+       "letra": "f",
+       "texto": "Propiciar sistema de información agraria eficiente para decisiones y planes."
+      }
+     ]
+    },
+    {
+     "n": 33,
+     "nombre": "Política de Estado sobre los recursos hídricos",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Priorizar abastecimiento de agua para consumo humano y seguridad alimentaria."
+      },
+      {
+       "letra": "b",
+       "texto": "Asegurar acceso universal a agua potable y saneamiento, urbano y rural."
+      },
+      {
+       "letra": "c",
+       "texto": "Garantizar gestión integrada de recursos hídricos, uso racional y sostenible."
+      },
+      {
+       "letra": "d",
+       "texto": "Proteger el equilibrio del ciclo hidrológico y la calidad del agua."
+      },
+      {
+       "letra": "e",
+       "texto": "Exigir que actores en cuencas protejan, rehabiliten y compensen impactos."
+      },
+      {
+       "letra": "f",
+       "texto": "Crear condiciones para el reuso y reciclaje de agua residual tratada."
+      },
+      {
+       "letra": "g",
+       "texto": "Fortalecer el Sistema Nacional de Gestión y la autonomía de la ANA."
+      },
+      {
+       "letra": "h",
+       "texto": "Institucionalizar gestión por cuencas con Consejos de Recursos Hídricos."
+      },
+      {
+       "letra": "i",
+       "texto": "Priorizar prevención y gestión de controversias sobre el agua."
+      },
+      {
+       "letra": "j",
+       "texto": "Fortalecer gestión integrada en cuencas transfronterizas con países limítrofes."
+      },
+      {
+       "letra": "k",
+       "texto": "Fomentar inversión pública y privada en captación y disponibilidad de agua."
+      },
+      {
+       "letra": "l",
+       "texto": "Garantizar la formalización de los derechos de uso del agua."
+      }
+     ],
+     "por_validar": true
+    },
+    {
+     "n": 34,
+     "nombre": "Ordenamiento y gestión territorial",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Garantizar desarrollo humano integral, equitativo y sostenible bajo subsidiariedad y solidaridad."
+      },
+      {
+       "letra": "b",
+       "texto": "Conciliar crecimiento y competitividad con equidad social y sostenibilidad ambiental."
+      },
+      {
+       "letra": "c",
+       "texto": "Impulsar ciudades sostenibles como dinamizadoras del desarrollo urbano y rural."
+      },
+      {
+       "letra": "d",
+       "texto": "Generar sistema de información territorial integral accesible a la ciudadanía."
+      },
+      {
+       "letra": "e",
+       "texto": "Impulsar investigación aplicada e innovación tecnológica sobre el territorio."
+      },
+      {
+       "letra": "f",
+       "texto": "Adecuar educación, salud y capacitación local al aprovechamiento racional."
+      },
+      {
+       "letra": "g",
+       "texto": "Reducir la vulnerabilidad ante desastres identificando zonas de riesgo."
+      },
+      {
+       "letra": "h",
+       "texto": "Fortalecer capacidades de gestión territorial en los niveles de gobierno."
+      },
+      {
+       "letra": "i",
+       "texto": "Regular proceso planificado de ordenamiento territorial multiescala y participativo."
+      },
+      {
+       "letra": "j",
+       "texto": "Establecer sistema nacional de gestión territorial que armonice instrumentos."
+      },
+      {
+       "letra": "k",
+       "texto": "Consolidar división político-administrativa y concluir demarcación de distritos y provincias."
+      },
+      {
+       "letra": "l",
+       "texto": "Desarrollar e integrar las zonas de frontera al país y a los vecinos."
+      }
+     ],
+     "por_validar": true
+    },
+    {
+     "n": 35,
+     "nombre": "Sociedad de la información y sociedad del conocimiento",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Generar institucionalidad multiestamentaria para acceso universal y libertad de expresión."
+      },
+      {
+       "letra": "b",
+       "texto": "Fomentar ejercicio y respeto de los Derechos Humanos en entornos digitales."
+      },
+      {
+       "letra": "c",
+       "texto": "Promover inclusión y alfabetización digital para reducir brechas."
+      },
+      {
+       "letra": "d",
+       "texto": "Ampliar y modernizar la infraestructura e impulsar ciudades inteligentes."
+      },
+      {
+       "letra": "e",
+       "texto": "Modernizar el Estado mediante el uso de las TIC."
+      },
+      {
+       "letra": "f",
+       "texto": "Promover las TIC como generación de empleo digno y reconversión laboral."
+      },
+      {
+       "letra": "g",
+       "texto": "Promover productividad y competitividad e impulsar una industria de las TIC."
+      },
+      {
+       "letra": "h",
+       "texto": "Fomentar uso transversal de las TIC en educación, salud y gobierno."
+      },
+      {
+       "letra": "i",
+       "texto": "Regular con base en internet libre, abierto, neutro y seguro."
+      },
+      {
+       "letra": "j",
+       "texto": "Establecer un observatorio permanente y prospectivo de la sociedad de información."
+      }
+     ],
+     "por_validar": true
+    }
+   ]
+  },
+  {
+   "id": "IV",
+   "nombre": "IV. Estado Eficiente, Transparente y Descentralizado",
+   "politicas": [
+    {
+     "n": 24,
+     "nombre": "Afirmación de un Estado eficiente y transparente",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Incrementará cobertura, calidad y celeridad de trámites y servicios públicos, con estándares evaluados."
+      },
+      {
+       "letra": "b",
+       "texto": "Establecerá mecanismos de mejora continua en asignación, ejecución, calidad y control del gasto fiscal."
+      },
+      {
+       "letra": "c",
+       "texto": "Dará acceso a información sobre planes, presupuestos, adquisiciones y gastos públicos."
+      },
+      {
+       "letra": "d",
+       "texto": "Pondrá en uso instrumentos de fiscalización ciudadana para transparencia y rendición de cuentas."
+      },
+      {
+       "letra": "e",
+       "texto": "Erradicará la utilización proselitista del Estado y la formación de clientelas."
+      },
+      {
+       "letra": "f",
+       "texto": "Mejorará la capacidad de gestión mediante reforma integral de la administración pública."
+      },
+      {
+       "letra": "g",
+       "texto": "Reducirá los costos de acceso a los bienes y servicios públicos."
+      },
+      {
+       "letra": "h",
+       "texto": "Revalorará y fortalecerá la carrera pública premiando competencia y solvencia moral."
+      }
+     ]
+    },
+    {
+     "n": 25,
+     "nombre": "Cautela de la institucionalidad de las Fuerzas Armadas y su servicio a la democracia",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Afirmará la institucionalidad, profesionalidad y neutralidad de las Fuerzas Armadas."
+      },
+      {
+       "letra": "b",
+       "texto": "Garantizará el control democrático de las Fuerzas Armadas."
+      },
+      {
+       "letra": "c",
+       "texto": "Reafirmará su carácter no deliberante mediante adecuada relación civil-militar."
+      },
+      {
+       "letra": "d",
+       "texto": "Promoverá Fuerzas Armadas modernas, eficientes y de accionar conjunto, regidas por valores éticos."
+      },
+      {
+       "letra": "e",
+       "texto": "Promoverá su participación en defensa regional, seguridad hemisférica y misiones de paz de la ONU."
+      },
+      {
+       "letra": "f",
+       "texto": "Proveerá los elementos materiales necesarios para cumplir su misión constitucional."
+      },
+      {
+       "letra": "g",
+       "texto": "Garantizará transparencia y control en la adquisición y venta de bienes y servicios."
+      },
+      {
+       "letra": "h",
+       "texto": "Otorgará a los miembros de las Fuerzas Armadas el derecho al sufragio."
+      }
+     ]
+    },
+    {
+     "n": 26,
+     "nombre": "Promoción de la ética y la transparencia y erradicación de la corrupción, el lavado de dinero, la evasión tributaria y el contrabando en todas sus formas",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Enfatizará los principios éticos que refuercen el cumplimiento ciudadano de las normas."
+      },
+      {
+       "letra": "b",
+       "texto": "Velará por función pública transparente, vigilancia ciudadana e independencia del Sistema Nacional de Control."
+      },
+      {
+       "letra": "c",
+       "texto": "Desterrará la impunidad, el abuso de poder, la corrupción y el atropello de derechos."
+      },
+      {
+       "letra": "d",
+       "texto": "Desarrollará una cultura de paz, valores democráticos y transparencia."
+      },
+      {
+       "letra": "e",
+       "texto": "Promoverá cultura anticorrupción eliminando tráfico de influencias, nepotismo, contrabando, evasión y lavado."
+      },
+      {
+       "letra": "f",
+       "texto": "Regulará la función pública para evitar su ejercicio por intereses particulares."
+      }
+     ]
+    },
+    {
+     "n": 27,
+     "nombre": "Erradicación de la producción, el tráfico y el consumo ilegal de drogas",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá principios éticos y estilos de vida que motiven el rechazo a las drogas."
+      },
+      {
+       "letra": "b",
+       "texto": "Luchará frontal y legalmente contra el narcotráfico y sus organizaciones."
+      },
+      {
+       "letra": "c",
+       "texto": "Promoverá prevención del consumo y rehabilitación de los fármaco-dependientes."
+      },
+      {
+       "letra": "d",
+       "texto": "Promoverá desarrollo alternativo integral para sustituir la economía de la coca por una lícita."
+      },
+      {
+       "letra": "e",
+       "texto": "Respetará los compromisos internacionales y consolidará la responsabilidad compartida."
+      },
+      {
+       "letra": "f",
+       "texto": "Fomentará el cuidado y recuperación del medio ambiente afectado por insumos ilícitos."
+      },
+      {
+       "letra": "g",
+       "texto": "Combatirá toda relación entre el tráfico ilícito de drogas y la corrupción."
+      },
+      {
+       "letra": "h",
+       "texto": "Promoverá el ecoturismo con mano de obra de las zonas afectadas."
+      },
+      {
+       "letra": "j",
+       "texto": "Penalizará el consumo de drogas ilegales."
+      }
+     ]
+    },
+    {
+     "n": 28,
+     "nombre": "Plena vigencia de la Constitución y de los derechos humanos y acceso a la justicia e independencia judicial",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá un Sistema de Administración de Justicia autónomo, moderno y descentralizado al servicio del ciudadano."
+      },
+      {
+       "letra": "b",
+       "texto": "Promoverá designación transparente de autoridades judiciales, su valorización y capacitación permanente."
+      },
+      {
+       "letra": "c",
+       "texto": "Promoverá relación intercultural entre justicia comunal y Poder Judicial, regulando sus competencias."
+      },
+      {
+       "letra": "d",
+       "texto": "Consolidará la regulación de la justicia de paz y la elección popular de sus jueces."
+      },
+      {
+       "letra": "e",
+       "texto": "Difundirá la conciliación, mediación, arbitraje y mecanismos alternativos de resolución de conflictos."
+      },
+      {
+       "letra": "f",
+       "texto": "Garantizará vigencia de la Constitución, respeto a derechos humanos y sanción a violadores."
+      },
+      {
+       "letra": "g",
+       "texto": "Establecerá vigilancia a la administración de justicia y erradicará la corrupción judicial."
+      },
+      {
+       "letra": "h",
+       "texto": "Garantizará cobertura nacional y mejor funcionamiento de la Defensoría del Pueblo."
+      },
+      {
+       "letra": "i",
+       "texto": "Fortalecerá las instancias de control interno de los órganos jurisdiccionales."
+      }
+     ]
+    },
+    {
+     "n": 29,
+     "nombre": "Acceso a la información, libertad de expresión y libertad de prensa",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Promoverá cultura de transparencia y rendición de cuentas, eliminando la cultura del secreto."
+      },
+      {
+       "letra": "b",
+       "texto": "Eliminará normas penales y restricciones que amenacen la libertad de expresión."
+      },
+      {
+       "letra": "c",
+       "texto": "Establecerá un sistema transparente y justo de asignación de la publicidad estatal."
+      },
+      {
+       "letra": "d",
+       "texto": "Erradicará trabas administrativas y promoverá medios electrónicos para acceso a la información estatal."
+      },
+      {
+       "letra": "e",
+       "texto": "Equilibrará protección de la intimidad y seguridad nacional con acceso a información y libertad de expresión."
+      },
+      {
+       "letra": "f",
+       "texto": "Unificará la legislación sobre acceso a la información y publicidad de actos públicos."
+      },
+      {
+       "letra": "g",
+       "texto": "Garantizará a los partidos acceso igualitario a medios y franjas electorales."
+      },
+      {
+       "letra": "h",
+       "texto": "Evitará todo tipo de censura."
+      },
+      {
+       "letra": "i",
+       "texto": "Favorecerá la autorregulación ética de los medios y la organización ciudadana."
+      },
+      {
+       "letra": "j",
+       "texto": "Propondrá cláusulas de conciencia y códigos de ética en empresas de comunicación."
+      },
+      {
+       "letra": "k",
+       "texto": "Tendrá política contraria a información que lesione la dignidad y el honor de las personas."
+      }
+     ]
+    },
+    {
+     "n": 30,
+     "nombre": "Eliminación del terrorismo y afirmación de la reconciliación nacional",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Erradicará el terrorismo, sancionará a integrantes de organizaciones terroristas y sus nuevas formas."
+      },
+      {
+       "letra": "b",
+       "texto": "Mantendrá legislación antiterrorista compatible con el derecho internacional y los tratados de derechos humanos."
+      },
+      {
+       "letra": "c",
+       "texto": "Fomentará educación democrática, cultura de paz y participación ciudadana en defensa del Estado de Derecho."
+      },
+      {
+       "letra": "d",
+       "texto": "Propenderá a la atención integral de las secuelas de la violencia y reparación a víctimas."
+      },
+      {
+       "letra": "e",
+       "texto": "Desarrollará programas de apoyo al repoblamiento y reconstrucción de zonas afectadas por la violencia."
+      },
+      {
+       "letra": "f",
+       "texto": "Promoverá acciones para eliminar los factores estructurales de la violencia."
+      }
+     ]
+    },
+    {
+     "n": 31,
+     "nombre": "Sostenibilidad fiscal y reducción del peso de la deuda",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Asegurará la sostenibilidad fiscal."
+      },
+      {
+       "letra": "b",
+       "texto": "Producirá una reforma tributaria progresiva basada en desarrollo económico y formalización."
+      },
+      {
+       "letra": "c",
+       "texto": "Asegurará la calidad del gasto público social."
+      },
+      {
+       "letra": "d",
+       "texto": "Reperfilará el servicio de la deuda pública de forma prudente y transparente."
+      },
+      {
+       "letra": "e",
+       "texto": "Comprometerá a los acreedores en el cofinanciamiento del desarrollo."
+      },
+      {
+       "letra": "f",
+       "texto": "Asegurará transparencia en nuevos contratos y rendición de cuentas del endeudamiento."
+      }
+     ]
+    },
+    {
+     "n": 32,
+     "nombre": "Gestión del Riesgo de Desastres",
+     "objetivos": [
+      {
+       "letra": "a",
+       "texto": "Fortalecerá la Gestión del Riesgo mediante un Sistema Nacional integrado y descentralizado con Ente Rector."
+      },
+      {
+       "letra": "b",
+       "texto": "Asignará recursos para la gestión del riesgo mediante gestión por resultados y programas presupuestales."
+      },
+      {
+       "letra": "c",
+       "texto": "Priorizará políticas de estimación y reducción del riesgo acordes con los objetivos de desarrollo nacional."
+      },
+      {
+       "letra": "d",
+       "texto": "Fomentará reducción del riesgo adaptando la expansión urbana al cambio climático y microzonificación."
+      },
+      {
+       "letra": "e",
+       "texto": "Estará preparado para atención oportuna de emergencias, priorizando poblaciones vulnerables."
+      },
+      {
+       "letra": "f",
+       "texto": "Implementará planes de rehabilitación y reconstrucción de manera eficaz y oportuna."
+      },
+      {
+       "letra": "g",
+       "texto": "Promoverá la participación de la sociedad civil y la cooperación internacional."
+      },
+      {
+       "letra": "h",
+       "texto": "Fomentará el uso de la ciencia y tecnología para investigar la fenomenología de los desastres."
+      },
+      {
+       "letra": "i",
+       "texto": "Desarrollará programas de educación preventiva frente a los riesgos en el Sistema Educativo Nacional."
+      },
+      {
+       "letra": "j",
+       "texto": "Promoverá tecnologías adecuadas para prevención de desastres y reducción de vulnerabilidades."
+      },
+      {
+       "letra": "k",
+       "texto": "Difundirá la normatividad de gestión del riesgo con participación de los medios de comunicación."
+      },
+      {
+       "letra": "l",
+       "texto": "Velará por el cumplimiento de los acuerdos internacionales en materia de Gestión del Riesgo."
+      }
+     ],
+     "por_validar": true
+    }
+   ]
+  }
+ ],
+ "total_objetivos": 310
 }

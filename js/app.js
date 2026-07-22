@@ -290,8 +290,10 @@ function renderArticulacion() {
     html += `<div class="block" style="border-left:3px solid ${ejeColor(e.nombre)}"><h3 style="color:${ejeColor(e.nombre)};margin:0 0 10px">${esc(e.nombre)}</h3>`;
     e.politicas.forEach((p) => {
       const coms = byPol[p.n] || [];
+      const objs = p.objetivos || [];
       html += `<div style="margin:0 0 12px;padding-left:10px;border-left:1px solid var(--line)"><div style="font-weight:600">${p.n}. ${esc(p.nombre)} ${coms.length ? `<span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${coms.length})</span>` : `<span style="color:var(--mut2);font-weight:400;font-size:.76rem">— sin comisiones enlazadas aún</span>`}</div>`;
       if (coms.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${coms.map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(nom(cm.id))} ${tipoBadge(cm.tipo)}</button>`).join("")}</div>`;
+      if (objs.length) html += `<details style="margin-top:6px"><summary style="cursor:pointer;color:var(--mut);font-size:.8rem">Ver ${objs.length} objetivos de esta política</summary><ul style="margin:6px 0 0;padding-left:20px;color:var(--mut);font-size:.85rem">${objs.map((o) => `<li style="margin-bottom:3px"><b style="color:var(--mut2)">${esc(o.letra)})</b> ${esc(o.texto)}</li>`).join("")}</ul></details>`;
       html += `</div>`;
     });
     html += `</div>`;
