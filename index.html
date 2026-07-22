@@ -68,17 +68,23 @@
     --bg:#0a0e1a; --panel:#111726; --panel2:#0e1422; --line:#1e2840;
     --txt:#e8edf7; --mut:#8a98b8; --mut2:#5d6b88;
     --acc:#d91023; --acc2:#ff3b4e; --gold:#e0a52e; --ok:#2ed47a; --info:#3b82f6;
+    --card:#141b2e; --mapbg:#0a0e1a; --headbg:rgba(10,14,26,.82); --bggrad:#161e35;
     --r:16px;
+  }
+  html[data-theme=light]{
+    --bg:#f5f7fb; --panel:#ffffff; --panel2:#f0f3f9; --line:#d9e0ec;
+    --txt:#182036; --mut:#556087; --mut2:#8a94ac;
+    --card:#eef2f8; --mapbg:#e9edf5; --headbg:rgba(255,255,255,.88); --bggrad:#e6ecf7;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{background:radial-gradient(1200px 600px at 80% -10%, #161e35 0%, var(--bg) 55%);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+  body{background:radial-gradient(1200px 600px at 80% -10%, var(--bggrad) 0%, var(--bg) 55%);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
   a{color:inherit}
   .wrap{max-width:1240px;margin:0 auto;padding:0 18px}
   .serif{font-family:Fraunces,Georgia,serif}
 
   /* Header */
-  header.top{position:sticky;top:0;z-index:40;background:rgba(10,14,26,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  header.top{position:sticky;top:0;z-index:40;background:var(--headbg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .top-in{display:flex;align-items:center;gap:14px;padding:12px 0}
   .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.02em}
   .flag{width:30px;height:30px;border-radius:8px;background:linear-gradient(90deg,var(--acc) 0 33%,#fff 33% 66%,var(--acc) 66% 100%);flex:none;box-shadow:0 2px 8px rgba(217,16,35,.4)}
@@ -287,6 +293,7 @@
       <button class="tab" data-view="faq">❔ <span>FAQ</span></button>
     </nav>
     <div class="top-spacer"></div>
+    <button class="pill" id="themeToggle" title="Cambiar tema claro / oscuro" aria-label="Cambiar tema" style="cursor:pointer;background:none">🌙 Oscuro</button>
     <div class="pill" id="pill-updated">—</div>
   </div>
 </header>

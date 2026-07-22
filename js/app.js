@@ -290,7 +290,7 @@ function renderArticulacion() {
     e.politicas.forEach((p) => {
       const coms = byPol[p.n] || [];
       html += `<div style="margin:0 0 12px;padding-left:10px;border-left:1px solid var(--line)"><div style="font-weight:600">${p.n}. ${esc(p.nombre)} ${coms.length ? `<span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${coms.length})</span>` : `<span style="color:var(--mut2);font-weight:400;font-size:.76rem">— sin comisiones enlazadas aún</span>`}</div>`;
-      if (coms.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${coms.map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(nom(cm.id))} ${tipoBadge(cm.tipo)}</button>`).join("")}</div>`;
+      if (coms.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${coms.map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(nom(cm.id))} ${tipoBadge(cm.tipo)}</button>`).join("")}</div>`;
       html += `</div>`;
     });
     html += `</div>`;
@@ -364,7 +364,7 @@ function renderTerritorial() {
       ${so.vulnerabilidad_pct != null ? `<div><div class="serif" style="font-size:1.3rem;font-weight:700;color:#e0a52e">${esc(String(so.vulnerabilidad_pct))}%</div><div style="color:var(--mut2);font-size:.72rem">Vulnerable a la pobreza</div></div>` : ""}
     </div>` : "";
   box.innerHTML = `<div class="revbanner" style="margin-bottom:16px">🗺️ Datos <b>reales</b>: IDH 2019 + % de pobreza y pobreza extrema (PNUD/INEI) + población 2020 por distrito (Proyecto INTI); gasto público del MEF/SIAF por departamento (QHAWAY). Semáforo: <span style="color:#2ed47a">■</span> mejor · <span style="color:#e0a52e">■</span> medio · <span style="color:#d91023">■</span> crítico.</div>
-    <div style="margin-bottom:14px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Departamento</label><select id="terrSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${deptos.map((d) => `<option ${d === sel ? "selected" : ""}>${esc(d)}</option>`).join("")}</select></div>
+    <div style="margin-bottom:14px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Departamento</label><select id="terrSel" style="background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${deptos.map((d) => `<option ${d === sel ? "selected" : ""}>${esc(d)}</option>`).join("")}</select></div>
     ${gastoHtml}
     ${gtipoHtml}
     ${socioHtml}
@@ -375,6 +375,7 @@ function renderTerritorial() {
 window.renderTerritorial = renderTerritorial;
 
 /* ---------- Mapa territorial interactivo (choropleth por distrito) ---------- */
+const cssVar = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim() || "#e8edf7";
 const TERR_IND = {
   idh: { label: "IDH (2019)", good: "high", fmt: (v) => v.toFixed(3),
     buckets: [[0.6, "#12703a"], [0.52, "#2ed47a"], [0.46, "#e0a52e"], [0.4, "#e8743b"], [-1, "#d91023"]] },
@@ -397,14 +398,15 @@ function renderTerrMap() {
   S.terrInd = "idh";
   wrap.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px">
       <label style="color:var(--mut2);font-size:.8rem">Indicador en el mapa</label>
-      <select id="terrIndSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">
+      <select id="terrIndSel" style="background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">
         ${Object.entries(TERR_IND).map(([k, v]) => `<option value="${k}">${esc(v.label)}</option>`).join("")}</select>
       <span id="terrLegend" style="display:flex;gap:0;font-size:.7rem;color:var(--mut);margin-left:6px"></span>
     </div>
-    <div id="terrMap" style="height:520px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0a0e1a"></div>
+    <div id="terrMap" style="height:520px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--mapbg)"></div>
     <div style="color:var(--mut2);font-size:.78rem;margin:8px 0 20px">Datos reales por distrito (IDH 2019, pobreza — PNUD/INEI, vía Proyecto INTI). Clic en un distrito para ver su detalle. VAB y vulnerabilidad se muestran por departamento arriba.</div>`;
   const map = L.map("terrMap", { scrollWheelZoom: false, attributionControl: false }).setView([-9.5, -74.5], 5);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png", { maxZoom: 12 }).addTo(map);
+  const tileStyle = () => document.documentElement.getAttribute("data-theme") === "light" ? "light_nolabels" : "dark_nolabels";
+  S.terrTile = L.tileLayer("https://{s}.basemaps.cartocdn.com/" + tileStyle() + "/{z}/{x}/{y}{r}.png", { maxZoom: 12 }).addTo(map);
   const legend = () => {
     const cfg = TERR_IND[S.terrInd];
     document.getElementById("terrLegend").innerHTML = cfg.buckets.map(([, c]) => `<span style="width:22px;height:12px;display:inline-block;background:${c}"></span>`).join("") +
@@ -447,9 +449,9 @@ function renderKeiko() {
     const items = props.filter((p) => p.pilar === pil);
     html += `<div class="block" style="border-left:3px solid ${col}"><h3 style="color:${col};margin:0 0 12px">Pilar ${esc(pil)} <span style="color:var(--mut2);font-weight:400;font-size:.8rem">(${items.length} propuestas)</span></h3>`;
     items.forEach((p) => {
-      const coms = (p.comisiones || []).map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:#141b2e;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(cm.comision_nombre || cm.id)} ${tipoBadge(cm.tipo)}</button>`).join("");
+      const coms = (p.comisiones || []).map((cm) => `<button onclick="openDetail('${sid(cm.id)}')" style="background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:3px 8px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;gap:6px;align-items:center">${esc(cm.comision_nombre || cm.id)} ${tipoBadge(cm.tipo)}</button>`).join("");
       const an = (p.acuerdo_nacional || []).map((a) => `<span style="font-size:.78rem;color:var(--mut)">P${a.politica} ${esc((a.politica_nombre || "").slice(0, 40))} ${tipoBadge(a.tipo)}</span>`).join(" · ");
-      html += `<div style="margin:0 0 14px;padding:10px 12px;background:#0e1424;border:1px solid var(--line);border-radius:10px">
+      html += `<div style="margin:0 0 14px;padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px">
         <div style="font-weight:600">${esc(p.titulo)}</div>
         <div style="color:var(--mut);font-size:.9rem;margin:3px 0 8px">${esc(p.resumen)}</div>
         ${coms ? `<div style="color:var(--mut2);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Comisiones del CIP</div><div style="display:flex;flex-wrap:wrap;gap:6px">${coms}</div>` : `<div style="color:var(--mut2);font-size:.82rem">Sin comisión del Plan 2050 claramente alineada.</div>`}
@@ -537,13 +539,13 @@ function renderSankey() {
   const color = ejeColor(eje.nombre);
   const nNodes = new Set([].concat(links.map((l) => l.from), links.map((l) => l.to))).size;
   const h = Math.max(380, nNodes * 20);
-  box.innerHTML = `<div style="margin-bottom:10px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Eje del Acuerdo Nacional</label><select id="skSel" style="background:#141b2e;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${ejes.map((e) => `<option value="${esc(e.id)}" ${e.id === sel ? "selected" : ""}>${esc(e.nombre)}</option>`).join("")}</select></div>
+  box.innerHTML = `<div style="margin-bottom:10px"><label style="color:var(--mut2);font-size:.8rem;margin-right:8px">Eje del Acuerdo Nacional</label><select id="skSel" style="background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit">${ejes.map((e) => `<option value="${esc(e.id)}" ${e.id === sel ? "selected" : ""}>${esc(e.nombre)}</option>`).join("")}</select></div>
     <div style="color:var(--mut);font-size:.85rem;margin-bottom:10px">Capas: <b>Políticas de Estado</b> → <b>Comisiones del CIP</b> → <b>Programas Presupuestales</b>. El grosor del flujo = nº de vínculos. Propuesta con IA, a validar.</div>
     <div style="overflow-x:auto"><div style="height:${h}px;min-width:680px"><canvas id="skCanvas"></canvas></div></div>`;
   const s = document.getElementById("skSel"); if (s) s.onchange = () => { S.sankeyEje = s.value; renderSankey(); };
   if (!links.length) { document.getElementById("skCanvas").outerHTML = '<div class="skeleton">Sin flujos para este eje.</div>'; return; }
   chartFont();
-  try { Chart.defaults.color = "#eef2f9"; } catch (e) {}   // etiquetas del Sankey brillantes (legibles sobre oscuro)
+  const skTxt = cssVar("--txt");   // etiquetas del Sankey según el tema
   // color por capa (vivos): Políticas = color del eje · Comisiones = dorado · Programas Ppto = azul
   const ejeBright = { "#d91023": "#ff5a6e", "#a855f7": "#c98bff", "#2ed47a": "#4ef29a", "#3b82f6": "#6aa8ff" };
   const polColor = ejeBright[color] || color;
@@ -557,7 +559,7 @@ function renderSankey() {
         colorFrom: (c) => layerColor(c.raw && c.raw.from),
         colorTo: (c) => layerColor(c.raw && c.raw.to),
         colorMode: "gradient", alpha: 0.85, borderWidth: 0, nodeWidth: 14,
-        color: "#eef2f9", size: 12, padding: 8,
+        color: skTxt, size: 12, padding: 8,
       }] },
       options: { maintainAspectRatio: false, layout: { padding: { left: 4, right: 8 } }, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => " " + (labels[c.raw.from] || c.raw.from) + " → " + (labels[c.raw.to] || c.raw.to) } } } },
     });
@@ -892,5 +894,33 @@ async function answer(q) {
     addMsg("a", `${c.nombre} — ${(c.resumen || c.vision || "").slice(0, 180)} ${((c.objetivos_estrategicos || c.metas) || [])[0] ? "Objetivo: " + (c.objetivos_estrategicos || c.metas)[0] : ""}`);
   });
 }
+
+/* ---------- Tema claro / oscuro ---------- */
+function applyTheme(t) {
+  document.documentElement.setAttribute("data-theme", t);
+  const b = document.getElementById("themeToggle");
+  if (b) b.textContent = t === "light" ? "☀️ Claro" : "🌙 Oscuro";
+  try { localStorage.setItem("pp2050-theme", t); } catch (e) {}
+  // recolorear gráficos/mapa que dependen del tema
+  try {
+    if (typeof renderSeguimiento === "function") {} // charts se redibujan al re-render
+    if (S && S.terrMapObj) S.terrMapObj.invalidateSize();
+    if (S && S.terrTile) { const st = t === "light" ? "light_nolabels" : "dark_nolabels"; S.terrTile.setUrl("https://{s}.basemaps.cartocdn.com/" + st + "/{z}/{x}/{y}{r}.png"); }
+    if (S && S.an && S.artic && Object.keys(S.artic).length) renderSankey();
+    if (S && S.meta) { renderOverview(); }
+  } catch (e) {}
+}
+(function initTheme() {
+  let t = "dark";
+  try { t = localStorage.getItem("pp2050-theme") || "dark"; } catch (e) {}
+  document.documentElement.setAttribute("data-theme", t);
+  const wire = () => {
+    const b = document.getElementById("themeToggle");
+    if (!b) return;
+    b.textContent = t === "light" ? "☀️ Claro" : "🌙 Oscuro";
+    b.onclick = () => applyTheme(document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light");
+  };
+  if (document.readyState !== "loading") wire(); else document.addEventListener("DOMContentLoaded", wire);
+})();
 
 boot();
