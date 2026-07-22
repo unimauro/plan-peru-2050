@@ -384,7 +384,28 @@ const TERR_IND = {
     buckets: [[10, "#12703a"], [20, "#2ed47a"], [30, "#e0a52e"], [40, "#e8743b"], [1e9, "#d91023"]] },
   pex: { label: "Pobreza extrema (%)", good: "low", fmt: (v) => v.toFixed(1) + "%",
     buckets: [[2, "#12703a"], [5, "#2ed47a"], [10, "#e0a52e"], [20, "#e8743b"], [1e9, "#d91023"]] },
+  // Indicadores por DEPARTAMENTO (cada distrito toma el valor de su departamento)
+  vab: { label: "VAB per cápita · departamento (INEI 2023)", good: "high", dept: "vab", fmt: (v) => "S/ " + num(Math.round(v)),
+    buckets: [[30000, "#12703a"], [20000, "#2ed47a"], [13000, "#e0a52e"], [9000, "#e8743b"], [-1, "#d91023"]] },
+  vuln: { label: "Vulnerabilidad a la pobreza · departamento (INEI)", good: "low", dept: "vuln", fmt: (v) => v.toFixed(1) + "%",
+    buckets: [[30, "#12703a"], [35, "#2ed47a"], [40, "#e0a52e"], [43, "#e8743b"], [1e9, "#d91023"]] },
+  ejec: { label: "Ejecución del gasto · departamento (MEF)", good: "high", dept: "ejec", fmt: (v) => v.toFixed(0) + "%",
+    buckets: [[55, "#12703a"], [45, "#2ed47a"], [38, "#e0a52e"], [30, "#e8743b"], [-1, "#d91023"]] },
+  inv: { label: "% inversión del presupuesto · departamento (MEF)", good: "high", dept: "inv", fmt: (v) => v.toFixed(0) + "%",
+    buckets: [[45, "#12703a"], [38, "#2ed47a"], [32, "#e0a52e"], [25, "#e8743b"], [-1, "#d91023"]] },
 };
+function normDep(dp) { const u = String(dp || "").toUpperCase(); return u.indexOf("CALLAO") >= 0 ? "CALLAO" : u; }
+function deptVal(dp, kind) {
+  const nd = normDep(dp);
+  const so = S.socio && S.socio.departamentos, ga = S.gasto && S.gasto.departamentos, gt = S.gtipo && S.gtipo.departamentos;
+  const find = (obj) => { if (!obj) return null; for (const k in obj) if (normDep(k) === nd) return obj[k]; return null; };
+  if (kind === "vab") { const v = find(so); return v ? v.vab_percapita_soles : null; }
+  if (kind === "vuln") { const v = find(so); return v ? v.vulnerabilidad_pct : null; }
+  if (kind === "ejec") { const v = find(ga); return v ? v.ejecucion : null; }
+  if (kind === "inv") { const v = find(gt); if (!v) return null; const t = (v.corriente_pim || 0) + (v.inversion_pim || 0); return t ? 100 * v.inversion_pim / t : null; }
+  return null;
+}
+function terrVal(f, ind) { const cfg = TERR_IND[ind]; return cfg.dept ? deptVal(f.properties.dp, cfg.dept) : f.properties[ind]; }
 function terrColor(ind, v) {
   if (v == null) return "#2a3350";
   const b = TERR_IND[ind].buckets;
@@ -404,7 +425,7 @@ function renderTerrMap() {
       <span id="terrLegend" style="display:flex;gap:0;font-size:.7rem;color:var(--mut);margin-left:6px"></span>
     </div>
     <div id="terrMap" style="height:520px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--mapbg)"></div>
-    <div style="color:var(--mut2);font-size:.78rem;margin:8px 0 20px">Datos reales por distrito (IDH 2019, pobreza — PNUD/INEI, vía Proyecto INTI). Clic en un distrito para ver su detalle. VAB y vulnerabilidad se muestran por departamento arriba.</div>`;
+    <div style="color:var(--mut2);font-size:.78rem;margin:8px 0 20px">IDH y pobreza son <b>por distrito</b> (PNUD/INEI, vía Proyecto INTI); VAB, vulnerabilidad, ejecución e inversión son <b>por departamento</b> (INEI/MEF) — cada distrito toma el valor de su departamento. Clic en un distrito para ver todo su detalle.</div>`;
   const map = L.map("terrMap", { scrollWheelZoom: false, attributionControl: false }).setView([-9.5, -74.5], 5);
   const tileStyle = () => document.documentElement.getAttribute("data-theme") === "light" ? "light_nolabels" : "dark_nolabels";
   S.terrTile = L.tileLayer("https://{s}.basemaps.cartocdn.com/" + tileStyle() + "/{z}/{x}/{y}{r}.png", { maxZoom: 12 }).addTo(map);
@@ -413,18 +434,22 @@ function renderTerrMap() {
     document.getElementById("terrLegend").innerHTML = cfg.buckets.map(([, c]) => `<span style="width:22px;height:12px;display:inline-block;background:${c}"></span>`).join("") +
       `<span style="margin-left:6px">${cfg.good === "high" ? "◀ menor · mayor ▶" : "◀ mejor · peor ▶"}</span>`;
   };
-  const style = (f) => ({ fillColor: terrColor(S.terrInd, f.properties[S.terrInd]), weight: .3, color: "#0a0e1a", fillOpacity: .85 });
+  const style = (f) => ({ fillColor: terrColor(S.terrInd, terrVal(f, S.terrInd)), weight: .3, color: "#8a94ac", fillOpacity: .85 });
   let layer;
   fetch("data/distritos.geojson").then((r) => r.json()).then((gj) => {
     layer = L.geoJSON(gj, {
       style,
       onEachFeature: (f, lyr) => {
         const p = f.properties;
+        const dv = (kind) => { const v = deptVal(p.dp, kind); return v; };
         lyr.bindPopup(`<b>${esc(p.d || "")}</b><br><span style="color:#8a98b8">${esc(p.pr || "")} · ${esc(p.dp || "")}</span><br>
           IDH: <b>${p.idh != null ? p.idh.toFixed(3) : "s/d"}</b><br>Pobreza: <b>${p.pob != null ? p.pob + "%" : "s/d"}</b><br>
-          Pobreza extrema: <b>${p.pex != null ? p.pex + "%" : "s/d"}</b><br>Población: <b>${p.p != null ? num(p.p) : "s/d"}</b>`);
+          Pobreza extrema: <b>${p.pex != null ? p.pex + "%" : "s/d"}</b><br>Población: <b>${p.p != null ? num(p.p) : "s/d"}</b>
+          <br><span style="color:#8a98b8;font-size:.9em">Departamento (${esc(p.dp || "")}):</span><br>
+          VAB per cápita: <b>${dv("vab") != null ? "S/ " + num(Math.round(dv("vab"))) : "s/d"}</b> · Vulnerab.: <b>${dv("vuln") != null ? dv("vuln") + "%" : "s/d"}</b><br>
+          Ejecución: <b>${dv("ejec") != null ? dv("ejec") + "%" : "s/d"}</b> · Inversión: <b>${dv("inv") != null ? dv("inv").toFixed(0) + "%" : "s/d"}</b>`);
         lyr.on("mouseover", () => lyr.setStyle({ weight: 1.5, color: "#fff" }));
-        lyr.on("mouseout", () => lyr.setStyle({ weight: .3, color: "#0a0e1a" }));
+        lyr.on("mouseout", () => lyr.setStyle({ weight: .3, color: "#8a94ac" }));
       },
     }).addTo(map);
   }).catch(() => { document.getElementById("terrMap").innerHTML = '<div class="skeleton" style="padding:20px">No se pudo cargar el mapa.</div>'; });
