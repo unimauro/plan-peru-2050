@@ -112,7 +112,8 @@ async function boot() {
     wireToTop();
     openFromHash();
     const t0 = new URLSearchParams(location.search).get("tab");
-    if (t0 === "simular" || t0 === "faq") setView(t0);
+    const VIEWS = ["explorar", "articulacion", "territorial", "keiko", "seguimiento", "flujos", "simular", "faq"];
+    if (t0 && VIEWS.includes(t0)) setView(t0);
   } catch (e) {
     $("#grid").innerHTML = '<div class="skeleton">No se pudieron cargar los datos.</div>';
     console.error(e);
@@ -913,6 +914,8 @@ function applyTheme(t) {
 (function initTheme() {
   let t = "dark";
   try { t = localStorage.getItem("pp2050-theme") || "dark"; } catch (e) {}
+  const qp = new URLSearchParams(location.search).get("theme");
+  if (qp === "light" || qp === "dark") t = qp;   // deep-link / capturas
   document.documentElement.setAttribute("data-theme", t);
   const wire = () => {
     const b = document.getElementById("themeToggle");

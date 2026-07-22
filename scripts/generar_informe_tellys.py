@@ -63,6 +63,18 @@ def bullet(text, bold_lead=None):
     r2 = p.add_run(text); r2.font.color.rgb = DARK; r2.font.size = Pt(11)
 
 
+IMG = os.path.join(ROOT, "entregables", "_img")
+def shot(fn, caption):
+    p = os.path.join(IMG, fn)
+    if not os.path.exists(p):
+        return
+    doc.add_picture(p, width=Cm(16.5))
+    doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+    cp = doc.add_paragraph(); cp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r = cp.add_run(caption); r.italic = True; r.font.size = Pt(9); r.font.color.rgb = GREY
+    cp.paragraph_format.space_after = Pt(12)
+
+
 def table(headers, rows, widths=None):
     t = doc.add_table(rows=1, cols=len(headers)); t.style = "Light Grid Accent 1"; t.alignment = WD_TABLE_ALIGNMENT.CENTER
     for i, h in enumerate(headers):
@@ -135,6 +147,7 @@ for lead, txt in [
     ("Simulación.", "Proyección interactiva de escenarios al 2050."),
 ]:
     bullet(txt, bold_lead=lead)
+shot("cap_explorar.png", "Vista principal (Explorar): las comisiones temáticas, con filtros por eje del Acuerdo Nacional y estado de validación.")
 
 # ===================== 3. ARTICULACIÓN =====================
 h1("3. Articulación estratégica (hacia arriba y hacia abajo)")
@@ -151,6 +164,11 @@ bullet("%d enlaces Comisiones ↔ Programas Presupuestales del MEF (hacia abajo,
 para("La propuesta de articulación fue generada con inteligencia artificial (un análisis por comisión) y se "
      "entrega como PROPUESTA A VALIDAR por el equipo técnico. Se adjunta la matriz completa en Excel para su "
      "revisión punto por punto.", italic=True, color=GREY, size=10)
+shot("cap_articulacion.png", "Módulo Articulación: por cada eje y política del Acuerdo Nacional se listan las comisiones vinculadas y el tipo de relación.")
+para("Adicionalmente, el módulo Flujos representa esta articulación como un diagrama de flujos (Sankey) por capas, "
+     "que permite visualizar cómo las Políticas de Estado se conectan con las comisiones y estas con los Programas "
+     "Presupuestales. El grosor de cada flujo refleja el número de vínculos.")
+shot("cap_flujos.png", "Módulo Flujos: diagrama Sankey por capas — Políticas de Estado → Comisiones del CIP → Programas Presupuestales.")
 
 # ===================== 4. PLAN DE GOBIERNO =====================
 h1("4. Articulación con el plan de gobierno entrante")
@@ -171,6 +189,7 @@ bullet("Vulnerabilidad económica a la pobreza (INEI): 31.4% nacional (2023); a 
 para("Nota metodológica: la vulnerabilidad a la pobreza NO se publica a nivel distrital; el nivel oficial más fino "
      "es provincial (2018) y departamental agrupado (2019). El VAB oficial se publica por departamento; a nivel de "
      "distrito no existe. Se indica la fuente y el año en cada caso.", italic=True, color=GREY, size=10)
+shot("cap_territorial.png", "Módulo Territorial: mapa interactivo del Perú coloreado por IDH a nivel distrital, con el detalle presupuestal y socioeconómico por departamento.")
 
 # ===================== 6. SEGUIMIENTO =====================
 h1("6. Seguimiento mensual de indicadores")
@@ -179,6 +198,7 @@ para("Sistema que registra automáticamente, cada mes, qué tan cerca o lejos es
      "indicadores que cuentan con una serie estadística oficial, el valor se actualiza solo desde la fuente (hoy %d "
      "indicadores toman su valor del BCRP, con su año y su advertencia de vigencia); el resto usa el valor de la "
      "redacción de la comisión. Al agregar las comisiones nuevos indicadores, se incorporan automáticamente." % nAuto)
+shot("cap_seguimiento.png", "Módulo Seguimiento: los indicadores ordenados del más lejano al más cercano a su meta 2050, con el valor actual, la meta y el porcentaje de avance.")
 
 # ===================== 7. FEEDBACK =====================
 h1("7. Estado de las observaciones de la última reunión")

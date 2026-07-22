@@ -9,7 +9,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
-                                HRFlowable, ListFlowable, ListItem)
+                                HRFlowable, ListFlowable, ListItem, Image, KeepTogether)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -87,6 +87,24 @@ def tbl(headers, rows, widths):
     return [t, Spacer(1, 8)]
 
 
+IMG = os.path.join(ROOT, "entregables", "_img")
+def shot(fn, caption, w=170):
+    p = os.path.join(IMG, fn)
+    if not os.path.exists(p):
+        return []
+    from PIL import Image as PILImage
+    iw, ih = PILImage.open(p).size
+    W = w * mm; H = W * ih / iw
+    im = Image(p, width=W, height=H)
+    im.hAlign = "CENTER"
+    cap = Paragraph("<i>" + E(caption) + "</i>", ParagraphStyle("cap", fontSize=8.5, textColor=GREY, leading=11, alignment=1, spaceBefore=3, spaceAfter=10))
+    box = Table([[im], [cap]], colWidths=[W])
+    box.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), .6, LINE), ("TOPPADDING", (0, 0), (-1, -1), 5),
+                             ("BOTTOMPADDING", (0, 0), (-1, -1), 2), ("LEFTPADDING", (0, 0), (-1, -1), 5),
+                             ("RIGHTPADDING", (0, 0), (-1, -1), 5), ("BACKGROUND", (0, 0), (-1, -1), colors.white)]))
+    return [Spacer(1, 4), box, Spacer(1, 4)]
+
+
 def header_footer(canvas, doc):
     canvas.saveState()
     canvas.setFillColor(RED); canvas.rect(0, A4[1] - 6, A4[0], 6, fill=1, stroke=0)
@@ -124,11 +142,19 @@ story += [ListFlowable([ListItem(Paragraph(E(t), S["bullet"]), leftIndent=6) for
                        bulletType="bullet", start="•", bulletColor=GOLD, leftIndent=12), Spacer(1, 6)]
 
 story += H1("1. Resumen ejecutivo")
-story += P("Se ha construido y puesto en producción una plataforma web interactiva del Plan Perú 2050 "
-           "(https://planperu2050.pe) que sistematiza las %d Comisiones Temáticas Nacionales, las articula con el "
-           "Acuerdo Nacional y con los Programas Presupuestales del MEF, incorpora el plan de gobierno entrante, una "
-           "capa de inteligencia territorial y un sistema de seguimiento mensual de indicadores hacia las metas 2050. "
-           "Todo el contenido está etiquetado según su origen, bajo un principio estricto de no sobre-afirmación." % meta["totalComisiones"])
+story += P("El presente documento constituye el <b>Primer Informe de avance</b> de la plataforma digital del "
+           "Plan Perú 2050, desarrollada para las Comisiones Temáticas Nacionales del CNPP — Colegio de Ingenieros "
+           "del Perú. La plataforma, disponible en línea y de acceso público en https://planperu2050.pe, transforma "
+           "el trabajo de las comisiones —hasta ahora disperso en documentos— en una herramienta interactiva, "
+           "consultable y verificable, orientada a la toma de decisiones y a la incidencia técnica.")
+story += P("En su estado actual, la plataforma sistematiza las %d Comisiones Temáticas Nacionales y las articula en "
+           "<b>dos direcciones</b>: hacia arriba, con los cuatro ejes y las treinta y seis Políticas de Estado del "
+           "Acuerdo Nacional, y hacia abajo, con los Programas Presupuestales del Ministerio de Economía y Finanzas. "
+           "Incorpora, además, el alineamiento del plan de gobierno entrante, una capa de inteligencia territorial "
+           "con datos oficiales a nivel de departamento, provincia y distrito, y un sistema de seguimiento mensual "
+           "que mide cuán cerca o lejos se encuentra el país de las metas aspiracionales al 2050. La totalidad del "
+           "contenido se encuentra rotulada según su origen —dato oficial, propuesta asistida por inteligencia "
+           "artificial a validar, o redacción de la comisión— bajo un principio estricto de no sobre-afirmación." % meta["totalComisiones"])
 story += tbl(["Componente", "Estado"], [
     ["Comisiones en la plataforma", "%d de %d: %d validadas + %d en revisión" % (val + rev, meta["totalComisiones"], val, rev)],
     ["Clasificación", "Los 4 ejes / 36 políticas del Acuerdo Nacional"],
@@ -139,7 +165,9 @@ story += tbl(["Componente", "Estado"], [
 ], [58, 105])
 
 story += H1("2. La plataforma y sus módulos")
-story += P("El tablero es una aplicación web pública, responsiva y de actualización automática. Sus módulos:")
+story += P("El tablero es una aplicación web pública, responsiva (se adapta a computadora, tableta y teléfono) y de "
+           "actualización automática. Ofrece una opción de tema claro u oscuro para su presentación e impresión. "
+           "Se organiza en los siguientes módulos:")
 story += bl([
     ("Explorar.", "Ficha de cada comisión con visión 2050, diagnóstico, objetivos, acciones, indicadores (hoy → meta 2050) y recomendaciones, en el formato oficial de Informe Ejecutivo."),
     ("Articulación.", "Cubo de doble entrada: por cada eje y política del Acuerdo Nacional, las comisiones vinculadas y el tipo de relación."),
@@ -149,6 +177,7 @@ story += bl([
     ("Seguimiento.", "Avance mensual de los indicadores hacia las metas 2050, con dato oficial automático donde existe."),
     ("Simulación.", "Proyección interactiva de escenarios al 2050."),
 ])
+story += shot("cap_explorar.png", "Vista principal (Explorar): las comisiones temáticas, con filtros por eje del Acuerdo Nacional y estado de validación.")
 
 story += H1("3. Articulación estratégica (hacia arriba y hacia abajo)")
 story += P("Cada comisión se articula en dos direcciones, con la metodología de clasificación acordada. Cada vínculo "
@@ -162,6 +191,11 @@ story += bl(["%d enlaces Comisiones ↔ Políticas de Estado del Acuerdo Naciona
              "%d enlaces Comisiones ↔ Programas Presupuestales del MEF (hacia abajo, %d PP)." % (nPP, nPPtot)])
 story += P("La propuesta de articulación fue generada con inteligencia artificial (un análisis por comisión) y se "
            "entrega como PROPUESTA A VALIDAR por el equipo técnico. Se adjunta la matriz completa en Excel.", "note")
+story += shot("cap_articulacion.png", "Módulo Articulación: por cada eje y política del Acuerdo Nacional se listan las comisiones vinculadas y el tipo de relación (igual/similar, desagregado o causal).")
+story += P("Adicionalmente, el módulo <b>Flujos</b> representa esta articulación como un diagrama de flujos (Sankey) "
+           "por capas, que permite visualizar de un vistazo cómo las Políticas de Estado se conectan con las comisiones "
+           "y estas, a su vez, con los Programas Presupuestales. El grosor de cada flujo refleja el número de vínculos.")
+story += shot("cap_flujos.png", "Módulo Flujos: diagrama Sankey por capas — Políticas de Estado → Comisiones del CIP → Programas Presupuestales, para el eje Democracia y Estado de Derecho.")
 
 story += H1("4. Articulación con el plan de gobierno entrante")
 story += P("Se procesaron los 3 pilares del plan de gobierno (Orden, Económico, Social) y se alinearon %d propuestas "
@@ -182,6 +216,7 @@ story += bl([
 story += P("Nota metodológica: la vulnerabilidad a la pobreza NO se publica a nivel distrital; el nivel oficial más fino "
            "es provincial (2018) y departamental agrupado (2019). El VAB oficial se publica por departamento. Se indica "
            "la fuente y el año en cada caso.", "note")
+story += shot("cap_territorial.png", "Módulo Territorial: mapa interactivo del Perú coloreado por IDH a nivel distrital, con el detalle presupuestal y socioeconómico por departamento.")
 
 story += H1("6. Seguimiento mensual de indicadores")
 story += P("Sistema que registra automáticamente, cada mes, qué tan cerca o lejos estamos de las metas 2050. Ordena los "
@@ -189,6 +224,7 @@ story += P("Sistema que registra automáticamente, cada mes, qué tan cerca o le
            "serie estadística oficial, el valor se actualiza solo desde la fuente (hoy %d indicadores toman su valor del "
            "BCRP, con su año y su advertencia de vigencia); el resto usa el valor de la redacción de la comisión. Los "
            "indicadores nuevos se incorporan automáticamente." % nAuto)
+story += shot("cap_seguimiento.png", "Módulo Seguimiento: los indicadores ordenados del más lejano al más cercano a su meta 2050, con el valor actual, la meta y el porcentaje de avance.")
 
 story += H1("7. Estado de las observaciones de la última reunión")
 story += tbl(["Observación", "Estado"], [
