@@ -30,6 +30,14 @@ arts = L("articulacion.json")["articulaciones"]
 nAN = sum(len(x["acuerdo_nacional"]) for x in arts)
 nPP = sum(len(x["programas_presupuestales"]) for x in arts)
 nK = L("keiko_articulacion.json")["total_propuestas"]
+try:
+    _ao = L("articulacion_objetivos.json")["articulacion"]; nObj = sum(len(v) for v in _ao.values())
+except Exception:
+    nObj = 0
+try:
+    _anj = L("acuerdo_nacional.json"); nObjAN = _anj.get("total_objetivos", 0)
+except Exception:
+    nObjAN = 0
 seg = L("seguimiento.json"); nInd = len(seg["indicadores"]); nAuto = len(seg.get("auto", {}))
 nPPtot = L("programas_presupuestales.json")["total"]
 
@@ -188,7 +196,11 @@ story += bl([("Igual / similar.", "igualdad o similitud semántica directa."),
              ("Causal.", "relación causa-efecto deducida de los textos.")])
 story += H2("Alcance actual")
 story += bl(["%d enlaces Comisiones ↔ Políticas de Estado del Acuerdo Nacional (hacia arriba)." % nAN,
+             "%d enlaces Comisiones ↔ Objetivos específicos del Acuerdo Nacional (tercer nivel de la jerarquía)." % nObj,
              "%d enlaces Comisiones ↔ Programas Presupuestales del MEF (hacia abajo, %d PP)." % (nPP, nPPtot)])
+story += P("La jerarquía del Acuerdo Nacional se incorporó en sus <b>tres niveles</b>: 4 ejes, 36 Políticas de Estado y "
+           "%d objetivos (los compromisos con letra a, b, c…, tomados de acuerdonacional.pe). La articulación de cada "
+           "comisión llega ahora hasta el objetivo específico, que es el nivel más fino y el ideal para el análisis." % nObjAN)
 story += P("La propuesta de articulación fue generada con inteligencia artificial (un análisis por comisión) y se "
            "entrega como PROPUESTA A VALIDAR por el equipo técnico. Se adjunta la matriz completa en Excel.", "note")
 story += shot("cap_articulacion.png", "Módulo Articulación: por cada eje y política del Acuerdo Nacional se listan las comisiones vinculadas y el tipo de relación (igual/similar, desagregado o causal).")
@@ -206,7 +218,7 @@ story += P("Se procesaron los 3 pilares del plan de gobierno (Orden, Económico,
 story += H1("5. Inteligencia territorial")
 story += P("Módulo con un mapa interactivo del Perú y datos reales por departamento, provincia y distrito:")
 story += bl([
-    "Mapa interactivo por distrito (1,826 distritos), coloreado por IDH, pobreza o pobreza extrema, con detalle al hacer clic en cada distrito.",
+    "Mapa interactivo por distrito (1,826 distritos), coloreado por IDH, pobreza o pobreza extrema; y por departamento según VAB per cápita, vulnerabilidad, ejecución del gasto o porcentaje de inversión. Detalle al hacer clic en cada distrito.",
     "IDH, pobreza y pobreza extrema por distrito, y población (fuente PNUD / INEI).",
     "Gasto público del MEF (SIAF) por departamento: presupuesto, devengado y ejecución del año en curso.",
     "Presupuesto por tipo de gasto: corriente vs. inversión/capital, por departamento (MEF, año en curso).",

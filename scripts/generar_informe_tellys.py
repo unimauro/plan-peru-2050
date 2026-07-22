@@ -29,6 +29,14 @@ arts = L("articulacion.json")["articulaciones"]
 nAN = sum(len(x["acuerdo_nacional"]) for x in arts)
 nPP = sum(len(x["programas_presupuestales"]) for x in arts)
 keiko = L("keiko_articulacion.json"); nK = keiko["total_propuestas"]
+try:
+    _ao = L("articulacion_objetivos.json")["articulacion"]; nObj = sum(len(v) for v in _ao.values())
+except Exception:
+    nObj = 0
+try:
+    nObjAN = L("acuerdo_nacional.json").get("total_objetivos", 0)
+except Exception:
+    nObjAN = 0
 seg = L("seguimiento.json"); nInd = len(seg["indicadores"]); nAuto = len(seg.get("auto", {}))
 nPPtot = L("programas_presupuestales.json")["total"]
 
@@ -160,7 +168,11 @@ for lead, txt in [("Igual / similar.", "igualdad o similitud semántica directa.
     bullet(txt, bold_lead=lead)
 h2("Alcance actual")
 bullet("%d enlaces Comisiones ↔ Políticas de Estado del Acuerdo Nacional (hacia arriba)." % nAN)
+bullet("%d enlaces Comisiones ↔ Objetivos específicos del Acuerdo Nacional (tercer nivel de la jerarquía)." % nObj)
 bullet("%d enlaces Comisiones ↔ Programas Presupuestales del MEF (hacia abajo, %d PP)." % (nPP, nPPtot))
+para("La jerarquía del Acuerdo Nacional se incorporó en sus tres niveles: 4 ejes, 36 Políticas de Estado y %d objetivos "
+     "(los compromisos con letra a, b, c…, tomados de acuerdonacional.pe). La articulación de cada comisión llega ahora "
+     "hasta el objetivo específico, el nivel más fino y el ideal para el análisis." % nObjAN)
 para("La propuesta de articulación fue generada con inteligencia artificial (un análisis por comisión) y se "
      "entrega como PROPUESTA A VALIDAR por el equipo técnico. Se adjunta la matriz completa en Excel para su "
      "revisión punto por punto.", italic=True, color=GREY, size=10)
@@ -180,7 +192,7 @@ para("Se procesaron los 3 pilares del plan de gobierno (Orden, Económico, Socia
 # ===================== 5. TERRITORIAL =====================
 h1("5. Inteligencia territorial")
 para("Módulo con un mapa interactivo del Perú y datos reales por departamento, provincia y distrito:")
-bullet("Mapa interactivo por distrito (1,826 distritos), coloreado por IDH, pobreza o pobreza extrema, con detalle al hacer clic en cada distrito.")
+bullet("Mapa interactivo por distrito (1,826 distritos), coloreado por IDH, pobreza o pobreza extrema; y por departamento según VAB per cápita, vulnerabilidad, ejecución del gasto o porcentaje de inversión. Detalle al hacer clic en cada distrito.")
 bullet("IDH, pobreza y pobreza extrema por distrito, y población (fuente PNUD / INEI).")
 bullet("Gasto público del MEF (SIAF) por departamento: presupuesto, devengado y ejecución del año en curso.")
 bullet("Presupuesto por tipo de gasto: corriente vs. inversión/capital, por departamento (MEF, año en curso).")

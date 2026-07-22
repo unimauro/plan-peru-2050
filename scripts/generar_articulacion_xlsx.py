@@ -70,6 +70,28 @@ def main():
     for r in range(2, n + 2):
         ws.cell(row=r, column=6).alignment = WRAP; ws.cell(row=r, column=4).alignment = WRAP
 
+    # ---- Hoja 1b: Comisiones ↔ Objetivos del Acuerdo Nacional (nivel-3)
+    nobj = 0
+    try:
+        objdata = L("articulacion_objetivos.json")["articulacion"]
+        comnom = {cid: a["comision_nombre"] for cid, a in coms.items()}
+        wso = wb.create_sheet("Objetivos AN")
+        colso = ["Comisión", "N° Política", "Política de Estado", "Objetivo (letra)", "Objetivo",
+                 "Tipo propuesto (IA)", "Justificación", "¿Correcto?", "Tipo corregido", "Observación"]
+        wso.append(colso)
+        for cid in sorted(objdata, key=lambda k: comnom.get(k, k)):
+            for o in objdata[cid]:
+                wso.append([comnom.get(cid, cid), o["politica"], o.get("politica_nombre", ""), o.get("letra", ""),
+                            o.get("objetivo_texto", ""), o["tipo"], o.get("justificacion", ""), "", "", ""])
+                nobj += 1
+        style_header(wso, len(colso)); add_validation(wso, "H", "I", nobj)
+        for col, w in zip("ABCDEFGHIJ", [24, 9, 32, 12, 52, 15, 55, 11, 15, 26]):
+            wso.column_dimensions[col].width = w
+        for r in range(2, nobj + 2):
+            for cc in (3, 5, 7): wso.cell(row=r, column=cc).alignment = WRAP
+    except Exception:
+        pass
+
     # ---- Hoja 2: Comisiones ↔ Programas Presupuestales (MEF)
     ws2 = wb.create_sheet("Programas Presupuestales")
     cols2 = ["Comisión", "Código PP", "Programa Presupuestal", "Tipo propuesto (IA)",
@@ -115,6 +137,7 @@ def main():
     wsr["A1"].font = Font(bold=True, size=13)
     wsr.append([])
     wsr.append(["Enlaces Comisiones ↔ Políticas de Estado (Acuerdo Nacional)", n])
+    wsr.append(["Enlaces Comisiones ↔ Objetivos del Acuerdo Nacional (nivel-3)", nobj])
     wsr.append(["Enlaces Comisiones ↔ Programas Presupuestales (MEF)", n2])
     wsr.append(["Enlaces Plan de Gobierno ↔ Comisiones/AN", n3])
     wsr.append([])
