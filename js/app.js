@@ -96,9 +96,11 @@ async function boot() {
       fetch("data/seguimiento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/socioeconomico_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch("data/gasto_tipo_departamento.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    ]).then(([art, an, terr, keiko, gasto, seg, socio, gtipo]) => {
+      fetch("data/articulacion_objetivos.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]).then(([art, an, terr, keiko, gasto, seg, socio, gtipo, artObj]) => {
       if (art && art.articulaciones) art.articulaciones.forEach((a) => (S.artic[a.comision_id] = a));
       S.an = an; S.terr = terr; S.keiko = keiko; S.gasto = gasto; S.seg = seg; S.socio = socio; S.gtipo = gtipo;
+      S.artObj = (artObj && artObj.articulacion) || {};
       renderArticulacion();
       renderTerritorial();
       renderTerrMap();
@@ -232,8 +234,13 @@ function articBlock(id) {
   const an = a.acuerdo_nacional || [], pp = a.programas_presupuestales || [];
   if (!an.length && !pp.length) return "";
   const row = (label, tipo, just) => `<li style="margin-bottom:8px"><div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap"><b>${esc(label)}</b>${tipoBadge(tipo)}</div>${just ? `<span style="color:var(--mut);font-size:.9rem">${esc(just)}</span>` : ""}</li>`;
+  // objetivos nivel-3 articulados, agrupados por política
+  const objs = (S.artObj && S.artObj[id]) || [];
+  const objByPol = {}; objs.forEach((o) => { (objByPol[o.politica] = objByPol[o.politica] || []).push(o); });
+  const objSub = (n) => { const os = objByPol[n]; if (!os || !os.length) return ""; return `<div style="margin:4px 0 2px 4px;padding-left:8px;border-left:2px solid var(--line)">${os.map((o) => `<div style="font-size:.85rem;margin-bottom:3px"><b style="color:var(--mut2)">${esc(o.letra)})</b> ${esc(o.objetivo_texto)} ${tipoBadge(o.tipo)}<br><span style="color:var(--mut);font-size:.9em">${esc(o.justificacion || "")}</span></div>`).join("")}</div>`; };
+  const rowAN = (x) => `<li style="margin-bottom:10px"><div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap"><b>P${x.politica} · ${esc(x.politica_nombre || "")}</b>${tipoBadge(x.tipo)}</div>${x.justificacion ? `<span style="color:var(--mut);font-size:.9rem">${esc(x.justificacion)}</span>` : ""}${objSub(x.politica)}</li>`;
   return `<div class="block"><h4>Articulación estratégica <span style="font-weight:400;color:var(--mut2);font-size:.72rem">· propuesta con IA, a validar por el equipo</span></h4>
-    ${an.length ? `<div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:6px 0 4px">⬆ Acuerdo Nacional</div><ul class="ul">${an.map((x) => row(`P${x.politica} · ${x.politica_nombre || ""}`, x.tipo, x.justificacion)).join("")}</ul>` : ""}
+    ${an.length ? `<div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:6px 0 4px">⬆ Acuerdo Nacional${objs.length ? " · con objetivos" : ""}</div><ul class="ul">${an.map(rowAN).join("")}</ul>` : ""}
     ${pp.length ? `<div style="color:var(--mut2);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">⬇ Programas Presupuestales (MEF)</div><ul class="ul">${pp.map((x) => row(`${x.codigo} · ${x.pp_nombre || ""}`, x.tipo, x.justificacion)).join("")}</ul>` : ""}
   </div>`;
 }
