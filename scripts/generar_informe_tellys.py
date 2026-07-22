@@ -92,7 +92,7 @@ para("Comisiones Temáticas Nacionales · CNPP — Colegio de Ingenieros del Per
 para("Informe N°: 1 (de 3)", size=11, bold=True, after=1)
 para("Fecha: 21 de julio de 2026", size=11, bold=True, after=1)
 para("Elaborado por: Ing. Carlos Cárdenas Fernández", size=11, after=1)
-para("Dirigido a: Ing. Tellys Paucar — FIIS / Colegio de Ingenieros del Perú", size=11, after=1)
+para("Dirigido a: Ing. Tellys Paucar y equipo técnico del Plan Perú 2050 — CNPP / Colegio de Ingenieros del Perú", size=11, after=1)
 para("Plataforma en línea: https://planperu2050.pe", size=11, color=GOLD, after=16)
 
 # ===================== 1. RESUMEN =====================
@@ -151,9 +151,11 @@ para("Se procesaron los 3 pilares del plan de gobierno (Orden, Económico, Socia
 
 # ===================== 5. TERRITORIAL =====================
 h1("5. Inteligencia territorial")
-para("Módulo con datos reales por departamento, provincia y distrito:")
+para("Módulo con un mapa interactivo del Perú y datos reales por departamento, provincia y distrito:")
+bullet("Mapa interactivo por distrito (1,826 distritos), coloreado por IDH, pobreza o pobreza extrema, con detalle al hacer clic en cada distrito.")
 bullet("IDH, pobreza y pobreza extrema por distrito, y población (fuente PNUD / INEI).")
 bullet("Gasto público del MEF (SIAF) por departamento: presupuesto, devengado y ejecución del año en curso.")
+bullet("Presupuesto por tipo de gasto: corriente vs. inversión/capital, por departamento (MEF, año en curso).")
 bullet("Valor Agregado Bruto (VAB) por departamento y VAB per cápita (INEI 2023), como aproximación al desarrollo productivo.")
 bullet("Vulnerabilidad económica a la pobreza (INEI): 31.4% nacional (2023); a nivel departamental por grupos (2019).")
 para("Nota metodológica: la vulnerabilidad a la pobreza NO se publica a nivel distrital; el nivel oficial más fino "
@@ -177,8 +179,8 @@ table(["Observación", "Estado"], [
     ["Columna de Vulnerabilidad económica a la pobreza (INEI)", "ATENDIDO — a nivel departamental (no existe distrital)"],
     ["Columna de Valor Agregado Bruto (VAB)", "ATENDIDO — por departamento y per cápita (INEI 2023)"],
     ["Confirmar el año del IDH", "Es IDH 2019 (PNUD), el último disponible a nivel distrital"],
-    ["Mapa territorial interactivo (nacional/depto/prov/distrito)", "EN CURSO"],
-    ["Presupuesto corriente vs. inversión por territorio", "PENDIENTE — requiere re-extracción del MEF"],
+    ["Mapa territorial interactivo por distrito", "ATENDIDO — mapa del Perú con IDH/pobreza y detalle por distrito"],
+    ["Presupuesto corriente vs. inversión por territorio", "ATENDIDO — por departamento (MEF, tipo de gasto)"],
 ], widths=[10.5, 6.5])
 
 # ===================== 8. FUENTES =====================
@@ -201,8 +203,8 @@ para("Descarga directa: https://planperu2050.pe/entregables/articulacion.xlsx", 
 h1("10. Próximos pasos")
 bullet("Recibir la versión final de las comisiones y actualizar el tablero.")
 bullet("Validación humana de la matriz de articulación (con el Excel adjunto).")
-bullet("Mapa territorial interactivo con selección de nivel (nacional, departamento, provincia, distrito).")
-bullet("Incorporar presupuesto corriente y de inversión por territorio (re-extracción del MEF).")
+bullet("Detallar la articulación a nivel de objetivos de cada política de Estado (tercer nivel del Acuerdo Nacional).")
+bullet("Llevar el presupuesto corriente vs. inversión al nivel provincial y distrital.")
 bullet("Conectar más indicadores de seguimiento a fuentes oficiales (INEI/ENDES/MTC/MINEM).")
 
 h1("Enlaces")

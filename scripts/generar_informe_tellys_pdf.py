@@ -106,7 +106,7 @@ story += [Spacer(1, 10), Paragraph("PLAN PERÚ 2050 &nbsp;·&nbsp; PRIMER INFORM
           Paragraph("<b>Informe N°:</b> 1 (de 3)", S["meta"]),
           Paragraph("<b>Fecha:</b> 21 de julio de 2026", S["meta"]),
           Paragraph("<b>Elaborado por:</b> Ing. Carlos Cárdenas Fernández", S["meta"]),
-          Paragraph("<b>Dirigido a:</b> Ing. Tellys Paucar — FIIS / Colegio de Ingenieros del Perú", S["meta"]),
+          Paragraph("<b>Dirigido a:</b> Ing. Tellys Paucar y equipo técnico del Plan Perú 2050 — CNPP / Colegio de Ingenieros del Perú", S["meta"]),
           Paragraph('<b>Plataforma:</b> <font color="#B8840E">https://planperu2050.pe</font>', S["meta"]),
           Spacer(1, 12)]
 
@@ -157,10 +157,12 @@ story += P("Se procesaron los 3 pilares del plan de gobierno (Orden, Económico,
            "de base para un seguimiento posterior con dato duro." % nK)
 
 story += H1("5. Inteligencia territorial")
-story += P("Módulo con datos reales por departamento, provincia y distrito:")
+story += P("Módulo con un mapa interactivo del Perú y datos reales por departamento, provincia y distrito:")
 story += bl([
+    "Mapa interactivo por distrito (1,826 distritos), coloreado por IDH, pobreza o pobreza extrema, con detalle al hacer clic en cada distrito.",
     "IDH, pobreza y pobreza extrema por distrito, y población (fuente PNUD / INEI).",
     "Gasto público del MEF (SIAF) por departamento: presupuesto, devengado y ejecución del año en curso.",
+    "Presupuesto por tipo de gasto: corriente vs. inversión/capital, por departamento (MEF, año en curso).",
     "Valor Agregado Bruto (VAB) por departamento y VAB per cápita (INEI 2023), como aproximación al desarrollo productivo.",
     "Vulnerabilidad económica a la pobreza (INEI): 31.4% nacional (2023); a nivel departamental por grupos (2019).",
 ])
@@ -183,8 +185,8 @@ story += tbl(["Observación", "Estado"], [
     ["Columna de Vulnerabilidad económica a la pobreza (INEI)", "ATENDIDO — a nivel departamental (no existe distrital)"],
     ["Columna de Valor Agregado Bruto (VAB)", "ATENDIDO — por departamento y per cápita (INEI 2023)"],
     ["Confirmar el año del IDH", "Es IDH 2019 (PNUD), el último a nivel distrital"],
-    ["Mapa territorial interactivo (nacional/depto/prov/distrito)", "EN CURSO"],
-    ["Presupuesto corriente vs. inversión por territorio", "PENDIENTE — requiere re-extracción del MEF"],
+    ["Mapa territorial interactivo por distrito", "ATENDIDO — mapa del Perú con IDH/pobreza y detalle por distrito"],
+    ["Presupuesto corriente vs. inversión por territorio", "ATENDIDO — por departamento (MEF, tipo de gasto)"],
 ], [92, 71])
 
 story += H1("8. Fuentes y principio anti-sobreafirmación")
@@ -205,8 +207,8 @@ story += H1("10. Próximos pasos")
 story += bl([
     "Recibir la versión final de las comisiones y actualizar el tablero.",
     "Validación humana de la matriz de articulación (con el Excel adjunto).",
-    "Mapa territorial interactivo con selección de nivel (nacional, departamento, provincia, distrito).",
-    "Incorporar presupuesto corriente y de inversión por territorio (re-extracción del MEF).",
+    "Detallar la articulación a nivel de objetivos de cada política de Estado (tercer nivel del Acuerdo Nacional).",
+    "Llevar el presupuesto corriente vs. inversión al nivel provincial y distrital.",
     "Conectar más indicadores de seguimiento a fuentes oficiales (INEI/ENDES/MTC/MINEM).",
 ])
 story += H1("Enlaces")
